@@ -4,8 +4,9 @@ __pycache__/
 .venv/
 venv/
 
-# Data
+# Data (generated)
 papers.json
+trends_*.png
 
 # IDE
 .idea/
