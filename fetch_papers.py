@@ -21,6 +21,12 @@ KEYWORDS = [
     "neural network extraction attack",
     "stealing machine learning model",
     "model stealing defense",
+    "model extraction",
+    "LoRA extraction attack",
+    "LLM model stealing",
+    "knockoff nets",
+    "stealing functionality black-box",
+    "DNN model stealing",
 ]
 
 # Fields to request from the API
