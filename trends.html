@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Trends - Model Stealing Papers</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1e293b;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        header a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .charts-section {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .charts-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .chart-container {
+            background: #fafafa;
+            border-radius: 6px;
+            padding: 0.5rem;
+            min-height: 300px;
+        }
+
+        .chart-full-width {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #2563eb;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Research Trends</h1>
+        <p>Model stealing and extraction attack research over time</p>
+        <p><a href="index.html">&larr; Back to Papers</a></p>
+    </header>
+
+    <div class="container">
+        <div class="charts-section">
+            <div class="charts-grid">
+                <div class="chart-container" id="chart-papers-per-year">
+                    <div class="loading">Loading charts...</div>
+                </div>
+                <div class="chart-container" id="chart-cumulative"></div>
+                <div class="chart-container chart-full-width" id="chart-top-venues"></div>
+                <div class="chart-container chart-full-width" id="chart-top-cited"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Data from <a href="https://www.semanticscholar.org/">Semantic Scholar</a> |
+           <a href="https://github.com/biecho/model-stealing-papers">GitHub</a></p>
+    </footer>
+
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script>
+        let papers = [];
+
+        async function loadData() {
+            try {
+                const response = await fetch('papers.json');
+                const data = await response.json();
+                papers = data.papers;
+                renderCharts();
+            } catch (error) {
+                document.getElementById('chart-papers-per-year').innerHTML =
+                    '<div class="loading">Error loading data.</div>';
+            }
+        }
+
+        function renderCharts() {
+            if (papers.length === 0) return;
+
+            const chartConfig = {
+                responsive: true,
+                displayModeBar: false
+            };
+
+            const layoutDefaults = {
+                margin: { t: 40, r: 20, b: 40, l: 50 },
+                font: { family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)'
+            };
+
+            // Papers per year
+            const yearCounts = {};
+            papers.forEach(p => {
+                if (p.year && p.year >= 2016) {
+                    yearCounts[p.year] = (yearCounts[p.year] || 0) + 1;
+                }
+            });
+            const years = Object.keys(yearCounts).sort();
+            const counts = years.map(y => yearCounts[y]);
+
+            Plotly.newPlot('chart-papers-per-year', [{
+                x: years,
+                y: counts,
+                type: 'bar',
+                marker: { color: '#3b82f6' }
+            }], {
+                ...layoutDefaults,
+                title: { text: 'Papers per Year', font: { size: 14 } },
+                xaxis: { title: 'Year' },
+                yaxis: { title: 'Papers' }
+            }, chartConfig);
+
+            // Cumulative growth
+            let cumulative = 0;
+            const cumulativeCounts = years.map(y => {
+                cumulative += yearCounts[y];
+                return cumulative;
+            });
+
+            Plotly.newPlot('chart-cumulative', [{
+                x: years,
+                y: cumulativeCounts,
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: { color: '#10b981', width: 2 },
+                marker: { size: 6 }
+            }], {
+                ...layoutDefaults,
+                title: { text: 'Cumulative Papers', font: { size: 14 } },
+                xaxis: { title: 'Year' },
+                yaxis: { title: 'Total Papers' }
+            }, chartConfig);
+
+            // Top venues
+            const venueAbbrev = {
+                'arXiv.org': 'arXiv',
+                'AAAI Conference on Artificial Intelligence': 'AAAI',
+                'Neural Information Processing Systems': 'NeurIPS',
+                'Computer Vision and Pattern Recognition': 'CVPR',
+                'USENIX Security Symposium': 'USENIX',
+                'IEEE Transactions on Information Forensics and Security': 'TIFS',
+                'IEEE International Joint Conference on Neural Network': 'IJCNN',
+                'IEEE Transactions on Dependable and Secure Computing': 'TDSC',
+                'ACM Asia Conference on Computer and Communications Security': 'AsiaCCS',
+                'IEEE Symposium on Security and Privacy': 'S&P',
+                'International Joint Conference on Artificial Intelligence': 'IJCAI',
+                'International Conference on Machine Learning': 'ICML',
+                'International Conference on Software Engineering': 'ICSE',
+                'IEEE International Conference on Acoustics, Speech, and Signal Processing': 'ICASSP',
+                'ACM Multimedia': 'ACM MM',
+                'International Conference on Learning Representations': 'ICLR',
+                'European Conference on Computer Vision': 'ECCV',
+                'Network and Distributed System Security Symposium': 'NDSS',
+                'ACM Conference on Computer and Communications Security': 'CCS',
+                'Conference on Computer and Communications Security': 'CCS',
+                'The Web Conference': 'WWW',
+                'IEEE Access': 'IEEE Access',
+                'Asia-Pacific Computer Systems Architecture Conference': 'ACSAC',
+                'ACM Great Lakes Symposium on VLSI': 'GLSVLSI',
+                'IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems': 'TCAD',
+                'International Conference on Information and Knowledge Management': 'CIKM',
+                'Conference on Empirical Methods in Natural Language Processing': 'EMNLP',
+                'Design, Automation and Test in Europe': 'DATE',
+                'European Symposium on Research in Computer Security': 'ESORICS',
+                'Smart Card Research and Advanced Application Conference': 'CARDIS',
+                'Knowledge Discovery and Data Mining': 'KDD',
+                'Annual Meeting of the Association for Computational Linguistics': 'ACL',
+                'Web Search and Data Mining': 'WSDM',
+                'North American Chapter of the Association for Computational Linguistics': 'NAACL',
+                'ACM Conference on Recommender Systems': 'RecSys',
+                'International Conference on Architectural Support for Programming Languages and Operating Systems': 'ASPLOS',
+                'Annual International Cryptology Conference': 'CRYPTO',
+                'IEEE International Symposium on Hardware Oriented Security and Trust': 'HOST',
+                'ACM Computing Surveys': 'CSUR',
+                'IEEE Transactions on Neural Networks and Learning Systems': 'TNNLS',
+                'European Symposium on Security and Privacy': 'EuroS&P',
+                'ACM Transactions on Privacy and Security': 'TOPS'
+            };
+
+            function getVenueAbbrev(venue) {
+                if (venueAbbrev[venue]) return venueAbbrev[venue];
+                const cleaned = venue.replace(/^\d{4}\s+/, '');
+                if (venueAbbrev[cleaned]) return venueAbbrev[cleaned];
+                const parenMatch = cleaned.match(/\(([A-Z]{2,10})\)/);
+                if (parenMatch) return parenMatch[1];
+                return cleaned.length > 15 ? cleaned.substring(0, 15) + '...' : cleaned;
+            }
+
+            const venueCounts = {};
+            papers.forEach(p => {
+                if (p.venue) {
+                    const abbrev = getVenueAbbrev(p.venue);
+                    venueCounts[abbrev] = (venueCounts[abbrev] || 0) + 1;
+                }
+            });
+
+            const sortedVenues = Object.entries(venueCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 15);
+
+            const reversedVenues = [...sortedVenues].reverse();
+            Plotly.newPlot('chart-top-venues', [{
+                x: reversedVenues.map(v => v[1]),
+                y: reversedVenues.map(v => v[0]),
+                type: 'bar',
+                orientation: 'h',
+                marker: { color: '#8b5cf6' }
+            }], {
+                ...layoutDefaults,
+                title: { text: 'Top Venues', font: { size: 14 } },
+                xaxis: { title: 'Papers' },
+                yaxis: { automargin: true },
+                margin: { ...layoutDefaults.margin, l: 100 }
+            }, chartConfig);
+
+            // Top cited papers
+            const topCited = [...papers]
+                .filter(p => p.citation_count > 0)
+                .sort((a, b) => b.citation_count - a.citation_count)
+                .slice(0, 15);
+
+            const shortTitles = topCited.map(p => {
+                const title = p.title || '';
+                const shortTitle = title.length > 40 ? title.substring(0, 40) + '...' : title;
+                const year = p.year ? ` (${p.year})` : '';
+                return shortTitle + year;
+            }).reverse();
+
+            Plotly.newPlot('chart-top-cited', [{
+                x: topCited.map(p => p.citation_count).reverse(),
+                y: shortTitles,
+                type: 'bar',
+                orientation: 'h',
+                marker: { color: '#f59e0b' },
+                text: topCited.map(p => p.citation_count).reverse(),
+                textposition: 'outside'
+            }], {
+                ...layoutDefaults,
+                title: { text: 'Most Cited Papers', font: { size: 14 } },
+                xaxis: { title: 'Citations' },
+                yaxis: { automargin: true },
+                margin: { ...layoutDefaults.margin, l: 180 }
+            }, chartConfig);
+        }
+
+        loadData();
+    </script>
+</body>
+</html>

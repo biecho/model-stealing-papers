@@ -124,8 +124,6 @@
         }
 
         .paper-citations {
-            background: #fef3c7;
-            color: #92400e;
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
             font-weight: 500;
@@ -189,12 +187,24 @@
         footer a {
             color: #2563eb;
         }
+
+        .trends-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        .trends-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Model Stealing Papers</h1>
         <p>A curated collection of academic papers on model stealing and extraction attacks</p>
+        <a href="trends.html" class="trends-link">View Research Trends &rarr;</a>
     </header>
 
     <div class="container">
@@ -304,7 +314,7 @@
                         <div class="paper-meta">
                             ${paper.publication_date ? `<span class="paper-year">${formatDate(paper.publication_date)}</span>` :
                               (paper.year ? `<span class="paper-year">${paper.year}</span>` : '')}
-                            <span class="paper-citations">${paper.citation_count || 0} citations</span>
+                            <span class="paper-citations" style="${getCitationStyle(paper.citation_count || 0)}">${paper.citation_count || 0} citations</span>
                         </div>
                     </div>
                     <div class="paper-authors">${escapeHtml(paper.authors?.join(', ') || 'Unknown authors')}</div>
@@ -323,6 +333,17 @@
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
+        }
+
+        function getCitationStyle(count) {
+            // Heat scale: yellow (0) -> orange (50) -> red (200+)
+            if (count <= 0) return 'background: #f3f4f6; color: #6b7280;';  // Gray for 0
+            if (count < 10) return 'background: #fef9c3; color: #854d0e;';  // Light yellow
+            if (count < 50) return 'background: #fed7aa; color: #9a3412;';  // Orange
+            if (count < 100) return 'background: #fdba74; color: #9a3412;'; // Darker orange
+            if (count < 200) return 'background: #fb923c; color: #7c2d12;'; // Deep orange
+            if (count < 500) return 'background: #f97316; color: white;';   // Orange-red
+            return 'background: #dc2626; color: white;';                     // Red for 500+
         }
 
         function formatDate(dateStr) {

@@ -8,10 +8,14 @@ Usage:
 
 import argparse
 import json
+import os
 import time
 from dataclasses import dataclass, asdict
 from typing import Optional
 import requests
+
+# API key from environment variable (optional, but recommended for higher rate limits)
+API_KEY = os.environ.get("S2_API_KEY")
 
 
 # Keywords to search for
@@ -27,6 +31,21 @@ KEYWORDS = [
     "knockoff nets",
     "stealing functionality black-box",
     "DNN model stealing",
+    "DNN weights leakage",
+    "neural network weight extraction",
+    "side-channel model extraction",
+    "recover parameters neural network",
+    "electromagnetic analysis neural network",
+    "extract parameters neural network",
+    "side-channel attack deep learning",
+    "power analysis neural network weights",
+    "GPU leak DNN weights",
+]
+
+# Venues to exclude (not related to ML security)
+EXCLUDED_VENUES = [
+    "IEEE transactions on microwave theory and techniques",
+    "IEEE Transactions on Microwave Theory and Techniques",
 ]
 
 # Fields to request from the API
@@ -56,6 +75,11 @@ def search_papers(query: str, limit: int = 100) -> list[dict]:
     papers = []
     offset = 0
 
+    # Add API key header if available
+    headers = {}
+    if API_KEY:
+        headers["x-api-key"] = API_KEY
+
     while True:
         params = {
             "query": query,
@@ -64,7 +88,7 @@ def search_papers(query: str, limit: int = 100) -> list[dict]:
             "offset": offset,
         }
 
-        response = requests.get(SEARCH_URL, params=params)
+        response = requests.get(SEARCH_URL, params=params, headers=headers)
 
         if response.status_code == 429:
             # Rate limited, wait and retry
@@ -102,6 +126,16 @@ def is_relevant(paper: dict, keywords: list[str]) -> bool:
         if kw.lower() in text:
             return True
 
+    # Additional title patterns for side-channel/hardware attacks on ML
+    title_patterns = [
+        "leak" in title and ("dnn" in title or "neural" in title or "weight" in title),
+        "side-channel" in title and ("neural" in title or "dnn" in title or "ml" in title),
+        "electromagnetic" in title and "neural" in title,
+        "power analysis" in title and ("neural" in title or "dnn" in title),
+    ]
+    if any(title_patterns):
+        return True
+
     return False
 
 
@@ -115,6 +149,18 @@ def get_matched_keywords(paper: dict, keywords: list[str]) -> list[str]:
     for kw in keywords:
         if kw.lower() in text:
             matched.append(kw)
+
+    # Check title patterns for side-channel attacks
+    if not matched:
+        if "leak" in title and ("dnn" in title or "neural" in title or "weight" in title):
+            matched.append("DNN weights leakage (title)")
+        elif "side-channel" in title and ("neural" in title or "dnn" in title or "ml" in title):
+            matched.append("side-channel attack (title)")
+        elif "electromagnetic" in title and "neural" in title:
+            matched.append("electromagnetic analysis (title)")
+        elif "power analysis" in title and ("neural" in title or "dnn" in title):
+            matched.append("power analysis (title)")
+
     return matched
 
 
@@ -155,6 +201,11 @@ def fetch_all_papers(keywords: list[str], limit_per_keyword: int = 100) -> list[
             if not paper_id or paper_id in seen_ids:
                 continue
 
+            # Skip excluded venues
+            venue = raw.get("venue") or ""
+            if venue in EXCLUDED_VENUES:
+                continue
+
             # Check relevance
             matched = get_matched_keywords(raw, keywords)
             if not matched:
@@ -167,6 +218,81 @@ def fetch_all_papers(keywords: list[str], limit_per_keyword: int = 100) -> list[
     return papers
 
 
+def normalize_title(title: str) -> str:
+    """Normalize title for fuzzy matching."""
+    import re
+    # Lowercase, remove punctuation, collapse whitespace
+    t = title.lower()
+    t = re.sub(r'[^\w\s]', '', t)
+    t = re.sub(r'\s+', ' ', t).strip()
+    return t
+
+
+def titles_are_similar(t1: str, t2: str) -> bool:
+    """Check if two normalized titles are similar enough to be duplicates."""
+    # Exact match
+    if t1 == t2:
+        return True
+    # One is prefix of the other (handles "Title" vs "Title: Extended")
+    if t1.startswith(t2) or t2.startswith(t1):
+        min_len = min(len(t1), len(t2))
+        if min_len >= 20:  # Only if the common part is substantial
+            return True
+    # Check word overlap (handles minor word differences)
+    words1 = set(t1.split())
+    words2 = set(t2.split())
+    if len(words1) >= 4 and len(words2) >= 4:
+        intersection = words1 & words2
+        union = words1 | words2
+        jaccard = len(intersection) / len(union)
+        if jaccard >= 0.8:  # 80% word overlap
+            return True
+    return False
+
+
+def deduplicate_papers(papers: list[Paper]) -> list[Paper]:
+    """Remove duplicate papers, keeping the one with best metadata."""
+    # Build groups of similar papers
+    groups = []
+    used = set()
+
+    for i, p1 in enumerate(papers):
+        if i in used:
+            continue
+        norm1 = normalize_title(p1.title)
+        group = [p1]
+        used.add(i)
+
+        for j, p2 in enumerate(papers):
+            if j in used:
+                continue
+            norm2 = normalize_title(p2.title)
+            if titles_are_similar(norm1, norm2):
+                group.append(p2)
+                used.add(j)
+
+        groups.append(group)
+
+    # For each group, keep the best version
+    deduped = []
+    for group in groups:
+        if len(group) == 1:
+            deduped.append(group[0])
+        else:
+            # Score each paper: prefer venue > year > citations
+            def score(p):
+                return (
+                    1 if p.venue else 0,  # Has venue
+                    p.year or 0,          # Has year
+                    p.citation_count,     # More citations
+                )
+            best = max(group, key=score)
+            deduped.append(best)
+            print(f"  Deduped: kept '{best.title}' ({best.venue or 'no venue'}), removed {len(group)-1} duplicate(s)")
+
+    return deduped
+
+
 def main():
     parser = argparse.ArgumentParser(description="Fetch model stealing papers")
     parser.add_argument("--output", "-o", default="papers.json", help="Output JSON file")
@@ -174,6 +300,10 @@ def main():
     args = parser.parse_args()
 
     papers = fetch_all_papers(KEYWORDS, limit_per_keyword=args.limit)
+
+    # Deduplicate papers with similar titles
+    papers = deduplicate_papers(papers)
+    print(f"After deduplication: {len(papers)} papers")
 
     # Sort by year (newest first), then by citations
     papers.sort(key=lambda p: (-(p.year or 0), -p.citation_count))
