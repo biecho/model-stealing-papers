@@ -1,6 +1,6 @@
 {
   "updated": "2025-11-28",
-  "total": 404,
+  "total": 403,
   "keywords": [
     "model stealing attack",
     "model extraction attack",
@@ -661,26 +661,6 @@
       ]
     },
     {
-      "paper_id": "b066eaa019bf6e94540dc54e735defb19d910bf8",
-      "title": "Stealix: Model Stealing via Prompt Evolution",
-      "abstract": "Model stealing poses a significant security risk in machine learning by enabling attackers to replicate a black-box model without access to its training data, thus jeopardizing intellectual property and exposing sensitive information. Recent methods that use pre-trained diffusion models for data synthesis improve efficiency and performance but rely heavily on manually crafted prompts, limiting automation and scalability, especially for attackers with little expertise. To assess the risks posed by open-source pre-trained models, we propose a more realistic threat model that eliminates the need for prompt design skills or knowledge of class names. In this context, we introduce Stealix, the first approach to perform model stealing without predefined prompts. Stealix uses two open-source pre-trained models to infer the victim model's data distribution, and iteratively refines prompts through a genetic algorithm, progressively improving the precision and diversity of synthetic images. Our experimental results demonstrate that Stealix significantly outperforms other methods, even those with access to class names or fine-grained prompts, while operating under the same query budget. These findings highlight the scalability of our approach and suggest that the risks posed by pre-trained generative models in model stealing may be greater than previously recognized.",
-      "year": 2025,
-      "venue": "arXiv.org",
-      "authors": [
-        "Zhixiong Zhuang",
-        "Hui-Po Wang",
-        "Maria-Irina Nicolae",
-        "Mario Fritz"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/b066eaa019bf6e94540dc54e735defb19d910bf8",
-      "pdf_url": "",
-      "publication_date": "2025-06-06",
-      "keywords_matched": [
-        "model stealing (title)"
-      ]
-    },
-    {
       "paper_id": "5ad7f669afa84855e00c743422026c8c5e91e411",
       "title": "I Stolenly Swear That I Am Up to (No) Good: Design and Evaluation of Model Stealing Attacks",
       "abstract": "Model stealing attacks endanger the confidentiality of machine learning models offered as a service. Although these models are kept secret, a malicious party can query a model to label data samples and train their own substitute model, violating intellectual property. While novel attacks in the field are continually being published, their design and evaluations are not standardised, making it challenging to compare prior works and assess progress in the field. This paper is the first to address this gap by providing recommendations for designing and evaluating model stealing attacks. To this end, we study the largest group of attacks that rely on training a substitute model -- those attacking image classification models. We propose the first comprehensive threat model and develop a framework for attack comparison. Further, we analyse attack setups from related works to understand which tasks and models have been studied the most. Based on our findings, we present best practices for attack development before, during, and beyond experiments and derive an extensive list of open research questions regarding the evaluation of model stealing attacks. Our findings and recommendations also transfer to other problem domains, hence establishing the first generic evaluation methodology for model stealing attacks.",
@@ -698,6 +678,26 @@
       "publication_date": "2025-08-29",
       "keywords_matched": [
         "model stealing attack"
+      ]
+    },
+    {
+      "paper_id": "b066eaa019bf6e94540dc54e735defb19d910bf8",
+      "title": "Stealix: Model Stealing via Prompt Evolution",
+      "abstract": "Model stealing poses a significant security risk in machine learning by enabling attackers to replicate a black-box model without access to its training data, thus jeopardizing intellectual property and exposing sensitive information. Recent methods that use pre-trained diffusion models for data synthesis improve efficiency and performance but rely heavily on manually crafted prompts, limiting automation and scalability, especially for attackers with little expertise. To assess the risks posed by open-source pre-trained models, we propose a more realistic threat model that eliminates the need for prompt design skills or knowledge of class names. In this context, we introduce Stealix, the first approach to perform model stealing without predefined prompts. Stealix uses two open-source pre-trained models to infer the victim model's data distribution, and iteratively refines prompts through a genetic algorithm, progressively improving the precision and diversity of synthetic images. Our experimental results demonstrate that Stealix significantly outperforms other methods, even those with access to class names or fine-grained prompts, while operating under the same query budget. These findings highlight the scalability of our approach and suggest that the risks posed by pre-trained generative models in model stealing may be greater than previously recognized.",
+      "year": 2025,
+      "venue": "arXiv.org",
+      "authors": [
+        "Zhixiong Zhuang",
+        "Hui-Po Wang",
+        "Maria-Irina Nicolae",
+        "Mario Fritz"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/b066eaa019bf6e94540dc54e735defb19d910bf8",
+      "pdf_url": "",
+      "publication_date": "2025-06-06",
+      "keywords_matched": [
+        "model stealing (title)"
       ]
     },
     {
@@ -4032,6 +4032,28 @@
       ]
     },
     {
+      "paper_id": "7d0593c25bcd11f26e8deaa97d18da3314f7af48",
+      "title": "Rethink before Releasing your Model: ML Model Extraction Attack in EDA",
+      "abstract": "Machine learning (ML)-based techniques for electronic design automation (EDA) have boosted the performance of modern integrated circuits (ICs). Such achievement makes ML model to be of importance for the EDA industry. In addition, ML models for EDA are widely considered having high development cost because of the time-consuming and complicated training data generation process. Thus, confidentiality protection for EDA models is a critical issue. However, an adversary could apply model extraction attacks to steal the model in the sense of achieving the comparable performance to the victim's model. As model extraction attacks have posed great threats to other application domains, e.g., computer vision and natural language process, in this paper, we study model extraction attacks for EDA models under two real-world scenarios. It is the first work that (1) introduces model extraction attacks on EDA models and (2) proposes two attack methods against the unlimited and limited query budget scenarios. Our results show that our approach can achieve competitive performance with the well-trained victim model without any performance degradation. Based on the results, we demonstrate that model extraction attacks truly threaten the EDA model privacy and hope to raise concerns about ML security issues in EDA.",
+      "year": 2023,
+      "venue": "Asia and South Pacific Design Automation Conference",
+      "authors": [
+        "Chen-Chia Chang",
+        "Jingyu Pan",
+        "Zhiyao Xie",
+        "Jiangkun Hu",
+        "Yiran Chen"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/7d0593c25bcd11f26e8deaa97d18da3314f7af48",
+      "pdf_url": "https://doi.org/10.1145/3566097.3567896",
+      "publication_date": "2023-01-16",
+      "keywords_matched": [
+        "model extraction attack",
+        "model extraction"
+      ]
+    },
+    {
       "paper_id": "c2a10426d91b95197f8489699026326bddb0eabc",
       "title": "MEAOD: Model Extraction Attack against Object Detectors",
       "abstract": "The widespread use of deep learning technology across various industries has made deep neural network models highly valuable and, as a result, attractive targets for potential attackers. Model extraction attacks, particularly query-based model extraction attacks, allow attackers to replicate a substitute model with comparable functionality to the victim model and present a significant threat to the confidentiality and security of MLaaS platforms. While many studies have explored threats of model extraction attacks against classification models in recent years, object detection models, which are more frequently used in real-world scenarios, have received less attention. In this paper, we investigate the challenges and feasibility of query-based model extraction attacks against object detection models and propose an effective attack method called MEAOD. It selects samples from the attacker-possessed dataset to construct an efficient query dataset using active learning and enhances the categories with insufficient objects. We additionally improve the extraction effectiveness by updating the annotations of the query dataset. According to our gray-box and black-box scenarios experiments, we achieve an extraction performance of over 70% under the given condition of a 10k query budget.",
@@ -4050,28 +4072,6 @@
       "url": "https://www.semanticscholar.org/paper/c2a10426d91b95197f8489699026326bddb0eabc",
       "pdf_url": "",
       "publication_date": "2023-12-22",
-      "keywords_matched": [
-        "model extraction attack",
-        "model extraction"
-      ]
-    },
-    {
-      "paper_id": "7d0593c25bcd11f26e8deaa97d18da3314f7af48",
-      "title": "Rethink before Releasing your Model: ML Model Extraction Attack in EDA",
-      "abstract": "Machine learning (ML)-based techniques for electronic design automation (EDA) have boosted the performance of modern integrated circuits (ICs). Such achievement makes ML model to be of importance for the EDA industry. In addition, ML models for EDA are widely considered having high development cost because of the time-consuming and complicated training data generation process. Thus, confidentiality protection for EDA models is a critical issue. However, an adversary could apply model extraction attacks to steal the model in the sense of achieving the comparable performance to the victim's model. As model extraction attacks have posed great threats to other application domains, e.g., computer vision and natural language process, in this paper, we study model extraction attacks for EDA models under two real-world scenarios. It is the first work that (1) introduces model extraction attacks on EDA models and (2) proposes two attack methods against the unlimited and limited query budget scenarios. Our results show that our approach can achieve competitive performance with the well-trained victim model without any performance degradation. Based on the results, we demonstrate that model extraction attacks truly threaten the EDA model privacy and hope to raise concerns about ML security issues in EDA.",
-      "year": 2023,
-      "venue": "Asia and South Pacific Design Automation Conference",
-      "authors": [
-        "Chen-Chia Chang",
-        "Jingyu Pan",
-        "Zhiyao Xie",
-        "Jiangkun Hu",
-        "Yiran Chen"
-      ],
-      "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/7d0593c25bcd11f26e8deaa97d18da3314f7af48",
-      "pdf_url": "https://doi.org/10.1145/3566097.3567896",
-      "publication_date": "2023-01-16",
       "keywords_matched": [
         "model extraction attack",
         "model extraction"
@@ -4243,25 +4243,6 @@
       ]
     },
     {
-      "paper_id": "2cd2ba46e7b6195521d02606aac5e2cda751b271",
-      "title": "Efficient Model Extraction by Data Set Stealing, Balancing, and Filtering",
-      "abstract": "Model extraction replicates the functionality of machine learning models deployed as a service. Recently, generative adversarial networks (GANs)-based methods have achieved remarkable performance in data-free model extraction. However, previous methods generate random data in every training batch, resulting in slow convergence and redundant queries. We propose to tackle the task with a much simpler paradigm. Specifically, we steal a data set with GAN before training the clone model rather than during every training batch. Benefiting from full use of the generated data, the proposed paradigm needs less training time and query cost. To improve the class distribution of data, a balancing strategy is applied. Furthermore, the balanced data set is filtered based on adversarial robustness for better quality. Combining the above strategies, we propose an efficient model extraction by data set stealing, balancing, and filtering (DSBF). Experiments on three widely used data sets show that DSBF outperforms previous methods while converging faster and costing fewer queries.",
-      "year": 2023,
-      "venue": "IEEE Internet of Things Journal",
-      "authors": [
-        "Panpan Yang",
-        "Qinglong Wu",
-        "Xinming Zhang"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/2cd2ba46e7b6195521d02606aac5e2cda751b271",
-      "pdf_url": "",
-      "publication_date": "2023-12-15",
-      "keywords_matched": [
-        "model extraction"
-      ]
-    },
-    {
       "paper_id": "42a2e32a77ffa1ea1671c1543ee0a71164375305",
       "title": "Exploring and Exploiting Data-Free Model Stealing",
       "abstract": null,
@@ -4279,6 +4260,25 @@
       "publication_date": null,
       "keywords_matched": [
         "model stealing (title)"
+      ]
+    },
+    {
+      "paper_id": "2cd2ba46e7b6195521d02606aac5e2cda751b271",
+      "title": "Efficient Model Extraction by Data Set Stealing, Balancing, and Filtering",
+      "abstract": "Model extraction replicates the functionality of machine learning models deployed as a service. Recently, generative adversarial networks (GANs)-based methods have achieved remarkable performance in data-free model extraction. However, previous methods generate random data in every training batch, resulting in slow convergence and redundant queries. We propose to tackle the task with a much simpler paradigm. Specifically, we steal a data set with GAN before training the clone model rather than during every training batch. Benefiting from full use of the generated data, the proposed paradigm needs less training time and query cost. To improve the class distribution of data, a balancing strategy is applied. Furthermore, the balanced data set is filtered based on adversarial robustness for better quality. Combining the above strategies, we propose an efficient model extraction by data set stealing, balancing, and filtering (DSBF). Experiments on three widely used data sets show that DSBF outperforms previous methods while converging faster and costing fewer queries.",
+      "year": 2023,
+      "venue": "IEEE Internet of Things Journal",
+      "authors": [
+        "Panpan Yang",
+        "Qinglong Wu",
+        "Xinming Zhang"
+      ],
+      "citation_count": 2,
+      "url": "https://www.semanticscholar.org/paper/2cd2ba46e7b6195521d02606aac5e2cda751b271",
+      "pdf_url": "",
+      "publication_date": "2023-12-15",
+      "keywords_matched": [
+        "model extraction"
       ]
     },
     {
@@ -4342,26 +4342,6 @@
       ]
     },
     {
-      "paper_id": "897571a2c302fb6f243f91b35caa0a2159b255c8",
-      "title": "Intelligent electromagnetic mapping via physics driven and neural networks on frequency selective surfaces",
-      "abstract": "The high mapping efficiency between various structures and electromagnetic (EM) properties of frequency selective surfaces (FSSs) is the state-of-the-art in the EM community. The most straightforward approaches for beam analysis depend on measurements and conventional EM calculation methods, which are inefficient and time-consuming. Equivalent circuit models (ECMs) with excellent intuitiveness and simplicity have been put forward extensively. Despite several applications, bottlenecks in ECM still exist, i.e. the application scope is restricted to narrow bands and specific structures, which is triggered by the ignorance of EM nonlinear coupling. In this study, for the first time, a lightweight physical model based on neural network (ECM-NN) is proposed , which exhibits great physical interpretability and spatial generalization abilities. The nonlinear mapping relationship between structure and beam behavior is interpreted by corresponding simulations. Specifically, two deep parametric factors obtained by multi-layer perceptron networks are introduced to serve as the core of lightweight strategies and compensate for the absence of nonlinearity. Experimental results of single square loop (SL) and double SL indicate that compared with related works, better agreements of the frequency responses and resonant frequencies are achieved with ECM-NN in broadband (0\u201330 GHz) as well as oblique incident angles (0\u00b0\u201360\u00b0). The average accuracy of the mapping is higher than 98.6%. The findings of this study provide a novel strategy for further studies of complex FSSs.",
-      "year": 2023,
-      "venue": "Journal of Physics D: Applied Physics",
-      "authors": [
-        "Wuxia Miao",
-        "Lamei Zhang",
-        "B. Zou",
-        "Ye Ding"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/897571a2c302fb6f243f91b35caa0a2159b255c8",
-      "pdf_url": "",
-      "publication_date": "2023-03-07",
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
-      ]
-    },
-    {
       "paper_id": "2a87d871e849e270cda90057b709b35977f3d7d1",
       "title": "Determination of Electromagnetic properties of Concrete Using Microwave Non-Destructive testing techniques and Arti\ufffdcial neural networks",
       "abstract": null,
@@ -4377,6 +4357,26 @@
       "url": "https://www.semanticscholar.org/paper/2a87d871e849e270cda90057b709b35977f3d7d1",
       "pdf_url": "",
       "publication_date": null,
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ]
+    },
+    {
+      "paper_id": "897571a2c302fb6f243f91b35caa0a2159b255c8",
+      "title": "Intelligent electromagnetic mapping via physics driven and neural networks on frequency selective surfaces",
+      "abstract": "The high mapping efficiency between various structures and electromagnetic (EM) properties of frequency selective surfaces (FSSs) is the state-of-the-art in the EM community. The most straightforward approaches for beam analysis depend on measurements and conventional EM calculation methods, which are inefficient and time-consuming. Equivalent circuit models (ECMs) with excellent intuitiveness and simplicity have been put forward extensively. Despite several applications, bottlenecks in ECM still exist, i.e. the application scope is restricted to narrow bands and specific structures, which is triggered by the ignorance of EM nonlinear coupling. In this study, for the first time, a lightweight physical model based on neural network (ECM-NN) is proposed , which exhibits great physical interpretability and spatial generalization abilities. The nonlinear mapping relationship between structure and beam behavior is interpreted by corresponding simulations. Specifically, two deep parametric factors obtained by multi-layer perceptron networks are introduced to serve as the core of lightweight strategies and compensate for the absence of nonlinearity. Experimental results of single square loop (SL) and double SL indicate that compared with related works, better agreements of the frequency responses and resonant frequencies are achieved with ECM-NN in broadband (0\u201330 GHz) as well as oblique incident angles (0\u00b0\u201360\u00b0). The average accuracy of the mapping is higher than 98.6%. The findings of this study provide a novel strategy for further studies of complex FSSs.",
+      "year": 2023,
+      "venue": "Journal of Physics D: Applied Physics",
+      "authors": [
+        "Wuxia Miao",
+        "Lamei Zhang",
+        "B. Zou",
+        "Ye Ding"
+      ],
+      "citation_count": 2,
+      "url": "https://www.semanticscholar.org/paper/897571a2c302fb6f243f91b35caa0a2159b255c8",
+      "pdf_url": "",
+      "publication_date": "2023-03-07",
       "keywords_matched": [
         "electromagnetic analysis (title)"
       ]
@@ -6541,27 +6541,6 @@
       ]
     },
     {
-      "paper_id": "8283479256ea1d54d98ed00bb53caba38f2f688e",
-      "title": "Side-Channel Analysis-Based Model Extraction on Intelligent CPS: An Information Theory Perspective",
-      "abstract": "The intelligent cyber-physical system (CPS) has been applied in various fields, covering multiple critical infras-tructures and human daily life support areas. CPS Security is a major concern and of critical importance, especially the security of the intelligent control component. Side-channel analysis (SCA) is the common threat exploiting the weaknesses in system operation to extract information of the intelligent CPS. However, existing literature lacks the systematic theo-retical analysis of the side-channel attacks on the intelligent CPS, without the ability to quantify and measure the leaked information. To address these issues, we propose the SCA-based model extraction attack on intelligent CPS. First, we design an efficient and novel SCA-based model extraction framework, including the threat model, hierarchical attack process, and the multiple micro-space parallel search enabled weight extraction algorithm. Secondly, an information theory-empowered analy-sis model for side-channel attacks on intelligent CPS is built. We propose a mutual information-based quantification method and derive the capacity of side-channel attacks on intelligent CPS, formulating the amount of information leakage through side channels. Thirdly, we develop the theoretical bounds of the leaked information over multiple attack queries based on the data processing inequality and properties of entropy. These convergence bounds provide theoretical means to estimate the amount of information leaked. Finally, experimental evaluation, including real-world experiments, demonstrates the effective-ness of the proposed SCA-based model extraction algorithm and the information theory-based analysis method in intelligent CPS.",
-      "year": 2021,
-      "venue": "2021 IEEE International Conferences on Internet of Things (iThings) and IEEE Green Computing & Communications (GreenCom) and IEEE Cyber, Physical & Social Computing (CPSCom) and IEEE Smart Data (SmartData) and IEEE Congress on Cybermatics (Cybermatics)",
-      "authors": [
-        "Qianqian Pan",
-        "Jun Wu",
-        "Xi Lin",
-        "Jianhua Li"
-      ],
-      "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/8283479256ea1d54d98ed00bb53caba38f2f688e",
-      "pdf_url": "",
-      "publication_date": "2021-12-01",
-      "keywords_matched": [
-        "model extraction attack",
-        "model extraction"
-      ]
-    },
-    {
       "paper_id": "87af159e1eaa99d17b9b6aff6781f2342e8ff385",
       "title": "Good Artists Copy, Great Artists Steal: Model Extraction Attacks Against Image Translation Models",
       "abstract": "Machine learning models are typically made available to potential client users via inference APIs. Model extraction attacks occur when a malicious client uses information gleaned from queries to the inference API of a victim model $F_V$ to build a surrogate model $F_A$ with comparable functionality. Recent research has shown successful model extraction of image classification, and natural language processing models. In this paper, we show the first model extraction attack against real-world generative adversarial network (GAN) image translation models. We present a framework for conducting such attacks, and show that an adversary can successfully extract functional surrogate models by querying $F_V$ using data from the same domain as the training data for $F_V$. The adversary need not know $F_V$'s architecture or any other information about it beyond its intended task. We evaluate the effectiveness of our attacks using three different instances of two popular categories of image translation: (1) Selfie-to-Anime and (2) Monet-to-Photo (image style transfer), and (3) Super-Resolution (super resolution). Using standard performance metrics for GANs, we show that our attacks are effective. Furthermore, we conducted a large scale (125 participants) user study on Selfie-to-Anime and Monet-to-Photo to show that human perception of the images produced by $F_V$ and $F_A$ can be considered equivalent, within an equivalence bound of Cohen's d = 0.3. Finally, we show that existing defenses against model extraction attacks (watermarking, adversarial examples, poisoning) do not extend to image translation models.",
@@ -6577,6 +6556,27 @@
       "url": "https://www.semanticscholar.org/paper/87af159e1eaa99d17b9b6aff6781f2342e8ff385",
       "pdf_url": "",
       "publication_date": "2021-04-26",
+      "keywords_matched": [
+        "model extraction attack",
+        "model extraction"
+      ]
+    },
+    {
+      "paper_id": "8283479256ea1d54d98ed00bb53caba38f2f688e",
+      "title": "Side-Channel Analysis-Based Model Extraction on Intelligent CPS: An Information Theory Perspective",
+      "abstract": "The intelligent cyber-physical system (CPS) has been applied in various fields, covering multiple critical infras-tructures and human daily life support areas. CPS Security is a major concern and of critical importance, especially the security of the intelligent control component. Side-channel analysis (SCA) is the common threat exploiting the weaknesses in system operation to extract information of the intelligent CPS. However, existing literature lacks the systematic theo-retical analysis of the side-channel attacks on the intelligent CPS, without the ability to quantify and measure the leaked information. To address these issues, we propose the SCA-based model extraction attack on intelligent CPS. First, we design an efficient and novel SCA-based model extraction framework, including the threat model, hierarchical attack process, and the multiple micro-space parallel search enabled weight extraction algorithm. Secondly, an information theory-empowered analy-sis model for side-channel attacks on intelligent CPS is built. We propose a mutual information-based quantification method and derive the capacity of side-channel attacks on intelligent CPS, formulating the amount of information leakage through side channels. Thirdly, we develop the theoretical bounds of the leaked information over multiple attack queries based on the data processing inequality and properties of entropy. These convergence bounds provide theoretical means to estimate the amount of information leaked. Finally, experimental evaluation, including real-world experiments, demonstrates the effective-ness of the proposed SCA-based model extraction algorithm and the information theory-based analysis method in intelligent CPS.",
+      "year": 2021,
+      "venue": "2021 IEEE International Conferences on Internet of Things (iThings) and IEEE Green Computing & Communications (GreenCom) and IEEE Cyber, Physical & Social Computing (CPSCom) and IEEE Smart Data (SmartData) and IEEE Congress on Cybermatics (Cybermatics)",
+      "authors": [
+        "Qianqian Pan",
+        "Jun Wu",
+        "Xi Lin",
+        "Jianhua Li"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/8283479256ea1d54d98ed00bb53caba38f2f688e",
+      "pdf_url": "",
+      "publication_date": "2021-12-01",
       "keywords_matched": [
         "model extraction attack",
         "model extraction"
@@ -7956,26 +7956,6 @@
       "publication_date": "2018-12-31",
       "keywords_matched": [
         "neural network extraction attack"
-      ]
-    },
-    {
-      "paper_id": "42155d5c8c6e46ef26a0d7212123128a364b07a0",
-      "title": "Defending Against Model Stealing Attacks Using Deceptive Perturbations",
-      "abstract": null,
-      "year": 2018,
-      "venue": "arXiv.org",
-      "authors": [
-        "Taesung Lee",
-        "Ben Edwards",
-        "Ian Molloy",
-        "D. Su"
-      ],
-      "citation_count": 45,
-      "url": "https://www.semanticscholar.org/paper/42155d5c8c6e46ef26a0d7212123128a364b07a0",
-      "pdf_url": "",
-      "publication_date": "2018-05-31",
-      "keywords_matched": [
-        "model stealing attack"
       ]
     },
     {
