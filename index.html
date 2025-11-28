@@ -23,6 +23,7 @@
             color: white;
             padding: 2rem;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
@@ -33,6 +34,36 @@
         header p {
             color: #94a3b8;
             font-size: 1rem;
+        }
+
+        .github-star {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .github-star a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #fff;
+            color: #24292f;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #d0d7de;
+            transition: background 0.2s;
+        }
+
+        .github-star a:hover {
+            background: #f3f4f6;
+        }
+
+        .github-star svg {
+            width: 16px;
+            height: 16px;
         }
 
         .container {
@@ -219,6 +250,12 @@
 </head>
 <body>
     <header>
+        <div class="github-star">
+            <a href="https://github.com/biecho/model-stealing-papers" target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg>
+                Star on GitHub
+            </a>
+        </div>
         <h1>Model Stealing Papers</h1>
         <p>A collection of academic papers on model stealing and extraction attacks</p>
     </header>
