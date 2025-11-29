@@ -1505,6 +1505,29 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "6d556b1dbb4a351b12a759c6581ed903e728c09e",
+      "title": "SoK: All You Need to Know About On-Device ML Model Extraction - The Gap Between Research and Practice",
+      "abstract": null,
+      "year": 2024,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Tushar Nayan",
+        "Qiming Guo",
+        "Mohammed A. Duniawi",
+        "Marcus Botacin",
+        "Selcuk Uluagac",
+        "Ruimin Sun"
+      ],
+      "citation_count": 12,
+      "url": "https://www.semanticscholar.org/paper/6d556b1dbb4a351b12a759c6581ed903e728c09e",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "model extraction"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "36d37aaf4bb16db3e5cc37c8b4ff55d4babb71ba",
       "title": "A realistic model extraction attack against graph neural networks",
       "abstract": null,
@@ -1527,29 +1550,6 @@
       "first_seen": "2025-11-28"
     },
     {
-      "paper_id": "6d556b1dbb4a351b12a759c6581ed903e728c09e",
-      "title": "SoK: All You Need to Know About On-Device ML Model Extraction - The Gap Between Research and Practice",
-      "abstract": null,
-      "year": 2024,
-      "venue": "USENIX Security Symposium",
-      "authors": [
-        "Tushar Nayan",
-        "Qiming Guo",
-        "Mohammed A. Duniawi",
-        "Marcus Botacin",
-        "Selcuk Uluagac",
-        "Ruimin Sun"
-      ],
-      "citation_count": 11,
-      "url": "https://www.semanticscholar.org/paper/6d556b1dbb4a351b12a759c6581ed903e728c09e",
-      "pdf_url": "",
-      "publication_date": null,
-      "keywords_matched": [
-        "model extraction"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
       "paper_id": "1e8b05c5b703f443b5470bef2b3aca1b064b1709",
       "title": "DeMistify: Identifying On-Device Machine Learning Models Stealing and Reuse Vulnerabilities in Mobile Apps",
       "abstract": "Mobile apps have become popular for providing artificial intelligence (AI) services via on-device machine learning (ML) techniques. Unlike accomplishing these AI services on remote servers traditionally, these on-device techniques process sensitive information required by AI services locally, which can mitigate the severe con-cerns of the sensitive data collection on the remote side. However, these on-device techniques have to push the core of ML expertise (e.g., models) to smartphones locally, which are still subject to similar vulnerabilities on the remote clouds and servers, especially when facing the model stealing attack. To defend against these attacks, developers have taken various protective measures. Unfor-tunately, we have found that these protections are still insufficient, and on-device ML models in mobile apps could be extracted and reused without limitation. To better demonstrate its inadequate protection and the feasibility of this attack, this paper presents DeMistify, which statically locates ML models within an app, slices relevant execution components, and finally generates scripts auto-matically to instrument mobile apps to successfully steal and reuse target ML models freely. To evaluate DeMistify and demonstrate its applicability, we apply it on 1,511 top mobile apps using on-device ML expertise for several ML services based on their install numbers from Google Play and DeMistify can successfully execute 1250 of them (82.73%). In addition, an in-depth study is conducted to understand the on-device ML ecosystem in the mobile application.",
@@ -1563,7 +1563,7 @@
         "Qingchuan Zhao",
         "Shanqing Guo"
       ],
-      "citation_count": 9,
+      "citation_count": 10,
       "url": "https://www.semanticscholar.org/paper/1e8b05c5b703f443b5470bef2b3aca1b064b1709",
       "pdf_url": "",
       "publication_date": "2024-02-06",
@@ -2425,7 +2425,7 @@
       "year": 2024,
       "venue": "IEEE Access",
       "authors": [
-        "Eda Y\u0131lmaz",
+        "E. Y\u0131lmaz",
         "H. Keles"
       ],
       "citation_count": 2,
@@ -4375,6 +4375,29 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "378230eb80a097e2d19aaf0e91d2745c9513a25a",
+      "title": "Model Stealing Attack against Recommender System",
+      "abstract": "Recent studies have demonstrated the vulnerability of recommender systems to data privacy attacks. However, research on the threat to model privacy in recommender systems, such as model stealing attacks, is still in its infancy. Some adversarial attacks have achieved model stealing attacks against recommender systems, to some extent, by collecting abundant training data of the target model (target data) or making a mass of queries. In this paper, we constrain the volume of available target data and queries and utilize auxiliary data, which shares the item set with the target data, to promote model stealing attacks. Although the target model treats target and auxiliary data differently, their similar behavior patterns allow them to be fused using an attention mechanism to assist attacks. Besides, we design stealing functions to effectively extract the recommendation list obtained by querying the target model. Experimental results show that the proposed methods are applicable to most recommender systems and various scenarios and exhibit excellent attack performance on multiple datasets.",
+      "year": 2023,
+      "venue": "arXiv.org",
+      "authors": [
+        "Zhihao Zhu",
+        "Rui Fan",
+        "Chenwang Wu",
+        "Yi Yang",
+        "Defu Lian",
+        "Enhong Chen"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/378230eb80a097e2d19aaf0e91d2745c9513a25a",
+      "pdf_url": "",
+      "publication_date": "2023-12-18",
+      "keywords_matched": [
+        "model stealing attack"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "ad26add46cae7797de1d638b84a0fa4ad1743a60",
       "title": "FMSA: a meta-learning framework-based fast model stealing attack technique against intelligent network intrusion detection systems",
       "abstract": "Intrusion detection systems are increasingly using machine learning. While machine learning has shown excellent performance in identifying malicious traffic, it may increase the risk of privacy leakage. This paper focuses on implementing a model stealing attack on intrusion detection systems. Existing model stealing attacks are hard to implement in practical network environments, as they either need private data of the victim dataset or frequent access to the victim model. In this paper, we propose a novel solution called Fast Model Stealing Attack (FMSA) to address the problem in the field of model stealing attacks. We also highlight the risks of using ML-NIDS in network security. First, meta-learning frameworks are introduced into the model stealing algorithm to clone the victim model in a black-box state. Then, the number of accesses to the target model is used as an optimization term, resulting in minimal queries to achieve model stealing. Finally, adversarial training is used to simulate the data distribution of the target model and achieve the recovery of privacy data. Through experiments on multiple public datasets, compared to existing state-of-the-art algorithms, FMSA reduces the number of accesses to the target model and improves the accuracy of the clone model on the test dataset to 88.9% and the similarity with the target model to 90.1%. We can demonstrate the successful execution of model stealing attacks on the ML-NIDS system even with protective measures in place to limit the number of anomalous queries.",
@@ -4390,29 +4413,6 @@
       "url": "https://www.semanticscholar.org/paper/ad26add46cae7797de1d638b84a0fa4ad1743a60",
       "pdf_url": "https://cybersecurity.springeropen.com/counter/pdf/10.1186/s42400-023-00171-y",
       "publication_date": "2023-08-04",
-      "keywords_matched": [
-        "model stealing attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "378230eb80a097e2d19aaf0e91d2745c9513a25a",
-      "title": "Model Stealing Attack against Recommender System",
-      "abstract": "Recent studies have demonstrated the vulnerability of recommender systems to data privacy attacks. However, research on the threat to model privacy in recommender systems, such as model stealing attacks, is still in its infancy. Some adversarial attacks have achieved model stealing attacks against recommender systems, to some extent, by collecting abundant training data of the target model (target data) or making a mass of queries. In this paper, we constrain the volume of available target data and queries and utilize auxiliary data, which shares the item set with the target data, to promote model stealing attacks. Although the target model treats target and auxiliary data differently, their similar behavior patterns allow them to be fused using an attention mechanism to assist attacks. Besides, we design stealing functions to effectively extract the recommendation list obtained by querying the target model. Experimental results show that the proposed methods are applicable to most recommender systems and various scenarios and exhibit excellent attack performance on multiple datasets.",
-      "year": 2023,
-      "venue": "arXiv.org",
-      "authors": [
-        "Zhihao Zhu",
-        "Rui Fan",
-        "Chenwang Wu",
-        "Yi Yang",
-        "Defu Lian",
-        "Enhong Chen"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/378230eb80a097e2d19aaf0e91d2745c9513a25a",
-      "pdf_url": "",
-      "publication_date": "2023-12-18",
       "keywords_matched": [
         "model stealing attack"
       ],
@@ -6155,7 +6155,7 @@
         "Zhou Li",
         "M. A. Faruque"
       ],
-      "citation_count": 76,
+      "citation_count": 77,
       "url": "https://www.semanticscholar.org/paper/03df500a29fb8717662ea5626afd9e2b22b5d14c",
       "pdf_url": "",
       "publication_date": "2021-02-17",
@@ -7979,7 +7979,7 @@
         "T. Schneider",
         "Oleksandr Tkachenko"
       ],
-      "citation_count": 60,
+      "citation_count": 61,
       "url": "https://www.semanticscholar.org/paper/304ac5d62f2888e94078715413c40cf00b58ac4f",
       "pdf_url": "https://encrypto.de/papers/RST19.pdf",
       "publication_date": "2019-11-11",
@@ -8619,7 +8619,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1946,
+      "citation_count": 1947,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
