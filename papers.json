@@ -1,5 +1,5 @@
 {
-  "updated": "2025-11-29",
+  "updated": "2025-11-30",
   "total": 406,
   "keywords": [
     "model stealing attack",
@@ -1985,7 +1985,7 @@
         "A. Pregowska",
         "Tomasz P. Michalak"
       ],
-      "citation_count": 3,
+      "citation_count": 4,
       "url": "https://www.semanticscholar.org/paper/f63f7d623e1738fbc314143a1ad1812045caffff",
       "pdf_url": "",
       "publication_date": "2024-05-20",
@@ -2242,6 +2242,29 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "a54e2156b2f83a7c5c70c524862ce35e0a696d1f",
+      "title": "Dynamic behaviors analysis of fraction-order neural network under memristive electromagnetic induction",
+      "abstract": "The dynamic behaviors of coupled neurons with different mathematical representations have received more and more attention in recent years. The coupling between heterogeneous neurons can show richer dynamic phenomena, which is of great significance in understanding the function of the human brain. In this paper, we present a fraction-order heterogeneous network with three neurons that is built by coupling a FN neuron with two HR neurons. Complex electromagnetic surroundings have meaningful physical impacts on the electrical activities of neurons. To imitate the effects of electromagnetic induction on the three-neuron heterogeneous network, we introduce a fraction-order locally active memristor in the neural network. The characteristics of this memristor are been carefully analyzed by pinched hysteresis loops and its locally active characteristic is been proved by the power-off plot and the DC v-i plot. Then, the parameter-dependent dynamic activities are investigated numerically using several dynamical analysis methods, such as the phase diagrams, bifurcation diagrams, Lyapunov exponent spectrums, and attraction basins. Furthermore, abundant dynamic behaviors, including coexisting activities, anti-monotonicity phenomena, transient chaos and firing patterns are revealed in this network, which support further investigation of the firing patterns of the human brain. In particular, complex dynamics, including coexisting attractors, anti-monotonicity, and firing patterns, can be influenced by the order and strength of electrical synaptic coupling and electromagnetic induction. The control of the bistable state can be realized through the time feedback control method, so that the bistable state can be transformed into an ideal monostable state. The study of the fraction-order memristive neural network may expand the field of view for understanding the collective behaviors of neurons. Finally, based on the ARM platform, we give a digital implementation of the fraction-order memristive neural network, which can verify the consistency with the numerical simulation results. In the future, we will explore more interesting memristive neural networks and research different types of methods to control the firing behaviors of the networks.",
+      "year": 2024,
+      "venue": "Acta Physica Sinica",
+      "authors": [
+        "Dawei Ding",
+        "Mouyuan Wang",
+        "Jin Wang",
+        "Zongli Yang",
+        "Yan Niu",
+        "Wei Wang"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/a54e2156b2f83a7c5c70c524862ce35e0a696d1f",
+      "pdf_url": "https://wulixb.iphy.ac.cn/pdf-content/10.7498/aps.73.20231792.pdf",
+      "publication_date": null,
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "aee0bc1bc011d8da14aa209d0af984a9cc6b227f",
       "title": "Streamlining DNN Obfuscation to Defend Against Model Stealing Attacks",
       "abstract": "Side-channel-based Deep Neural Network (DNN) model stealing has become a major concern with the advent of learning-based attacks. In respond to this threat, defence mechanisms have been presented to obfuscate the DNN execution, making it difficult to infer the correlation between side-channel information and DNN architecture. However, state-of-the-art (SOTA) DNN obfuscation is time-consuming, requires expert-level changes in existing DNN compilers (e.g., Tensor Virtual Machine (TVM)), and often relies on prior knowledge of the attack models. In this work, we study the impact of various obfuscation levels on the defence effectiveness, and present a streamlined DNN obfuscation process that is extremely fast and is agnostic to any attack models. Our study reveals that by just modifying the scheduling of DNN operations on the GPU, we can achieve comparable defense performance as the SOTA in an attack agnostic manner. We also propose a simple algorithm that determines an effective scheduling configuration for mitigating DNN model stealing at a fraction of a time required by SOTA obfuscation methods. Our method can be easily integrated into existing DNN compilers as a security feature, even by non-experts, to protect their DNN against side-channel attacks.",
@@ -2476,29 +2499,6 @@
       "publication_date": "2024-07-23",
       "keywords_matched": [
         "side-channel attack (title)"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "a54e2156b2f83a7c5c70c524862ce35e0a696d1f",
-      "title": "Dynamic behaviors analysis of fraction-order neural network under memristive electromagnetic induction",
-      "abstract": "The dynamic behaviors of coupled neurons with different mathematical representations have received more and more attention in recent years. The coupling between heterogeneous neurons can show richer dynamic phenomena, which is of great significance in understanding the function of the human brain. In this paper, we present a fraction-order heterogeneous network with three neurons that is built by coupling a FN neuron with two HR neurons. Complex electromagnetic surroundings have meaningful physical impacts on the electrical activities of neurons. To imitate the effects of electromagnetic induction on the three-neuron heterogeneous network, we introduce a fraction-order locally active memristor in the neural network. The characteristics of this memristor are been carefully analyzed by pinched hysteresis loops and its locally active characteristic is been proved by the power-off plot and the DC v-i plot. Then, the parameter-dependent dynamic activities are investigated numerically using several dynamical analysis methods, such as the phase diagrams, bifurcation diagrams, Lyapunov exponent spectrums, and attraction basins. Furthermore, abundant dynamic behaviors, including coexisting activities, anti-monotonicity phenomena, transient chaos and firing patterns are revealed in this network, which support further investigation of the firing patterns of the human brain. In particular, complex dynamics, including coexisting attractors, anti-monotonicity, and firing patterns, can be influenced by the order and strength of electrical synaptic coupling and electromagnetic induction. The control of the bistable state can be realized through the time feedback control method, so that the bistable state can be transformed into an ideal monostable state. The study of the fraction-order memristive neural network may expand the field of view for understanding the collective behaviors of neurons. Finally, based on the ARM platform, we give a digital implementation of the fraction-order memristive neural network, which can verify the consistency with the numerical simulation results. In the future, we will explore more interesting memristive neural networks and research different types of methods to control the firing behaviors of the networks.",
-      "year": 2024,
-      "venue": "Acta Physica Sinica",
-      "authors": [
-        "Dawei Ding",
-        "Mouyuan Wang",
-        "Jin Wang",
-        "Zongli Yang",
-        "Yan Niu",
-        "Wei Wang"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/a54e2156b2f83a7c5c70c524862ce35e0a696d1f",
-      "pdf_url": "https://wulixb.iphy.ac.cn/pdf-content/10.7498/aps.73.20231792.pdf",
-      "publication_date": null,
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
       ],
       "first_seen": "2025-11-28"
     },
@@ -3183,7 +3183,7 @@
         "Ramin Pourhanasa",
         "M. Nehdi"
       ],
-      "citation_count": 64,
+      "citation_count": 65,
       "url": "https://www.semanticscholar.org/paper/d6339e02ec93158430c83f7962b9f5c11cb45d14",
       "pdf_url": "https://www.mdpi.com/1996-1944/16/11/4200/pdf?version=1685974787",
       "publication_date": "2023-06-01",
@@ -3294,7 +3294,7 @@
         "Xinpeng Zhang",
         "Sheng Li"
       ],
-      "citation_count": 23,
+      "citation_count": 24,
       "url": "https://www.semanticscholar.org/paper/b4149005980a11919731e6b4c1833d8b0af59424",
       "pdf_url": "",
       "publication_date": "2023-10-26",
@@ -5578,7 +5578,7 @@
       "authors": [
         "Sheng Liu"
       ],
-      "citation_count": 6,
+      "citation_count": 7,
       "url": "https://www.semanticscholar.org/paper/8a435e15c39efebf6cad521c15fff50fcf7e0bfb",
       "pdf_url": "https://doi.org/10.1088/1742-6596/2189/1/012024",
       "publication_date": "2022-02-01",
@@ -6068,7 +6068,7 @@
         "Yunzhen Zhang",
         "B. Bao"
       ],
-      "citation_count": 95,
+      "citation_count": 96,
       "url": "https://www.semanticscholar.org/paper/f2eb05b91e4fed91626c961372d7d189211aa552",
       "pdf_url": "https://www.researchsquare.com/article/rs-722277/latest.pdf",
       "publication_date": "2021-07-20",
@@ -6110,7 +6110,7 @@
         "Yufei Han",
         "Yang Zhang"
       ],
-      "citation_count": 79,
+      "citation_count": 80,
       "url": "https://www.semanticscholar.org/paper/7026ec6c12f325aec884ff802812c3c80319f668",
       "pdf_url": "https://arxiv.org/pdf/2112.08331",
       "publication_date": "2021-12-15",
@@ -6348,7 +6348,7 @@
         "Hailong Hu",
         "Jun Pang"
       ],
-      "citation_count": 36,
+      "citation_count": 37,
       "url": "https://www.semanticscholar.org/paper/a7f5460b2f2b1a215064e9a0669dd3d43a382af9",
       "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3485832.3485838",
       "publication_date": "2021-12-06",
@@ -6498,7 +6498,7 @@
         "S. Potluri",
         "Aydin Aysu"
       ],
-      "citation_count": 14,
+      "citation_count": 15,
       "url": "https://www.semanticscholar.org/paper/0b498f9f76310da0ccb0cce7ae26ee1039769b89",
       "pdf_url": "",
       "publication_date": "2021-11-01",
@@ -7875,7 +7875,7 @@
         "B. Schiele",
         "Mario Fritz"
       ],
-      "citation_count": 183,
+      "citation_count": 184,
       "url": "https://www.semanticscholar.org/paper/da10f79f983fd4fbd589ed7ffa68d33964841443",
       "pdf_url": "",
       "publication_date": "2019-06-26",
@@ -8619,7 +8619,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1947,
+      "citation_count": 1950,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
