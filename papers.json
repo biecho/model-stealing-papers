@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-02",
+  "updated": "2025-12-03",
   "total": 407,
   "keywords": [
     "model stealing attack",
@@ -1191,7 +1191,7 @@
         "D. Rolnick",
         "Florian Tram\u00e8r"
       ],
-      "citation_count": 124,
+      "citation_count": 125,
       "url": "https://www.semanticscholar.org/paper/b232f468de0b1d4ff1c2dfe5dbb03ec093160c48",
       "pdf_url": "",
       "publication_date": "2024-03-11",
@@ -7070,7 +7070,7 @@
         "Christopher A. Choquette-Choo",
         "Nicolas Papernot"
       ],
-      "citation_count": 259,
+      "citation_count": 260,
       "url": "https://www.semanticscholar.org/paper/abbb0fd559ade70265f4f528df094fbbd8ae2040",
       "pdf_url": "",
       "publication_date": "2020-02-27",
@@ -8643,7 +8643,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1950,
+      "citation_count": 1951,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
