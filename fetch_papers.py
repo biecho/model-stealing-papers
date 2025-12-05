@@ -18,30 +18,97 @@ import requests
 API_KEY = os.environ.get("S2_API_KEY")
 
 
-# Keywords to search for
+# Seed papers for citation crawling (seminal works in model stealing)
+# Format: (paper_id, short_name) - paper_id is from Semantic Scholar
+SEED_PAPERS = [
+    # Foundational query-based attacks
+    ("8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e", "Tramèr 2016 - Stealing ML Models"),
+    ("089c6224cfbcf5c18b63564eb65001c7c42a7acf", "Knockoff Nets 2018"),
+    ("ac713aebdcc06f15f8ea61e1140bb360341fdf27", "Thieves on Sesame Street 2019"),
+    ("4d548fd21aad60e3052455e22b7a57cc1f06e3c3", "CloudLeak 2020"),
+    ("d8f64187b447d1b64f69f541dbbaec71bd79d205", "ActiveThief 2020"),
+
+    # Cryptanalytic / side-channel attacks
+    ("186377b9098efc726b8f1bda7e4f8aa2ed7bafa5", "Cryptanalytic Extraction 2020"),
+    ("109ad71af2ffce01b60852f8141ea91be6eed9e1", "DeepSniffer 2020"),
+    ("f5014e34ed13191082cd20cc279ca4cc9adee84f", "Stealing via Timing Side Channels 2018"),
+
+    # Defenses
+    ("4582e2350e4822834dcf266522690722dd4430d4", "PRADA 2018"),
+    ("abbb0fd559ade70265f4f528df094fbbd8ae2040", "Entangled Watermarks 2020"),
+    ("da10f79f983fd4fbd589ed7ffa68d33964841443", "Prediction Poisoning 2019"),
+
+    # Surveys
+    ("d405b58a8f465d5ba2e91f9541e09760904c11a8", "Survey: Stealing ML Models 2022"),
+]
+
+# Keywords to search for (expanded with shorter/variant terms)
 KEYWORDS = [
+    # Core terms - shorter for better matching
+    "model stealing",
+    "model extraction",
+    "model theft",
+    "steal model",
+    "stealing model",
+    "extract model",
+
+    # With "attack" suffix
     "model stealing attack",
     "model extraction attack",
     "neural network extraction attack",
-    "stealing machine learning model",
-    "model stealing defense",
-    "model extraction",
-    "LoRA extraction attack",
-    "LLM model stealing",
+
+    # Specific attack names
     "knockoff nets",
-    "stealing functionality black-box",
+    "knockoff net",
+    "copycat CNN",
+    "copycat model",
+    "imitation attack",
+    "clone model",
+    "cloning attack",
+
+    # ML/DNN specific
+    "stealing machine learning",
+    "steal ML model",
+    "steal ML models",
+    "steal neural network",
     "DNN model stealing",
+    "DNN extraction",
+    "stealing deep learning",
+    "LLM stealing",
+    "LLM extraction",
+    "stealing language model",
+
+    # Functionality/black-box
+    "stealing functionality",
+    "functionality stealing",
+    "black-box model stealing",
+    "blackbox model extraction",
+
+    # Defense terms
+    "model stealing defense",
+    "model extraction defense",
+    "prevent model stealing",
+    "protect model extraction",
+
+    # Side-channel approaches
+    "side-channel model extraction",
+    "side-channel neural network",
+    "timing attack neural network",
+    "cache attack DNN",
+    "power analysis neural network",
+    "electromagnetic neural network",
     "DNN weights leakage",
     "neural network weight extraction",
-    "side-channel model extraction",
-    "recover parameters neural network",
-    "electromagnetic analysis neural network",
-    "extract parameters neural network",
-    "side-channel attack deep learning",
-    "power analysis neural network weights",
-    "GPU leak DNN weights",
-    "stealing language model",
-    "steal production model",
+
+    # Reverse engineering
+    "reverse engineer neural network",
+    "reverse engineering DNN",
+    "cryptanalytic extraction neural",
+
+    # API/query-based
+    "API model extraction",
+    "query-based model stealing",
+    "prediction API stealing",
 ]
 
 # Venues to exclude (not related to ML security)
@@ -118,6 +185,82 @@ def search_papers(query: str, limit: int = 100) -> list[dict]:
     return papers[:limit]
 
 
+def fetch_citations(paper_id: str, limit: Optional[int] = None) -> list[dict]:
+    """Fetch papers that cite a given paper. If limit is None, fetch all."""
+    citations_url = f"https://api.semanticscholar.org/graph/v1/paper/{paper_id}/citations"
+    papers = []
+    offset = 0
+
+    headers = {}
+    if API_KEY:
+        headers["x-api-key"] = API_KEY
+
+    while limit is None or len(papers) < limit:
+        batch_size = 100 if limit is None else min(limit - len(papers), 100)
+        params = {
+            "fields": FIELDS,
+            "limit": batch_size,
+            "offset": offset,
+        }
+
+        response = requests.get(citations_url, params=params, headers=headers)
+
+        if response.status_code == 429:
+            print(f"  Rate limited, waiting 5 seconds...")
+            time.sleep(5)
+            continue
+
+        if response.status_code == 404:
+            print(f"  Paper {paper_id} not found")
+            break
+
+        response.raise_for_status()
+        data = response.json()
+
+        batch = data.get("data", [])
+        if not batch:
+            break
+
+        # Extract the citing paper from each citation entry
+        for entry in batch:
+            citing_paper = entry.get("citingPaper", {})
+            if citing_paper.get("paperId"):
+                papers.append(citing_paper)
+
+        print(f"  Fetched {len(papers)} citations...")
+
+        if "next" not in data:
+            break
+        if limit is not None and len(papers) >= limit:
+            break
+
+        offset += len(batch)
+        time.sleep(0.5)
+
+    return papers if limit is None else papers[:limit]
+
+
+def fetch_citations_from_seeds(seed_papers: list[tuple], limit_per_seed: Optional[int] = None) -> list[dict]:
+    """Fetch citations from all seed papers."""
+    all_citations = []
+    seen_ids = set()
+
+    for paper_id, name in seed_papers:
+        print(f"Fetching citations for: {name}")
+        citations = fetch_citations(paper_id, limit=limit_per_seed)
+
+        for paper in citations:
+            pid = paper.get("paperId")
+            if pid and pid not in seen_ids:
+                seen_ids.add(pid)
+                all_citations.append(paper)
+
+        print(f"  Total unique citations so far: {len(all_citations)}")
+        time.sleep(1)  # Be nice between seed papers
+
+    return all_citations
+
+
 def is_relevant(paper: dict, keywords: list[str]) -> bool:
     """Check if paper is relevant based on keyword occurrence in title/abstract."""
     title = (paper.get("title") or "").lower()
@@ -192,7 +335,7 @@ def parse_paper(raw: dict, keywords_matched: list[str]) -> Paper:
     )
 
 
-def fetch_all_papers(keywords: list[str], limit_per_keyword: int = 100) -> list[Paper]:
+def fetch_papers_by_keywords(keywords: list[str], limit_per_keyword: int = 100) -> list[Paper]:
     """Fetch papers for all keywords and deduplicate."""
     seen_ids = set()
     papers = []
@@ -219,8 +362,89 @@ def fetch_all_papers(keywords: list[str], limit_per_keyword: int = 100) -> list[
             seen_ids.add(paper_id)
             papers.append(parse_paper(raw, matched))
 
-    print(f"\nTotal unique relevant papers: {len(papers)}")
+    print(f"\nTotal unique relevant papers from keywords: {len(papers)}")
     return papers
+
+
+def fetch_papers_by_citations(
+    seed_papers: list[tuple],
+    keywords: list[str],
+    limit_per_seed: Optional[int] = None,
+) -> list[Paper]:
+    """Fetch papers by crawling citations from seed papers, filtered by keywords."""
+    print("\n=== Citation Crawling ===")
+
+    # Fetch all citations from seed papers
+    raw_citations = fetch_citations_from_seeds(seed_papers, limit_per_seed=limit_per_seed)
+    print(f"Total raw citations fetched: {len(raw_citations)}")
+
+    # Filter and parse
+    seen_ids = set()
+    papers = []
+
+    for raw in raw_citations:
+        paper_id = raw.get("paperId")
+        if not paper_id or paper_id in seen_ids:
+            continue
+
+        # Skip excluded venues
+        venue = raw.get("venue") or ""
+        if venue in EXCLUDED_VENUES:
+            continue
+
+        # Check relevance using keywords
+        matched = get_matched_keywords(raw, keywords)
+        if not matched:
+            continue
+
+        seen_ids.add(paper_id)
+        # Mark that this came from citation crawling
+        matched.append("(via citation)")
+        papers.append(parse_paper(raw, matched))
+
+    print(f"Relevant papers from citations: {len(papers)}")
+    return papers
+
+
+def fetch_all_papers(
+    keywords: list[str],
+    seed_papers: list[tuple],
+    limit_per_keyword: int = 100,
+    limit_per_seed: Optional[int] = None,
+) -> list[Paper]:
+    """Fetch papers using both keyword search and citation crawling."""
+
+    # 1. Keyword-based search
+    print("=== Keyword Search ===")
+    keyword_papers = fetch_papers_by_keywords(keywords, limit_per_keyword)
+
+    # 2. Citation-based crawling
+    citation_papers = fetch_papers_by_citations(seed_papers, keywords, limit_per_seed)
+
+    # 3. Combine and deduplicate
+    seen_ids = set()
+    combined = []
+
+    # Add keyword papers first (they have cleaner keyword matches)
+    for paper in keyword_papers:
+        if paper.paper_id not in seen_ids:
+            seen_ids.add(paper.paper_id)
+            combined.append(paper)
+
+    # Add citation papers that aren't duplicates
+    added_from_citations = 0
+    for paper in citation_papers:
+        if paper.paper_id not in seen_ids:
+            seen_ids.add(paper.paper_id)
+            combined.append(paper)
+            added_from_citations += 1
+
+    print(f"\n=== Combined Results ===")
+    print(f"From keywords: {len(keyword_papers)}")
+    print(f"New from citations: {added_from_citations}")
+    print(f"Total unique: {len(combined)}")
+
+    return combined
 
 
 def normalize_title(title: str) -> str:
@@ -362,14 +586,27 @@ def merge_papers(existing: dict[str, Paper], new_papers: list[Paper]) -> list[Pa
 def main():
     parser = argparse.ArgumentParser(description="Fetch model stealing papers")
     parser.add_argument("--output", "-o", default="papers.json", help="Output JSON file")
-    parser.add_argument("--limit", "-l", type=int, default=100, help="Max papers per keyword")
+    parser.add_argument("--limit", "-l", type=int, default=100, help="Max papers per keyword search")
+    parser.add_argument("--citation-limit", type=int, default=None, help="Max citations per seed (default: all)")
+    parser.add_argument("--no-citations", action="store_true", help="Skip citation crawling")
     args = parser.parse_args()
 
     # Load existing papers (we never remove papers, only add)
     existing = load_existing_papers(args.output)
 
-    # Fetch new papers
-    new_papers = fetch_all_papers(KEYWORDS, limit_per_keyword=args.limit)
+    # Fetch new papers using hybrid approach (keywords + citations)
+    if args.no_citations:
+        # Keywords only mode
+        print("Running in keywords-only mode (no citation crawling)")
+        new_papers = fetch_papers_by_keywords(KEYWORDS, limit_per_keyword=args.limit)
+    else:
+        # Full hybrid mode - fetch ALL citations by default
+        new_papers = fetch_all_papers(
+            keywords=KEYWORDS,
+            seed_papers=SEED_PAPERS,
+            limit_per_keyword=args.limit,
+            limit_per_seed=args.citation_limit,  # None = fetch all
+        )
 
     # Deduplicate new papers
     new_papers = deduplicate_papers(new_papers)
@@ -386,6 +623,7 @@ def main():
         "updated": time.strftime("%Y-%m-%d"),
         "total": len(papers),
         "keywords": KEYWORDS,
+        "seed_papers": [name for _, name in SEED_PAPERS],
         "papers": [asdict(p) for p in papers],
     }
 
