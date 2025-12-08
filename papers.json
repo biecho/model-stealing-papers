@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-07",
+  "updated": "2025-12-08",
   "total": 909,
   "keywords": [
     "model stealing",
@@ -2261,15 +2261,15 @@
     {
       "paper_id": "a744498909536ee4a0752f3fe2430c13268a2b82",
       "title": "Siamese: Stealing Fine-Tuned Visual Foundation Models via Diversified Prompting",
-      "abstract": null,
+      "abstract": "Visual foundation models, characterized by their robust generalization and adaptability, serve as the basis for a wide array of downstream tasks. When fine-tuned for specific tasks, these models encapsulate confidential and valuable task-specific knowledge, making them prime targets for model stealing (MS) attacks. While recent efforts have exposed MS threats in practical scenarios such as data-free and hard-label contexts, these attacks predominantly target traditional victim models trained from scratch. Fine-tuned visual foundation models, pre-trained on vast and diverse datasets and then fine-tuned on downstream tasks, present significant challenges for traditional MS attacks to extract task-specific knowledge. In this paper, we introduce an innovative MS attack, named SIAMESE, to steal fine-tuned visual foundation models under black-box, data-free, and hard-label settings. The core approach of SIAMESE involves constructing a stolen model using a foundation model that is efficiently and concurrently fine-tuned with multiple diversified soft prompts. To integrate the knowledge derived from these prompts, we propose a novel and tractable loss function that analyzes the output distributions while enforcing orthogonality among the prompts to minimize interference. Additionally, a unique alignment module enhances SIAMESE by synchronizing interpretations between the victim and stolen models. Extensive experiments validate that SIAMESE outperforms state-of-the-art baseline attacks over 10% in accuracy, exposing the heightened vulnerability of fine-tuned visual foundation models to MS threats.",
       "year": 2025,
-      "venue": "",
+      "venue": "Proceedings of the Tenth ACM/IEEE Symposium on Edge Computing",
       "authors": [
         "Madhureeta Das",
         "Gaurav Bagwe",
         "Miao Pan",
         "Kaichen Yang",
-        "Xiaoyong (Brian) Yuan",
+        "X. Yuan",
         "Lan Zhang"
       ],
       "citation_count": 0,
@@ -2277,7 +2277,7 @@
       "pdf_url": "",
       "publication_date": "2025-12-03",
       "keywords_matched": [
-        "model stealing (title)"
+        "model stealing"
       ],
       "first_seen": "2025-12-05"
     },
@@ -3328,7 +3328,7 @@
         "A. Ali",
         "R. N. Jana"
       ],
-      "citation_count": 48,
+      "citation_count": 49,
       "url": "https://www.semanticscholar.org/paper/538e8499246efac815f3d3a88bfd1542ea736f60",
       "pdf_url": "",
       "publication_date": "2024-05-01",
@@ -4073,6 +4073,27 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "d3b74a3fdb14c606b9daaf61c5409f7d58c3b3aa",
+      "title": "Design of Time-Delay Convolutional Neural Networks(TDCNN) Model for Feature Extraction for Side-Channel Attacks",
+      "abstract": ": This work explores a novel method of SCA profiling to address compatibility problems and strengthen Deep Learning (DL) models. Convolutional Neural Networks are proposed in this research as a countermeasure to misalignment-focused countermeasures. \u201dTime-Delay Convolutional Neural Networks\u201d (TDCNN) is more accurate than \u201dConvolutional Neural Network,\u201d yet it\u2019s still acceptable. It\u2019s true that TDCNNs are neural networks based on convolution learned on single spatial information, just as side-channel tracings. However, given to recent surge in popularity of CNNs, particularly from the year 2012 when CNN framework (\u201dAlexNet\u201d) achieved Image Net Large Scale Visual Recognition Competition which is a notable image detection competition, a novel TDCNN has been termed out in DL literature. Currently, it needs to employ the characteristics related to CNN design, including declaring that one input feature equals 1 for instance, to establish a TDCNN in the most widely used DL libraries.",
+      "year": 2024,
+      "venue": "International Journal of Computing and Digital Systems",
+      "authors": [
+        "Amjed Abbas Ahmed",
+        "Mohammad Kamrul Hasan",
+        "Shahrul Azman Mohd Noah",
+        "Azana Hafizah Aman"
+      ],
+      "citation_count": 9,
+      "url": "https://www.semanticscholar.org/paper/d3b74a3fdb14c606b9daaf61c5409f7d58c3b3aa",
+      "pdf_url": "https://journal.uob.edu.bh:443/bitstream/123456789/5437/3/IJCDS160127_1570996366.pdf",
+      "publication_date": "2024-07-01",
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "8f0679e01cb36c995fc5fbc9d364160bd72ce8cd",
       "title": "Evaluating Efficacy of Model Stealing Attacks and Defenses on Quantum Neural Networks",
       "abstract": "Cloud hosting of quantum machine learning (QML) models exposes them to a range of vulnerabilities, the most significant of which is the model stealing attack. In this study, we assess the efficacy of such attacks in the realm of quantum computing. Our findings revealed that model stealing attacks can produce clone models achieving up to 0.9 \u00d7 and 0.99 \u00d7 clone test accuracy when trained using Top-1 and Top-k labels, respectively (k: num_classes). To defend against these attacks, we propose: 1) hardware variation-induced perturbation (HVIP) and 2) hardware and architecture variation-induced perturbation (HAVIP). Despite limited success with our defense techniques, it has led to an important discovery: QML models trained on noisy hardwares are naturally resistant to perturbation or obfuscation-based defenses or attacks.",
@@ -4185,27 +4206,6 @@
       "publication_date": "2024-06-05",
       "keywords_matched": [
         "electromagnetic analysis (title)"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "d3b74a3fdb14c606b9daaf61c5409f7d58c3b3aa",
-      "title": "Design of Time-Delay Convolutional Neural Networks(TDCNN) Model for Feature Extraction for Side-Channel Attacks",
-      "abstract": ": This work explores a novel method of SCA profiling to address compatibility problems and strengthen Deep Learning (DL) models. Convolutional Neural Networks are proposed in this research as a countermeasure to misalignment-focused countermeasures. \u201dTime-Delay Convolutional Neural Networks\u201d (TDCNN) is more accurate than \u201dConvolutional Neural Network,\u201d yet it\u2019s still acceptable. It\u2019s true that TDCNNs are neural networks based on convolution learned on single spatial information, just as side-channel tracings. However, given to recent surge in popularity of CNNs, particularly from the year 2012 when CNN framework (\u201dAlexNet\u201d) achieved Image Net Large Scale Visual Recognition Competition which is a notable image detection competition, a novel TDCNN has been termed out in DL literature. Currently, it needs to employ the characteristics related to CNN design, including declaring that one input feature equals 1 for instance, to establish a TDCNN in the most widely used DL libraries.",
-      "year": 2024,
-      "venue": "International Journal of Computing and Digital Systems",
-      "authors": [
-        "Amjed Abbas Ahmed",
-        "Mohammad Kamrul Hasan",
-        "Shahrul Azman Mohd Noah",
-        "Azana Hafizah Aman"
-      ],
-      "citation_count": 7,
-      "url": "https://www.semanticscholar.org/paper/d3b74a3fdb14c606b9daaf61c5409f7d58c3b3aa",
-      "pdf_url": "https://journal.uob.edu.bh:443/bitstream/123456789/5437/3/IJCDS160127_1570996366.pdf",
-      "publication_date": "2024-07-01",
-      "keywords_matched": [
-        "side-channel attack (title)"
       ],
       "first_seen": "2025-11-28"
     },
@@ -7447,7 +7447,7 @@
         "Lei Wang",
         "Bing-Zhong Wang"
       ],
-      "citation_count": 34,
+      "citation_count": 35,
       "url": "https://www.semanticscholar.org/paper/32f77115199e3f31aa3c08179456a5a1b71001b5",
       "pdf_url": "",
       "publication_date": null,
@@ -7730,6 +7730,29 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "fefdabd7bd1c0007c0ef7db5faa6486f28166c32",
+      "title": "Membership Inference Attacks Against Sequential Recommender Systems",
+      "abstract": "Recent studies have demonstrated the vulnerability of recommender systems to membership inference attacks, which determine whether a user\u2019s historical data was utilized for model training, posing serious privacy leakage issues. Existing works assumed that member and non-member users follow different recommendation modes, and then infer membership based on the difference vector between the user\u2019s historical behaviors and the recommendation list. The previous frameworks are invalid against inductive recommendations, such as sequential recommendations, since the disparities of difference vectors constructed by the recommendations between members and non-members become imperceptible. This motivates us to dig deeper into the target model. In addition, most MIA frameworks assume that they can obtain some in-distribution data from the same distribution of the target data, which is hard to gain in recommender system. To address these difficulties, we propose a Membership Inference Attack framework against sequential recommenders based on Model Extraction(ME-MIA). Specifically, we train a surrogate model to simulate the target model based on two universal loss functions. For a given behavior sequence, the loss functions ensure the recommended items and corresponding rank of the surrogate model are consistent with the target model\u2019s recommendation. Due to the special training mode of the surrogate model, it is hard to judge which user is its member(non-member). Therefore, we establish a shadow model and use shadow model\u2019s members(non-members) to train the attack model later. Next, we build a user feature generator to construct representative feature vectors from the shadow(surrogate) model. The crafting feature vectors are finally input into the attack model to identify users\u2019 membership. Furthermore, to tackle the high cost of obtaining in-distribution data, we develop two variants of ME-MIA, realizing data-efficient and even data-free MIA by fabricating authentic in-distribution data. Notably, the latter is impossible in the previous works. Finally, we evaluate ME-MIA against multiple sequential recommendation models on three real-world datasets. Experimental results show that ME-MIA and its variants can achieve efficient extraction and outperform state-of-the-art algorithms in terms of attack performance.",
+      "year": 2023,
+      "venue": "The Web Conference",
+      "authors": [
+        "Zhihao Zhu",
+        "Chenwang Wu",
+        "Rui Fan",
+        "Defu Lian",
+        "Enhong Chen"
+      ],
+      "citation_count": 21,
+      "url": "https://www.semanticscholar.org/paper/fefdabd7bd1c0007c0ef7db5faa6486f28166c32",
+      "pdf_url": "",
+      "publication_date": "2023-04-30",
+      "keywords_matched": [
+        "model extraction",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "406d4e8d2df6f6b58e65016fea31004f781d93e7",
       "title": "DisGUIDE: Disagreement-Guided Data-Free Model Extraction",
       "abstract": "Recent model-extraction attacks on Machine Learning as a Service (MLaaS) systems have moved towards data-free approaches, showing the feasibility of stealing models trained with difficult-to-access data. However, these attacks are ineffective or limited due to the low accuracy of extracted models and the high number of queries to the models under attack. The high query cost makes such techniques infeasible for online MLaaS systems that charge per query.\nWe create a novel approach to get higher accuracy and query efficiency than prior data-free model extraction techniques. Specifically, we introduce a novel generator training scheme that maximizes the disagreement loss between two clone models that attempt to copy the model under attack. This loss, combined with diversity loss and experience replay, enables the generator to produce better instances to train the clone models. Our evaluation on popular datasets CIFAR-10 and CIFAR-100 shows that our approach improves the final model accuracy by up to 3.42% and 18.48% respectively. The average number of queries required to achieve the accuracy of the prior state of the art is reduced by up to 64.95%. We hope this will promote future work on feasible data-free model extraction and defenses against such attacks.",
@@ -7769,29 +7792,6 @@
       "publication_date": null,
       "keywords_matched": [
         "extract model"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "fefdabd7bd1c0007c0ef7db5faa6486f28166c32",
-      "title": "Membership Inference Attacks Against Sequential Recommender Systems",
-      "abstract": "Recent studies have demonstrated the vulnerability of recommender systems to membership inference attacks, which determine whether a user\u2019s historical data was utilized for model training, posing serious privacy leakage issues. Existing works assumed that member and non-member users follow different recommendation modes, and then infer membership based on the difference vector between the user\u2019s historical behaviors and the recommendation list. The previous frameworks are invalid against inductive recommendations, such as sequential recommendations, since the disparities of difference vectors constructed by the recommendations between members and non-members become imperceptible. This motivates us to dig deeper into the target model. In addition, most MIA frameworks assume that they can obtain some in-distribution data from the same distribution of the target data, which is hard to gain in recommender system. To address these difficulties, we propose a Membership Inference Attack framework against sequential recommenders based on Model Extraction(ME-MIA). Specifically, we train a surrogate model to simulate the target model based on two universal loss functions. For a given behavior sequence, the loss functions ensure the recommended items and corresponding rank of the surrogate model are consistent with the target model\u2019s recommendation. Due to the special training mode of the surrogate model, it is hard to judge which user is its member(non-member). Therefore, we establish a shadow model and use shadow model\u2019s members(non-members) to train the attack model later. Next, we build a user feature generator to construct representative feature vectors from the shadow(surrogate) model. The crafting feature vectors are finally input into the attack model to identify users\u2019 membership. Furthermore, to tackle the high cost of obtaining in-distribution data, we develop two variants of ME-MIA, realizing data-efficient and even data-free MIA by fabricating authentic in-distribution data. Notably, the latter is impossible in the previous works. Finally, we evaluate ME-MIA against multiple sequential recommendation models on three real-world datasets. Experimental results show that ME-MIA and its variants can achieve efficient extraction and outperform state-of-the-art algorithms in terms of attack performance.",
-      "year": 2023,
-      "venue": "The Web Conference",
-      "authors": [
-        "Zhihao Zhu",
-        "Chenwang Wu",
-        "Rui Fan",
-        "Defu Lian",
-        "Enhong Chen"
-      ],
-      "citation_count": 20,
-      "url": "https://www.semanticscholar.org/paper/fefdabd7bd1c0007c0ef7db5faa6486f28166c32",
-      "pdf_url": "",
-      "publication_date": "2023-04-30",
-      "keywords_matched": [
-        "model extraction",
-        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -8261,6 +8261,30 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "28eaa9c2377116327199cb1eb2c9d7b93b948bb4",
+      "title": "Detection of Crucial Power Side Channel Data Leakage in Neural Networks",
+      "abstract": "Neural network (NN) accelerators are now extensively utilized in a range of applications that need a high degree of security, such as driverless cars, NLP, and image recognition. Due to privacy issues and the high cost, hardware implementations contained within NN Propagators were often not accessible for general populace. Additionally with power and time data, accelerators also disclose critical data by electro-magnetic (EM) sided channels. Within this study, we demonstrate a side-channel information-based attack that can successfully steal models from large-scale NN accelerators deployed on real-world hardware. The use of these accelerators is widespread. The proposed method of attack consists of two distinct phases: 1) Using EM side-channel data to estimate networking's underlying architecture; 2) Using margin-dependent, attackers learning actively in estimating parameters, notably weights. Deducing the underlying network structure from EM sidechannel data. Inferring the underlying network structure from EM sidechannel data. Experimental findings demonstrate that the disclosed attack technique can be used to precisely retrieve the large-scale NN via the use of EM side-channel information leaking. Overall, our attack shows how critical it is to conceal electromagnetic (EM) traces for massive NN accelerators in practical settings.",
+      "year": 2023,
+      "venue": "International Telecommunication Networks and Applications Conference",
+      "authors": [
+        "A. A. Ahmed",
+        "Mohammad Kamrul Hasan",
+        "Nurhizam Safie Mohd Satar",
+        "N. Nafi",
+        "A. Aman",
+        "S. Islam",
+        "Saif Aamer Fadhil"
+      ],
+      "citation_count": 11,
+      "url": "https://www.semanticscholar.org/paper/28eaa9c2377116327199cb1eb2c9d7b93b948bb4",
+      "pdf_url": "",
+      "publication_date": "2023-11-29",
+      "keywords_matched": [
+        "steal model"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "c65feaf2681a5676204a43101edff4d897d37ffb",
       "title": "Explanation-based data-free model extraction attacks",
       "abstract": null,
@@ -8325,30 +8349,6 @@
         "electromagnetic analysis (title)"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "28eaa9c2377116327199cb1eb2c9d7b93b948bb4",
-      "title": "Detection of Crucial Power Side Channel Data Leakage in Neural Networks",
-      "abstract": "Neural network (NN) accelerators are now extensively utilized in a range of applications that need a high degree of security, such as driverless cars, NLP, and image recognition. Due to privacy issues and the high cost, hardware implementations contained within NN Propagators were often not accessible for general populace. Additionally with power and time data, accelerators also disclose critical data by electro-magnetic (EM) sided channels. Within this study, we demonstrate a side-channel information-based attack that can successfully steal models from large-scale NN accelerators deployed on real-world hardware. The use of these accelerators is widespread. The proposed method of attack consists of two distinct phases: 1) Using EM side-channel data to estimate networking's underlying architecture; 2) Using margin-dependent, attackers learning actively in estimating parameters, notably weights. Deducing the underlying network structure from EM sidechannel data. Inferring the underlying network structure from EM sidechannel data. Experimental findings demonstrate that the disclosed attack technique can be used to precisely retrieve the large-scale NN via the use of EM side-channel information leaking. Overall, our attack shows how critical it is to conceal electromagnetic (EM) traces for massive NN accelerators in practical settings.",
-      "year": 2023,
-      "venue": "International Telecommunication Networks and Applications Conference",
-      "authors": [
-        "A. A. Ahmed",
-        "Mohammad Kamrul Hasan",
-        "Nurhizam Safie Mohd Satar",
-        "N. Nafi",
-        "A. Aman",
-        "S. Islam",
-        "Saif Aamer Fadhil"
-      ],
-      "citation_count": 10,
-      "url": "https://www.semanticscholar.org/paper/28eaa9c2377116327199cb1eb2c9d7b93b948bb4",
-      "pdf_url": "",
-      "publication_date": "2023-11-29",
-      "keywords_matched": [
-        "steal model"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "eb3f0dbeca066945c971b79baa233e0d4468d99f",
@@ -8708,6 +8708,28 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "13f08d0ed26a48bb4fa16951e2dbbd87d0ba4797",
+      "title": "Defense Against Model Extraction Attacks on Recommender Systems",
+      "abstract": "The robustness of recommender systems has become a prominent topic within the research community. Numerous adversarial attacks have been proposed, but most of them rely on extensive prior knowledge, such as all the white-box attacks or most of the black-box attacks which assume that certain external knowledge is available. Among these attacks, the model extraction attack stands out as a promising and practical method, involving training a surrogate model by repeatedly querying the target model. However, there is a significant gap in the existing literature when it comes to defending against model extraction attacks on recommender systems. In this paper, we introduce Gradient-based Ranking Optimization (GRO), which is the first defense strategy designed to counter such attacks. We formalize the defense as an optimization problem, aiming to minimize the loss of the protected target model while maximizing the loss of the attacker's surrogate model. Since top-k ranking lists are non-differentiable, we transform them into swap matrices which are instead differentiable. These swap matrices serve as input to a student model that emulates the surrogate model's behavior. By back-propagating the loss of the student model, we obtain gradients for the swap matrices. These gradients are used to compute a swap loss, which maximizes the loss of the student model. We conducted experiments on three benchmark datasets to evaluate the performance of GRO, and the results demonstrate its superior effectiveness in defending against model extraction attacks.",
+      "year": 2023,
+      "venue": "Web Search and Data Mining",
+      "authors": [
+        "Sixiao Zhang",
+        "Hongzhi Yin",
+        "Hongxu Chen",
+        "Cheng Long"
+      ],
+      "citation_count": 8,
+      "url": "https://www.semanticscholar.org/paper/13f08d0ed26a48bb4fa16951e2dbbd87d0ba4797",
+      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3616855.3635751",
+      "publication_date": "2023-10-25",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "7b6db013d28e72374f301f758f432545a92b22fb",
       "title": "DivTheft: An Ensemble Model Stealing Attack by Divide-and-Conquer",
       "abstract": "Recently, model stealing attacks are widely studied but most of them are focused on stealing a single non-discrete model, e.g., neural networks. For ensemble models, these attacks are either non-executable or suffer from intolerant performance degradation due to the complex model structure (multiple sub-models) and the discreteness possessed by the sub-model (e.g., decision trees). To overcome the bottleneck, this paper proposes a divide-and-conquer strategy called DivTheft to formulate the model stealing attack to common ensemble models by combining active learning (AL). Specifically, based on the boosting learning concept, we divide a hard ensemble model stealing task into multiple simpler ones about single sub-model stealing. Then, we adopt AL to conquer the data-free sub-model stealing task. During the process, the current AL algorithm easily causes the stolen model to be biased because of ignoring the past useful memories. Thus, DivTheft involves a newly designed uncertainty sampling scheme to filter reusable samples from the previously used ones. Experiments show that compared with the prior work, DivTheft can save almost 50% queries while ensuring a competitive agreement rate to the victim model.",
@@ -8747,28 +8769,6 @@
       "url": "https://www.semanticscholar.org/paper/aa4acbad4d6a3a8195d70c174564df752a5e1ba5",
       "pdf_url": "",
       "publication_date": "2023-10-21",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "13f08d0ed26a48bb4fa16951e2dbbd87d0ba4797",
-      "title": "Defense Against Model Extraction Attacks on Recommender Systems",
-      "abstract": "The robustness of recommender systems has become a prominent topic within the research community. Numerous adversarial attacks have been proposed, but most of them rely on extensive prior knowledge, such as all the white-box attacks or most of the black-box attacks which assume that certain external knowledge is available. Among these attacks, the model extraction attack stands out as a promising and practical method, involving training a surrogate model by repeatedly querying the target model. However, there is a significant gap in the existing literature when it comes to defending against model extraction attacks on recommender systems. In this paper, we introduce Gradient-based Ranking Optimization (GRO), which is the first defense strategy designed to counter such attacks. We formalize the defense as an optimization problem, aiming to minimize the loss of the protected target model while maximizing the loss of the attacker's surrogate model. Since top-k ranking lists are non-differentiable, we transform them into swap matrices which are instead differentiable. These swap matrices serve as input to a student model that emulates the surrogate model's behavior. By back-propagating the loss of the student model, we obtain gradients for the swap matrices. These gradients are used to compute a swap loss, which maximizes the loss of the student model. We conducted experiments on three benchmark datasets to evaluate the performance of GRO, and the results demonstrate its superior effectiveness in defending against model extraction attacks.",
-      "year": 2023,
-      "venue": "Web Search and Data Mining",
-      "authors": [
-        "Sixiao Zhang",
-        "Hongzhi Yin",
-        "Hongxu Chen",
-        "Cheng Long"
-      ],
-      "citation_count": 7,
-      "url": "https://www.semanticscholar.org/paper/13f08d0ed26a48bb4fa16951e2dbbd87d0ba4797",
-      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3616855.3635751",
-      "publication_date": "2023-10-25",
       "keywords_matched": [
         "model extraction",
         "model extraction attack"
@@ -10102,6 +10102,32 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "12129493fcc85044c80a3d46f5ef73d3bb4ea6f9",
+      "title": "Query-efficient model extraction for text classification model in a hard label setting",
+      "abstract": null,
+      "year": 2023,
+      "venue": "Journal of King Saud University: Computer and Information Sciences",
+      "authors": [
+        "Hao Peng",
+        "Shixin Guo",
+        "Dandan Zhao",
+        "Yiming Wu",
+        "Jianxiong Han",
+        "Zhe Wang",
+        "S. Ji",
+        "Ming-Hong Zhong"
+      ],
+      "citation_count": 2,
+      "url": "https://www.semanticscholar.org/paper/12129493fcc85044c80a3d46f5ef73d3bb4ea6f9",
+      "pdf_url": "https://doi.org/10.1016/j.jksuci.2023.02.019",
+      "publication_date": "2023-03-01",
+      "keywords_matched": [
+        "model extraction",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "3166f8c8e00f2cd9dc5a903009a4f50d176d9f8a",
       "title": "Data-Free Model Stealing Attack Based on Denoising Diffusion Probabilistic Model",
       "abstract": "Data-free model stealing (MS) attacks use synthetic samples to query a target model and train a substitute model to fit the target model\u2019s predictions, avoiding strong dependence on real datasets used by model developers. However, the existing data-free MS attack methods still have a big gap in generating high-quality query samples for high-precision MS attacks. In this paper, we construct the DDPM-optimized generator to generate data, in which a residual network-like structure is designed to fuse data to synthesize query samples. Our method further improves the quantity and quality of synthetic query samples, and effectively reduces the number of queries to the target model. The results show that the proposed method achieves superior performance compared to state-of-the-art methods.",
@@ -10397,32 +10423,6 @@
       "url": "https://www.semanticscholar.org/paper/8796b36ed1a74a1c9fdafe2409c981102983653f",
       "pdf_url": "https://doi.org/10.1109/jetcas.2024.3476386",
       "publication_date": "2023-02-08",
-      "keywords_matched": [
-        "model extraction",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "12129493fcc85044c80a3d46f5ef73d3bb4ea6f9",
-      "title": "Query-efficient model extraction for text classification model in a hard label setting",
-      "abstract": null,
-      "year": 2023,
-      "venue": "Journal of King Saud University: Computer and Information Sciences",
-      "authors": [
-        "Hao Peng",
-        "Shixin Guo",
-        "Dandan Zhao",
-        "Yiming Wu",
-        "Jianxiong Han",
-        "Zhe Wang",
-        "S. Ji",
-        "Ming-Hong Zhong"
-      ],
-      "citation_count": 1,
-      "url": "https://www.semanticscholar.org/paper/12129493fcc85044c80a3d46f5ef73d3bb4ea6f9",
-      "pdf_url": "https://doi.org/10.1016/j.jksuci.2023.02.019",
-      "publication_date": "2023-03-01",
       "keywords_matched": [
         "model extraction",
         "(via citation)"
@@ -11156,6 +11156,30 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "ecfeeca2b8ed651efe27dc45bb8a0e4901e9f756",
+      "title": "Side-Channel Attack Analysis on In-Memory Computing Architectures",
+      "abstract": "In-memory computing (IMC) systems have great potential for accelerating data-intensive tasks such as deep neural networks (DNNs). As DNN models are generally highly proprietary, the neural network architectures become valuable targets for attacks. In IMC systems, since the whole model is mapped on chip and weight memory read can be restricted, the pre-mapped DNN model acts as a \u201cblack box\u201d for users. However, the localized and stationary weight and data patterns may subject IMC systems to other attacks. In this article, we propose a side-channel attack methodology on IMC architectures. We show that it is possible to extract model architectural information from power trace measurements without any prior knowledge of the neural network. We first developed a simulation framework that can emulate the dynamic power traces of the IMC macros. We then performed side-channel leakage analysis to reverse engineer model information such as the stored layer type, layer sequence, output channel/feature size and convolution kernel size from power traces of the IMC macros. Based on the extracted information, full networks can potentially be reconstructed without any knowledge of the neural network. Finally, we discuss potential countermeasures for building IMC systems that offer resistance to these model extraction attack.",
+      "year": 2022,
+      "venue": "IEEE Transactions on Emerging Topics in Computing",
+      "authors": [
+        "Ziyu Wang",
+        "Fanruo Meng",
+        "Yongmo Park",
+        "J. Eshraghian",
+        "Wei D. Lu"
+      ],
+      "citation_count": 32,
+      "url": "https://www.semanticscholar.org/paper/ecfeeca2b8ed651efe27dc45bb8a0e4901e9f756",
+      "pdf_url": "https://arxiv.org/pdf/2209.02792",
+      "publication_date": "2022-09-06",
+      "keywords_matched": [
+        "model extraction",
+        "extract model",
+        "model extraction attack"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "8bdb27ba98f457549bb7e03d6aa2d5c54a4de79e",
       "title": "On the Difficulty of Defending Self-Supervised Learning against Model Extraction",
       "abstract": "Self-Supervised Learning (SSL) is an increasingly popular ML paradigm that trains models to transform complex inputs into representations without relying on explicit labels. These representations encode similarity structures that enable efficient learning of multiple downstream tasks. Recently, ML-as-a-Service providers have commenced offering trained SSL models over inference APIs, which transform user inputs into useful representations for a fee. However, the high cost involved to train these models and their exposure over APIs both make black-box extraction a realistic security threat. We thus explore model stealing attacks against SSL. Unlike traditional model extraction on classifiers that output labels, the victim models here output representations; these representations are of significantly higher dimensionality compared to the low-dimensional prediction scores output by classifiers. We construct several novel attacks and find that approaches that train directly on a victim's stolen representations are query efficient and enable high accuracy for downstream models. We then show that existing defenses against model extraction are inadequate and not easily retrofitted to the specificities of SSL.",
@@ -11178,30 +11202,6 @@
         "model stealing attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "ecfeeca2b8ed651efe27dc45bb8a0e4901e9f756",
-      "title": "Side-Channel Attack Analysis on In-Memory Computing Architectures",
-      "abstract": "In-memory computing (IMC) systems have great potential for accelerating data-intensive tasks such as deep neural networks (DNNs). As DNN models are generally highly proprietary, the neural network architectures become valuable targets for attacks. In IMC systems, since the whole model is mapped on chip and weight memory read can be restricted, the pre-mapped DNN model acts as a \u201cblack box\u201d for users. However, the localized and stationary weight and data patterns may subject IMC systems to other attacks. In this article, we propose a side-channel attack methodology on IMC architectures. We show that it is possible to extract model architectural information from power trace measurements without any prior knowledge of the neural network. We first developed a simulation framework that can emulate the dynamic power traces of the IMC macros. We then performed side-channel leakage analysis to reverse engineer model information such as the stored layer type, layer sequence, output channel/feature size and convolution kernel size from power traces of the IMC macros. Based on the extracted information, full networks can potentially be reconstructed without any knowledge of the neural network. Finally, we discuss potential countermeasures for building IMC systems that offer resistance to these model extraction attack.",
-      "year": 2022,
-      "venue": "IEEE Transactions on Emerging Topics in Computing",
-      "authors": [
-        "Ziyu Wang",
-        "Fanruo Meng",
-        "Yongmo Park",
-        "J. Eshraghian",
-        "Wei D. Lu"
-      ],
-      "citation_count": 31,
-      "url": "https://www.semanticscholar.org/paper/ecfeeca2b8ed651efe27dc45bb8a0e4901e9f756",
-      "pdf_url": "https://arxiv.org/pdf/2209.02792",
-      "publication_date": "2022-09-06",
-      "keywords_matched": [
-        "model extraction",
-        "extract model",
-        "model extraction attack"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "a471ef4fae2c4748eac0c13c4b434e7f701c3252",
@@ -13197,7 +13197,7 @@
         "Huimin Zeng",
         "Julian McAuley"
       ],
-      "citation_count": 82,
+      "citation_count": 83,
       "url": "https://www.semanticscholar.org/paper/864cf501b5c04bfcdc836a9cf1909a51ac1d2a99",
       "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3460231.3474275",
       "publication_date": "2021-09-01",
