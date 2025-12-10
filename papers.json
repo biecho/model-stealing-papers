@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-09",
+  "updated": "2025-12-10",
   "total": 909,
   "keywords": [
     "model stealing",
@@ -485,6 +485,31 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "f961eb51aed4d1db5b246ac4cc842e0faa820ca2",
+      "title": "TSQP: Safeguarding Real-Time Inference for Quantization Neural Networks on Edge Devices",
+      "abstract": "Quantization Neural Networks (QNNs) has been widely adopted in resource-constrained edge devices due to their real-time capabilities and low resource requirement. However, concerns have arisen regarding that deployed models are white-box available to model thefts. To address this issue, TEE-shielded secure inference has been introduced as a secure and efficient solution. Nevertheless, existing methods neglect the compatibility with 8-bit quantized computation, which leads to severe integer overflow issue during inference. This issue could result a disastrous degradation in QNNs (to random guessing level), completely destroying model utility. Moreover, the model confidentiality and inference integrity also face a substantial threat due to the limited data representation space. To safeguard accurate and efficient inference for QNNs, TEE-Shielded QNN Partition (TSQP) are proposed, which presents three key insights: Firstly, Quantization Manager is designed to convert white-box inference to black-box by shielding critical scales in TEE. Additionally, overflow concerns are effectively addressed using reduced-range approaches. Secondly, by leveraging the Information Bottleneck theory to enhance model training, we introduce Parameter De-Similarity to defend against powerful Model Stealing attacks that existing methods are vulnerable to. Thirdly, the Integrity Monitor is suggested to detect inference integrity breaches in an oblivious manner. In contrast, existing method can be bypassed due to the lack of obliviousness. Experimental results demonstrate that proposed TSQP maintains high accuracy and achieves accurate integrity breaches detection. Our method achieves more than $8\\times$ speedup compared to full TEE inference, while reducing Model Stealing attacks accuracy from $3.99\\times$ to $1.29\\times$. To our best knowledge, proposed method is the first TEE-shielded secure inference solution that achieves model confidentiality, inference integrity and model utility on QNNs.",
+      "year": 2025,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Yu Sun",
+        "Gaojian Xiong",
+        "Jianhua Liu",
+        "Zheng Liu",
+        "Jian Cui"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/f961eb51aed4d1db5b246ac4cc842e0faa820ca2",
+      "pdf_url": "",
+      "publication_date": "2025-05-12",
+      "keywords_matched": [
+        "model stealing",
+        "model theft",
+        "model stealing attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "b31459472aa34e8711fe845acaab9b7b4a74f1d8",
       "title": "Large Language Models Merging for Enhancing the Link Stealing Attack on Graph Neural Networks",
       "abstract": "Graph Neural Networks (GNNs), specifically designed to process the graph data, have achieved remarkable success in various applications. Link stealing attacks on graph data pose a significant privacy threat, as attackers aim to extract sensitive relationships between nodes (entities), potentially leading to academic misconduct, fraudulent transactions, or other malicious activities. Previous studies have primarily focused on single datasets and did not explore cross-dataset attacks, let alone attacks that leverage the combined knowledge of multiple attackers. However, we find that an attacker can combine the data knowledge of multiple attackers to create a more effective attack model, which can be referred to cross-dataset attacks. Moreover, if knowledge can be extracted with the help of Large Language Models (LLMs), the attack capability will be more significant. In this paper, we propose a novel link stealing attack method that takes advantage of cross-dataset and LLMs. The LLM is applied to process datasets with different data structures in cross-dataset attacks. Each attacker fine-tunes the LLM on their specific dataset to generate a tailored attack model. We then introduce a novel model merging method to integrate the parameters of these attacker-specific models effectively. The result is a merged attack model with superior generalization capabilities, enabling effective attacks not only on the attackers\u2019 datasets but also on previously unseen (out-of-domain) datasets. We conducted extensive experiments in four datasets to demonstrate the effectiveness of our method. Additional experiments with three different GNN and LLM architectures further illustrate the generality of our approach. In summary, we present a new link stealing attack method that facilitates collaboration among multiple attackers to develop a powerful, universal attack model that reflects realistic real-world scenarios.",
@@ -707,31 +732,6 @@
       "publication_date": "2025-01-19",
       "keywords_matched": [
         "model stealing (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "f961eb51aed4d1db5b246ac4cc842e0faa820ca2",
-      "title": "TSQP: Safeguarding Real-Time Inference for Quantization Neural Networks on Edge Devices",
-      "abstract": "Quantization Neural Networks (QNNs) has been widely adopted in resource-constrained edge devices due to their real-time capabilities and low resource requirement. However, concerns have arisen regarding that deployed models are white-box available to model thefts. To address this issue, TEE-shielded secure inference has been introduced as a secure and efficient solution. Nevertheless, existing methods neglect the compatibility with 8-bit quantized computation, which leads to severe integer overflow issue during inference. This issue could result a disastrous degradation in QNNs (to random guessing level), completely destroying model utility. Moreover, the model confidentiality and inference integrity also face a substantial threat due to the limited data representation space. To safeguard accurate and efficient inference for QNNs, TEE-Shielded QNN Partition (TSQP) are proposed, which presents three key insights: Firstly, Quantization Manager is designed to convert white-box inference to black-box by shielding critical scales in TEE. Additionally, overflow concerns are effectively addressed using reduced-range approaches. Secondly, by leveraging the Information Bottleneck theory to enhance model training, we introduce Parameter De-Similarity to defend against powerful Model Stealing attacks that existing methods are vulnerable to. Thirdly, the Integrity Monitor is suggested to detect inference integrity breaches in an oblivious manner. In contrast, existing method can be bypassed due to the lack of obliviousness. Experimental results demonstrate that proposed TSQP maintains high accuracy and achieves accurate integrity breaches detection. Our method achieves more than $8\\times$ speedup compared to full TEE inference, while reducing Model Stealing attacks accuracy from $3.99\\times$ to $1.29\\times$. To our best knowledge, proposed method is the first TEE-shielded secure inference solution that achieves model confidentiality, inference integrity and model utility on QNNs.",
-      "year": 2025,
-      "venue": "IEEE Symposium on Security and Privacy",
-      "authors": [
-        "Yu Sun",
-        "Gaojian Xiong",
-        "Jianhua Liu",
-        "Zheng Liu",
-        "Jian Cui"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/f961eb51aed4d1db5b246ac4cc842e0faa820ca2",
-      "pdf_url": "",
-      "publication_date": "2025-05-12",
-      "keywords_matched": [
-        "model stealing",
-        "model theft",
-        "model stealing attack",
-        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -3775,6 +3775,29 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "6d556b1dbb4a351b12a759c6581ed903e728c09e",
+      "title": "SoK: All You Need to Know About On-Device ML Model Extraction - The Gap Between Research and Practice",
+      "abstract": null,
+      "year": 2024,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Tushar Nayan",
+        "Qiming Guo",
+        "Mohammed A. Duniawi",
+        "Marcus Botacin",
+        "Selcuk Uluagac",
+        "Ruimin Sun"
+      ],
+      "citation_count": 14,
+      "url": "https://www.semanticscholar.org/paper/6d556b1dbb4a351b12a759c6581ed903e728c09e",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "model extraction"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "df8401e2322f8f6f1b2cb8310cb048a939cce3d1",
       "title": "TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment",
       "abstract": "Proprietary large language models (LLMs) have been widely applied in various scenarios. Additionally, deploying LLMs on edge devices is trending for efficiency and privacy reasons. However, edge deployment of proprietary LLMs introduces new security challenges: edge-deployed models are exposed as white-box accessible to users, enabling adversaries to conduct model stealing (MS) attacks. Unfortunately, existing defense mechanisms fail to provide effective protection. Specifically, we identify four critical protection properties that existing methods fail to simultaneously satisfy: (1) maintaining protection after a model is physically copied; (2) authorizing model access at request level; (3) safeguarding runtime reverse engineering; (4) achieving high security with negligible runtime overhead. To address the above issues, we propose TransLinkGuard, a plug-and-play model protection approach against model stealing on edge devices. The core part of TransLinkGuard is a lightweight authorization module residing in a secure environment, e.g., TEE, which can freshly authorize each request based on its input. Extensive experiments show that TransLinkGuard achieves the same security as the black-box guarantees with negligible overhead.",
@@ -3797,29 +3820,6 @@
       "publication_date": "2024-04-17",
       "keywords_matched": [
         "model stealing"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "6d556b1dbb4a351b12a759c6581ed903e728c09e",
-      "title": "SoK: All You Need to Know About On-Device ML Model Extraction - The Gap Between Research and Practice",
-      "abstract": null,
-      "year": 2024,
-      "venue": "USENIX Security Symposium",
-      "authors": [
-        "Tushar Nayan",
-        "Qiming Guo",
-        "Mohammed A. Duniawi",
-        "Marcus Botacin",
-        "Selcuk Uluagac",
-        "Ruimin Sun"
-      ],
-      "citation_count": 13,
-      "url": "https://www.semanticscholar.org/paper/6d556b1dbb4a351b12a759c6581ed903e728c09e",
-      "pdf_url": "",
-      "publication_date": null,
-      "keywords_matched": [
-        "model extraction"
       ],
       "first_seen": "2025-11-28"
     },
@@ -7406,7 +7406,7 @@
         "Yao Guo",
         "Xiangqun Chen"
       ],
-      "citation_count": 38,
+      "citation_count": 39,
       "url": "https://www.semanticscholar.org/paper/e169ce8cc1627ff18f8fc4361f622bb31d33326b",
       "pdf_url": "https://arxiv.org/pdf/2310.07152",
       "publication_date": "2023-10-11",
@@ -7964,31 +7964,6 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "114c2f2cc2ab8a80a6229339a0c532ff4d59caed",
-      "title": "Defending against Data-Free Model Extraction by Distributionally Robust Defensive Training",
-      "abstract": null,
-      "year": 2023,
-      "venue": "Neural Information Processing Systems",
-      "authors": [
-        "Zhenyi Wang",
-        "Li Shen",
-        "Tongliang Liu",
-        "Tiehang Duan",
-        "Yanjun Zhu",
-        "Dongling Zhan",
-        "D. Doermann",
-        "Mingchen Gao"
-      ],
-      "citation_count": 15,
-      "url": "https://www.semanticscholar.org/paper/114c2f2cc2ab8a80a6229339a0c532ff4d59caed",
-      "pdf_url": "",
-      "publication_date": null,
-      "keywords_matched": [
-        "model extraction"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
       "paper_id": "f84fb561bf1b253e0997d864c3c2ff374190c86d",
       "title": "MirrorNet: A TEE-Friendly Framework for Secure On-Device DNN Inference",
       "abstract": "Deep neural network (DNN) models have become prevalent in edge devices for real-time inference. However, they are vulnerable to model extraction attacks and require protection. Existing defense approaches either fail to fully safeguard model confidentiality or result in significant latency issues. To overcome these challenges, this paper presents MirrorNet, which leverages Trusted Execution Environment (TEE) to enable secure on-device DNN inference. It generates a TEE-friendly implementation for any given DNN model to protect the model confidentiality, while meeting the stringent computation and storage constraints of TEE. The framework consists of two key components: the backbone model (BackboneNet), which is stored in the normal world but achieves lower inference accuracy, and the Companion Partial Monitor (CPM), a lightweight mirrored branch stored in the secure world, preserving model confidentiality. During inference, the CPM monitors the intermediate results from the BackboneNet and rectifies the classification output to achieve higher accuracy. To enhance flexibility, MirrorNet incorporates two modules: the CPM Strategy Generator, which generates various protection strategies, and the Performance Emulator, which estimates the performance of each strategy and selects the most optimal one. Extensive experiments demonstrate the effectiveness of MirrorNet in providing security guarantees while maintaining low computation latency, making MirrorNet a practical and promising solution for secure on-device DNN inference. For the evaluation, MirrorNet can achieve a 18.6% accuracy gap between authenticated and illegal use, while only introducing 0.99% hardware overhead.",
@@ -8001,7 +7976,7 @@
         "Tong Zhou",
         "Xiaolin Xu"
       ],
-      "citation_count": 15,
+      "citation_count": 16,
       "url": "https://www.semanticscholar.org/paper/f84fb561bf1b253e0997d864c3c2ff374190c86d",
       "pdf_url": "https://arxiv.org/pdf/2311.09489",
       "publication_date": "2023-10-28",
@@ -8025,7 +8000,7 @@
         "Xiwei Xu",
         "Qinghua Lu"
       ],
-      "citation_count": 15,
+      "citation_count": 16,
       "url": "https://www.semanticscholar.org/paper/fa9d49f32440aff7417ce46419d1073239b58b5b",
       "pdf_url": "http://arxiv.org/pdf/2301.03987",
       "publication_date": "2023-01-10",
@@ -8033,6 +8008,31 @@
         "model extraction"
       ],
       "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "114c2f2cc2ab8a80a6229339a0c532ff4d59caed",
+      "title": "Defending against Data-Free Model Extraction by Distributionally Robust Defensive Training",
+      "abstract": null,
+      "year": 2023,
+      "venue": "Neural Information Processing Systems",
+      "authors": [
+        "Zhenyi Wang",
+        "Li Shen",
+        "Tongliang Liu",
+        "Tiehang Duan",
+        "Yanjun Zhu",
+        "Dongling Zhan",
+        "D. Doermann",
+        "Mingchen Gao"
+      ],
+      "citation_count": 15,
+      "url": "https://www.semanticscholar.org/paper/114c2f2cc2ab8a80a6229339a0c532ff4d59caed",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "model extraction"
+      ],
+      "first_seen": "2025-11-28"
     },
     {
       "paper_id": "45310a683fa761bbaa03ea9969fcf5bc7021624d",
@@ -8115,7 +8115,7 @@
         "Yichao Wu",
         "Xianglong Liu"
       ],
-      "citation_count": 13,
+      "citation_count": 14,
       "url": "https://www.semanticscholar.org/paper/80ce78d3e14dc3f29eb87bf98d52e56f3f61af72",
       "pdf_url": "http://arxiv.org/pdf/2308.00958",
       "publication_date": "2023-08-02",
@@ -11240,7 +11240,7 @@
         "Yang Bai",
         "Xiaochun Cao"
       ],
-      "citation_count": 29,
+      "citation_count": 30,
       "url": "https://www.semanticscholar.org/paper/a4c748225360d89a6b03e1f277daddb64f429bcc",
       "pdf_url": "",
       "publication_date": "2022-10-10",
@@ -13060,6 +13060,24 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "b3086fbbc678a7616ac390a41945f45e0d0ab001",
+      "title": "Dataset Inference: Ownership Resolution in Machine Learning",
+      "abstract": "With increasingly more data and computation involved in their training, machine learning models constitute valuable intellectual property. This has spurred interest in model stealing, which is made more practical by advances in learning with partial, little, or no supervision. Existing defenses focus on inserting unique watermarks in a model's decision surface, but this is insufficient: the watermarks are not sampled from the training distribution and thus are not always preserved during model stealing. In this paper, we make the key observation that knowledge contained in the stolen model's training set is what is common to all stolen copies. The adversary's goal, irrespective of the attack employed, is always to extract this knowledge or its by-products. This gives the original model's owner a strong advantage over the adversary: model owners have access to the original training data. We thus introduce $dataset$ $inference$, the process of identifying whether a suspected model copy has private knowledge from the original model's dataset, as a defense against model stealing. We develop an approach for dataset inference that combines statistical testing with the ability to estimate the distance of multiple data points to the decision boundary. Our experiments on CIFAR10, SVHN, CIFAR100 and ImageNet show that model owners can claim with confidence greater than 99% that their model (or dataset as a matter of fact) was stolen, despite only exposing 50 of the stolen model's training points. Dataset inference defends against state-of-the-art attacks even when the adversary is adaptive. Unlike prior work, it does not require retraining or overfitting the defended model.",
+      "year": 2021,
+      "venue": "International Conference on Learning Representations",
+      "authors": [
+        "Pratyush Maini"
+      ],
+      "citation_count": 140,
+      "url": "https://www.semanticscholar.org/paper/b3086fbbc678a7616ac390a41945f45e0d0ab001",
+      "pdf_url": "",
+      "publication_date": "2021-04-21",
+      "keywords_matched": [
+        "model stealing"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "74f6e70fd9a945b517e6495920a1267c01842bd4",
       "title": "DeepSteal: Advanced Model Extractions Leveraging Efficient Weight Stealing in Memories",
       "abstract": "Recent advancements in Deep Neural Networks (DNNs) have enabled widespread deployment in multiple security-sensitive domains. The need for resource-intensive training and the use of valuable domain-specific training data have made these models the top intellectual property (IP) for model owners. One of the major threats to DNN privacy is model extraction attacks where adversaries attempt to steal sensitive information in DNN models. In this work, we propose an advanced model extraction framework DeepSteal that steals DNN weights remotely for the first time with the aid of a memory side-channel attack. Our proposed DeepSteal comprises two key stages. Firstly, we develop a new weight bit information extraction method, called HammerLeak, through adopting the rowhammer-based fault technique as the information leakage vector. HammerLeak leverages several novel system-level techniques tailored for DNN applications to enable fast and efficient weight stealing. Secondly, we propose a novel substitute model training algorithm with Mean Clustering weight penalty, which leverages the partial leaked bit information effectively and generates a substitute prototype of the target victim model. We evaluate the proposed model extraction framework on three popular image datasets (e.g., CIFAR-10/100/GTSRB) and four DNN architectures (e.g., ResNet-18/34/Wide-ResNetNGG-11). The extracted substitute model has successfully achieved more than 90% test accuracy on deep residual networks for the CIFAR-10 dataset. Moreover, our extracted substitute model could also generate effective adversarial input samples to fool the victim model. Notably, it achieves similar performance (i.e., ~1-2% test accuracy under attack) as white-box adversarial input attack (e.g., PGD/Trades).",
@@ -13080,24 +13098,6 @@
         "model extraction attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "b3086fbbc678a7616ac390a41945f45e0d0ab001",
-      "title": "Dataset Inference: Ownership Resolution in Machine Learning",
-      "abstract": "With increasingly more data and computation involved in their training, machine learning models constitute valuable intellectual property. This has spurred interest in model stealing, which is made more practical by advances in learning with partial, little, or no supervision. Existing defenses focus on inserting unique watermarks in a model's decision surface, but this is insufficient: the watermarks are not sampled from the training distribution and thus are not always preserved during model stealing. In this paper, we make the key observation that knowledge contained in the stolen model's training set is what is common to all stolen copies. The adversary's goal, irrespective of the attack employed, is always to extract this knowledge or its by-products. This gives the original model's owner a strong advantage over the adversary: model owners have access to the original training data. We thus introduce $dataset$ $inference$, the process of identifying whether a suspected model copy has private knowledge from the original model's dataset, as a defense against model stealing. We develop an approach for dataset inference that combines statistical testing with the ability to estimate the distance of multiple data points to the decision boundary. Our experiments on CIFAR10, SVHN, CIFAR100 and ImageNet show that model owners can claim with confidence greater than 99% that their model (or dataset as a matter of fact) was stolen, despite only exposing 50 of the stolen model's training points. Dataset inference defends against state-of-the-art attacks even when the adversary is adaptive. Unlike prior work, it does not require retraining or overfitting the defended model.",
-      "year": 2021,
-      "venue": "International Conference on Learning Representations",
-      "authors": [
-        "Pratyush Maini"
-      ],
-      "citation_count": 139,
-      "url": "https://www.semanticscholar.org/paper/b3086fbbc678a7616ac390a41945f45e0d0ab001",
-      "pdf_url": "",
-      "publication_date": "2021-04-21",
-      "keywords_matched": [
-        "model stealing"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "2569a7309142e40815cf556b6417059df9abbda8",
@@ -15540,7 +15540,7 @@
         "Matthew Jagielski",
         "Ilya Mironov"
       ],
-      "citation_count": 150,
+      "citation_count": 151,
       "url": "https://www.semanticscholar.org/paper/186377b9098efc726b8f1bda7e4f8aa2ed7bafa5",
       "pdf_url": "",
       "publication_date": "2020-03-10",
@@ -15587,7 +15587,7 @@
         "Yushu Zhang",
         "Weiqiang Liu"
       ],
-      "citation_count": 139,
+      "citation_count": 140,
       "url": "https://www.semanticscholar.org/paper/3136dd4036331b4559b341560712942ca2e765e3",
       "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09064510.pdf",
       "publication_date": "2020-04-13",
@@ -17295,7 +17295,7 @@
         "Tianwei Zhang",
         "R. Lee"
       ],
-      "citation_count": 350,
+      "citation_count": 351,
       "url": "https://www.semanticscholar.org/paper/2cb1f4688f8ba457b4fa2ed36deae5a98f4249ca",
       "pdf_url": "",
       "publication_date": "2019-12-09",
@@ -18355,7 +18355,7 @@
         "B. Schiele",
         "Mario Fritz"
       ],
-      "citation_count": 588,
+      "citation_count": 589,
       "url": "https://www.semanticscholar.org/paper/089c6224cfbcf5c18b63564eb65001c7c42a7acf",
       "pdf_url": "http://arxiv.org/pdf/1812.02766",
       "publication_date": "2018-12-06",
@@ -18539,7 +18539,7 @@
         "M. Backes",
         "Mario Fritz"
       ],
-      "citation_count": 112,
+      "citation_count": 113,
       "url": "https://www.semanticscholar.org/paper/8589aa697cd170c793c4c729b81b6f6dfacb012c",
       "pdf_url": "https://arxiv.org/pdf/1808.00590",
       "publication_date": "2018-08-01",
