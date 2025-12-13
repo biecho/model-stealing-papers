@@ -738,7 +738,7 @@
     {
       "paper_id": "5bce864b579b376c028ec40a8fec0f999b005d0e",
       "title": "Attack and defense techniques in large language models: A survey and new perspectives",
-      "abstract": "Large Language Models (LLMs) have become central to numerous natural language processing tasks, but their vulnerabilities present significant security and ethical challenges. This systematic survey explores the evolving landscape of attack and defense techniques in LLMs. We classify attacks into adversarial prompt attack, optimized attacks, model theft, as well as attacks on application of LLMs, detailing their mechanisms and implications. Consequently, we analyze defense strategies, including prevention-based and detection-based defense methods. Although advances have been made, challenges remain to adapt to the dynamic threat landscape, balance usability with robustness, and address resource constraints in defense implementation. We highlight open problems, including the need for adaptive scalable defenses, explainable security techniques, and standardized evaluation frameworks. This survey provides actionable insights and directions for developing secure and resilient LLMs, emphasizing the importance of interdisciplinary collaboration and ethical considerations to mitigate risks in real-world applications.",
+      "abstract": "Large Language Models (LLMs) have become central to numerous natural language processing tasks, but their vulnerabilities present significant security and ethical challenges. This systematic survey explores the evolving landscape of attack and defense techniques in LLMs. We classify attacks into adversarial prompt attacks, optimized attacks, model theft, as well as attacks on LLM applications, detailing their mechanisms and implications. Consequently, we analyze defense strategies, such as prevention-based and detection-based defense methods. Although advances have been made, challenges remain to adapt to the dynamic threat landscape, balance usability with robustness, and address resource constraints in defense implementation. We highlight open issues, including the need for adaptive scalable defenses, adversarial attack detection, generalized defense mechanisms, and ethical and bias concerns. This survey provides actionable insights and directions for developing secure and resilient LLMs, emphasizing the importance of interdisciplinary collaboration and ethical considerations to mitigate risks in real-world applications.",
       "year": 2025,
       "venue": "Neural Networks",
       "authors": [
@@ -11759,7 +11759,8 @@
       "pdf_url": "https://doi.org/10.1109/tc.2022.3148235",
       "publication_date": "2022-12-01",
       "keywords_matched": [
-        "model extraction"
+        "model extraction",
+        "(via citation)"
       ],
       "first_seen": "2025-11-28"
     },
