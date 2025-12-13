@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-12",
+  "updated": "2025-12-13",
   "total": 910,
   "keywords": [
     "model stealing",
@@ -7326,6 +7326,26 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "9ec814b5d21f9f476afe09dd84e0c39b4dec86d4",
+      "title": "Physics-Informed Neural Networks for Inverse Electromagnetic Problems",
+      "abstract": "Physics-informed neural networks (PINNs) have been successfully applied in electromagnetism (EM) for the solution of direct problems. However, since PINNs typically do not take system parameters (like geometry or material properties) as input, when embedded in inverse problems or adopted for parametrical studies, to output the solution of the governing equations, they require additional training for each new system parameter set. To overcome this issue, we propose a hypernetwork (HNN) that receives system parameters and outputs the network weights of a PINN, which in turn provides the solution of the direct problem. Therefore, once trained, the HNN acts as a parametrized real-time field solver that allows the fast solution of inverse problems, in which the objective(s) are defined a posteriori (i.e., after HNN\u2019s training). This method is adopted for a coil optimal design task in magnetostatics.",
+      "year": 2023,
+      "venue": "IEEE transactions on magnetics",
+      "authors": [
+        "M. Baldan",
+        "P. di Barba",
+        "D. Lowther"
+      ],
+      "citation_count": 66,
+      "url": "https://www.semanticscholar.org/paper/9ec814b5d21f9f476afe09dd84e0c39b4dec86d4",
+      "pdf_url": "",
+      "publication_date": "2023-05-01",
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "d6339e02ec93158430c83f7962b9f5c11cb45d14",
       "title": "Estimating Compressive Strength of Concrete Using Neural Electromagnetic Field Optimization",
       "abstract": "Concrete compressive strength (CCS) is among the most important mechanical characteristics of this widely used material. This study develops a novel integrative method for efficient prediction of CCS. The suggested method is an artificial neural network (ANN) favorably tuned by electromagnetic field optimization (EFO). The EFO simulates a physics-based strategy, which in this work is employed to find the best contribution of the concrete parameters (i.e., cement (C), blast furnace slag (SBF), fly ash (FA1), water (W), superplasticizer (SP), coarse aggregate (AC), fine aggregate (FA2), and the age of testing (AT)) to the CCS. The same effort is carried out by three benchmark optimizers, namely the water cycle algorithm (WCA), sine cosine algorithm (SCA), and cuttlefish optimization algorithm (CFOA) to be compared with the EFO. The results show that hybridizing the ANN using the mentioned algorithms led to reliable approaches for predicting the CCS. However, comparative analysis indicates that there are appreciable distinctions between the prediction capacity of the ANNs created by the EFO and WCA vs. the SCA and CFOA. For example, the mean absolute error calculated for the testing phase of the ANN-WCA, ANN-SCA, ANN-CFOA, and ANN-EFO was 5.8363, 7.8248, 7.6538, and 5.6236, respectively. Moreover, the EFO was considerably faster than the other strategies. In short, the ANN-EFO is a highly efficient hybrid model, and can be recommended for the early prediction of the CCS. A user-friendly explainable and explicit predictive formula is also derived for the convenient estimation of the CCS.",
@@ -7346,26 +7366,6 @@
         "electromagnetic analysis (title)"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "9ec814b5d21f9f476afe09dd84e0c39b4dec86d4",
-      "title": "Physics-Informed Neural Networks for Inverse Electromagnetic Problems",
-      "abstract": "Physics-informed neural networks (PINNs) have been successfully applied in electromagnetism (EM) for the solution of direct problems. However, since PINNs typically do not take system parameters (like geometry or material properties) as input, when embedded in inverse problems or adopted for parametrical studies, to output the solution of the governing equations, they require additional training for each new system parameter set. To overcome this issue, we propose a hypernetwork (HNN) that receives system parameters and outputs the network weights of a PINN, which in turn provides the solution of the direct problem. Therefore, once trained, the HNN acts as a parametrized real-time field solver that allows the fast solution of inverse problems, in which the objective(s) are defined a posteriori (i.e., after HNN\u2019s training). This method is adopted for a coil optimal design task in magnetostatics.",
-      "year": 2023,
-      "venue": "IEEE transactions on magnetics",
-      "authors": [
-        "M. Baldan",
-        "P. di Barba",
-        "D. Lowther"
-      ],
-      "citation_count": 65,
-      "url": "https://www.semanticscholar.org/paper/9ec814b5d21f9f476afe09dd84e0c39b4dec86d4",
-      "pdf_url": "",
-      "publication_date": "2023-05-01",
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "d032a269b465df9116f080ff9c56049bc581acb4",
@@ -9018,7 +9018,7 @@
         "A. Ding",
         "Yunsi Fei"
       ],
-      "citation_count": 5,
+      "citation_count": 6,
       "url": "https://www.semanticscholar.org/paper/2b805ba343b54c03ffc637cf9d80a65d68d7ddbd",
       "pdf_url": "",
       "publication_date": "2023-10-28",
@@ -10933,7 +10933,7 @@
         "Haojin Zhu",
         "Minhui Xue"
       ],
-      "citation_count": 88,
+      "citation_count": 89,
       "url": "https://www.semanticscholar.org/paper/7f005a1b45ff029c9b55dfcea5c83f473733cca4",
       "pdf_url": "https://arxiv.org/pdf/2202.08602",
       "publication_date": "2022-02-17",
@@ -11119,7 +11119,7 @@
         "Hangwei Qian",
         "C. Miao"
       ],
-      "citation_count": 39,
+      "citation_count": 40,
       "url": "https://www.semanticscholar.org/paper/f3886b3c22675da54b0d55a5bc16754e3399c979",
       "pdf_url": "https://arxiv.org/pdf/2205.06504",
       "publication_date": "2022-05-13",
@@ -13175,7 +13175,7 @@
         "Alptekin K\u00fcp\u00e7\u00fc",
         "A. E. Cicek"
       ],
-      "citation_count": 99,
+      "citation_count": 100,
       "url": "https://www.semanticscholar.org/paper/45ea6495958f04c1f02de1741c952dac1154d4f4",
       "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3559613.3563201",
       "publication_date": "2021-08-20",
@@ -15843,7 +15843,7 @@
         "Wang Yang",
         "Xinye Jiang"
       ],
-      "citation_count": 60,
+      "citation_count": 61,
       "url": "https://www.semanticscholar.org/paper/d4a679c685de885ab98b7c1f2378e26a255de490",
       "pdf_url": "",
       "publication_date": "2020-12-01",
@@ -15886,7 +15886,7 @@
         "Alexandre Bolot",
         "S. Gambs"
       ],
-      "citation_count": 57,
+      "citation_count": 58,
       "url": "https://www.semanticscholar.org/paper/983f1e19ba55aa97bd20086ca7ad5cf4e436a37a",
       "pdf_url": "",
       "publication_date": "2020-09-03",
@@ -16148,7 +16148,7 @@
         "N. Jahani",
         "E. Suter"
       ],
-      "citation_count": 21,
+      "citation_count": 20,
       "url": "https://www.semanticscholar.org/paper/57cbdecb0b12f03a5c0fb95522fdc3494c87bd10",
       "pdf_url": "https://bird.bcamath.org/bitstream/20.500.11824/1409/1/geo2020-0389.1%20%282%29.pdf",
       "publication_date": "2020-05-18",
@@ -16420,6 +16420,28 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "39bf1cd08237224cb0a5b372aa0201ba98f16e4f",
+      "title": "Linear-Model-Inspired Neural Network for Electromagnetic Inverse Scattering",
+      "abstract": "Electromagnetic inverse scattering problems (ISPs) aim to retrieve permittivities of dielectric scatterers from the scattering measurement. It is often highly nonlinear, causing the problem to be very difficult to solve. To alleviate the issue, this letter exploits a linear-model-based network (LMN) learning strategy, which benefits from both model complexity and data learning. By introducing a linear model for ISPs, a new model with network-driven regularizer is proposed. For attaining efficient end-to-end learning, the network architecture and hyper-parameter estimation are presented. Experimental results validate its superiority to some state of the art.",
+      "year": 2020,
+      "venue": "IEEE Antennas and Wireless Propagation Letters",
+      "authors": [
+        "Huilin Zhou",
+        "Ouyang Tao",
+        "Yadan Li",
+        "Jian Liu",
+        "Qiegen Liu"
+      ],
+      "citation_count": 13,
+      "url": "https://www.semanticscholar.org/paper/39bf1cd08237224cb0a5b372aa0201ba98f16e4f",
+      "pdf_url": "https://arxiv.org/pdf/2003.01465",
+      "publication_date": "2020-03-03",
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "c9c7498580d105ebac92ed80ec6698bb6dbeb76f",
       "title": "Simple Electromagnetic Analysis Against Activation Functions of Deep Neural Networks",
       "abstract": null,
@@ -16440,28 +16462,6 @@
         "(via citation)"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "39bf1cd08237224cb0a5b372aa0201ba98f16e4f",
-      "title": "Linear-Model-Inspired Neural Network for Electromagnetic Inverse Scattering",
-      "abstract": "Electromagnetic inverse scattering problems (ISPs) aim to retrieve permittivities of dielectric scatterers from the scattering measurement. It is often highly nonlinear, causing the problem to be very difficult to solve. To alleviate the issue, this letter exploits a linear-model-based network (LMN) learning strategy, which benefits from both model complexity and data learning. By introducing a linear model for ISPs, a new model with network-driven regularizer is proposed. For attaining efficient end-to-end learning, the network architecture and hyper-parameter estimation are presented. Experimental results validate its superiority to some state of the art.",
-      "year": 2020,
-      "venue": "IEEE Antennas and Wireless Propagation Letters",
-      "authors": [
-        "Huilin Zhou",
-        "Ouyang Tao",
-        "Yadan Li",
-        "Jian Liu",
-        "Qiegen Liu"
-      ],
-      "citation_count": 12,
-      "url": "https://www.semanticscholar.org/paper/39bf1cd08237224cb0a5b372aa0201ba98f16e4f",
-      "pdf_url": "https://arxiv.org/pdf/2003.01465",
-      "publication_date": "2020-03-03",
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "030f26db8d627646af1af63adbd4359bf16fc08f",
@@ -17336,7 +17336,7 @@
         "Dirmanto Jap",
         "S. Picek"
       ],
-      "citation_count": 306,
+      "citation_count": 307,
       "url": "https://www.semanticscholar.org/paper/b12c15503435cffee16bdd156766dcf390eeb8f8",
       "pdf_url": "",
       "publication_date": null,
@@ -18375,7 +18375,7 @@
         "B. Schiele",
         "Mario Fritz"
       ],
-      "citation_count": 590,
+      "citation_count": 591,
       "url": "https://www.semanticscholar.org/paper/089c6224cfbcf5c18b63564eb65001c7c42a7acf",
       "pdf_url": "http://arxiv.org/pdf/1812.02766",
       "publication_date": "2018-12-06",
