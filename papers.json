@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-13",
+  "updated": "2025-12-14",
   "total": 910,
   "keywords": [
     "model stealing",
@@ -1450,6 +1450,52 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "4a1c5a240e9ca7572f7d1545710f45c3df5f7b54",
+      "title": "Unlocking High-Fidelity Learning: Towards Neuron-Grained Model Extraction",
+      "abstract": "Model extraction (ME) attacks replicate valuable closed-box machine learning (ML) models via malicious query interactions. Cutting-edge attacks focus on actively designing query samples to enhance model fidelity and imprudently adhere to the standard ML training approach. This causes a deviation from the true objective of learning a model over a task. In this article, we innovatively shift our focus from query selection to training process optimization, aiming to boost the similarity of the copy model with the victim model from neuron to model level. We leverage neuron matching theory to attain this objective and develop a general training booster framework, MEBooster, to fully exploit this theory. MEBooster comprises an initial bootstrapping phase that furnishes initial parameters and an optimal model architecture, followed by a post-processing phase that employs fine-tuning for enhanced neuron matching. Notably, MEBooster can seamlessly integrate with all existing model extraction attacks, enhancing their overall performance. Performance evaluation shows up to 58.10% fidelity gain in image classification. From a defender's perspective, we introduce a novel defensive strategy called Stochastic Norm Enlargement (SNE) to mitigate the risk of such attacks by enlarging the model parameters\u2019 norm property in training. Performance evaluation shows up to 58.81% extractability (i.e., fidelity) reduction.",
+      "year": 2025,
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "authors": [
+        "Yaxin Xiao",
+        "Haibo Hu",
+        "Qingqing Ye",
+        "Li Tang",
+        "Zi Liang",
+        "Huadi Zheng"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/4a1c5a240e9ca7572f7d1545710f45c3df5f7b54",
+      "pdf_url": "",
+      "publication_date": "2025-11-01",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "51f750009d83c9112509bed3946077b032d78ccc",
+      "title": "Measuring the Vulnerability Disclosure Policies of AI Vendors",
+      "abstract": "As AI is increasingly integrated into products and critical systems, researchers are paying greater attention to identifying related vulnerabilities. Effective remediation depends on whether vendors are willing to accept and respond to AI vulnerability reports. In this paper, we examine the disclosure policies of 264 AI vendors. Using a mixed-methods approach, our quantitative analysis finds that 36% of vendors provide no disclosure channel, and only 18% explicitly mention AI-related risks. Vulnerabilities involving data access, authorization, and model extraction are generally considered in-scope, while jailbreaking and hallucination are frequently excluded. Through qualitative analysis, we further identify three vendor postures toward AI vulnerabilities - proactive clarification (n = 46, include active supporters, AI integrationists, and back channels), silence (n = 115, include self-hosted and hosted vendors), and restrictive (n = 103). Finally, by comparing vendor policies against 1,130 AI incidents and 359 academic publications, we show that bug bounty policy evolution has lagged behind both academic research and real-world events.",
+      "year": 2025,
+      "venue": "arXiv.org",
+      "authors": [
+        "Yangheran Piao",
+        "Jingjie Li",
+        "Daniel W. Woods"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/51f750009d83c9112509bed3946077b032d78ccc",
+      "pdf_url": "",
+      "publication_date": "2025-09-07",
+      "keywords_matched": [
+        "model extraction",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "bbd216e8ca69d2583e1d203a4fdf8e9bf4e07f3d",
       "title": "Inside the Mind of an Attacker: Review Sistematika Tujuan Pencurian Machine Learning Model",
       "abstract": "Abstrak - Pencurian model (model stealing) menjadi salah satu ancaman serius dalam penerapan machine learning modern, terutama pada layanan berbasis API dan cloud. Artikel ini mengulas secara sistematik berbagai tujuan di balik serangan pencurian model untuk memahami motif penyerang dan implikasinya bagi pengembang sistem. Metode penulisan berupa kajian literatur terkini yang mengklasifikasikan tujuan pencurian ke dalam delapan kategori utama: (1) pencurian properti internal seperti arsitektur, bobot, dan hyperparameter; (2) peniruan perilaku model untuk menghasilkan efektivitas setara dan konsistensi prediksi pada data normal maupun adversarial; (3) transfer pengetahuan untuk distillation dan deployment ringan; (4) serangan privasi berupa membership inference dan model inversion; (5) monetisasi dengan menjual model bajakan atau menyediakan layanan API ilegal; (6) pencurian kemampuan pertahanan adversarial untuk meningkatkan efektivitas serangan; (7) spionase industri untuk reverse engineering model pesaing; serta (8) penghindaran regulasi dengan mencuri model yang sudah tersertifikasi. Review ini menegaskan bahwa ancaman pencurian model tidak hanya merugikan secara teknis, tetapi juga membuka peluang eksploitasi ekonomi ilegal, kebocoran data sensitif, dan persaingan usaha tidak sehat. Pemahaman yang detail atas ragam tujuan ini diharapkan mendorong perancang sistem untuk mengembangkan strategi pertahanan yang lebih cermat dan menyeluruh.Kata kunci: Machine Learning; Model Stealing; API; Adversarial; Transfer Pengetahuan;\u00a0Abstract - Model stealing has become one of the most serious threats in modern machine learning applications, especially in API- and cloud-based services. This article systematically reviews the various objectives behind model stealing attacks to understand the attackers\u2019 motivations and their implications for system developers. The writing method is a current literature review that classifies model stealing objectives into eight main categories: (1) theft of internal properties such as architecture, weights, and hyperparameters; (2) imitation of model behavior to achieve comparable effectiveness and prediction consistency on both normal and adversarial data; (3) knowledge transfer for distillation and lightweight deployment; (4) privacy attacks through membership inference and model inversion; (5) monetization by selling stolen models or offering illegal API services; (6) stealing adversarial robustness to improve attack effectiveness; (7) industrial espionage for reverse engineering competitor models; and (8) regulatory evasion by stealing pre-certified models. This review emphasizes that model stealing threats are not merely technical issues but also open opportunities for illegal economic exploitation, leakage of sensitive data, and unfair business competition. A detailed understanding of these diverse objectives is expected to encourage system designers to develop more careful and comprehensive defense strategies.Keywords: Machine Learning; Model Stealing; API; Adversarial; Knowledge Transfer;",
@@ -2684,31 +2730,6 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "4a1c5a240e9ca7572f7d1545710f45c3df5f7b54",
-      "title": "Unlocking High-Fidelity Learning: Towards Neuron-Grained Model Extraction",
-      "abstract": "Model extraction (ME) attacks replicate valuable closed-box machine learning (ML) models via malicious query interactions. Cutting-edge attacks focus on actively designing query samples to enhance model fidelity and imprudently adhere to the standard ML training approach. This causes a deviation from the true objective of learning a model over a task. In this article, we innovatively shift our focus from query selection to training process optimization, aiming to boost the similarity of the copy model with the victim model from neuron to model level. We leverage neuron matching theory to attain this objective and develop a general training booster framework, MEBooster, to fully exploit this theory. MEBooster comprises an initial bootstrapping phase that furnishes initial parameters and an optimal model architecture, followed by a post-processing phase that employs fine-tuning for enhanced neuron matching. Notably, MEBooster can seamlessly integrate with all existing model extraction attacks, enhancing their overall performance. Performance evaluation shows up to 58.10% fidelity gain in image classification. From a defender's perspective, we introduce a novel defensive strategy called Stochastic Norm Enlargement (SNE) to mitigate the risk of such attacks by enlarging the model parameters\u2019 norm property in training. Performance evaluation shows up to 58.81% extractability (i.e., fidelity) reduction.",
-      "year": 2025,
-      "venue": "IEEE Transactions on Dependable and Secure Computing",
-      "authors": [
-        "Yaxin Xiao",
-        "Haibo Hu",
-        "Qingqing Ye",
-        "Li Tang",
-        "Zi Liang",
-        "Huadi Zheng"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/4a1c5a240e9ca7572f7d1545710f45c3df5f7b54",
-      "pdf_url": "",
-      "publication_date": "2025-11-01",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
       "paper_id": "8cf823eb4c9309221953480a9b98c7700136c546",
       "title": "SecureInfer: Heterogeneous TEE-GPU Architecture for Privacy-Critical Tensors for Large Language Model Deployment",
       "abstract": "With the increasing deployment of Large Language Models (LLMs) on mobile and edge platforms, securing them against model extraction attacks has become a pressing concern. However, protecting model privacy without sacrificing the performance benefits of untrusted AI accelerators, such as GPUs, presents a challenging trade-off. In this paper, we initiate the study of high-performance execution on LLMs and present SecureInfer, a hybrid framework that leverages a heterogeneous Trusted Execution Environments (TEEs)-GPU architecture to isolate privacy-critical components while offloading compute-intensive operations to untrusted accelerators. Building upon an outsourcing scheme, SecureInfer adopts an information-theoretic and threat-informed partitioning strategy: security-sensitive components, including non-linear layers, projection of attention head, FNN transformations, and LoRA adapters, are executed inside an SGX enclave, while other linear operations (matrix multiplication) are performed on the GPU after encryption and are securely restored within the enclave. We implement a prototype of SecureInfer using the LLaMA-2 model and evaluate it across performance and security metrics. Our results show that SecureInfer offers strong security guarantees with reasonable performance, offering a practical solution for secure on-device model inference.",
@@ -2769,27 +2790,6 @@
       "url": "https://www.semanticscholar.org/paper/6e068deff65d5f69213fd9a6bf3389dc514c1cf5",
       "pdf_url": "",
       "publication_date": "2025-09-14",
-      "keywords_matched": [
-        "model extraction",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "51f750009d83c9112509bed3946077b032d78ccc",
-      "title": "Measuring the Vulnerability Disclosure Policies of AI Vendors",
-      "abstract": "As AI is increasingly integrated into products and critical systems, researchers are paying greater attention to identifying related vulnerabilities. Effective remediation depends on whether vendors are willing to accept and respond to AI vulnerability reports. In this paper, we examine the disclosure policies of 264 AI vendors. Using a mixed-methods approach, our quantitative analysis finds that 36% of vendors provide no disclosure channel, and only 18% explicitly mention AI-related risks. Vulnerabilities involving data access, authorization, and model extraction are generally considered in-scope, while jailbreaking and hallucination are frequently excluded. Through qualitative analysis, we further identify three vendor postures toward AI vulnerabilities - proactive clarification (n = 46, include active supporters, AI integrationists, and back channels), silence (n = 115, include self-hosted and hosted vendors), and restrictive (n = 103). Finally, by comparing vendor policies against 1,130 AI incidents and 359 academic publications, we show that bug bounty policy evolution has lagged behind both academic research and real-world events.",
-      "year": 2025,
-      "venue": "arXiv.org",
-      "authors": [
-        "Yangheran Piao",
-        "Jingjie Li",
-        "Daniel W. Woods"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/51f750009d83c9112509bed3946077b032d78ccc",
-      "pdf_url": "",
-      "publication_date": "2025-09-07",
       "keywords_matched": [
         "model extraction",
         "(via citation)"
@@ -10867,7 +10867,7 @@
         "Ming Yan",
         "Mi Zhang"
       ],
-      "citation_count": 194,
+      "citation_count": 195,
       "url": "https://www.semanticscholar.org/paper/4fc5f31a38a19e3acc9501aeb3006810eec0e767",
       "pdf_url": "http://arxiv.org/pdf/2212.01548",
       "publication_date": "2022-12-03",
@@ -11494,6 +11494,28 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "83b9d7b9121ed02f7d75b294905cebe26938c6f7",
+      "title": "Real-Time Identification of Natural Gas Pipeline Leakage Apertures Based on Lightweight Residual Convolutional Neural Network",
+      "abstract": "Deep-learning techniques have been widely used in pipeline leakage aperture identification. However, most are designed and implemented for offline data, with problems such as large parameters, high memory consumption, and poor noise immunity. To solve the problem, this article presents a lightweight residual convolutional neural network (L-Resnet) applied to a real-time detection platform to achieve real-time identification of pipeline leakage apertures. First, based on the depth separable technique, two different separable residual modules are constructed to realize the feature extraction of signals; then, a more efficient activation function is applied to the high-dimensional space to enhance the nonlinear capability of the model; after that, a lightweight attention mechanism is used to weight the features to distinguish the importance of different features; finally, the classification results are obtained by a classifier. The real-time detection platform consists of Jetson Nano, the signal acquisition module, and the processing circuit. The results indicated that the method could accurately identify the pipeline leakage apertures in real time. Moreover, the number of parameters is only 14.71 kb, and the model has good computing efficiency and robustness compared to other methods.",
+      "year": 2022,
+      "venue": "IEEE Sensors Journal",
+      "authors": [
+        "Xiufang Wang",
+        "Yuan Liu",
+        "Chunlei Jiang",
+        "Yueming Li",
+        "Hongbo Bi"
+      ],
+      "citation_count": 15,
+      "url": "https://www.semanticscholar.org/paper/83b9d7b9121ed02f7d75b294905cebe26938c6f7",
+      "pdf_url": "",
+      "publication_date": "2022-12-15",
+      "keywords_matched": [
+        "DNN weights leakage (title)"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "14df6adb35c1e13d69d9f8c61f12c07bd7294ecf",
       "title": "MExMI: Pool-based Active Model Extraction Crossover Membership Inference",
       "abstract": null,
@@ -11560,28 +11582,6 @@
       "publication_date": "2022-03-14",
       "keywords_matched": [
         "side-channel attack (title)"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "83b9d7b9121ed02f7d75b294905cebe26938c6f7",
-      "title": "Real-Time Identification of Natural Gas Pipeline Leakage Apertures Based on Lightweight Residual Convolutional Neural Network",
-      "abstract": "Deep-learning techniques have been widely used in pipeline leakage aperture identification. However, most are designed and implemented for offline data, with problems such as large parameters, high memory consumption, and poor noise immunity. To solve the problem, this article presents a lightweight residual convolutional neural network (L-Resnet) applied to a real-time detection platform to achieve real-time identification of pipeline leakage apertures. First, based on the depth separable technique, two different separable residual modules are constructed to realize the feature extraction of signals; then, a more efficient activation function is applied to the high-dimensional space to enhance the nonlinear capability of the model; after that, a lightweight attention mechanism is used to weight the features to distinguish the importance of different features; finally, the classification results are obtained by a classifier. The real-time detection platform consists of Jetson Nano, the signal acquisition module, and the processing circuit. The results indicated that the method could accurately identify the pipeline leakage apertures in real time. Moreover, the number of parameters is only 14.71 kb, and the model has good computing efficiency and robustness compared to other methods.",
-      "year": 2022,
-      "venue": "IEEE Sensors Journal",
-      "authors": [
-        "Xiufang Wang",
-        "Yuan Liu",
-        "Chunlei Jiang",
-        "Yueming Li",
-        "Hongbo Bi"
-      ],
-      "citation_count": 14,
-      "url": "https://www.semanticscholar.org/paper/83b9d7b9121ed02f7d75b294905cebe26938c6f7",
-      "pdf_url": "",
-      "publication_date": "2022-12-15",
-      "keywords_matched": [
-        "DNN weights leakage (title)"
       ],
       "first_seen": "2025-11-28"
     },
@@ -11759,8 +11759,7 @@
       "pdf_url": "https://doi.org/10.1109/tc.2022.3148235",
       "publication_date": "2022-12-01",
       "keywords_matched": [
-        "model extraction",
-        "(via citation)"
+        "model extraction"
       ],
       "first_seen": "2025-11-28"
     },
@@ -13110,7 +13109,7 @@
         "Fan Yao",
         "Deliang Fan"
       ],
-      "citation_count": 139,
+      "citation_count": 140,
       "url": "https://www.semanticscholar.org/paper/74f6e70fd9a945b517e6495920a1267c01842bd4",
       "pdf_url": "http://arxiv.org/pdf/2111.04625",
       "publication_date": "2021-11-08",
@@ -13609,12 +13608,32 @@
         "Sigang Yang",
         "Hong-wei Chen"
       ],
-      "citation_count": 43,
+      "citation_count": 44,
       "url": "https://www.semanticscholar.org/paper/2bf31e06af3408f0136147bf321fdeb024f50a1b",
       "pdf_url": "https://doi.org/10.1364/oe.435183",
       "publication_date": "2021-09-27",
       "keywords_matched": [
         "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "c1cd3ef5bd9439de1f138ab5200a2c9cecf362af",
+      "title": "Physical Side-Channel Attacks on Embedded Neural Networks: A Survey",
+      "abstract": "During the last decade, Deep Neural Networks (DNN) have progressively been integrated on all types of platforms, from data centers to embedded systems including low-power processors and, recently, FPGAs. Neural Networks (NN) are expected to become ubiquitous in IoT systems by transforming all sorts of real-world applications, including applications in the safety-critical and security-sensitive domains. However, the underlying hardware security vulnerabilities of embedded NN implementations remain unaddressed. In particular, embedded DNN implementations are vulnerable to Side-Channel Analysis (SCA) attacks, which are especially important in the IoT and edge computing contexts where an attacker can usually gain physical access to the targeted device. A research field has therefore emerged and is rapidly growing in terms of the use of SCA including timing, electromagnetic attacks and power attacks to target NN embedded implementations. Since 2018, research papers have shown that SCA enables an attacker to recover inference models architectures and parameters, to expose industrial IP and endangers data confidentiality and privacy. Without a complete review of this emerging field in the literature so far, this paper surveys state-of-the-art physical SCA attacks relative to the implementation of embedded DNNs on micro-controllers and FPGAs in order to provide a thorough analysis on the current landscape. It provides a taxonomy and a detailed classification of current attacks. It first discusses mitigation techniques and then provides insights for future research leads.",
+      "year": 2021,
+      "venue": "Applied Sciences",
+      "authors": [
+        "M. M. Real",
+        "R. Salvador"
+      ],
+      "citation_count": 43,
+      "url": "https://www.semanticscholar.org/paper/c1cd3ef5bd9439de1f138ab5200a2c9cecf362af",
+      "pdf_url": "https://www.mdpi.com/2076-3417/11/15/6790/pdf?version=1627954373",
+      "publication_date": "2021-07-23",
+      "keywords_matched": [
+        "side-channel attack (title)",
+        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -13641,26 +13660,6 @@
         "model extraction attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "c1cd3ef5bd9439de1f138ab5200a2c9cecf362af",
-      "title": "Physical Side-Channel Attacks on Embedded Neural Networks: A Survey",
-      "abstract": "During the last decade, Deep Neural Networks (DNN) have progressively been integrated on all types of platforms, from data centers to embedded systems including low-power processors and, recently, FPGAs. Neural Networks (NN) are expected to become ubiquitous in IoT systems by transforming all sorts of real-world applications, including applications in the safety-critical and security-sensitive domains. However, the underlying hardware security vulnerabilities of embedded NN implementations remain unaddressed. In particular, embedded DNN implementations are vulnerable to Side-Channel Analysis (SCA) attacks, which are especially important in the IoT and edge computing contexts where an attacker can usually gain physical access to the targeted device. A research field has therefore emerged and is rapidly growing in terms of the use of SCA including timing, electromagnetic attacks and power attacks to target NN embedded implementations. Since 2018, research papers have shown that SCA enables an attacker to recover inference models architectures and parameters, to expose industrial IP and endangers data confidentiality and privacy. Without a complete review of this emerging field in the literature so far, this paper surveys state-of-the-art physical SCA attacks relative to the implementation of embedded DNNs on micro-controllers and FPGAs in order to provide a thorough analysis on the current landscape. It provides a taxonomy and a detailed classification of current attacks. It first discusses mitigation techniques and then provides insights for future research leads.",
-      "year": 2021,
-      "venue": "Applied Sciences",
-      "authors": [
-        "M. M. Real",
-        "R. Salvador"
-      ],
-      "citation_count": 42,
-      "url": "https://www.semanticscholar.org/paper/c1cd3ef5bd9439de1f138ab5200a2c9cecf362af",
-      "pdf_url": "https://www.mdpi.com/2076-3417/11/15/6790/pdf?version=1627954373",
-      "publication_date": "2021-07-23",
-      "keywords_matched": [
-        "side-channel attack (title)",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "3b357acb6c807bc694372c773e507cdcef27d974",
