@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-14",
+  "updated": "2025-12-15",
   "total": 910,
   "keywords": [
     "model stealing",
@@ -1496,6 +1496,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "4934c657457df8eae2b5193b1744f87906d37cfa",
+      "title": "Side-channel attacks on convolutional neural networks based on the hybrid attention mechanism",
+      "abstract": "In the field of security assessment of password chips, side-channel attacks are an important and effective means of extracting sensitive information by analysing the physical characteristics of the chip during operation, providing an important basis for security assessment. In recent years, deep learning technology has been widely used in the field of side-channel attacks, which can automatically learn and identify the physical leakage characteristics of the chip and improve the efficiency and accuracy of the attack. However, deep learning-based side-channel attacks may be disturbed by environmental noise during the training process, and there are also problems of model overfitting and slow convergence. In order to more effectively extract feature information in the trajectory to implement a side-channel attack, this paper proposes a new attention mechanism convolutional neural network model architecture. The model combines a convolutional neural network with an attention mechanism. It optimises the traditional CNN model by improving the convolutional layer and introducing a fused hybrid attention mechanism, enhancing the model's ability to capture global information to effectively extract relevant leaked information. Experimental results show that the model has good attack results on the ASCAD public dataset. Compared with other models, it requires 74.87% less power consumption for side-channel analysis, and the model accuracy is significantly improved. It solves the problems of overfitting and slow convergence speed, and can meet the requirements of side-channel modeling and analysis. Design an efficient convolutional neural network architecture model with an integrated attention mechanism. Improve the CBAM module and optimize the network structure for side-channel attacks. Significantly improve the convergence speed and attack efficiency of the neural network side channel model. Design an efficient convolutional neural network architecture model with an integrated attention mechanism. Improve the CBAM module and optimize the network structure for side-channel attacks. Significantly improve the convergence speed and attack efficiency of the neural network side channel model.",
+      "year": 2025,
+      "venue": "Discover Applied Sciences",
+      "authors": [
+        "Tao Feng",
+        "Huan Gao",
+        "Xiaomin Li",
+        "Chunyan Liu"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/4934c657457df8eae2b5193b1744f87906d37cfa",
+      "pdf_url": "https://doi.org/10.1007/s42452-025-06854-0",
+      "publication_date": "2025-04-24",
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "bbd216e8ca69d2583e1d203a4fdf8e9bf4e07f3d",
       "title": "Inside the Mind of an Attacker: Review Sistematika Tujuan Pencurian Machine Learning Model",
       "abstract": "Abstrak - Pencurian model (model stealing) menjadi salah satu ancaman serius dalam penerapan machine learning modern, terutama pada layanan berbasis API dan cloud. Artikel ini mengulas secara sistematik berbagai tujuan di balik serangan pencurian model untuk memahami motif penyerang dan implikasinya bagi pengembang sistem. Metode penulisan berupa kajian literatur terkini yang mengklasifikasikan tujuan pencurian ke dalam delapan kategori utama: (1) pencurian properti internal seperti arsitektur, bobot, dan hyperparameter; (2) peniruan perilaku model untuk menghasilkan efektivitas setara dan konsistensi prediksi pada data normal maupun adversarial; (3) transfer pengetahuan untuk distillation dan deployment ringan; (4) serangan privasi berupa membership inference dan model inversion; (5) monetisasi dengan menjual model bajakan atau menyediakan layanan API ilegal; (6) pencurian kemampuan pertahanan adversarial untuk meningkatkan efektivitas serangan; (7) spionase industri untuk reverse engineering model pesaing; serta (8) penghindaran regulasi dengan mencuri model yang sudah tersertifikasi. Review ini menegaskan bahwa ancaman pencurian model tidak hanya merugikan secara teknis, tetapi juga membuka peluang eksploitasi ekonomi ilegal, kebocoran data sensitif, dan persaingan usaha tidak sehat. Pemahaman yang detail atas ragam tujuan ini diharapkan mendorong perancang sistem untuk mengembangkan strategi pertahanan yang lebih cermat dan menyeluruh.Kata kunci: Machine Learning; Model Stealing; API; Adversarial; Transfer Pengetahuan;\u00a0Abstract - Model stealing has become one of the most serious threats in modern machine learning applications, especially in API- and cloud-based services. This article systematically reviews the various objectives behind model stealing attacks to understand the attackers\u2019 motivations and their implications for system developers. The writing method is a current literature review that classifies model stealing objectives into eight main categories: (1) theft of internal properties such as architecture, weights, and hyperparameters; (2) imitation of model behavior to achieve comparable effectiveness and prediction consistency on both normal and adversarial data; (3) knowledge transfer for distillation and lightweight deployment; (4) privacy attacks through membership inference and model inversion; (5) monetization by selling stolen models or offering illegal API services; (6) stealing adversarial robustness to improve attack effectiveness; (7) industrial espionage for reverse engineering competitor models; and (8) regulatory evasion by stealing pre-certified models. This review emphasizes that model stealing threats are not merely technical issues but also open opportunities for illegal economic exploitation, leakage of sensitive data, and unfair business competition. A detailed understanding of these diverse objectives is expected to encourage system designers to develop more careful and comprehensive defense strategies.Keywords: Machine Learning; Model Stealing; API; Adversarial; Knowledge Transfer;",
@@ -2516,27 +2537,6 @@
       "url": "https://www.semanticscholar.org/paper/80b18d8f790620e175cde50af13e78d03ec424b8",
       "pdf_url": "",
       "publication_date": "2025-03-05",
-      "keywords_matched": [
-        "side-channel attack (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "4934c657457df8eae2b5193b1744f87906d37cfa",
-      "title": "Side-channel attacks on convolutional neural networks based on the hybrid attention mechanism",
-      "abstract": "In the field of security assessment of password chips, side-channel attacks are an important and effective means of extracting sensitive information by analysing the physical characteristics of the chip during operation, providing an important basis for security assessment. In recent years, deep learning technology has been widely used in the field of side-channel attacks, which can automatically learn and identify the physical leakage characteristics of the chip and improve the efficiency and accuracy of the attack. However, deep learning-based side-channel attacks may be disturbed by environmental noise during the training process, and there are also problems of model overfitting and slow convergence. In order to more effectively extract feature information in the trajectory to implement a side-channel attack, this paper proposes a new attention mechanism convolutional neural network model architecture. The model combines a convolutional neural network with an attention mechanism. It optimises the traditional CNN model by improving the convolutional layer and introducing a fused hybrid attention mechanism, enhancing the model's ability to capture global information to effectively extract relevant leaked information. Experimental results show that the model has good attack results on the ASCAD public dataset. Compared with other models, it requires 74.87% less power consumption for side-channel analysis, and the model accuracy is significantly improved. It solves the problems of overfitting and slow convergence speed, and can meet the requirements of side-channel modeling and analysis. Design an efficient convolutional neural network architecture model with an integrated attention mechanism. Improve the CBAM module and optimize the network structure for side-channel attacks. Significantly improve the convergence speed and attack efficiency of the neural network side channel model. Design an efficient convolutional neural network architecture model with an integrated attention mechanism. Improve the CBAM module and optimize the network structure for side-channel attacks. Significantly improve the convergence speed and attack efficiency of the neural network side channel model.",
-      "year": 2025,
-      "venue": "Discover Applied Sciences",
-      "authors": [
-        "Tao Feng",
-        "Huan Gao",
-        "Xiaomin Li",
-        "Chunyan Liu"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/4934c657457df8eae2b5193b1744f87906d37cfa",
-      "pdf_url": "https://doi.org/10.1007/s42452-025-06854-0",
-      "publication_date": "2025-04-24",
       "keywords_matched": [
         "side-channel attack (title)"
       ],
@@ -20197,7 +20197,7 @@
         "V. Scarani",
         "N. Gisin"
       ],
-      "citation_count": 47,
+      "citation_count": 46,
       "url": "https://www.semanticscholar.org/paper/9ec7656ff39d07fe6fd283466aed4bc56d35b2c2",
       "pdf_url": "https://access.archive-ouverte.unige.ch/access/metadata/c176b0db-379c-4db9-aac3-8a97b2f2de82/download",
       "publication_date": "2004-08-19",
