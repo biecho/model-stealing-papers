@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-15",
+  "updated": "2025-12-16",
   "total": 910,
   "keywords": [
     "model stealing",
@@ -106,7 +106,7 @@
         "Yinqian Zhang",
         "Zhendong Su"
       ],
-      "citation_count": 10,
+      "citation_count": 11,
       "url": "https://www.semanticscholar.org/paper/69458b5b67892ca281b96cbddd15fa9adcbbd524",
       "pdf_url": "",
       "publication_date": "2025-05-12",
@@ -4834,6 +4834,30 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "be44a0e3c11ffe4944873eb415ced25ed36f7534",
+      "title": "Protecting Confidential Virtual Machines from Hardware Performance Counter Side Channels",
+      "abstract": "In modern cloud platforms, it is becoming more important to preserve the privacy of guest virtual machines (VMs) from the untrusted host. To this end, Secure Encrypted Virtualization (SEV) is developed as a hardware extension to protect VMs by encrypting their memory pages and register states. Unfortunately, such confidential VMs are still vulnerable to micro-architectural side channels, and Hardware Performance Counters (HPCs) are a prominent information leakage source. To make matters worse, currently there is no systematic defense against the HPC side channels. We introduce Aegis, a unified framework for demystifying the inherent relations between the instruction execution and HPC event statistics, and defending VMs against HPC side channels with provable privacy guarantee and minimal performance overhead. Aegis consists of three modules. Application Profiler profiles the application offline and adopts information theory to quantitatively estimate the vulnerability of HPC events. Event Fuzzer leverages the fuzzing technique to automatically generate interesting inputs, i.e., instruction sequences, that can effectively alter the HPC observations. Event Obfuscator injects noisy instructions into the protected VM based on the differential privacy mechanisms for high efficiency and privacy. We present three case studies to demonstrate that Aegis can defeat different types of HPC side-channel attacks (i.e., website fingerprinting, DNN model extraction, keystroke sniffing). Evaluations show that Aegis can effectively decrease the attack accuracy from 90% to 2%, with only 3% overhead on the application execution time and 7% overhead on the CPU usage.",
+      "year": 2024,
+      "venue": "Dependable Systems and Networks",
+      "authors": [
+        "Xiaoxuan Lou",
+        "Kangjie Chen",
+        "Guowen Xu",
+        "Han Qiu",
+        "Shangwei Guo",
+        "Tianwei Zhang"
+      ],
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/be44a0e3c11ffe4944873eb415ced25ed36f7534",
+      "pdf_url": "",
+      "publication_date": "2024-06-24",
+      "keywords_matched": [
+        "model extraction",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "2b28136746a29ff698f57106c292d0d6e0181629",
       "title": "Efficient Data-Free Model Stealing with Label Diversity",
       "abstract": "Machine learning as a Service (MLaaS) allows users to query the machine learning model in an API manner, which provides an opportunity for users to enjoy the benefits brought by the high-performance model trained on valuable data. This interface boosts the proliferation of machine learning based applications, while on the other hand, it introduces the attack surface for model stealing attacks. Existing model stealing attacks have relaxed their attack assumptions to the data-free setting, while keeping the effectiveness. However, these methods are complex and consist of several components, which obscure the core on which the attack really depends. In this paper, we revisit the model stealing problem from a diversity perspective and demonstrate that keeping the generated data samples more diverse across all the classes is the critical point for improving the attack performance. Based on this conjecture, we provide a simplified attack framework. We empirically signify our conjecture by evaluating the effectiveness of our attack, and experimental results show that our approach is able to achieve comparable or even better performance compared with the state-of-the-art method. Furthermore, benefiting from the absence of redundant components, our method demonstrates its advantages in attack efficiency and query budget.",
@@ -5278,30 +5302,6 @@
       "url": "https://www.semanticscholar.org/paper/c3df2c0b6c68c4db4e946ed8432e7f7b2269ecf3",
       "pdf_url": "",
       "publication_date": "2024-07-16",
-      "keywords_matched": [
-        "model extraction",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "be44a0e3c11ffe4944873eb415ced25ed36f7534",
-      "title": "Protecting Confidential Virtual Machines from Hardware Performance Counter Side Channels",
-      "abstract": "In modern cloud platforms, it is becoming more important to preserve the privacy of guest virtual machines (VMs) from the untrusted host. To this end, Secure Encrypted Virtualization (SEV) is developed as a hardware extension to protect VMs by encrypting their memory pages and register states. Unfortunately, such confidential VMs are still vulnerable to micro-architectural side channels, and Hardware Performance Counters (HPCs) are a prominent information leakage source. To make matters worse, currently there is no systematic defense against the HPC side channels. We introduce Aegis, a unified framework for demystifying the inherent relations between the instruction execution and HPC event statistics, and defending VMs against HPC side channels with provable privacy guarantee and minimal performance overhead. Aegis consists of three modules. Application Profiler profiles the application offline and adopts information theory to quantitatively estimate the vulnerability of HPC events. Event Fuzzer leverages the fuzzing technique to automatically generate interesting inputs, i.e., instruction sequences, that can effectively alter the HPC observations. Event Obfuscator injects noisy instructions into the protected VM based on the differential privacy mechanisms for high efficiency and privacy. We present three case studies to demonstrate that Aegis can defeat different types of HPC side-channel attacks (i.e., website fingerprinting, DNN model extraction, keystroke sniffing). Evaluations show that Aegis can effectively decrease the attack accuracy from 90% to 2%, with only 3% overhead on the application execution time and 7% overhead on the CPU usage.",
-      "year": 2024,
-      "venue": "Dependable Systems and Networks",
-      "authors": [
-        "Xiaoxuan Lou",
-        "Kangjie Chen",
-        "Guowen Xu",
-        "Han Qiu",
-        "Shangwei Guo",
-        "Tianwei Zhang"
-      ],
-      "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/be44a0e3c11ffe4944873eb415ced25ed36f7534",
-      "pdf_url": "",
-      "publication_date": "2024-06-24",
       "keywords_matched": [
         "model extraction",
         "(via citation)"
@@ -11599,7 +11599,7 @@
         "Zubair Shafiq",
         "H. Homayoun"
       ],
-      "citation_count": 13,
+      "citation_count": 14,
       "url": "https://www.semanticscholar.org/paper/8b2fb5e135323f8c69f11515ea3aceec86e6b66e",
       "pdf_url": "",
       "publication_date": "2022-03-14",
@@ -11759,8 +11759,7 @@
       "pdf_url": "https://doi.org/10.1109/tc.2022.3148235",
       "publication_date": "2022-12-01",
       "keywords_matched": [
-        "model extraction",
-        "(via citation)"
+        "model extraction"
       ],
       "first_seen": "2025-11-28"
     },
@@ -13218,7 +13217,7 @@
         "Huimin Zeng",
         "Julian McAuley"
       ],
-      "citation_count": 83,
+      "citation_count": 84,
       "url": "https://www.semanticscholar.org/paper/864cf501b5c04bfcdc836a9cf1909a51ac1d2a99",
       "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3460231.3474275",
       "publication_date": "2021-09-01",
