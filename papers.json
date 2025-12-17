@@ -3442,7 +3442,7 @@
         "Xuan Wang",
         "Shutao Xia"
       ],
-      "citation_count": 39,
+      "citation_count": 38,
       "url": "https://www.semanticscholar.org/paper/45967a64fdc7a3e20f47b24297844b93b9f3e3d9",
       "pdf_url": "",
       "publication_date": "2024-02-06",
@@ -11759,8 +11759,7 @@
       "pdf_url": "https://doi.org/10.1109/tc.2022.3148235",
       "publication_date": "2022-12-01",
       "keywords_matched": [
-        "model extraction",
-        "(via citation)"
+        "model extraction"
       ],
       "first_seen": "2025-11-28"
     },
