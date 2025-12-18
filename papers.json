@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-17",
+  "updated": "2025-12-18",
   "total": 910,
   "keywords": [
     "model stealing",
@@ -437,7 +437,7 @@
       "title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
       "abstract": "Model extraction attacks pose significant security threats to deployed language models, potentially compromising intellectual property and user privacy. This survey provides a comprehensive taxonomy of LLM-specific extraction attacks and defenses, categorizing attacks into functionality extraction, training data extraction, and prompt-targeted attacks. We analyze various attack methodologies including API-based knowledge distillation, direct querying, parameter recovery, and prompt stealing techniques that exploit transformer architectures. We then examine defense mechanisms organized into model protection, data privacy protection, and prompt-targeted strategies, evaluating their effectiveness across different deployment scenarios. We propose specialized metrics for evaluating both attack effectiveness and defense performance, addressing the specific challenges of generative language models. Through our analysis, we identify critical limitations in current approaches and propose promising research directions, including integrated attack methodologies and adaptive defense mechanisms that balance security with model utility. This work serves NLP researchers, ML engineers, and security professionals seeking to protect language models in production environments.",
       "year": 2025,
-      "venue": "Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+      "venue": "Knowledge Discovery and Data Mining",
       "authors": [
         "Kaixiang Zhao",
         "Lincan Li",
@@ -3390,7 +3390,7 @@
         "Zeyang Sha",
         "Yang Zhang"
       ],
-      "citation_count": 43,
+      "citation_count": 44,
       "url": "https://www.semanticscholar.org/paper/3d90d1d429fa9dacb50a103cdab5c16328665c2c",
       "pdf_url": "",
       "publication_date": "2024-02-20",
@@ -11098,7 +11098,7 @@
         "Franziska Boenisch",
         "Nicolas Papernot"
       ],
-      "citation_count": 40,
+      "citation_count": 41,
       "url": "https://www.semanticscholar.org/paper/274dbb98c63cdd282eb86b0338bdc3c5dfd9b904",
       "pdf_url": "http://arxiv.org/pdf/2209.09024",
       "publication_date": "2022-09-16",
@@ -11826,6 +11826,28 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "a46d1f8e5ed6182df8c864e72160372cf2a14b13",
+      "title": "On the Robustness of Dataset Inference",
+      "abstract": "Machine learning (ML) models are costly to train as they can require a significant amount of data, computational resources and technical expertise. Thus, they constitute valuable intellectual property that needs protection from adversaries wanting to steal them. Ownership verification techniques allow the victims of model stealing attacks to demonstrate that a suspect model was in fact stolen from theirs. Although a number of ownership verification techniques based on watermarking or fingerprinting have been proposed, most of them fall short either in terms of security guarantees (well-equipped adversaries can evade verification) or computational cost. A fingerprinting technique, Dataset Inference (DI), has been shown to offer better robustness and efficiency than prior methods. The authors of DI provided a correctness proof for linear (suspect) models. However, in a subspace of the same setting, we prove that DI suffers from high false positives (FPs) -- it can incorrectly identify an independent model trained with non-overlapping data from the same distribution as stolen. We further prove that DI also triggers FPs in realistic, non-linear suspect models. We then confirm empirically that DI in the black-box setting leads to FPs, with high confidence. Second, we show that DI also suffers from false negatives (FNs) -- an adversary can fool DI (at the cost of incurring some accuracy loss) by regularising a stolen model's decision boundaries using adversarial training, thereby leading to an FN. To this end, we demonstrate that black-box DI fails to identify a model adversarially trained from a stolen dataset -- the setting where DI is the hardest to evade. Finally, we discuss the implications of our findings, the viability of fingerprinting-based ownership verification in general, and suggest directions for future work.",
+      "year": 2022,
+      "venue": "Trans. Mach. Learn. Res.",
+      "authors": [
+        "Sebastian Szyller",
+        "Rui Zhang",
+        "Jian Liu",
+        "N. Asokan"
+      ],
+      "citation_count": 9,
+      "url": "https://www.semanticscholar.org/paper/a46d1f8e5ed6182df8c864e72160372cf2a14b13",
+      "pdf_url": "http://arxiv.org/pdf/2210.13631",
+      "publication_date": "2022-10-24",
+      "keywords_matched": [
+        "model stealing",
+        "model stealing attack"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "dba696ce4856d7fad6a51847a8997145050eb9c3",
       "title": "GAME: Generative-Based Adaptive Model Extraction Attack",
       "abstract": null,
@@ -11887,28 +11909,6 @@
       "publication_date": "2022-07-05",
       "keywords_matched": [
         "cloning attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "a46d1f8e5ed6182df8c864e72160372cf2a14b13",
-      "title": "On the Robustness of Dataset Inference",
-      "abstract": "Machine learning (ML) models are costly to train as they can require a significant amount of data, computational resources and technical expertise. Thus, they constitute valuable intellectual property that needs protection from adversaries wanting to steal them. Ownership verification techniques allow the victims of model stealing attacks to demonstrate that a suspect model was in fact stolen from theirs. Although a number of ownership verification techniques based on watermarking or fingerprinting have been proposed, most of them fall short either in terms of security guarantees (well-equipped adversaries can evade verification) or computational cost. A fingerprinting technique, Dataset Inference (DI), has been shown to offer better robustness and efficiency than prior methods. The authors of DI provided a correctness proof for linear (suspect) models. However, in a subspace of the same setting, we prove that DI suffers from high false positives (FPs) -- it can incorrectly identify an independent model trained with non-overlapping data from the same distribution as stolen. We further prove that DI also triggers FPs in realistic, non-linear suspect models. We then confirm empirically that DI in the black-box setting leads to FPs, with high confidence. Second, we show that DI also suffers from false negatives (FNs) -- an adversary can fool DI (at the cost of incurring some accuracy loss) by regularising a stolen model's decision boundaries using adversarial training, thereby leading to an FN. To this end, we demonstrate that black-box DI fails to identify a model adversarially trained from a stolen dataset -- the setting where DI is the hardest to evade. Finally, we discuss the implications of our findings, the viability of fingerprinting-based ownership verification in general, and suggest directions for future work.",
-      "year": 2022,
-      "venue": "Trans. Mach. Learn. Res.",
-      "authors": [
-        "Sebastian Szyller",
-        "Rui Zhang",
-        "Jian Liu",
-        "N. Asokan"
-      ],
-      "citation_count": 8,
-      "url": "https://www.semanticscholar.org/paper/a46d1f8e5ed6182df8c864e72160372cf2a14b13",
-      "pdf_url": "http://arxiv.org/pdf/2210.13631",
-      "publication_date": "2022-10-24",
-      "keywords_matched": [
-        "model stealing",
-        "model stealing attack"
       ],
       "first_seen": "2025-12-05"
     },
@@ -13070,7 +13070,7 @@
         "Mario Fritz",
         "Yang Zhang"
       ],
-      "citation_count": 150,
+      "citation_count": 152,
       "url": "https://www.semanticscholar.org/paper/9bb14ee43eb7607e0bf95bde3fa62882a676eb5d",
       "pdf_url": "",
       "publication_date": "2021-02-04",
@@ -13088,7 +13088,7 @@
       "authors": [
         "Pratyush Maini"
       ],
-      "citation_count": 141,
+      "citation_count": 142,
       "url": "https://www.semanticscholar.org/paper/b3086fbbc678a7616ac390a41945f45e0d0ab001",
       "pdf_url": "",
       "publication_date": "2021-04-21",
@@ -17336,7 +17336,7 @@
         "Dirmanto Jap",
         "S. Picek"
       ],
-      "citation_count": 307,
+      "citation_count": 308,
       "url": "https://www.semanticscholar.org/paper/b12c15503435cffee16bdd156766dcf390eeb8f8",
       "pdf_url": "",
       "publication_date": null,
@@ -19313,7 +19313,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1959,
+      "citation_count": 1960,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
