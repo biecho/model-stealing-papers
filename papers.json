@@ -1,6 +1,6 @@
 {
-  "updated": "2025-12-19",
-  "total": 910,
+  "updated": "2025-12-20",
+  "total": 912,
   "keywords": [
     "model stealing",
     "model extraction",
@@ -181,7 +181,7 @@
         "N. Padoy",
         "Mario Fritz"
       ],
-      "citation_count": 6,
+      "citation_count": 7,
       "url": "https://www.semanticscholar.org/paper/f94fe2776e4258650baffb9b0100518076aacdad",
       "pdf_url": "",
       "publication_date": "2025-02-04",
@@ -342,6 +342,30 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "26be7a4a13776ac194912a70e97783bf2e587c24",
+      "title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
+      "abstract": "Model extraction attacks pose significant security threats to deployed language models, potentially compromising intellectual property and user privacy. This survey provides a comprehensive taxonomy of LLM-specific extraction attacks and defenses, categorizing attacks into functionality extraction, training data extraction, and prompt-targeted attacks. We analyze various attack methodologies including API-based knowledge distillation, direct querying, parameter recovery, and prompt stealing techniques that exploit transformer architectures. We then examine defense mechanisms organized into model protection, data privacy protection, and prompt-targeted strategies, evaluating their effectiveness across different deployment scenarios. We propose specialized metrics for evaluating both attack effectiveness and defense performance, addressing the specific challenges of generative language models. Through our analysis, we identify critical limitations in current approaches and propose promising research directions, including integrated attack methodologies and adaptive defense mechanisms that balance security with model utility. This work serves NLP researchers, ML engineers, and security professionals seeking to protect language models in production environments.",
+      "year": 2025,
+      "venue": "Knowledge Discovery and Data Mining",
+      "authors": [
+        "Kaixiang Zhao",
+        "Lincan Li",
+        "Kaize Ding",
+        "Neil Zhenqiang Gong",
+        "Yue Zhao",
+        "Yushun Dong"
+      ],
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/26be7a4a13776ac194912a70e97783bf2e587c24",
+      "pdf_url": "",
+      "publication_date": "2025-06-26",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "dd37ddad0b07a5f9e38c117f0fb876735062211d",
       "title": "Be Cautious When Merging Unfamiliar LLMs: A Phishing Model Capable of Stealing Privacy",
       "abstract": "Model merging is a widespread technology in large language models (LLMs) that integrates multiple task-specific LLMs into a unified one, enabling the merged model to inherit the specialized capabilities of these LLMs. Most task-specific LLMs are sourced from open-source communities and have not undergone rigorous auditing, potentially imposing risks in model merging. This paper highlights an overlooked privacy risk: \\textit{an unsafe model could compromise the privacy of other LLMs involved in the model merging.} Specifically, we propose PhiMM, a privacy attack approach that trains a phishing model capable of stealing privacy using a crafted privacy phishing instruction dataset. Furthermore, we introduce a novel model cloaking method that mimics a specialized capability to conceal attack intent, luring users into merging the phishing model. Once victims merge the phishing model, the attacker can extract personally identifiable information (PII) or infer membership information (MI) by querying the merged model with the phishing instruction. Experimental results show that merging a phishing model increases the risk of privacy breaches. Compared to the results before merging, PII leakage increased by 3.9\\% and MI leakage increased by 17.4\\% on average. We release the code of PhiMM through a link.",
@@ -426,30 +450,6 @@
       "url": "https://www.semanticscholar.org/paper/0d3384cb78be25ed28a3544f175cab59236093dd",
       "pdf_url": "",
       "publication_date": "2025-01-02",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "26be7a4a13776ac194912a70e97783bf2e587c24",
-      "title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
-      "abstract": "Model extraction attacks pose significant security threats to deployed language models, potentially compromising intellectual property and user privacy. This survey provides a comprehensive taxonomy of LLM-specific extraction attacks and defenses, categorizing attacks into functionality extraction, training data extraction, and prompt-targeted attacks. We analyze various attack methodologies including API-based knowledge distillation, direct querying, parameter recovery, and prompt stealing techniques that exploit transformer architectures. We then examine defense mechanisms organized into model protection, data privacy protection, and prompt-targeted strategies, evaluating their effectiveness across different deployment scenarios. We propose specialized metrics for evaluating both attack effectiveness and defense performance, addressing the specific challenges of generative language models. Through our analysis, we identify critical limitations in current approaches and propose promising research directions, including integrated attack methodologies and adaptive defense mechanisms that balance security with model utility. This work serves NLP researchers, ML engineers, and security professionals seeking to protect language models in production environments.",
-      "year": 2025,
-      "venue": "Knowledge Discovery and Data Mining",
-      "authors": [
-        "Kaixiang Zhao",
-        "Lincan Li",
-        "Kaize Ding",
-        "Neil Zhenqiang Gong",
-        "Yue Zhao",
-        "Yushun Dong"
-      ],
-      "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/26be7a4a13776ac194912a70e97783bf2e587c24",
-      "pdf_url": "",
-      "publication_date": "2025-06-26",
       "keywords_matched": [
         "model extraction",
         "model extraction attack"
@@ -783,6 +783,34 @@
       "keywords_matched": [
         "model extraction",
         "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "c544b7021fc25bcd828d1721da82d25e8a16b407",
+      "title": "Information Extraction from Lumbar Spine MRI Radiology Reports Using GPT4: Accuracy and Benchmarking Against Research-Grade Comprehensive Scoring",
+      "abstract": "Background/Objectives: This study aimed to create a pipeline for standardized data extraction from lumbar-spine MRI radiology reports using a large language model (LLM) and assess the agreement of the extracted data with research-grade semi-quantitative scoring. Methods: We included a subset of data from a multi-site NIH-funded cohort study of chronic low back pain (cLBP) participants. After initial prompt development, a secure application programming interface (API) deployment of OpenAIs GPT-4 was used to extract different classes of pathology from the clinical radiology report. Unsupervised UMAP and agglomerative clustering of the pathology terms\u2019 embeddings provided insight into model comprehension for optimized prompt design. Model extraction was benchmarked against human extraction (gold standard) with F1 scores and false-positive and false-negative rates (FPR/FNR). Then, an expert MSK radiologist provided comprehensive research-grade scores of the images, and agreement with report-extracted data was calculated using Cohen\u2019s kappa. Results: Data from 230 patients with cLBP were included (mean age 53.2 years, 54% women). The overall model performance for extracting data from clinical reports was excellent, with a mean F1 score of 0.96 across pathologies. The mean FPR was marginally higher than the FNR (5.1% vs. 3.0%). Agreement with comprehensive scoring was moderate (kappa 0.424), and the underreporting of lateral recess stenosis (FNR 63.6%) and overreporting of disc pathology (FPR 42.7%) were noted. Conclusions: LLMs can accurately extract highly detailed information on lumbar spine imaging pathologies from radiology reports. Moderate agreement between the LLM and comprehensive scores underscores the need for less subjective, machine-based data extraction from imaging.",
+      "year": 2025,
+      "venue": "Diagnostics",
+      "authors": [
+        "Katharina Ziegeler",
+        "Virginie Kreutzinger",
+        "Michelle W Tong",
+        "C. T. Chin",
+        "E. Bahroos",
+        "Po-Hung Wu",
+        "Noah B. Bonnheim",
+        "Aaron J Fields",
+        "Jeffrey C. Lotz",
+        "Thomas M Link",
+        "S. Majumdar"
+      ],
+      "citation_count": 2,
+      "url": "https://www.semanticscholar.org/paper/c544b7021fc25bcd828d1721da82d25e8a16b407",
+      "pdf_url": "",
+      "publication_date": "2025-04-01",
+      "keywords_matched": [
+        "model extraction"
       ],
       "first_seen": "2025-12-05"
     },
@@ -1318,34 +1346,6 @@
       "url": "https://www.semanticscholar.org/paper/6971c737329185c98d62432dcbcbd36c03c04c6b",
       "pdf_url": "",
       "publication_date": "2025-10-08",
-      "keywords_matched": [
-        "model extraction"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "c544b7021fc25bcd828d1721da82d25e8a16b407",
-      "title": "Information Extraction from Lumbar Spine MRI Radiology Reports Using GPT4: Accuracy and Benchmarking Against Research-Grade Comprehensive Scoring",
-      "abstract": "Background/Objectives: This study aimed to create a pipeline for standardized data extraction from lumbar-spine MRI radiology reports using a large language model (LLM) and assess the agreement of the extracted data with research-grade semi-quantitative scoring. Methods: We included a subset of data from a multi-site NIH-funded cohort study of chronic low back pain (cLBP) participants. After initial prompt development, a secure application programming interface (API) deployment of OpenAIs GPT-4 was used to extract different classes of pathology from the clinical radiology report. Unsupervised UMAP and agglomerative clustering of the pathology terms\u2019 embeddings provided insight into model comprehension for optimized prompt design. Model extraction was benchmarked against human extraction (gold standard) with F1 scores and false-positive and false-negative rates (FPR/FNR). Then, an expert MSK radiologist provided comprehensive research-grade scores of the images, and agreement with report-extracted data was calculated using Cohen\u2019s kappa. Results: Data from 230 patients with cLBP were included (mean age 53.2 years, 54% women). The overall model performance for extracting data from clinical reports was excellent, with a mean F1 score of 0.96 across pathologies. The mean FPR was marginally higher than the FNR (5.1% vs. 3.0%). Agreement with comprehensive scoring was moderate (kappa 0.424), and the underreporting of lateral recess stenosis (FNR 63.6%) and overreporting of disc pathology (FPR 42.7%) were noted. Conclusions: LLMs can accurately extract highly detailed information on lumbar spine imaging pathologies from radiology reports. Moderate agreement between the LLM and comprehensive scores underscores the need for less subjective, machine-based data extraction from imaging.",
-      "year": 2025,
-      "venue": "Diagnostics",
-      "authors": [
-        "Katharina Ziegeler",
-        "Virginie Kreutzinger",
-        "Michelle W Tong",
-        "C. T. Chin",
-        "E. Bahroos",
-        "Po-Hung Wu",
-        "Noah B. Bonnheim",
-        "Aaron J Fields",
-        "Jeffrey C. Lotz",
-        "Thomas M Link",
-        "S. Majumdar"
-      ],
-      "citation_count": 1,
-      "url": "https://www.semanticscholar.org/paper/c544b7021fc25bcd828d1721da82d25e8a16b407",
-      "pdf_url": "",
-      "publication_date": "2025-04-01",
       "keywords_matched": [
         "model extraction"
       ],
@@ -3257,6 +3257,30 @@
       "first_seen": "2025-12-12"
     },
     {
+      "paper_id": "5e91b9b928b33ce05273507cf8dea1ade2450598",
+      "title": "From Essence to Defense: Adaptive Semantic-aware Watermarking for Embedding-as-a-Service Copyright Protection",
+      "abstract": "Benefiting from the superior capabilities of large language models in natural language understanding and generation, Embeddings-as-a-Service (EaaS) has emerged as a successful commercial paradigm on the web platform. However, prior studies have revealed that EaaS is vulnerable to imitation attacks. Existing methods protect the intellectual property of EaaS through watermarking techniques, but they all ignore the most important properties of embedding: semantics, resulting in limited harmlessness and stealthiness. To this end, we propose SemMark, a novel semantic-based watermarking paradigm for EaaS copyright protection. SemMark employs locality-sensitive hashing to partition the semantic space and inject semantic-aware watermarks into specific regions, ensuring that the watermark signals remain imperceptible and diverse. In addition, we introduce the adaptive watermark weight mechanism based on the local outlier factor to preserve the original embedding distribution. Furthermore, we propose Detect-Sampling and Dimensionality-Reduction attacks and construct four scenarios to evaluate the watermarking method. Extensive experiments are conducted on four popular NLP datasets, and SemMark achieves superior verifiability, diversity, stealthiness, and harmlessness.",
+      "year": 2025,
+      "venue": "",
+      "authors": [
+        "Hao Li",
+        "Yubing Ren",
+        "Yanan Cao",
+        "Yingjie Li",
+        "Fang Fang",
+        "Xuebin Wang"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/5e91b9b928b33ce05273507cf8dea1ade2450598",
+      "pdf_url": "",
+      "publication_date": "2025-12-18",
+      "keywords_matched": [
+        "imitation attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-20"
+    },
+    {
       "paper_id": "b232f468de0b1d4ff1c2dfe5dbb03ec093160c48",
       "title": "Stealing Part of a Production Language Model",
       "abstract": "We introduce the first model-stealing attack that extracts precise, nontrivial information from black-box production language models like OpenAI's ChatGPT or Google's PaLM-2. Specifically, our attack recovers the embedding projection layer (up to symmetries) of a transformer model, given typical API access. For under \\$20 USD, our attack extracts the entire projection matrix of OpenAI's Ada and Babbage language models. We thereby confirm, for the first time, that these black-box models have a hidden dimension of 1024 and 2048, respectively. We also recover the exact hidden dimension size of the gpt-3.5-turbo model, and estimate it would cost under $2,000 in queries to recover the entire projection matrix. We conclude with potential defenses and mitigations, and discuss the implications of possible future work that could extend our attack.",
@@ -3277,7 +3301,7 @@
         "D. Rolnick",
         "Florian Tram\u00e8r"
       ],
-      "citation_count": 129,
+      "citation_count": 130,
       "url": "https://www.semanticscholar.org/paper/b232f468de0b1d4ff1c2dfe5dbb03ec093160c48",
       "pdf_url": "",
       "publication_date": "2024-03-11",
@@ -3348,7 +3372,7 @@
         "A. Ali",
         "R. N. Jana"
       ],
-      "citation_count": 49,
+      "citation_count": 50,
       "url": "https://www.semanticscholar.org/paper/538e8499246efac815f3d3a88bfd1542ea736f60",
       "pdf_url": "",
       "publication_date": "2024-05-01",
@@ -3493,6 +3517,28 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "de70069726ba2b1608b91f9617098f4856d35ee6",
+      "title": "Direct electromagnetic information processing with planar diffractive neural network",
+      "abstract": "Diffractive neural network in electromagnetic wave\u2013driven system has attracted great attention due to its ultrahigh parallel computing capability and energy efficiency. However, recent neural networks based on the diffractive framework still face the bottlenecks of misalignment and relatively large size limiting their further applications. Here, we propose a planar diffractive neural network (pla-NN) with a highly integrated and conformal architecture to achieve direct signal processing in the microwave frequency. On the basis of printed circuit fabrication process, the misalignment could be effectively circumvented while enabling flexible extension for multiple conformal and stacking designs. We first conduct validation on the fashion-MNIST dataset and experimentally build up a system using the proposed network architecture for direct recognition of different geometry structures in the electromagnetic space. We envision that the presented architecture, once combined with the advanced dynamic maneuvering techniques and flexible topology, would exhibit unlimited potentials in the areas of high-performance computing, wireless sensing, and flexible wearable electronics.",
+      "year": 2024,
+      "venue": "Science Advances",
+      "authors": [
+        "Ze Gu",
+        "Qian Ma",
+        "Xinxin Gao",
+        "J. You",
+        "T. Cui"
+      ],
+      "citation_count": 29,
+      "url": "https://www.semanticscholar.org/paper/de70069726ba2b1608b91f9617098f4856d35ee6",
+      "pdf_url": "https://doi.org/10.1126/sciadv.ado3937",
+      "publication_date": "2024-07-19",
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "fe44bd072c2325eaa750990d148b27e42b7eb1d2",
       "title": "Privacy Backdoors: Stealing Data with Corrupted Pretrained Models",
       "abstract": "Practitioners commonly download pretrained machine learning models from open repositories and finetune them to fit specific applications. We show that this practice introduces a new risk of privacy backdoors. By tampering with a pretrained model's weights, an attacker can fully compromise the privacy of the finetuning data. We show how to build privacy backdoors for a variety of models, including transformers, which enable an attacker to reconstruct individual finetuning samples, with a guaranteed success! We further show that backdoored models allow for tight privacy attacks on models trained with differential privacy (DP). The common optimistic practice of training DP models with loose privacy guarantees is thus insecure if the model is not trusted. Overall, our work highlights a crucial and overlooked supply chain attack on machine learning privacy.",
@@ -3512,28 +3558,6 @@
       "first_seen": "2025-11-28"
     },
     {
-      "paper_id": "de70069726ba2b1608b91f9617098f4856d35ee6",
-      "title": "Direct electromagnetic information processing with planar diffractive neural network",
-      "abstract": "Diffractive neural network in electromagnetic wave\u2013driven system has attracted great attention due to its ultrahigh parallel computing capability and energy efficiency. However, recent neural networks based on the diffractive framework still face the bottlenecks of misalignment and relatively large size limiting their further applications. Here, we propose a planar diffractive neural network (pla-NN) with a highly integrated and conformal architecture to achieve direct signal processing in the microwave frequency. On the basis of printed circuit fabrication process, the misalignment could be effectively circumvented while enabling flexible extension for multiple conformal and stacking designs. We first conduct validation on the fashion-MNIST dataset and experimentally build up a system using the proposed network architecture for direct recognition of different geometry structures in the electromagnetic space. We envision that the presented architecture, once combined with the advanced dynamic maneuvering techniques and flexible topology, would exhibit unlimited potentials in the areas of high-performance computing, wireless sensing, and flexible wearable electronics.",
-      "year": 2024,
-      "venue": "Science Advances",
-      "authors": [
-        "Ze Gu",
-        "Qian Ma",
-        "Xinxin Gao",
-        "J. You",
-        "T. Cui"
-      ],
-      "citation_count": 28,
-      "url": "https://www.semanticscholar.org/paper/de70069726ba2b1608b91f9617098f4856d35ee6",
-      "pdf_url": "https://doi.org/10.1126/sciadv.ado3937",
-      "publication_date": "2024-07-19",
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
       "paper_id": "3c3479215bcc775f8e37d7d5055a16b698904c9a",
       "title": "FedDSE: Distribution-aware Sub-model Extraction for Federated Learning over Resource-constrained Devices",
       "abstract": "Sub-model extraction based federated learning has emerged as a popular strategy for training models on resource-constrained devices. However, existing methods treat all clients equally and extract sub-models using predetermined rules, which disregard the statistical heterogeneity across clients and may lead to fierce competition among them. Specifically, this paper identifies that when making predictions, different clients tend to activate different neurons of the entire model related to their respective distributions. If highly activated neurons from some clients with one distribution are incorporated into the sub-model allocated to other clients with different distributions, they will be forced to fit the new distributions, which can hinder their activation over the previous clients and result in a performance reduction. Motivated by this finding, we propose a novel method called FedDSE, which can reduce the conflicts among clients by extracting sub-models based on the data distribution of each client. The core idea of FedDSE is to empower each client to adaptively extract neurons from the entire model based on their activation over the local dataset. We theoretically show that FedDSE can achieve an improved classification score and convergence over general neural networks with the ReLU activation function. Experimental results on various datasets and models show that FedDSE outperforms all state-of-the-art baselines.",
@@ -3549,7 +3573,7 @@
         "Yonggang Wen",
         "Tianwei Zhang"
       ],
-      "citation_count": 22,
+      "citation_count": 23,
       "url": "https://www.semanticscholar.org/paper/3c3479215bcc775f8e37d7d5055a16b698904c9a",
       "pdf_url": "",
       "publication_date": "2024-05-13",
@@ -3900,7 +3924,7 @@
         "Yinhang Zhou",
         "Rang Zhou"
       ],
-      "citation_count": 12,
+      "citation_count": 13,
       "url": "https://www.semanticscholar.org/paper/7bed6f6101204efdf04181aafa511ca55644b559",
       "pdf_url": "https://doi.org/10.3390/electronics13142858",
       "publication_date": "2024-07-19",
@@ -3975,6 +3999,29 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "9af4ee4d5255739283cdd728864168a7e6336393",
+      "title": "WARDEN: Multi-Directional Backdoor Watermarks for Embedding-as-a-Service Copyright Protection",
+      "abstract": "Embedding as a Service (EaaS) has become a widely adopted solution, which offers feature extraction capabilities for addressing various downstream tasks in Natural Language Processing (NLP). Prior studies have shown that EaaS can be prone to model extraction attacks; nevertheless, this concern could be mitigated by adding backdoor watermarks to the text embeddings and subsequently verifying the attack models post-publication. Through the analysis of the recent watermarking strategy for EaaS, EmbMarker, we design a novel CSE (Clustering, Selection, Elimination) attack that removes the backdoor watermark while maintaining the high utility of embeddings, indicating that the previous watermarking approach can be breached. In response to this new threat, we propose a new protocol to make the removal of watermarks more challenging by incorporating multiple possible watermark directions. Our defense approach, WARDEN, notably increases the stealthiness of watermarks and has been empirically shown to be effective against CSE attack.",
+      "year": 2024,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "authors": [
+        "Anudeex Shetty",
+        "Yue Teng",
+        "Ke He",
+        "Qiongkai Xu"
+      ],
+      "citation_count": 11,
+      "url": "https://www.semanticscholar.org/paper/9af4ee4d5255739283cdd728864168a7e6336393",
+      "pdf_url": "",
+      "publication_date": "2024-03-03",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "1e8b05c5b703f443b5470bef2b3aca1b064b1709",
       "title": "DeMistify: Identifying On-Device Machine Learning Models Stealing and Reuse Vulnerabilities in Mobile Apps",
       "abstract": "Mobile apps have become popular for providing artificial intelligence (AI) services via on-device machine learning (ML) techniques. Unlike accomplishing these AI services on remote servers traditionally, these on-device techniques process sensitive information required by AI services locally, which can mitigate the severe con-cerns of the sensitive data collection on the remote side. However, these on-device techniques have to push the core of ML expertise (e.g., models) to smartphones locally, which are still subject to similar vulnerabilities on the remote clouds and servers, especially when facing the model stealing attack. To defend against these attacks, developers have taken various protective measures. Unfor-tunately, we have found that these protections are still insufficient, and on-device ML models in mobile apps could be extracted and reused without limitation. To better demonstrate its inadequate protection and the feasibility of this attack, this paper presents DeMistify, which statically locates ML models within an app, slices relevant execution components, and finally generates scripts auto-matically to instrument mobile apps to successfully steal and reuse target ML models freely. To evaluate DeMistify and demonstrate its applicability, we apply it on 1,511 top mobile apps using on-device ML expertise for several ML services based on their install numbers from Google Play and DeMistify can successfully execute 1250 of them (82.73%). In addition, an in-depth study is conducted to understand the on-device ML ecosystem in the mobile application.",
@@ -4018,29 +4065,6 @@
       "publication_date": null,
       "keywords_matched": [
         "electromagnetic analysis (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "9af4ee4d5255739283cdd728864168a7e6336393",
-      "title": "WARDEN: Multi-Directional Backdoor Watermarks for Embedding-as-a-Service Copyright Protection",
-      "abstract": "Embedding as a Service (EaaS) has become a widely adopted solution, which offers feature extraction capabilities for addressing various downstream tasks in Natural Language Processing (NLP). Prior studies have shown that EaaS can be prone to model extraction attacks; nevertheless, this concern could be mitigated by adding backdoor watermarks to the text embeddings and subsequently verifying the attack models post-publication. Through the analysis of the recent watermarking strategy for EaaS, EmbMarker, we design a novel CSE (Clustering, Selection, Elimination) attack that removes the backdoor watermark while maintaining the high utility of embeddings, indicating that the previous watermarking approach can be breached. In response to this new threat, we propose a new protocol to make the removal of watermarks more challenging by incorporating multiple possible watermark directions. Our defense approach, WARDEN, notably increases the stealthiness of watermarks and has been empirically shown to be effective against CSE attack.",
-      "year": 2024,
-      "venue": "Annual Meeting of the Association for Computational Linguistics",
-      "authors": [
-        "Anudeex Shetty",
-        "Yue Teng",
-        "Ke He",
-        "Qiongkai Xu"
-      ],
-      "citation_count": 10,
-      "url": "https://www.semanticscholar.org/paper/9af4ee4d5255739283cdd728864168a7e6336393",
-      "pdf_url": "",
-      "publication_date": "2024-03-03",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack",
-        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -4304,6 +4328,50 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "2b89dd26035172807159d1f5bc972ed04d7c4bb2",
+      "title": "Model Stealing for Any Low-Rank Language Model",
+      "abstract": "Model stealing, where a learner tries to recover an unknown model via carefully chosen queries, is a critical problem in machine learning, as it threatens the security of proprietary models and the privacy of data they are trained on. In recent years, there has been particular interest in stealing large language models (LLMs). In this paper, we aim to build a theoretical understanding of stealing language models by studying a simple and mathematically tractable setting. We study model stealing for Hidden Markov Models (HMMs), and more generally low-rank language models. We assume that the learner works in the conditional query model, introduced by Kakade, Krishnamurthy, Mahajan and Zhang. Our main result is an efficient algorithm in the conditional query model, for learning any low-rank distribution. In other words, our algorithm succeeds at stealing any language model whose output distribution is low-rank. This improves upon the previous result which also requires the unknown distribution to have high \u201cfidelity\u201d \u2013 a property that holds only in restricted cases. There are two key insights behind our algorithm: First, we represent the conditional distributions at each timestep by constructing barycentric spanners among a collection of vectors of exponentially large dimension. Second, for sampling from our representation, we iteratively solve a sequence of convex optimization problems that involve projection in relative entropy to prevent compounding of errors over the length of the sequence. This is an interesting example where, at least theoretically, allowing a machine learning model to solve more complex problems at inference time can lead to drastic improvements in its performance.",
+      "year": 2024,
+      "venue": "Symposium on the Theory of Computing",
+      "authors": [
+        "Allen Liu",
+        "Ankur Moitra"
+      ],
+      "citation_count": 7,
+      "url": "https://www.semanticscholar.org/paper/2b89dd26035172807159d1f5bc972ed04d7c4bb2",
+      "pdf_url": "",
+      "publication_date": "2024-11-12",
+      "keywords_matched": [
+        "model stealing",
+        "stealing language model"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
+      "paper_id": "ee51e69d40e027a6fd3fb2dca78d520e83737ae1",
+      "title": "Rethinking Adversarial Robustness in the Context of the Right to be Forgotten",
+      "abstract": "The past few years have seen an intense research interest in the practical needs of the \u201cright to be forgotten\u201d, which has motivated researchers to develop machine unlearning methods to unlearn a fraction of training data and its lineage. While existing machine unlearning methods prioritize the protection of individuals\u2019 private data, they over-look investigating the unlearned models\u2019 susceptibility to adversarial attacks and security breaches. In this work, we uncover a novel security vulnerability of machine unlearning based on the insight that adversarial vulnerabilities can be bol-stered, especially for adversarially robust models. To exploit this observed vulnerability, we pro-pose a novel attack called Adv ersarial U nlearning A ttack (AdvUA), which aims to generate a small fraction of malicious unlearning requests during the unlearning process. AdvUA causes a significant reduction of adversarial robustness in the unlearned model compared to the original model, providing an entirely new capability for adversaries that is infeasible in conventional machine learning pipelines. Notably, we also show that AdvUA can effectively enhance model stealing attacks by extracting additional decision boundary information, further emphasizing the breadth and significance of our research. We also conduct both theoretical analysis and computational complexity of AdvUA. Extensive numerical studies are performed to demonstrate the effectiveness and efficiency of the proposed attack.",
+      "year": 2024,
+      "venue": "International Conference on Machine Learning",
+      "authors": [
+        "Chenxu Zhao",
+        "Wei Qian",
+        "Yangyi Li",
+        "Aobo Chen",
+        "Mengdi Huai"
+      ],
+      "citation_count": 7,
+      "url": "https://www.semanticscholar.org/paper/ee51e69d40e027a6fd3fb2dca78d520e83737ae1",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "model stealing",
+        "model stealing attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-20"
+    },
+    {
       "paper_id": "74ed0e78bba8fda5a72d3db69593f4caeca82559",
       "title": "TPUXtract: An Exhaustive Hyperparameter Extraction Framework",
       "abstract": "Model stealing attacks on AI/ML devices undermine intellectual property rights, compromise the competitive advantage of the original model developers, and potentially expose sensitive data embedded in the model\u2019s behavior to unauthorized parties. While previous research works have demonstrated successful side-channelbased model recovery in embedded microcontrollers and FPGA-based accelerators, the exploration of attacks on commercial ML accelerators remains largely unexplored. Moreover, prior side-channel attacks fail when they encounter previously unknown models. This paper demonstrates the first successful model extraction attack on the Google Edge Tensor Processing Unit (TPU), an off-the-shelf ML accelerator. Specifically, we show a hyperparameter stealing attack that can extract all layer configurations including the layer type, number of nodes, kernel/filter sizes, number of filters, strides, padding, and activation function. Most notably, our attack is the first comprehensive attack that can extract previously unseen models. This is achieved through an online template-building approach instead of a pre-trained ML-based approach used in prior works. Our results on a black-box Google Edge TPU evaluation show that, through obtained electromagnetic traces, our proposed framework can achieve 99.91% accuracy, making it the most accurate one to date. Our findings indicate that attackers can successfully extract various types of models on a black-box commercial TPU with utmost detail and call for countermeasures.",
@@ -4417,26 +4485,6 @@
         "side-channel attack (title)"
       ],
       "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "2b89dd26035172807159d1f5bc972ed04d7c4bb2",
-      "title": "Model Stealing for Any Low-Rank Language Model",
-      "abstract": "Model stealing, where a learner tries to recover an unknown model via carefully chosen queries, is a critical problem in machine learning, as it threatens the security of proprietary models and the privacy of data they are trained on. In recent years, there has been particular interest in stealing large language models (LLMs). In this paper, we aim to build a theoretical understanding of stealing language models by studying a simple and mathematically tractable setting. We study model stealing for Hidden Markov Models (HMMs), and more generally low-rank language models. We assume that the learner works in the conditional query model, introduced by Kakade, Krishnamurthy, Mahajan and Zhang. Our main result is an efficient algorithm in the conditional query model, for learning any low-rank distribution. In other words, our algorithm succeeds at stealing any language model whose output distribution is low-rank. This improves upon the previous result which also requires the unknown distribution to have high \u201cfidelity\u201d \u2013 a property that holds only in restricted cases. There are two key insights behind our algorithm: First, we represent the conditional distributions at each timestep by constructing barycentric spanners among a collection of vectors of exponentially large dimension. Second, for sampling from our representation, we iteratively solve a sequence of convex optimization problems that involve projection in relative entropy to prevent compounding of errors over the length of the sequence. This is an interesting example where, at least theoretically, allowing a machine learning model to solve more complex problems at inference time can lead to drastic improvements in its performance.",
-      "year": 2024,
-      "venue": "Symposium on the Theory of Computing",
-      "authors": [
-        "Allen Liu",
-        "Ankur Moitra"
-      ],
-      "citation_count": 6,
-      "url": "https://www.semanticscholar.org/paper/2b89dd26035172807159d1f5bc972ed04d7c4bb2",
-      "pdf_url": "",
-      "publication_date": "2024-11-12",
-      "keywords_matched": [
-        "model stealing",
-        "stealing language model"
-      ],
-      "first_seen": "2025-11-28"
     },
     {
       "paper_id": "40d2bc169204b49a9cfa659b5398791ac5860caf",
@@ -4876,6 +4924,29 @@
       "publication_date": "2024-10-01",
       "keywords_matched": [
         "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "c67af67a82170c03e7d39f2f143ef74e8367d0a4",
+      "title": "Defending against model extraction attacks with OOD feature learning and decision boundary confusion",
+      "abstract": null,
+      "year": 2024,
+      "venue": "Computers & security",
+      "authors": [
+        "Chuang Liang",
+        "Jie Huang",
+        "Zeping Zhang",
+        "Shuaishuai Zhang"
+      ],
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/c67af67a82170c03e7d39f2f143ef74e8367d0a4",
+      "pdf_url": "",
+      "publication_date": "2024-01-01",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -5351,29 +5422,6 @@
       "publication_date": null,
       "keywords_matched": [
         "model stealing",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "c67af67a82170c03e7d39f2f143ef74e8367d0a4",
-      "title": "Defending against model extraction attacks with OOD feature learning and decision boundary confusion",
-      "abstract": null,
-      "year": 2024,
-      "venue": "Computers & security",
-      "authors": [
-        "Chuang Liang",
-        "Jie Huang",
-        "Zeping Zhang",
-        "Shuaishuai Zhang"
-      ],
-      "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/c67af67a82170c03e7d39f2f143ef74e8367d0a4",
-      "pdf_url": "",
-      "publication_date": "2024-01-01",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack",
         "(via citation)"
       ],
       "first_seen": "2025-12-05"
@@ -6439,6 +6487,29 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "004764a194f3e85900a0b15d11c4a6955d6a616a",
+      "title": "Robust and Minimally Invasive Watermarking for EaaS",
+      "abstract": "Embeddings as a Service (EaaS) is emerging as a crucial role in AI applications. Unfortunately, EaaS is vulnerable to model extraction attacks, highlighting the urgent need for copyright protection. Although some preliminary works propose applying embedding watermarks to protect EaaS, recent research reveals that these watermarks can be easily removed. Hence, it is crucial to inject robust watermarks resistant to watermark removal attacks. Existing watermarking methods typically inject a target embedding into embeddings through linear interpolation when the text contains triggers. However, this mechanism results in each watermarked embedding having the same component, which makes the watermark easy to identify and eliminate. Motivated by this, in this paper, we propose a novel embedding-specific watermarking (ESpeW) mechanism to offer robust copyright protection for EaaS. Our approach involves injecting unique, yet readily identifiable watermarks into each embedding. Watermarks inserted by ESpeW are designed to maintain a significant distance from one another and to avoid sharing common components, thus making it significantly more challenging to remove the watermarks. Moreover, ESpeW is minimally invasive, as it reduces the impact on embeddings to less than 1\\%, setting a new milestone in watermarking for EaaS. Extensive experiments on four popular datasets demonstrate that ESpeW can even watermark successfully against a highly aggressive removal strategy without sacrificing the quality of embeddings.",
+      "year": 2024,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "authors": [
+        "Zongqi Wang",
+        "Baoyuan Wu",
+        "Jingyuan Deng",
+        "Yujiu Yang"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/004764a194f3e85900a0b15d11c4a6955d6a616a",
+      "pdf_url": "",
+      "publication_date": "2024-10-23",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "a9f0a5405f75e2596ebde4b0339dcc20b3b72db3",
       "title": "Exploring the Validity of Knockoff Nets Model Stealing Attack on Vgg16 Based on Different Models",
       "abstract": "Model stealing attacks represented by the Knockoff Nets method steal the intellectual property of AI models by black-box querying. Model stealing attacks on a wide range of deep learning models have attracted widespread attention in recent years. However, there has not been any research on stealing attacks based on common models such as VGG16, ResNet18, AlexNet, etc., especially since the research on the validity of the attack on the VGG16 model is still insufficient. Therefore, in this paper, three types of models, VGG16, ResNet18, and AlexNet, are used as the models for stealing, and the Knockoff Nets method is used to carry out stealing attacks on the pre-trained model of VGG16, which is capable of cat and dog image recognition. This paper analyzes the stealing similarity, stealing model accuracy and stealing training time so as to reflect the validity of stealing. The paper shows that Knockoff Nets based on three types of models, VGG16, ResNet18, and AlexNet, are all effective against the VGG16 model stealing attack, and the more similar the architectures of the stealing model and the victim's model are, the better the stealing effect is. In addition, to a certain extent, the stealing training time and the stealing model accuracy are affected by the architecture of model used to steal. This paper reveals the validity of the Knockoff Nets model stealing attack against VGG16 based on three types of models, namely VGG16, ResNet18, and AlexNet, to provide a reference for model security protection.",
@@ -7231,29 +7302,6 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "004764a194f3e85900a0b15d11c4a6955d6a616a",
-      "title": "Robust and Minimally Invasive Watermarking for EaaS",
-      "abstract": "Embeddings as a Service (EaaS) is emerging as a crucial role in AI applications. Unfortunately, EaaS is vulnerable to model extraction attacks, highlighting the urgent need for copyright protection. Although some preliminary works propose applying embedding watermarks to protect EaaS, recent research reveals that these watermarks can be easily removed. Hence, it is crucial to inject robust watermarks resistant to watermark removal attacks. Existing watermarking methods typically inject a target embedding into embeddings through linear interpolation when the text contains triggers. However, this mechanism results in each watermarked embedding having the same component, which makes the watermark easy to identify and eliminate. Motivated by this, in this paper, we propose a novel embedding-specific watermarking (ESpeW) mechanism to offer robust copyright protection for EaaS. Our approach involves injecting unique, yet readily identifiable watermarks into each embedding. Watermarks inserted by ESpeW are designed to maintain a significant distance from one another and to avoid sharing common components, thus making it significantly more challenging to remove the watermarks. Moreover, ESpeW is minimally invasive, as it reduces the impact on embeddings to less than 1\\%, setting a new milestone in watermarking for EaaS. Extensive experiments on four popular datasets demonstrate that ESpeW can even watermark successfully against a highly aggressive removal strategy without sacrificing the quality of embeddings.",
-      "year": 2024,
-      "venue": "Annual Meeting of the Association for Computational Linguistics",
-      "authors": [
-        "Zongqi Wang",
-        "Baoyuan Wu",
-        "Jingyuan Deng",
-        "Yujiu Yang"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/004764a194f3e85900a0b15d11c4a6955d6a616a",
-      "pdf_url": "",
-      "publication_date": "2024-10-23",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
       "paper_id": "c25d2a27f1abe169d7b68078071b6698f0980469",
       "title": "Protecting Language Generation Models via Invisible Watermarking",
       "abstract": "Language generation models have been an increasingly powerful enabler for many applications. Many such models offer free or affordable API access, which makes them potentially vulnerable to model extraction attacks through distillation. To protect intellectual property (IP) and ensure fair use of these models, various techniques such as lexical watermarking and synonym replacement have been proposed. However, these methods can be nullified by obvious countermeasures such as\"synonym randomization\". To address this issue, we propose GINSEW, a novel method to protect text generation models from being stolen through distillation. The key idea of our method is to inject secret signals into the probability vector of the decoding steps for each target token. We can then detect the secret message by probing a suspect model to tell if it is distilled from the protected one. Experimental results show that GINSEW can effectively identify instances of IP infringement with minimal impact on the generation quality of protected APIs. Our method demonstrates an absolute improvement of 19 to 29 points on mean average precision (mAP) in detecting suspects compared to previous methods against watermark removal attacks.",
@@ -7264,7 +7312,7 @@
         "Yu-Xiang Wang",
         "Lei Li"
       ],
-      "citation_count": 106,
+      "citation_count": 107,
       "url": "https://www.semanticscholar.org/paper/c25d2a27f1abe169d7b68078071b6698f0980469",
       "pdf_url": "https://arxiv.org/pdf/2302.03162",
       "publication_date": "2023-02-06",
@@ -7292,7 +7340,7 @@
         "Guangzhong Sun",
         "Xing Xie"
       ],
-      "citation_count": 87,
+      "citation_count": 88,
       "url": "https://www.semanticscholar.org/paper/d4c3e3e3c01afed15926adf81527bf46aa491c6a",
       "pdf_url": "http://arxiv.org/pdf/2305.10036",
       "publication_date": "2023-05-17",
@@ -7426,7 +7474,7 @@
         "Yao Guo",
         "Xiangqun Chen"
       ],
-      "citation_count": 39,
+      "citation_count": 40,
       "url": "https://www.semanticscholar.org/paper/e169ce8cc1627ff18f8fc4361f622bb31d33326b",
       "pdf_url": "https://arxiv.org/pdf/2310.07152",
       "publication_date": "2023-10-11",
@@ -7458,6 +7506,31 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "68b560859078171978f2c040b1522f4e7668c38e",
+      "title": "On Extracting Specialized Code Abilities from Large Language Models: A Feasibility Study",
+      "abstract": "Recent advances in large language models (LLMs) significantly boost their usage in software engineering. However, training a well-performing LLM demands a substantial workforce for data collection and annotation. Moreover, training datasets may be proprietary or partially open, and the process often requires a costly GPU cluster. The intellectual property value of commercial LLMs makes them attractive targets for imitation attacks, but creating an imitation model with comparable parameters still incurs high costs. This motivates us to explore a practical and novel direction: slicing commercial black-box LLMs using medium-sized backbone models. In this paper, we explore the feasibility of launching imitation attacks on LLMs to extract their specialized code abilities, such as \u201ccode synthesis\u201d and \u201ccode translation:\u2019 We systematically investigate the effectiveness of launching code ability extraction attacks under different code-related tasks with multiple query schemes, including zero-shot, in-context, and Chain-of-Thought. We also design response checks to refine the outputs, leading to an effective imitation training process. Our results show promising outcomes, demonstrating that with a reasonable number of queries, attackers can train a medium-sized backbone model to replicate specialized code behaviors similar to the target LLMs. We summarize our findings and insights to help researchers better understand the threats posed by imitation attacks, including revealing a practical attack surface for generating adversarial code examples against LLMs.",
+      "year": 2023,
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Zongjie Li",
+        "Chaozheng Wang",
+        "Pingchuan Ma",
+        "Chaowei Liu",
+        "Shuai Wang",
+        "Daoyuan Wu",
+        "Cuiyun Gao"
+      ],
+      "citation_count": 36,
+      "url": "https://www.semanticscholar.org/paper/68b560859078171978f2c040b1522f4e7668c38e",
+      "pdf_url": "https://arxiv.org/pdf/2303.03012",
+      "publication_date": "2023-03-06",
+      "keywords_matched": [
+        "imitation attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "81cd9575100643a3463465ec19e90ee78e122f93",
       "title": "SoK: Model Inversion Attack Landscape: Taxonomy, Challenges, and Future Roadmap",
       "abstract": "A crucial module of the widely applied machine learning (ML) model is the model training phase, which involves large-scale training data, often including sensitive private data. ML models trained on these sensitive data suffer from significant privacy concerns since ML models can intentionally or unintendedly leak information about training data. Adversaries can exploit this information to perform privacy attacks, including model extraction, membership inference, and model inversion. While a model extraction attack steals and replicates a trained model functionality, and membership inference infers the data sample's inclusiveness to the training set, a model inversion attack has the goal of inferring the training data sample's sensitive attribute value or reconstructing the training sample (i.e., image/audio/text). Distinct and inconsistent characteristics of model inversion attack make this attack even more challenging and consequential, opening up model inversion attack as a more prominent and increasingly expanding research paradigm. Thereby, to flourish research in this relatively underexplored model inversion domain, we conduct the first-ever systematic literature review of the model inversion attack landscape. We characterize model inversion attacks and provide a comprehensive taxonomy based on different dimensions. We illustrate foundational perspectives emphasizing methodologies and key principles of the existing attacks and defense techniques. Finally, we discuss challenges and open issues in the existing model inversion attacks, focusing on the roadmap for future research directions.",
@@ -7475,31 +7548,6 @@
         "model extraction attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "68b560859078171978f2c040b1522f4e7668c38e",
-      "title": "On Extracting Specialized Code Abilities from Large Language Models: A Feasibility Study",
-      "abstract": "Recent advances in large language models (LLMs) significantly boost their usage in software engineering. However, training a well-performing LLM demands a substantial workforce for data collection and annotation. Moreover, training datasets may be proprietary or partially open, and the process often requires a costly GPU cluster. The intellectual property value of commercial LLMs makes them attractive targets for imitation attacks, but creating an imitation model with comparable parameters still incurs high costs. This motivates us to explore a practical and novel direction: slicing commercial black-box LLMs using medium-sized backbone models. In this paper, we explore the feasibility of launching imitation attacks on LLMs to extract their specialized code abilities, such as \u201ccode synthesis\u201d and \u201ccode translation:\u2019 We systematically investigate the effectiveness of launching code ability extraction attacks under different code-related tasks with multiple query schemes, including zero-shot, in-context, and Chain-of-Thought. We also design response checks to refine the outputs, leading to an effective imitation training process. Our results show promising outcomes, demonstrating that with a reasonable number of queries, attackers can train a medium-sized backbone model to replicate specialized code behaviors similar to the target LLMs. We summarize our findings and insights to help researchers better understand the threats posed by imitation attacks, including revealing a practical attack surface for generating adversarial code examples against LLMs.",
-      "year": 2023,
-      "venue": "International Conference on Software Engineering",
-      "authors": [
-        "Zongjie Li",
-        "Chaozheng Wang",
-        "Pingchuan Ma",
-        "Chaowei Liu",
-        "Shuai Wang",
-        "Daoyuan Wu",
-        "Cuiyun Gao"
-      ],
-      "citation_count": 35,
-      "url": "https://www.semanticscholar.org/paper/68b560859078171978f2c040b1522f4e7668c38e",
-      "pdf_url": "https://arxiv.org/pdf/2303.03012",
-      "publication_date": "2023-03-06",
-      "keywords_matched": [
-        "imitation attack",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "143edab286a463b6549978834be58f6037b14df4",
@@ -7612,6 +7660,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "e562c8ee825ed4e1b3ec4037f6e9e1194d355f07",
+      "title": "Dual Student Networks for Data-Free Model Stealing",
+      "abstract": "Existing data-free model stealing methods use a generator to produce samples in order to train a student model to match the target model outputs. To this end, the two main challenges are estimating gradients of the target model without access to its parameters, and generating a diverse set of training samples that thoroughly explores the input space. We propose a Dual Student method where two students are symmetrically trained in order to provide the generator a criterion to generate samples that the two students disagree on. On one hand, disagreement on a sample implies at least one student has classified the sample incorrectly when compared to the target model. This incentive towards disagreement implicitly encourages the generator to explore more diverse regions of the input space. On the other hand, our method utilizes gradients of student models to indirectly estimate gradients of the target model. We show that this novel training objective for the generator network is equivalent to optimizing a lower bound on the generator's loss if we had access to the target model gradients. We show that our new optimization framework provides more accurate gradient estimation of the target model and better accuracies on benchmark classification datasets. Additionally, our approach balances improved query efficiency with training computation cost. Finally, we demonstrate that our method serves as a better proxy model for transfer-based adversarial attacks than existing data-free model stealing methods.",
+      "year": 2023,
+      "venue": "International Conference on Learning Representations",
+      "authors": [
+        "James Beetham",
+        "Navid Kardan",
+        "A. Mian",
+        "M. Shah"
+      ],
+      "citation_count": 25,
+      "url": "https://www.semanticscholar.org/paper/e562c8ee825ed4e1b3ec4037f6e9e1194d355f07",
+      "pdf_url": "https://arxiv.org/pdf/2309.10058",
+      "publication_date": "2023-09-18",
+      "keywords_matched": [
+        "model stealing"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "afbc7f9d4a4dcf0cf02ab3efd043904b361fa886",
       "title": "DeepTheft: Stealing DNN Model Architectures through Power Side Channel",
       "abstract": "Deep Neural Network (DNN) models are often deployed in resource-sharing clouds as Machine Learning as a Service (MLaaS) to provide inference services. To steal model architectures that are of valuable intellectual properties, a class of attacks has been proposed via different side-channel leakage, posing a serious security challenge to MLaaS.Also targeting MLaaS, we propose a new end-to-end attack, DeepTheft, to accurately recover complex DNN model architectures on general processors via the RAPL (Running Average Power Limit)-based power side channel. While unprivileged access to the RAPL has been disabled in bare-metal OSes, we observe that the RAPL is still legitimately accessible in a platform as a service, e.g., the latest docker environment of version 20.10.18 used in this work. However, an attacker can acquire only a low sampling rate (1 KHz) of the time-series energy traces from the RAPL interface, rendering existing techniques ineffective in stealing large and deep DNN models. To this end, we design a novel and generic learning-based framework consisting of a set of meta-models, based on which DeepTheft is demonstrated to have high accuracy in recovering a large number (thousands) of models architectures from different model families including the deepest ResNet152. Particularly, DeepTheft has achieved a Levenshtein Distance Accuracy of 99.75% in recovering network structures, and a weighted average F1 score of 99.60% in recovering diverse layer-wise hyperparameters. Besides, our proposed learning framework is general to other time-series side-channel signals. To validate its generalization, another existing side channel is exploited, i.e., CPU frequency. Different from RAPL, CPU frequency is accessible to unprivileged users in bare-metal OSes. By using our generic learning framework trained against CPU frequency traces, DeepTheft has shown similarly high attack performance in stealing model architectures.",
@@ -7658,27 +7727,6 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "e562c8ee825ed4e1b3ec4037f6e9e1194d355f07",
-      "title": "Dual Student Networks for Data-Free Model Stealing",
-      "abstract": "Existing data-free model stealing methods use a generator to produce samples in order to train a student model to match the target model outputs. To this end, the two main challenges are estimating gradients of the target model without access to its parameters, and generating a diverse set of training samples that thoroughly explores the input space. We propose a Dual Student method where two students are symmetrically trained in order to provide the generator a criterion to generate samples that the two students disagree on. On one hand, disagreement on a sample implies at least one student has classified the sample incorrectly when compared to the target model. This incentive towards disagreement implicitly encourages the generator to explore more diverse regions of the input space. On the other hand, our method utilizes gradients of student models to indirectly estimate gradients of the target model. We show that this novel training objective for the generator network is equivalent to optimizing a lower bound on the generator's loss if we had access to the target model gradients. We show that our new optimization framework provides more accurate gradient estimation of the target model and better accuracies on benchmark classification datasets. Additionally, our approach balances improved query efficiency with training computation cost. Finally, we demonstrate that our method serves as a better proxy model for transfer-based adversarial attacks than existing data-free model stealing methods.",
-      "year": 2023,
-      "venue": "International Conference on Learning Representations",
-      "authors": [
-        "James Beetham",
-        "Navid Kardan",
-        "A. Mian",
-        "M. Shah"
-      ],
-      "citation_count": 24,
-      "url": "https://www.semanticscholar.org/paper/e562c8ee825ed4e1b3ec4037f6e9e1194d355f07",
-      "pdf_url": "https://arxiv.org/pdf/2309.10058",
-      "publication_date": "2023-09-18",
-      "keywords_matched": [
-        "model stealing"
       ],
       "first_seen": "2025-11-28"
     },
@@ -10887,7 +10935,7 @@
         "Rudolf Mayer",
         "A. Rauber"
       ],
-      "citation_count": 139,
+      "citation_count": 140,
       "url": "https://www.semanticscholar.org/paper/d405b58a8f465d5ba2e91f9541e09760904c11a8",
       "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3595292",
       "publication_date": "2022-06-16",
@@ -10909,7 +10957,7 @@
         "Sravanti Addepalli",
         "R. Venkatesh Babu"
       ],
-      "citation_count": 102,
+      "citation_count": 103,
       "url": "https://www.semanticscholar.org/paper/35ade8553de7259a5e8105bd20a160f045f9d112",
       "pdf_url": "https://arxiv.org/pdf/2204.11022",
       "publication_date": "2022-04-23",
@@ -13583,7 +13631,7 @@
         "Jiong Liu",
         "Simiao Chen"
       ],
-      "citation_count": 44,
+      "citation_count": 45,
       "url": "https://www.semanticscholar.org/paper/0d114776aa65bf3bbd0e5517de7b6727c529d6ae",
       "pdf_url": "",
       "publication_date": "2021-12-02",
@@ -13608,7 +13656,7 @@
         "Sigang Yang",
         "Hong-wei Chen"
       ],
-      "citation_count": 44,
+      "citation_count": 45,
       "url": "https://www.semanticscholar.org/paper/2bf31e06af3408f0136147bf321fdeb024f50a1b",
       "pdf_url": "https://doi.org/10.1364/oe.435183",
       "publication_date": "2021-09-27",
@@ -13627,7 +13675,7 @@
         "M. M. Real",
         "R. Salvador"
       ],
-      "citation_count": 43,
+      "citation_count": 44,
       "url": "https://www.semanticscholar.org/paper/c1cd3ef5bd9439de1f138ab5200a2c9cecf362af",
       "pdf_url": "https://www.mdpi.com/2076-3417/11/15/6790/pdf?version=1627954373",
       "publication_date": "2021-07-23",
@@ -14018,7 +14066,7 @@
         "Lizhen Qu",
         "Gholamreza Haffari"
       ],
-      "citation_count": 25,
+      "citation_count": 26,
       "url": "https://www.semanticscholar.org/paper/975e8d7065161d3dc0020ef343aa1db2a3db5a7b",
       "pdf_url": "",
       "publication_date": "2021-08-29",
@@ -14443,6 +14491,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "5b6a6a46caac1316f268a1e6643c10b16fdaef0f",
+      "title": "An Exact Poly-Time Membership-Queries Algorithm for Extraction a three-Layer ReLU Network",
+      "abstract": "We consider the natural problem of learning a ReLU network from queries, which was recently remotivated by model extraction attacks. In this work, we present a polynomial-time algorithm that can learn a depth-two ReLU network from queries under mild general position assumptions. We also present a polynomial-time algorithm that, under mild general position assumptions, can learn a rich class of depth-three ReLU networks from queries. For instance, it can learn most networks where the number of first layer neurons is smaller than the dimension and the number of second layer neurons. These two results substantially improve state-of-the-art: Until our work, polynomial-time algorithms were only shown to learn from queries depth-two networks under the assumption that either the underlying distribution is Gaussian (Chen et al. (2021)) or that the weights matrix rows are linearly independent (Milli et al. (2019)). For depth three or more, there were no known poly-time results.",
+      "year": 2021,
+      "venue": "International Conference on Learning Representations",
+      "authors": [
+        "Amit Daniely",
+        "Elad Granot"
+      ],
+      "citation_count": 11,
+      "url": "https://www.semanticscholar.org/paper/5b6a6a46caac1316f268a1e6643c10b16fdaef0f",
+      "pdf_url": "",
+      "publication_date": "2021-05-20",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "373936d00c4a357579c4d375de0ce439e4e54d5f",
       "title": "Killing One Bird with Two Stones: Model Extraction and Attribute Inference Attacks against BERT-based APIs",
       "abstract": "The collection and availability of big data, combined with advances in pre-trained models (e.g., BERT, XLNET, etc), have revolutionized the predictive performance of modern natural language processing tasks, ranging from text classification to text generation. This allows corporations to provide machine learning as a service (MLaaS) by encapsulating fine-tuned BERT-based models as APIs. However, BERT-based APIs have exhibited a series of security and privacy vulnerabilities. For example, prior work has exploited the security issues of the BERT-based APIs through the adversarial examples crafted by the extracted model. However, the privacy leakage problems of the BERT-based APIs through the extracted model have not been well studied. On the other hand, due to the high capacity of BERT-based APIs, the fine-tuned model is easy to be overlearned, but what kind of information can be leaked from the extracted model remains unknown. In this work, we bridge this gap by first presenting an effective model extraction attack, where the adversary can practically steal a BERT-based API (the target/victim model) by only querying a limited number of queries. We further develop an effective attribute inference attack which can infer the sensitive attribute of the training data used by the BERT-based APIs. Our extensive experiments on benchmark datasets under various realistic settings validate the potential vulnerabilities of BERT-based APIs. Moreover, we demonstrate that two promising defense methods become ineffective against our attacks, which calls for more effective defense methods.",
@@ -14482,27 +14551,6 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "5b6a6a46caac1316f268a1e6643c10b16fdaef0f",
-      "title": "An Exact Poly-Time Membership-Queries Algorithm for Extraction a three-Layer ReLU Network",
-      "abstract": "We consider the natural problem of learning a ReLU network from queries, which was recently remotivated by model extraction attacks. In this work, we present a polynomial-time algorithm that can learn a depth-two ReLU network from queries under mild general position assumptions. We also present a polynomial-time algorithm that, under mild general position assumptions, can learn a rich class of depth-three ReLU networks from queries. For instance, it can learn most networks where the number of first layer neurons is smaller than the dimension and the number of second layer neurons. These two results substantially improve state-of-the-art: Until our work, polynomial-time algorithms were only shown to learn from queries depth-two networks under the assumption that either the underlying distribution is Gaussian (Chen et al. (2021)) or that the weights matrix rows are linearly independent (Milli et al. (2019)). For depth three or more, there were no known poly-time results.",
-      "year": 2021,
-      "venue": "International Conference on Learning Representations",
-      "authors": [
-        "Amit Daniely",
-        "Elad Granot"
-      ],
-      "citation_count": 10,
-      "url": "https://www.semanticscholar.org/paper/5b6a6a46caac1316f268a1e6643c10b16fdaef0f",
-      "pdf_url": "",
-      "publication_date": "2021-05-20",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack",
-        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -14551,6 +14599,28 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "16d98de120fc1e55000e65a285684c4dc7a04807",
+      "title": "Efficiently Learning Any One Hidden Layer ReLU Network From Queries",
+      "abstract": "Model extraction attacks have renewed interest in the classic problem of learning neural networks from queries. In this work we give the first polynomial-time algorithm for learning arbitrary one hidden layer neural networks activations provided black-box access to the network. Formally, we show that if $F$ is an arbitrary one hidden layer neural network with ReLU activations, there is an algorithm with query complexity and running time that is polynomial in all parameters that outputs a network $F'$ achieving low square loss relative to $F$ with respect to the Gaussian measure. While a number of works in the security literature have proposed and empirically demonstrated the effectiveness of certain algorithms for this problem, ours is the first with fully polynomial-time guarantees of efficiency even for worst-case networks (in particular our algorithm succeeds in the overparameterized setting).",
+      "year": 2021,
+      "venue": "arXiv.org",
+      "authors": [
+        "Sitan Chen",
+        "Adam R. Klivans",
+        "Raghu Meka"
+      ],
+      "citation_count": 9,
+      "url": "https://www.semanticscholar.org/paper/16d98de120fc1e55000e65a285684c4dc7a04807",
+      "pdf_url": "",
+      "publication_date": "2021-11-08",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "25800c4599b2e834899a180d77e093fb9282d97e",
       "title": "HODA: Hardness-Oriented Detection of Model Extraction Attacks",
       "abstract": "Model extraction attacks exploit the target model\u2019s prediction API to create a surrogate model, allowing the adversary to steal or reconnoiter the functionality of the target model in the black-box setting. Several recent studies have shown that a data-limited adversaries with no or limited access to the samples from the target model\u2019s training data distribution, can employ synthesized or semantically similar samples to conduct model extraction attacks. In this paper, we introduce the concept of hardness degree to characterize sample difficulty based on the concept of learning speed. The hardness degree of a sample depends on the epoch number at which the predicted label for that sample converges. We investigate the hardness degree of samples and demonstrate that the hardness degree histogram of a data-limited adversary\u2019s sample sequence is differs significantly from that of benign users\u2019 sample sequences. We propose Hardness-Oriented Detection Approach (HODA) to detect the sample sequences of model extraction attacks. Our results indicate that HODA can effectively detect model extraction attack sequences with a high success rate, using only 100 monitored samples. It outperforms all previously proposed methods for model extraction detection.",
@@ -14571,28 +14641,6 @@
         "model extraction attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "16d98de120fc1e55000e65a285684c4dc7a04807",
-      "title": "Efficiently Learning Any One Hidden Layer ReLU Network From Queries",
-      "abstract": "Model extraction attacks have renewed interest in the classic problem of learning neural networks from queries. In this work we give the first polynomial-time algorithm for learning arbitrary one hidden layer neural networks activations provided black-box access to the network. Formally, we show that if $F$ is an arbitrary one hidden layer neural network with ReLU activations, there is an algorithm with query complexity and running time that is polynomial in all parameters that outputs a network $F'$ achieving low square loss relative to $F$ with respect to the Gaussian measure. While a number of works in the security literature have proposed and empirically demonstrated the effectiveness of certain algorithms for this problem, ours is the first with fully polynomial-time guarantees of efficiency even for worst-case networks (in particular our algorithm succeeds in the overparameterized setting).",
-      "year": 2021,
-      "venue": "arXiv.org",
-      "authors": [
-        "Sitan Chen",
-        "Adam R. Klivans",
-        "Raghu Meka"
-      ],
-      "citation_count": 8,
-      "url": "https://www.semanticscholar.org/paper/16d98de120fc1e55000e65a285684c4dc7a04807",
-      "pdf_url": "",
-      "publication_date": "2021-11-08",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "2c47435498b8e67873cce1cc86cfbf8397b18286",
@@ -15628,7 +15676,7 @@
         "Mitchell Stern",
         "D. Song"
       ],
-      "citation_count": 128,
+      "citation_count": 129,
       "url": "https://www.semanticscholar.org/paper/d73561ab8318ce343f5cb15f96c74f210b6b24fa",
       "pdf_url": "https://www.aclweb.org/anthology/2020.emnlp-main.446.pdf",
       "publication_date": "2020-04-30",
@@ -16610,6 +16658,31 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "83e2b8ab293b74f2b9347f22ac12b9175e96351e",
+      "title": "Stored Grain Inventory Management Using Neural-Network-Based Parametric Electromagnetic Inversion",
+      "abstract": "We present a neural network architecture to determine the volume and complex permittivity of grain stored in metal bins. The neural networks output the grain height, cone angle and complex permittivity of the grain, using the input of experimental field data ( $S$ -parameters) from an electromagnetic imaging system consisting of 24 transceivers installed in the bin. Key for practical applications, the neural networks are trained on synthetic data sets but generate the parametric information using experimental data as input, without the use of calibration objects or open-short-load measurements. To accomplish this, we formulate a data normalization scheme that enables the use of a loss function that directly compares measured $S$ -parameters and simulation model fields. The normalization strategy and the ability to train on synthetic data means we do not need to collect experimental training data. We demonstrate the applicability of this synthetically trained neural network to experimental data from two different bin geometries, and discuss the ability of these neural networks to successfully infer parameters that can be used for grain inventory management. Our neural-network-based approach enables rapid inference, providing a more cost-effective long-term solution than existing optimization-based parametric inversion methods.",
+      "year": 2020,
+      "venue": "IEEE Access",
+      "authors": [
+        "Keeley Edwards",
+        "N. Geddert",
+        "Kennedy Krakalovich",
+        "R. Kruk",
+        "M. Asefi",
+        "J. Lovetri",
+        "C. Gilmore",
+        "I. Jeffrey"
+      ],
+      "citation_count": 9,
+      "url": "https://www.semanticscholar.org/paper/83e2b8ab293b74f2b9347f22ac12b9175e96351e",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09260139.pdf",
+      "publication_date": null,
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "57099cf852807c652fd55274a3ce4a8c9777ef56",
       "title": "Neural Model Stealing Attack to Smart Mobile Device on Intelligent Medical Platform",
       "abstract": "To date, the Medical Internet of Things (MIoT) technology has been recognized and widely applied due to its convenience and practicality. The MIoT enables the application of machine learning to predict diseases of various kinds automatically and accurately, assisting and facilitating effective and efficient medical treatment. However, the MIoT are vulnerable to cyberattacks which have been constantly advancing. In this paper, we establish a MIoT platform and demonstrate a scenario where a trained Convolutional Neural Network (CNN) model for predicting lung cancer complicated with pulmonary embolism can be attacked. First, we use CNN to build a model to predict lung cancer complicated with pulmonary embolism and obtain high detection accuracy. Then, we build a copycat model using only a small amount of data labeled by the target network, aiming to steal the established prediction model. Experimental results prove that the stolen model can also achieve a relatively high prediction outcome, revealing that the copycat network could successfully copy the prediction performance from the target network to a large extent. This also shows that such a prediction model deployed on MIoT devices can be stolen by attackers, and effective prevention strategies are open questions for researchers.",
@@ -16672,31 +16745,6 @@
       "publication_date": "2020-07-01",
       "keywords_matched": [
         "side-channel attack (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "83e2b8ab293b74f2b9347f22ac12b9175e96351e",
-      "title": "Stored Grain Inventory Management Using Neural-Network-Based Parametric Electromagnetic Inversion",
-      "abstract": "We present a neural network architecture to determine the volume and complex permittivity of grain stored in metal bins. The neural networks output the grain height, cone angle and complex permittivity of the grain, using the input of experimental field data ( $S$ -parameters) from an electromagnetic imaging system consisting of 24 transceivers installed in the bin. Key for practical applications, the neural networks are trained on synthetic data sets but generate the parametric information using experimental data as input, without the use of calibration objects or open-short-load measurements. To accomplish this, we formulate a data normalization scheme that enables the use of a loss function that directly compares measured $S$ -parameters and simulation model fields. The normalization strategy and the ability to train on synthetic data means we do not need to collect experimental training data. We demonstrate the applicability of this synthetically trained neural network to experimental data from two different bin geometries, and discuss the ability of these neural networks to successfully infer parameters that can be used for grain inventory management. Our neural-network-based approach enables rapid inference, providing a more cost-effective long-term solution than existing optimization-based parametric inversion methods.",
-      "year": 2020,
-      "venue": "IEEE Access",
-      "authors": [
-        "Keeley Edwards",
-        "N. Geddert",
-        "Kennedy Krakalovich",
-        "R. Kruk",
-        "M. Asefi",
-        "J. Lovetri",
-        "C. Gilmore",
-        "I. Jeffrey"
-      ],
-      "citation_count": 8,
-      "url": "https://www.semanticscholar.org/paper/83e2b8ab293b74f2b9347f22ac12b9175e96351e",
-      "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09260139.pdf",
-      "publication_date": null,
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -17358,7 +17406,7 @@
         "Nicolas Papernot",
         "Mohit Iyyer"
       ],
-      "citation_count": 226,
+      "citation_count": 227,
       "url": "https://www.semanticscholar.org/paper/ac713aebdcc06f15f8ea61e1140bb360341fdf27",
       "pdf_url": "",
       "publication_date": "2019-10-27",
@@ -18375,7 +18423,7 @@
         "B. Schiele",
         "Mario Fritz"
       ],
-      "citation_count": 591,
+      "citation_count": 592,
       "url": "https://www.semanticscholar.org/paper/089c6224cfbcf5c18b63564eb65001c7c42a7acf",
       "pdf_url": "http://arxiv.org/pdf/1812.02766",
       "publication_date": "2018-12-06",
@@ -18606,7 +18654,7 @@
         "Junkang Ni",
         "Yapeng Yao"
       ],
-      "citation_count": 78,
+      "citation_count": 79,
       "url": "https://www.semanticscholar.org/paper/046563f8a0ea014064268eb95536bb521aa5f9cd",
       "pdf_url": "",
       "publication_date": "2018-02-01",
@@ -19313,7 +19361,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1960,
+      "citation_count": 1962,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
