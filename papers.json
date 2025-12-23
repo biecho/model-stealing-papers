@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-22",
+  "updated": "2025-12-23",
   "total": 915,
   "keywords": [
     "model stealing",
@@ -3323,7 +3323,7 @@
         "D. Rolnick",
         "Florian Tram\u00e8r"
       ],
-      "citation_count": 130,
+      "citation_count": 132,
       "url": "https://www.semanticscholar.org/paper/b232f468de0b1d4ff1c2dfe5dbb03ec093160c48",
       "pdf_url": "",
       "publication_date": "2024-03-11",
@@ -3343,7 +3343,7 @@
         "Robin Staab",
         "Martin T. Vechev"
       ],
-      "citation_count": 71,
+      "citation_count": 72,
       "url": "https://www.semanticscholar.org/paper/c7af46b35061e856aa3332ac2eec6a7ccee0cb35",
       "pdf_url": "",
       "publication_date": "2024-02-29",
@@ -3551,7 +3551,7 @@
         "J. You",
         "T. Cui"
       ],
-      "citation_count": 29,
+      "citation_count": 30,
       "url": "https://www.semanticscholar.org/paper/de70069726ba2b1608b91f9617098f4856d35ee6",
       "pdf_url": "https://doi.org/10.1126/sciadv.ado3937",
       "publication_date": "2024-07-19",
@@ -4703,6 +4703,26 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "0219db84513f4c2604ed15fce52c8f810b463ba5",
+      "title": "Can't Hide Behind the API: Stealing Black-Box Commercial Embedding Models",
+      "abstract": "Embedding models that generate dense vector representations of text are widely used and hold significant commercial value. Companies such as OpenAI and Cohere offer proprietary embedding models via paid APIs, but despite being\"hidden\"behind APIs, these models are not protected from theft. We present, to our knowledge, the first effort to\"steal\"these models for retrieval by training thief models on text-embedding pairs obtained from the APIs. Our experiments demonstrate that it is possible to replicate the retrieval effectiveness of commercial embedding models with a cost of under $300. Notably, our methods allow for distilling from multiple teachers into a single robust student model, and for distilling into presumably smaller models with fewer dimension vectors, yet competitive retrieval effectiveness. Our findings raise important considerations for deploying commercial embedding models and suggest measures to mitigate the risk of model theft.",
+      "year": 2024,
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "authors": [
+        "M. Tamber",
+        "Jasper Xian",
+        "Jimmy Lin"
+      ],
+      "citation_count": 5,
+      "url": "https://www.semanticscholar.org/paper/0219db84513f4c2604ed15fce52c8f810b463ba5",
+      "pdf_url": "",
+      "publication_date": "2024-06-13",
+      "keywords_matched": [
+        "model theft"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "94621729b6ca9e811d8a052dc3457e98df457676",
       "title": "Fully Exploiting Every Real Sample: SuperPixel Sample Gradient Model Stealing",
       "abstract": "Model stealing (MS) involves querying and observing the output of a machine learning model to steal its capabilities. The quality of queried data is crucial, yet obtaining a large amount of real data for MS is often challenging. Recent works have reduced reliance on real data by using generative models. However, when high-dimensional query data is required, these methods are impractical due to the high costs of querying and the risk of model collapse. In this work, we propose using sample gradients (SG) to enhance the utility of each real sample, as SG provides crucial guidance on the decision boundaries of the victim model. However, utilizing SG in the model stealing scenario faces two challenges: 1. Pixel-level gradient estimation requires ex-tensive query volume and is susceptible to defenses. 2. The estimation of sample gradients has a significant variance. This paper proposes Superpixel Sample Gradient stealing (SPSG) for model stealing under the constraint of limited real samples. With the basic idea of imitating the victim model's low-variance patch-level gradients instead ofpixel-level gradients, SPSG achieves efficient sample gradient es-timation through two steps. First, we perform patch-wise perturbations on query images to estimate the average gradient in different regions of the image. Then, we filter the gradients through a threshold strategy to reduce variance. Exhaustive experiments demonstrate that, with the same number of real samples, SPSG achieves accuracy, agreements, and adversarial success rate significantly surpassing the current state-of-the-art MS methods. Codes are available at https://github.com/zyI123456aBISPSG_attack.",
@@ -4743,26 +4763,6 @@
         "knockoff nets",
         "knockoff net",
         "stealing functionality"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "0219db84513f4c2604ed15fce52c8f810b463ba5",
-      "title": "Can't Hide Behind the API: Stealing Black-Box Commercial Embedding Models",
-      "abstract": "Embedding models that generate dense vector representations of text are widely used and hold significant commercial value. Companies such as OpenAI and Cohere offer proprietary embedding models via paid APIs, but despite being\"hidden\"behind APIs, these models are not protected from theft. We present, to our knowledge, the first effort to\"steal\"these models for retrieval by training thief models on text-embedding pairs obtained from the APIs. Our experiments demonstrate that it is possible to replicate the retrieval effectiveness of commercial embedding models with a cost of under $300. Notably, our methods allow for distilling from multiple teachers into a single robust student model, and for distilling into presumably smaller models with fewer dimension vectors, yet competitive retrieval effectiveness. Our findings raise important considerations for deploying commercial embedding models and suggest measures to mitigate the risk of model theft.",
-      "year": 2024,
-      "venue": "North American Chapter of the Association for Computational Linguistics",
-      "authors": [
-        "M. Tamber",
-        "Jasper Xian",
-        "Jimmy Lin"
-      ],
-      "citation_count": 4,
-      "url": "https://www.semanticscholar.org/paper/0219db84513f4c2604ed15fce52c8f810b463ba5",
-      "pdf_url": "",
-      "publication_date": "2024-06-13",
-      "keywords_matched": [
-        "model theft"
       ],
       "first_seen": "2025-11-28"
     },
@@ -7917,7 +7917,7 @@
       "authors": [
         "Zongjie Li"
       ],
-      "citation_count": 18,
+      "citation_count": 19,
       "url": "https://www.semanticscholar.org/paper/460e48454b209e957b4942303507bf756c4a6a31",
       "pdf_url": "",
       "publication_date": null,
@@ -12183,6 +12183,30 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "9efd7f888e7ca30c04eaf3fb53ab258782989fe3",
+      "title": "Security and Privacy Challenges for Intelligent Internet of Things Devices 2022 TADW: Traceable and Antidetection Dynamic Watermarking of Deep Neural Networks",
+      "abstract": "Deep neural networks (DNN) with incomparably advanced performance have been extensively applied in diverse fields (e.g., image recognition, natural language processing, and speech recognition). Training a high-performance DNN model requires a lot of training data and intellectual and computing resources, which bring a high cost to the model owners. Therefore, illegal model abuse (model theft, derivation, resale or redistribution, etc.) seriously infringes model owners\u2019 legitimate rights and interests. Watermarking is considered the main topic of DNN ownership protection. However, almost all existing watermarking works apply solely to image data. They do not trace the unique infringing model, and the adversary easily detects these ownership verification samples (trigger set) simultaneously. This paper introduces TADW, a dynamic watermarking scheme with tracking and antidetection abilities in the deep learning (DL) textual domain. Specifically, we propose a new approach to construct trigger set samples for antidetection and innovatively design a mapping algorithm that assigns a unique serial number (SN) to every watermarked model. Furthermore, we implement and detailedly evaluate TADW on 2 benchmark datasets and 3 popular DNNs. Experiment results show that TADW can successfully verify the ownership of the target model at a less than 0.5% accuracy cost and identify unique infringing models. In addition, TADW is excellently robust against different model modifications and can serve numerous users.",
+      "year": 2022,
+      "venue": "Security and Communication Networks",
+      "authors": [
+        "Jinwei Dong",
+        "He Wang",
+        "Zhipeng He",
+        "Jun Niu",
+        "Xiaoyan Zhu",
+        "Gaofei Wu"
+      ],
+      "citation_count": 5,
+      "url": "https://www.semanticscholar.org/paper/9efd7f888e7ca30c04eaf3fb53ab258782989fe3",
+      "pdf_url": "https://downloads.hindawi.com/journals/scn/2022/9505808.pdf",
+      "publication_date": "2022-06-16",
+      "keywords_matched": [
+        "model theft",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "f74980d18e194246618eca55faad7858fe57d08c",
       "title": "Leveraging Ferroelectric Stochasticity and In-Memory Computing for DNN IP Obfuscation",
       "abstract": "With the emergence of the Internet of Things (IoT), deep neural networks (DNNs) are widely used in different domains, such as computer vision, healthcare, social media, and defense. The hardware-level architecture of a DNN can be built using an in-memory computing-based design, which is loaded with the weights of a well-trained DNN model. However, such hardware-based DNN systems are vulnerable to model stealing attacks where an attacker reverse-engineers (REs) and extracts the weights of the DNN model. In this work, we propose an energy-efficient defense technique that combines a ferroelectric field effect transistor (FeFET)-based reconfigurable physically unclonable function (PUF) with an in-memory FeFET XNOR to thwart model stealing attacks. We leverage the inherent stochasticity in the FE domains to build a PUF that helps to corrupt the neural network\u2019s (NN) weights when an adversarial attack is detected. We showcase the efficacy of the proposed defense scheme by performing experiments on graph-NNs (GNNs), a particular type of DNN. The proposed defense scheme is a first of its kind that evaluates the security of GNNs. We investigate the effect of corrupting the weights on different layers of the GNN on the accuracy degradation of the graph classification application for two specific error models of corrupting the FeFET-based PUFs and five different bioinformatics datasets. We demonstrate that our approach successfully degrades the inference accuracy of the graph classification by corrupting any layer of the GNN after a small rewrite pulse.",
@@ -12276,30 +12300,6 @@
       "publication_date": "2022-08-06",
       "keywords_matched": [
         "side-channel attack (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "9efd7f888e7ca30c04eaf3fb53ab258782989fe3",
-      "title": "Security and Privacy Challenges for Intelligent Internet of Things Devices 2022 TADW: Traceable and Antidetection Dynamic Watermarking of Deep Neural Networks",
-      "abstract": "Deep neural networks (DNN) with incomparably advanced performance have been extensively applied in diverse fields (e.g., image recognition, natural language processing, and speech recognition). Training a high-performance DNN model requires a lot of training data and intellectual and computing resources, which bring a high cost to the model owners. Therefore, illegal model abuse (model theft, derivation, resale or redistribution, etc.) seriously infringes model owners\u2019 legitimate rights and interests. Watermarking is considered the main topic of DNN ownership protection. However, almost all existing watermarking works apply solely to image data. They do not trace the unique infringing model, and the adversary easily detects these ownership verification samples (trigger set) simultaneously. This paper introduces TADW, a dynamic watermarking scheme with tracking and antidetection abilities in the deep learning (DL) textual domain. Specifically, we propose a new approach to construct trigger set samples for antidetection and innovatively design a mapping algorithm that assigns a unique serial number (SN) to every watermarked model. Furthermore, we implement and detailedly evaluate TADW on 2 benchmark datasets and 3 popular DNNs. Experiment results show that TADW can successfully verify the ownership of the target model at a less than 0.5% accuracy cost and identify unique infringing models. In addition, TADW is excellently robust against different model modifications and can serve numerous users.",
-      "year": 2022,
-      "venue": "Security and Communication Networks",
-      "authors": [
-        "Jinwei Dong",
-        "He Wang",
-        "Zhipeng He",
-        "Jun Niu",
-        "Xiaoyan Zhu",
-        "Gaofei Wu"
-      ],
-      "citation_count": 4,
-      "url": "https://www.semanticscholar.org/paper/9efd7f888e7ca30c04eaf3fb53ab258782989fe3",
-      "pdf_url": "https://downloads.hindawi.com/journals/scn/2022/9505808.pdf",
-      "publication_date": "2022-06-16",
-      "keywords_matched": [
-        "model theft",
-        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -13069,7 +13069,7 @@
         "Nitin Rathi",
         "K. Roy"
       ],
-      "citation_count": 293,
+      "citation_count": 294,
       "url": "https://www.semanticscholar.org/paper/1921489a2801f053d0906079f0015ba6e68dd505",
       "pdf_url": "",
       "publication_date": "2021-10-01",
@@ -17363,7 +17363,7 @@
         "Alexey Kurakin",
         "Nicolas Papernot"
       ],
-      "citation_count": 420,
+      "citation_count": 421,
       "url": "https://www.semanticscholar.org/paper/52a222d38a8640499010d470d5589a81882bc425",
       "pdf_url": "",
       "publication_date": "2019-09-03",
@@ -19405,7 +19405,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1962,
+      "citation_count": 1963,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
