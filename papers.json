@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-24",
+  "updated": "2025-12-25",
   "total": 915,
   "keywords": [
     "model stealing",
@@ -4394,6 +4394,28 @@
       "first_seen": "2025-12-20"
     },
     {
+      "paper_id": "93dc2c281fbf4d1f8886a83f6793864528fd48f8",
+      "title": "GLiRA: Black-Box Membership Inference Attack via Knowledge Distillation",
+      "abstract": "While Deep Neural Networks (DNNs) have demonstrated remarkable performance in tasks related to perception and control, there are still several unresolved concerns regarding the privacy of their training data, particularly in the context of vulnerability to Membership Inference Attacks (MIAs). In this paper, we explore a connection between the susceptibility to membership inference attacks and the vulnerability to distillation-based functionality stealing attacks. In particular, we propose {GLiRA}, a distillation-guided approach to membership inference attack on the black-box neural network. We observe that the knowledge distillation significantly improves the efficiency of likelihood ratio of membership inference attack, especially in the black-box setting, i.e., when the architecture of the target model is unknown to the attacker. We evaluate the proposed method across multiple image classification datasets and models and demonstrate that likelihood ratio attacks when guided by the knowledge distillation, outperform the current state-of-the-art membership inference attacks in the black-box setting.",
+      "year": 2024,
+      "venue": "arXiv.org",
+      "authors": [
+        "Andrey V. Galichin",
+        "Mikhail Aleksandrovich Pautov",
+        "Alexey Zhavoronkin",
+        "Oleg Y. Rogov",
+        "Ivan V. Oseledets"
+      ],
+      "citation_count": 7,
+      "url": "https://www.semanticscholar.org/paper/93dc2c281fbf4d1f8886a83f6793864528fd48f8",
+      "pdf_url": "",
+      "publication_date": "2024-05-13",
+      "keywords_matched": [
+        "functionality stealing"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "74ed0e78bba8fda5a72d3db69593f4caeca82559",
       "title": "TPUXtract: An Exhaustive Hyperparameter Extraction Framework",
       "abstract": "Model stealing attacks on AI/ML devices undermine intellectual property rights, compromise the competitive advantage of the original model developers, and potentially expose sensitive data embedded in the model\u2019s behavior to unauthorized parties. While previous research works have demonstrated successful side-channelbased model recovery in embedded microcontrollers and FPGA-based accelerators, the exploration of attacks on commercial ML accelerators remains largely unexplored. Moreover, prior side-channel attacks fail when they encounter previously unknown models. This paper demonstrates the first successful model extraction attack on the Google Edge Tensor Processing Unit (TPU), an off-the-shelf ML accelerator. Specifically, we show a hyperparameter stealing attack that can extract all layer configurations including the layer type, number of nodes, kernel/filter sizes, number of filters, strides, padding, and activation function. Most notably, our attack is the first comprehensive attack that can extract previously unseen models. This is achieved through an online template-building approach instead of a pre-trained ML-based approach used in prior works. Our results on a black-box Google Edge TPU evaluation show that, through obtained electromagnetic traces, our proposed framework can achieve 99.91% accuracy, making it the most accurate one to date. Our findings indicate that attackers can successfully extract various types of models on a black-box commercial TPU with utmost detail and call for countermeasures.",
@@ -4437,28 +4459,6 @@
         "model extraction attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "93dc2c281fbf4d1f8886a83f6793864528fd48f8",
-      "title": "GLiRA: Black-Box Membership Inference Attack via Knowledge Distillation",
-      "abstract": "While Deep Neural Networks (DNNs) have demonstrated remarkable performance in tasks related to perception and control, there are still several unresolved concerns regarding the privacy of their training data, particularly in the context of vulnerability to Membership Inference Attacks (MIAs). In this paper, we explore a connection between the susceptibility to membership inference attacks and the vulnerability to distillation-based functionality stealing attacks. In particular, we propose {GLiRA}, a distillation-guided approach to membership inference attack on the black-box neural network. We observe that the knowledge distillation significantly improves the efficiency of likelihood ratio of membership inference attack, especially in the black-box setting, i.e., when the architecture of the target model is unknown to the attacker. We evaluate the proposed method across multiple image classification datasets and models and demonstrate that likelihood ratio attacks when guided by the knowledge distillation, outperform the current state-of-the-art membership inference attacks in the black-box setting.",
-      "year": 2024,
-      "venue": "arXiv.org",
-      "authors": [
-        "Andrey V. Galichin",
-        "Mikhail Aleksandrovich Pautov",
-        "Alexey Zhavoronkin",
-        "Oleg Y. Rogov",
-        "Ivan V. Oseledets"
-      ],
-      "citation_count": 6,
-      "url": "https://www.semanticscholar.org/paper/93dc2c281fbf4d1f8886a83f6793864528fd48f8",
-      "pdf_url": "",
-      "publication_date": "2024-05-13",
-      "keywords_matched": [
-        "functionality stealing"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "3e0bc402f7c0a34964223e87646fa3da0b6d947a",
@@ -8278,7 +8278,7 @@
         "Irwin King",
         "M. Lyu"
       ],
-      "citation_count": 12,
+      "citation_count": 13,
       "url": "https://www.semanticscholar.org/paper/14b4aff027ccf8fde0b19ac60b8e653c621aff30",
       "pdf_url": "",
       "publication_date": "2023-05-01",
@@ -12304,6 +12304,29 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "ea411e6f457f45d59a74d79853a8d65ff7afdf22",
+      "title": "Using Convolutional Neural Network to Redress Outliers in Clustering Based Side-Channel Analysis on Cryptosystem",
+      "abstract": null,
+      "year": 2022,
+      "venue": "International Conference on Smart Computing and Communication",
+      "authors": [
+        "Anzhou Wang",
+        "Shulin He",
+        "Congming Wei",
+        "Shaofei Sun",
+        "Yaoling Ding",
+        "Jiayao Wang"
+      ],
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/ea411e6f457f45d59a74d79853a8d65ff7afdf22",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "1761a6879ea8d5224aabe0e63424042dc3d901d8",
       "title": "Enhance Model Stealing Attack via Label Refining",
       "abstract": "With machine learning models being increasingly deployed, model stealing attacks have raised an increasing interest. Extracting decision-based models is a more challenging task with the information of class similarity missing. In this paper, we propose a novel and effective model stealing method as Label Refining via Feature Distance (LRFD), to re-dig the class similarity. Specifically, since the information of class similarity can be represented by the distance between samples from different classes in the feature space, we design a soft label construction module inspired by the prototype learning, and transfer the knowledge in the soft label to the substitution model. Extensive experiments conducted on four widely-used datasets consistently demonstrate that our method yields a model with significantly greater functional similarity to the victim model.",
@@ -12432,29 +12455,6 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "ea411e6f457f45d59a74d79853a8d65ff7afdf22",
-      "title": "Using Convolutional Neural Network to Redress Outliers in Clustering Based Side-Channel Analysis on Cryptosystem",
-      "abstract": null,
-      "year": 2022,
-      "venue": "International Conference on Smart Computing and Communication",
-      "authors": [
-        "Anzhou Wang",
-        "Shulin He",
-        "Congming Wei",
-        "Shaofei Sun",
-        "Yaoling Ding",
-        "Jiayao Wang"
-      ],
-      "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/ea411e6f457f45d59a74d79853a8d65ff7afdf22",
-      "pdf_url": "",
-      "publication_date": null,
-      "keywords_matched": [
-        "side-channel attack (title)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -18492,7 +18492,7 @@
         "Samuel Marchal",
         "N. Asokan"
       ],
-      "citation_count": 480,
+      "citation_count": 481,
       "url": "https://www.semanticscholar.org/paper/4582e2350e4822834dcf266522690722dd4430d4",
       "pdf_url": "https://ieeexplore.ieee.org/ielx7/8790377/8806708/08806737.pdf",
       "publication_date": "2018-05-07",
@@ -19239,7 +19239,7 @@
         "Carolyn Kim",
         "Hamsa Bastani"
       ],
-      "citation_count": 181,
+      "citation_count": 182,
       "url": "https://www.semanticscholar.org/paper/68564f11e79c19195d0e82854a0aa156d7764922",
       "pdf_url": "",
       "publication_date": "2017-05-23",
@@ -19405,7 +19405,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1963,
+      "citation_count": 1964,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
