@@ -533,6 +533,30 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "ef83ddc62cfc6a7caa37ea87a985eed7a9fede85",
+      "title": "Balancing Security and Efficiency in GAI-Driven Semantic Communication: Challenges, Solutions, and Future Paths",
+      "abstract": "The convergence of artificial intelligence (AI) and wireless communications has driven the emergence of semantic communication (SC), a paradigm that prioritizes context-aware semantic exchange over traditional bit-level transmission. Although enhancing efficiency and task-specific reliability, this advancing capability is accompanied by significant security challenges that remain underexplored. In this paper, we provide an overview of security challenges in SC systems, with a particular focus on the confidentiality, integrity, and availability of the wireless transmission and generative AI (GAI) models. To defend against risks of model confidentiality compromise and semantic feature leakage, we propose a solution integrating trusted execution environments (TEEs) for secure model inference and adversarial cryptography for the protection of semantics over realistic wireless channels. Test results show it achieves close-to-black-box attack resistance in model stealing effectiveness, and the BLEU scores of eavesdropping attackers are effectively reduced to below 0.1 across various SNR levels. Finally, we discuss potential open issues and solutions for enhancing the SC security, paving the way for future research in this critical area. The proposed framework demonstrates promising results in enhancing both model and data confidentiality, contributing to the development of secure SC systems for 6G networks.",
+      "year": 2025,
+      "venue": "IEEE Network",
+      "authors": [
+        "Qianyun Zhang",
+        "Jiting Shi",
+        "Weihao Zeng",
+        "Xinyu Xu",
+        "Zhenyu Guan",
+        "Shufeng Li",
+        "Zhijing Qin"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/ef83ddc62cfc6a7caa37ea87a985eed7a9fede85",
+      "pdf_url": "",
+      "publication_date": "2025-09-01",
+      "keywords_matched": [
+        "model stealing"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "b31459472aa34e8711fe845acaab9b7b4a74f1d8",
       "title": "Large Language Models Merging for Enhancing the Link Stealing Attack on Graph Neural Networks",
       "abstract": "Graph Neural Networks (GNNs), specifically designed to process the graph data, have achieved remarkable success in various applications. Link stealing attacks on graph data pose a significant privacy threat, as attackers aim to extract sensitive relationships between nodes (entities), potentially leading to academic misconduct, fraudulent transactions, or other malicious activities. Previous studies have primarily focused on single datasets and did not explore cross-dataset attacks, let alone attacks that leverage the combined knowledge of multiple attackers. However, we find that an attacker can combine the data knowledge of multiple attackers to create a more effective attack model, which can be referred to cross-dataset attacks. Moreover, if knowledge can be extracted with the help of Large Language Models (LLMs), the attack capability will be more significant. In this paper, we propose a novel link stealing attack method that takes advantage of cross-dataset and LLMs. The LLM is applied to process datasets with different data structures in cross-dataset attacks. Each attacker fine-tunes the LLM on their specific dataset to generate a tailored attack model. We then introduce a novel model merging method to integrate the parameters of these attacker-specific models effectively. The result is a merged attack model with superior generalization capabilities, enabling effective attacks not only on the attackers\u2019 datasets but also on previously unseen (out-of-domain) datasets. We conducted extensive experiments in four datasets to demonstrate the effectiveness of our method. Additional experiments with three different GNN and LLM architectures further illustrate the generality of our approach. In summary, we present a new link stealing attack method that facilitates collaboration among multiple attackers to develop a powerful, universal attack model that reflects realistic real-world scenarios.",
@@ -684,30 +708,6 @@
       "publication_date": null,
       "keywords_matched": [
         "cloning attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "ef83ddc62cfc6a7caa37ea87a985eed7a9fede85",
-      "title": "Balancing Security and Efficiency in GAI-Driven Semantic Communication: Challenges, Solutions, and Future Paths",
-      "abstract": "The convergence of artificial intelligence (AI) and wireless communications has driven the emergence of semantic communication (SC), a paradigm that prioritizes context-aware semantic exchange over traditional bit-level transmission. Although enhancing efficiency and task-specific reliability, this advancing capability is accompanied by significant security challenges that remain underexplored. In this paper, we provide an overview of security challenges in SC systems, with a particular focus on the confidentiality, integrity, and availability of the wireless transmission and generative AI (GAI) models. To defend against risks of model confidentiality compromise and semantic feature leakage, we propose a solution integrating trusted execution environments (TEEs) for secure model inference and adversarial cryptography for the protection of semantics over realistic wireless channels. Test results show it achieves close-to-black-box attack resistance in model stealing effectiveness, and the BLEU scores of eavesdropping attackers are effectively reduced to below 0.1 across various SNR levels. Finally, we discuss potential open issues and solutions for enhancing the SC security, paving the way for future research in this critical area. The proposed framework demonstrates promising results in enhancing both model and data confidentiality, contributing to the development of secure SC systems for 6G networks.",
-      "year": 2025,
-      "venue": "IEEE Network",
-      "authors": [
-        "Qianyun Zhang",
-        "Jiting Shi",
-        "Weihao Zeng",
-        "Xinyu Xu",
-        "Zhenyu Guan",
-        "Shufeng Li",
-        "Zhijing Qin"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/ef83ddc62cfc6a7caa37ea87a985eed7a9fede85",
-      "pdf_url": "",
-      "publication_date": "2025-09-01",
-      "keywords_matched": [
-        "model stealing"
       ],
       "first_seen": "2025-12-05"
     },
@@ -3241,7 +3241,7 @@
     {
       "paper_id": "e3f7a9b248785cac49c96a22ee4ba11d88235f9b",
       "title": "WGLE:Backdoor-free and Multi-bit Black-box Watermarking for Graph Neural Networks",
-      "abstract": "Graph Neural Networks (GNNs) are increasingly deployed in graph-related applications, making ownership verification critical to protect their intellectual property against model theft. Fingerprinting and black-box watermarking are two main methods. However, the former relies on determining model similarity, which is computationally expensive and prone to ownership collisions after model post-processing such as model pruning or fine-tuning. The latter embeds backdoors, exposing watermarked models to the risk of backdoor attacks. Moreover, both methods enable ownership verification but do not convey additional information. As a result, each distributed model requires a unique trigger graph, and all trigger graphs must be used to query the suspect model during verification. Multiple queries increase the financial cost and the risk of detection. To address these challenges, this paper proposes WGLE, a novel black-box watermarking paradigm for GNNs that enables embedding the multi-bit string as the ownership information without using backdoors. WGLE builds on a key insight we term Layer-wise Distance Difference on an Edge (LDDE), which quantifies the difference between the feature distance and the prediction distance of two connected nodes. By predefining positive or negative LDDE values for multiple selected edges, WGLE embeds the watermark encoding the intended information without introducing incorrect mappings that compromise the primary task. WGLE is evaluated on six public datasets and six mainstream GNN architectures along with state-of-the-art methods. The results show that WGLE achieves 100% ownership verification accuracy, an average fidelity degradation of 0.85%, comparable robustness against potential attacks, and low embedding overhead. The code is available in the repository.",
+      "abstract": "Graph Neural Networks (GNNs) are increasingly deployed in real-world applications, making ownership verification critical to protect their intellectual property against model theft. Fingerprinting and black-box watermarking are two main methods. However, the former relies on determining model similarity, which is computationally expensive and prone to ownership collisions after model post-processing. The latter embeds backdoors, exposing watermarked models to the risk of backdoor attacks. Moreover, both previous methods enable ownership verification but do not convey additional information about the copy model. If the owner has multiple models, each model requires a distinct trigger graph. To address these challenges, this paper proposes WGLE, a novel black-box watermarking paradigm for GNNs that enables embedding the multi-bit string in GNN models without using backdoors. WGLE builds on a key insight we term Layer-wise Distance Difference on an Edge (LDDE), which quantifies the difference between the feature distance and the prediction distance of two connected nodes in a graph. By assigning unique LDDE values to the edges and employing the LDDE sequence as the watermark, WGLE supports multi-bit capacity without relying on backdoor mechanisms. We evaluate WGLE on six public datasets across six mainstream GNN architectures, and compare WGLE with state-of-the-art GNN watermarking and fingerprinting methods. WGLE achieves 100% ownership verification accuracy, with an average fidelity degradation of only 1.41%. Additionally, WGLE exhibits robust resilience against potential attacks. The code is available in the repository.",
       "year": 2025,
       "venue": "arXiv.org",
       "authors": [
@@ -13492,7 +13492,7 @@
         "Li Chen",
         "Junhai Yong"
       ],
-      "citation_count": 57,
+      "citation_count": 58,
       "url": "https://www.semanticscholar.org/paper/5beafcd6c0222a2f45863058280873c1ef088ec4",
       "pdf_url": "https://arxiv.org/pdf/2009.00960",
       "publication_date": "2021-06-01",
@@ -17449,7 +17449,7 @@
         "Samuel Marchal",
         "N. Asokan"
       ],
-      "citation_count": 201,
+      "citation_count": 202,
       "url": "https://www.semanticscholar.org/paper/c40441bd48c08ab7db9443afdb3084387b06e61f",
       "pdf_url": "https://aaltodoc.aalto.fi/bitstreams/11ec7679-d118-4245-aad9-c8ff13a384e7/download",
       "publication_date": "2019-06-03",
