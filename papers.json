@@ -1,6 +1,6 @@
 {
-  "updated": "2025-12-27",
-  "total": 915,
+  "updated": "2025-12-28",
+  "total": 916,
   "keywords": [
     "model stealing",
     "model extraction",
@@ -131,7 +131,7 @@
         "Zhen Han",
         "Yufei Han"
       ],
-      "citation_count": 9,
+      "citation_count": 10,
       "url": "https://www.semanticscholar.org/paper/37ef78b60cb09e136e13df735fc58ade8348d671",
       "pdf_url": "",
       "publication_date": "2025-03-01",
@@ -4509,6 +4509,29 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "0beb8f26d688ce182cea25c361e0c3311b1afb69",
+      "title": "Inversion-Guided Defense: Detecting Model Stealing Attacks by Output Inverting",
+      "abstract": "Model stealing attacks involve creating copies of machine learning models that have similar functionalities to the original model without proper authorization. Such attacks raise significant concerns about the intellectual property of the machine learning models. Nonetheless, current defense mechanisms against such attacks tend to exhibit certain drawbacks, notably in terms of utility, and robustness. For example, watermarking-based defenses require victim models to be retrained for embedding watermarks, which can potentially impact the main task performance. Moreover, other defenses, especially fingerprinting-based methods, often rely on specific samples like adversarial examples to verify ownership of the target model. These approaches might prove less robust against adaptive attacks, such as model stealing with adversarial training. It remains unclear whether normal examples, as opposed to adversarial ones, can effectively reflect the characteristics of stolen models. To tackle these challenges, we propose a novel method that leverages a neural network as a decoder to inverse the suspicious model\u2019s outputs. Inspired by model inversion attacks, we argue that this decoding process will unveil hidden patterns inherent in the original outputs of the suspicious model. Drawing from these decoding outcomes, we calculate specific metrics to determine the legitimacy of the suspicious models. We validate the efficacy of our defense technique against diverse model stealing attacks, specifically within the domain of classification tasks based on deep neural networks.",
+      "year": 2024,
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "authors": [
+        "Shuai Zhou",
+        "Tianqing Zhu",
+        "Dayong Ye",
+        "Wanlei Zhou",
+        "Wei Zhao"
+      ],
+      "citation_count": 6,
+      "url": "https://www.semanticscholar.org/paper/0beb8f26d688ce182cea25c361e0c3311b1afb69",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "model stealing",
+        "model stealing attack"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "40d2bc169204b49a9cfa659b5398791ac5860caf",
       "title": "Unveiling the Secrets without Data: Can Graph Neural Networks Be Exploited through Data-Free Model Extraction Attacks?",
       "abstract": null,
@@ -4529,29 +4552,6 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "0beb8f26d688ce182cea25c361e0c3311b1afb69",
-      "title": "Inversion-Guided Defense: Detecting Model Stealing Attacks by Output Inverting",
-      "abstract": "Model stealing attacks involve creating copies of machine learning models that have similar functionalities to the original model without proper authorization. Such attacks raise significant concerns about the intellectual property of the machine learning models. Nonetheless, current defense mechanisms against such attacks tend to exhibit certain drawbacks, notably in terms of utility, and robustness. For example, watermarking-based defenses require victim models to be retrained for embedding watermarks, which can potentially impact the main task performance. Moreover, other defenses, especially fingerprinting-based methods, often rely on specific samples like adversarial examples to verify ownership of the target model. These approaches might prove less robust against adaptive attacks, such as model stealing with adversarial training. It remains unclear whether normal examples, as opposed to adversarial ones, can effectively reflect the characteristics of stolen models. To tackle these challenges, we propose a novel method that leverages a neural network as a decoder to inverse the suspicious model\u2019s outputs. Inspired by model inversion attacks, we argue that this decoding process will unveil hidden patterns inherent in the original outputs of the suspicious model. Drawing from these decoding outcomes, we calculate specific metrics to determine the legitimacy of the suspicious models. We validate the efficacy of our defense technique against diverse model stealing attacks, specifically within the domain of classification tasks based on deep neural networks.",
-      "year": 2024,
-      "venue": "IEEE Transactions on Information Forensics and Security",
-      "authors": [
-        "Shuai Zhou",
-        "Tianqing Zhu",
-        "Dayong Ye",
-        "Wanlei Zhou",
-        "Wei Zhao"
-      ],
-      "citation_count": 5,
-      "url": "https://www.semanticscholar.org/paper/0beb8f26d688ce182cea25c361e0c3311b1afb69",
-      "pdf_url": "",
-      "publication_date": null,
-      "keywords_matched": [
-        "model stealing",
-        "model stealing attack"
       ],
       "first_seen": "2025-11-28"
     },
@@ -7788,7 +7788,7 @@
         "Aneez Ahmed Jaheezuddin",
         "Jie Shi"
       ],
-      "citation_count": 22,
+      "citation_count": 23,
       "url": "https://www.semanticscholar.org/paper/06718e68bea215f2155bca2e08b70ad5d2aff62f",
       "pdf_url": "",
       "publication_date": "2023-07-10",
@@ -7874,7 +7874,7 @@
         "H. Pham",
         "Lin Tan"
       ],
-      "citation_count": 20,
+      "citation_count": 21,
       "url": "https://www.semanticscholar.org/paper/406d4e8d2df6f6b58e65016fea31004f781d93e7",
       "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/26150/25922",
       "publication_date": "2023-06-26",
@@ -8289,6 +8289,26 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "a3280f5d697c09946b371c8db82da514a4fa3d47",
+      "title": "Efficient Nonprofiled Side-Channel Attack Using Multi-Output Classification Neural Network",
+      "abstract": "Differential deep learning analysis (DDLA) is the first deep-learning-based nonprofiled side-channel attack (SCA) on embedded systems. However, DDLA requires many training processes to distinguish the correct key. In this letter, we introduce a nonprofiled SCA technique using multi-output classification to mitigate the aforementioned issue. Specifically, a multi-output multilayer perceptron and a multi-output convolutional neural network are introduced against various SCA protected schemes, such as masking, noise generation, and trace de-synchronization countermeasures. The experimental results on different power side channel datasets have clarified that our model performs the attack up to 9\u201330 times faster than DDLA in the case of masking and de-synchronization countermeasures, respectively. In addition, regarding combined masking and noise generation countermeasure, our proposed model achieves a higher success rate of at least 20% in the cases of the standard deviation equal to 1.0 and 1.5.",
+      "year": 2023,
+      "venue": "IEEE Embedded Systems Letters",
+      "authors": [
+        "Van-Phuc Hoang",
+        "Ngoc-Tuan Do",
+        "Van-Sang Doan"
+      ],
+      "citation_count": 13,
+      "url": "https://www.semanticscholar.org/paper/a3280f5d697c09946b371c8db82da514a4fa3d47",
+      "pdf_url": "",
+      "publication_date": "2023-09-01",
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "1d141cdb63254f935b084bfdab7d87d7b689ce97",
       "title": "BTI aging-based physical cloning attack on SRAM PUF and the countermeasure",
       "abstract": null,
@@ -8304,26 +8324,6 @@
       "publication_date": "2023-06-29",
       "keywords_matched": [
         "cloning attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "a3280f5d697c09946b371c8db82da514a4fa3d47",
-      "title": "Efficient Nonprofiled Side-Channel Attack Using Multi-Output Classification Neural Network",
-      "abstract": "Differential deep learning analysis (DDLA) is the first deep-learning-based nonprofiled side-channel attack (SCA) on embedded systems. However, DDLA requires many training processes to distinguish the correct key. In this letter, we introduce a nonprofiled SCA technique using multi-output classification to mitigate the aforementioned issue. Specifically, a multi-output multilayer perceptron and a multi-output convolutional neural network are introduced against various SCA protected schemes, such as masking, noise generation, and trace de-synchronization countermeasures. The experimental results on different power side channel datasets have clarified that our model performs the attack up to 9\u201330 times faster than DDLA in the case of masking and de-synchronization countermeasures, respectively. In addition, regarding combined masking and noise generation countermeasure, our proposed model achieves a higher success rate of at least 20% in the cases of the standard deviation equal to 1.0 and 1.5.",
-      "year": 2023,
-      "venue": "IEEE Embedded Systems Letters",
-      "authors": [
-        "Van-Phuc Hoang",
-        "Ngoc-Tuan Do",
-        "Van-Sang Doan"
-      ],
-      "citation_count": 12,
-      "url": "https://www.semanticscholar.org/paper/a3280f5d697c09946b371c8db82da514a4fa3d47",
-      "pdf_url": "",
-      "publication_date": "2023-09-01",
-      "keywords_matched": [
-        "side-channel attack (title)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -8488,6 +8488,29 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "4ae98576016b691dfda5a78d0a88d19e8ce15103",
+      "title": "Holistic Implicit Factor Evaluation of Model Extraction Attacks",
+      "abstract": "Model extraction attacks (MEAs) allow adversaries to replicate a surrogate model analogous to the target model's decision pattern. While several attacks and defenses have been studied in-depth, the underlying reasons behind our susceptibility to them often remain unclear. Analyzing these implication influence factors helps to promote secure deep learning (DL) systems, it requires studying extraction attacks in various scenarios to determine the success of different attacks and the hallmarks of DLs. However, understanding, implementing, and evaluating even a single attack requires extremely high technical effort, making it impractical to study the vast number of unique extraction attack scenarios. To this end, we present a first-of-its-kind holistic evaluation of implication factors for MEAs which relies on the attack process abstracted from state-of-the-art MEAs. Specifically, we concentrate on four perspectives. we consider the impact of the task accuracy, model architecture, and robustness of the target model on MEAs, as well as the impact of the model architecture of the surrogate model on MEAs. Our empirical evaluation includes an ablation study over sixteen model architectures and four image datasets. Surprisingly, our study shows that improving the robustness of the target model via adversarial training is more vulnerable to model extraction attacks.",
+      "year": 2023,
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "authors": [
+        "Anli Yan",
+        "Hongyang Yan",
+        "Li Hu",
+        "Xiaozhang Liu",
+        "Teng Huang"
+      ],
+      "citation_count": 10,
+      "url": "https://www.semanticscholar.org/paper/4ae98576016b691dfda5a78d0a88d19e8ce15103",
+      "pdf_url": "",
+      "publication_date": "2023-11-01",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "51e6982bb24b76d018d96432e032703e7ea35ef4",
       "title": "AUTOLYCUS: Exploiting Explainable AI (XAI) for Model Extraction Attacks against Decision Tree Models",
       "abstract": null,
@@ -8620,29 +8643,6 @@
         "side-channel attack (title)"
       ],
       "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "4ae98576016b691dfda5a78d0a88d19e8ce15103",
-      "title": "Holistic Implicit Factor Evaluation of Model Extraction Attacks",
-      "abstract": "Model extraction attacks (MEAs) allow adversaries to replicate a surrogate model analogous to the target model's decision pattern. While several attacks and defenses have been studied in-depth, the underlying reasons behind our susceptibility to them often remain unclear. Analyzing these implication influence factors helps to promote secure deep learning (DL) systems, it requires studying extraction attacks in various scenarios to determine the success of different attacks and the hallmarks of DLs. However, understanding, implementing, and evaluating even a single attack requires extremely high technical effort, making it impractical to study the vast number of unique extraction attack scenarios. To this end, we present a first-of-its-kind holistic evaluation of implication factors for MEAs which relies on the attack process abstracted from state-of-the-art MEAs. Specifically, we concentrate on four perspectives. we consider the impact of the task accuracy, model architecture, and robustness of the target model on MEAs, as well as the impact of the model architecture of the surrogate model on MEAs. Our empirical evaluation includes an ablation study over sixteen model architectures and four image datasets. Surprisingly, our study shows that improving the robustness of the target model via adversarial training is more vulnerable to model extraction attacks.",
-      "year": 2023,
-      "venue": "IEEE Transactions on Dependable and Secure Computing",
-      "authors": [
-        "Anli Yan",
-        "Hongyang Yan",
-        "Li Hu",
-        "Xiaozhang Liu",
-        "Teng Huang"
-      ],
-      "citation_count": 9,
-      "url": "https://www.semanticscholar.org/paper/4ae98576016b691dfda5a78d0a88d19e8ce15103",
-      "pdf_url": "",
-      "publication_date": "2023-11-01",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack"
-      ],
-      "first_seen": "2025-11-28"
     },
     {
       "paper_id": "8ffd3bb7b0b26b33fd6f317052214e6e84dec291",
@@ -9865,7 +9865,8 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack",
-        "model extraction defense"
+        "model extraction defense",
+        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -12327,6 +12328,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "46234fb6fcc8bb42dd46bf091e3cfad8da86993c",
+      "title": "Automatic Nonlinear Nonquasi-Static Diode Model Extraction from Large-Signal Measurements",
+      "abstract": "An automatic nonlinear nonquasi-static (NQS) model extraction method is proposed. The procedure is based on a NQS charge that depends on two quasi-static (QS) functions: electric charge and delay. The use of Nonlinear Function Sampling (NFS) operator leads to a crucial link between real and imaginary parts of the spectral coefficients of the QS state functions. This approach is used to build-in a CAD (Computer-Aided Design) model that takes into account these NQS effects for a diode. The excellent numerical results allow to be optimistic in the integration of extracted models into CAD tools looking for emulating diode experimental behaviour.",
+      "year": 2022,
+      "venue": "European Microwave Integrated Circuits Conference",
+      "authors": [
+        "A. Garc\u00eda-Luque",
+        "T. Mart\u00edn-Guerrero",
+        "A. Santarelli",
+        "C. Camacho-Pe\u00f1alosa"
+      ],
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/46234fb6fcc8bb42dd46bf091e3cfad8da86993c",
+      "pdf_url": "",
+      "publication_date": "2022-04-03",
+      "keywords_matched": [
+        "model extraction"
+      ],
+      "first_seen": "2025-12-28"
+    },
+    {
       "paper_id": "1761a6879ea8d5224aabe0e63424042dc3d901d8",
       "title": "Enhance Model Stealing Attack via Label Refining",
       "abstract": "With machine learning models being increasingly deployed, model stealing attacks have raised an increasing interest. Extracting decision-based models is a more challenging task with the information of class similarity missing. In this paper, we propose a novel and effective model stealing method as Label Refining via Feature Distance (LRFD), to re-dig the class similarity. Specifically, since the information of class similarity can be represented by the distance between samples from different classes in the feature space, we design a soft label construction module inspired by the prototype learning, and transfer the knowledge in the soft label to the substitution model. Extensive experiments conducted on four widely-used datasets consistently demonstrate that our method yields a model with significantly greater functional similarity to the victim model.",
@@ -13761,7 +13783,7 @@
         "Utsav Banerjee",
         "A. Chandrakasan"
       ],
-      "citation_count": 40,
+      "citation_count": 41,
       "url": "https://www.semanticscholar.org/paper/3b357acb6c807bc694372c773e507cdcef27d974",
       "pdf_url": "",
       "publication_date": "2021-02-23",
@@ -15890,7 +15912,7 @@
         "Shirui Pan",
         "Xingliang Yuan"
       ],
-      "citation_count": 65,
+      "citation_count": 66,
       "url": "https://www.semanticscholar.org/paper/7ea18b512074acc10d6a4025cb479955ba295f2d",
       "pdf_url": "",
       "publication_date": "2020-10-24",
