@@ -8940,6 +8940,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "18918a72fda197ea02671a13c49a95d6b95fc0f3",
+      "title": "AUTOLYCUS: Exploiting Explainable Artificial Intelligence (XAI) for Model Extraction Attacks against Interpretable Models",
+      "abstract": "Explainable Artificial Intelligence (XAI) aims to uncover the decision-making processes of AI models. However, the data used for such explanations can pose security and privacy risks. Existing literature identifies attacks on machine learning models, including membership inference, model inversion, and model extraction attacks. These attacks target either the model or the training data, depending on the settings and parties involved. XAI tools can increase the vulnerability of model extraction attacks, which is a concern when model owners prefer black-box access, thereby keeping model parameters and architecture private. To exploit this risk, we propose AUTOLYCUS, a novel retraining (learning) based model extraction attack framework against interpretable models under black-box settings. As XAI tools, we exploit Local Interpretable Model-Agnostic Explanations (LIME) and Shapley values (SHAP) to infer decision boundaries and create surrogate models that replicate the functionality of the target model. LIME and SHAP are mainly chosen for their realistic yet information-rich explanations, coupled with their extensive adoption, simplicity, and usability. We evaluate AUTOLYCUS on six machine learning datasets, measuring the accuracy and similarity of the surrogate model to the target model. The results show that AUTOLYCUS is highly effective, requiring significantly fewer queries compared to state-of-the-art attacks, while maintaining comparable accuracy and similarity. We validate its performance and transferability on multiple interpretable ML models, including decision trees, logistic regression, naive bayes, and k-nearest neighbor. Additionally, we show the resilience of AUTOLYCUS against proposed countermeasures.",
+      "year": 2023,
+      "venue": "Proceedings on Privacy Enhancing Technologies",
+      "authors": [
+        "Abdullah \u00c7aglar \u00d6ks\u00fcz",
+        "Anisa Halimi",
+        "Erman Ayday"
+      ],
+      "citation_count": 7,
+      "url": "https://www.semanticscholar.org/paper/18918a72fda197ea02671a13c49a95d6b95fc0f3",
+      "pdf_url": "",
+      "publication_date": "2023-02-04",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "23faead2015ba1e36a2c0c535f987c0b36ba8534",
       "title": "Data-Free Hard-Label Robustness Stealing Attack",
       "abstract": "The popularity of Machine Learning as a Service (MLaaS) has led to increased concerns about Model Stealing Attacks (MSA), which aim to craft a clone model by querying MLaaS. Currently, most research on MSA assumes that MLaaS can provide soft labels and that the attacker has a proxy dataset with a similar distribution. However, this fails to encapsulate the more practical scenario where only hard labels are returned by MLaaS and the data distribution remains elusive. Furthermore, most existing work focuses solely on stealing the model accuracy, neglecting the model robustness, while robustness is essential in security-sensitive scenarios, e.g, face-scan payment. Notably, improving model robustness often necessitates the use of expensive techniques such as adversarial training, thereby further making stealing robustness a more lucrative prospect. In response to these identified gaps, we introduce a novel Data-Free Hard-Label Robustness Stealing (DFHL-RS) attack in this paper, which enables the stealing of both model accuracy and robustness by simply querying hard labels of the target model without the help of any natural data. Comprehensive experiments demonstrate the effectiveness of our method. The clone model achieves a clean accuracy of 77.86% and a robust accuracy of 39.51% against AutoAttack, which are only 4.71% and 8.40% lower than the target model on the CIFAR-10 dataset, significantly exceeding the baselines. Our code is available at: https://github.com/LetheSec/DFHL-RS-Attack.",
@@ -8961,27 +8982,6 @@
         "model stealing",
         "model stealing attack",
         "clone model"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "18918a72fda197ea02671a13c49a95d6b95fc0f3",
-      "title": "AUTOLYCUS: Exploiting Explainable Artificial Intelligence (XAI) for Model Extraction Attacks against Interpretable Models",
-      "abstract": "Explainable Artificial Intelligence (XAI) aims to uncover the decision-making processes of AI models. However, the data used for such explanations can pose security and privacy risks. Existing literature identifies attacks on machine learning models, including membership inference, model inversion, and model extraction attacks. These attacks target either the model or the training data, depending on the settings and parties involved. XAI tools can increase the vulnerability of model extraction attacks, which is a concern when model owners prefer black-box access, thereby keeping model parameters and architecture private. To exploit this risk, we propose AUTOLYCUS, a novel retraining (learning) based model extraction attack framework against interpretable models under black-box settings. As XAI tools, we exploit Local Interpretable Model-Agnostic Explanations (LIME) and Shapley values (SHAP) to infer decision boundaries and create surrogate models that replicate the functionality of the target model. LIME and SHAP are mainly chosen for their realistic yet information-rich explanations, coupled with their extensive adoption, simplicity, and usability. We evaluate AUTOLYCUS on six machine learning datasets, measuring the accuracy and similarity of the surrogate model to the target model. The results show that AUTOLYCUS is highly effective, requiring significantly fewer queries compared to state-of-the-art attacks, while maintaining comparable accuracy and similarity. We validate its performance and transferability on multiple interpretable ML models, including decision trees, logistic regression, naive bayes, and k-nearest neighbor. Additionally, we show the resilience of AUTOLYCUS against proposed countermeasures.",
-      "year": 2023,
-      "venue": "Proceedings on Privacy Enhancing Technologies",
-      "authors": [
-        "Abdullah \u00c7aglar \u00d6ks\u00fcz",
-        "Anisa Halimi",
-        "Erman Ayday"
-      ],
-      "citation_count": 6,
-      "url": "https://www.semanticscholar.org/paper/18918a72fda197ea02671a13c49a95d6b95fc0f3",
-      "pdf_url": "",
-      "publication_date": "2023-02-04",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack"
       ],
       "first_seen": "2025-11-28"
     },
@@ -9865,8 +9865,7 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack",
-        "model extraction defense",
-        "(via citation)"
+        "model extraction defense"
       ],
       "first_seen": "2025-12-05"
     },
