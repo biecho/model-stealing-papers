@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-28",
+  "updated": "2025-12-29",
   "total": 916,
   "keywords": [
     "model stealing",
@@ -3551,7 +3551,7 @@
         "J. You",
         "T. Cui"
       ],
-      "citation_count": 30,
+      "citation_count": 31,
       "url": "https://www.semanticscholar.org/paper/de70069726ba2b1608b91f9617098f4856d35ee6",
       "pdf_url": "https://doi.org/10.1126/sciadv.ado3937",
       "publication_date": "2024-07-19",
@@ -7764,7 +7764,7 @@
         "Changjiang Li",
         "Ting Wang"
       ],
-      "citation_count": 23,
+      "citation_count": 24,
       "url": "https://www.semanticscholar.org/paper/1b0e8f3727f452d8ef13950ae61c631be8956306",
       "pdf_url": "https://arxiv.org/pdf/2312.05386",
       "publication_date": "2023-12-08",
@@ -9865,7 +9865,8 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack",
-        "model extraction defense"
+        "model extraction defense",
+        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
