@@ -1,6 +1,6 @@
 {
-  "updated": "2025-12-30",
-  "total": 916,
+  "updated": "2025-12-31",
+  "total": 917,
   "keywords": [
     "model stealing",
     "model extraction",
@@ -366,6 +366,30 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "ef83ddc62cfc6a7caa37ea87a985eed7a9fede85",
+      "title": "Balancing Security and Efficiency in GAI-Driven Semantic Communication: Challenges, Solutions, and Future Paths",
+      "abstract": "The convergence of artificial intelligence (AI) and wireless communications has driven the emergence of semantic communication (SC), a paradigm that prioritizes context-aware semantic exchange over traditional bit-level transmission. Although enhancing efficiency and task-specific reliability, this advancing capability is accompanied by significant security challenges that remain underexplored. In this paper, we provide an overview of security challenges in SC systems, with a particular focus on the confidentiality, integrity, and availability of the wireless transmission and generative AI (GAI) models. To defend against risks of model confidentiality compromise and semantic feature leakage, we propose a solution integrating trusted execution environments (TEEs) for secure model inference and adversarial cryptography for the protection of semantics over realistic wireless channels. Test results show it achieves close-to-black-box attack resistance in model stealing effectiveness, and the BLEU scores of eavesdropping attackers are effectively reduced to below 0.1 across various SNR levels. Finally, we discuss potential open issues and solutions for enhancing the SC security, paving the way for future research in this critical area. The proposed framework demonstrates promising results in enhancing both model and data confidentiality, contributing to the development of secure SC systems for 6G networks.",
+      "year": 2025,
+      "venue": "IEEE Network",
+      "authors": [
+        "Qianyun Zhang",
+        "Jiting Shi",
+        "Weihao Zeng",
+        "Xinyu Xu",
+        "Zhenyu Guan",
+        "Shufeng Li",
+        "Zhijing Qin"
+      ],
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/ef83ddc62cfc6a7caa37ea87a985eed7a9fede85",
+      "pdf_url": "",
+      "publication_date": "2025-09-01",
+      "keywords_matched": [
+        "model stealing"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "dd37ddad0b07a5f9e38c117f0fb876735062211d",
       "title": "Be Cautious When Merging Unfamiliar LLMs: A Phishing Model Capable of Stealing Privacy",
       "abstract": "Model merging is a widespread technology in large language models (LLMs) that integrates multiple task-specific LLMs into a unified one, enabling the merged model to inherit the specialized capabilities of these LLMs. Most task-specific LLMs are sourced from open-source communities and have not undergone rigorous auditing, potentially imposing risks in model merging. This paper highlights an overlooked privacy risk: \\textit{an unsafe model could compromise the privacy of other LLMs involved in the model merging.} Specifically, we propose PhiMM, a privacy attack approach that trains a phishing model capable of stealing privacy using a crafted privacy phishing instruction dataset. Furthermore, we introduce a novel model cloaking method that mimics a specialized capability to conceal attack intent, luring users into merging the phishing model. Once victims merge the phishing model, the attacker can extract personally identifiable information (PII) or infer membership information (MI) by querying the merged model with the phishing instruction. Experimental results show that merging a phishing model increases the risk of privacy breaches. Compared to the results before merging, PII leakage increased by 3.9\\% and MI leakage increased by 17.4\\% on average. We release the code of PhiMM through a link.",
@@ -529,30 +553,6 @@
         "model theft",
         "model stealing attack",
         "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "ef83ddc62cfc6a7caa37ea87a985eed7a9fede85",
-      "title": "Balancing Security and Efficiency in GAI-Driven Semantic Communication: Challenges, Solutions, and Future Paths",
-      "abstract": "The convergence of artificial intelligence (AI) and wireless communications has driven the emergence of semantic communication (SC), a paradigm that prioritizes context-aware semantic exchange over traditional bit-level transmission. Although enhancing efficiency and task-specific reliability, this advancing capability is accompanied by significant security challenges that remain underexplored. In this paper, we provide an overview of security challenges in SC systems, with a particular focus on the confidentiality, integrity, and availability of the wireless transmission and generative AI (GAI) models. To defend against risks of model confidentiality compromise and semantic feature leakage, we propose a solution integrating trusted execution environments (TEEs) for secure model inference and adversarial cryptography for the protection of semantics over realistic wireless channels. Test results show it achieves close-to-black-box attack resistance in model stealing effectiveness, and the BLEU scores of eavesdropping attackers are effectively reduced to below 0.1 across various SNR levels. Finally, we discuss potential open issues and solutions for enhancing the SC security, paving the way for future research in this critical area. The proposed framework demonstrates promising results in enhancing both model and data confidentiality, contributing to the development of secure SC systems for 6G networks.",
-      "year": 2025,
-      "venue": "IEEE Network",
-      "authors": [
-        "Qianyun Zhang",
-        "Jiting Shi",
-        "Weihao Zeng",
-        "Xinyu Xu",
-        "Zhenyu Guan",
-        "Shufeng Li",
-        "Zhijing Qin"
-      ],
-      "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/ef83ddc62cfc6a7caa37ea87a985eed7a9fede85",
-      "pdf_url": "",
-      "publication_date": "2025-09-01",
-      "keywords_matched": [
-        "model stealing"
       ],
       "first_seen": "2025-12-05"
     },
@@ -2239,7 +2239,7 @@
       "venue": "Journal of imaging informatics in medicine",
       "authors": [
         "Mohammed M. Kanani",
-        "Arezu H Monawer",
+        "Arezu Monawer",
         "Lauryn Brown",
         "William E King",
         "Zachary D Miller",
@@ -3301,6 +3301,28 @@
         "(via citation)"
       ],
       "first_seen": "2025-12-20"
+    },
+    {
+      "paper_id": "ad8a3f00e1b77aa19a71a7a166ee6ae533e7e3bc",
+      "title": "Multi-Agent Framework for Threat Mitigation and Resilience in AI-Based Systems",
+      "abstract": "Machine learning (ML) underpins foundation models in finance, healthcare, and critical infrastructure, making them targets for data poisoning, model extraction, prompt injection, automated jailbreaking, and preference-guided black-box attacks that exploit model comparisons. Larger models can be more vulnerable to introspection-driven jailbreaks and cross-modal manipulation. Traditional cybersecurity lacks ML-specific threat modeling for foundation, multimodal, and RAG systems. Objective: Characterize ML security risks by identifying dominant TTPs, vulnerabilities, and targeted lifecycle stages. Methods: We extract 93 threats from MITRE ATLAS (26), AI Incident Database (12), and literature (55), and analyze 854 GitHub/Python repositories. A multi-agent RAG system (ChatGPT-4o, temp 0.4) mines 300+ articles to build an ontology-driven threat graph linking TTPs, vulnerabilities, and stages. Results: We identify unreported threats including commercial LLM API model stealing, parameter memorization leakage, and preference-guided text-only jailbreaks. Dominant TTPs include MASTERKEY-style jailbreaking, federated poisoning, diffusion backdoors, and preference optimization leakage, mainly impacting pre-training and inference. Graph analysis reveals dense vulnerability clusters in libraries with poor patch propagation. Conclusion: Adaptive, ML-specific security frameworks, combining dependency hygiene, threat intelligence, and monitoring, are essential to mitigate supply-chain and inference risks across the ML lifecycle.",
+      "year": 2025,
+      "venue": "",
+      "authors": [
+        "A. Foundjem",
+        "L. Tidjon",
+        "Leuson Da Silva",
+        "Foutse Khomh"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/ad8a3f00e1b77aa19a71a7a166ee6ae533e7e3bc",
+      "pdf_url": "",
+      "publication_date": "2025-12-29",
+      "keywords_matched": [
+        "model stealing",
+        "model extraction"
+      ],
+      "first_seen": "2025-12-31"
     },
     {
       "paper_id": "b232f468de0b1d4ff1c2dfe5dbb03ec093160c48",
@@ -7584,7 +7606,7 @@
         "Fan Yang",
         "Li Liu"
       ],
-      "citation_count": 34,
+      "citation_count": 35,
       "url": "https://www.semanticscholar.org/paper/143edab286a463b6549978834be58f6037b14df4",
       "pdf_url": "",
       "publication_date": "2023-02-01",
@@ -7832,7 +7854,7 @@
         "Defu Lian",
         "Enhong Chen"
       ],
-      "citation_count": 21,
+      "citation_count": 22,
       "url": "https://www.semanticscholar.org/paper/fefdabd7bd1c0007c0ef7db5faa6486f28166c32",
       "pdf_url": "",
       "publication_date": "2023-04-30",
@@ -7989,6 +8011,26 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "68fdfe66da9e843882e8dd44e8b15a39ef539015",
+      "title": "Nonlinear responses in a neural network under spatial electromagnetic radiation",
+      "abstract": null,
+      "year": 2023,
+      "venue": "Physica A: Statistical Mechanics and its Applications",
+      "authors": [
+        "Yitong Guo",
+        "Ying Xie",
+        "Jun Ma"
+      ],
+      "citation_count": 17,
+      "url": "https://www.semanticscholar.org/paper/68fdfe66da9e843882e8dd44e8b15a39ef539015",
+      "pdf_url": "",
+      "publication_date": "2023-08-01",
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "b40276ce0e3fec1c9ad8bb95e8358e083a925a20",
       "title": "Last One Standing: A Comparative Analysis of Security and Privacy of Soft Prompt Tuning, LoRA, and In-Context Learning",
       "abstract": "Large Language Models (LLMs) are powerful tools for natural language processing, enabling novel applications and user experiences. However, to achieve optimal performance, LLMs often require adaptation with private data, which poses privacy and security challenges. Several techniques have been proposed to adapt LLMs with private data, such as Low-Rank Adaptation (LoRA), Soft Prompt Tuning (SPT), and In-Context Learning (ICL), but their comparative privacy and security properties have not been systematically investigated. In this work, we fill this gap by evaluating the robustness of LoRA, SPT, and ICL against three types of well-established attacks: membership inference, which exposes data leakage (privacy); backdoor, which injects malicious behavior (security); and model stealing, which can violate intellectual property (privacy and security). Our results show that there is no silver bullet for privacy and security in LLM adaptation and each technique has different strengths and weaknesses.",
@@ -8007,26 +8049,6 @@
       "publication_date": "2023-10-17",
       "keywords_matched": [
         "model stealing"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "68fdfe66da9e843882e8dd44e8b15a39ef539015",
-      "title": "Nonlinear responses in a neural network under spatial electromagnetic radiation",
-      "abstract": null,
-      "year": 2023,
-      "venue": "Physica A: Statistical Mechanics and its Applications",
-      "authors": [
-        "Yitong Guo",
-        "Ying Xie",
-        "Jun Ma"
-      ],
-      "citation_count": 16,
-      "url": "https://www.semanticscholar.org/paper/68fdfe66da9e843882e8dd44e8b15a39ef539015",
-      "pdf_url": "",
-      "publication_date": "2023-08-01",
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -9865,8 +9887,7 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack",
-        "model extraction defense",
-        "(via citation)"
+        "model extraction defense"
       ],
       "first_seen": "2025-12-05"
     },
@@ -11100,7 +11121,7 @@
         "Wei Lu",
         "Xiaozhong Liu"
       ],
-      "citation_count": 50,
+      "citation_count": 51,
       "url": "https://www.semanticscholar.org/paper/d03f4ca6facd18b30ab4c6034350d430bca0bc33",
       "pdf_url": "",
       "publication_date": "2022-09-14",
@@ -11308,7 +11329,7 @@
         "Jialie Shen",
         "Xinhua Wang"
       ],
-      "citation_count": 30,
+      "citation_count": 31,
       "url": "https://www.semanticscholar.org/paper/a471ef4fae2c4748eac0c13c4b434e7f701c3252",
       "pdf_url": "",
       "publication_date": "2022-09-03",
@@ -11919,6 +11940,25 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "db83dc37159c92e689bc246000e51b54c666eb04",
+      "title": "A novel defense mechanism to protect users from profile cloning attack on Online Social Networks (OSNs)",
+      "abstract": null,
+      "year": 2022,
+      "venue": "Peer-to-Peer Networking and Applications",
+      "authors": [
+        "Gordhan Jethava",
+        "U. P. Rao"
+      ],
+      "citation_count": 9,
+      "url": "https://www.semanticscholar.org/paper/db83dc37159c92e689bc246000e51b54c666eb04",
+      "pdf_url": "",
+      "publication_date": "2022-07-05",
+      "keywords_matched": [
+        "cloning attack"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "dba696ce4856d7fad6a51847a8997145050eb9c3",
       "title": "GAME: Generative-Based Adaptive Model Extraction Attack",
       "abstract": null,
@@ -11963,25 +12003,6 @@
         "model extraction attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "db83dc37159c92e689bc246000e51b54c666eb04",
-      "title": "A novel defense mechanism to protect users from profile cloning attack on Online Social Networks (OSNs)",
-      "abstract": null,
-      "year": 2022,
-      "venue": "Peer-to-Peer Networking and Applications",
-      "authors": [
-        "Gordhan Jethava",
-        "U. P. Rao"
-      ],
-      "citation_count": 8,
-      "url": "https://www.semanticscholar.org/paper/db83dc37159c92e689bc246000e51b54c666eb04",
-      "pdf_url": "",
-      "publication_date": "2022-07-05",
-      "keywords_matched": [
-        "cloning attack"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "95e2bfb5e01dc7cd666d59247c8849171aaf4e12",
@@ -13267,7 +13288,7 @@
         "Alptekin K\u00fcp\u00e7\u00fc",
         "A. E. Cicek"
       ],
-      "citation_count": 100,
+      "citation_count": 101,
       "url": "https://www.semanticscholar.org/paper/45ea6495958f04c1f02de1741c952dac1154d4f4",
       "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3559613.3563201",
       "publication_date": "2021-08-20",
@@ -13402,7 +13423,7 @@
         "Bo Li",
         "D. Song"
       ],
-      "citation_count": 77,
+      "citation_count": 78,
       "url": "https://www.semanticscholar.org/paper/c3111e374ad14357172ef63e7063e0182f8030d4",
       "pdf_url": "https://arxiv.org/pdf/2112.05588",
       "publication_date": "2021-12-10",
@@ -13514,7 +13535,7 @@
         "Li Chen",
         "Junhai Yong"
       ],
-      "citation_count": 58,
+      "citation_count": 59,
       "url": "https://www.semanticscholar.org/paper/5beafcd6c0222a2f45863058280873c1ef088ec4",
       "pdf_url": "https://arxiv.org/pdf/2009.00960",
       "publication_date": "2021-06-01",
@@ -13653,7 +13674,7 @@
         "An-bang Li",
         "Ya Jia"
       ],
-      "citation_count": 46,
+      "citation_count": 47,
       "url": "https://www.semanticscholar.org/paper/4e64a5baf6be16007e4d6e9c4098dd6ff62680e4",
       "pdf_url": "https://www.researchsquare.com/article/rs-895256/latest.pdf",
       "publication_date": "2021-09-17",
@@ -13978,7 +13999,7 @@
         "F. Fran\u00e7a",
         "S. Kundu"
       ],
-      "citation_count": 31,
+      "citation_count": 32,
       "url": "https://www.semanticscholar.org/paper/c6d4602482ca710f01d4a07e8d6638b8af59f856",
       "pdf_url": "",
       "publication_date": "2021-06-01",
@@ -14426,6 +14447,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "0e7081f0f76faabda1f9c6497fc9a83b1c051c71",
+      "title": "Ownership Verification of DNN Architectures via Hardware Cache Side Channels",
+      "abstract": "Deep Neural Networks (DNN) are gaining higher commercial values in computer vision applications, e.g., image classification, video analytics, etc. This calls for urgent demands of the intellectual property (IP) protection of DNN models. In this paper, we present a novel watermarking scheme to achieve the ownership verification of DNN architectures. Existing works all embedded watermarks into the model parameters while treating the architecture as public property. These solutions were proven to be vulnerable by an adversary to detect or remove the watermarks. In contrast, we claim the model architectures as an important IP for model owners, and propose to implant watermarks into the architectures. We design new algorithms based on Neural Architecture Search (NAS) to generate watermarked architectures, which are unique enough to represent the ownership, while maintaining high model usability. Such watermarks can be extracted via side-channel-based model extraction techniques with high fidelity. We conduct comprehensive experiments on watermarked CNN models for image classification tasks and the experimental results show our scheme has negligible impact on the model performance, and exhibits strong robustness against various model transformations and adaptive attacks.",
+      "year": 2021,
+      "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+      "authors": [
+        "Xiaoxuan Lou",
+        "Shangwei Guo",
+        "Jiwei Li",
+        "Tianwei Zhang"
+      ],
+      "citation_count": 13,
+      "url": "https://www.semanticscholar.org/paper/0e7081f0f76faabda1f9c6497fc9a83b1c051c71",
+      "pdf_url": "https://dr.ntu.edu.sg/bitstream/10356/159773/2/main.pdf",
+      "publication_date": "2021-02-06",
+      "keywords_matched": [
+        "model extraction"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "c09eaf8e58fabd2371294b26a37376be960546a2",
       "title": "Good Artists Copy, Great Artists Steal: Model Extraction Attacks Against Image Translation Generative Adversarial Networks",
       "abstract": null,
@@ -14444,27 +14486,6 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "0e7081f0f76faabda1f9c6497fc9a83b1c051c71",
-      "title": "Ownership Verification of DNN Architectures via Hardware Cache Side Channels",
-      "abstract": "Deep Neural Networks (DNN) are gaining higher commercial values in computer vision applications, e.g., image classification, video analytics, etc. This calls for urgent demands of the intellectual property (IP) protection of DNN models. In this paper, we present a novel watermarking scheme to achieve the ownership verification of DNN architectures. Existing works all embedded watermarks into the model parameters while treating the architecture as public property. These solutions were proven to be vulnerable by an adversary to detect or remove the watermarks. In contrast, we claim the model architectures as an important IP for model owners, and propose to implant watermarks into the architectures. We design new algorithms based on Neural Architecture Search (NAS) to generate watermarked architectures, which are unique enough to represent the ownership, while maintaining high model usability. Such watermarks can be extracted via side-channel-based model extraction techniques with high fidelity. We conduct comprehensive experiments on watermarked CNN models for image classification tasks and the experimental results show our scheme has negligible impact on the model performance, and exhibits strong robustness against various model transformations and adaptive attacks.",
-      "year": 2021,
-      "venue": "IEEE transactions on circuits and systems for video technology (Print)",
-      "authors": [
-        "Xiaoxuan Lou",
-        "Shangwei Guo",
-        "Jiwei Li",
-        "Tianwei Zhang"
-      ],
-      "citation_count": 12,
-      "url": "https://www.semanticscholar.org/paper/0e7081f0f76faabda1f9c6497fc9a83b1c051c71",
-      "pdf_url": "https://dr.ntu.edu.sg/bitstream/10356/159773/2/main.pdf",
-      "publication_date": "2021-02-06",
-      "keywords_matched": [
-        "model extraction"
       ],
       "first_seen": "2025-11-28"
     },
@@ -15516,7 +15537,7 @@
         "Christopher A. Choquette-Choo",
         "Nicolas Papernot"
       ],
-      "citation_count": 260,
+      "citation_count": 261,
       "url": "https://www.semanticscholar.org/paper/abbb0fd559ade70265f4f528df094fbbd8ae2040",
       "pdf_url": "",
       "publication_date": "2020-02-27",
@@ -15699,7 +15720,7 @@
         "Yushu Zhang",
         "Weiqiang Liu"
       ],
-      "citation_count": 140,
+      "citation_count": 141,
       "url": "https://www.semanticscholar.org/paper/3136dd4036331b4559b341560712942ca2e765e3",
       "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09064510.pdf",
       "publication_date": "2020-04-13",
@@ -17385,7 +17406,7 @@
         "Alexey Kurakin",
         "Nicolas Papernot"
       ],
-      "citation_count": 422,
+      "citation_count": 423,
       "url": "https://www.semanticscholar.org/paper/52a222d38a8640499010d470d5589a81882bc425",
       "pdf_url": "",
       "publication_date": "2019-09-03",
@@ -17407,7 +17428,7 @@
         "Tianwei Zhang",
         "R. Lee"
       ],
-      "citation_count": 352,
+      "citation_count": 353,
       "url": "https://www.semanticscholar.org/paper/2cb1f4688f8ba457b4fa2ed36deae5a98f4249ca",
       "pdf_url": "",
       "publication_date": "2019-12-09",
@@ -17471,7 +17492,7 @@
         "Samuel Marchal",
         "N. Asokan"
       ],
-      "citation_count": 202,
+      "citation_count": 203,
       "url": "https://www.semanticscholar.org/paper/c40441bd48c08ab7db9443afdb3084387b06e61f",
       "pdf_url": "https://aaltodoc.aalto.fi/bitstreams/11ec7679-d118-4245-aad9-c8ff13a384e7/download",
       "publication_date": "2019-06-03",
@@ -18489,7 +18510,7 @@
         "B. Schiele",
         "Mario Fritz"
       ],
-      "citation_count": 594,
+      "citation_count": 595,
       "url": "https://www.semanticscholar.org/paper/089c6224cfbcf5c18b63564eb65001c7c42a7acf",
       "pdf_url": "http://arxiv.org/pdf/1812.02766",
       "publication_date": "2018-12-06",
@@ -19427,7 +19448,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1964,
+      "citation_count": 1965,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
