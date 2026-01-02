@@ -1,6 +1,6 @@
 {
-  "updated": "2026-01-01",
-  "total": 917,
+  "updated": "2026-01-02",
+  "total": 918,
   "keywords": [
     "model stealing",
     "model extraction",
@@ -3325,6 +3325,28 @@
       "first_seen": "2025-12-31"
     },
     {
+      "paper_id": "6a4dab913871b24c71bb3e66db20babe2a68880f",
+      "title": "DivQAT: Enhancing Robustness of Quantized Convolutional Neural Networks against Model Extraction Attacks",
+      "abstract": "Convolutional Neural Networks (CNNs) and their quantized counterparts are vulnerable to extraction attacks, posing a significant threat of IP theft. Yet, the robustness of quantized models against these attacks is little studied compared to large models. Previous defenses propose to inject calculated noise into the prediction probabilities. However, these defenses are limited since they are not incorporated during the model design and are only added as an afterthought after training. Additionally, most defense techniques are computationally expensive and often have unrealistic assumptions about the victim model that are not feasible in edge device implementations and do not apply to quantized models. In this paper, we propose DivQAT, a novel algorithm to train quantized CNNs based on Quantization Aware Training (QAT) aiming to enhance their robustness against extraction attacks. To the best of our knowledge, our technique is the first to modify the quantization process to integrate a model extraction defense into the training process. Through empirical validation on benchmark vision datasets, we demonstrate the efficacy of our technique in defending against model extraction attacks without compromising model accuracy. Furthermore, combining our quantization technique with other defense mechanisms improves their effectiveness compared to traditional QAT.",
+      "year": 2025,
+      "venue": "",
+      "authors": [
+        "Kacem Khaled",
+        "F. Magalh\u00e3es",
+        "G. Nicolescu"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/6a4dab913871b24c71bb3e66db20babe2a68880f",
+      "pdf_url": "",
+      "publication_date": "2025-12-30",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "model extraction defense"
+      ],
+      "first_seen": "2026-01-02"
+    },
+    {
       "paper_id": "b232f468de0b1d4ff1c2dfe5dbb03ec093160c48",
       "title": "Stealing Part of a Production Language Model",
       "abstract": "We introduce the first model-stealing attack that extracts precise, nontrivial information from black-box production language models like OpenAI's ChatGPT or Google's PaLM-2. Specifically, our attack recovers the embedding projection layer (up to symmetries) of a transformer model, given typical API access. For under \\$20 USD, our attack extracts the entire projection matrix of OpenAI's Ada and Babbage language models. We thereby confirm, for the first time, that these black-box models have a hidden dimension of 1024 and 2048, respectively. We also recover the exact hidden dimension size of the gpt-3.5-turbo model, and estimate it would cost under $2,000 in queries to recover the entire projection matrix. We conclude with potential defenses and mitigations, and discuss the implications of possible future work that could extend our attack.",
@@ -3640,7 +3662,7 @@
         "Chaofan Yu",
         "Lei Wang"
       ],
-      "citation_count": 22,
+      "citation_count": 23,
       "url": "https://www.semanticscholar.org/paper/f39d1a38b1b9513d6d50ceb8c4663a97deafd632",
       "pdf_url": "",
       "publication_date": "2024-01-18",
@@ -3779,7 +3801,7 @@
         "Xing Hu",
         "Qi Guo"
       ],
-      "citation_count": 15,
+      "citation_count": 16,
       "url": "https://www.semanticscholar.org/paper/5201913bb3b941e0d42606969da5c1f927aeb48b",
       "pdf_url": "",
       "publication_date": "2024-11-27",
@@ -4192,7 +4214,7 @@
         "Debarshi Kundu",
         "Swaroop Ghosh"
       ],
-      "citation_count": 8,
+      "citation_count": 9,
       "url": "https://www.semanticscholar.org/paper/8f0679e01cb36c995fc5fbc9d364160bd72ce8cd",
       "pdf_url": "https://arxiv.org/pdf/2402.11687",
       "publication_date": "2024-02-18",
@@ -4217,7 +4239,7 @@
         "Gang Huang",
         "Fan Chen"
       ],
-      "citation_count": 8,
+      "citation_count": 9,
       "url": "https://www.semanticscholar.org/paper/f3892c3b89b4b6fca4465308fcc9a99388eb019b",
       "pdf_url": "http://arxiv.org/pdf/2403.10790",
       "publication_date": "2024-03-16",
@@ -7763,7 +7785,7 @@
         "Anmin Fu",
         "Surya Nepal"
       ],
-      "citation_count": 24,
+      "citation_count": 25,
       "url": "https://www.semanticscholar.org/paper/afbc7f9d4a4dcf0cf02ab3efd043904b361fa886",
       "pdf_url": "https://arxiv.org/pdf/2309.11894",
       "publication_date": "2023-09-21",
@@ -8340,7 +8362,7 @@
         "Shengyu Duan",
         "G. Sai"
       ],
-      "citation_count": 12,
+      "citation_count": 13,
       "url": "https://www.semanticscholar.org/paper/1d141cdb63254f935b084bfdab7d87d7b689ce97",
       "pdf_url": "",
       "publication_date": "2023-06-29",
@@ -8983,6 +9005,26 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "2b805ba343b54c03ffc637cf9d80a65d68d7ddbd",
+      "title": "Deep-Learning Model Extraction Through Software-Based Power Side-Channel",
+      "abstract": "Deep learning (DL) techniques have been increasingly applied across various applications, facing a growing number of security threats. One such threat is model extraction, an attack that steals the Intellectual Property of DL models, either by recovering the same functionality or retrieving high-fidelity models. Current model extraction methods can be categorized as learning-based or cryptanalytic, with the latter relying on model queries and computational methods to recover parameters. However, these are limited to shallow neural networks and are computationally prohibitive for deeper DL models. In this paper, we propose leveraging software-based power analysis, specifically the Intel Running Average Power Limit (RAPL) technique, for DL model extraction. RAPL allows us to measure power leakage of the most popular activation function, ReLU, through a software interface. Consequently, the ReLU branch direction can be leaked in the software power side-channel, a vulnerability common in many state-of-the-art DL frameworks. We introduce a novel methodology for model extraction Algorithm from input gradient assisted by side channel information. We implement our attack on the oneDNN framework, the most popular library on Intel processors. Compared to prior work, our model extraction, assisted by the software power side-channel, only requires 0.8% of the queries to retrieve as-layer MLP. We also successfully apply our method to a common Convolutional Neural Network (CNN) - Lenet-5. To the best of our knowledge, this is the first work that extracts CNN models with more than 5 layers based solely on queries and software.",
+      "year": 2023,
+      "venue": "2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD)",
+      "authors": [
+        "Xiang Zhang",
+        "A. Ding",
+        "Yunsi Fei"
+      ],
+      "citation_count": 7,
+      "url": "https://www.semanticscholar.org/paper/2b805ba343b54c03ffc637cf9d80a65d68d7ddbd",
+      "pdf_url": "",
+      "publication_date": "2023-10-28",
+      "keywords_matched": [
+        "model extraction"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "23faead2015ba1e36a2c0c535f987c0b36ba8534",
       "title": "Data-Free Hard-Label Robustness Stealing Attack",
       "abstract": "The popularity of Machine Learning as a Service (MLaaS) has led to increased concerns about Model Stealing Attacks (MSA), which aim to craft a clone model by querying MLaaS. Currently, most research on MSA assumes that MLaaS can provide soft labels and that the attacker has a proxy dataset with a similar distribution. However, this fails to encapsulate the more practical scenario where only hard labels are returned by MLaaS and the data distribution remains elusive. Furthermore, most existing work focuses solely on stealing the model accuracy, neglecting the model robustness, while robustness is essential in security-sensitive scenarios, e.g, face-scan payment. Notably, improving model robustness often necessitates the use of expensive techniques such as adversarial training, thereby further making stealing robustness a more lucrative prospect. In response to these identified gaps, we introduce a novel Data-Free Hard-Label Robustness Stealing (DFHL-RS) attack in this paper, which enables the stealing of both model accuracy and robustness by simply querying hard labels of the target model without the help of any natural data. Comprehensive experiments demonstrate the effectiveness of our method. The clone model achieves a clean accuracy of 77.86% and a robust accuracy of 39.51% against AutoAttack, which are only 4.71% and 8.40% lower than the target model on the CIFAR-10 dataset, significantly exceeding the baselines. Our code is available at: https://github.com/LetheSec/DFHL-RS-Attack.",
@@ -9100,26 +9142,6 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "2b805ba343b54c03ffc637cf9d80a65d68d7ddbd",
-      "title": "Deep-Learning Model Extraction Through Software-Based Power Side-Channel",
-      "abstract": "Deep learning (DL) techniques have been increasingly applied across various applications, facing a growing number of security threats. One such threat is model extraction, an attack that steals the Intellectual Property of DL models, either by recovering the same functionality or retrieving high-fidelity models. Current model extraction methods can be categorized as learning-based or cryptanalytic, with the latter relying on model queries and computational methods to recover parameters. However, these are limited to shallow neural networks and are computationally prohibitive for deeper DL models. In this paper, we propose leveraging software-based power analysis, specifically the Intel Running Average Power Limit (RAPL) technique, for DL model extraction. RAPL allows us to measure power leakage of the most popular activation function, ReLU, through a software interface. Consequently, the ReLU branch direction can be leaked in the software power side-channel, a vulnerability common in many state-of-the-art DL frameworks. We introduce a novel methodology for model extraction Algorithm from input gradient assisted by side channel information. We implement our attack on the oneDNN framework, the most popular library on Intel processors. Compared to prior work, our model extraction, assisted by the software power side-channel, only requires 0.8% of the queries to retrieve as-layer MLP. We also successfully apply our method to a common Convolutional Neural Network (CNN) - Lenet-5. To the best of our knowledge, this is the first work that extracts CNN models with more than 5 layers based solely on queries and software.",
-      "year": 2023,
-      "venue": "2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD)",
-      "authors": [
-        "Xiang Zhang",
-        "A. Ding",
-        "Yunsi Fei"
-      ],
-      "citation_count": 6,
-      "url": "https://www.semanticscholar.org/paper/2b805ba343b54c03ffc637cf9d80a65d68d7ddbd",
-      "pdf_url": "",
-      "publication_date": "2023-10-28",
-      "keywords_matched": [
-        "model extraction"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
       "paper_id": "21ec2007ae077dcb72f13e295cefe9ca1727b42e",
       "title": "No Forking Way: Detecting Cloning Attacks on Intel SGX Applications",
       "abstract": "Forking attacks against TEEs like Intel SGX can be carried out either by rolling back the application to a previous state, or by cloning the application and by partitioning its inputs across the cloned instances. Current solutions to forking attacks require Trusted Third Parties (TTP) that are hard to find in real-world deployments. In the absence of a TTP, many TEE applications rely on monotonic counters to mitigate forking attacks based on rollbacks; however, they have no protection mechanism against forking attack based on cloning. In this paper, we analyze 72 SGX applications and show that approximately 20% of those are vulnerable to forking attacks based on cloning\u2014including those that rely on monotonic counters. To address this problem, we present CloneBuster, the first practical clone-detection mechanism for Intel SGX that does not rely on a TTP and, as such, can be used directly to protect existing applications. CloneBuster allows enclaves to (self-) detect whether another enclave with the same binary is running on the same platform. To do so, CloneBuster relies on a cache-based covert channel for enclaves to signal their presence to (and detect the presence of) clones on the same machine. We show that CloneBuster is robust despite a malicious OS, only incurs a marginal impact on the application performance, and adds approximately 800 LoC to the TCB. When used in conjunction with monotonic counters, CloneBuster allows applications to benefit from a comprehensive protection against forking attacks.",
@@ -9137,6 +9159,29 @@
       "publication_date": "2023-10-04",
       "keywords_matched": [
         "cloning attack"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "9809d3a7e1b49a659d86fbdf88b3e29f326d05e5",
+      "title": "Power2Picture: Using Generative CNNs for Input Recovery of Neural Network Accelerators through Power Side-Channels on FPGAs",
+      "abstract": "Artificial neural networks pervade almost all areas of today's life, being used for both simple image classification tasks as well as highly complex decision making in mission-critical tasks. This makes artificial neural networks an attractive target for attackers to recover the model architecture or user inputs and outputs through either classical software vulnerabilities or hardware side-channel and fault attacks. With increasing complexity of the models, smaller companies now often opt for pre-trained public models, which are then used with potentially sensitive inputs, for instance, in medical applications. In this work, we present a novel remote side-channel attack methodology to steal neural network inputs using generative convolutional neural networks. After measuring voltage fluctuations using on-chip sensors, we are able to recover the original inputs to image classifiers on different FPGA platforms. Our results prove the effectiveness of our attack, as we are able to recover inputs from networks running on different devices, with different datasets, and under different operating conditions.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Field-Programmable Custom Computing Machines",
+      "authors": [
+        "Lukas Huegle",
+        "M. Gotthard",
+        "Vincent Meyers",
+        "Jonas Krautter",
+        "Dennis R. E. Gnad",
+        "M. Tahoori"
+      ],
+      "citation_count": 6,
+      "url": "https://www.semanticscholar.org/paper/9809d3a7e1b49a659d86fbdf88b3e29f326d05e5",
+      "pdf_url": "",
+      "publication_date": "2023-05-01",
+      "keywords_matched": [
+        "steal neural network"
       ],
       "first_seen": "2025-12-05"
     },
@@ -9227,29 +9272,6 @@
       "publication_date": "2023-05-06",
       "keywords_matched": [
         "model stealing"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "9809d3a7e1b49a659d86fbdf88b3e29f326d05e5",
-      "title": "Power2Picture: Using Generative CNNs for Input Recovery of Neural Network Accelerators through Power Side-Channels on FPGAs",
-      "abstract": "Artificial neural networks pervade almost all areas of today's life, being used for both simple image classification tasks as well as highly complex decision making in mission-critical tasks. This makes artificial neural networks an attractive target for attackers to recover the model architecture or user inputs and outputs through either classical software vulnerabilities or hardware side-channel and fault attacks. With increasing complexity of the models, smaller companies now often opt for pre-trained public models, which are then used with potentially sensitive inputs, for instance, in medical applications. In this work, we present a novel remote side-channel attack methodology to steal neural network inputs using generative convolutional neural networks. After measuring voltage fluctuations using on-chip sensors, we are able to recover the original inputs to image classifiers on different FPGA platforms. Our results prove the effectiveness of our attack, as we are able to recover inputs from networks running on different devices, with different datasets, and under different operating conditions.",
-      "year": 2023,
-      "venue": "IEEE Symposium on Field-Programmable Custom Computing Machines",
-      "authors": [
-        "Lukas Huegle",
-        "M. Gotthard",
-        "Vincent Meyers",
-        "Jonas Krautter",
-        "Dennis R. E. Gnad",
-        "M. Tahoori"
-      ],
-      "citation_count": 5,
-      "url": "https://www.semanticscholar.org/paper/9809d3a7e1b49a659d86fbdf88b3e29f326d05e5",
-      "pdf_url": "",
-      "publication_date": "2023-05-01",
-      "keywords_matched": [
-        "steal neural network"
       ],
       "first_seen": "2025-12-05"
     },
@@ -9346,6 +9368,26 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "c2e1a7c575e0a10c5493b5390b4c6ce321c6cf8d",
+      "title": "Defense against ML-based Power Side-channel Attacks on DNN Accelerators with Adversarial Attacks",
+      "abstract": "Artificial Intelligence (AI) hardware accelerators have been widely adopted to enhance the efficiency of deep learning applications. However, they also raise security concerns regarding their vulnerability to power side-channel attacks (SCA). In these attacks, the adversary exploits unintended communication channels to infer sensitive information processed by the accelerator, posing significant privacy and copyright risks to the models. Advanced machine learning algorithms are further employed to facilitate the side-channel analysis and exacerbate the privacy issue of AI accelerators. Traditional defense strategies naively inject execution noise to the runtime of AI models, which inevitably introduce large overheads. In this paper, we present AIAShield, a novel defense methodology to safeguard FPGA-based AI accelerators and mitigate model extraction threats via power-based SCAs. The key insight of AIAShield is to leverage the prominent adversarial attack technique from the machine learning community to craft delicate noise, which can significantly obfuscate the adversary's side-channel observation while incurring minimal overhead to the execution of the protected model. At the hardware level, we design a new module based on ring oscillators to achieve fine-grained noise generation. At the algorithm level, we repurpose Neural Architecture Search to worsen the adversary's extraction results. Extensive experiments on the Nvidia Deep Learning Accelerator (NVDLA) demonstrate that AIAShield outperforms existing solutions with excellent transferability.",
+      "year": 2023,
+      "venue": "arXiv.org",
+      "authors": [
+        "Xiaobei Yan",
+        "Chip Hong Chang",
+        "Tianwei Zhang"
+      ],
+      "citation_count": 5,
+      "url": "https://www.semanticscholar.org/paper/c2e1a7c575e0a10c5493b5390b4c6ce321c6cf8d",
+      "pdf_url": "",
+      "publication_date": "2023-12-07",
+      "keywords_matched": [
+        "model extraction"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "34bed407d65517ed2c8b98bab3a33da175677c59",
       "title": "A Plot is Worth a Thousand Words: Model Information Stealing Attacks via Scientific Plots",
       "abstract": "Building advanced machine learning (ML) models requires expert knowledge and many trials to discover the best architecture and hyperparameter settings. Previous work demonstrates that model information can be leveraged to assist other attacks, such as membership inference, generating adversarial examples. Therefore, such information, e.g., hyperparameters, should be kept confidential. It is well known that an adversary can leverage a target ML model's output to steal the model's information. In this paper, we discover a new side channel for model information stealing attacks, i.e., models' scientific plots which are extensively used to demonstrate model performance and are easily accessible. Our attack is simple and straightforward. We leverage the shadow model training techniques to generate training data for the attack model which is essentially an image classifier. Extensive evaluation on three benchmark datasets shows that our proposed attack can effectively infer the architecture/hyperparameters of image classifiers based on convolutional neural network (CNN) given the scientific plot generated from it. We also reveal that the attack's success is mainly caused by the shape of the scientific plots, and further demonstrate that the attacks are robust in various scenarios. Given the simplicity and effectiveness of the attack method, our study indicates scientific plots indeed constitute a valid side channel for model information stealing attacks. To mitigate the attacks, we propose several defense mechanisms that can reduce the original attacks' accuracy while maintaining the plot utility. However, such defenses can still be bypassed by adaptive attacks.",
@@ -9429,26 +9471,6 @@
         "model stealing",
         "model extraction",
         "model stealing attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "c2e1a7c575e0a10c5493b5390b4c6ce321c6cf8d",
-      "title": "Defense against ML-based Power Side-channel Attacks on DNN Accelerators with Adversarial Attacks",
-      "abstract": "Artificial Intelligence (AI) hardware accelerators have been widely adopted to enhance the efficiency of deep learning applications. However, they also raise security concerns regarding their vulnerability to power side-channel attacks (SCA). In these attacks, the adversary exploits unintended communication channels to infer sensitive information processed by the accelerator, posing significant privacy and copyright risks to the models. Advanced machine learning algorithms are further employed to facilitate the side-channel analysis and exacerbate the privacy issue of AI accelerators. Traditional defense strategies naively inject execution noise to the runtime of AI models, which inevitably introduce large overheads. In this paper, we present AIAShield, a novel defense methodology to safeguard FPGA-based AI accelerators and mitigate model extraction threats via power-based SCAs. The key insight of AIAShield is to leverage the prominent adversarial attack technique from the machine learning community to craft delicate noise, which can significantly obfuscate the adversary's side-channel observation while incurring minimal overhead to the execution of the protected model. At the hardware level, we design a new module based on ring oscillators to achieve fine-grained noise generation. At the algorithm level, we repurpose Neural Architecture Search to worsen the adversary's extraction results. Extensive experiments on the Nvidia Deep Learning Accelerator (NVDLA) demonstrate that AIAShield outperforms existing solutions with excellent transferability.",
-      "year": 2023,
-      "venue": "arXiv.org",
-      "authors": [
-        "Xiaobei Yan",
-        "Chip Hong Chang",
-        "Tianwei Zhang"
-      ],
-      "citation_count": 4,
-      "url": "https://www.semanticscholar.org/paper/c2e1a7c575e0a10c5493b5390b4c6ce321c6cf8d",
-      "pdf_url": "",
-      "publication_date": "2023-12-07",
-      "keywords_matched": [
-        "model extraction"
       ],
       "first_seen": "2025-11-28"
     },
@@ -9892,6 +9914,28 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "23aef5016a8762544e9300e4aa43ceaafa6ee244",
+      "title": "Efficient Defense Against Model Stealing Attacks on Convolutional Neural Networks",
+      "abstract": "Model stealing attacks have become a serious concern for deep learning models, where an attacker can steal a trained model by querying its black-box API. This can lead to intellectual property theft and other security and privacy risks. The current state-of-the-art defenses against model stealing attacks suggest adding perturbations to the prediction probabilities. However, they suffer from heavy computations and make impracticable assumptions about the adversary. They often require the training of auxiliary models. This can be time-consuming and resource-intensive which hinders the deployment of these defenses in real-world applications. In this paper, we propose a simple yet effective and efficient defense alternative. We introduce a heuristic approach to perturb the output probabilities. The proposed defense can be easily integrated into models without additional training. We show that our defense is effective in defending against three state-of-the-art stealing attacks. We evaluate our approach on large and quantized (i.e., compressed) Convolutional Neural Networks (CNNs) trained on several vision datasets. Our technique outperforms the state-of-the-art defenses with a \u00d737 faster inference latency without requiring any additional model and with a low impact on the model's performance. We validate that our defense is also effective for quantized CNNs targeting edge devices.",
+      "year": 2023,
+      "venue": "International Conference on Machine Learning and Applications",
+      "authors": [
+        "Kacem Khaled",
+        "Mouna Dhaouadi",
+        "F. Magalh\u00e3es",
+        "G. Nicolescu"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/23aef5016a8762544e9300e4aa43ceaafa6ee244",
+      "pdf_url": "",
+      "publication_date": "2023-09-04",
+      "keywords_matched": [
+        "model stealing",
+        "model stealing attack"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
       "paper_id": "ad26add46cae7797de1d638b84a0fa4ad1743a60",
       "title": "FMSA: a meta-learning framework-based fast model stealing attack technique against intelligent network intrusion detection systems",
       "abstract": "Intrusion detection systems are increasingly using machine learning. While machine learning has shown excellent performance in identifying malicious traffic, it may increase the risk of privacy leakage. This paper focuses on implementing a model stealing attack on intrusion detection systems. Existing model stealing attacks are hard to implement in practical network environments, as they either need private data of the victim dataset or frequent access to the victim model. In this paper, we propose a novel solution called Fast Model Stealing Attack (FMSA) to address the problem in the field of model stealing attacks. We also highlight the risks of using ML-NIDS in network security. First, meta-learning frameworks are introduced into the model stealing algorithm to clone the victim model in a black-box state. Then, the number of accesses to the target model is used as an optimization term, resulting in minimal queries to achieve model stealing. Finally, adversarial training is used to simulate the data distribution of the target model and achieve the recovery of privacy data. Through experiments on multiple public datasets, compared to existing state-of-the-art algorithms, FMSA reduces the number of accesses to the target model and improves the accuracy of the clone model on the test dataset to 88.9% and the similarity with the target model to 90.1%. We can demonstrate the successful execution of model stealing attacks on the ML-NIDS system even with protective measures in place to limit the number of anomalous queries.",
@@ -9977,28 +10021,6 @@
       "publication_date": null,
       "keywords_matched": [
         "model stealing"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "23aef5016a8762544e9300e4aa43ceaafa6ee244",
-      "title": "Efficient Defense Against Model Stealing Attacks on Convolutional Neural Networks",
-      "abstract": "Model stealing attacks have become a serious concern for deep learning models, where an attacker can steal a trained model by querying its black-box API. This can lead to intellectual property theft and other security and privacy risks. The current state-of-the-art defenses against model stealing attacks suggest adding perturbations to the prediction probabilities. However, they suffer from heavy computations and make impracticable assumptions about the adversary. They often require the training of auxiliary models. This can be time-consuming and resource-intensive which hinders the deployment of these defenses in real-world applications. In this paper, we propose a simple yet effective and efficient defense alternative. We introduce a heuristic approach to perturb the output probabilities. The proposed defense can be easily integrated into models without additional training. We show that our defense is effective in defending against three state-of-the-art stealing attacks. We evaluate our approach on large and quantized (i.e., compressed) Convolutional Neural Networks (CNNs) trained on several vision datasets. Our technique outperforms the state-of-the-art defenses with a \u00d737 faster inference latency without requiring any additional model and with a low impact on the model's performance. We validate that our defense is also effective for quantized CNNs targeting edge devices.",
-      "year": 2023,
-      "venue": "International Conference on Machine Learning and Applications",
-      "authors": [
-        "Kacem Khaled",
-        "Mouna Dhaouadi",
-        "F. Magalh\u00e3es",
-        "G. Nicolescu"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/23aef5016a8762544e9300e4aa43ceaafa6ee244",
-      "pdf_url": "",
-      "publication_date": "2023-09-04",
-      "keywords_matched": [
-        "model stealing",
-        "model stealing attack"
       ],
       "first_seen": "2025-11-28"
     },
@@ -10959,7 +10981,7 @@
         "Ming Yan",
         "Mi Zhang"
       ],
-      "citation_count": 195,
+      "citation_count": 197,
       "url": "https://www.semanticscholar.org/paper/4fc5f31a38a19e3acc9501aeb3006810eec0e767",
       "pdf_url": "http://arxiv.org/pdf/2212.01548",
       "publication_date": "2022-12-03",
@@ -11001,7 +11023,7 @@
         "Sravanti Addepalli",
         "R. Venkatesh Babu"
       ],
-      "citation_count": 103,
+      "citation_count": 104,
       "url": "https://www.semanticscholar.org/paper/35ade8553de7259a5e8105bd20a160f045f9d112",
       "pdf_url": "https://arxiv.org/pdf/2204.11022",
       "publication_date": "2022-04-23",
@@ -11121,7 +11143,7 @@
         "Wei Lu",
         "Xiaozhong Liu"
       ],
-      "citation_count": 51,
+      "citation_count": 52,
       "url": "https://www.semanticscholar.org/paper/d03f4ca6facd18b30ab4c6034350d430bca0bc33",
       "pdf_url": "",
       "publication_date": "2022-09-14",
@@ -11256,7 +11278,7 @@
         "B. Li",
         "David A. Forsyth"
       ],
-      "citation_count": 34,
+      "citation_count": 35,
       "url": "https://www.semanticscholar.org/paper/af72f901d7a0f2edca55ee008c8893ae93b09971",
       "pdf_url": "https://arxiv.org/pdf/2206.14157",
       "publication_date": "2022-06-28",
@@ -11439,7 +11461,7 @@
         "Dennis R. E. Gnad",
         "M. Tahoori"
       ],
-      "citation_count": 18,
+      "citation_count": 19,
       "url": "https://www.semanticscholar.org/paper/89f080275bf088de3140625d6ee7c4ffa7a368b9",
       "pdf_url": "",
       "publication_date": "2022-05-15",
@@ -11487,7 +11509,7 @@
         "Jianhua Li",
         "Jie Wu"
       ],
-      "citation_count": 17,
+      "citation_count": 18,
       "url": "https://www.semanticscholar.org/paper/e8572d9722e992a770b7c00a8419dda17297a9da",
       "pdf_url": "",
       "publication_date": "2022-11-01",
@@ -13222,7 +13244,7 @@
         "Fan Yao",
         "Deliang Fan"
       ],
-      "citation_count": 141,
+      "citation_count": 142,
       "url": "https://www.semanticscholar.org/paper/74f6e70fd9a945b517e6495920a1267c01842bd4",
       "pdf_url": "http://arxiv.org/pdf/2111.04625",
       "publication_date": "2021-11-08",
@@ -13374,7 +13396,7 @@
         "Zhou Li",
         "M. A. Faruque"
       ],
-      "citation_count": 78,
+      "citation_count": 79,
       "url": "https://www.semanticscholar.org/paper/03df500a29fb8717662ea5626afd9e2b22b5d14c",
       "pdf_url": "",
       "publication_date": "2021-02-17",
@@ -13382,6 +13404,34 @@
         "side-channel attack (title)"
       ],
       "first_seen": "2025-11-28"
+    },
+    {
+      "paper_id": "c3111e374ad14357172ef63e7063e0182f8030d4",
+      "title": "Copy, Right? A Testing Framework for Copyright Protection of Deep Learning Models",
+      "abstract": "Deep learning models, especially those large-scale and high-performance ones, can be very costly to train, demanding a considerable amount of data and computational resources. As a result, deep learning models have become one of the most valuable assets in modern artificial intelligence. Unauthorized duplication or reproduction of deep learning models can lead to copyright infringement and cause huge economic losses to model owners, calling for effective copyright protection techniques. Existing protection techniques are mostly based on watermarking, which embeds an owner-specified watermark into the model. While being able to provide exact ownership verification, these techniques are 1) invasive, i.e., they need to tamper with the training process, which may affect the model utility or introduce new security risks into the model; 2) prone to adaptive attacks that attempt to remove/replace the watermark or adversarially block the retrieval of the watermark; and 3) not robust to the emerging model extraction attacks. Latest fingerprinting work on deep learning models, though being non-invasive, also falls short when facing the diverse and ever-growing attack scenarios.In this paper, we propose a novel testing framework for deep learning copyright protection: DEEPJUDGE. DEEPJUDGE quantitatively tests the similarities between two deep learning models: a victim model and a suspect model. It leverages a diverse set of testing metrics and efficient test case generation algorithms to produce a chain of supporting evidence to help determine whether a suspect model is a copy of the victim model. Advantages of DEEPJUDGE include: 1) non-invasive, as it works directly on the model and does not tamper with the training process; 2) efficient, as it only needs a small set of seed test cases and a quick scan of the two models; 3) flexible, i.e., it can easily incorporate new testing metrics or test case generation methods to obtain more confident and robust judgement; and 4) fairly robust to model extraction attacks and adaptive attacks. We verify the effectiveness of DEEPJUDGE under three typical copyright infringement scenarios, including model finetuning, pruning and extraction, via extensive experiments on both image classification and speech recognition datasets with a variety of model architectures.",
+      "year": 2021,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Jialuo Chen",
+        "Jingyi Wang",
+        "Tinglan Peng",
+        "Youcheng Sun",
+        "Peng Cheng",
+        "S. Ji",
+        "Xingjun Ma",
+        "Bo Li",
+        "D. Song"
+      ],
+      "citation_count": 79,
+      "url": "https://www.semanticscholar.org/paper/c3111e374ad14357172ef63e7063e0182f8030d4",
+      "pdf_url": "https://arxiv.org/pdf/2112.05588",
+      "publication_date": "2021-12-10",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "bfb6e56602b658fdabaaa66987ebf685a8139892",
@@ -13405,34 +13455,6 @@
         "model stealing"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "c3111e374ad14357172ef63e7063e0182f8030d4",
-      "title": "Copy, Right? A Testing Framework for Copyright Protection of Deep Learning Models",
-      "abstract": "Deep learning models, especially those large-scale and high-performance ones, can be very costly to train, demanding a considerable amount of data and computational resources. As a result, deep learning models have become one of the most valuable assets in modern artificial intelligence. Unauthorized duplication or reproduction of deep learning models can lead to copyright infringement and cause huge economic losses to model owners, calling for effective copyright protection techniques. Existing protection techniques are mostly based on watermarking, which embeds an owner-specified watermark into the model. While being able to provide exact ownership verification, these techniques are 1) invasive, i.e., they need to tamper with the training process, which may affect the model utility or introduce new security risks into the model; 2) prone to adaptive attacks that attempt to remove/replace the watermark or adversarially block the retrieval of the watermark; and 3) not robust to the emerging model extraction attacks. Latest fingerprinting work on deep learning models, though being non-invasive, also falls short when facing the diverse and ever-growing attack scenarios.In this paper, we propose a novel testing framework for deep learning copyright protection: DEEPJUDGE. DEEPJUDGE quantitatively tests the similarities between two deep learning models: a victim model and a suspect model. It leverages a diverse set of testing metrics and efficient test case generation algorithms to produce a chain of supporting evidence to help determine whether a suspect model is a copy of the victim model. Advantages of DEEPJUDGE include: 1) non-invasive, as it works directly on the model and does not tamper with the training process; 2) efficient, as it only needs a small set of seed test cases and a quick scan of the two models; 3) flexible, i.e., it can easily incorporate new testing metrics or test case generation methods to obtain more confident and robust judgement; and 4) fairly robust to model extraction attacks and adaptive attacks. We verify the effectiveness of DEEPJUDGE under three typical copyright infringement scenarios, including model finetuning, pruning and extraction, via extensive experiments on both image classification and speech recognition datasets with a variety of model architectures.",
-      "year": 2021,
-      "venue": "IEEE Symposium on Security and Privacy",
-      "authors": [
-        "Jialuo Chen",
-        "Jingyi Wang",
-        "Tinglan Peng",
-        "Youcheng Sun",
-        "Peng Cheng",
-        "S. Ji",
-        "Xingjun Ma",
-        "Bo Li",
-        "D. Song"
-      ],
-      "citation_count": 78,
-      "url": "https://www.semanticscholar.org/paper/c3111e374ad14357172ef63e7063e0182f8030d4",
-      "pdf_url": "https://arxiv.org/pdf/2112.05588",
-      "publication_date": "2021-12-10",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "cd709a11dfb2308b0d2ffc779261165e92c49e2b",
@@ -13684,6 +13706,31 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "2bf31e06af3408f0136147bf321fdeb024f50a1b",
+      "title": "On-chip photonic diffractive optical neural network based on a spatial domain electromagnetic propagation model.",
+      "abstract": "An integrated physical diffractive optical neural network (DONN) is proposed based on a standard silicon-on-insulator (SOI) substrate. This DONN has compact structure and can realize the function of machine learning with whole-passive fully-optical manners. The DONN structure is designed by the spatial domain electromagnetic propagation model, and the approximate process of the neuron value mapping is optimized well to guarantee the consistence between the pre-trained neuron value and the SOI integration implementation. This model can better ensure the manufacturability and the scale of the on-chip neural network, which can be used to guide the design and manufacturing of the real chip. The performance of our DONN is numerically demonstrated on the prototypical machine learning task of prediction of coronary heart disease from the UCI Heart Disease Dataset, and accuracy comparable to the state-of-the-art is achieved.",
+      "year": 2021,
+      "venue": "Optics Express",
+      "authors": [
+        "Tingzhao Fu",
+        "Yubin Zang",
+        "Honghao Huang",
+        "Zhenmin Du",
+        "Chengyang Hu",
+        "Minghua Chen",
+        "Sigang Yang",
+        "Hong-wei Chen"
+      ],
+      "citation_count": 46,
+      "url": "https://www.semanticscholar.org/paper/2bf31e06af3408f0136147bf321fdeb024f50a1b",
+      "pdf_url": "https://doi.org/10.1364/oe.435183",
+      "publication_date": "2021-09-27",
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "0d114776aa65bf3bbd0e5517de7b6727c529d6ae",
       "title": "Multistable dynamics in a Hopfield neural network under electromagnetic radiation and dual bias currents",
       "abstract": null,
@@ -13706,31 +13753,6 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "2bf31e06af3408f0136147bf321fdeb024f50a1b",
-      "title": "On-chip photonic diffractive optical neural network based on a spatial domain electromagnetic propagation model.",
-      "abstract": "An integrated physical diffractive optical neural network (DONN) is proposed based on a standard silicon-on-insulator (SOI) substrate. This DONN has compact structure and can realize the function of machine learning with whole-passive fully-optical manners. The DONN structure is designed by the spatial domain electromagnetic propagation model, and the approximate process of the neuron value mapping is optimized well to guarantee the consistence between the pre-trained neuron value and the SOI integration implementation. This model can better ensure the manufacturability and the scale of the on-chip neural network, which can be used to guide the design and manufacturing of the real chip. The performance of our DONN is numerically demonstrated on the prototypical machine learning task of prediction of coronary heart disease from the UCI Heart Disease Dataset, and accuracy comparable to the state-of-the-art is achieved.",
-      "year": 2021,
-      "venue": "Optics Express",
-      "authors": [
-        "Tingzhao Fu",
-        "Yubin Zang",
-        "Honghao Huang",
-        "Zhenmin Du",
-        "Chengyang Hu",
-        "Minghua Chen",
-        "Sigang Yang",
-        "Hong-wei Chen"
-      ],
-      "citation_count": 45,
-      "url": "https://www.semanticscholar.org/paper/2bf31e06af3408f0136147bf321fdeb024f50a1b",
-      "pdf_url": "https://doi.org/10.1364/oe.435183",
-      "publication_date": "2021-09-27",
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
       "paper_id": "c1cd3ef5bd9439de1f138ab5200a2c9cecf362af",
       "title": "Physical Side-Channel Attacks on Embedded Neural Networks: A Survey",
       "abstract": "During the last decade, Deep Neural Networks (DNN) have progressively been integrated on all types of platforms, from data centers to embedded systems including low-power processors and, recently, FPGAs. Neural Networks (NN) are expected to become ubiquitous in IoT systems by transforming all sorts of real-world applications, including applications in the safety-critical and security-sensitive domains. However, the underlying hardware security vulnerabilities of embedded NN implementations remain unaddressed. In particular, embedded DNN implementations are vulnerable to Side-Channel Analysis (SCA) attacks, which are especially important in the IoT and edge computing contexts where an attacker can usually gain physical access to the targeted device. A research field has therefore emerged and is rapidly growing in terms of the use of SCA including timing, electromagnetic attacks and power attacks to target NN embedded implementations. Since 2018, research papers have shown that SCA enables an attacker to recover inference models architectures and parameters, to expose industrial IP and endangers data confidentiality and privacy. Without a complete review of this emerging field in the literature so far, this paper surveys state-of-the-art physical SCA attacks relative to the implementation of embedded DNNs on micro-controllers and FPGAs in order to provide a thorough analysis on the current landscape. It provides a taxonomy and a detailed classification of current attacks. It first discusses mitigation techniques and then provides insights for future research leads.",
@@ -13740,7 +13762,7 @@
         "M. M. Real",
         "R. Salvador"
       ],
-      "citation_count": 44,
+      "citation_count": 45,
       "url": "https://www.semanticscholar.org/paper/c1cd3ef5bd9439de1f138ab5200a2c9cecf362af",
       "pdf_url": "https://www.mdpi.com/2076-3417/11/15/6790/pdf?version=1627954373",
       "publication_date": "2021-07-23",
@@ -14403,6 +14425,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "6c2159b6efaab83678f98f68ec782f1ed8c8b36d",
+      "title": "Stealing Machine Learning Parameters via Side Channel Power Attacks",
+      "abstract": "Side-channel attacks target system implementation statistics, such as the electricity required to run a cryptographic function. Deriving cryptographic keys, such as AES keys, has become such a simplified process that extracting sensitive information from an otherwise secure algorithm requires only a $35USD microcontroller. While cryptographic algorithms indicate the presence of sensitive data, making them a preferable target, other systems hold valuable data with significantly less protection. Due to the ubiquity and rigidity of machine learning algorithms, the ability to infer model parameters has drastic security implications. This investigation extracted information from machine learning models through the use of traditional side-channel techniques. Specifically, a side-channel power analysis was performed using a ChipWhisperer Lite to extract information from Neural Networks and Linear Regression models running on a target microcontroller. Then, time series classification tasks were performed on the resultant power traces to determine the differences between the two models and their varied hyperparameters. Three such classification tasks were tested. In the first, a neural network was differentiated from a linear regression model with 100% accuracy. In the second, two neural networks with different sized hidden layers are classified with 97.92% accuracy. In the third, two virtually identical linear regression models are compared that differ only in the initial value of one hyperparameter. These models were only classified with 67.92% accuracy. Although the accuracy decreases as the models become more alike, these results indicate that machine learning model parameters can be inferred from power-based side-channel attacks.",
+      "year": 2021,
+      "venue": "IEEE Computer Society Annual Symposium on VLSI",
+      "authors": [
+        "Shaya Wolf",
+        "Hui Hu",
+        "Rafer Cooley",
+        "Mike Borowczak"
+      ],
+      "citation_count": 14,
+      "url": "https://www.semanticscholar.org/paper/6c2159b6efaab83678f98f68ec782f1ed8c8b36d",
+      "pdf_url": "",
+      "publication_date": "2021-07-01",
+      "keywords_matched": [
+        "stealing machine learning"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "0242acadf4940cf94596b54f7fd6fb75af7bb20d",
       "title": "Beyond Model Extraction: Imitation Attack for Black-Box NLP APIs",
       "abstract": null,
@@ -14424,27 +14467,6 @@
         "imitation attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "6c2159b6efaab83678f98f68ec782f1ed8c8b36d",
-      "title": "Stealing Machine Learning Parameters via Side Channel Power Attacks",
-      "abstract": "Side-channel attacks target system implementation statistics, such as the electricity required to run a cryptographic function. Deriving cryptographic keys, such as AES keys, has become such a simplified process that extracting sensitive information from an otherwise secure algorithm requires only a $35USD microcontroller. While cryptographic algorithms indicate the presence of sensitive data, making them a preferable target, other systems hold valuable data with significantly less protection. Due to the ubiquity and rigidity of machine learning algorithms, the ability to infer model parameters has drastic security implications. This investigation extracted information from machine learning models through the use of traditional side-channel techniques. Specifically, a side-channel power analysis was performed using a ChipWhisperer Lite to extract information from Neural Networks and Linear Regression models running on a target microcontroller. Then, time series classification tasks were performed on the resultant power traces to determine the differences between the two models and their varied hyperparameters. Three such classification tasks were tested. In the first, a neural network was differentiated from a linear regression model with 100% accuracy. In the second, two neural networks with different sized hidden layers are classified with 97.92% accuracy. In the third, two virtually identical linear regression models are compared that differ only in the initial value of one hyperparameter. These models were only classified with 67.92% accuracy. Although the accuracy decreases as the models become more alike, these results indicate that machine learning model parameters can be inferred from power-based side-channel attacks.",
-      "year": 2021,
-      "venue": "IEEE Computer Society Annual Symposium on VLSI",
-      "authors": [
-        "Shaya Wolf",
-        "Hui Hu",
-        "Rafer Cooley",
-        "Mike Borowczak"
-      ],
-      "citation_count": 13,
-      "url": "https://www.semanticscholar.org/paper/6c2159b6efaab83678f98f68ec782f1ed8c8b36d",
-      "pdf_url": "",
-      "publication_date": "2021-07-01",
-      "keywords_matched": [
-        "stealing machine learning"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "0e7081f0f76faabda1f9c6497fc9a83b1c051c71",
@@ -14739,7 +14761,7 @@
         "M. Akhaee",
         "Seyedamin Habibi"
       ],
-      "citation_count": 7,
+      "citation_count": 8,
       "url": "https://www.semanticscholar.org/paper/5df6b233b3e5eeb0f0da34158cbb53f34bb0960c",
       "pdf_url": "",
       "publication_date": "2021-09-01",
@@ -15560,7 +15582,7 @@
         "N. Gong",
         "Yang Zhang"
       ],
-      "citation_count": 204,
+      "citation_count": 205,
       "url": "https://www.semanticscholar.org/paper/e4b1d7553020258d7e537e2cfa53865359389eac",
       "pdf_url": "",
       "publication_date": "2020-05-05",
@@ -15603,7 +15625,7 @@
         "A. Prakash",
         "Moinuddin K. Qureshi"
       ],
-      "citation_count": 170,
+      "citation_count": 171,
       "url": "https://www.semanticscholar.org/paper/d5ffa58133940646d1339c2610cb35f27442e0d3",
       "pdf_url": "https://arxiv.org/pdf/2005.03161",
       "publication_date": "2020-05-06",
@@ -15653,7 +15675,7 @@
         "T. Sherwood",
         "Yuan Xie"
       ],
-      "citation_count": 152,
+      "citation_count": 153,
       "url": "https://www.semanticscholar.org/paper/109ad71af2ffce01b60852f8141ea91be6eed9e1",
       "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3373376.3378460",
       "publication_date": "2020-03-09",
@@ -15697,7 +15719,7 @@
         "S. Shevade",
         "V. Ganapathy"
       ],
-      "citation_count": 146,
+      "citation_count": 147,
       "url": "https://www.semanticscholar.org/paper/d8f64187b447d1b64f69f541dbbaec71bd79d205",
       "pdf_url": "https://ojs.aaai.org/index.php/AAAI/article/download/5432/5288",
       "publication_date": "2020-04-03",
@@ -15761,7 +15783,7 @@
         "Hairong Lin",
         "Chunhua Wang"
       ],
-      "citation_count": 114,
+      "citation_count": 115,
       "url": "https://www.semanticscholar.org/paper/d1d9166a10921c3a6077b3232e797bd307d1714a",
       "pdf_url": "",
       "publication_date": "2020-03-01",
@@ -15806,7 +15828,7 @@
         "Zhou Li",
         "M. A. Faruque"
       ],
-      "citation_count": 109,
+      "citation_count": 110,
       "url": "https://www.semanticscholar.org/paper/d0d8c912b20d2d081672f07b6926b620950a39c8",
       "pdf_url": "",
       "publication_date": "2020-06-01",
@@ -16020,7 +16042,7 @@
         "Rosario Cammarota",
         "Aydin Aysu"
       ],
-      "citation_count": 53,
+      "citation_count": 54,
       "url": "https://www.semanticscholar.org/paper/512c95dd0b0a04892e257ddef60af96dd7a8b8f3",
       "pdf_url": "",
       "publication_date": "2020-06-16",
@@ -16065,7 +16087,7 @@
         "Xiaolin Li",
         "D. Wu"
       ],
-      "citation_count": 49,
+      "citation_count": 50,
       "url": "https://www.semanticscholar.org/paper/8765853a2d7027dfe91d650462d7431552bd7315",
       "pdf_url": "https://doi.org/10.1109/tetci.2022.3147508",
       "publication_date": "2020-09-21",
@@ -16247,6 +16269,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "23a47ede9466d119448de4226aebe3193b7ce13d",
+      "title": "An Enhanced Convolutional Neural Network in Side-Channel Attacks and Its Visualization",
+      "abstract": "In recent years, the convolutional neural networks (CNNs) have received a lot of interest in the side-channel community. The previous work has shown that CNNs have the potential of breaking the cryptographic algorithm protected with masking or desynchronization. Before, several CNN models have been exploited, reaching the same or even better level of performance compared to the traditional side-channel attack (SCA). In this paper, we investigate the architecture of Residual Network and build a new CNN model called attention network. To enhance the power of the attention network, we introduce an attention mechanism - Convolutional Block Attention Module (CBAM) and incorporate CBAM into the CNN architecture. CBAM points out the informative points of the input traces and makes the attention network focus on the relevant leakages of the measurements. It is able to improve the performance of the CNNs. Because the irrelevant points will introduce the extra noises and cause a worse performance of attacks. We compare our attention network with the one designed for the masking AES implementation called ASCAD network in this paper. We show that the attention network has a better performance than the ASCAD network. Finally, a new visualization method, named Class Gradient Visualization (CGV) is proposed to recognize which points of the input traces have a positive influence on the predicted result of the neural networks. In another aspect, it can explain why the attention network is superior to the ASCAD network. We validate the attention network through extensive experiments on four public datasets and demonstrate that the attention network is efficient in different AES implementations.",
+      "year": 2020,
+      "venue": "arXiv.org",
+      "authors": [
+        "Minhui Jin",
+        "Mengce Zheng",
+        "Honggang Hu",
+        "Nenghai Yu"
+      ],
+      "citation_count": 21,
+      "url": "https://www.semanticscholar.org/paper/23a47ede9466d119448de4226aebe3193b7ce13d",
+      "pdf_url": "",
+      "publication_date": "2020-09-18",
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "57cbdecb0b12f03a5c0fb95522fdc3494c87bd10",
       "title": "Modeling extra-deep electromagnetic logs using a deep neural network",
       "abstract": "Modern geosteering is heavily dependent on real-time interpretation of deep electromagnetic (EM) measurements. We have developed a methodology to construct a deep neural network (DNN) model trained to reproduce a full set of extra-deep EM logs consisting of 22 measurements per logging position. The model is trained in a 1D layered environment consisting of up to seven layers with different resistivity values. A commercial simulator provided by a tool vendor is used to generate a training data set. The data set size is limited because the simulator provided by the vendor is optimized for sequential execution. Therefore, we design a training data set that embraces the geologic rules and geosteering specifics supported by the forward model. We use this data set to produce an EM simulator based on a DNN without access to the proprietary information about the EM tool configuration or the original simulator source code. Despite using a relatively small training set size, the resulting DNN forward model is quite accurate for the considered examples: a multilayer synthetic case and a section of a published historical operation from the Goliat field. The observed average evaluation time of 0.15\u00a0ms per logging position makes it also suitable for future use as part of evaluation-hungry statistical and/or Monte Carlo inversion algorithms within geosteering workflows.",
@@ -16290,27 +16333,6 @@
       "publication_date": "2020-07-01",
       "keywords_matched": [
         "model stealing"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "23a47ede9466d119448de4226aebe3193b7ce13d",
-      "title": "An Enhanced Convolutional Neural Network in Side-Channel Attacks and Its Visualization",
-      "abstract": "In recent years, the convolutional neural networks (CNNs) have received a lot of interest in the side-channel community. The previous work has shown that CNNs have the potential of breaking the cryptographic algorithm protected with masking or desynchronization. Before, several CNN models have been exploited, reaching the same or even better level of performance compared to the traditional side-channel attack (SCA). In this paper, we investigate the architecture of Residual Network and build a new CNN model called attention network. To enhance the power of the attention network, we introduce an attention mechanism - Convolutional Block Attention Module (CBAM) and incorporate CBAM into the CNN architecture. CBAM points out the informative points of the input traces and makes the attention network focus on the relevant leakages of the measurements. It is able to improve the performance of the CNNs. Because the irrelevant points will introduce the extra noises and cause a worse performance of attacks. We compare our attention network with the one designed for the masking AES implementation called ASCAD network in this paper. We show that the attention network has a better performance than the ASCAD network. Finally, a new visualization method, named Class Gradient Visualization (CGV) is proposed to recognize which points of the input traces have a positive influence on the predicted result of the neural networks. In another aspect, it can explain why the attention network is superior to the ASCAD network. We validate the attention network through extensive experiments on four public datasets and demonstrate that the attention network is efficient in different AES implementations.",
-      "year": 2020,
-      "venue": "arXiv.org",
-      "authors": [
-        "Minhui Jin",
-        "Mengce Zheng",
-        "Honggang Hu",
-        "Nenghai Yu"
-      ],
-      "citation_count": 20,
-      "url": "https://www.semanticscholar.org/paper/23a47ede9466d119448de4226aebe3193b7ce13d",
-      "pdf_url": "",
-      "publication_date": "2020-09-18",
-      "keywords_matched": [
-        "side-channel attack (title)"
       ],
       "first_seen": "2025-12-05"
     },
@@ -17406,7 +17428,7 @@
         "Alexey Kurakin",
         "Nicolas Papernot"
       ],
-      "citation_count": 423,
+      "citation_count": 424,
       "url": "https://www.semanticscholar.org/paper/52a222d38a8640499010d470d5589a81882bc425",
       "pdf_url": "",
       "publication_date": "2019-09-03",
@@ -17428,7 +17450,7 @@
         "Tianwei Zhang",
         "R. Lee"
       ],
-      "citation_count": 353,
+      "citation_count": 354,
       "url": "https://www.semanticscholar.org/paper/2cb1f4688f8ba457b4fa2ed36deae5a98f4249ca",
       "pdf_url": "",
       "publication_date": "2019-12-09",
@@ -17471,7 +17493,7 @@
         "Nicolas Papernot",
         "Mohit Iyyer"
       ],
-      "citation_count": 228,
+      "citation_count": 229,
       "url": "https://www.semanticscholar.org/paper/ac713aebdcc06f15f8ea61e1140bb360341fdf27",
       "pdf_url": "",
       "publication_date": "2019-10-27",
@@ -17514,7 +17536,7 @@
         "B. Schiele",
         "Mario Fritz"
       ],
-      "citation_count": 185,
+      "citation_count": 186,
       "url": "https://www.semanticscholar.org/paper/da10f79f983fd4fbd589ed7ffa68d33964841443",
       "pdf_url": "",
       "publication_date": "2019-06-26",
@@ -17560,7 +17582,7 @@
         "S. Kariyappa",
         "Moinuddin K. Qureshi"
       ],
-      "citation_count": 123,
+      "citation_count": 124,
       "url": "https://www.semanticscholar.org/paper/e6c55623cf56a70659e612eb6a741a4de7545ba7",
       "pdf_url": "https://arxiv.org/pdf/1911.07100",
       "publication_date": "2019-11-16",
@@ -17583,7 +17605,7 @@
         "Ian Molloy",
         "D. Su"
       ],
-      "citation_count": 108,
+      "citation_count": 109,
       "url": "https://www.semanticscholar.org/paper/555b847ee9c39c12d5764f4e11b888b331a89cfb",
       "pdf_url": "https://ieeexplore.ieee.org/ielx7/8834415/8844588/08844598.pdf",
       "publication_date": "2019-05-19",
@@ -17611,7 +17633,7 @@
         "Qi Xuan",
         "Xiaoniu Yang"
       ],
-      "citation_count": 99,
+      "citation_count": 101,
       "url": "https://www.semanticscholar.org/paper/1f25ad13444dcd9898a8500428f2c97bdb05369c",
       "pdf_url": "https://arxiv.org/pdf/1907.10406",
       "publication_date": "2019-07-21",
@@ -17674,7 +17696,7 @@
         "Lihua Liu",
         "G. Fang"
       ],
-      "citation_count": 77,
+      "citation_count": 78,
       "url": "https://www.semanticscholar.org/paper/bd120cdcf499babb814ea1e645bf077f2dca01ad",
       "pdf_url": "",
       "publication_date": null,
@@ -17717,7 +17739,7 @@
         "T. Schneider",
         "Oleksandr Tkachenko"
       ],
-      "citation_count": 61,
+      "citation_count": 62,
       "url": "https://www.semanticscholar.org/paper/304ac5d62f2888e94078715413c40cf00b58ac4f",
       "pdf_url": "https://encrypto.de/papers/RST19.pdf",
       "publication_date": "2019-11-11",
@@ -18510,7 +18532,7 @@
         "B. Schiele",
         "Mario Fritz"
       ],
-      "citation_count": 595,
+      "citation_count": 596,
       "url": "https://www.semanticscholar.org/paper/089c6224cfbcf5c18b63564eb65001c7c42a7acf",
       "pdf_url": "http://arxiv.org/pdf/1812.02766",
       "publication_date": "2018-12-06",
@@ -18535,7 +18557,7 @@
         "Samuel Marchal",
         "N. Asokan"
       ],
-      "citation_count": 481,
+      "citation_count": 482,
       "url": "https://www.semanticscholar.org/paper/4582e2350e4822834dcf266522690722dd4430d4",
       "pdf_url": "https://ieeexplore.ieee.org/ielx7/8790377/8806708/08806737.pdf",
       "publication_date": "2018-05-07",
@@ -18604,7 +18626,7 @@
         "Yu LI",
         "Qiang Xu"
       ],
-      "citation_count": 218,
+      "citation_count": 220,
       "url": "https://www.semanticscholar.org/paper/669a04d8bbf8d530a8d6e1900f8b63dd906b4050",
       "pdf_url": "https://arxiv.org/pdf/1803.05847",
       "publication_date": "2018-03-05",
@@ -19044,6 +19066,27 @@
       "first_seen": "2025-11-28"
     },
     {
+      "paper_id": "dc32688d395c57cff2dbecf65b9c5b6a52a5c10c",
+      "title": "Convolutional Neural Network Based Side-Channel Attacks in Time-Frequency Representations",
+      "abstract": null,
+      "year": 2018,
+      "venue": "Smart Card Research and Advanced Application Conference",
+      "authors": [
+        "Guang Yang",
+        "Huizhong Li",
+        "Jingdian Ming",
+        "Yongbin Zhou"
+      ],
+      "citation_count": 25,
+      "url": "https://www.semanticscholar.org/paper/dc32688d395c57cff2dbecf65b9c5b6a52a5c10c",
+      "pdf_url": "",
+      "publication_date": "2018-11-12",
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "2cb2f7c824a089422ac210b3f77d2e078b017f66",
       "title": "Model Extraction and Active Learning",
       "abstract": null,
@@ -19064,27 +19107,6 @@
         "model extraction"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "dc32688d395c57cff2dbecf65b9c5b6a52a5c10c",
-      "title": "Convolutional Neural Network Based Side-Channel Attacks in Time-Frequency Representations",
-      "abstract": null,
-      "year": 2018,
-      "venue": "Smart Card Research and Advanced Application Conference",
-      "authors": [
-        "Guang Yang",
-        "Huizhong Li",
-        "Jingdian Ming",
-        "Yongbin Zhou"
-      ],
-      "citation_count": 24,
-      "url": "https://www.semanticscholar.org/paper/dc32688d395c57cff2dbecf65b9c5b6a52a5c10c",
-      "pdf_url": "",
-      "publication_date": "2018-11-12",
-      "keywords_matched": [
-        "side-channel attack (title)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "7e7157625088e62582f45409cb1704844ddb5535",
@@ -19131,6 +19153,29 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "2822dce260dc4930ccd276a9ae6392960d6b460d",
+      "title": "Combating Tag Cloning with COTS RFID Devices",
+      "abstract": "In RFID systems, a cloning attack is to fabricate one or more replicas of a genuine tag, so that these replicas behave exactly the same as the genuine tag and fool the reader for getting legal authorization, leading to potential financial loss or reputation damage for the corporations. These replicas are called clone tags. Although many advanced solutions have been proposed to combat cloning attack, they need to either modify the MAC- layer protocols or increase extra hardware resources, which cannot be deployed on commercial off-the-shelf (COTS) RFID devices for practical use. In this paper, we take a fresh attempt to counterattack tag cloning based on COTS RFID devices and the universal C1G2 standard, without any software redesign or hardware augment needed. The basic idea is to use the RF signal profile to characterize each tag. Since these physical-layer data are measured by the reader and susceptible to various environmental factors, they are hard to be estimated by the attackers; let alone be cloned. Even so, we assert that it is challenging to identify clone tags as the signal data from a genuine tag and its clones are all mixed together. Besides, the tag moving has a great impact on the measured RF signals. To overcome these challenges, we propose a clustering-based scheme that detects the cloning attack in the still scene and a chain- based scheme for clone detection in the dynamic scene, respectively. Extensive experiments on COTS RFID devices demonstrate that the detection accuracy of our approaches reaches 99.8% in a still case and 99.3% in a dynamic scene.",
+      "year": 2018,
+      "venue": "Annual IEEE Communications Society Conference on Sensor, Mesh and Ad Hoc Communications and Networks",
+      "authors": [
+        "Xingyu Chen",
+        "Jia Liu",
+        "Xia Wang",
+        "Xiaocong Zhang",
+        "Yanyan Wang",
+        "Lijun Chen"
+      ],
+      "citation_count": 9,
+      "url": "https://www.semanticscholar.org/paper/2822dce260dc4930ccd276a9ae6392960d6b460d",
+      "pdf_url": "",
+      "publication_date": "2018-06-01",
+      "keywords_matched": [
+        "cloning attack"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "65d21b754a788782f05e43d6786e342ba8284cff",
       "title": "Neutralizing BLE Beacon-Based Electronic Attendance System Using Signal Imitation Attack",
       "abstract": "Many emerging location- or proximity-based applications use Bluetooth low energy (BLE) beacons thanks to the increasing popularity of the technology in mobile systems. An outstanding example is the BLE beacon-based electronic attendance system (BEAS) used in many universities today to increase the efficiency of lectures. Despite its popularity and usefulness, however, BEAS has not been thoroughly analyzed for its potential vulnerabilities. In this paper, we neutralize a university\u2019s BEAS by maliciously cheating attendance (i.e., faking attendance while the subject is not physically present at the location) in various scenarios using signal imitation attack, and investigate its possible vulnerabilities. The BEAS exploited in this paper is a commercial system actually used in a well-known university. After the exploitation experiment, we analyze the system\u2019s weaknesses and present possible counter-measures. Furthermore, additional attack methods are shown to re-counteract those possible counter-measures and to discuss the fundamental challenges, deficiencies, and suggestions in electronic attendance systems using BLE beacons.",
@@ -19147,29 +19192,6 @@
       "publication_date": "2018-12-03",
       "keywords_matched": [
         "imitation attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "2822dce260dc4930ccd276a9ae6392960d6b460d",
-      "title": "Combating Tag Cloning with COTS RFID Devices",
-      "abstract": "In RFID systems, a cloning attack is to fabricate one or more replicas of a genuine tag, so that these replicas behave exactly the same as the genuine tag and fool the reader for getting legal authorization, leading to potential financial loss or reputation damage for the corporations. These replicas are called clone tags. Although many advanced solutions have been proposed to combat cloning attack, they need to either modify the MAC- layer protocols or increase extra hardware resources, which cannot be deployed on commercial off-the-shelf (COTS) RFID devices for practical use. In this paper, we take a fresh attempt to counterattack tag cloning based on COTS RFID devices and the universal C1G2 standard, without any software redesign or hardware augment needed. The basic idea is to use the RF signal profile to characterize each tag. Since these physical-layer data are measured by the reader and susceptible to various environmental factors, they are hard to be estimated by the attackers; let alone be cloned. Even so, we assert that it is challenging to identify clone tags as the signal data from a genuine tag and its clones are all mixed together. Besides, the tag moving has a great impact on the measured RF signals. To overcome these challenges, we propose a clustering-based scheme that detects the cloning attack in the still scene and a chain- based scheme for clone detection in the dynamic scene, respectively. Extensive experiments on COTS RFID devices demonstrate that the detection accuracy of our approaches reaches 99.8% in a still case and 99.3% in a dynamic scene.",
-      "year": 2018,
-      "venue": "Annual IEEE Communications Society Conference on Sensor, Mesh and Ad Hoc Communications and Networks",
-      "authors": [
-        "Xingyu Chen",
-        "Jia Liu",
-        "Xia Wang",
-        "Xiaocong Zhang",
-        "Yanyan Wang",
-        "Lijun Chen"
-      ],
-      "citation_count": 8,
-      "url": "https://www.semanticscholar.org/paper/2822dce260dc4930ccd276a9ae6392960d6b460d",
-      "pdf_url": "",
-      "publication_date": "2018-06-01",
-      "keywords_matched": [
-        "cloning attack"
       ],
       "first_seen": "2025-12-05"
     },
@@ -19323,7 +19345,7 @@
         "Carolyn Kim",
         "Hamsa Bastani"
       ],
-      "citation_count": 134,
+      "citation_count": 133,
       "url": "https://www.semanticscholar.org/paper/a9007cf4c4ec7e4fc956bead7008a3605451de49",
       "pdf_url": "",
       "publication_date": "2017-06-29",
@@ -19448,7 +19470,7 @@
         "M. Reiter",
         "Thomas Ristenpart"
       ],
-      "citation_count": 1965,
+      "citation_count": 1966,
       "url": "https://www.semanticscholar.org/paper/8a95423d0059f7c5b1422f0ef1aa60b9e26aab7e",
       "pdf_url": "",
       "publication_date": "2016-08-10",
