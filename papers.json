@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-02",
+  "updated": "2026-01-03",
   "total": 918,
   "keywords": [
     "model stealing",
@@ -3974,6 +3974,27 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "85f707934e1630695fbfbdf1934a21760917416d",
+      "title": "TinyPower: Side-Channel Attacks with Tiny Neural Networks",
+      "abstract": "Side-channel attacks leverage correlations between power consumption and intermediate encryption results to infer encryption keys. Recent studies show that deep learning offers promising results in the context of side-channel attacks. However, neural networks utilized in deep-learning side-channel attacks are complex with a substantial number of parameters and consume significant memory. As a result, it is challenging to perform deep-learning side-channel attacks on resource-constrained devices. In this paper, we propose a framework, TinyPower, which leverages pruning to reduce the number of neural network parameters for side-channel attacks. Pruned neural networks obtained from our framework can successfully run side-channel attacks with significantly fewer parameters and less memory. Specifically, we focus on structured pruning over filters of Convolutional Neural Networks (CNNs). We demonstrate the effectiveness of structured pruning over power and EM traces of AES-128 running on microcontrollers (AVR XMEGA and ARM STM32) and FPGAs (Xilinx Artix-7). Our experimental results show that we can achieve a reduction rate of 98.8% (e.g., reducing the number of parameters from 53.1 million to 0.59 million) on a CNN and still recover keys on XMEGA. For STM32 and Artix-7, we achieve a reduction rate of 92.9% and 87.3% on a CNN respectively. We also demonstrate that our pruned CNNs can effectively perform the attack phase of side-channel attacks on a Raspberry Pi 4 with less than 2.5 millisecond inference time per trace and less than 41 MB memory usage per CNN.",
+      "year": 2024,
+      "venue": "IEEE International Symposium on Hardware Oriented Security and Trust",
+      "authors": [
+        "Haipeng Li",
+        "Mabon Ninan",
+        "Boyang Wang",
+        "J. M. Emmert"
+      ],
+      "citation_count": 14,
+      "url": "https://www.semanticscholar.org/paper/85f707934e1630695fbfbdf1934a21760917416d",
+      "pdf_url": "",
+      "publication_date": "2024-05-06",
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "df8401e2322f8f6f1b2cb8310cb048a939cce3d1",
       "title": "TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment",
       "abstract": "Proprietary large language models (LLMs) have been widely applied in various scenarios. Additionally, deploying LLMs on edge devices is trending for efficiency and privacy reasons. However, edge deployment of proprietary LLMs introduces new security challenges: edge-deployed models are exposed as white-box accessible to users, enabling adversaries to conduct model stealing (MS) attacks. Unfortunately, existing defense mechanisms fail to provide effective protection. Specifically, we identify four critical protection properties that existing methods fail to simultaneously satisfy: (1) maintaining protection after a model is physically copied; (2) authorizing model access at request level; (3) safeguarding runtime reverse engineering; (4) achieving high security with negligible runtime overhead. To address the above issues, we propose TransLinkGuard, a plug-and-play model protection approach against model stealing on edge devices. The core part of TransLinkGuard is a lightweight authorization module residing in a secure environment, e.g., TEE, which can freshly authorize each request based on its input. Extensive experiments show that TransLinkGuard achieves the same security as the black-box guarantees with negligible overhead.",
@@ -3998,27 +4019,6 @@
         "model stealing"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "85f707934e1630695fbfbdf1934a21760917416d",
-      "title": "TinyPower: Side-Channel Attacks with Tiny Neural Networks",
-      "abstract": "Side-channel attacks leverage correlations between power consumption and intermediate encryption results to infer encryption keys. Recent studies show that deep learning offers promising results in the context of side-channel attacks. However, neural networks utilized in deep-learning side-channel attacks are complex with a substantial number of parameters and consume significant memory. As a result, it is challenging to perform deep-learning side-channel attacks on resource-constrained devices. In this paper, we propose a framework, TinyPower, which leverages pruning to reduce the number of neural network parameters for side-channel attacks. Pruned neural networks obtained from our framework can successfully run side-channel attacks with significantly fewer parameters and less memory. Specifically, we focus on structured pruning over filters of Convolutional Neural Networks (CNNs). We demonstrate the effectiveness of structured pruning over power and EM traces of AES-128 running on microcontrollers (AVR XMEGA and ARM STM32) and FPGAs (Xilinx Artix-7). Our experimental results show that we can achieve a reduction rate of 98.8% (e.g., reducing the number of parameters from 53.1 million to 0.59 million) on a CNN and still recover keys on XMEGA. For STM32 and Artix-7, we achieve a reduction rate of 92.9% and 87.3% on a CNN respectively. We also demonstrate that our pruned CNNs can effectively perform the attack phase of side-channel attacks on a Raspberry Pi 4 with less than 2.5 millisecond inference time per trace and less than 41 MB memory usage per CNN.",
-      "year": 2024,
-      "venue": "IEEE International Symposium on Hardware Oriented Security and Trust",
-      "authors": [
-        "Haipeng Li",
-        "Mabon Ninan",
-        "Boyang Wang",
-        "J. M. Emmert"
-      ],
-      "citation_count": 13,
-      "url": "https://www.semanticscholar.org/paper/85f707934e1630695fbfbdf1934a21760917416d",
-      "pdf_url": "",
-      "publication_date": "2024-05-06",
-      "keywords_matched": [
-        "side-channel attack (title)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "0e536b831cf1053d2c523d2e16656ad27c7369f2",
@@ -9909,8 +9909,7 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack",
-        "model extraction defense",
-        "(via citation)"
+        "model extraction defense"
       ],
       "first_seen": "2025-12-05"
     },
@@ -14638,7 +14637,8 @@
       "publication_date": "2021-08-28",
       "keywords_matched": [
         "model extraction",
-        "model extraction attack"
+        "model extraction attack",
+        "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
