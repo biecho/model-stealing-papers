@@ -9930,8 +9930,7 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack",
-        "model extraction defense",
-        "(via citation)"
+        "model extraction defense"
       ],
       "first_seen": "2025-12-05"
     },
@@ -11562,6 +11561,28 @@
       "first_seen": "2025-12-05"
     },
     {
+      "paper_id": "ab3e38c43b08ef17694e1b2a3b334c6ce1bba476",
+      "title": "A Hybrid Neural Network Electromagnetic Inversion Scheme (HNNEMIS) for Super-Resolution 3-D Microwave Human Brain Imaging",
+      "abstract": "Super-resolution three-dimensional (3-D) electromagnetic (EM) inversion for microwave human brain imaging is a typical high contrast EM inverse problem and requires huge computational costs. This work proposes a hybrid neural network electromagnetic inversion scheme (HNNEMIS) which contains shallow and deep neural networks to alleviate the required huge computational costs and solve this high contrast inverse problem. In the proposed scheme, semi-join back propagation neural network (SJ-BPNN) is employed to nonlinearly map the measured scattered electric field to two output channels, namely the permittivity and conductivity of scatterers, respectively. Such a semi-join strategy decreases the computational burden in training and testing processes. Then, a deep learning technique, termed U-Net, is employed to further enhance the imaging quality of the output from SJ-BPNN. To decrease the training cost and make neural networks fast convergent for human brain inversion, a novel training dataset construction strategy which contains the characteristics of human brain is also proposed. Noise-free and noisy numerical examples demonstrate that HNNEMIS has superior super-resolution inversion capabilities for human brain imaging.",
+      "year": 2022,
+      "venue": "IEEE Transactions on Antennas and Propagation",
+      "authors": [
+        "Li-Ye Xiao",
+        "Ronghan Hong",
+        "Le Zhao",
+        "Hao Hu",
+        "Q. Liu"
+      ],
+      "citation_count": 16,
+      "url": "https://www.semanticscholar.org/paper/ab3e38c43b08ef17694e1b2a3b334c6ce1bba476",
+      "pdf_url": "",
+      "publication_date": "2022-08-01",
+      "keywords_matched": [
+        "electromagnetic analysis (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
       "paper_id": "bb6cf8210bb8035e71557dfb45d0170d909ced1f",
       "title": "Towards explainable model extraction attacks",
       "abstract": "One key factor able to boost the applications of artificial intelligence (AI) in security\u2010sensitive domains is to leverage them responsibly, which is engaged in providing explanations for AI. To date, a plethora of explainable artificial intelligence (XAI) has been proposed to help users interpret model decisions. However, given its data\u2010driven nature, the explanation itself is potentially susceptible to a high risk of exposing privacy. In this paper, we first show that the existing XAI is vulnerable to model extraction attacks and then present an XAI\u2010aware dual\u2010task model extraction attack (DTMEA). DTMEA can attack a target model with explanation services, that is, it can extract both the classification and explanation tasks of the target model. More specifically, the substitution model extracted by DTMEA is a multitask learning architecture, consisting of a sharing layer and two task\u2010specific layers for classification and explanation. To reveal which explanation technologies are more vulnerable to expose privacy information, we conduct an empirical evaluation of four major explanation types in the benchmark data set. Experimental results show that the attack accuracy of DTMEA outperforms the predicted\u2010only method with up to 1.25%, 1.53%, 9.25%, and 7.45% in MNIST, Fashion\u2010MNIST, CIFAR\u201010, and CIFAR\u2010100, respectively. By exposing the potential threats on explanation technologies, our research offers the insights to develop effective tools that are able to trade off security\u2010sensitive relationships.",
@@ -11584,28 +11605,6 @@
         "model extraction attack"
       ],
       "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "ab3e38c43b08ef17694e1b2a3b334c6ce1bba476",
-      "title": "A Hybrid Neural Network Electromagnetic Inversion Scheme (HNNEMIS) for Super-Resolution 3-D Microwave Human Brain Imaging",
-      "abstract": "Super-resolution three-dimensional (3-D) electromagnetic (EM) inversion for microwave human brain imaging is a typical high contrast EM inverse problem and requires huge computational costs. This work proposes a hybrid neural network electromagnetic inversion scheme (HNNEMIS) which contains shallow and deep neural networks to alleviate the required huge computational costs and solve this high contrast inverse problem. In the proposed scheme, semi-join back propagation neural network (SJ-BPNN) is employed to nonlinearly map the measured scattered electric field to two output channels, namely the permittivity and conductivity of scatterers, respectively. Such a semi-join strategy decreases the computational burden in training and testing processes. Then, a deep learning technique, termed U-Net, is employed to further enhance the imaging quality of the output from SJ-BPNN. To decrease the training cost and make neural networks fast convergent for human brain inversion, a novel training dataset construction strategy which contains the characteristics of human brain is also proposed. Noise-free and noisy numerical examples demonstrate that HNNEMIS has superior super-resolution inversion capabilities for human brain imaging.",
-      "year": 2022,
-      "venue": "IEEE Transactions on Antennas and Propagation",
-      "authors": [
-        "Li-Ye Xiao",
-        "Ronghan Hong",
-        "Le Zhao",
-        "Hao Hu",
-        "Q. Liu"
-      ],
-      "citation_count": 15,
-      "url": "https://www.semanticscholar.org/paper/ab3e38c43b08ef17694e1b2a3b334c6ce1bba476",
-      "pdf_url": "",
-      "publication_date": "2022-08-01",
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
-      ],
-      "first_seen": "2025-12-05"
     },
     {
       "paper_id": "52c28b417cf9e0b11d7d49a2600459a7fa0041e4",
