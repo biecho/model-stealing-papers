@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-04",
+  "updated": "2026-01-05",
   "total": 403,
   "keywords": [
     "model stealing",
@@ -1913,7 +1913,7 @@
         "Yonggang Wen",
         "Tianwei Zhang"
       ],
-      "citation_count": 24,
+      "citation_count": 25,
       "url": "https://www.semanticscholar.org/paper/3c3479215bcc775f8e37d7d5055a16b698904c9a",
       "pdf_url": "",
       "publication_date": "2024-05-13",
@@ -5196,8 +5196,7 @@
       "keywords_matched": [
         "model extraction",
         "model extraction attack",
-        "model extraction defense",
-        "(via citation)"
+        "model extraction defense"
       ],
       "first_seen": "2025-12-05"
     },
@@ -8454,7 +8453,7 @@
         "B. Schiele",
         "Mario Fritz"
       ],
-      "citation_count": 186,
+      "citation_count": 185,
       "url": "https://www.semanticscholar.org/paper/da10f79f983fd4fbd589ed7ffa68d33964841443",
       "pdf_url": "",
       "publication_date": "2019-06-26",
@@ -8859,7 +8858,7 @@
         "Samuel Marchal",
         "N. Asokan"
       ],
-      "citation_count": 482,
+      "citation_count": 481,
       "url": "https://www.semanticscholar.org/paper/4582e2350e4822834dcf266522690722dd4430d4",
       "pdf_url": "https://ieeexplore.ieee.org/ielx7/8790377/8806708/08806737.pdf",
       "publication_date": "2018-05-07",
@@ -8932,7 +8931,7 @@
         "M. Backes",
         "Mario Fritz"
       ],
-      "citation_count": 114,
+      "citation_count": 113,
       "url": "https://www.semanticscholar.org/paper/8589aa697cd170c793c4c729b81b6f6dfacb012c",
       "pdf_url": "https://arxiv.org/pdf/1808.00590",
       "publication_date": "2018-08-01",
