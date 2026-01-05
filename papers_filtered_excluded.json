@@ -249,6 +249,35 @@
       "filter_stage": "relevance"
     },
     {
+      "paper_id": "5bce864b579b376c028ec40a8fec0f999b005d0e",
+      "title": "Attack and defense techniques in large language models: A survey and new perspectives",
+      "abstract": "Large Language Models (LLMs) have become central to numerous natural language processing tasks, but their vulnerabilities present significant security and ethical challenges. This systematic survey explores the evolving landscape of attack and defense techniques in LLMs. We classify attacks into adversarial prompt attacks, optimized attacks, model theft, as well as attacks on LLM applications, detailing their mechanisms and implications. Consequently, we analyze defense strategies, such as prevention-based and detection-based defense methods. Although advances have been made, challenges remain to adapt to the dynamic threat landscape, balance usability with robustness, and address resource constraints in defense implementation. We highlight open issues, including the need for adaptive scalable defenses, adversarial attack detection, generalized defense mechanisms, and ethical and bias concerns. This survey provides actionable insights and directions for developing secure and resilient LLMs, emphasizing the importance of interdisciplinary collaboration and ethical considerations to mitigate risks in real-world applications.",
+      "year": 2025,
+      "venue": "Neural Networks",
+      "authors": [
+        "Zhiyu Liao",
+        "Kang Chen",
+        "Y. Lin",
+        "Kangkang Li",
+        "Yunxuan Liu",
+        "Hefeng Chen",
+        "Xingwang Huang",
+        "Yuanhui Yu"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/5bce864b579b376c028ec40a8fec0f999b005d0e",
+      "pdf_url": "",
+      "publication_date": "2025-05-02",
+      "keywords_matched": [
+        "model theft",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05",
+      "filter_reason": "No model stealing terminology in abstract",
+      "filter_confidence": "medium",
+      "filter_stage": "relevance"
+    },
+    {
       "paper_id": "b31459472aa34e8711fe845acaab9b7b4a74f1d8",
       "title": "Large Language Models Merging for Enhancing the Link Stealing Attack on Graph Neural Networks",
       "abstract": "Graph Neural Networks (GNNs), specifically designed to process the graph data, have achieved remarkable success in various applications. Link stealing attacks on graph data pose a significant privacy threat, as attackers aim to extract sensitive relationships between nodes (entities), potentially leading to academic misconduct, fraudulent transactions, or other malicious activities. Previous studies have primarily focused on single datasets and did not explore cross-dataset attacks, let alone attacks that leverage the combined knowledge of multiple attackers. However, we find that an attacker can combine the data knowledge of multiple attackers to create a more effective attack model, which can be referred to cross-dataset attacks. Moreover, if knowledge can be extracted with the help of Large Language Models (LLMs), the attack capability will be more significant. In this paper, we propose a novel link stealing attack method that takes advantage of cross-dataset and LLMs. The LLM is applied to process datasets with different data structures in cross-dataset attacks. Each attacker fine-tunes the LLM on their specific dataset to generate a tailored attack model. We then introduce a novel model merging method to integrate the parameters of these attacker-specific models effectively. The result is a merged attack model with superior generalization capabilities, enabling effective attacks not only on the attackers\u2019 datasets but also on previously unseen (out-of-domain) datasets. We conducted extensive experiments in four datasets to demonstrate the effectiveness of our method. Additional experiments with three different GNN and LLM architectures further illustrate the generality of our approach. In summary, we present a new link stealing attack method that facilitates collaboration among multiple attackers to develop a powerful, universal attack model that reflects realistic real-world scenarios.",
@@ -341,35 +370,6 @@
       "filter_reason": "No model stealing terminology in abstract",
       "filter_confidence": "high",
       "filter_stage": "topic"
-    },
-    {
-      "paper_id": "5bce864b579b376c028ec40a8fec0f999b005d0e",
-      "title": "Attack and defense techniques in large language models: A survey and new perspectives",
-      "abstract": "Large Language Models (LLMs) have become central to numerous natural language processing tasks, but their vulnerabilities present significant security and ethical challenges. This systematic survey explores the evolving landscape of attack and defense techniques in LLMs. We classify attacks into adversarial prompt attacks, optimized attacks, model theft, as well as attacks on LLM applications, detailing their mechanisms and implications. Consequently, we analyze defense strategies, such as prevention-based and detection-based defense methods. Although advances have been made, challenges remain to adapt to the dynamic threat landscape, balance usability with robustness, and address resource constraints in defense implementation. We highlight open issues, including the need for adaptive scalable defenses, adversarial attack detection, generalized defense mechanisms, and ethical and bias concerns. This survey provides actionable insights and directions for developing secure and resilient LLMs, emphasizing the importance of interdisciplinary collaboration and ethical considerations to mitigate risks in real-world applications.",
-      "year": 2025,
-      "venue": "Neural Networks",
-      "authors": [
-        "Zhiyu Liao",
-        "Kang Chen",
-        "Y. Lin",
-        "Kangkang Li",
-        "Yunxuan Liu",
-        "Hefeng Chen",
-        "Xingwang Huang",
-        "Yuanhui Yu"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/5bce864b579b376c028ec40a8fec0f999b005d0e",
-      "pdf_url": "",
-      "publication_date": "2025-05-02",
-      "keywords_matched": [
-        "model theft",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05",
-      "filter_reason": "No model stealing terminology in abstract",
-      "filter_confidence": "medium",
-      "filter_stage": "relevance"
     },
     {
       "paper_id": "f2b0fb9334fb9e490213ac315dbf52e9fbdbf93c",
@@ -2301,7 +2301,7 @@
         "Pengfei Liu",
         "Rui Wang"
       ],
-      "citation_count": 12,
+      "citation_count": 13,
       "url": "https://www.semanticscholar.org/paper/0e536b831cf1053d2c523d2e16656ad27c7369f2",
       "pdf_url": "",
       "publication_date": "2024-10-24",
@@ -11387,7 +11387,7 @@
         "J. Zennamo",
         "C. Zhang"
       ],
-      "citation_count": 68,
+      "citation_count": 69,
       "url": "https://www.semanticscholar.org/paper/1123310a9b95b66dd089e7fc05bcf68fc1d0567a",
       "pdf_url": "http://link.aps.org/pdf/10.1103/PhysRevD.99.092001",
       "publication_date": "2018-08-22",
@@ -11978,7 +11978,7 @@
         "Xingsheng Wang",
         "B. Cheng",
         "D. Reid",
-        "A. Pender",
+        "Andrew Pender",
         "P. Asenov",
         "C. Millar",
         "A. Asenov"
