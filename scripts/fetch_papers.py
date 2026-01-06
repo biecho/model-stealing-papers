@@ -621,7 +621,7 @@ def merge_papers(existing: dict[str, Paper], new_papers: list[Paper]) -> list[Pa
 
 def main():
     parser = argparse.ArgumentParser(description="Fetch ML security papers from Semantic Scholar")
-    parser.add_argument("--output", "-o", default="papers.json", help="Output JSON file")
+    parser.add_argument("--output", "-o", default="data/papers.json", help="Output JSON file")
     parser.add_argument("--config", "-c", help="YAML config file to load keywords from")
     parser.add_argument("--limit", "-l", type=int, default=100, help="Max papers per keyword search")
     parser.add_argument("--citation-limit", type=int, default=None, help="Max citations per seed (default: all)")

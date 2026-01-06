@@ -15,7 +15,7 @@ let manifest = null;
  */
 async function loadManifest() {
     try {
-        const response = await fetch('data/manifest.json');
+        const response = await fetch('../data/manifest.json');
         manifest = await response.json();
         return manifest;
     } catch (error) {
@@ -32,7 +32,7 @@ async function loadCategoryPapers(categoryId) {
     if (!cat) return [];
 
     try {
-        const response = await fetch(`data/${cat.file}`);
+        const response = await fetch(`../data/${cat.file}`);
         const data = await response.json();
         return data.papers || [];
     } catch (error) {
@@ -50,7 +50,7 @@ async function loadSubcategoryPapers(parentId, subId) {
 
     const sub = parent.subcategories[subId];
     try {
-        const response = await fetch(`data/${sub.file}`);
+        const response = await fetch(`../data/${sub.file}`);
         const data = await response.json();
         return data.papers || [];
     } catch (error) {

@@ -187,8 +187,8 @@ def main() -> int:
 
     parser.add_argument(
         "-i", "--input",
-        default="papers.json",
-        help="Input papers JSON file (default: papers.json)",
+        default="data/papers.json",
+        help="Input papers JSON file (default: data/papers.json)",
     )
     parser.add_argument(
         "-o", "--output-dir",
