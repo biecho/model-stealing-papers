@@ -30,6 +30,7 @@ class Config:
         self.owasp_id = self._data["domain"].get("owasp_id", "")
         self.owasp_name = self._data["domain"].get("owasp_name", "")
         self.short_description = self._data["domain"].get("short_description", "")
+        self.parent_id = self._data["domain"].get("parent_id", "")
 
         # Keywords
         self.high_quality_keywords = self._data["high_quality_keywords"]
@@ -136,6 +137,21 @@ class Config:
     def __repr__(self) -> str:
         """String representation of configuration."""
         return f"Config(domain={self.domain_name}, config_path={self.config_path})"
+
+    @property
+    def is_subcategory(self) -> bool:
+        """Check if this config is a subcategory."""
+        return bool(self.parent_id)
+
+    @classmethod
+    def list_main_configs(cls, configs_dir: str | Path = "configs") -> list["Config"]:
+        """List only main category configurations (not subcategories)."""
+        return [c for c in cls.list_configs(configs_dir) if not c.is_subcategory]
+
+    @classmethod
+    def list_subcategories(cls, parent_id: str, configs_dir: str | Path = "configs") -> list["Config"]:
+        """List subcategories for a given parent category."""
+        return [c for c in cls.list_configs(configs_dir) if c.parent_id == parent_id]
 
 
 # Global config instance (can be overridden)

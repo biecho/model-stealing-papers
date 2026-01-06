@@ -1,0 +1,87 @@
+# Configuration for paper filtering - ML01a: Prompt Injection
+# Subcategory of ML01: Input Manipulation Attack
+
+domain:
+  name: "prompt_injection"
+  owasp_id: "ML01a"
+  owasp_name: "Prompt Injection"
+  parent_id: "ML01"
+  description: "Attacks that manipulate LLM behavior through malicious prompts"
+  short_description: "Malicious prompts to manipulate LLM behavior"
+
+# High-quality keywords that strongly indicate relevant papers
+high_quality_keywords:
+  - "prompt injection"
+  - "prompt injection attack"
+  - "indirect prompt injection"
+  - "prompt hacking"
+  - "prompt attack"
+  - "LLM injection"
+
+# Core keywords that may indicate relevant papers
+core_keywords:
+  - "inject prompt"
+  - "malicious prompt"
+  - "adversarial prompt"
+  - "prompt manipulation"
+  - "instruction injection"
+  - "context injection"
+  - "system prompt attack"
+  - "prompt exploit"
+  - "LLM attack"
+  - "language model attack"
+  - "chatbot attack"
+
+# Defense-related keywords (still relevant to the domain)
+defense_keywords:
+  - "prompt injection defense"
+  - "prompt filtering"
+  - "prompt sanitization"
+  - "detect prompt injection"
+  - "prevent prompt injection"
+
+# Keywords known to cause false positives - should be avoided
+problematic_keywords:
+  - "SQL injection"
+  - "code injection"
+  - "dependency injection"
+  - "fuel injection"
+
+# Terms that must appear in abstract for a paper to be considered relevant
+required_abstract_terms:
+  - "prompt"
+  - "injection"
+  - "LLM"
+  - "language model"
+  - "chatbot"
+  - "GPT"
+  - "instruction"
+
+# Signals that indicate the paper is about something else
+exclusion_signals:
+  sql_injection:
+    - "SQL injection"
+    - "database injection"
+  code_injection:
+    - "code injection"
+    - "script injection"
+  dependency_injection:
+    - "dependency injection"
+    - "inversion of control"
+
+# Topics that may mention the domain but are primarily about something else
+other_topics:
+  jailbreaking:
+    - "jailbreak"
+    - "bypass safety"
+  adversarial_examples:
+    - "adversarial example"
+    - "perturbation"
+
+# Filtering thresholds and rules
+filtering_rules:
+  min_term_mentions: 1
+  watermark_dominance_threshold: 3
+  topic_dominance_ratio: 2.0
+  context_window: 50
+  first_paragraph_length: 300

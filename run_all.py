@@ -21,16 +21,22 @@ from src.utils import load_papers, save_papers
 
 def list_configs() -> None:
     """List all available OWASP category configurations."""
-    configs = Config.list_configs()
+    main_configs = Config.list_main_configs()
 
     print("=" * 70)
     print("OWASP ML Security Top 10 - Available Configurations")
     print("=" * 70)
 
-    for config in configs:
+    for config in main_configs:
         print(f"\n{config.owasp_id}: {config.owasp_name}")
         print(f"  Config: {config.config_path}")
         print(f"  Description: {config.short_description}")
+
+        # Show subcategories
+        subcats = Config.list_subcategories(config.owasp_id)
+        for sub in subcats:
+            print(f"  └─ {sub.owasp_id}: {sub.owasp_name}")
+            print(f"       {sub.short_description}")
 
 
 def filter_category(
@@ -86,7 +92,7 @@ def filter_category(
     if verbose:
         print(f"  Saved to: {output_file}")
 
-    return {
+    result = {
         "owasp_id": config.owasp_id,
         "owasp_name": config.owasp_name,
         "total": len(papers),
@@ -94,12 +100,16 @@ def filter_category(
         "excluded": excluded_count,
         "output_file": str(output_file),
     }
+    if config.parent_id:
+        result["parent_id"] = config.parent_id
+    return result
 
 
 def filter_all(input_file: Path, output_dir: Path) -> list[dict]:
-    """Filter papers for all categories."""
-    configs = Config.list_configs()
-    results = []
+    """Filter papers for all categories and subcategories."""
+    all_configs = Config.list_configs()
+    main_results = []
+    sub_results = []
 
     print("=" * 70)
     print("OWASP ML Security Top 10 - Filtering All Categories")
@@ -107,30 +117,38 @@ def filter_all(input_file: Path, output_dir: Path) -> list[dict]:
     print(f"Input: {input_file}")
     print(f"Output directory: {output_dir}")
 
-    for config in configs:
+    for config in all_configs:
         result = filter_category(config, input_file, output_dir)
-        results.append(result)
+        if config.is_subcategory:
+            sub_results.append(result)
+        else:
+            main_results.append(result)
 
     # Print summary
     print("\n" + "=" * 70)
     print("SUMMARY")
     print("=" * 70)
-    print(f"{'Category':<8} {'Name':<30} {'Papers':>8}")
-    print("-" * 50)
-    for r in results:
-        print(f"{r['owasp_id']:<8} {r['owasp_name'][:30]:<30} {r['relevant']:>8}")
+    print(f"{'Category':<10} {'Name':<30} {'Papers':>8}")
+    print("-" * 52)
+    for r in main_results:
+        print(f"{r['owasp_id']:<10} {r['owasp_name'][:30]:<30} {r['relevant']:>8}")
+        # Show subcategories
+        for s in sub_results:
+            if s.get('parent_id') == r['owasp_id']:
+                print(f"  └─{s['owasp_id']:<6} {s['owasp_name'][:28]:<28} {s['relevant']:>8}")
 
-    # Save manifest
+    # Save manifest with structured hierarchy
     manifest = {
         "updated": datetime.now().strftime("%Y-%m-%d"),
-        "categories": results,
+        "categories": main_results,
+        "subcategories": sub_results,
     }
     manifest_file = output_dir / "manifest.json"
     with open(manifest_file, "w") as f:
         json.dump(manifest, f, indent=2)
     print(f"\nManifest saved to: {manifest_file}")
 
-    return results
+    return main_results + sub_results
 
 
 def show_stats(output_dir: Path) -> None:
