@@ -4,81 +4,81 @@
     {
       "owasp_id": "ML01",
       "owasp_name": "Input Manipulation Attack",
-      "total": 919,
-      "relevant": 49,
-      "excluded": 870,
+      "total": 2593,
+      "relevant": 263,
+      "excluded": 2330,
       "output_file": "data/ml01_papers.json"
     },
     {
       "owasp_id": "ML02",
       "owasp_name": "Data Poisoning Attack",
-      "total": 919,
-      "relevant": 1,
-      "excluded": 918,
+      "total": 2593,
+      "relevant": 144,
+      "excluded": 2449,
       "output_file": "data/ml02_papers.json"
     },
     {
       "owasp_id": "ML03",
       "owasp_name": "Model Inversion Attack",
-      "total": 919,
-      "relevant": 215,
-      "excluded": 704,
+      "total": 2593,
+      "relevant": 196,
+      "excluded": 2397,
       "output_file": "data/ml03_papers.json"
     },
     {
       "owasp_id": "ML04",
       "owasp_name": "Membership Inference Attack",
-      "total": 919,
-      "relevant": 22,
-      "excluded": 897,
+      "total": 2593,
+      "relevant": 272,
+      "excluded": 2321,
       "output_file": "data/ml04_papers.json"
     },
     {
       "owasp_id": "ML05",
       "owasp_name": "Model Theft",
-      "total": 919,
-      "relevant": 296,
-      "excluded": 623,
+      "total": 2593,
+      "relevant": 113,
+      "excluded": 2480,
       "output_file": "data/ml05_papers.json"
     },
     {
       "owasp_id": "ML06",
       "owasp_name": "AI Supply Chain Attacks",
-      "total": 919,
-      "relevant": 27,
-      "excluded": 892,
+      "total": 2593,
+      "relevant": 176,
+      "excluded": 2417,
       "output_file": "data/ml06_papers.json"
     },
     {
       "owasp_id": "ML07",
       "owasp_name": "Transfer Learning Attack",
-      "total": 919,
-      "relevant": 138,
-      "excluded": 781,
+      "total": 2593,
+      "relevant": 400,
+      "excluded": 2193,
       "output_file": "data/ml07_papers.json"
     },
     {
       "owasp_id": "ML08",
       "owasp_name": "Model Skewing",
-      "total": 919,
-      "relevant": 0,
-      "excluded": 919,
+      "total": 2593,
+      "relevant": 2,
+      "excluded": 2591,
       "output_file": "data/ml08_papers.json"
     },
     {
       "owasp_id": "ML09",
       "owasp_name": "Output Integrity Attack",
-      "total": 919,
-      "relevant": 4,
-      "excluded": 915,
+      "total": 2593,
+      "relevant": 35,
+      "excluded": 2558,
       "output_file": "data/ml09_papers.json"
     },
     {
       "owasp_id": "ML10",
       "owasp_name": "Model Poisoning",
-      "total": 919,
-      "relevant": 12,
-      "excluded": 907,
+      "total": 2593,
+      "relevant": 143,
+      "excluded": 2450,
       "output_file": "data/ml10_papers.json"
     }
   ],

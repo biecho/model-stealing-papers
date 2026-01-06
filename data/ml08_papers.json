@@ -1,9 +1,47 @@
 {
   "updated": "2026-01-06",
-  "total": 0,
+  "total": 2,
   "owasp_id": "ML08",
   "owasp_name": "Model Skewing",
   "description": "Attacks that manipulate model behavior over time or cause concept drift.\n        This includes online learning attacks, model drift exploitation, feedback\n        loop manipulation, and techniques to gradually shift model behavior through\n        strategic inputs or data manipulation over time.",
   "note": "Classified by embeddings (threshold=0.3)",
-  "papers": []
+  "papers": [
+    {
+      "paper_id": "e47d888597262e13325bb00528cf0504e19e0499",
+      "title": "A better measure of relative prediction accuracy for model selection and model estimation",
+      "abstract": "Surveys show that the mean absolute percentage error (MAPE) is the most widely used measure of prediction accuracy in businesses and organizations. It is, however, biased: when used to select among competing prediction methods it systematically selects those whose predictions are too low. This has not been widely discussed and so is not generally known among practitioners. We explain why this happens. We investigate an alternative relative accuracy measure which avoids this bias: the log of the accuracy ratio, that is, log (prediction/actual). Relative accuracy is particularly relevant if the scatter in the data grows as the value of the variable grows (heteroscedasticity). We demonstrate using simulations that for heteroscedastic data (modelled by a multiplicative error factor) the proposed metric is far superior to MAPE for model selection. Another use for accuracy measures is in fitting parameters to prediction models. Minimum MAPE models do not predict a simple statistic and so theoretical analysis is limited. We prove that when the proposed metric is used instead, the resulting least squares regression model predicts the geometric mean. This important property allows its theoretical properties to be understood.",
+      "year": 2014,
+      "venue": "Journal of the Operational Research Society",
+      "authors": [
+        "C. Tofallis"
+      ],
+      "citation_count": 497,
+      "url": "https://www.semanticscholar.org/paper/e47d888597262e13325bb00528cf0504e19e0499",
+      "pdf_url": "https://arxiv.org/pdf/2105.05249",
+      "publication_date": "2014-07-01",
+      "keywords_matched": [
+        "biased prediction"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "effa2806d2c455d9ca2f1910e8540cb7156f8619",
+      "title": "Trading on a Rigged Game: Outcome Manipulation in Prediction Markets",
+      "abstract": null,
+      "year": 2016,
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "authors": [
+        "Mithun Chakraborty",
+        "Sanmay Das"
+      ],
+      "citation_count": 16,
+      "url": "https://www.semanticscholar.org/paper/effa2806d2c455d9ca2f1910e8540cb7156f8619",
+      "pdf_url": "",
+      "publication_date": "2016-07-09",
+      "keywords_matched": [
+        "prediction manipulation"
+      ],
+      "first_seen": "2026-01-06"
+    }
+  ]
 }

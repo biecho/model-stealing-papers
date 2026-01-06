@@ -1,97 +1,754 @@
 {
   "updated": "2026-01-06",
-  "total": 4,
+  "total": 35,
   "owasp_id": "ML09",
   "owasp_name": "Output Integrity Attack",
   "description": "Attacks that manipulate or corrupt model outputs. This includes output\n        manipulation, prediction tampering, confidence score manipulation, and\n        techniques to alter model responses after inference. Also covers attacks\n        on model explanations and interpretability outputs.",
   "note": "Classified by embeddings (threshold=0.3)",
   "papers": [
     {
-      "paper_id": "39b748fe7bfe1b7c063339de1ec90f0e0351ffda",
-      "title": "Defending against model extraction attacks with physical unclonable function",
-      "abstract": null,
-      "year": 2023,
-      "venue": "Information Sciences",
+      "paper_id": "32437a5e894ccf2f17e99f3186b371b0075e0f79",
+      "title": "A Close Examination of the 2016 Dallas and Baton Rouge Police Killers: Identifying Potential Risk Factors and Influences for Copycat Violence",
+      "abstract": "Two of the worst targeted attacks on American police officers in recent history occurred within eleven days of each other. Although it seems clear their proximity was not merely attributable to chance, the connection between these incidents, and the implications for understanding copycat violence, have never been fully explored. This study analyzes the perpetrators of these attacks from a \u201cthresholds of violence\u201d perspective, which suggests the first actor in a sequence is more likely to be disturbed and violence prone, while subsequent actors are typically less disturbed but more socially influenced. Results suggest the thresholds model has both merits and limits. The first attacker did have more psychological problems and violence in his past, and the second did seem more influenced by violent role models. However, there were also many similarities between them, and both attacked due to a combination of internal and external factors. If this study's findings are generalizable, higher risks of becoming a copycat offender may exist for individuals who have (1) personal similarities with previous attackers, (2) a history of psychological problems, (3) a history of interest in violent actors, and (4) recent escalation in their online behavior. Recommendations are offered for future research, offender profiling, and violence prevention.",
+      "year": 2021,
+      "venue": "International Criminal Justice Review",
       "authors": [
-        "Dawei Li",
-        "Di Liu",
-        "Ying Guo",
-        "Yangkun Ren",
-        "Jieyu Su",
-        "Jianwei Liu"
+        "Adam Lankford"
       ],
-      "citation_count": 11,
-      "url": "https://www.semanticscholar.org/paper/39b748fe7bfe1b7c063339de1ec90f0e0351ffda",
-      "pdf_url": "",
-      "publication_date": "2023-05-01",
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/32437a5e894ccf2f17e99f3186b371b0075e0f79",
+      "pdf_url": "https://zenodo.org/record/5877523",
+      "publication_date": "2021-11-23",
       "keywords_matched": [
-        "model extraction",
-        "model extraction attack",
-        "(via citation)"
+        "copycat model"
       ],
-      "first_seen": "2025-12-05"
+      "first_seen": "2026-01-06"
     },
     {
-      "paper_id": "c774bb2b6cb1108773a0e86aff0fc00003c7397a",
-      "title": "Finite\u2010state model extraction and visualization from Java program execution",
-      "abstract": "Finite\u2010state models are extensively used for discrete systems and they have also been adopted for the analysis and verification of concurrent systems. Programs that have a repetitive cycle, such as event\u2010driven servers and controllers, lend themselves to finite\u2010state modeling. In this article, we use the term model extraction to refer to the construction of a finite\u2010state model from an execution trace of a Java program and a set of key attributes, that is, a subset of the fields of the objects in the program execution. By choosing different sets of attributes, different finite\u2010state models (or views) of the execution can be obtained. Such models aid program comprehension and they can also be used in debugging a program. We present algorithms for model extraction and also for model abstraction in order to reduce the size of the extracted models so that they are amenable to visualization. For long executions, we show how to minimize the overhead of execution trace collection through a bytecode instrumentation technique; and, for large models, which are not amenable to visualization, we show how key properties of the extracted model can be checked against declarative specifications. We have implemented our techniques in the context of JIVE, an Eclipse plugin that supports runtime visualization and analysis of Java program executions. We illustrate our techniques through a collection of case studies of varying size and complexity, from classic problems of concurrency control to a medium\u2010size protocol for authorization (OAuth2.0 protocol) to a large\u2010scale software that underlies web applications (Apache Tomcat server).",
-      "year": 2020,
-      "venue": "Software, Practice & Experience",
+      "paper_id": "a4f89f730dc27f87b5db4623f643eff20c80c87c",
+      "title": "Semiring Provenance for First-Order Model Checking",
+      "abstract": "Given a first-order sentence, a model-checking computation tests whether the sentence holds true in a given finite structure. Data provenance extracts from this computation an abstraction of the manner in which its result depends on the data items that describe the model. Previous work on provenance was, to a large extent, restricted to the negation-free fragment of first-order logic and showed how provenance abstractions can be usefully described as elements of commutative semirings --- most generally as multivariate polynomials with positive integer coefficients. \nIn this paper we introduce a novel approach to dealing with negation and a corresponding commutative semiring of polynomials with dual indeterminates. These polynomials are used to perform reverse provenance analysis, i.e., finding models that satisfy various properties under given provenance tracking assumptions.",
+      "year": 2017,
+      "venue": "arXiv.org",
       "authors": [
-        "Jevitha K. P.",
-        "Swaminathan Jayaraman",
-        "B. Jayaraman",
-        "Sethumadhavan M"
+        "E. Gr\u00e4del",
+        "V. Tannen"
+      ],
+      "citation_count": 39,
+      "url": "https://www.semanticscholar.org/paper/a4f89f730dc27f87b5db4623f643eff20c80c87c",
+      "pdf_url": "",
+      "publication_date": "2017-12-06",
+      "keywords_matched": [
+        "model provenance"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "401154f96ea22e0a46784673a0af280b693e4afc",
+      "title": "Provenance analysis for FOL model checking",
+      "abstract": null,
+      "year": 2017,
+      "venue": "SIGL",
+      "authors": [
+        "V. Tannen"
+      ],
+      "citation_count": 14,
+      "url": "https://www.semanticscholar.org/paper/401154f96ea22e0a46784673a0af280b693e4afc",
+      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3051528.3051533?download=true",
+      "publication_date": "2017-02-09",
+      "keywords_matched": [
+        "model provenance"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "e06217b5d1c0bad7e67eb70094bd4a327359f6ef",
+      "title": "Lisa: Lazy Safety Alignment for Large Language Models against Harmful Fine-tuning Attack",
+      "abstract": "Recent studies show that Large Language Models (LLMs) with safety alignment can be jail-broken by fine-tuning on a dataset mixed with harmful data. First time in the literature, we show that the jail-broken effect can be mitigated by separating states in the finetuning stage to optimize the alignment and user datasets. Unfortunately, our subsequent study shows that this simple Bi-State Optimization (BSO) solution experiences convergence instability when steps invested in its alignment state is too small, leading to downgraded alignment performance. By statistical analysis, we show that the \\textit{excess drift} towards consensus could be a probable reason for the instability. To remedy this issue, we propose \\textbf{L}azy(\\textbf{i}) \\textbf{s}afety \\textbf{a}lignment (\\textbf{Lisa}), which introduces a proximal term to constraint the drift of each state. Theoretically, the benefit of the proximal term is supported by the convergence analysis, wherein we show that a sufficient large proximal factor is necessary to guarantee Lisa's convergence. Empirically, our results on four downstream finetuning tasks show that Lisa with a proximal term can significantly increase alignment performance while maintaining the LLM's accuracy on the user tasks. Code is available at \\url{https://github.com/git-disl/Lisa}.",
+      "year": 2024,
+      "venue": "Neural Information Processing Systems",
+      "authors": [
+        "Tiansheng Huang",
+        "Sihao Hu",
+        "Fatih Ilhan",
+        "S. Tekin",
+        "Ling Liu"
+      ],
+      "citation_count": 59,
+      "url": "https://www.semanticscholar.org/paper/e06217b5d1c0bad7e67eb70094bd4a327359f6ef",
+      "pdf_url": "",
+      "publication_date": "2024-05-28",
+      "keywords_matched": [
+        "fine-tuning attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "b671330235643532d99dc83d6c57110275ce80fa",
+      "title": "Detecting Instruction Fine-tuning Attack on Language Models with Influence Function",
+      "abstract": null,
+      "year": 2025,
+      "venue": "arXiv.org",
+      "authors": [
+        "Jiawei Li"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/b671330235643532d99dc83d6c57110275ce80fa",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "fine-tuning attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "2f4788a62ffa9929c7b399a9bc1e07917cc58b06",
+      "title": "Harmful Fine-tuning Attacks and Defenses for Large Language Models: A Survey",
+      "abstract": "Recent research demonstrates that the nascent fine-tuning-as-a-service business model exposes serious safety concerns -- fine-tuning over a few harmful data uploaded by the users can compromise the safety alignment of the model. The attack, known as harmful fine-tuning attack, has raised a broad research interest among the community. However, as the attack is still new, \\textbf{we observe that there are general misunderstandings within the research community.} To clear up concern, this paper provide a comprehensive overview to three aspects of harmful fine-tuning: attacks setting, defense design and evaluation methodology. Specifically, we first present the threat model of the problem, and introduce the harmful fine-tuning attack and its variants. Then we systematically survey the existing literature on attacks/defenses/mechanical analysis of the problem. Finally, we introduce the evaluation methodology and outline future research directions that might contribute to the development of the field. Additionally, we present a list of questions of interest, which might be useful to refer to when reviewers in the peer review process question the realism of the experiment/attack/defense setting. A curated list of relevant papers is maintained and made accessible at: https://github.com/git-disl/awesome_LLM-harmful-fine-tuning-papers.",
+      "year": 2024,
+      "venue": "arXiv.org",
+      "authors": [
+        "Tiansheng Huang",
+        "Sihao Hu",
+        "Fatih Ilhan",
+        "S. Tekin",
+        "Ling Liu"
+      ],
+      "citation_count": 76,
+      "url": "https://www.semanticscholar.org/paper/2f4788a62ffa9929c7b399a9bc1e07917cc58b06",
+      "pdf_url": "",
+      "publication_date": "2024-09-26",
+      "keywords_matched": [
+        "fine-tuning attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "b404299b85af6de362720347e373c5fe78bcbc23",
+      "title": "No Two Devils Alike: Unveiling Distinct Mechanisms of Fine-tuning Attacks",
+      "abstract": "The existing safety alignment of Large Language Models (LLMs) is found fragile and could be easily attacked through different strategies, such as through fine-tuning on a few harmful examples or manipulating the prefix of the generation results. However, the attack mechanisms of these strategies are still underexplored. In this paper, we ask the following question: \\textit{while these approaches can all significantly compromise safety, do their attack mechanisms exhibit strong similarities?} To answer this question, we break down the safeguarding process of an LLM when encountered with harmful instructions into three stages: (1) recognizing harmful instructions, (2) generating an initial refusing tone, and (3) completing the refusal response. Accordingly, we investigate whether and how different attack strategies could influence each stage of this safeguarding process. We utilize techniques such as logit lens and activation patching to identify model components that drive specific behavior, and we apply cross-model probing to examine representation shifts after an attack. In particular, we analyze the two most representative types of attack approaches: Explicit Harmful Attack (EHA) and Identity-Shifting Attack (ISA). Surprisingly, we find that their attack mechanisms diverge dramatically. Unlike ISA, EHA tends to aggressively target the harmful recognition stage. While both EHA and ISA disrupt the latter two stages, the extent and mechanisms of their attacks differ significantly. Our findings underscore the importance of understanding LLMs' internal safeguarding process and suggest that diverse defense mechanisms are required to effectively cope with various types of attacks.",
+      "year": 2024,
+      "venue": "arXiv.org",
+      "authors": [
+        "Chak Tou Leong",
+        "Yi Cheng",
+        "Kaishuai Xu",
+        "Jian Wang",
+        "Hanlin Wang",
+        "Wenjie Li"
+      ],
+      "citation_count": 28,
+      "url": "https://www.semanticscholar.org/paper/b404299b85af6de362720347e373c5fe78bcbc23",
+      "pdf_url": "",
+      "publication_date": "2024-05-25",
+      "keywords_matched": [
+        "fine-tuning attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "353afc6639e3791ced35ed35a1ccaa400577b0d5",
+      "title": "No, of course I can! Refusal Mechanisms Can Be Exploited Using Harmless Fine-Tuning Data",
+      "abstract": "Leading language model (LM) providers like OpenAI and Anthropic allow customers to fine-tune frontier LMs for specific use cases. To prevent abuse, these providers apply filters to block fine-tuning on overtly harmful data. In this setting, we make three contributions: First, while past work has shown that safety alignment is\"shallow\", we correspondingly demonstrate that existing fine-tuning attacks are shallow -- attacks target only the first several tokens of the model response, and consequently can be blocked by generating the first several response tokens with an aligned model. Second, we conceptually illustrate how to make attacks deeper by introducing a new fine-tuning attack that trains models to first refuse harmful requests before answering them; this\"refuse-then-comply\"strategy bypasses shallow defenses and produces harmful responses that evade output filters. Third, we demonstrate the potency of our new fine-tuning attack by jailbreaking both open-source models equipped with defenses and production models, achieving attack success rates of 57% and 72% against GPT-4o and Claude Haiku, respectively. Our attack received a $2000 bug bounty from OpenAI and was acknowledged as a vulnerability by Anthropic. Our work undermines the notion that models are safe because they initially refuse harmful requests and broadens awareness of the scope of attacks that face production fine-tuning APIs.",
+      "year": 2025,
+      "venue": "",
+      "authors": [
+        "Joshua Kazdan",
+        "Abhay Puri",
+        "Rylan Schaeffer",
+        "Lisa Yu",
+        "Chris Cundy",
+        "Jason Stanley",
+        "Sanmi Koyejo",
+        "K. Dvijotham"
+      ],
+      "citation_count": 5,
+      "url": "https://www.semanticscholar.org/paper/353afc6639e3791ced35ed35a1ccaa400577b0d5",
+      "pdf_url": "",
+      "publication_date": "2025-02-26",
+      "keywords_matched": [
+        "fine-tuning attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "a875514abc7447d94f1e6ccfe84ee9a88ca791d7",
+      "title": "Fine-Tuning Lowers Safety and Disrupts Evaluation Consistency",
+      "abstract": "Fine-tuning a general-purpose large language model (LLM) for a specific domain or task has become a routine procedure for ordinary users. However, fine-tuning is known to remove the safety alignment features of the model, even when the fine-tuning data does not contain any harmful content. We consider this to be a critical failure mode of LLMs due to the widespread uptake of fine-tuning, combined with the benign nature of the\"attack\". Most well-intentioned developers are likely unaware that they are deploying an LLM with reduced safety. On the other hand, this known vulnerability can be easily exploited by malicious actors intending to bypass safety guardrails. To make any meaningful progress in mitigating this issue, we first need reliable and reproducible safety evaluations. In this work, we investigate how robust a safety benchmark is to trivial variations in the experimental procedure, and the stochastic nature of LLMs. Our initial experiments expose surprising variance in the results of the safety evaluation, even when seemingly inconsequential changes are made to the fine-tuning setup. Our observations have serious implications for how researchers in this field should report results to enable meaningful comparisons in the future.",
+      "year": 2025,
+      "venue": "arXiv.org",
+      "authors": [
+        "Kathleen C. Fraser",
+        "Hillary Dawkins",
+        "Isar Nejadgholi",
+        "S. Kiritchenko"
+      ],
+      "citation_count": 6,
+      "url": "https://www.semanticscholar.org/paper/a875514abc7447d94f1e6ccfe84ee9a88ca791d7",
+      "pdf_url": "",
+      "publication_date": "2025-06-20",
+      "keywords_matched": [
+        "fine-tuning attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "5f390383dda4ad7018d36e5a9b5d6e424debe1c8",
+      "title": "Leveraging Dialogue State Tracking for Zero-Shot Chat-Based Social Engineering Attack Recognition",
+      "abstract": "Human-to-human dialogues constitute an essential research area for linguists, serving as a conduit for knowledge transfer in the study of dialogue systems featuring human-to-machine interaction. Dialogue systems have garnered significant acclaim and rapid growth owing to their deployment in applications such as virtual assistants (e.g., Alexa, Siri, etc.) and chatbots. Novel modeling techniques are being developed to enhance natural language understanding, natural language generation, and dialogue-state tracking. In this study, we leverage the terminology and techniques of dialogue systems to model human-to-human dialogues within the context of chat-based social engineering (CSE) attacks. The ability to discern an interlocutor\u2019s true intent is crucial for providing an effective real-time defense mechanism against CSE attacks. We introduce in-context dialogue acts that expose an interlocutor\u2019s intent, as well as the requested information that she sought to convey, thereby facilitating real-time recognition of CSE attacks. Our work proposes CSE domain-specific dialogue acts, utilizing a carefully crafted ontology, and creates an annotated corpus using dialogue acts as classification labels. Furthermore, we propose SG-CSE BERT, a BERT-based model following the schema-guided paradigm, for zero-shot CSE attack dialogue-state tracking. Our evaluation results demonstrate satisfactory performance.",
+      "year": 2023,
+      "venue": "Applied Sciences",
+      "authors": [
+        "Nikolaos Tsinganos",
+        "Panagiotis E. Fouliras",
+        "I. Mavridis"
+      ],
+      "citation_count": 15,
+      "url": "https://www.semanticscholar.org/paper/5f390383dda4ad7018d36e5a9b5d6e424debe1c8",
+      "pdf_url": "https://www.mdpi.com/2076-3417/13/8/5110/pdf?version=1681986309",
+      "publication_date": "2023-04-19",
+      "keywords_matched": [
+        "knowledge transfer attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "5ae6401d2046079d8f8a5213eed5682d8edeb8b8",
+      "title": "PrimeGuard: Safe and Helpful LLMs through Tuning-Free Routing",
+      "abstract": "Deploying language models (LMs) necessitates outputs to be both high-quality and compliant with safety guidelines. Although Inference-Time Guardrails (ITG) offer solutions that shift model output distributions towards compliance, we find that current methods struggle in balancing safety with helpfulness. ITG Methods that safely address non-compliant queries exhibit lower helpfulness while those that prioritize helpfulness compromise on safety. We refer to this trade-off as the guardrail tax, analogous to the alignment tax. To address this, we propose PrimeGuard, a novel ITG method that utilizes structured control flow. PrimeGuard routes requests to different self-instantiations of the LM with varying instructions, leveraging its inherent instruction-following capabilities and in-context learning. Our tuning-free approach dynamically compiles system-designer guidelines for each query. We construct and release safe-eval, a diverse red-team safety benchmark. Extensive evaluations demonstrate that PrimeGuard, without fine-tuning, overcomes the guardrail tax by (1) significantly increasing resistance to iterative jailbreak attacks and (2) achieving state-of-the-art results in safety guardrailing while (3) matching helpfulness scores of alignment-tuned models. Extensive evaluations demonstrate that PrimeGuard, without fine-tuning, outperforms all competing baselines and overcomes the guardrail tax by improving the fraction of safe responses from 61% to 97% and increasing average helpfulness scores from 4.17 to 4.29 on the largest models, while reducing attack success rate from 100% to 8%. PrimeGuard implementation is available at https://github.com/dynamofl/PrimeGuard and safe-eval dataset is available at https://huggingface.co/datasets/dynamoai/safe_eval.",
+      "year": 2024,
+      "venue": "arXiv.org",
+      "authors": [
+        "Blazej Manczak",
+        "Eliott Zemour",
+        "Eric Lin",
+        "Vaikkunth Mugunthan"
+      ],
+      "citation_count": 9,
+      "url": "https://www.semanticscholar.org/paper/5ae6401d2046079d8f8a5213eed5682d8edeb8b8",
+      "pdf_url": "",
+      "publication_date": "2024-07-23",
+      "keywords_matched": [
+        "safe fine-tuning"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "f3d271ba5de03da9e3b2748afaabea48425bf472",
+      "title": "Safety is Not Only About Refusal: Reasoning-Enhanced Fine-tuning for Interpretable LLM Safety",
+      "abstract": "Large Language Models (LLMs) are vulnerable to jailbreak attacks that exploit weaknesses in traditional safety alignment, which often relies on rigid refusal heuristics or representation engineering to block harmful outputs. While they are effective for direct adversarial attacks, they fall short of broader safety challenges requiring nuanced, context-aware decision-making. To address this, we propose Reasoning-enhanced Finetuning for interpretable LLM Safety (Rational), a novel framework that trains models to engage in explicit safe reasoning before response. Fine-tuned models leverage the extensive pretraining knowledge in self-generated reasoning to bootstrap their own safety through structured reasoning, internalizing context-sensitive decision-making. Our findings suggest that safety extends beyond refusal, requiring context awareness for more robust, interpretable, and adaptive responses. Reasoning is not only a core capability of LLMs but also a fundamental mechanism for LLM safety. Rational employs reasoning-enhanced fine-tuning, allowing it to reject harmful prompts while providing meaningful and context-aware responses in complex scenarios.",
+      "year": 2025,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "authors": [
+        "Yuyou Zhang",
+        "Miao Li",
+        "William Jongwon Han",
+        "Yi-Fan Yao",
+        "Zhepeng Cen",
+        "Ding Zhao"
       ],
       "citation_count": 16,
-      "url": "https://www.semanticscholar.org/paper/c774bb2b6cb1108773a0e86aff0fc00003c7397a",
+      "url": "https://www.semanticscholar.org/paper/f3d271ba5de03da9e3b2748afaabea48425bf472",
       "pdf_url": "",
-      "publication_date": "2020-10-11",
+      "publication_date": "2025-03-06",
       "keywords_matched": [
-        "model extraction"
+        "safe fine-tuning"
       ],
-      "first_seen": "2025-11-28"
+      "first_seen": "2026-01-06"
     },
     {
-      "paper_id": "9329e150170534e99d169a345aa68aeb004279ca",
-      "title": "The Attack of the Clones against Proof-of-Authority",
-      "abstract": "In this paper, we explore vulnerabilities and countermeasures of the recently proposed blockchain consensus based on proof-of-authority. The proof-of-work blockchains, like Bitcoin and Ethereum, have been shown both theoretically and empirically vulnerable to double spending attacks. This is why Byzantine fault tolerant consensus algorithms have gained popularity in the blockchain context for their ability to tolerate a limited number t of attackers among n participants. We formalize the recently proposed proof-of-authority consensus algorithms that are Byzantine fault tolerant by describing the Aura and Clique protocols present in the two mainstream implementations of Ethereum. We then introduce the Cloning Attack and show how to apply it to double spend in each of these protocols with a single malicious node. Our results show that the Cloning Attack against Aura is always successful while the same attack against Clique is about twice as fast and succeeds in most cases.",
-      "year": 2019,
-      "venue": "Network and Distributed System Security Symposium",
+      "paper_id": "897940fb5dd4d739b88c4659c4565d05f48d06b8",
+      "title": "GPT-4 Is Too Smart To Be Safe: Stealthy Chat with LLMs via Cipher",
+      "abstract": "Safety lies at the core of the development of Large Language Models (LLMs). There is ample work on aligning LLMs with human ethics and preferences, including data filtering in pretraining, supervised fine-tuning, reinforcement learning from human feedback, and red teaming, etc. In this study, we discover that chat in cipher can bypass the safety alignment techniques of LLMs, which are mainly conducted in natural languages. We propose a novel framework CipherChat to systematically examine the generalizability of safety alignment to non-natural languages -- ciphers. CipherChat enables humans to chat with LLMs through cipher prompts topped with system role descriptions and few-shot enciphered demonstrations. We use CipherChat to assess state-of-the-art LLMs, including ChatGPT and GPT-4 for different representative human ciphers across 11 safety domains in both English and Chinese. Experimental results show that certain ciphers succeed almost 100% of the time to bypass the safety alignment of GPT-4 in several safety domains, demonstrating the necessity of developing safety alignment for non-natural languages. Notably, we identify that LLMs seem to have a ''secret cipher'', and propose a novel SelfCipher that uses only role play and several demonstrations in natural language to evoke this capability. SelfCipher surprisingly outperforms existing human ciphers in almost all cases. Our code and data will be released at https://github.com/RobustNLP/CipherChat.",
+      "year": 2023,
+      "venue": "International Conference on Learning Representations",
       "authors": [
-        "Parinya Ekparinya",
-        "Vincent Gramoli",
-        "Guillaume Jourjon"
+        "Youliang Yuan",
+        "Wenxiang Jiao",
+        "Wenxuan Wang",
+        "Jen-Tse Huang",
+        "Pinjia He",
+        "Shuming Shi",
+        "Zhaopeng Tu"
       ],
-      "citation_count": 89,
-      "url": "https://www.semanticscholar.org/paper/9329e150170534e99d169a345aa68aeb004279ca",
-      "pdf_url": "https://doi.org/10.14722/ndss.2020.24082",
-      "publication_date": "2019-02-26",
+      "citation_count": 381,
+      "url": "https://www.semanticscholar.org/paper/897940fb5dd4d739b88c4659c4565d05f48d06b8",
+      "pdf_url": "https://arxiv.org/pdf/2308.06463",
+      "publication_date": "2023-08-12",
       "keywords_matched": [
-        "cloning attack"
+        "safe fine-tuning"
       ],
-      "first_seen": "2025-12-05"
+      "first_seen": "2026-01-06"
     },
     {
-      "paper_id": "3ba1d07d015d843dbfa6b6b4a8e433b3ee2caa18",
-      "title": "Research on Key Protocol Technology of Safe Access and Imitation Attack for Power Industrial Control Terminal Equipment",
-      "abstract": "Industrial control system is widely used in social production activities and its security is directly related to national security and social stability. In this paper, the security threats and protection status of power industry control system are analyzed. A framework of information security evaluation system for power industry control system is proposed, which consists of three parts: experimental verification environment, product detection capability and security service capability, and the construction scheme of the system is discussed. A hardware-in-the-loop simulation and verification platform is constructed to realize the simulation and verification of power industry control system tools. The vulnerability of power industry control protocol can be found in depth. The problem of ambiguous attack mechanism and lack of verification means of power industry control system is discussed, which can provide support for the research of attack and protection of power industry control system.",
-      "year": 2019,
-      "venue": "IOP Conference Series: Materials Science and Engineering",
+      "paper_id": "d53dd182bb218f551beea62c3212ca9430f0e904",
+      "title": "Prior fault and contrived criminal defences: coming to the law with clean hands",
+      "abstract": null,
+      "year": 2017,
+      "venue": "",
       "authors": [
-        "Xiaoqiang Wang",
-        "Rui",
-        "Zhao Xuehai Yu",
-        "Jinye Zhang"
+        "Qurat-ul-ain Jahangir",
+        "J. Child",
+        "H. Crombag"
+      ],
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/d53dd182bb218f551beea62c3212ca9430f0e904",
+      "pdf_url": "",
+      "publication_date": "2017-06-30",
+      "keywords_matched": [
+        "unfairness attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "a270a0525d61abcebb5329e9a39ee3f7873dcbc5",
+      "title": "Identifying Prediction Mistakes in Observational Data",
+      "abstract": "\n Decision makers, such as doctors, judges, and managers, make consequential choices based on predictions of unknown outcomes. Do these decision makers make systematic prediction mistakes based on the available information? If so, in what ways are their predictions systematically biased? In this article, I characterize conditions under which systematic prediction mistakes can be identified in empirical settings such as hiring, medical diagnosis, and pretrial release. I derive a statistical test for whether the decision maker makes systematic prediction mistakes under these assumptions and provide methods for estimating the ways the decision maker\u2019s predictions are systematically biased. I analyze the pretrial release decisions of judges in New York City, estimating that at least 20% of judges make systematic prediction mistakes about misconduct risk given defendant characteristics. Motivated by this analysis, I estimate the effects of replacing judges with algorithmic decision rules and find that replacing judges with algorithms where systematic prediction mistakes occur dominates the status quo.",
+      "year": 2024,
+      "venue": "Quarterly Journal of Economics",
+      "authors": [
+        "Ashesh Rambachan"
+      ],
+      "citation_count": 39,
+      "url": "https://www.semanticscholar.org/paper/a270a0525d61abcebb5329e9a39ee3f7873dcbc5",
+      "pdf_url": "https://academic.oup.com/qje/advance-article-pdf/doi/10.1093/qje/qjae013/57905924/qjae013.pdf",
+      "publication_date": "2024-05-28",
+      "keywords_matched": [
+        "biased prediction"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "0721695c52ffcb1c40a0717a59f4272b4e50f978",
+      "title": "Evaluating and Mitigating Discrimination in Language Model Decisions",
+      "abstract": "As language models (LMs) advance, interest is growing in applying them to high-stakes societal decisions, such as determining financing or housing eligibility. However, their potential for discrimination in such contexts raises ethical concerns, motivating the need for better methods to evaluate these risks. We present a method for proactively evaluating the potential discriminatory impact of LMs in a wide range of use cases, including hypothetical use cases where they have not yet been deployed. Specifically, we use an LM to generate a wide array of potential prompts that decision-makers may input into an LM, spanning 70 diverse decision scenarios across society, and systematically vary the demographic information in each prompt. Applying this methodology reveals patterns of both positive and negative discrimination in the Claude 2.0 model in select settings when no interventions are applied. While we do not endorse or permit the use of language models to make automated decisions for the high-risk use cases we study, we demonstrate techniques to significantly decrease both positive and negative discrimination through careful prompt engineering, providing pathways toward safer deployment in use cases where they may be appropriate. Our work enables developers and policymakers to anticipate, measure, and address discrimination as language model capabilities and applications continue to expand. We release our dataset and prompts at https://huggingface.co/datasets/Anthropic/discrim-eval",
+      "year": 2023,
+      "venue": "arXiv.org",
+      "authors": [
+        "Alex Tamkin",
+        "Amanda Askell",
+        "Liane Lovitt",
+        "Esin Durmus",
+        "Nicholas Joseph",
+        "Shauna Kravec",
+        "Karina Nguyen",
+        "Jared Kaplan",
+        "Deep Ganguli"
+      ],
+      "citation_count": 95,
+      "url": "https://www.semanticscholar.org/paper/0721695c52ffcb1c40a0717a59f4272b4e50f978",
+      "pdf_url": "",
+      "publication_date": "2023-12-06",
+      "keywords_matched": [
+        "discriminatory model"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "0c2f2ab50c10f4a031477cabf133f4ab33fe807a",
+      "title": "Data Integrity Attack Detection for Node Voltage in Cyber-Physical Power System",
+      "abstract": null,
+      "year": 2020,
+      "venue": "The Arabian journal for science and engineering",
+      "authors": [
+        "Ruzhi Xu",
+        "Dawei Chen",
+        "R. Wang"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/0c2f2ab50c10f4a031477cabf133f4ab33fe807a",
+      "pdf_url": "",
+      "publication_date": "2020-07-30",
+      "keywords_matched": [
+        "output integrity attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "1dc6b4b4fc629d3da824b7855abe053a5b67e1d0",
+      "title": "Integrity Attack With Takeover Local Objects On Multi-agent Cluster Systems",
+      "abstract": "This paper proposes an integrity attack strategy on multi-agent cluster systems. The attacker can take over a specific agent of the multi-agent systems without being detected by the strategy based on the discrete optimal quadratic controller. By designing the attack signal, the state of the target agent can be moved to the desired state, which achieves the takeover goal of the attack. Simultaneously, the residual error between the output of each agent and the estimated value calculated by the monitor in the multi-agent systems is within the alarm threshold, which guarantees the concealment of the attack. Numerical experiments illustrate the attack scenarios and effectiveness.",
+      "year": 2019,
+      "venue": "International Symposium on Industrial Electronics",
+      "authors": [
+        "Jintao Lai",
+        "Bo Zhang",
+        "L. Qiu",
+        "Shiyu Chen",
+        "Rong Yang",
+        "Jianping Yuan"
       ],
       "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/3ba1d07d015d843dbfa6b6b4a8e433b3ee2caa18",
-      "pdf_url": "https://doi.org/10.1088/1757-899x/677/4/042068",
-      "publication_date": "2019-12-10",
+      "url": "https://www.semanticscholar.org/paper/1dc6b4b4fc629d3da824b7855abe053a5b67e1d0",
+      "pdf_url": "",
+      "publication_date": "2019-06-01",
       "keywords_matched": [
-        "imitation attack"
+        "output integrity attack"
       ],
-      "first_seen": "2025-12-05"
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "daf3b8b70f7611ebdbace799b5cad97001ccb6d2",
+      "title": "Optimal data integrity attack on actuators in Cyber-Physical Systems",
+      "abstract": "The security issues are of prime importance for Cyber-Physical Systems (CPSs). Most existing works mainly investigate the secure control schemes against malicious attackers. This article analyzes how to design an data integrity attack scheme from the viewpoint of an attacker. The formulation of our approach is basically similar to the one of conventional optimal control method, with different prerequisites and solutions. An output feedback control system under data integrity attacks on actuators is considered in this article. Our work is aimed at constructing an optimal feedback attack law to maximize the error between the attacked system's output and the healthy system's output. Numerical examples are presented to demonstrate the effectiveness of the proposed method.",
+      "year": 2016,
+      "venue": "American Control Conference",
+      "authors": [
+        "Guangyu Wu",
+        "Jian Sun"
+      ],
+      "citation_count": 17,
+      "url": "https://www.semanticscholar.org/paper/daf3b8b70f7611ebdbace799b5cad97001ccb6d2",
+      "pdf_url": "",
+      "publication_date": "2016-07-01",
+      "keywords_matched": [
+        "output integrity attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "ac76a13676afda1033264d0af26a3ed82c5ba900",
+      "title": "Scanning the Issue Relaxing Integrity Requirements for Attack-Resilient Cyberphysical",
+      "abstract": null,
+      "year": 2019,
+      "venue": "",
+      "authors": [
+        "Ilija Jovanov"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/ac76a13676afda1033264d0af26a3ed82c5ba900",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "output integrity attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "373a7e2c24dcc8f6ffe02cc7a48822831a366fc2",
+      "title": "Cyber-Attack Analysis and Investigation on PMSM Drive System in Battery Electrical Vehicles",
+      "abstract": "This paper investigates and analyzes the vulnerability of permanent magnet synchronous motor (PMSM) drive systems in battery electric vehicles (BEVs) to system frequency manipulation attacks (SFMA) on frequency signal and signal integrity attacks (SIA) on a gate signal. To achieve the intended output of PMSM in terms of speed and torque, the proportional-integration-derivative (PID) controller has been used to improve the speed output of the motor by eliminating the noise and disturbance in a closed loop. These feedback loops and drive systems, which include feedback signals and gate drive signals, are accountable for cyber-physical attack vulnerabilities that result in anomalous motor and vehicle behaviour. Based on the simulation outcomes of the two attacks, the uncertainty of PMSM speed is explored, as they constitute threats to the PMSM drive system.",
+      "year": 2025,
+      "venue": "2025 IEEE Energy Conversion Congress & Exposition Asia (ECCE-Asia)",
+      "authors": [
+        "Nikhil B. Sardar",
+        "Prashant Surana",
+        "Gaurav Choudhary",
+        "Amit Kumar",
+        "G. Gatto"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/373a7e2c24dcc8f6ffe02cc7a48822831a366fc2",
+      "pdf_url": "",
+      "publication_date": "2025-05-11",
+      "keywords_matched": [
+        "output integrity attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "3bbbc4ddaa395938946b82afd4881a34b6609e3e",
+      "title": "SIV: a structural integrity verification approach of cloud components with enhanced privacy",
+      "abstract": ": Private data leakage is a threat to current integrity veri\ufb01cation schemes of cloud components. To address this issue, this work proposes a privacy-enhancing Structural Integrity Veri\ufb01cation (SIV) approach. It is made up of three processes: proof organization, proof transformation, and integrity judgement. By introducing a Merkle tree technique, the integrity of a constituent part of a cloud component on a node is represented by a root value. The value is then masked to cipher texts in proof transformation. With the masked proofs, a structural feature is extracted and validated in an integrity judgement by a third-party veri\ufb01cation provider. The integrity of the cloud component is visually displayed in the output result matrix. If there are abnormities, the corrupted constituent parts can be located. Integrity is veri\ufb01ed through the encrypted masked proofs. All raw proofs containing sensitive information stay on their original nodes, thus minimizing the attack surface of the proof data, and eliminating the risk of leaking private data at the source. Although some computations are added, the experimental results show that the time overhead is within acceptable bounds.",
+      "year": 2019,
+      "venue": "Tsinghua Science and Technology",
+      "authors": [
+        "Bo Zhao",
+        "Peiru Fan",
+        "Pengyuan Zhao",
+        "Mingtao Ni",
+        "Jinhui Liu"
+      ],
+      "citation_count": 5,
+      "url": "https://www.semanticscholar.org/paper/3bbbc4ddaa395938946b82afd4881a34b6609e3e",
+      "pdf_url": "https://doi.org/10.26599/tst.2018.9010132",
+      "publication_date": "2019-10-01",
+      "keywords_matched": [
+        "output integrity attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "51821fc9b683607881eb416d8033e4e9a7eaa311",
+      "title": "Detecting Integrity Attacks in IoT-based Cyber Physical Systems: a Case Study on Hydra Testbed",
+      "abstract": "The Internet of Things paradigm improves the classical information sharing scheme. However, it has increased the need for granting the security of the connected systems. In the industrial field, the problem becomes more complex due to the need of protecting a large attack surface while granting the availability of the system and the real time response to the presence of threats. In this contribution, we deal with the injection of tampered data into the communication channel to affect the physical system. The proposed approach relies on designing a secure control system by coding the output matrices according to a secret pattern. This pattern is created by using the Fibonacci p-sequences, numeric sequence depending on a key. The proposed method is validated on the Hydra testbed, emulating the industrial control network of a water distribution system.",
+      "year": 2018,
+      "venue": "Global Internet of Things Summit",
+      "authors": [
+        "F. Battisti",
+        "Giuseppe Bernieri",
+        "M. Carli",
+        "M. Lopardo",
+        "F. Pascucci"
+      ],
+      "citation_count": 6,
+      "url": "https://www.semanticscholar.org/paper/51821fc9b683607881eb416d8033e4e9a7eaa311",
+      "pdf_url": "https://arxiv.org/pdf/1910.01520",
+      "publication_date": "2018-06-01",
+      "keywords_matched": [
+        "output integrity attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "59e5646f5ab8a72b1f9cd2ea72f2244d6f92f853",
+      "title": "XBreaking: Understanding how LLMs security alignment can be broken",
+      "abstract": "Large Language Models are fundamental actors in the modern IT landscape dominated by AI solutions. However, security threats associated with them might prevent their reliable adoption in critical application scenarios such as government organizations and medical institutions. For this reason, commercial LLMs typically undergo a sophisticated censoring mechanism to eliminate any harmful output they could possibly produce. These mechanisms maintain the integrity of LLM alignment by guaranteeing that the models respond safely and ethically. In response to this, attacks on LLMs are a significant threat to such protections, and many previous approaches have already demonstrated their effectiveness across diverse domains. Existing LLM attacks mostly adopt a generate-and-test strategy to craft malicious input. To improve the comprehension of censoring mechanisms and design a targeted attack, we propose an Explainable-AI solution that comparatively analyzes the behavior of censored and uncensored models to derive unique exploitable alignment patterns. Then, we propose XBreaking, a novel approach that exploits these unique patterns to break the security and alignment constraints of LLMs by targeted noise injection. Our thorough experimental campaign returns important insights about the censoring mechanisms and demonstrates the effectiveness and performance of our approach.",
+      "year": 2025,
+      "venue": "",
+      "authors": [
+        "Marco Arazzi",
+        "Vignesh Kumar Kembu",
+        "Antonino Nocera",
+        "P. Vinod"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/59e5646f5ab8a72b1f9cd2ea72f2244d6f92f853",
+      "pdf_url": "",
+      "publication_date": "2025-04-30",
+      "keywords_matched": [
+        "output integrity attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "b01f5109dff79d108f5758966bd20bc17af561de",
+      "title": "Model Tampering Attacks Enable More Rigorous Evaluations of LLM Capabilities",
+      "abstract": "Evaluations of large language model (LLM) risks and capabilities are increasingly being incorporated into AI risk management and governance frameworks. Currently, most risk evaluations are conducted by designing inputs that elicit harmful behaviors from the system. However, this approach suffers from two limitations. First, input-output evaluations cannot fully evaluate realistic risks from open-weight models. Second, the behaviors identified during any particular input-output evaluation can only lower-bound the model's worst-possible-case input-output behavior. As a complementary method for eliciting harmful behaviors, we propose evaluating LLMs with model tampering attacks which allow for modifications to latent activations or weights. We pit state-of-the-art techniques for removing harmful LLM capabilities against a suite of 5 input-space and 6 model tampering attacks. In addition to benchmarking these methods against each other, we show that (1) model resilience to capability elicitation attacks lies on a low-dimensional robustness subspace; (2) the success rate of model tampering attacks can empirically predict and offer conservative estimates for the success of held-out input-space attacks; and (3) state-of-the-art unlearning methods can easily be undone within 16 steps of fine-tuning. Together, these results highlight the difficulty of suppressing harmful LLM capabilities and show that model tampering attacks enable substantially more rigorous evaluations than input-space attacks alone.",
+      "year": 2025,
+      "venue": "Trans. Mach. Learn. Res.",
+      "authors": [
+        "Zora Che",
+        "Stephen Casper",
+        "Robert Kirk",
+        "Anirudh Satheesh",
+        "Stewart Slocum",
+        "Lev E McKinney",
+        "Rohit Gandikota",
+        "Aidan Ewart",
+        "Domenic Rosati",
+        "Zichu Wu",
+        "Zikui Cai",
+        "Bilal Chughtai",
+        "Yarin Gal",
+        "Furong Huang",
+        "Dylan Hadfield-Menell"
+      ],
+      "citation_count": 23,
+      "url": "https://www.semanticscholar.org/paper/b01f5109dff79d108f5758966bd20bc17af561de",
+      "pdf_url": "",
+      "publication_date": "2025-02-03",
+      "keywords_matched": [
+        "output tampering"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "a51f2797ed5e8246f357b081fed71b59c36d3ee7",
+      "title": "RDGV: Reputation-Driven Gradual Verification for Tampering Localization in Cooperative Task Offloading",
+      "abstract": "In edge computing, offloading complex computation tasks from terminals to nearby edge nodes (ENs) is a critical solution. When an EN cannot complete the tasks independently, it offloads partial tasks to other ENs. These ENs return the results to the original EN, which integrates them before sending the final output to the terminal. This process, called cooperative task offloading, introduces significant security challenges, especially since ENs are typically provided by third parties. Some ENs, driven by self-interest or vulnerability to attack, may provide incorrect results to other ENs (i.e., acting as malicious ENs), ultimately causing the terminal to receive incorrect results. While existing schemes can help terminals detect incorrect results, they fail to locate the malicious ENs, leaving the system in an unreliable state and causing invalid computations based on erroneous intermediate results. We propose a reputation-driven gradual verification scheme (RDGV) to identify and locate malicious ENs. In RDGV, each EN is held accountable for the correctness of its results and faces penalties if the results are found to be incorrect. Successor ENs must verify the intermediate results before utilizing them. That is, gradual verification. An economic incentive rule counters potential attacks from malicious ENs, while reputation, representing EN\u2019s trustworthiness, guides a personalized verification strategy to reduce overall verification overhead. The effectiveness and advantages of RDGV are shown by simulation results and comparison with related work. The findings indicate that honest and continuous service is the optimal strategy for ENs to maintain the credibility of the edge system.",
+      "year": 2025,
+      "venue": "IEEE Transactions on Reliability",
+      "authors": [
+        "Zhihui Zhao",
+        "Yuan Jin",
+        "Siyan Zhu",
+        "Dan Yu",
+        "Hongsong Zhu",
+        "Yongle Chen"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/a51f2797ed5e8246f357b081fed71b59c36d3ee7",
+      "pdf_url": "",
+      "publication_date": "2025-12-01",
+      "keywords_matched": [
+        "output tampering"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "66376b8af589c800271e354cbaf9ea259ec3681b",
+      "title": "Deming\u2019s tampering revisited: definition and future research agenda",
+      "abstract": "\nPurpose\nHow do organisations know which problems are worthy of their attention? Despite good intentions, many attempts to solve problems fail. One reason for this failure might be because of attempts to solve non-problems or to solve problems with insufficient means, a concept proposed by Deming as tampering. The purpose of this paper is to suggest a definition of tampering, outline what is currently known about possible practical implications of tampering and to suggest how to extend this knowledge by proposing an agenda for future research.\n\n\nDesign/methodology/approach\nTo fulfil the purpose, a narrative literature review was conducted.\n\n\nFindings\nThrough this review, common aspects of what constitutes tampering are identified and the following definition is proposed: Tampering is a response to a perceived problem in the form of an action that is not directed at the fundamental cause of the problem, which leads to a deterioration of the process or the process output. In addition, recommendations are generated regarding how tampering manifests itself in practice and why tampering occurs. These recommendations could be studied in future research.\n\n\nOriginality/value\nTo the best of the authors\u2019 knowledge, this is the first paper that suggests a revitalisation of tampering. The results presented in this paper form the basis for continued studies on how tampering in organisations can be understood, managed and prevented.\n",
+      "year": 2021,
+      "venue": "International Journal of Quality and Service Sciences",
+      "authors": [
+        "Magdalena Smeds"
+      ],
+      "citation_count": 6,
+      "url": "https://www.semanticscholar.org/paper/66376b8af589c800271e354cbaf9ea259ec3681b",
+      "pdf_url": "https://www.emerald.com/insight/content/doi/10.1108/IJQSS-03-2021-0041/full/pdf?title=demings-tampering-revisited-definition-and-future-research-agenda",
+      "publication_date": "2021-12-15",
+      "keywords_matched": [
+        "output tampering"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "9925de8f08cd9a7968cbf365dbb5148392c45445",
+      "title": "A Hardware Security Protection Method for Conditional Branches of Embedded Systems",
+      "abstract": "The branch prediction units (BPUs) generally have security vulnerabilities, which can be used by attackers to tamper with the branches, and the existing protection methods cannot defend against these attacks. Therefore, this article proposes a hardware security protection method for conditional branches of embedded systems. This method calculates the number of branch target buffer (BTB) updates every 80 clock cycles. If the number exceeds the set threshold, the BTB will be locked and prevent any process from tampering with the BTB entries, thereby resisting branch prediction analysis (BPA) attacks. Moreover, to prevent attackers from stealing the critical information of branches, the method designs the hybrid arbiter physical unclonable function (APUF) circuit to encrypt and decrypt the directions, addresses, and indexes of branches. This circuit combines the advantages of double APUF and Feed-Forward APUF, which can enhance the randomness of output response and resist machine learning attacks. If attackers still successfully tamper with the branches and disrupt the control flow integrity (CFI), this method detects tampering with the instruction codes, jump addresses, and jump directions in a timely manner through dynamic and static label comparison. The proposed method is implemented and tested on FPGA. The experimental results show that this method can achieve fine-grained security protection for conditional branches, with about 5.4% resource overhead and less than 5.5% performance overhead.",
+      "year": 2024,
+      "venue": "Micromachines",
+      "authors": [
+        "Qiang Hao",
+        "Dongdong Xu",
+        "Yusen Qin",
+        "Ruyin Li",
+        "Zongxuan Zhang",
+        "Yunyan You",
+        "Xiang Wang"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/9925de8f08cd9a7968cbf365dbb5148392c45445",
+      "pdf_url": "https://www.mdpi.com/2072-666X/15/6/760/pdf?version=1717600693",
+      "publication_date": "2024-06-01",
+      "keywords_matched": [
+        "output tampering"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "324c6ef2f4e5a92ad7ba8e0266fcf597f6ec3155",
+      "title": "Identity\u2010Based Strong Designated Verifier Fully Homomorphic Signature Scheme From Lattices",
+      "abstract": "Identity\u2010based fully homomorphic signature (IBFHS) allows untrusted servers to conduct homomorphic evaluations on outsourced data to obtain a new valid signature, ensuring the evaluated output's correctness while significantly simplifying key management. However, the public composability of IBFHS limits its applicability in scenarios requiring restricted verification rights. For example, in cloud storage data audit systems, introducing a designated verifier mechanism ensures that only authorized third\u2010party auditors (TPAs) can verify data integrity, preventing malicious auditors from tampering with or forging results. To address this limitation, we propose an identity\u2010based strong designated verifier fully homomorphic signature (IBSDVFHS) scheme, where only an authorized entity can verify the validity of homomorphically evaluated signatures. We establish formal security definitions for IBSDVFHS, including unforgeability, nontransferability, privacy of the signer's identity, and robustness. Furthermore, we propose a specific design of IBSDVFHS with provable security under the small integer solution (SIS) assumption and the learning with errors (LWE) assumption in the random oracle model.",
+      "year": 2025,
+      "venue": "Concurrency and Computation",
+      "authors": [
+        "Mengdi Zhao",
+        "Huiyan Chen",
+        "Xi Lin"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/324c6ef2f4e5a92ad7ba8e0266fcf597f6ec3155",
+      "pdf_url": "",
+      "publication_date": "2025-10-20",
+      "keywords_matched": [
+        "output tampering"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "d4e5e3e0d6590a60121c9aba5d6f14f7236375a7",
+      "title": "SKG-Lock+: A Provably Secure Logic Locking SchemeCreating Significant Output Corruption",
+      "abstract": "The current trend to globalize the supply chain in the Integrated Circuits (ICs) industry has raised several security concerns including, among others, IC overproduction. Over the past years, logic locking has grown into a prominent countermeasure to tackle this threat in particular. Logic locking consists of \u201clocking\u201d an IC with an added primary input, the so-called key, which, unless fed with the correct secret value, renders the ICs unusable. One of the first criteria ensuring the quality of a logic locking technique was the output corruption, i.e., the corruption at the outputs of a locked circuit, for any wrong key value. However, since the introduction of SAT-based attacks, resulting countermeasures have compromised this criterion in favor of a better resilience against such attacks. In this work, we propose SKG-Lock+, a Provably Secure Logic Locking scheme that can thwart SAT-based attacks while maintaining significant output corruption. We perform a comprehensive security analysis of SKG-Lock+ and show its resilience against SAT-based attacks, as well as various other state-of-the-art attacks. Compared with related works, SKG-Lock+ provides higher output corruption and incurs acceptable overhead.",
+      "year": 2022,
+      "venue": "Electronics",
+      "authors": [
+        "Quang-Linh Nguyen",
+        "Sophie Dupuis",
+        "M. Flottes",
+        "B. Rouzeyre"
+      ],
+      "citation_count": 5,
+      "url": "https://www.semanticscholar.org/paper/d4e5e3e0d6590a60121c9aba5d6f14f7236375a7",
+      "pdf_url": "https://www.mdpi.com/2079-9292/11/23/3906/pdf?version=1669803668",
+      "publication_date": "2022-11-25",
+      "keywords_matched": [
+        "output corruption"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "0a84622ac7743998763aa8f5d1d1c04918bc6230",
+      "title": "IPAS: Intelligent protection against silent output corruption in scientific applications",
+      "abstract": null,
+      "year": 2016,
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "I. Laguna",
+        "M. Schulz",
+        "D. Richards",
+        "Jon C. Calhoun",
+        "Luke N. Olson"
+      ],
+      "citation_count": 73,
+      "url": "https://www.semanticscholar.org/paper/0a84622ac7743998763aa8f5d1d1c04918bc6230",
+      "pdf_url": "",
+      "publication_date": "2016-02-29",
+      "keywords_matched": [
+        "output corruption"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "920b0777835e312693fa1dac2e0ce67657112142",
+      "title": "Increased Output Corruption and Structural Attack Resilience for SAT Attack Secure Logic Locking",
+      "abstract": "Current out-of-cone logic locking methodologies provide resilience against the satisfiability (SAT) attack with minimal corruption of the outputs when comparing an activated and locked integrated circuit (IC). In addition, the structure of the modifications to the original logic leaks functional information of the circuit, which allows an adversary to determine the correct key. A novel logic locking methodology, CORruption adaptable logic locking (CORALL), is introduced in this article that provides increased security against the SAT attack for modified logic cones that require a large corruption of the primary outputs of the circuit, where the corruption is quantified by comparing between an activated and locked state of the IC. In addition, the modifications to the logic cone utilized by CORALL provide increased resilience against structural attacks. The CORALL architecture increases the number of iterations required to successfully execute a SAT attack for a flip function with 20 inputs by $34.41\\!{\\times }$ over SFLL-HD n/4 and $82.36\\!{\\times }$ over SFLL-Flex. In addition, a protected-cube selection process based on iterative cofactors is introduced, which provides varying logical functions of the perturb unit and maps portions of the logic of the perturb unit into the look-up tables (LUTs) of the CORALL architecture. The variation in the logical functions implemented by the perturb unit and the mapped functionality of the perturb unit into a LUT provide resistance to all current structural attacks on out-of-cone logic locking techniques.",
+      "year": 2021,
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "authors": [
+        "Kyle Juretus",
+        "I. Savidis"
+      ],
+      "citation_count": 12,
+      "url": "https://www.semanticscholar.org/paper/920b0777835e312693fa1dac2e0ce67657112142",
+      "pdf_url": "https://doi.org/10.1109/tcad.2020.2988629",
+      "publication_date": "2021-01-01",
+      "keywords_matched": [
+        "output corruption"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "80cb079eadb5710ad5bb8029bce49218b46d21f2",
+      "title": "A Methodology to Assess Output Vulnerability Factors for Detecting Silent Data Corruption",
+      "abstract": "As process technology scales, electronic devices become more susceptible to soft error induced by radiation. Silent data corruption (SDC) is considered the most severe outcome incurred by soft error. The effects of faulty variables on producing SDC vary widely. Without a profiling of vulnerability of variables, the derived detectors often incur low SDC detection rate or unacceptable overhead. To assess the vulnerability of variables to SDC, this paper proposes a metric called Output Vulnerability Factor (OVF). The metric is used to rank the variable\u2019s priority in the detector derivation process in order to selectively protect the most SDC-prone variable in the program. The calculation of OVF is based on enhanced Dynamic Dependence Graph (eDDG), a proposed instruction-level error propagation model. We filter out the edges representing the identified crash propagation path and perform a backward traversal of the eDDG to obtain SDC propagation path. Further, error masking probability is estimated for the edges refer to value comparison and logistic operation. Fault injections show that our approach achieves an SDC detection rate of 65.0% with the top 10% high OVF variables monitored. Compared with previous methods, the SDC detection rate increases by 12-21%.",
+      "year": 2019,
+      "venue": "IEEE Access",
+      "authors": [
+        "Junchi Ma",
+        "Zongtao Duan",
+        "Lei Tang"
+      ],
+      "citation_count": 7,
+      "url": "https://www.semanticscholar.org/paper/80cb079eadb5710ad5bb8029bce49218b46d21f2",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/8600701/08809768.pdf",
+      "publication_date": null,
+      "keywords_matched": [
+        "output corruption"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "525ade49b73d4def841dcec3191be68f5d6a0e3d",
+      "title": "JANUS-HD: Exploiting FSM Sequentiality and Synthesis Flexibility in Logic Obfuscation to Thwart SAT Attack While Offering Strong Corruption",
+      "abstract": "Logic obfuscation has been proposed as a counter-measure towards chip counterfeiting and IP piracy by obfuscating circuit designs with a key-controlled locking mechanism. However, the extensive output corruption of early key gate based logic obfuscation techniques has exposed them to effective SAT attacks. While current SAT resilient logic obfuscation techniques succeed in undermining the attack by offering near-trivial output corruption, they do so at the expense of a drastic reduction in functional and structural protection scope. In this work, we present JANUS-HD based on novel insights that succeed to deliver the heretofore elusive goal of simultaneously boosting corruptibility and foiling SAT attacks. JANUS-HD obfuscates an FSM through diverse FF configurations for different transitions with the overall configuration setting as the obfuscation secret. A key-controlled Hamming distance comparator controls the obfuscation status at the minimized number of entrance states identified through a custom graph partitioning algorithm. Reliance on the inherent state transition patterns extends the obfuscation benefits to non-entrance states without exposing any additional key space pruning trace. We leverage the flexibility of state encoding and equivalence-based FSM transformations to generate an obfuscated netlist at low overhead using standard synthesis tools. Finally, we present a scan chain crippling mechanism that delivers unfettered scan chain access while eradicating any key trace leakage in the scan mode, thus thwarting chosen-input attacks aimed at the Hamming distance comparator. We illustrate through experiments that JANUS-HD delivers obfuscation scope improvements of up to 45.5x over the state-of-the-art, establishing the first cost-effective solution to offer a broad yet attack-resilient obfuscation scope against supply chain threats.",
+      "year": 2022,
+      "venue": "Design, Automation and Test in Europe",
+      "authors": [
+        "Leon Li",
+        "A. Orailoglu"
+      ],
+      "citation_count": 17,
+      "url": "https://www.semanticscholar.org/paper/525ade49b73d4def841dcec3191be68f5d6a0e3d",
+      "pdf_url": "",
+      "publication_date": "2022-03-14",
+      "keywords_matched": [
+        "output corruption"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "eeea9a642c8c45400b82841be933a053979aebeb",
+      "title": "Corruption Exposes You: Statistical Key Recovery from Compound Logic Locking",
+      "abstract": "Logic locking (LL) has recently gained significant attention from both VLSI and the security community for preventing intellectual property (IP) piracy and unwanted modifications of hardware circuits. While a continuous development in this area can be observed both in terms of attacks and defenses, practical application of these schemes is still challenging, as several schemes have been found vulnerable against Boolean Satisfiability and functional analysis-based attacks. In this paper, we add yet another attack strategy in the arsenal. The proposed attack is statistical and utilizes Welch\u2019s t-test to enable key recovery from logic-locked netlists assuming oracle access to an activated chip. The key fact we utilize is the variation in output corruption for different key bits. Experimental evaluation on state-of-the-art LL benchmarks ensures that the proposed strategy can be a useful aid for conventional SAT and functional analysis-based attacks on LL schemes.",
+      "year": 2022,
+      "venue": "IEEE International Symposium on Quality Electronic Design",
+      "authors": [
+        "Arshdeep Kaur",
+        "Sayandeep Saha",
+        "C. Karfa",
+        "Debdeep Mukhopadhyay"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/eeea9a642c8c45400b82841be933a053979aebeb",
+      "pdf_url": "",
+      "publication_date": "2022-04-06",
+      "keywords_matched": [
+        "output corruption"
+      ],
+      "first_seen": "2026-01-06"
     }
   ]
 }
