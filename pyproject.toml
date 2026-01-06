@@ -17,6 +17,9 @@ dependencies = [
 dev = [
     "pytest>=7.0",
 ]
+classify = [
+    "sentence-transformers>=2.2.0",
+]
 
 [project.scripts]
 fetch-papers = "scripts.fetch_papers:main"

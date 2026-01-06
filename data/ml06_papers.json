@@ -1,65 +1,15 @@
 {
   "updated": "2026-01-06",
-  "total": 29,
+  "total": 27,
   "owasp_id": "ML06",
   "owasp_name": "AI Supply Chain Attacks",
-  "description": "Compromising ML through dependencies and third-party components",
-  "keywords": [
-    "model stealing",
-    "model extraction",
-    "model theft",
-    "steal model",
-    "stealing model",
-    "extract model",
-    "model stealing attack",
-    "model extraction attack",
-    "neural network extraction attack",
-    "knockoff nets",
-    "knockoff net",
-    "copycat CNN",
-    "copycat model",
-    "imitation attack",
-    "clone model",
-    "cloning attack",
-    "stealing machine learning",
-    "steal ML model",
-    "steal ML models",
-    "steal neural network",
-    "DNN model stealing",
-    "DNN extraction",
-    "stealing deep learning",
-    "LLM stealing",
-    "LLM extraction",
-    "stealing language model",
-    "stealing functionality",
-    "functionality stealing",
-    "black-box model stealing",
-    "blackbox model extraction",
-    "model stealing defense",
-    "model extraction defense",
-    "prevent model stealing",
-    "protect model extraction",
-    "side-channel model extraction",
-    "side-channel neural network",
-    "timing attack neural network",
-    "cache attack DNN",
-    "power analysis neural network",
-    "electromagnetic neural network",
-    "DNN weights leakage",
-    "neural network weight extraction",
-    "reverse engineer neural network",
-    "reverse engineering DNN",
-    "cryptanalytic extraction neural",
-    "API model extraction",
-    "query-based model stealing",
-    "prediction API stealing"
-  ],
-  "note": "Filtered for AI Supply Chain Attacks",
+  "description": "Attacks on the machine learning supply chain, including pre-trained models,\n        model repositories, ML pipelines, and dependencies. This includes trojaned\n        pre-trained models, malicious model hubs, compromised ML libraries, and\n        attacks on the infrastructure used to develop and deploy ML systems.",
+  "note": "Classified by embeddings (threshold=0.3)",
   "papers": [
     {
-      "paper_id": "0daf186b202c94263c68c6ffd19c3539c080a1f2",
-      "title": "A Systematic Survey of Model Extraction Attacks and Defenses: State-of-the-Art and Perspectives",
-      "abstract": "Machine learning (ML) models have significantly grown in complexity and utility, driving advances across multiple domains. However, substantial computational resources and specialized expertise have historically restricted their wide adoption. Machine-Learning-as-a-Service (MLaaS) platforms have addressed these barriers by providing scalable, convenient, and affordable access to sophisticated ML models through user-friendly APIs. While this accessibility promotes widespread use of advanced ML capabilities, it also introduces vulnerabilities exploited through Model Extraction Attacks (MEAs). Recent studies have demonstrated that adversaries can systematically replicate a target model's functionality by interacting with publicly exposed interfaces, posing threats to intellectual property, privacy, and system security. In this paper, we offer a comprehensive survey of MEAs and corresponding defense strategies. We propose a novel taxonomy that classifies MEAs according to attack mechanisms, defense approaches, and computing environments. Our analysis covers various attack techniques, evaluates their effectiveness, and highlights challenges faced by existing defenses, particularly the critical trade-off between preserving model utility and ensuring security. We further assess MEAs within different computing paradigms and discuss their technical, ethical, legal, and societal implications, along with promising directions for future research. This systematic survey aims to serve as a valuable reference for researchers, practitioners, and policymakers engaged in AI security and privacy. Additionally, we maintain an online repository continuously updated with related literature at https://github.com/kzhao5/ModelExtractionPapers.",
+      "paper_id": "7044d075fba8c188f716a25618d522c808a67a96",
+      "title": "A Survey of Model Extraction Attacks and Defenses in Distributed Computing Environments",
+      "abstract": "Model Extraction Attacks (MEAs) threaten modern machine learning systems by enabling adversaries to steal models, exposing intellectual property and training data. With the increasing deployment of machine learning models in distributed computing environments, including cloud, edge, and federated learning settings, each paradigm introduces distinct vulnerabilities and challenges. Without a unified perspective on MEAs across these distributed environments, organizations risk fragmented defenses, inadequate risk assessments, and substantial economic and privacy losses. This survey is motivated by the urgent need to understand how the unique characteristics of cloud, edge, and federated deployments shape attack vectors and defense requirements. We systematically examine the evolution of attack methodologies and defense mechanisms across these environments, demonstrating how environmental factors influence security strategies in critical sectors such as autonomous vehicles, healthcare, and financial services. By synthesizing recent advances in MEAs research and discussing the limitations of current evaluation practices, this survey provides essential insights for developing robust and adaptive defense strategies. Our comprehensive approach highlights the importance of integrating protective measures across the entire distributed computing landscape to ensure the secure deployment of machine learning models.",
       "year": 2025,
       "venue": "arXiv.org",
       "authors": [
@@ -70,33 +20,61 @@
         "Yue Zhao",
         "Yushun Dong"
       ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/0daf186b202c94263c68c6ffd19c3539c080a1f2",
+      "citation_count": 7,
+      "url": "https://www.semanticscholar.org/paper/7044d075fba8c188f716a25618d522c808a67a96",
       "pdf_url": "",
-      "publication_date": "2025-08-20",
+      "publication_date": "2025-02-22",
       "keywords_matched": [
         "model extraction",
+        "steal model",
         "model extraction attack"
       ],
-      "first_seen": "2025-12-05"
+      "first_seen": "2025-11-28"
     },
     {
-      "paper_id": "edc7c0b636b1b5a9e268b4b554e915ac49e9b747",
-      "title": "THEMIS: Towards Practical Intellectual Property Protection for Post-Deployment On-Device Deep Learning Models",
-      "abstract": "On-device deep learning (DL) has rapidly gained adoption in mobile apps, offering the benefits of offline model inference and user privacy preservation over cloud-based approaches. However, it inevitably stores models on user devices, introducing new vulnerabilities, particularly model-stealing attacks and intellectual property infringement. While system-level protections like Trusted Execution Environments (TEEs) provide a robust solution, practical challenges remain in achieving scalable on-device DL model protection, including complexities in supporting third-party models and limited adoption in current mobile solutions. Advancements in TEE-enabled hardware, such as NVIDIA's GPU-based TEEs, may address these obstacles in the future. Currently, watermarking serves as a common defense against model theft but also faces challenges here as many mobile app developers lack corresponding machine learning expertise and the inherent read-only and inference-only nature of on-device DL models prevents third parties like app stores from implementing existing watermarking techniques in post-deployment models. To protect the intellectual property of on-device DL models, in this paper, we propose THEMIS, an automatic tool that lifts the read-only restriction of on-device DL models by reconstructing their writable counterparts and leverages the untrainable nature of on-device DL models to solve watermark parameters and protect the model owner's intellectual property. Extensive experimental results across various datasets and model structures show the superiority of THEMIS in terms of different metrics. Further, an empirical investigation of 403 real-world DL mobile apps from Google Play is performed with a success rate of 81.14%, showing the practicality of THEMIS.",
+      "paper_id": "f9b4f91ceca3254f882789b330b7c9044bf408a8",
+      "title": "SoK: Are Watermarks in LLMs Ready for Deployment?",
+      "abstract": "Large Language Models (LLMs) have transformed natural language processing, demonstrating impressive capabilities across diverse tasks. However, deploying these models introduces critical risks related to intellectual property violations and potential misuse, particularly as adversaries can imitate these models to steal services or generate misleading outputs. We specifically focus on model stealing attacks, as they are highly relevant to proprietary LLMs and pose a serious threat to their security, revenue, and ethical deployment. While various watermarking techniques have emerged to mitigate these risks, it remains unclear how far the community and industry have progressed in developing and deploying watermarks in LLMs. To bridge this gap, we aim to develop a comprehensive systematization for watermarks in LLMs by 1) presenting a detailed taxonomy for watermarks in LLMs, 2) proposing a novel intellectual property classifier to explore the effectiveness and impacts of watermarks on LLMs under both attack and attack-free environments, 3) analyzing the limitations of existing watermarks in LLMs, and 4) discussing practical challenges and potential future directions for watermarks in LLMs. Through extensive experiments, we show that despite promising research outcomes and significant attention from leading companies and community to deploy watermarks, these techniques have yet to reach their full potential in real-world applications due to their unfavorable impacts on model utility of LLMs and downstream tasks. Our findings provide an insightful understanding of watermarks in LLMs, highlighting the need for practical watermarks solutions tailored to LLM deployment.",
       "year": 2025,
-      "venue": "USENIX Security Symposium",
+      "venue": "arXiv.org",
       "authors": [
-        "Yujin Huang",
-        "Zhi Zhang",
-        "Qingchuan Zhao",
-        "Xingliang Yuan",
-        "Chunyang Chen"
+        "Kieu Dang",
+        "Phung Lai",
+        "Nhathai Phan",
+        "Yelong Shen",
+        "Ruoming Jin",
+        "Abdallah Khreishah",
+        "My T. Thai"
       ],
       "citation_count": 1,
-      "url": "https://www.semanticscholar.org/paper/edc7c0b636b1b5a9e268b4b554e915ac49e9b747",
+      "url": "https://www.semanticscholar.org/paper/f9b4f91ceca3254f882789b330b7c9044bf408a8",
       "pdf_url": "",
-      "publication_date": "2025-03-31",
+      "publication_date": "2025-06-05",
+      "keywords_matched": [
+        "model stealing",
+        "model stealing attack"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
+      "paper_id": "1d358a789c5e73b17c6aa4541d386d4cda4ab8d0",
+      "title": "Security Risks in AI Accelerators: Detecting RTL Vulnerabilities to Model Theft with Formal Verification",
+      "abstract": null,
+      "year": 2025,
+      "venue": "IEEE European Test Symposium",
+      "authors": [
+        "Mohamed Shelkamy Ali",
+        "Lucas Deutschmann",
+        "Johannes M\u00fcller",
+        "Anna Lena Duque Ant\u00f3n",
+        "M. R. Fadiheh",
+        "D. Stoffel",
+        "Wolfgang Kunz"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/1d358a789c5e73b17c6aa4541d386d4cda4ab8d0",
+      "pdf_url": "",
+      "publication_date": "2025-05-26",
       "keywords_matched": [
         "model theft"
       ],
@@ -128,108 +106,20 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "16743a0a8daad27538a0bc734ed42abca3a14289",
-      "title": "Defense Against Model Stealing Based on Account-Aware Distribution Discrepancy",
-      "abstract": "Malicious users attempt to replicate commercial models functionally at low cost by training a clone model with query responses. It is challenging to timely prevent such model-stealing attacks to achieve strong protection and maintain utility. In this paper, we propose a novel non-parametric detector called Account-aware Distribution Discrepancy (ADD) to recognize queries from malicious users by leveraging account-wise local dependency. We formulate each class as a Multivariate Normal distribution (MVN) in the feature space and measure the malicious score as the sum of weighted class-wise distribution discrepancy. The ADD detector is combined with random-based prediction poisoning to yield a plug-and-play defense module named D-ADD for image classification models. Results of extensive experimental studies show that D-ADD achieves strong defense against different types of attacks with little interference in serving benign users for both soft and hard-label settings.",
+      "paper_id": "51f750009d83c9112509bed3946077b032d78ccc",
+      "title": "Measuring the Vulnerability Disclosure Policies of AI Vendors",
+      "abstract": "As AI is increasingly integrated into products and critical systems, researchers are paying greater attention to identifying related vulnerabilities. Effective remediation depends on whether vendors are willing to accept and respond to AI vulnerability reports. In this paper, we examine the disclosure policies of 264 AI vendors. Using a mixed-methods approach, our quantitative analysis finds that 36% of vendors provide no disclosure channel, and only 18% explicitly mention AI-related risks. Vulnerabilities involving data access, authorization, and model extraction are generally considered in-scope, while jailbreaking and hallucination are frequently excluded. Through qualitative analysis, we further identify three vendor postures toward AI vulnerabilities - proactive clarification (n = 46, include active supporters, AI integrationists, and back channels), silence (n = 115, include self-hosted and hosted vendors), and restrictive (n = 103). Finally, by comparing vendor policies against 1,130 AI incidents and 359 academic publications, we show that bug bounty policy evolution has lagged behind both academic research and real-world events.",
       "year": 2025,
-      "venue": "AAAI Conference on Artificial Intelligence",
+      "venue": "arXiv.org",
       "authors": [
-        "Jian-Ping Mei",
-        "Weibin Zhang",
-        "Jie Chen",
-        "Xuyun Zhang",
-        "Tiantian Zhu"
+        "Yangheran Piao",
+        "Jingjie Li",
+        "Daniel W. Woods"
       ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/16743a0a8daad27538a0bc734ed42abca3a14289",
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/51f750009d83c9112509bed3946077b032d78ccc",
       "pdf_url": "",
-      "publication_date": "2025-03-16",
-      "keywords_matched": [
-        "model stealing",
-        "clone model"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "68f0633a0be1a7009c4caf765529d898b2450044",
-      "title": "SONNI: Secure Oblivious Neural Network Inference",
-      "abstract": "In the standard privacy-preserving Machine learning as-a-service (MLaaS) model, the client encrypts data using homomorphic encryption and uploads it to a server for computation. The result is then sent back to the client for decryption. It has become more and more common for the computation to be outsourced to third-party servers. In this paper we identify a weakness in this protocol that enables a completely undetectable novel model-stealing attack that we call the Silver Platter attack. This attack works even under multikey encryption that prevents a simple collusion attack to steal model parameters. We also propose a mitigation that protects privacy even in the presence of a malicious server and malicious client or model provider (majority dishonest). When compared to a state-of-the-art but small encrypted model with 32k parameters, we preserve privacy with a failure chance of 1.51 x 10^-28 while batching capability is reduced by 0.2%. Our approach uses a novel results-checking protocol that ensures the computation was performed correctly without violating honest clients' data privacy. Even with collusion between the client and the server, they are unable to steal model parameters. Additionally, the model provider cannot learn any client data if maliciously working with the server.",
-      "year": 2025,
-      "venue": "International Conference on Security and Cryptography",
-      "authors": [
-        "Luke Sperling",
-        "Sandeep S. Kulkarni"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/68f0633a0be1a7009c4caf765529d898b2450044",
-      "pdf_url": "",
-      "publication_date": "2025-04-26",
-      "keywords_matched": [
-        "steal model"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "64bebdbe7fa9a6b173533e64c35960e0378ea21a",
-      "title": "Knockoff Branch: Model Stealing Attack via Adding Neurons in the Pre-Trained Model",
-      "abstract": "We introduce Knockoff Branch: adding few neurons as a knockoff container for learning stolen features. Model stealing attacks extract the functionality from the victim model by querying APIs. Prior work substantially enhanced transferability and improved query efficiency between the adversary model and the victim model. However, there is still a limited understanding of the knockoff itself. For knockoff, the model is either compared to the same type but with different structures or different types and capacities. For this reason, we propose a framework to analyze the knockoff quality for a single model, specifically reinvestigating transformer-based extraction. We observed that 1) when the adversary can access the public pretrained model, full fine-tuning is not necessary. This allows a knockoff to require only about 0.5% of trainable parameters and 20 epochs. 2) Although querying by out-of-distribution datasets leads to a sub-optimal knockoff, this issue can be mitigated by scaling branch features, even without using complicated sampling strategies. Our proposed method is lightweight and achieves high accuracy, at most similar to white-box knowledge distillation (higher performance than the victim model). https://github.com/onlyin-hung/knockoff-branch.",
-      "year": 2025,
-      "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
-      "authors": [
-        "Li-Ying Hung",
-        "Cooper Cheng-Yuan Ku"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/64bebdbe7fa9a6b173533e64c35960e0378ea21a",
-      "pdf_url": "",
-      "publication_date": "2025-02-26",
-      "keywords_matched": [
-        "model stealing",
-        "model stealing attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "bc15874a504bc3abf610ce66fc8bc8d5e8d6e7ac",
-      "title": "Too Clever by Half: Detecting Sampling-based Model Stealing Attacks by Their Own Cleverness",
-      "abstract": "Machine learning as a service (MLaaS) has gained significant popularity and market traction in recent years, driven by advancements in Artificial Intelligence particularly Generative AI (GAI). However, MLaaS faces severe challenges from sampling-based model stealing attacks (MSAs), where attackers strategically query the targeted ML models provided by MLaaS providers to minimize the query burden while closely replicating the model\u2019s functionality. Such MSAs pose severe consequences, including intellectual property (IP) theft and potential leakage of private training data. Unfortunately, existing defenses either sacrifice model utility or fail to generalize across diverse MSAs.In this paper, we propose DIARY, an innovative detection method specifically tailored to sampling-based MSAs by exploiting their inherent sophistication. Our key insight is that \u2018clever\u2019 malicious queries tend to extract more information from the targeted (victim) model than typical benign queries, as these attacks iteratively refine their queries by examining and analyzing prior queries and the corresponding responses. Hence we design DIARY to extract timing dependence within a query sequence and incorporate contrastive learning for properly characterizing such dependency that holds for different sampling-based MSAs. Comprehensive evaluations using five different sampling-based MSAs and two state-of-the-art defense baselines across four popular datasets consistently validate DIARY\u2019s superior performance.",
-      "year": 2025,
-      "venue": "IEEE International Conference on Distributed Computing Systems",
-      "authors": [
-        "Xin Yao",
-        "Chenyang Wang",
-        "Yimin Chen",
-        "Kecheng Huang",
-        "Jiawei Guo",
-        "Ming Zhao"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/bc15874a504bc3abf610ce66fc8bc8d5e8d6e7ac",
-      "pdf_url": "",
-      "publication_date": "2025-07-21",
-      "keywords_matched": [
-        "model stealing",
-        "model stealing attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "54ca14c7326e174dfe3627ced320a122e11d6d29",
-      "title": "Model Extraction for Image Denoising Networks",
-      "abstract": "Model Extraction (ME) replicates the performance of another entity\u2019s pretrained model without authorization. While extensively studied in image classification, object detection, and other tasks, ME for image restoration has been scarcely studied despite its broad applications. This paper presents a novel ME framework for image denoising networks, a fundamental one in image restoration. The framework tackles unique challenges like the black-box nature of the victim model, limiting access to its parameters, gradients, and outputs, and the difficulty of acquiring data that matches the original noise distribution while having adequate diversity. Our solution involves simulating the victim\u2019s noise conditions to transform clean images into noisy ones and introducing loss functions to optimize the generator and substitute model. Experiments show that our method closely approximates the victim model\u2019s performance and improves generalization in some scenarios. To the best of our knowledge, this work is the first to address ME in the field of image restoration, paving the way for future research in this area.",
-      "year": 2025,
-      "venue": "IEEE Transactions on Information Forensics and Security",
-      "authors": [
-        "Huan Teng",
-        "Yuhui Quan",
-        "Yong Xu",
-        "Jun Huang",
-        "Hui Ji"
-      ],
-      "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/54ca14c7326e174dfe3627ced320a122e11d6d29",
-      "pdf_url": "",
-      "publication_date": null,
+      "publication_date": "2025-09-07",
       "keywords_matched": [
         "model extraction",
         "(via citation)"
@@ -237,47 +127,131 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "17440e21a757f14e630d7443c89f018b79cc1754",
-      "title": "StegGuard: Secrets Encoder and Decoder Act as Fingerprint of Self-Supervised Pretrained Model",
-      "abstract": "In this work, we propose StegGuard, a novel fingerprinting mechanism to verify the ownership of a suspect pretrained model using steganography, where the pretrained model is obtained via self-supervised learning. A critical perspective in StegGuard is that the unique characteristic of the transformation from an image to an embedding, conducted by the pretrained model, can be equivalently captured by how an encoder embeds secrets into images and how a decoder extracts them from the embeddings with tolerable error. While each independently trained pretrained model has a distinct transformation, a piracy model exhibits a transformation similar to that of the victim. Based on these observations, StegGuard learns a pair of secrets encoder and decoder as the fingerprint of the victim model. Additionally, a Frequency domain channel attention Embedding block is introduced into the encoder to adaptively embed secrets into suitable frequency bands. During verification, if the secrets embedded into the query images can be extracted with an acceptable error from the embeddings of the query images, the suspect model is determined to be piracy; otherwise, it is deemed independent. Extensive experiments demonstrate that with as few as 100 query images, StegGuard achieves high piracy detection accuracy and robustness against model stealing attacks, including model extraction, fine-tuning, pruning, embedding noising and shuffle. Compared to existing methods, StegGuard consistently achieves lower p-values for piracy models (as low as 1e-14) and higher p-values for independent models (up to 0.99), confirming its effectiveness and reliability.",
+      "paper_id": "f32ac891e623a3c000bcee8e36f351f1ccfa2707",
+      "title": "Towards Functional Safety of Neural Network Hardware Accelerators: Concurrent Out-of-Distribution Detection in Hardware Using Power Side-Channel Analysis",
+      "abstract": "For AI hardware, functional safety is crucial, especially for neural network (NN) accelerators used in safety-critical systems. A key requirement for maintaining this safety is the precise detection of out-of-distribution (OOD) instances, which are inputs significantly distinct from the training data. Neglecting to integrate robust OOD detection may result in possible safety hazards, diminished performance, and inaccurate decision-making within NN applications. Existing methods for OOD detection have been explored for full-precision models. However, the evaluation of methods on quantized neural network (QNN), which are often deployed on hardware accelerators such as FPGAs, and on-device hardware realization of concurrent OOD detection (COD) is missing in literature. In this paper, we provide a novel approach to OOD detection for NN FPGA accelerators using power measurements. Utilizing the power side-channel through digital voltage sensors allows on-device OOD detection in a non-intrusive and concurrent manner, without relying on explicit labels or modifications to the underlying NN. Furthermore, our method allows OOD detection before the inference finishes. Additionally to the evaluation, we provide an efficient hardware implementation of COD on an actual FPGA.",
       "year": 2025,
-      "venue": "IEEE Internet of Things Journal",
+      "venue": "Asia and South Pacific Design Automation Conference",
       "authors": [
-        "Xingdong Ren",
-        "Hanzhou Wu",
-        "Yinggui Wang",
-        "Haojie Liu",
-        "Xiaofeng Lu",
-        "Guangling Sun"
+        "Vincent Meyers",
+        "Michael Hefenbrock",
+        "Mahboobe Sadeghipourrudsari",
+        "Dennis R. E. Gnad",
+        "Mehdi B. Tahoori"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/f32ac891e623a3c000bcee8e36f351f1ccfa2707",
+      "pdf_url": "",
+      "publication_date": "2025-01-20",
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-21"
+    },
+    {
+      "paper_id": "f2aaca56a4bbc4e9358f0af26e67f8cae4ebf476",
+      "title": "Digital Scapegoat: An Incentive Deception Model for Resisting Unknown APT Stealing Attacks on Critical Data Resource",
+      "abstract": "It is a challenging problem to resist unknown advanced persistent threats (APTs) on stealing data resources in an information system of critical infrastructures, because APT attackers have very specific objectives and compromise the system stealthily and slowly. We observe that it is a necessary condition for APT attackers to achieve their campaigns via controlling unknown Trojans to access and exfiltrate critical files. We present a theoretical model called Digital Scapegoat (abbreviated as DS-IDep) that constructs an Incentive Deception defense schema to hijack the attacker\u2019s access to critical files and redirect it to avatar files without awareness. We propose a FlipIDep Game model (<inline-formula> <tex-math notation=\"LaTeX\">$G_{F}$ </tex-math></inline-formula>) and a Markov Game model (<inline-formula> <tex-math notation=\"LaTeX\">$G_{M}$ </tex-math></inline-formula>) to characterize completely the payoffs, equilibria, and best strategies from the perspective of the attacker and the defender respectively. We also design an exponential risk propagation model to evaluate the ability of DS-IDep to eliminate stealing impact when the risk is propagated between states. Theoretically, we can achieve the objective of stealing impact elimination (<inline-formula> <tex-math notation=\"LaTeX\">$L_{K} \\lt 0.001$ </tex-math></inline-formula>) when the ratio of incentive deception exceeds 0.7 (<inline-formula> <tex-math notation=\"LaTeX\">$\\eta \\gt 0.7$ </tex-math></inline-formula>) and the probability of an attack operation bypassing the defense surface is less than 0.1 (<inline-formula> <tex-math notation=\"LaTeX\">$r^{*}\\times \\mu \\lt 0.1$ </tex-math></inline-formula>) under Stackelberg strategies. We develop a kernel-level incentive deception defense surface according to the theoretical parameters of the DS-IDep. The experimental results show that DS-IDep can resist APT stealing attacks from unknown Trojans. We also evaluate the DS-IDep in five well-known software applications. It demonstrates that DS-IDep can address unknown attacks from compromised software with less than 10% performance overhead.",
+      "year": 2025,
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "authors": [
+        "Xiaochun Yun",
+        "Guangjun Wu",
+        "Shuhao Li",
+        "Qi Song",
+        "Zixian Tang",
+        "Zhenyu Cheng"
       ],
       "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/17440e21a757f14e630d7443c89f018b79cc1754",
+      "url": "https://www.semanticscholar.org/paper/f2aaca56a4bbc4e9358f0af26e67f8cae4ebf476",
       "pdf_url": "",
-      "publication_date": "2025-09-15",
+      "publication_date": null,
+      "keywords_matched": [
+        "model stealing (title)"
+      ],
+      "first_seen": "2025-11-28"
+    },
+    {
+      "paper_id": "45475dcf398e58811ac8487fbd72fe6777bd8676",
+      "title": "Quantum Disturbance-based Photon Cloning Attack",
+      "abstract": "Geopolitical concerns in Asia have intensified, driving countries to bolster their border security and upgrade their military capabilities. With new and complex threats emerging, governments must invest in advanced defense technologies to maintain strategic stability and deter large-scale conflicts. The deployment and development of advanced military technologies is one of the key focuses. Surveillance largely contributes to situational awareness, fortifying defense and response time, making it the perfect tool for drones, AI-driven surveillance systems, cyber warfare capabilities, and anti-ship missiles. Such technologies enable countries to detect, prevent, and counter threats efficiently, thus making them essential in 21st-century warfare. In addition to the arms race in conventional defense, we're seeing increasingly base forms of international competition, particularly around advanced technologies like space-based reconnaissance, quantum encryption, and hypersonic weapons.Additionally, employing features such as AI surveillance systems, smart defense systems, and civil forces will be needed to stop wars before they happen. Governments must ensure they are attending to the urgent and game-changing elements, such as early-warning systems, predictive analytics, and automated threat response technologies that make for speedy and effective crisis management. It\u2019s critical to tighten cybersecurity infrastructure, as cyberattacks against military and governmental networks are increasing. Modernization efforts for an agile and resilient military force require substantial investment in R&D and defense infrastructure. New developments in autonomous defense systems, robotics, and advanced missile systems are key pieces in deterring aggression and protecting national interests.",
+      "year": 2025,
+      "venue": "International Conference on Innovative Mechanisms for Industry Applications",
+      "authors": [
+        "Hui-Kai Su",
+        "K.MahaRajan",
+        "Sanmugasundaram R",
+        "M.Jayalakshmi",
+        "A. S. Nantha",
+        "Wen-Kai Kuo"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/45475dcf398e58811ac8487fbd72fe6777bd8676",
+      "pdf_url": "",
+      "publication_date": "2025-09-03",
+      "keywords_matched": [
+        "cloning attack"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "557b82a8e54356b25b20fd96bd86dc449d8d10bc",
+      "title": "Security Challenges and Mitigation Strategies in Generative AI Systems",
+      "abstract": "This article examines the critical security challenges and mitigation strategies in generative AI systems. The article explores how these systems have transformed various sectors, particularly in financial markets and critical infrastructure, while introducing significant security concerns. The article analyzes various types of adversarial attacks, including input perturbation and backdoor attacks, and their impact on AI model performance. Additionally, it investigates model stealing threats and data privacy concerns in AI deployments. The article presents comprehensive mitigation strategies, including advanced defense mechanisms, enhanced protection frameworks, and secure access control implementations. The article findings demonstrate the effectiveness of integrated security approaches in protecting AI systems while maintaining operational efficiency. This article contributes to the growing body of knowledge on AI security by providing evidence-based strategies for protecting generative AI systems across different application domains.",
+      "year": 2025,
+      "venue": "International Journal of Scientific Research in Computer Science Engineering and Information Technology",
+      "authors": [
+        "Satya Naga Mallika Pothukuchi"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/557b82a8e54356b25b20fd96bd86dc449d8d10bc",
+      "pdf_url": "https://doi.org/10.32628/cseit25112377",
+      "publication_date": "2025-03-05",
+      "keywords_matched": [
+        "model stealing"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "6033eb92723833c3ca2c478cfde3956e0d1e388a",
+      "title": "Activation Functions Considered Harmful: Recovering Neural Network Weights through Controlled Channels",
+      "abstract": "With high-stakes machine learning applications increasingly moving to untrusted end-user or cloud environments, safeguarding pre-trained model parameters becomes essential for protecting intellectual property and user privacy. Recent advancements in hardware-isolated enclaves, notably Intel SGX, hold the promise to secure the internal state of machine learning applications even against compromised operating systems. However, we show that privileged software adversaries can exploit input-dependent memory access patterns in common neural network activation functions to extract secret weights and biases from an SGX enclave. Our attack leverages the SGX-Step framework to obtain a noise-free, instruction-granular page-access trace. In a case study of an 11-input regression network using the Tensorflow Microlite library, we demonstrate complete recovery of all first-layer weights and biases, as well as partial recovery of parameters from deeper layers under specific conditions. Our novel attack technique requires only 20 queries per input per weight to obtain all first-layer weights and biases with an average absolute error of less than 1%, improving over prior model stealing attacks. Additionally, a broader ecosystem analysis reveals the widespread use of activation functions with input-dependent memory access patterns in popular machine learning frameworks (either directly or via underlying math libraries). Our findings highlight the limitations of deploying confidential models in SGX enclaves and emphasise the need for stricter side-channel validation of machine learning implementations, akin to the vetting efforts applied to secure cryptographic libraries.",
+      "year": 2025,
+      "venue": "arXiv.org",
+      "authors": [
+        "Jesse Spielman",
+        "David Oswald",
+        "Mark Ryan",
+        "Jo Van Bulck"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/6033eb92723833c3ca2c478cfde3956e0d1e388a",
+      "pdf_url": "",
+      "publication_date": "2025-03-24",
       "keywords_matched": [
         "model stealing",
-        "model extraction",
         "model stealing attack",
         "(via citation)"
       ],
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "e3f7a9b248785cac49c96a22ee4ba11d88235f9b",
-      "title": "WGLE:Backdoor-free and Multi-bit Black-box Watermarking for Graph Neural Networks",
-      "abstract": "Graph Neural Networks (GNNs) are increasingly deployed in real-world applications, making ownership verification critical to protect their intellectual property against model theft. Fingerprinting and black-box watermarking are two main methods. However, the former relies on determining model similarity, which is computationally expensive and prone to ownership collisions after model post-processing. The latter embeds backdoors, exposing watermarked models to the risk of backdoor attacks. Moreover, both previous methods enable ownership verification but do not convey additional information about the copy model. If the owner has multiple models, each model requires a distinct trigger graph. To address these challenges, this paper proposes WGLE, a novel black-box watermarking paradigm for GNNs that enables embedding the multi-bit string in GNN models without using backdoors. WGLE builds on a key insight we term Layer-wise Distance Difference on an Edge (LDDE), which quantifies the difference between the feature distance and the prediction distance of two connected nodes in a graph. By assigning unique LDDE values to the edges and employing the LDDE sequence as the watermark, WGLE supports multi-bit capacity without relying on backdoor mechanisms. We evaluate WGLE on six public datasets across six mainstream GNN architectures, and compare WGLE with state-of-the-art GNN watermarking and fingerprinting methods. WGLE achieves 100% ownership verification accuracy, with an average fidelity degradation of only 1.41%. Additionally, WGLE exhibits robust resilience against potential attacks. The code is available in the repository.",
+      "paper_id": "7f8163935429700fed6c5ff88417726cb4ea4884",
+      "title": "Exploiting Timing Side-Channels in Quantum Circuits Simulation Via ML-Based Methods",
+      "abstract": "As quantum computing advances, quantum circuit simulators serve as critical tools to bridge the current gap caused by limited quantum hardware availability. These simulators are typically deployed on cloud platforms, where users submit proprietary circuit designs for simulation. In this work, we demonstrate a novel timing side-channel attack targeting cloud- based quantum simulators. A co-located malicious process can observe fine-grained execution timing patterns to extract sensitive information about concurrently running quantum circuits. We systematically analyze simulator behavior using the QASMBench benchmark suite, profiling timing and memory characteristics across various circuit executions. Our experimental results show that timing profiles exhibit circuit-dependent patterns that can be effectively classified using pattern recognition techniques, enabling the adversary to infer circuit identities and compromise user confidentiality. We were able to achieve 88% to 99.9% identification rate of quantum circuits based on different datasets. This work highlights previously unexplored security risks in quantum simulation environments and calls for stronger isolation mechanisms to protect user workloads",
       "year": 2025,
       "venue": "arXiv.org",
       "authors": [
-        "Tingzhi Li",
-        "Xuefeng Liu"
+        "Ben Dong",
+        "Hui Feng",
+        "Qian Wang"
       ],
       "citation_count": 0,
-      "url": "https://www.semanticscholar.org/paper/e3f7a9b248785cac49c96a22ee4ba11d88235f9b",
+      "url": "https://www.semanticscholar.org/paper/7f8163935429700fed6c5ff88417726cb4ea4884",
       "pdf_url": "",
-      "publication_date": "2025-06-10",
+      "publication_date": "2025-09-16",
       "keywords_matched": [
-        "model theft",
+        "side-channel attack (title)",
         "(via citation)"
       ],
       "first_seen": "2025-12-05"
@@ -305,90 +279,44 @@
       "first_seen": "2025-12-31"
     },
     {
-      "paper_id": "fe44bd072c2325eaa750990d148b27e42b7eb1d2",
-      "title": "Privacy Backdoors: Stealing Data with Corrupted Pretrained Models",
-      "abstract": "Practitioners commonly download pretrained machine learning models from open repositories and finetune them to fit specific applications. We show that this practice introduces a new risk of privacy backdoors. By tampering with a pretrained model's weights, an attacker can fully compromise the privacy of the finetuning data. We show how to build privacy backdoors for a variety of models, including transformers, which enable an attacker to reconstruct individual finetuning samples, with a guaranteed success! We further show that backdoored models allow for tight privacy attacks on models trained with differential privacy (DP). The common optimistic practice of training DP models with loose privacy guarantees is thus insecure if the model is not trusted. Overall, our work highlights a crucial and overlooked supply chain attack on machine learning privacy.",
+      "paper_id": "a55cc1ebaab3de336386f292cc4028f6e5586ac0",
+      "title": "Trained to Leak: Hiding Trojan Side-Channels in Neural Network Weights",
+      "abstract": "Applications driven by neural networks (NNs) have been advancing various work flows in industries and everyday life. FPGA accelerators are a popular low latency solution for NN inference in the cloud, edge devices and critical systems, offering efficiency and availability. Additionally, cloud FPGAs enable maximizing resource utilization by sharing one device with multiple users in a multi-tenant scenario. However, due to the high energy costs, hardware requirements and time consumption for training an NN, using machine learning services or acquiring pre-trained models has become increasingly popular. This creates a trust issue that potentially puts the privacy of the user at risk. Specifically, malicious mechanisms may be hidden in the weights of the NN. We show that by manipulating the training process of an NN, the power consumption and resulting leakage can be manipulated to correlate strongly with the networks output, allowing the reliable recovery of the classification results through remote power side-channel analysis. In comparison to power traces from a benign model, which leak less information, our trained-in Trojan Side-Channel enhances the credibility and reliability of the stolen outputs, making them more usable and valuable for malicious intent.",
       "year": 2024,
-      "venue": "International Conference on Machine Learning",
+      "venue": "IEEE International Symposium on Hardware Oriented Security and Trust",
       "authors": [
-        "Shanglun Feng",
-        "Florian Tram\u00e8r"
+        "Vincent Meyers",
+        "Michael Hefenbrock",
+        "Dennis R. E. Gnad",
+        "M. Tahoori"
       ],
-      "citation_count": 28,
-      "url": "https://www.semanticscholar.org/paper/fe44bd072c2325eaa750990d148b27e42b7eb1d2",
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/a55cc1ebaab3de336386f292cc4028f6e5586ac0",
       "pdf_url": "",
-      "publication_date": "2024-03-30",
+      "publication_date": "2024-05-06",
       "keywords_matched": [
-        "model stealing (title)"
+        "DNN weights leakage (title)"
       ],
       "first_seen": "2025-11-28"
     },
     {
-      "paper_id": "3b82c1d871b0d5ab043e96cc4a73b77dfd03695e",
-      "title": "Unraveling Attacks to Machine-Learning-Based IoT Systems: A Survey and the Open Libraries Behind Them",
-      "abstract": "The advent of the Internet of Things (IoT) has brought forth an era of unprecedented connectivity, with an estimated 80 billion smart devices expected to be in operation by the end of 2025. These devices facilitate a multitude of smart applications, enhancing the quality of life and efficiency across various domains. Machine learning (ML) serves as a crucial technology, not only for analyzing IoT-generated data but also for diverse applications within the IoT ecosystem. For instance, ML finds utility in IoT device recognition, anomaly detection, and even in uncovering malicious activities. This article embarks on a comprehensive exploration of the security threats arising from ML\u2019s integration into various facets of IoT, spanning various attack types, including membership inference, adversarial evasion, reconstruction, property inference, model extraction, and poisoning attacks. Unlike previous studies, our work offers a holistic perspective, categorizing threats based on criteria, such as adversary models, attack targets, and key security attributes (confidentiality, integrity, and availability). We delve into the underlying techniques of ML attacks in IoT environment, providing a critical evaluation of their mechanisms and impacts. Furthermore, our research thoroughly assesses 65 libraries, both author-contributed and third-party, evaluating their role in safeguarding model and data privacy. We emphasize the availability and usability of these libraries, aiming to arm the community with the necessary tools to bolster their defenses against the evolving threat landscape. Through our comprehensive review and analysis, this article seeks to contribute to the ongoing discourse on ML-based IoT security, offering valuable insights and practical solutions to secure ML models and data in the rapidly expanding field of artificial intelligence in IoT.",
+      "paper_id": "be44a0e3c11ffe4944873eb415ced25ed36f7534",
+      "title": "Protecting Confidential Virtual Machines from Hardware Performance Counter Side Channels",
+      "abstract": "In modern cloud platforms, it is becoming more important to preserve the privacy of guest virtual machines (VMs) from the untrusted host. To this end, Secure Encrypted Virtualization (SEV) is developed as a hardware extension to protect VMs by encrypting their memory pages and register states. Unfortunately, such confidential VMs are still vulnerable to micro-architectural side channels, and Hardware Performance Counters (HPCs) are a prominent information leakage source. To make matters worse, currently there is no systematic defense against the HPC side channels. We introduce Aegis, a unified framework for demystifying the inherent relations between the instruction execution and HPC event statistics, and defending VMs against HPC side channels with provable privacy guarantee and minimal performance overhead. Aegis consists of three modules. Application Profiler profiles the application offline and adopts information theory to quantitatively estimate the vulnerability of HPC events. Event Fuzzer leverages the fuzzing technique to automatically generate interesting inputs, i.e., instruction sequences, that can effectively alter the HPC observations. Event Obfuscator injects noisy instructions into the protected VM based on the differential privacy mechanisms for high efficiency and privacy. We present three case studies to demonstrate that Aegis can defeat different types of HPC side-channel attacks (i.e., website fingerprinting, DNN model extraction, keystroke sniffing). Evaluations show that Aegis can effectively decrease the attack accuracy from 90% to 2%, with only 3% overhead on the application execution time and 7% overhead on the CPU usage.",
       "year": 2024,
-      "venue": "IEEE Internet of Things Journal",
+      "venue": "Dependable Systems and Networks",
       "authors": [
-        "Chao Liu",
-        "Boxi Chen",
-        "Wei Shao",
-        "Chris Zhang",
-        "Kelvin Wong",
-        "Yi Zhang"
+        "Xiaoxuan Lou",
+        "Kangjie Chen",
+        "Guowen Xu",
+        "Han Qiu",
+        "Shangwei Guo",
+        "Tianwei Zhang"
       ],
-      "citation_count": 21,
-      "url": "https://www.semanticscholar.org/paper/3b82c1d871b0d5ab043e96cc4a73b77dfd03695e",
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/be44a0e3c11ffe4944873eb415ced25ed36f7534",
       "pdf_url": "",
-      "publication_date": "2024-06-01",
-      "keywords_matched": [
-        "model extraction",
-        "(via citation)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "7bed6f6101204efdf04181aafa511ca55644b559",
-      "title": "Data Stealing Attacks against Large Language Models via Backdooring",
-      "abstract": "Large language models (LLMs) have gained immense attention and are being increasingly applied in various domains. However, this technological leap forward poses serious security and privacy concerns. This paper explores a novel approach to data stealing attacks by introducing an adaptive method to extract private training data from pre-trained LLMs via backdooring. Our method mainly focuses on the scenario of model customization and is conducted in two phases, including backdoor training and backdoor activation, which allow for the extraction of private information without prior knowledge of the model\u2019s architecture or training data. During the model customization stage, attackers inject the backdoor into the pre-trained LLM by poisoning a small ratio of the training dataset. During the inference stage, attackers can extract private information from the third-party knowledge database by incorporating the pre-defined backdoor trigger. Our method leverages the customization process of LLMs, injecting a stealthy backdoor that can be triggered after deployment to retrieve private data. We demonstrate the effectiveness of our proposed attack through extensive experiments, achieving a notable attack success rate. Extensive experiments demonstrate the effectiveness of our stealing attack in popular LLM architectures, as well as stealthiness during normal inference.",
-      "year": 2024,
-      "venue": "Electronics",
-      "authors": [
-        "Jiaming He",
-        "Guanyu Hou",
-        "Xinyue Jia",
-        "Yangyang Chen",
-        "Wenqi Liao",
-        "Yinhang Zhou",
-        "Rang Zhou"
-      ],
-      "citation_count": 14,
-      "url": "https://www.semanticscholar.org/paper/7bed6f6101204efdf04181aafa511ca55644b559",
-      "pdf_url": "https://doi.org/10.3390/electronics13142858",
-      "publication_date": "2024-07-19",
-      "keywords_matched": [
-        "model stealing (title)"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "6dc6c055a006b3b8bbbd10a44336877c9b190907",
-      "title": "Unraveling Attacks in Machine Learning-based IoT Ecosystems: A Survey and the Open Libraries Behind Them",
-      "abstract": "The advent of the Internet of Things (IoT) has brought forth an era of unprecedented connectivity, with an estimated 80 billion smart devices expected to be in operation by the end of 2025. These devices facilitate a multitude of smart applications, enhancing the quality of life and efficiency across various domains. Machine Learning (ML) serves as a crucial technology, not only for analyzing IoT-generated data but also for diverse applications within the IoT ecosystem. For instance, ML finds utility in IoT device recognition, anomaly detection, and even in uncovering malicious activities. This paper embarks on a comprehensive exploration of the security threats arising from ML's integration into various facets of IoT, spanning various attack types including membership inference, adversarial evasion, reconstruction, property inference, model extraction, and poisoning attacks. Unlike previous studies, our work offers a holistic perspective, categorizing threats based on criteria such as adversary models, attack targets, and key security attributes (confidentiality, availability, and integrity). We delve into the underlying techniques of ML attacks in IoT environment, providing a critical evaluation of their mechanisms and impacts. Furthermore, our research thoroughly assesses 65 libraries, both author-contributed and third-party, evaluating their role in safeguarding model and data privacy. We emphasize the availability and usability of these libraries, aiming to arm the community with the necessary tools to bolster their defenses against the evolving threat landscape. Through our comprehensive review and analysis, this paper seeks to contribute to the ongoing discourse on ML-based IoT security, offering valuable insights and practical solutions to secure ML models and data in the rapidly expanding field of artificial intelligence in IoT.",
-      "year": 2024,
-      "venue": "arXiv.org",
-      "authors": [
-        "Chao Liu",
-        "Boxi Chen",
-        "Wei Shao",
-        "Chris Zhang",
-        "Kelvin Wong",
-        "Yi Zhang"
-      ],
-      "citation_count": 7,
-      "url": "https://www.semanticscholar.org/paper/6dc6c055a006b3b8bbbd10a44336877c9b190907",
-      "pdf_url": "",
-      "publication_date": "2024-01-22",
+      "publication_date": "2024-06-24",
       "keywords_matched": [
         "model extraction",
         "(via citation)"
@@ -416,111 +344,21 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "c74aaca78aa0cfd0eff383f081cdd5440fb03098",
-      "title": "Experimental Investigation of Side-Channel Attacks on Neuromorphic Spiking Neural Networks",
-      "abstract": "This study investigates the reliability of commonly utilized digital spiking neurons and the potential side-channel vulnerabilities in neuromorphic systems that employ them. Through our experiments, we have successfully decoded the parametric information of Izhikevich and leaky integrate-and-fire (LIF) neuron-based spiking neural networks (SNNs) using differential power analysis. Furthermore, we have demonstrated the practical application of extracted information from the 92% accurate pretrained standard spiking convolution neural network classifier on the FashionMNIST dataset. These findings highlight the potential dangers of utilizing internal information for side-channel and denial-of-service attacks, even when using the usual input as the attack vector.",
+      "paper_id": "c3df2c0b6c68c4db4e946ed8432e7f7b2269ecf3",
+      "title": "Enhancing TinyML Security: Study of Adversarial Attack Transferability",
+      "abstract": "The recent strides in artificial intelligence (AI) and machine learning (ML) have propelled the rise of TinyML, a paradigm enabling AI computations at the edge without dependence on cloud connections. While TinyML offers real-time data analysis and swift responses critical for diverse applications, its devices' intrinsic resource limitations expose them to security risks. This research delves into the adversarial vulnerabilities of AI models on resource-constrained embedded hardware, with a focus on Model Extraction and Evasion Attacks. Our findings reveal that adversarial attacks from powerful host machines could be transferred to smaller, less secure devices like ESP32 and Raspberry Pi. This illustrates that adversarial attacks could be extended to tiny devices, underscoring vulnerabilities, and emphasizing the necessity for reinforced security measures in TinyML deployments. This exploration enhances the comprehension of security challenges in TinyML and offers insights for safeguarding sensitive data and ensuring device dependability in AI-powered edge computing settings.",
       "year": 2024,
-      "venue": "IEEE Embedded Systems Letters",
+      "venue": "arXiv.org",
       "authors": [
-        "Bhanprakash Goswami",
-        "Tamoghno Das",
-        "Manan Suri"
-      ],
-      "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/c74aaca78aa0cfd0eff383f081cdd5440fb03098",
-      "pdf_url": "",
-      "publication_date": "2024-06-01",
-      "keywords_matched": [
-        "side-channel attack (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "148adb6df70218017aba770047cacb3c9e745411",
-      "title": "A Desynchronization-Based Countermeasure Against Side-Channel Analysis of Neural Networks",
-      "abstract": "Model extraction attacks have been widely applied, which can normally be used to recover confidential parameters of neural networks for multiple layers. Recently, side-channel analysis of neural networks allows parameter extraction even for networks with several multiple deep layers with high effectiveness. It is therefore of interest to implement a certain level of protection against these attacks. In this paper, we propose a desynchronization-based countermeasure that makes the timing analysis of activation functions harder. We analyze the timing properties of several activation functions and design the desynchronization in a way that the dependency on the input and the activation type is hidden. We experimentally verify the effectiveness of the countermeasure on a 32-bit ARM Cortex-M4 microcontroller and employ a t-test to show the side-channel information leakage. The overhead ultimately depends on the number of neurons in the fully-connected layer, for example, in the case of 4096 neurons in VGG-19, the overheads are between 2.8% and 11%.",
-      "year": 2023,
-      "venue": "International Conference on Cyber Security Cryptography and Machine Learning",
-      "authors": [
-        "J. Breier",
-        "Dirmanto Jap",
-        "Xiaolu Hou",
-        "S. Bhasin"
-      ],
-      "citation_count": 9,
-      "url": "https://www.semanticscholar.org/paper/148adb6df70218017aba770047cacb3c9e745411",
-      "pdf_url": "http://arxiv.org/pdf/2303.18132",
-      "publication_date": "2023-03-25",
-      "keywords_matched": [
-        "model extraction",
-        "model extraction attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "4ab3d1254f877d8d234fe32b8d5e46862833237b",
-      "title": "Neural Network Trajectory Tracking Control on Electromagnetic Suspension Systems",
-      "abstract": "A new adaptive-like neural control strategy for motion reference trajectory tracking for a nonlinear electromagnetic suspension dynamic system is introduced. Artificial neural networks, differential flatness and sliding modes are strategically integrated in the presented adaptive neural network control design approach. The robustness and efficiency of the magnetic suspension control system on desired smooth position reference profile tracking can be improved in this fashion. A single levitation control parameter is tuned on-line from a neural adaptive perspective by using information of the reference trajectory tracking error signal only. The sliding mode discontinuous control action is approximated by a neural network-based adaptive continuous control function. Control design is firstly developed from theoretical modelling of the nonlinear physical system. Next, dependency on theoretical modelling of the nonlinear dynamic system is substantially reduced by integrating B-spline neural networks and sliding modes in the electromagnetic levitation control technique. On-line accurate estimation of uncertainty, unmeasured external disturbances and uncertain nonlinearities are conveniently evaded. The effective performance of the robust trajectory tracking levitation control approach is depicted for multiple simulation operating scenarios. The capability of active disturbance suppression is furthermore evidenced. The presented B-spline neural network trajectory tracking control design approach based on sliding modes and differential flatness can be extended to other controllable complex uncertain nonlinear dynamic systems where internal and external disturbances represent a relevant issue. Computer simulations and analytical results demonstrate the effective performance of the new adaptive neural control method.",
-      "year": 2023,
-      "venue": "Mathematics",
-      "authors": [
-        "F. Beltr\u00e1n-Carbajal",
-        "H. Y\u00e1\u00f1ez-Badillo",
-        "R. Tapia-Olvera",
-        "J. Rosas-Caro",
-        "C. Sotelo",
-        "D. Sotelo"
-      ],
-      "citation_count": 8,
-      "url": "https://www.semanticscholar.org/paper/4ab3d1254f877d8d234fe32b8d5e46862833237b",
-      "pdf_url": "https://www.mdpi.com/2227-7390/11/10/2272/pdf?version=1684071665",
-      "publication_date": "2023-05-12",
-      "keywords_matched": [
-        "electromagnetic analysis (title)"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "3f7a77e8437be83b4cb2810f1de0a6e6b45fe6d7",
-      "title": "Army of Thieves: Enhancing Black-Box Model Extraction via Ensemble based sample selection",
-      "abstract": "Machine Learning (ML) models become vulnerable to Model Stealing Attacks (MSA) when they are deployed as a service. In such attacks, the deployed model is queried repeatedly to build a labelled dataset. This dataset allows the attacker to train a thief model that mimics the original model. To maximize query efficiency, the attacker has to select the most informative subset of data points from the pool of available data. Existing attack strategies utilize approaches like Active Learning and Semi-Supervised learning to minimize costs. However, in the black-box setting, these approaches may select sub-optimal samples as they train only one thief model. Depending on the thief model\u2019s capacity and the data it was pretrained on, the model might even select noisy samples that harm the learning process. In this work, we explore the usage of an ensemble of deep learning models as our thief model. We call our attack Army of Thieves(AOT) as we train multiple models with varying complexities to leverage the crowd\u2019s wisdom. Based on the ensemble\u2019s collective decision, uncertain samples are selected for querying, while the most confident samples are directly included in the training data. Our approach is the first one to utilize an ensemble of thief models to perform model extraction. We outperform the base approaches of existing state-of-the-art methods by at least 3% and achieve a 21% higher adversarial sample transferability than previous work for models trained on the CIFAR-10 dataset. Code is available at: https://github.com/akshitjindal1/AOT_WACV.",
-      "year": 2023,
-      "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
-      "authors": [
-        "Akshit Jindal",
-        "Vikram Goyal",
-        "Saket Anand",
-        "Chetan Arora"
-      ],
-      "citation_count": 4,
-      "url": "https://www.semanticscholar.org/paper/3f7a77e8437be83b4cb2810f1de0a6e6b45fe6d7",
-      "pdf_url": "https://arxiv.org/pdf/2311.04588",
-      "publication_date": "2023-11-08",
-      "keywords_matched": [
-        "model stealing",
-        "model extraction",
-        "model stealing attack"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "2949b03a5e1bc3cddaa0784e2a2ac4d0d0c996f7",
-      "title": "Safe and Robust Watermark Injection with a Single OoD Image",
-      "abstract": "Training a high-performance deep neural network requires large amounts of data and computational resources. Protecting the intellectual property (IP) and commercial ownership of a deep model is challenging yet increasingly crucial. A major stream of watermarking strategies implants verifiable backdoor triggers by poisoning training samples, but these are often unrealistic due to data privacy and safety concerns and are vulnerable to minor model changes such as fine-tuning. To overcome these challenges, we propose a safe and robust backdoor-based watermark injection technique that leverages the diverse knowledge from a single out-of-distribution (OoD) image, which serves as a secret key for IP verification. The independence of training data makes it agnostic to third-party promises of IP security. We induce robustness via random perturbation of model parameters during watermark injection to defend against common watermark removal attacks, including fine-tuning, pruning, and model extraction. Our experimental results demonstrate that the proposed watermarking approach is not only time- and sample-efficient without training data, but also robust against the watermark removal attacks above.",
-      "year": 2023,
-      "venue": "International Conference on Learning Representations",
-      "authors": [
-        "Shuyang Yu",
-        "Junyuan Hong",
-        "Haobo Zhang",
-        "Haotao Wang",
-        "Zhangyang Wang",
-        "Jiayu Zhou"
+        "Parin Shah",
+        "Yuvaraj Govindarajulu",
+        "Pavan Kulkarni",
+        "Manojkumar Parmar"
       ],
       "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/2949b03a5e1bc3cddaa0784e2a2ac4d0d0c996f7",
-      "pdf_url": "https://arxiv.org/pdf/2309.01786",
-      "publication_date": "2023-09-04",
+      "url": "https://www.semanticscholar.org/paper/c3df2c0b6c68c4db4e946ed8432e7f7b2269ecf3",
+      "pdf_url": "",
+      "publication_date": "2024-07-16",
       "keywords_matched": [
         "model extraction",
         "(via citation)"
@@ -528,107 +366,221 @@
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "b18ab575ec113d117bb2482243c412cceb544756",
-      "title": "Data-free Defense of Black Box Models Against Adversarial Attacks",
-      "abstract": "Several companies often safeguard their trained deep models (i.e. details of architecture, learnt weights, training details etc.) from third-party users by exposing them only as \u2018black boxes' through APIs. Moreover, they may not even provide access to the training data due to proprietary reasons or sensitivity concerns. In this work, we propose a novel defense mechanism for black box models against adversarial attacks in a data-free set up. We construct synthetic data via a generative model and train surrogate network using model stealing techniques. To minimize adversarial contamination on perturbed samples, we propose \u2018wavelet noise remover' (WNR) that performs discrete wavelet decomposition on input images and carefully select only a few important coefficients determined by our \u2018wavelet coefficient selection module' (WCSM). To recover the high-frequency content of the image after noise removal via WNR, we further train a \u2018regenerator' network with an objective to retrieve the coefficients such that the reconstructed image yields similar to original predictions on the surrogate model. At test time, WNR combined with trained regenerator network is prepended to the black box network, resulting in a high boost in adversarial accuracy. Our method improves the adversarial accuracy on CIFAR-10 by 38.98% and 32.01% against the state-of-the-art Auto Attack compared to baseline, even when the attacker uses surrogate architecture (Alexnet-half and Alexnet) similar to the black box architecture (Alexnet) with same model stealing strategy as defender.",
-      "year": 2022,
-      "venue": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+      "paper_id": "20993724635d425f696e1c7e38c9e8da025ff757",
+      "title": "FedMCT: A Federated Framework for Intellectual Property Protection and Malicious Client Tracking",
+      "abstract": "In the era of big data, federated learning (FL) emerges as a solution to train models collectively without exposing individual data, maintaining similar accuracy to models trained on shared datasets. However, challenges arise with the advent of privacy inference attacks and model theft, posing significant threats to the privacy of FL models, especially regarding intellectual property (IP) protection. This paper introduces FedMCT (Federated Malicious Client Tracking), a novel framework addressing these challenges in the FL context. The FedMCT framework is a new approach to protect IP rights of FL clients and track cheaters, which can improve efficiency in resource-heterogeneous environments. By embedding unique watermarks or fingerprints in Deep Neural Network (DNN) models, we can protect model IP. We employ a configuration round before watermark embedding, segmenting clients based on performance for tiered model watermarking. We also propose a tiered watermarking and traitor tracking mechanism, which reduces the tracking time and ensures high traitor tracking efficiency. Extensive experiments validate our solution\u2019s efficacy in maintaining original model performance, watermark privacy, and detectability, robust against various attacks, demonstrating superior traitor tracing efficiency compared to existing frameworks.",
+      "year": 2024,
+      "venue": "International Conference on Machine Learning and Computing",
       "authors": [
-        "Gaurav Kumar Nayak",
-        "Inder Khatri",
-        "Shubham Randive",
-        "Ruchit Rawal",
-        "Anirban Chakraborty"
+        "Qianyi Chen",
+        "Peijia Zheng",
+        "Yusong Du",
+        "Weiqi Luo",
+        "Hongmei Liu"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/20993724635d425f696e1c7e38c9e8da025ff757",
+      "pdf_url": "",
+      "publication_date": "2024-02-02",
+      "keywords_matched": [
+        "model theft",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "39380b900ca2f7692efd229c3b4f72f5fff6f2dc",
+      "title": "Dual-Rail Precharge Logic-Based Side-Channel Countermeasure for DNN Systolic Array",
+      "abstract": "Deep neural network (DNN) accelerators are widely used in cloud-edge-end and other application scenarios. Researchers recently focused on extracting secret information from DNN through side-channel attacks (SCAs), which substantially threaten AI security. In this brief, we propose a high-security, high-performance side-channel countermeasure using dual-rail precharge logic (DPL) for the DNN systolic array. By collecting and analyzing 5000 power traces, our proposed DPL-based systolic array provides a significantly lower correlation coefficient of 0.045. Through system-level side-channel security evaluation on field-programmable gate arrays (FPGAs), the DPL-based systolic array can effectively defend against weight extraction under power SCAs.",
+      "year": 2024,
+      "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
+      "authors": [
+        "Le Wu",
+        "Liji Wu",
+        "Xiangmin Zhang",
+        "Munkhbaatar Chinbat"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/39380b900ca2f7692efd229c3b4f72f5fff6f2dc",
+      "pdf_url": "",
+      "publication_date": "2024-09-01",
+      "keywords_matched": [
+        "side-channel attack (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "04ba64269e3cedd3bf0117218d0c69cba2bd5abb",
+      "title": "Securing Machine Learning: Understanding Adversarial Attacks and Bias Mitigation",
+      "abstract": "This paper offers a comprehensive examination of adversarial vulnerabilities in machine learning (ML) models and strategies for mitigating fairness and bias issues. It analyses various adversarial attack vectors encompassing evasion, poisoning, model inversion, exploratory probes, and model stealing, elucidating their potential to compromise model integrity and induce misclassification or information leakage. In response, a range of defence mechanisms including adversarial training, certified defences, feature transformations, and ensemble methods are scrutinized, assessing their effectiveness and limitations in fortifying ML models against adversarial threats. Furthermore, the study explores the nuanced landscape of fairness and bias in ML, addressing societal biases, stereotypes reinforcement, and unfair treatment, proposing mitigation strategies like fairness metrics, bias auditing, de-biasing techniques, and human-in-the-loop approaches to foster fairness, transparency, and ethical AI deployment. This synthesis advocates for interdisciplinary collaboration to build resilient, fair, and trustworthy AI systems amidst the evolving technological paradigm.",
+      "year": 2024,
+      "venue": "International Journal of Innovative Science and Research Technology",
+      "authors": [
+        "Archit Lakhani",
+        "Neyah Rohit"
       ],
       "citation_count": 2,
-      "url": "https://www.semanticscholar.org/paper/b18ab575ec113d117bb2482243c412cceb544756",
-      "pdf_url": "https://arxiv.org/pdf/2211.01579",
-      "publication_date": "2022-11-03",
+      "url": "https://www.semanticscholar.org/paper/04ba64269e3cedd3bf0117218d0c69cba2bd5abb",
+      "pdf_url": "https://doi.org/10.38124/ijisrt/ijisrt24jun1671",
+      "publication_date": "2024-07-11",
       "keywords_matched": [
         "model stealing"
       ],
       "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "16a8e329c06b4c6f61762da7fa77a84bf3e12dca",
-      "title": "Model Extraction and Adversarial Transferability, Your BERT is Vulnerable!",
-      "abstract": "Natural language processing (NLP) tasks, ranging from text classification to text generation, have been revolutionised by the pretrained language models, such as BERT. This allows corporations to easily build powerful APIs by encapsulating fine-tuned BERT models for downstream tasks. However, when a fine-tuned BERT model is deployed as a service, it may suffer from different attacks launched by the malicious users. In this work, we first present how an adversary can steal a BERT-based API service (the victim/target model) on multiple benchmark datasets with limited prior knowledge and queries. We further show that the extracted model can lead to highly transferable adversarial attacks against the victim model. Our studies indicate that the potential vulnerabilities of BERT-based API services still hold, even when there is an architectural mismatch between the victim model and the attack model. Finally, we investigate two defence strategies to protect the victim model, and find that unless the performance of the victim model is sacrificed, both model extraction and adversarial transferability can effectively compromise the target models.",
-      "year": 2021,
-      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "paper_id": "004764a194f3e85900a0b15d11c4a6955d6a616a",
+      "title": "Robust and Minimally Invasive Watermarking for EaaS",
+      "abstract": "Embeddings as a Service (EaaS) is emerging as a crucial role in AI applications. Unfortunately, EaaS is vulnerable to model extraction attacks, highlighting the urgent need for copyright protection. Although some preliminary works propose applying embedding watermarks to protect EaaS, recent research reveals that these watermarks can be easily removed. Hence, it is crucial to inject robust watermarks resistant to watermark removal attacks. Existing watermarking methods typically inject a target embedding into embeddings through linear interpolation when the text contains triggers. However, this mechanism results in each watermarked embedding having the same component, which makes the watermark easy to identify and eliminate. Motivated by this, in this paper, we propose a novel embedding-specific watermarking (ESpeW) mechanism to offer robust copyright protection for EaaS. Our approach involves injecting unique, yet readily identifiable watermarks into each embedding. Watermarks inserted by ESpeW are designed to maintain a significant distance from one another and to avoid sharing common components, thus making it significantly more challenging to remove the watermarks. Moreover, ESpeW is minimally invasive, as it reduces the impact on embeddings to less than 1\\%, setting a new milestone in watermarking for EaaS. Extensive experiments on four popular datasets demonstrate that ESpeW can even watermark successfully against a highly aggressive removal strategy without sacrificing the quality of embeddings.",
+      "year": 2024,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
       "authors": [
-        "Xuanli He",
-        "L. Lyu",
-        "Qiongkai Xu",
-        "Lichao Sun"
+        "Zongqi Wang",
+        "Baoyuan Wu",
+        "Jingyuan Deng",
+        "Yujiu Yang"
       ],
-      "citation_count": 112,
-      "url": "https://www.semanticscholar.org/paper/16a8e329c06b4c6f61762da7fa77a84bf3e12dca",
-      "pdf_url": "https://aclanthology.org/2021.naacl-main.161.pdf",
-      "publication_date": "2021-03-18",
-      "keywords_matched": [
-        "model extraction"
-      ],
-      "first_seen": "2025-11-28"
-    },
-    {
-      "paper_id": "89e225f6d755599d14d25580315d60725977ca62",
-      "title": "Fast Prediction for Electromagnetic Shielding Effectiveness of Ground-Via Distribution of SiP by Convolutional Neural Network",
-      "abstract": "Ground vias are often used as an essential shielding structure in System-in-Package (SiP) to suppress electromagnetic leakage. In this paper, a new method based on Convolutional Neural Network (CNN) is adopted to predict the shielding effectiveness of ground-via distributions. In particular, the suitability of the pooling layer is studied separately. Furthermore, the appropriateness of using the convolutional layer is proved by a comparative experiment with a Deep Neural Network (DNN) model. The method proposed in this paper shows good accuracy in electromagnetic leakage prediction and has universal value in similar prediction tasks. Compared with traditional analysis methods, the proposed CNN model has a significant time advantage, making it possible to use other optimization algorithms to replace the artificial shielding structure design.",
-      "year": 2021,
-      "venue": "2021 13th Global Symposium on Millimeter-Waves & Terahertz (GSMM)",
-      "authors": [
-        "Zheming Gu",
-        "Tuomin Tao",
-        "Erping Li"
-      ],
-      "citation_count": 3,
-      "url": "https://www.semanticscholar.org/paper/89e225f6d755599d14d25580315d60725977ca62",
+      "citation_count": 2,
+      "url": "https://www.semanticscholar.org/paper/004764a194f3e85900a0b15d11c4a6955d6a616a",
       "pdf_url": "",
-      "publication_date": "2021-05-23",
+      "publication_date": "2024-10-23",
       "keywords_matched": [
-        "electromagnetic analysis (title)"
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
       ],
-      "first_seen": "2025-11-28"
+      "first_seen": "2025-12-05"
     },
     {
-      "paper_id": "46582b5600668089180542b725a2868692bcce87",
-      "title": "An extraction attack on image recognition model using VAE-kdtree model",
-      "abstract": "This paper proposes a black box extraction attack model on pre-trained image classifiers to rebuild a functionally equivalent model with high similarity. Common model extraction attacks use a large number of training samples to feed the target classifier which is time-consuming with redundancy. The attack results have a high dependency on the selected training samples and the target model. The extracted model may only get part of crucial features because of inappropriate sample selection. To eliminate these uncertainties, we proposed the VAE-kdtree attack model which eliminates the high dependency between selected training samples and the target model. It can not only save redundant computation, but also extract critical boundaries more accurately in image classification. This VAE-kdtree model has shown to achieve around 90% similarity on MNIST and around 80% similarity on MNIST-Fashion with a target Convolutional Network Model and a target Support Vector Machine Model. The performance of this VAE-kdtree model could be further improved by adopting higher dimension space of the kdtree.",
-      "year": 2021,
-      "venue": "Other Conferences",
+      "paper_id": "21e6d0743c99e614ccff2533a591affcc3438e14",
+      "title": "OML: A Primitive for Reconciling Open Access with Owner Control in AI Model Distribution",
+      "abstract": "The current paradigm of AI model distribution presents a fundamental dichotomy: models are either closed and API-gated, sacrificing transparency and local execution, or openly distributed, sacrificing monetization and control. We introduce OML(Open-access, Monetizable, and Loyal AI Model Serving), a primitive that enables a new distribution paradigm where models can be freely distributed for local execution while maintaining cryptographically enforced usage authorization. We are the first to introduce and formalize this problem, introducing rigorous security definitions tailored to the unique challenge of white-box model protection: model extraction resistance and permission forgery resistance. We prove fundamental bounds on the achievability of OML properties and characterize the complete design space of potential constructions, from obfuscation-based approaches to cryptographic solutions. To demonstrate practical feasibility, we present OML 1.0, a novel OML construction leveraging AI-native model fingerprinting coupled with crypto-economic enforcement mechanisms. Through extensive theoretical analysis and empirical evaluation, we establish OML as a foundational primitive necessary for sustainable AI ecosystems. This work opens a new research direction at the intersection of cryptography, machine learning, and mechanism design, with critical implications for the future of AI distribution and governance.",
+      "year": 2024,
+      "venue": "",
       "authors": [
-        "Tianqi Wen",
-        "Haibo Hu",
-        "Huadi Zheng"
+        "Zerui Cheng",
+        "Edoardo Contente",
+        "Ben Finch",
+        "Oleg Golev",
+        "J. Hayase",
+        "Andrew Miller",
+        "Niusha Moshrefi",
+        "Anshul Nasery",
+        "Sandeep Nailwal",
+        "Sewoong Oh",
+        "Himanshu Tyagi",
+        "P. Viswanath"
       ],
       "citation_count": 1,
-      "url": "https://www.semanticscholar.org/paper/46582b5600668089180542b725a2868692bcce87",
+      "url": "https://www.semanticscholar.org/paper/21e6d0743c99e614ccff2533a591affcc3438e14",
       "pdf_url": "",
-      "publication_date": "2021-03-13",
+      "publication_date": "2024-11-01",
       "keywords_matched": [
-        "model extraction attack",
         "model extraction"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "92013fa050869d3deb74b3fc4ac0874ffbf1544e",
+      "title": "A PSO-based Method to Test Deep Learning Library at API Level",
+      "abstract": "In recent years, deep learning (DL) is widely used in various fields. DL library bugs could result in security issues and even some losses like data loss and model stealing. As a result, testing DL libraries is the focus of an increasing number of studies. However, there are still issues with these works, such as poor test sample selection and overly general test oracle, which result in ineffective and insufficient testing. In this paper, we present a LEAPI-PSO method based on particle swarm optimization (PSO) algorithm for testing DL libraries at API level, which tackles the inadequacies of existing testing techniques. LEAPI-PSO initially chooses high-quality seed samples by using input coverage and the seed progeny tree. Then, by using PSO, LEAPI-PSO generates test samples that are more likely to reveal API bugs. Based on eight mutation strategies, LEAPI-PSO can produce rich and varied test samples and input them into the API to check for bugs using test oracle. The two most popular DL libraries, PyTorch and Tensorflow, have been used in this study to validate and evaluate LEAPI-PSO. The result shows that LEAPI-PSO is capable to successfully find bugs including crashes, logical errors, and documentation errors. We report 115 bugs to the DL library developers, 95 of which are confirmed, and 63 of which are fixed.",
+      "year": 2024,
+      "venue": "Proceedings of the 3rd International Conference on Computer, Artificial Intelligence and Control Engineering",
+      "authors": [
+        "Shuyan Liao",
+        "Chun Shan"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/92013fa050869d3deb74b3fc4ac0874ffbf1544e",
+      "pdf_url": "",
+      "publication_date": "2024-01-26",
+      "keywords_matched": [
+        "model stealing"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "b9a4b5e07b9973e968ea746159bfe88c0801f854",
+      "title": "Security Concerns of Machine Learning Hardware",
+      "abstract": "AI-as-a-Service (AIaaS) has been emerging with model providers deploying their models on cloud and model consumers using the model. Recently, ML models are being deployed on edge devices to improve cost and response time. The widespread usage of machine learning has made the study of security in the context of Machine Learning (ML) very critical. Model extraction attacks focuses on extracting model parameters such as weights and biases which can be used to clone a ML target model deployed on the cloud or on an edge device hardware. This paper explores different types of attacks on ML models primarily focusing on model extraction attacks on ML hardware such as scan-chain and side-channel attacks. The paper present an analysis of various such attacks and their countermeasures. Possible future directions of work are also discussed.",
+      "year": 2024,
+      "venue": "Asian Test Symposium",
+      "authors": [
+        "Nilotpola Sarma",
+        "E. Bhawani",
+        "E. Reddy",
+        "C. Karfa"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/b9a4b5e07b9973e968ea746159bfe88c0801f854",
+      "pdf_url": "",
+      "publication_date": "2024-12-17",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack"
       ],
       "first_seen": "2025-11-28"
     },
     {
-      "paper_id": "82e2e111d2a81fe8efaabec44b5d7d3c74cfa95d",
-      "title": "Stealing Your Data from Compressed Machine Learning Models",
-      "abstract": "Machine learning models have been widely deployed in many real-world tasks. When a non-expert data holder wants to use a third-party machine learning service for model training, it is critical to preserve the confidentiality of the training data. In this paper, we for the first time explore the potential privacy leakage in a scenario that a malicious ML provider offers data holder customized training code including model compression which is essential in practical deployment The provider is unable to access the training process hosted by the secured third party, but could inquire models when they are released in public. As a result, adversary can extract sensitive training data with high quality even from these deeply compressed models that are tailored for resource-limited devices. Our investigation shows that existing compressions like quantization, can serve as a defense against such an attack, by degrading the model accuracy and memorized data quality simultaneously. To overcome this defense, we take an initial attempt to design a simple but stealthy quantized correlation encoding attack flow from an adversary perspective. Three integrated components-data pre-processing, layer-wise data-weight correlation regularization, data-aware quantization, are developed accordingly. Extensive experimental results show that our framework can preserve the evasiveness and effectiveness of stealing data from compressed models.",
-      "year": 2020,
-      "venue": "Design Automation Conference",
+      "paper_id": "044758b8410c8bec7a542febbb8fb613d666cd1d",
+      "title": "Exploring AI Attacks on Hardware Accelerated Targets",
+      "abstract": "Artificial Intelligence have become integral to various applications, ranging from image recognition to natural language processing. To meet the increasing demand for real-time and low-power AI inference Hardware accelerated Embedded Systems such as Field Programmable Gate Arrays have emerged as a popular hardware platform. However, the deployment of AI models on Embedded AI Systems introduces new security concerns. AI attacks on such Embedded AI based systems pose significant risks to the integrity, confidentiality, and availability of AI applications. In our experiment, we conducted attacks such as the Model Extraction Attack and Evasion Attack for AI on Embedded Systems. These experimental results highlights the critical importance of implementing strong security measures to protect AI models running on Hardware accelerated Embedded AI Systems, ensuring their ability to withstand potential threats.",
+      "year": 2023,
+      "venue": "2023 IEEE 2nd International Conference on Data, Decision and Systems (ICDDS)",
       "authors": [
-        "Nuo Xu",
-        "Qi Liu",
-        "Tao Liu",
-        "Zihao Liu",
-        "Xiaochen Guo",
-        "Wujie Wen"
+        "Parin Shah",
+        "Yuvaraj Govindarajulu",
+        "Pavan Kulkarni",
+        "Manojkumar Parmar"
       ],
-      "citation_count": 7,
-      "url": "https://www.semanticscholar.org/paper/82e2e111d2a81fe8efaabec44b5d7d3c74cfa95d",
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/044758b8410c8bec7a542febbb8fb613d666cd1d",
       "pdf_url": "",
-      "publication_date": "2020-07-01",
+      "publication_date": "2023-12-01",
+      "keywords_matched": [
+        "model extraction",
+        "model extraction attack",
+        "(via citation)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "12b0e9a2185229b5f2139cd5f9c9b26d34a01b70",
+      "title": "NeurObfuscator: A Full-stack Obfuscation Tool to Mitigate Neural Architecture Stealing",
+      "abstract": "Neural network stealing attacks have posed grave threats to neural network model deployment. Such attacks can be launched by extracting neural architecture information, such as layer sequence and dimension parameters, through leaky side-channels. To mitigate such attacks, we propose NeurObfuscator, a full-stack obfuscation tool to obfuscate the neural network architecture while preserving its functionality with very limited performance overhead. At the heart of this tool is a set of obfuscating knobs, including layer branching, layer widening, selective fusion and schedule pruning, that increase the number of operators, reduce/increase the latency, and number of cache and DRAM accesses. A genetic algorithm-based approach is adopted to orchestrate the combination of obfuscating knobs to achieve the best obfuscating effect on the layer sequence and dimension parameters so that the architecture information cannot be successfully extracted. Results on sequence obfuscation show that the proposed tool obfuscates a ResNet-18 ImageNet model to a totally different architecture (with 44 layer difference) without affecting its functionality with only 2% overall latency overhead. For dimension obfuscation, we demonstrate that an example convolution layer with 64 input and 128 output channels can be obfuscated to generate a layer with 207 input and 93 output channels with only a 2% latency overhead.",
+      "year": 2021,
+      "venue": "IEEE International Symposium on Hardware Oriented Security and Trust",
+      "authors": [
+        "Jingtao Li",
+        "Zhezhi He",
+        "A. S. Rakin",
+        "Deliang Fan",
+        "C. Chakrabarti"
+      ],
+      "citation_count": 28,
+      "url": "https://www.semanticscholar.org/paper/12b0e9a2185229b5f2139cd5f9c9b26d34a01b70",
+      "pdf_url": "https://arxiv.org/pdf/2107.09789",
+      "publication_date": "2021-07-20",
+      "keywords_matched": [
+        "model stealing (title)"
+      ],
+      "first_seen": "2025-12-05"
+    },
+    {
+      "paper_id": "0d2e0d3c8fb930a9a577ec60152c219995cc6b10",
+      "title": "Neural Network Stealing via Meltdown",
+      "abstract": "Deep learning services are now deployed in various fields on top of cloud infrastructures. In such cloud environment, virtualization technology provides logically independent and isolated computing space for each tenant. However, recent studies demonstrate that by leveraging vulnerabilities of virtualization techniques and shared processor architectures in the cloud system, various side-channels can be established between cloud tenants. In this paper, we propose a novel attack scenario that can steal internal information of deep learning models by exploiting the Meltdown vulnerability in a multitenant system environment. On the basis of our experiment, the proposed attack method could extract internal information of a TensorFlow deep learning service with 92.875% accuracy and 1.325kB/s extraction speed.",
+      "year": 2021,
+      "venue": "International Conference on Information Networking",
+      "authors": [
+        "Hoyong Jeong",
+        "Dohyun Ryu",
+        "Junbeom Hur"
+      ],
+      "citation_count": 5,
+      "url": "https://www.semanticscholar.org/paper/0d2e0d3c8fb930a9a577ec60152c219995cc6b10",
+      "pdf_url": "",
+      "publication_date": "2021-01-13",
       "keywords_matched": [
         "model stealing (title)"
       ],
@@ -653,47 +605,6 @@
         "stealing model"
       ],
       "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "d2affd606828c410d9a68c627a099101220ac8cb",
-      "title": "A Spintronics Memory PUF for Resilience Against Cloning Counterfeit",
-      "abstract": "With the widespread use of electronic devices in embedding or processing sensitive information, new hardware security primitives have emerged to improve the shortcomings of traditional secure data storage. One of these solutions, the physically unclonable function (PUF), which is widely used for authentication and cryptography applications, extracts the unique and unclonable value from the circuit physical properties. However, a cloning attack on memory-based PUF has been demonstrated from the circuit back-side tampering, questioning its unclonable property and opening counterfeiting vulnerability in an untrusted supply chain. Spin transfer torque-magnetic random-access memory (STT-MRAM) is a promising technology due to its nonvolatility, scalability, and CMOS compatibility, therefore envisioned to be used in many embedded secure devices. In this paper, we reveal the vulnerability of existing STT-MRAM PUF solutions to back-side attacks by modeling different levels of tampering and their impact at electrical and logical levels. We propose a tamper resilient methodology for the STT-MRAM PUF design based on its switching properties. The resilience of the proposed solution to different levels of tampering and a 100% detection are confirmed with simulation results.",
-      "year": 2019,
-      "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
-      "authors": [
-        "Samir Ben Dodo",
-        "R. Bishnoi",
-        "Sarath Mohanachandran Nair",
-        "M. Tahoori"
-      ],
-      "citation_count": 24,
-      "url": "https://www.semanticscholar.org/paper/d2affd606828c410d9a68c627a099101220ac8cb",
-      "pdf_url": "",
-      "publication_date": "2019-11-01",
-      "keywords_matched": [
-        "cloning attack"
-      ],
-      "first_seen": "2025-12-05"
-    },
-    {
-      "paper_id": "a9007cf4c4ec7e4fc956bead7008a3605451de49",
-      "title": "Interpretability via Model Extraction",
-      "abstract": "The ability to interpret machine learning models has become increasingly important now that machine learning is used to inform consequential decisions. We propose an approach called model extraction for interpreting complex, blackbox models. Our approach approximates the complex model using a much more interpretable model; as long as the approximation quality is good, then statistical properties of the complex model are reflected in the interpretable model. We show how model extraction can be used to understand and debug random forests and neural nets trained on several datasets from the UCI Machine Learning Repository, as well as control policies learned for several classical reinforcement learning problems.",
-      "year": 2017,
-      "venue": "arXiv.org",
-      "authors": [
-        "Osbert Bastani",
-        "Carolyn Kim",
-        "Hamsa Bastani"
-      ],
-      "citation_count": 133,
-      "url": "https://www.semanticscholar.org/paper/a9007cf4c4ec7e4fc956bead7008a3605451de49",
-      "pdf_url": "",
-      "publication_date": "2017-06-29",
-      "keywords_matched": [
-        "model extraction"
-      ],
-      "first_seen": "2025-11-28"
     }
   ]
 }

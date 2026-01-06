@@ -1,10 +1,5 @@
 /**
  * OWASP ML Security Top 10 Category Definitions
- *
- * Structure:
- * - Each category has a unique color and main data file
- * - Subcategories are optional and have their own data files
- * - Subcategory IDs use format: ML01a, ML01b, etc.
  */
 
 const CATEGORIES = {
@@ -12,77 +7,61 @@ const CATEGORIES = {
         name: "Input Manipulation Attack",
         color: "#ef4444",
         file: "ml01_papers.json",
-        description: "Adversarial examples and evasion attacks on ML models",
-        subcategories: {
-            ML01a: {
-                name: "Prompt Injection",
-                file: "ml01a_papers.json",
-                description: "Malicious prompts to manipulate LLM behavior"
-            }
-        }
+        description: "Adversarial examples and evasion attacks on ML models"
     },
     ML02: {
         name: "Data Poisoning Attack",
         color: "#f97316",
         file: "ml02_papers.json",
-        description: "Poisoning training data to compromise ML models",
-        subcategories: {}
+        description: "Poisoning training data to compromise ML models"
     },
     ML03: {
         name: "Model Inversion Attack",
         color: "#eab308",
         file: "ml03_papers.json",
-        description: "Reconstructing training data from ML model access",
-        subcategories: {}
+        description: "Reconstructing training data from ML model access"
     },
     ML04: {
         name: "Membership Inference Attack",
         color: "#84cc16",
         file: "ml04_papers.json",
-        description: "Detecting if data was used to train an ML model",
-        subcategories: {}
+        description: "Detecting if data was used to train an ML model"
     },
     ML05: {
         name: "Model Theft",
         color: "#22c55e",
         file: "ml05_papers.json",
-        description: "Techniques to steal or extract ML models",
-        subcategories: {}
+        description: "Techniques to steal or extract ML models"
     },
     ML06: {
         name: "AI Supply Chain Attacks",
         color: "#14b8a6",
         file: "ml06_papers.json",
-        description: "Compromising ML through dependencies and third-party components",
-        subcategories: {}
+        description: "Compromising ML through dependencies and third-party components"
     },
     ML07: {
         name: "Transfer Learning Attack",
         color: "#06b6d4",
         file: "ml07_papers.json",
-        description: "Exploiting fine-tuning and transfer learning vulnerabilities",
-        subcategories: {}
+        description: "Exploiting fine-tuning and transfer learning vulnerabilities"
     },
     ML08: {
         name: "Model Skewing",
         color: "#3b82f6",
         file: "ml08_papers.json",
-        description: "Inducing bias and unfairness in ML models",
-        subcategories: {}
+        description: "Inducing bias and unfairness in ML models"
     },
     ML09: {
         name: "Output Integrity Attack",
         color: "#8b5cf6",
         file: "ml09_papers.json",
-        description: "Manipulating ML model outputs and predictions",
-        subcategories: {}
+        description: "Manipulating ML model outputs and predictions"
     },
     ML10: {
         name: "Model Poisoning",
         color: "#ec4899",
         file: "ml10_papers.json",
-        description: "Backdoors, trojans, and model-level attacks",
-        subcategories: {}
+        description: "Backdoors, trojans, and model-level attacks"
     }
 };
 
@@ -145,44 +124,8 @@ function adjustColor(color, amount) {
     return `#${(1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1)}`;
 }
 
-/**
- * Get parent category ID from subcategory ID
- * e.g., "ML01a" -> "ML01"
- */
-function getParentCategory(categoryId) {
-    const match = categoryId.match(/^(ML\d{2})/);
-    return match ? match[1] : categoryId;
-}
-
-/**
- * Check if a category ID is a subcategory
- */
-function isSubcategory(categoryId) {
-    return /^ML\d{2}[a-z]$/.test(categoryId);
-}
-
-/**
- * Get all subcategories for a category
- */
-function getSubcategories(categoryId) {
-    const cat = CATEGORIES[categoryId];
-    if (!cat || !cat.subcategories) return {};
-    return cat.subcategories;
-}
-
-/**
- * Check if a category has subcategories
- */
-function hasSubcategories(categoryId) {
-    return Object.keys(getSubcategories(categoryId)).length > 0;
-}
-
 // Export for use in app.js
 window.CATEGORIES = CATEGORIES;
 window.VENUE_ABBREV = VENUE_ABBREV;
 window.getVenueAbbrev = getVenueAbbrev;
 window.adjustColor = adjustColor;
-window.getParentCategory = getParentCategory;
-window.isSubcategory = isSubcategory;
-window.getSubcategories = getSubcategories;
-window.hasSubcategories = hasSubcategories;

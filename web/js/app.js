@@ -4,10 +4,8 @@
 
 // State
 let currentCategory = 'all';
-let currentSubcategory = null;
 let papers = [];
 let categoryData = {};
-let subcategoryData = {};
 let manifest = null;
 
 /**
@@ -19,7 +17,7 @@ async function loadManifest() {
         manifest = await response.json();
         return manifest;
     } catch (error) {
-        console.log('No manifest found, trying legacy mode');
+        console.log('No manifest found');
         return null;
     }
 }
@@ -42,37 +40,6 @@ async function loadCategoryPapers(categoryId) {
 }
 
 /**
- * Load papers for a subcategory
- */
-async function loadSubcategoryPapers(parentId, subId) {
-    const parent = CATEGORIES[parentId];
-    if (!parent || !parent.subcategories || !parent.subcategories[subId]) return [];
-
-    const sub = parent.subcategories[subId];
-    try {
-        const response = await fetch(`../data/${sub.file}`);
-        const data = await response.json();
-        return data.papers || [];
-    } catch (error) {
-        console.log(`Could not load ${sub.file}`);
-        return [];
-    }
-}
-
-/**
- * Load legacy papers (fallback)
- */
-async function loadLegacyPapers() {
-    try {
-        const response = await fetch('papers_filtered.json');
-        const data = await response.json();
-        return data.papers || [];
-    } catch (error) {
-        return [];
-    }
-}
-
-/**
  * Initialize the application
  */
 async function initialize() {
@@ -83,13 +50,8 @@ async function initialize() {
         await loadAllCategories();
         showHubOverview();
     } else {
-        papers = await loadLegacyPapers();
-        if (papers.length > 0) {
-            selectCategory('ML05');
-        } else {
-            document.getElementById('paper-list').innerHTML =
-                '<div class="no-results">No papers found. Run filtering first.</div>';
-        }
+        document.getElementById('paper-list').innerHTML =
+            '<div class="no-results">No papers found. Run classification first.</div>';
     }
 }
 
@@ -124,15 +86,6 @@ async function loadAllCategories() {
             const countSpan = tab.querySelector('.count');
             countSpan.textContent = ` (${papers.length})`;
         }
-
-        // Load subcategory data
-        if (cat.subcategories) {
-            subcategoryData[id] = {};
-            for (const subId of Object.keys(cat.subcategories)) {
-                const subPapers = await loadSubcategoryPapers(id, subId);
-                subcategoryData[id][subId] = subPapers;
-            }
-        }
     }
 }
 
@@ -148,11 +101,9 @@ function showHubOverview() {
     document.getElementById('controls').style.display = 'none';
     document.getElementById('paper-list').innerHTML = '';
     document.getElementById('category-info').classList.remove('visible');
-    document.getElementById('subcategory-nav').classList.remove('visible');
 
     for (const [id, cat] of Object.entries(CATEGORIES)) {
         const count = categoryData[id]?.length || 0;
-        const subCount = Object.keys(cat.subcategories || {}).length;
 
         const card = document.createElement('div');
         card.className = 'hub-card';
@@ -161,7 +112,6 @@ function showHubOverview() {
             <h3><span class="owasp-id">${id}</span>${cat.name}</h3>
             <p>${cat.description}</p>
             <div class="paper-count">${count} papers</div>
-            ${subCount > 0 ? `<div class="subcategories">${subCount} subcategories</div>` : ''}
         `;
         card.addEventListener('click', () => selectCategory(id));
         container.appendChild(card);
@@ -170,43 +120,6 @@ function showHubOverview() {
     // Update active tab
     document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
     document.querySelector('.category-tab[data-category="all"]').classList.add('active');
-}
-
-/**
- * Build subcategory pills for a category
- */
-function buildSubcategoryPills(categoryId) {
-    const nav = document.getElementById('subcategory-nav');
-    const container = document.getElementById('subcategory-pills');
-    const cat = CATEGORIES[categoryId];
-
-    if (!cat.subcategories || Object.keys(cat.subcategories).length === 0) {
-        nav.classList.remove('visible');
-        return;
-    }
-
-    container.innerHTML = '';
-
-    // Add "All" pill
-    const allPill = document.createElement('div');
-    allPill.className = 'subcategory-pill active';
-    allPill.dataset.subcategory = 'all';
-    allPill.innerHTML = `All<span class="count"> (${categoryData[categoryId]?.length || 0})</span>`;
-    allPill.addEventListener('click', () => selectSubcategory(categoryId, null));
-    container.appendChild(allPill);
-
-    // Add subcategory pills
-    for (const [subId, sub] of Object.entries(cat.subcategories)) {
-        const count = subcategoryData[categoryId]?.[subId]?.length || 0;
-        const pill = document.createElement('div');
-        pill.className = 'subcategory-pill';
-        pill.dataset.subcategory = subId;
-        pill.innerHTML = `${sub.name}<span class="count"> (${count})</span>`;
-        pill.addEventListener('click', () => selectSubcategory(categoryId, subId));
-        container.appendChild(pill);
-    }
-
-    nav.classList.add('visible');
 }
 
 /**
@@ -219,7 +132,6 @@ function selectCategory(categoryId) {
     }
 
     currentCategory = categoryId;
-    currentSubcategory = null;
     papers = categoryData[categoryId] || [];
 
     // Hide hub overview
@@ -233,9 +145,6 @@ function selectCategory(categoryId) {
     document.getElementById('category-info').style.background =
         `linear-gradient(135deg, ${cat.color} 0%, ${adjustColor(cat.color, -30)} 100%)`;
 
-    // Build subcategory pills
-    buildSubcategoryPills(categoryId);
-
     // Show controls and charts
     document.getElementById('charts-section').style.display = 'block';
     document.getElementById('controls').style.display = 'flex';
@@ -248,44 +157,6 @@ function selectCategory(categoryId) {
     resetFilters();
 
     // Render
-    populateYearFilter();
-    populateVenueFilter();
-    renderCharts();
-    renderPapers();
-}
-
-/**
- * Select a subcategory
- */
-function selectSubcategory(categoryId, subcategoryId) {
-    currentSubcategory = subcategoryId;
-
-    if (subcategoryId) {
-        papers = subcategoryData[categoryId]?.[subcategoryId] || [];
-
-        // Update category info for subcategory
-        const cat = CATEGORIES[categoryId];
-        const sub = cat.subcategories[subcategoryId];
-        document.getElementById('category-title').textContent = `${subcategoryId}: ${sub.name}`;
-        document.getElementById('category-description').textContent = sub.description;
-    } else {
-        papers = categoryData[categoryId] || [];
-
-        // Restore category info
-        const cat = CATEGORIES[categoryId];
-        document.getElementById('category-title').textContent = `${categoryId}: ${cat.name}`;
-        document.getElementById('category-description').textContent = cat.description;
-    }
-
-    // Update active pill
-    document.querySelectorAll('.subcategory-pill').forEach(p => p.classList.remove('active'));
-    const activePill = document.querySelector(
-        `.subcategory-pill[data-subcategory="${subcategoryId || 'all'}"]`
-    );
-    if (activePill) activePill.classList.add('active');
-
-    // Reset and re-render
-    resetFilters();
     populateYearFilter();
     populateVenueFilter();
     renderCharts();
