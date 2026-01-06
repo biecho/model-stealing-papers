@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Fetch model stealing papers from Semantic Scholar API.
+Fetch ML security papers from Semantic Scholar API.
 
 Usage:
     python fetch_papers.py [--output papers.json]
+    python fetch_papers.py -c configs/ml01a_prompt_injection.yaml -o data/prompt_injection_raw.json
 """
 
 import argparse
@@ -11,8 +12,15 @@ import json
 import os
 import time
 from dataclasses import dataclass, asdict
+from pathlib import Path
 from typing import Optional
 import requests
+
+try:
+    import yaml
+    YAML_AVAILABLE = True
+except ImportError:
+    YAML_AVAILABLE = False
 
 # API key from environment variable (optional, but recommended for higher rate limits)
 API_KEY = os.environ.get("S2_API_KEY")
@@ -116,6 +124,34 @@ EXCLUDED_VENUES = [
     "IEEE transactions on microwave theory and techniques",
     "IEEE Transactions on Microwave Theory and Techniques",
 ]
+
+
+def load_keywords_from_config(config_path: str) -> tuple[list[str], str]:
+    """
+    Load keywords from a YAML config file.
+
+    Returns:
+        Tuple of (keywords list, domain name)
+    """
+    if not YAML_AVAILABLE:
+        raise ImportError("PyYAML is required to use config files. Install with: pip install pyyaml")
+
+    with open(config_path) as f:
+        config = yaml.safe_load(f)
+
+    # Combine all keyword types into a single list
+    keywords = []
+    keywords.extend(config.get("high_quality_keywords", []))
+    keywords.extend(config.get("core_keywords", []))
+    keywords.extend(config.get("defense_keywords", []))
+
+    domain_name = config.get("domain", {}).get("name", "unknown")
+    owasp_id = config.get("domain", {}).get("owasp_id", "")
+
+    if owasp_id:
+        domain_name = f"{owasp_id} - {domain_name}"
+
+    return keywords, domain_name
 
 # Fields to request from the API
 FIELDS = "title,abstract,year,venue,authors,citationCount,url,openAccessPdf,publicationDate"
@@ -584,26 +620,42 @@ def merge_papers(existing: dict[str, Paper], new_papers: list[Paper]) -> list[Pa
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Fetch model stealing papers")
+    parser = argparse.ArgumentParser(description="Fetch ML security papers from Semantic Scholar")
     parser.add_argument("--output", "-o", default="papers.json", help="Output JSON file")
+    parser.add_argument("--config", "-c", help="YAML config file to load keywords from")
     parser.add_argument("--limit", "-l", type=int, default=100, help="Max papers per keyword search")
     parser.add_argument("--citation-limit", type=int, default=None, help="Max citations per seed (default: all)")
     parser.add_argument("--no-citations", action="store_true", help="Skip citation crawling")
     args = parser.parse_args()
 
+    # Determine keywords to use
+    if args.config:
+        keywords, domain_name = load_keywords_from_config(args.config)
+        print(f"Using config: {args.config}")
+        print(f"Domain: {domain_name}")
+        print(f"Keywords: {len(keywords)}")
+        # When using config, default to no citations (config-based fetching is keyword-only)
+        use_citations = False
+        seed_papers = []
+    else:
+        keywords = KEYWORDS
+        seed_papers = SEED_PAPERS
+        use_citations = not args.no_citations
+        print("Using default model stealing keywords")
+
     # Load existing papers (we never remove papers, only add)
     existing = load_existing_papers(args.output)
 
-    # Fetch new papers using hybrid approach (keywords + citations)
-    if args.no_citations:
+    # Fetch new papers
+    if not use_citations or args.no_citations:
         # Keywords only mode
         print("Running in keywords-only mode (no citation crawling)")
-        new_papers = fetch_papers_by_keywords(KEYWORDS, limit_per_keyword=args.limit)
+        new_papers = fetch_papers_by_keywords(keywords, limit_per_keyword=args.limit)
     else:
         # Full hybrid mode - fetch ALL citations by default
         new_papers = fetch_all_papers(
-            keywords=KEYWORDS,
-            seed_papers=SEED_PAPERS,
+            keywords=keywords,
+            seed_papers=seed_papers,
             limit_per_keyword=args.limit,
             limit_per_seed=args.citation_limit,  # None = fetch all
         )
@@ -622,10 +674,13 @@ def main():
     data = {
         "updated": time.strftime("%Y-%m-%d"),
         "total": len(papers),
-        "keywords": KEYWORDS,
-        "seed_papers": [name for _, name in SEED_PAPERS],
+        "keywords": keywords,
+        "seed_papers": [name for _, name in seed_papers] if seed_papers else [],
         "papers": [asdict(p) for p in papers],
     }
+
+    if args.config:
+        data["config"] = args.config
 
     with open(args.output, "w") as f:
         json.dump(data, f, indent=2)

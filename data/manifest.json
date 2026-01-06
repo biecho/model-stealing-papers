@@ -87,7 +87,7 @@
       "owasp_id": "ML01a",
       "owasp_name": "Prompt Injection",
       "total": 919,
-      "relevant": 77,
+      "relevant": 543,
       "excluded": 842,
       "output_file": "data/ml01a_papers.json",
       "parent_id": "ML01"

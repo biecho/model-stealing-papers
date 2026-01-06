@@ -1,6 +1,6 @@
 {
   "updated": "2026-01-06",
-  "total": 543,
+  "total": 581,
   "keywords": [
     "prompt injection",
     "prompt injection attack",
@@ -26,7 +26,6 @@
     "prevent prompt injection"
   ],
   "seed_papers": [],
-  "note": "Filtered to include only papers primarily about model stealing/extraction",
   "papers": [
     {
       "paper_id": "a26a44d8999faf96364718084459e188869dc177",
@@ -2814,6 +2813,33 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "239a42e72cea398b972726e0907df5314f631bd3",
+      "title": "AGENTFUZZER: Generic Black-Box Fuzzing for Indirect Prompt Injection against LLM Agents",
+      "abstract": null,
+      "year": 2025,
+      "venue": "arXiv.org",
+      "authors": [
+        "Zhun Wang",
+        "Vincent Siu",
+        "Zhe Ye",
+        "Tianneng Shi",
+        "Yuzhou Nie",
+        "Xuandong Zhao",
+        "Chenguang Wang",
+        "Wenbo Guo",
+        "D. Song"
+      ],
+      "citation_count": 2,
+      "url": "https://www.semanticscholar.org/paper/239a42e72cea398b972726e0907df5314f631bd3",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection",
+        "indirect prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "09377c53e8bff67f1d8f1d778e529736a878f338",
       "title": "ChatInject: Abusing Chat Templates for Prompt Injection in LLM Agents",
       "abstract": "The growing deployment of large language model (LLM) based agents that interact with external environments has created new attack surfaces for adversarial manipulation. One major threat is indirect prompt injection, where attackers embed malicious instructions in external environment output, causing agents to interpret and execute them as if they were legitimate prompts. While previous research has focused primarily on plain-text injection attacks, we find a significant yet underexplored vulnerability: LLMs'dependence on structured chat templates and their susceptibility to contextual manipulation through persuasive multi-turn dialogues. To this end, we introduce ChatInject, an attack that formats malicious payloads to mimic native chat templates, thereby exploiting the model's inherent instruction-following tendencies. Building on this foundation, we develop a persuasion-driven Multi-turn variant that primes the agent across conversational turns to accept and execute otherwise suspicious actions. Through comprehensive experiments across frontier LLMs, we demonstrate three critical findings: (1) ChatInject achieves significantly higher average attack success rates than traditional prompt injection methods, improving from 5.18% to 32.05% on AgentDojo and from 15.13% to 45.90% on InjecAgent, with multi-turn dialogues showing particularly strong performance at average 52.33% success rate on InjecAgent, (2) chat-template-based payloads demonstrate strong transferability across models and remain effective even against closed-source LLMs, despite their unknown template structures, and (3) existing prompt-based defenses are largely ineffective against this attack approach, especially against Multi-turn variants. These findings highlight vulnerabilities in current agent systems.",
@@ -4323,6 +4349,33 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "f502fd8f67f3f849d5ab19cc2cb694e0de2c7d4f",
+      "title": "AGENTVIGIL: Automatic Black-Box Red-teaming for Indirect Prompt Injection against LLM Agents",
+      "abstract": ",",
+      "year": 2025,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "authors": [
+        "Zhun Wang",
+        "Vincent Siu",
+        "Zhe Ye",
+        "Tianneng Shi",
+        "Yuzhou Nie",
+        "Xuandong Zhao",
+        "Chenguang Wang",
+        "Wenbo Guo",
+        "D. Song"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/f502fd8f67f3f849d5ab19cc2cb694e0de2c7d4f",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection",
+        "indirect prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "87f7524a48c909600717e89946ed117beb7186ac",
       "title": "Fingerprinting LLMs via Prompt Injection",
       "abstract": "Large language models (LLMs) are often modified after release through post-processing such as post-training or quantization, which makes it challenging to determine whether one model is derived from another. Existing provenance detection methods have two main limitations: (1) they embed signals into the base model before release, which is infeasible for already published models, or (2) they compare outputs across models using hand-crafted or random prompts, which are not robust to post-processing. In this work, we propose LLMPrint, a novel detection framework that constructs fingerprints by exploiting LLMs'inherent vulnerability to prompt injection. Our key insight is that by optimizing fingerprint prompts to enforce consistent token preferences, we can obtain fingerprints that are both unique to the base model and robust to post-processing. We further develop a unified verification procedure that applies to both gray-box and black-box settings, with statistical guarantees. We evaluate LLMPrint on five base models and around 700 post-trained or quantized variants. Our results show that LLMPrint achieves high true positive rates while keeping false positive rates near zero.",
@@ -4442,6 +4495,28 @@
       ],
       "citation_count": 0,
       "url": "https://www.semanticscholar.org/paper/f201926c2fcd7f172dd8370392c39699ea46d093",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection",
+        "prompt injection attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "9dd05a0a81736b159de62379851851a392f44410",
+      "title": "Prompt Injection Attacks on Large Language Models: A Survey of Attack Methods, Root Causes, and Defense Strategies",
+      "abstract": null,
+      "year": 2025,
+      "venue": "Computers, Materials &amp; Continua",
+      "authors": [
+        "Tongcheng Geng",
+        "Zhiyuan Xu",
+        "Yubin Qu",
+        "W. E. Wong"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/9dd05a0a81736b159de62379851851a392f44410",
       "pdf_url": "",
       "publication_date": null,
       "keywords_matched": [
@@ -5307,6 +5382,28 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "56c8d97c85380eafca4d57da471015b5c037aac3",
+      "title": "The Dangers of Indirect Prompt Injection Attacks on LLM-based Autonomous Web Navigation Agents: A Demonstration",
+      "abstract": ",",
+      "year": 2025,
+      "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+      "authors": [
+        "Sam Johnson",
+        "Viet Pham",
+        "Thai Le"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/56c8d97c85380eafca4d57da471015b5c037aac3",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection",
+        "prompt injection attack",
+        "indirect prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "c0f0583f33017d638c7eead9e70d05131f0d86c9",
       "title": "Multimodal Prompt Injection Attacks: Risks and Defenses for Modern LLMs",
       "abstract": "Large Language Models (LLMs) have seen rapid adoption in recent years, with industries increasingly relying on them to maintain a competitive advantage. These models excel at interpreting user instructions and generating human-like responses, leading to their integration across diverse domains, including consulting and information retrieval. However, their widespread deployment also introduces substantial security risks, most notably in the form of prompt injection and jailbreak attacks. To systematically evaluate LLM vulnerabilities -- particularly to external prompt injection -- we conducted a series of experiments on eight commercial models. Each model was tested without supplementary sanitization, relying solely on its built-in safeguards. The results exposed exploitable weaknesses and emphasized the need for stronger security measures. Four categories of attacks were examined: direct injection, indirect (external) injection, image-based injection, and prompt leakage. Comparative analysis indicated that Claude 3 demonstrated relatively greater robustness; nevertheless, empirical findings confirm that additional defenses, such as input normalization, remain necessary to achieve reliable protection.",
@@ -5664,6 +5761,27 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "b88a97b9bc750bac3c8a69cee2711cc64c7e32a5",
+      "title": "Personalized Prompt Attack Strategies Against Large Language Models",
+      "abstract": null,
+      "year": 2025,
+      "venue": "International Conference on Intelligent Computing",
+      "authors": [
+        "Yu Zhang",
+        "Yongbing Gao",
+        "Zirong Su",
+        "Longcang Wang"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/b88a97b9bc750bac3c8a69cee2711cc64c7e32a5",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "867f0550f5e2d9a08d3c2094cf3c6bf05b90b6b5",
       "title": "Multilingual Hidden Prompt Injection Attacks on LLM-Based Academic Reviewing",
       "abstract": "Large language models (LLMs) are increasingly considered for use in high-impact workflows, including academic peer review. However, LLMs are vulnerable to document-level hidden prompt injection attacks. In this work, we construct a dataset of approximately 500 real academic papers accepted to ICML and evaluate the effect of embedding hidden adversarial prompts within these documents. Each paper is injected with semantically equivalent instructions in four different languages and reviewed using an LLM. We find that prompt injection induces substantial changes in review scores and accept/reject decisions for English, Japanese, and Chinese injections, while Arabic injections produce little to no effect. These results highlight the susceptibility of LLM-based reviewing systems to document-level prompt injection and reveal notable differences in vulnerability across languages.",
@@ -5907,6 +6025,25 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "e06cb93f82b4516bf3d03c2d5b29d313e5ee4c88",
+      "title": "Adversarial Prompt Filtering Based on Societal Risk",
+      "abstract": null,
+      "year": 2025,
+      "venue": "2025 IEEE 25th International Symposium on Cluster, Cloud and Internet Computing Workshops (CCGridW)",
+      "authors": [
+        "Ryan Marinelli"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/e06cb93f82b4516bf3d03c2d5b29d313e5ee4c88",
+      "pdf_url": "",
+      "publication_date": "2025-05-19",
+      "keywords_matched": [
+        "adversarial prompt",
+        "prompt filtering"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "84e85dd5c331a71001a016dd7c8708ce7acc29de",
       "title": "The Unprecedented Surge in Generative AI: Empirical Analysis of Trusted and Malicious Large Language Models (LLMs)",
       "abstract": "Trusted large language models (LLMs) inherit ethical guidelines to prevent generating harmful content, whereas malicious LLMs are engineered to enable the generation of unethical and toxic responses. Both trusted and malicious LLMs use guardrails in differential contexts per the requirements of the developers and attackers, respectively. We explore the multifaceted world of guardrails implementation in LLMs by conducting an empirical analysis to assess the effectiveness of guardrails using prompts. Our results revealed that guardrails deployed in the trusted LLMs could be bypassed using prompt manipulation techniques such as \u201cpretend\u201d and \u201cpersist\u201d to generate harmful content. In addition, we also discovered that malicious LLMs still deploy weak guardrails to evade detection by generating human-like content. This empirical analysis provides insights into the design of the malicious and trusted LLMs. We also propose recommendations to defend against prompt manipulation and guardrails bypass while designing LLMs.",
@@ -6042,6 +6179,27 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "13e43ed84bb009d454abc8aa1869761a7acd8791",
+      "title": "Robustness of Automated AI Agents Against Adversarial Context Injection in MCP",
+      "abstract": null,
+      "year": 2025,
+      "venue": "International Journal of Computer Applications",
+      "authors": [
+        "Prudhvi Ratna Badri Satya",
+        "Ajay Guyyala",
+        "Vijay Putta",
+        "Krishna Teja Areti"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/13e43ed84bb009d454abc8aa1869761a7acd8791",
+      "pdf_url": "",
+      "publication_date": "2025-11-18",
+      "keywords_matched": [
+        "context injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "463dd86f38814b45c8cc0242ac208add5e8c43ef",
       "title": "\"I know it's not right, but that's what it said to do\": Investigating Trust in AI Chatbots for Cybersecurity Policy",
       "abstract": "AI chatbots are an emerging security attack vector, vulnerable to threats such as prompt injection, and rogue chatbot creation. When deployed in domains such as corporate security policy, they could be weaponized to deliver guidance that intentionally undermines system defenses. We investigate whether users can be tricked by a compromised AI chatbot in this scenario. A controlled study (N=15) asked participants to use a chatbot to complete security-related tasks. Without their knowledge, the chatbot was manipulated to give incorrect advice for some tasks. The results show how trust in AI chatbots is related to task familiarity, and confidence in their ownn judgment. Additionally, we discuss possible reasons why people do or do not trust AI chatbots in different scenarios.",
@@ -6124,6 +6282,23 @@
       "url": "https://www.semanticscholar.org/paper/3de9bab87cfece99fc4da5bb8b45130405f7a12d",
       "pdf_url": "",
       "publication_date": "2025-11-23",
+      "keywords_matched": [
+        "prompt injection",
+        "prompt injection attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "6353a4bc7d341ba10df8170b21998f65b14e7ec0",
+      "title": "REAL TIME AI DEFENSE AGAINST PROMPT INJECTION ATTACKS",
+      "abstract": null,
+      "year": 2025,
+      "venue": "2nd International Conference on Cybersecurity and Digital Defense (ICyDD)",
+      "authors": [],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/6353a4bc7d341ba10df8170b21998f65b14e7ec0",
+      "pdf_url": "",
+      "publication_date": "2025-10-25",
       "keywords_matched": [
         "prompt injection",
         "prompt injection attack"
@@ -6257,6 +6432,26 @@
       "keywords_matched": [
         "prompt injection",
         "prompt injection attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "ca8316bae22e9de13801af28d61254809b619799",
+      "title": "DRIP: Defending Prompt Injection via De-instruction Training and Residual Fusion Model Architecture",
+      "abstract": null,
+      "year": 2025,
+      "venue": "arXiv.org",
+      "authors": [
+        "Ruofan Liu",
+        "Yun Lin",
+        "J. Dong"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/ca8316bae22e9de13801af28d61254809b619799",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection"
       ],
       "first_seen": "2026-01-06"
     },
@@ -7232,6 +7427,28 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "b7ef6182f617ef3e7cc9682f562f794115a4c62c",
+      "title": "COLD-Attack: Jailbreaking LLMs with Stealthiness and Controllability",
+      "abstract": "Jailbreaks on large language models (LLMs) have recently received increasing attention. For a comprehensive assessment of LLM safety, it is essential to consider jailbreaks with diverse attributes, such as contextual coherence and sentiment/stylistic variations, and hence it is beneficial to study controllable jailbreaking, i.e. how to enforce control on LLM attacks. In this paper, we formally formulate the controllable attack generation problem, and build a novel connection between this problem and controllable text generation, a well-explored topic of natural language processing. Based on this connection, we adapt the Energy-based Constrained Decoding with Langevin Dynamics (COLD), a state-of-the-art, highly efficient algorithm in controllable text generation, and introduce the COLD-Attack framework which unifies and automates the search of adversarial LLM attacks under a variety of control requirements such as fluency, stealthiness, sentiment, and left-right-coherence. The controllability enabled by COLD-Attack leads to diverse new jailbreak scenarios which not only cover the standard setting of generating fluent (suffix) attack with continuation constraint, but also allow us to address new controllable attack settings such as revising a user query adversarially with paraphrasing constraint, and inserting stealthy attacks in context with position constraint. Our extensive experiments on various LLMs (Llama-2, Mistral, Vicuna, Guanaco, GPT-3.5, and GPT-4) show COLD-Attack's broad applicability, strong controllability, high success rate, and attack transferability. Our code is available at https://github.com/Yu-Fangxu/COLD-Attack.",
+      "year": 2024,
+      "venue": "International Conference on Machine Learning",
+      "authors": [
+        "Xing-ming Guo",
+        "Fangxu Yu",
+        "Huan Zhang",
+        "Lianhui Qin",
+        "Bin Hu"
+      ],
+      "citation_count": 146,
+      "url": "https://www.semanticscholar.org/paper/b7ef6182f617ef3e7cc9682f562f794115a4c62c",
+      "pdf_url": "",
+      "publication_date": "2024-02-13",
+      "keywords_matched": [
+        "LLM attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "7ea5e86bbbcc445eca1a765deb314eefc06067b8",
       "title": "Rainbow Teaming: Open-Ended Generation of Diverse Adversarial Prompts",
       "abstract": "As large language models (LLMs) become increasingly prevalent across many real-world applications, understanding and enhancing their robustness to adversarial attacks is of paramount importance. Existing methods for identifying adversarial prompts tend to focus on specific domains, lack diversity, or require extensive human annotations. To address these limitations, we present Rainbow Teaming, a novel black-box approach for producing a diverse collection of adversarial prompts. Rainbow Teaming casts adversarial prompt generation as a quality-diversity problem and uses open-ended search to generate prompts that are both effective and diverse. Focusing on the safety domain, we use Rainbow Teaming to target various state-of-the-art LLMs, including the Llama 2 and Llama 3 models. Our approach reveals hundreds of effective adversarial prompts, with an attack success rate exceeding 90% across all tested models. Furthermore, we demonstrate that prompts generated by Rainbow Teaming are highly transferable and that fine-tuning models with synthetic data generated by our method significantly enhances their safety without sacrificing general performance or helpfulness. We additionally explore the versatility of Rainbow Teaming by applying it to question answering and cybersecurity, showcasing its potential to drive robust open-ended self-improvement in a wide range of applications.",
@@ -7597,6 +7814,29 @@
       "keywords_matched": [
         "prompt injection",
         "prompt injection attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "a2a4ddbed34916cfa345e957cf060da99685e37b",
+      "title": "Pandora: Jailbreak GPTs by Retrieval Augmented Generation Poisoning",
+      "abstract": "Large Language Models~(LLMs) have gained immense popularity and are being increasingly applied in various domains. Consequently, ensuring the security of these models is of paramount importance. Jailbreak attacks, which manipulate LLMs to generate malicious content, are recognized as a significant vulnerability. While existing research has predominantly focused on direct jailbreak attacks on LLMs, there has been limited exploration of indirect methods. The integration of various plugins into LLMs, notably Retrieval Augmented Generation~(RAG), which enables LLMs to incorporate external knowledge bases into their response generation such as GPTs, introduces new avenues for indirect jailbreak attacks. To fill this gap, we investigate indirect jailbreak attacks on LLMs, particularly GPTs, introducing a novel attack vector named Retrieval Augmented Generation Poisoning. This method, Pandora, exploits the synergy between LLMs and RAG through prompt manipulation to generate unexpected responses. Pandora uses maliciously crafted content to influence the RAG process, effectively initiating jailbreak attacks. Our preliminary tests show that Pandora successfully conducts jailbreak attacks in four different scenarios, achieving higher success rates than direct attacks, with 64.3\\% for GPT-3.5 and 34.8\\% for GPT-4.",
+      "year": 2024,
+      "venue": "Proceedings 2024 Workshop on AI Systems with Confidential COmputing",
+      "authors": [
+        "Gelei Deng",
+        "Yi Liu",
+        "Kailong Wang",
+        "Yuekang Li",
+        "Tianwei Zhang",
+        "Yang Liu"
+      ],
+      "citation_count": 68,
+      "url": "https://www.semanticscholar.org/paper/a2a4ddbed34916cfa345e957cf060da99685e37b",
+      "pdf_url": "",
+      "publication_date": "2024-02-13",
+      "keywords_matched": [
+        "prompt manipulation"
       ],
       "first_seen": "2026-01-06"
     },
@@ -8403,6 +8643,28 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "57eec0efd84f95943c744bacb1315746b1287f16",
+      "title": "Few-Shot Adversarial Prompt Learning on Vision-Language Models",
+      "abstract": "The vulnerability of deep neural networks to imperceptible adversarial perturbations has attracted widespread attention. Inspired by the success of vision-language foundation models, previous efforts achieved zero-shot adversarial robustness by aligning adversarial visual features with text supervision. However, in practice, they are still unsatisfactory due to several issues, including heavy adaptation cost, suboptimal text supervision, and uncontrolled natural generalization capacity. In this paper, to address these issues, we propose a few-shot adversarial prompt framework where adapting input sequences with limited data makes significant adversarial robustness improvement. Specifically, we achieve this by providing adversarially correlated text supervision that is end-to-end learned from adversarial examples. We also propose a novel training objective that enhances the consistency of multi-modal features while encourages differentiated uni-modal features between natural and adversarial examples. The proposed framework gives access to learn adversarial text supervision, which provides superior cross-modal adversarial alignment and matches state-of-the-art zero-shot adversarial robustness with only 1% training data. Code is available at: https://github.com/lionel-w2/FAP.",
+      "year": 2024,
+      "venue": "Neural Information Processing Systems",
+      "authors": [
+        "Yiwei Zhou",
+        "Xiaobo Xia",
+        "Zhiwei Lin",
+        "Bo Han",
+        "Tongliang Liu"
+      ],
+      "citation_count": 29,
+      "url": "https://www.semanticscholar.org/paper/57eec0efd84f95943c744bacb1315746b1287f16",
+      "pdf_url": "",
+      "publication_date": "2024-03-21",
+      "keywords_matched": [
+        "adversarial prompt"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "7ac0f06b86cc210818dee9f7b1a20a003c60401c",
       "title": "Automated Red Teaming with GOAT: the Generative Offensive Agent Tester",
       "abstract": "Red teaming assesses how large language models (LLMs) can produce content that violates norms, policies, and rules set during their safety training. However, most existing automated methods in the literature are not representative of the way humans tend to interact with AI models. Common users of AI models may not have advanced knowledge of adversarial machine learning methods or access to model internals, and they do not spend a lot of time crafting a single highly effective adversarial prompt. Instead, they are likely to make use of techniques commonly shared online and exploit the multiturn conversational nature of LLMs. While manual testing addresses this gap, it is an inefficient and often expensive process. To address these limitations, we introduce the Generative Offensive Agent Tester (GOAT), an automated agentic red teaming system that simulates plain language adversarial conversations while leveraging multiple adversarial prompting techniques to identify vulnerabilities in LLMs. We instantiate GOAT with 7 red teaming attacks by prompting a general-purpose model in a way that encourages reasoning through the choices of methods available, the current target model's response, and the next steps. Our approach is designed to be extensible and efficient, allowing human testers to focus on exploring new areas of risk while automation covers the scaled adversarial stress-testing of known risk territory. We present the design and evaluation of GOAT, demonstrating its effectiveness in identifying vulnerabilities in state-of-the-art LLMs, with an ASR@10 of 97% against Llama 3.1 and 88% against GPT-4 on the JailbreakBench dataset.",
@@ -8657,6 +8919,28 @@
       "url": "https://www.semanticscholar.org/paper/685dd83fb88fa7d5546f2624ac5b9fe8a484de13",
       "pdf_url": "",
       "publication_date": "2024-06-19",
+      "keywords_matched": [
+        "prompt injection",
+        "prompt injection attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "70069870f883ff3889790b259bbc38d8cfc4f784",
+      "title": "GUARDIAN: A Multi-Tiered Defense Architecture for Thwarting Prompt Injection Attacks on LLMs",
+      "abstract": null,
+      "year": 2024,
+      "venue": "Journal of Software Engineering and Applications",
+      "authors": [
+        "Parijat Rai",
+        "Saumil Sood",
+        "V. Madisetti",
+        "Arshdeep Bahga"
+      ],
+      "citation_count": 21,
+      "url": "https://www.semanticscholar.org/paper/70069870f883ff3889790b259bbc38d8cfc4f784",
+      "pdf_url": "http://www.scirp.org/journal/PaperDownload.aspx?paperID=130663",
+      "publication_date": null,
       "keywords_matched": [
         "prompt injection",
         "prompt injection attack"
@@ -9065,6 +9349,27 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "0015e5dd084475781302040504585a229df7a5db",
+      "title": "From Noise to Clarity: Unraveling the Adversarial Suffix of Large Language Model Attacks via Translation of Text Embeddings",
+      "abstract": null,
+      "year": 2024,
+      "venue": "arXiv.org",
+      "authors": [
+        "Hao Wang",
+        "Hao Li",
+        "Minlie Huang",
+        "Lei Sha"
+      ],
+      "citation_count": 15,
+      "url": "https://www.semanticscholar.org/paper/0015e5dd084475781302040504585a229df7a5db",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "language model attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "763cf8a095ef039c99cdcfc654132169443c56ee",
       "title": "Empirical Analysis of Large Vision-Language Models against Goal Hijacking via Visual Prompt Injection",
       "abstract": "We explore visual prompt injection (VPI) that maliciously exploits the ability of large vision-language models (LVLMs) to follow instructions drawn onto the input image. We propose a new VPI method,\"goal hijacking via visual prompt injection\"(GHVPI), that swaps the execution task of LVLMs from an original task to an alternative task designated by an attacker. The quantitative analysis indicates that GPT-4V is vulnerable to the GHVPI and demonstrates a notable attack success rate of 15.8%, which is an unignorable security risk. Our analysis also shows that successful GHVPI requires high character recognition capability and instruction-following ability in LVLMs.",
@@ -9293,6 +9598,27 @@
       "publication_date": "2024-05-28",
       "keywords_matched": [
         "adversarial prompt"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "6ebfef1daea743456536d620e894eee8992aa124",
+      "title": "Improving Neural Biasing for Contextual Speech Recognition by Early Context Injection and Text Perturbation",
+      "abstract": "Existing research suggests that automatic speech recognition (ASR) models can benefit from additional contexts (e.g., contact lists, user specified vocabulary). Rare words and named entities can be better recognized with contexts. In this work, we propose two simple yet effective techniques to improve context-aware ASR models. First, we inject contexts into the encoders at an early stage instead of merely at their last layers. Second, to enforce the model to leverage the contexts during training, we perturb the reference transcription with alternative spellings so that the model learns to rely on the contexts to make correct predictions. On LibriSpeech, our techniques together reduce the rare word error rate by 60% and 25% relatively compared to no biasing and shallow fusion, making the new state-of-the-art performance. On SPGISpeech and a real-world dataset ConEC, our techniques also yield good improvements over the baselines.",
+      "year": 2024,
+      "venue": "Interspeech",
+      "authors": [
+        "Ruizhe Huang",
+        "M. Yarmohammadi",
+        "S. Khudanpur",
+        "Dan Povey"
+      ],
+      "citation_count": 12,
+      "url": "https://www.semanticscholar.org/paper/6ebfef1daea743456536d620e894eee8992aa124",
+      "pdf_url": "",
+      "publication_date": "2024-07-14",
+      "keywords_matched": [
+        "context injection"
       ],
       "first_seen": "2026-01-06"
     },
@@ -9841,6 +10167,26 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "49f65834f16205e8f455d228bc1f1394f0ab8d75",
+      "title": "UPAM: Unified Prompt Attack in Text-to-Image Generation Models Against Both Textual Filters and Visual Checkers",
+      "abstract": "Text-to-Image (T2I) models have raised security concerns due to their potential to generate inappropriate or harmful images. In this paper, we propose UPAM, a novel framework that investigates the robustness of T2I models from the attack perspective. Unlike most existing attack methods that focus on deceiving textual defenses, UPAM aims to deceive both textual and visual defenses in T2I models. UPAM enables gradient-based optimization, offering greater effectiveness and efficiency than previous methods. Given that T2I models might not return results due to defense mechanisms, we introduce a Sphere-Probing Learning (SPL) scheme to support gradient optimization even when no results are returned. Additionally, we devise a Semantic-Enhancing Learning (SEL) scheme to finetune UPAM for generating target-aligned images. Our framework also ensures attack stealthiness. Extensive experiments demonstrate UPAM's effectiveness and efficiency.",
+      "year": 2024,
+      "venue": "International Conference on Machine Learning",
+      "authors": [
+        "Duo Peng",
+        "Qi Ke",
+        "Jun Liu"
+      ],
+      "citation_count": 7,
+      "url": "https://www.semanticscholar.org/paper/49f65834f16205e8f455d228bc1f1394f0ab8d75",
+      "pdf_url": "",
+      "publication_date": "2024-05-18",
+      "keywords_matched": [
+        "prompt attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "f50dff7a11f37cb962b06ca27bed3448c48f6eba",
       "title": "GenTel-Safe: A Unified Benchmark and Shielding Framework for Defending Against Prompt Injection Attacks",
       "abstract": "Large Language Models (LLMs) like GPT-4, LLaMA, and Qwen have demonstrated remarkable success across a wide range of applications. However, these models remain inherently vulnerable to prompt injection attacks, which can bypass existing safety mechanisms, highlighting the urgent need for more robust attack detection methods and comprehensive evaluation benchmarks. To address these challenges, we introduce GenTel-Safe, a unified framework that includes a novel prompt injection attack detection method, GenTel-Shield, along with a comprehensive evaluation benchmark, GenTel-Bench, which compromises 84812 prompt injection attacks, spanning 3 major categories and 28 security scenarios. To prove the effectiveness of GenTel-Shield, we evaluate it together with vanilla safety guardrails against the GenTel-Bench dataset. Empirically, GenTel-Shield can achieve state-of-the-art attack detection success rates, which reveals the critical weakness of existing safeguarding techniques against harmful prompts. For reproducibility, we have made the code and benchmarking dataset available on the project page at https://gentellab.github.io/gentel-safe.github.io/.",
@@ -10161,6 +10507,35 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "fd3e385d19cdfeee9a51402dd59f7231da07f1dd",
+      "title": "Deferred NAM: Low-latency Top-K Context Injection via Deferred Context Encoding for Non-Streaming ASR",
+      "abstract": "Contextual biasing enables speech recognizers to transcribe important phrases in the speaker's context, such as contact names, even if they are rare in, or absent from, the training data. Attention-based biasing is a leading approach which allows for full end-to-end cotraining of the recognizer and biasing system and requires no separate inference-time components. Such biasers typically consist of a context encoder; followed by a context filter which narrows down the context to apply, improving per-step inference time; and, finally, context application via cross attention. Though much work has gone into optimizing per-frame performance, the context encoder is at least as important: recognition cannot begin before context encoding ends. Here, we show the lightweight phrase selection pass can be moved before context encoding, resulting in a speedup of up to 16.1 times and enabling biasing to scale to 20K phrases with a maximum pre-decoding delay under 33ms. With the addition of phrase- and wordpiece-level cross-entropy losses, our technique also achieves up to a 37.5% relative WER reduction over the baseline without the losses and lightweight phrase selection pass.",
+      "year": 2024,
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "authors": [
+        "Zelin Wu",
+        "Gan Song",
+        "Christopher Li",
+        "Pat Rondon",
+        "Zhong Meng",
+        "Xavier Velez",
+        "Weiran Wang",
+        "D. Caseiro",
+        "G. Pundak",
+        "Tsendsuren Munkhdalai",
+        "Angad Chandorkar",
+        "Rohit Prabhavalkar"
+      ],
+      "citation_count": 5,
+      "url": "https://www.semanticscholar.org/paper/fd3e385d19cdfeee9a51402dd59f7231da07f1dd",
+      "pdf_url": "",
+      "publication_date": "2024-04-15",
+      "keywords_matched": [
+        "context injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "1526da61cfee7a9f4f56437d805e75a5c2fac98c",
       "title": "LeakAgent: RL-based Red-teaming Agent for LLM Privacy Leakage",
       "abstract": "Recent studies have discovered that large language models (LLM) may be ``fooled''to output private information, including training data, system prompts, and personally identifiable information, under carefully crafted adversarial prompts. Existing red-teaming approaches for privacy leakage either rely on manual efforts or focus solely on system prompt extraction, making them ineffective for severe risks of training data leakage. We propose LeakAgent, a novel black-box red-teaming framework for LLM privacy leakage. Our framework trains an open-source LLM through reinforcement learning as the attack agent to generate adversarial prompts for both training data extraction and system prompt extraction. To achieve this, we propose a novel reward function to provide effective and fine-grained rewards and design novel mechanisms to balance exploration and exploitation during learning and enhance the diversity of adversarial prompts. Through extensive evaluations, we first show that LeakAgent significantly outperforms existing rule-based approaches in training data extraction and automated methods in system prompt leakage. We also demonstrate the effectiveness of LeakAgent in extracting system prompts from real-world applications in OpenAI's GPT Store. We further demonstrate LeakAgent's effectiveness in evading the existing guardrail defense and its helpfulness in enabling better safety alignment. Finally, we validate our customized designs through a detailed ablation study. We release our code here https://github.com/rucnyz/LeakAgent.",
@@ -10244,6 +10619,30 @@
       "publication_date": "2024-07-12",
       "keywords_matched": [
         "prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "a378012f21bf34c79a0520ea0ad89421b762a658",
+      "title": "Trojan Prompt Attacks on Graph Neural Networks",
+      "abstract": null,
+      "year": 2024,
+      "venue": "arXiv.org",
+      "authors": [
+        "Min Lin",
+        "Zhiwei Zhang",
+        "Enyan Dai",
+        "Zongyu Wu",
+        "Yilong Wang",
+        "Xiang Zhang",
+        "Suhang Wang"
+      ],
+      "citation_count": 4,
+      "url": "https://www.semanticscholar.org/paper/a378012f21bf34c79a0520ea0ad89421b762a658",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt attack"
       ],
       "first_seen": "2026-01-06"
     },
@@ -10528,6 +10927,26 @@
       "publication_date": "2024-07-24",
       "keywords_matched": [
         "prompt attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "622aa3454826b413703b00718d9ec4122dbc3e44",
+      "title": "Al-Driven Cybersecurity: Mitigating Prompt Injection Attacks through Adversarial Machine Learning",
+      "abstract": "Adversarial Machine Learning (AML) has emerged as both a challenge and an opportunity in the realm of cybersecurity. As malicious actors leverage advanced techniques to deceive machine learning models, the need for robust AI-driven defenses becomes paramount. This paper explores the intersection of AML and cybersecurity, focusing on innovative threat detection and mitigation strategies. We delve into the mechanisms of adversarial attacks, including evasion, poisoning, and model inversion, and examine their impact on critical security systems. Furthermore, we present cutting-edge approaches for enhancing the resilience of machine learning models, such as adversarial training, robust optimization, and ensemble methods. Through practical case studies and simulations, we demonstrate how AML techniques can detect and neutralize cyber threats in real-time, providing a proactive framework for securing networks, data, and applications. This work underscores the importance of integrating AML strategies into cybersecurity protocols, paving the way for more adaptive and intelligent defense mechanisms in the face of evolving threats.",
+      "year": 2024,
+      "venue": "NPRC Journal of Multidisciplinary Research",
+      "authors": [
+        "Saroj Ghimire",
+        "Suman Thapaliya"
+      ],
+      "citation_count": 2,
+      "url": "https://www.semanticscholar.org/paper/622aa3454826b413703b00718d9ec4122dbc3e44",
+      "pdf_url": "",
+      "publication_date": "2024-12-29",
+      "keywords_matched": [
+        "prompt injection",
+        "prompt injection attack"
       ],
       "first_seen": "2026-01-06"
     },
@@ -10848,6 +11267,29 @@
       "publication_date": "2024-06-24",
       "keywords_matched": [
         "LLM attack"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "a177545a9e10776c4f204daffbb5a09e3ebd8ebd",
+      "title": "Context Injection Attacks on Large Language Models",
+      "abstract": null,
+      "year": 2024,
+      "venue": "arXiv.org",
+      "authors": [
+        "Cheng'an Wei",
+        "Kai Chen",
+        "Yue Zhao",
+        "Yujia Gong",
+        "Lu Xiang",
+        "Shenchen Zhu"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/a177545a9e10776c4f204daffbb5a09e3ebd8ebd",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "context injection"
       ],
       "first_seen": "2026-01-06"
     },
@@ -11354,6 +11796,34 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "f3a41a5bfec0d8ccb597d9313416130a2e0b2459",
+      "title": "PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts",
+      "abstract": null,
+      "year": 2023,
+      "venue": "arXiv.org",
+      "authors": [
+        "Kaijie Zhu",
+        "Jindong Wang",
+        "Jiaheng Zhou",
+        "Zichen Wang",
+        "Hao Chen",
+        "Yidong Wang",
+        "Linyi Yang",
+        "Weirong Ye",
+        "Neil Zhenqiang Gong",
+        "Yue Zhang",
+        "Xing Xie"
+      ],
+      "citation_count": 218,
+      "url": "https://www.semanticscholar.org/paper/f3a41a5bfec0d8ccb597d9313416130a2e0b2459",
+      "pdf_url": "https://arxiv.org/pdf/2306.04528",
+      "publication_date": null,
+      "keywords_matched": [
+        "adversarial prompt"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "c4ff1be5c254b60b96b7455eefcc4ec9583f82ed",
       "title": "A Wolf in Sheep\u2019s Clothing: Generalized Nested Jailbreak Prompts can Fool Large Language Models Easily",
       "abstract": "Large Language Models (LLMs), such as ChatGPT and GPT-4, are designed to provide useful and safe responses. However, adversarial prompts known as \u2018jailbreaks\u2019 can circumvent safeguards, leading LLMs to generate potentially harmful content. Exploring jailbreak prompts can help to better reveal the weaknesses of LLMs and further steer us to secure them. Unfortunately, existing jailbreak methods either suffer from intricate manual design or require optimization on other white-box models, which compromises either generalization or efficiency. In this paper, we generalize jailbreak prompt attacks into two aspects: (1) Prompt Rewriting and (2) Scenario Nesting. Based on this, we propose ReNeLLM, an automatic framework that leverages LLMs themselves to generate effective jailbreak prompts. Extensive experiments demonstrate that ReNeLLM significantly improves the attack success rate while greatly reducing the time cost compared to existing baselines. Our study also reveals the inadequacy of current defense methods in safeguarding LLMs. Finally, we analyze the failure of LLMs defense from the perspective of prompt execution priority, and propose corresponding defense strategies. We hope that our research can catalyze both the academic community and LLMs developers towards the provision of safer and more regulated LLMs. The code is available at https://github.com/NJUNLP/ReNeLLM.",
@@ -11495,6 +11965,29 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "8fdd34153d1035d09dd4a6efa9cb0c91d23d0045",
+      "title": "More than you've asked for: A Comprehensive Analysis of Novel Prompt Injection Threats to Application-Integrated Large Language Models",
+      "abstract": null,
+      "year": 2023,
+      "venue": "arXiv.org",
+      "authors": [
+        "Kai Greshake",
+        "Sahar Abdelnabi",
+        "Shailesh Mishra",
+        "C. Endres",
+        "Thorsten Holz",
+        "Mario Fritz"
+      ],
+      "citation_count": 130,
+      "url": "https://www.semanticscholar.org/paper/8fdd34153d1035d09dd4a6efa9cb0c91d23d0045",
+      "pdf_url": "http://arxiv.org/pdf/2302.12173",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "1db819afb3604c4bfd1e5a0cb2ee9ab9dec52642",
       "title": "Explore, Establish, Exploit: Red Teaming Language Models from Scratch",
       "abstract": "Deploying large language models (LMs) can pose hazards from harmful outputs such as toxic or false text. Prior work has introduced automated tools that elicit harmful outputs to identify these risks. While this is a valuable step toward securing models, these approaches rely on a pre-existing way to efficiently classify undesirable outputs. Using a pre-existing classifier does not allow for red-teaming to be tailored to the target model. Furthermore, when failures can be easily classified in advance, red-teaming has limited marginal value because problems can be avoided by simply filtering training data and/or model outputs. Here, we consider red-teaming\"from scratch,\"in which the adversary does not begin with a way to classify failures. Our framework consists of three steps: 1) Exploring the model's range of behaviors in the desired context; 2) Establishing a definition and measurement for undesired behavior (e.g., a classifier trained to reflect human evaluations); and 3) Exploiting the model's flaws using this measure to develop diverse adversarial prompts. We use this approach to red-team GPT-3 to discover classes of inputs that elicit false statements. In doing so, we construct the CommonClaim dataset of 20,000 statements labeled by humans as common-knowledge-true, common knowledge-false, or neither. We are making code and data available.",
@@ -11613,6 +12106,33 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "d347fb65bd375771b013c517c861db926322e410",
+      "title": "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs Through a Global Prompt Hacking Competition",
+      "abstract": null,
+      "year": 2023,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "authors": [
+        "Sander Schulhoff",
+        "Jeremy Pinto",
+        "Anaum Khan",
+        "Louis-Franccois Bouchard",
+        "Chenglei Si",
+        "Svetlina Anati",
+        "Valen Tagliabue",
+        "Anson Liu Kost",
+        "Christopher Carnahan",
+        "Jordan L. Boyd-Graber"
+      ],
+      "citation_count": 91,
+      "url": "https://www.semanticscholar.org/paper/d347fb65bd375771b013c517c861db926322e410",
+      "pdf_url": "https://aclanthology.org/2023.emnlp-main.302.pdf",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt hacking"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "0894585294c67193ff3190240554677b56fd79a0",
       "title": "From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?",
       "abstract": "Large Language Models (LLMs) have found widespread applications in various domains, including web applications, where they facilitate human interaction via chatbots with natural language interfaces. Internally, aided by an LLM-integration middleware such as Langchain, user prompts are translated into SQL queries used by the LLM to provide meaningful responses to users. However, unsanitized user prompts can lead to SQL injection attacks, potentially compromising the security of the database. Despite the growing interest in prompt injection vulnerabilities targeting LLMs, the specific risks of generating SQL injection attacks through prompt injections have not been extensively studied. In this paper, we present a comprehensive examination of prompt-to-SQL (P$_2$SQL) injections targeting web applications based on the Langchain framework. Using Langchain as our case study, we characterize P$_2$SQL injections, exploring their variants and impact on application security through multiple concrete examples. Furthermore, we evaluate 7 state-of-the-art LLMs, demonstrating the pervasiveness of P$_2$SQL attacks across language models. Our findings indicate that LLM-integrated applications based on Langchain are highly susceptible to P$_2$SQL injection attacks, warranting the adoption of robust defenses. To counter these attacks, we propose four effective defense techniques that can be integrated as extensions to the Langchain framework. We validate the defenses through an experimental evaluation with a real-world use case application.",
@@ -11658,6 +12178,27 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "a2bcacc8fefb859c94c69d524b2368bb4792f9b1",
+      "title": "Adversarial Prompting for Black Box Foundation Models",
+      "abstract": null,
+      "year": 2023,
+      "venue": "arXiv.org",
+      "authors": [
+        "Natalie Maus",
+        "Patrick Chao",
+        "Eric Wong",
+        "Jacob R. Gardner"
+      ],
+      "citation_count": 56,
+      "url": "https://www.semanticscholar.org/paper/a2bcacc8fefb859c94c69d524b2368bb4792f9b1",
+      "pdf_url": "http://arxiv.org/pdf/2302.04237",
+      "publication_date": null,
+      "keywords_matched": [
+        "adversarial prompt"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "7ec9e9ec1c26f7977f54dd7830d970101e3a683e",
       "title": "Prompt Stealing Attacks Against Text-to-Image Generation Models",
       "abstract": "Text-to-Image generation models have revolutionized the artwork design process and enabled anyone to create high-quality images by entering text descriptions called prompts. Creating a high-quality prompt that consists of a subject and several modifiers can be time-consuming and costly. In consequence, a trend of trading high-quality prompts on specialized marketplaces has emerged. In this paper, we perform the first study on understanding the threat of a novel attack, namely prompt stealing attack, which aims to steal prompts from generated images by text-to-image generation models. Successful prompt stealing attacks directly violate the intellectual property of prompt engineers and jeopardize the business model of prompt marketplaces. We first perform a systematic analysis on a dataset collected by ourselves and show that a successful prompt stealing attack should consider a prompt's subject as well as its modifiers. Based on this observation, we propose a simple yet effective prompt stealing attack, PromptStealer. It consists of two modules: a subject generator trained to infer the subject and a modifier detector for identifying the modifiers within the generated image. Experimental results demonstrate that PromptStealer is superior over three baseline methods, both quantitatively and qualitatively. We also make some initial attempts to defend PromptStealer. In general, our study uncovers a new attack vector within the ecosystem established by the popular text-to-image generation models. We hope our results can contribute to understanding and mitigating this emerging threat.",
@@ -11675,6 +12216,29 @@
       "publication_date": "2023-02-20",
       "keywords_matched": [
         "model stealing (title)"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "04fa3ebc4c0c0b4a2d2d1a3fc612134a05057696",
+      "title": "Prompt Injection Attacks and Defenses in LLM-Integrated Applications",
+      "abstract": null,
+      "year": 2023,
+      "venue": "arXiv.org",
+      "authors": [
+        "Yupei Liu",
+        "Yuqi Jia",
+        "Runpeng Geng",
+        "Jinyuan Jia",
+        "N. Gong"
+      ],
+      "citation_count": 50,
+      "url": "https://www.semanticscholar.org/paper/04fa3ebc4c0c0b4a2d2d1a3fc612134a05057696",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection",
+        "prompt injection attack"
       ],
       "first_seen": "2026-01-06"
     },
@@ -12004,6 +12568,24 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "460e48454b209e957b4942303507bf756c4a6a31",
+      "title": "On the Feasibility of Specialized Ability Stealing for Large Language Code Models",
+      "abstract": null,
+      "year": 2023,
+      "venue": "",
+      "authors": [
+        "Zongjie Li"
+      ],
+      "citation_count": 19,
+      "url": "https://www.semanticscholar.org/paper/460e48454b209e957b4942303507bf756c4a6a31",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "model stealing (title)"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "5fce3ce847e1cf3ccdf45fbedd5e02f90526b7e7",
       "title": "Maatphor: Automated Variant Analysis for Prompt Injection Attacks",
       "abstract": "Prompt injection has emerged as a serious security threat to large language models (LLMs). At present, the current best-practice for defending against newly-discovered prompt injection techniques is to add additional guardrails to the system (e.g., by updating the system prompt or using classifiers on the input and/or output of the model.) However, in the same way that variants of a piece of malware are created to evade anti-virus software, variants of a prompt injection can be created to evade the LLM's guardrails. Ideally, when a new prompt injection technique is discovered, candidate defenses should be tested not only against the successful prompt injection, but also against possible variants. In this work, we present, a tool to assist defenders in performing automated variant analysis of known prompt injection attacks. This involves solving two main challenges: (1) automatically generating variants of a given prompt according, and (2) automatically determining whether a variant was effective based only on the output of the model. This tool can also assist in generating datasets for jailbreak and prompt injection attacks, thus overcoming the scarcity of data in this domain. We evaluate Maatphor on three different types of prompt injection tasks. Starting from an ineffective (0%) seed prompt, Maatphor consistently generates variants that are at least 60% effective within the first 40 iterations.",
@@ -12048,6 +12630,29 @@
       "publication_date": "2023-06-15",
       "keywords_matched": [
         "prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "7e39237918eb9b5c0b3baa66b174a268c684a975",
+      "title": "Dual-Mode NAM: Effective Top-K Context Injection for End-to-End ASR",
+      "abstract": "ASR systems in real applications must be adapted on the \ufb02y to correctly recognize task-speci\ufb01c contextual terms, such as contacts, application names and media entities. However, it is challenging to achieve scalability, large in-domain quality gains, and minimal out-of-domain quality regressions simultaneously. In this work, we introduce an effective neural biasing architecture called Dual-Mode NAM. Dual-Mode NAM embeds a top-k search process in its attention mechanism in a trainable fashion to perform an accurate top-k phrase selection before injecting the corresponding wordpiece context into the acoustic encoder. We further propose a controllable mechanism to enable the ASR system to be able to trade off its in-domain and out-of-domain quality at inference time. When evaluated on a large-scale biasing benchmark, the combined techniques improve a previously proposed method with an average in-domain and out-of-domain WER reduction by up to 53.3% and 12.0% relative respectively.",
+      "year": 2023,
+      "venue": "Interspeech",
+      "authors": [
+        "Zelin Wu",
+        "Tsendsuren Munkhdalai",
+        "Pat Rondon",
+        "G. Pundak",
+        "K. Sim",
+        "Christopher Li"
+      ],
+      "citation_count": 13,
+      "url": "https://www.semanticscholar.org/paper/7e39237918eb9b5c0b3baa66b174a268c684a975",
+      "pdf_url": "",
+      "publication_date": "2023-08-20",
+      "keywords_matched": [
+        "context injection"
       ],
       "first_seen": "2026-01-06"
     },
@@ -12204,6 +12809,24 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "a59b21271b560fa305933b435bb718a407d8f296",
+      "title": "Introducing Proteus. A mega prompt with personality, skills and dynamic logic based internal prompt manipulation",
+      "abstract": null,
+      "year": 2023,
+      "venue": "",
+      "authors": [
+        "S. Stoltz"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/a59b21271b560fa305933b435bb718a407d8f296",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt manipulation"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "9716a2876d08fce9d8e5c5ba4d7b1a9af44806d6",
       "title": "Ignore Previous Prompt: Attack Techniques For Language Models",
       "abstract": "Transformer-based large language models (LLMs) provide a powerful foundation for natural language tasks in large-scale customer-facing applications. However, studies that explore their vulnerabilities emerging from malicious user interaction are scarce. By proposing PromptInject, a prosaic alignment framework for mask-based iterative adversarial prompt composition, we examine how GPT-3, the most widely deployed language model in production, can be easily misaligned by simple handcrafted inputs. In particular, we investigate two types of attacks -- goal hijacking and prompt leaking -- and demonstrate that even low-aptitude, but sufficiently ill-intentioned agents, can easily exploit GPT-3's stochastic nature, creating long-tail risks. The code for PromptInject is available at https://github.com/agencyenterprise/PromptInject.",
@@ -12292,6 +12915,130 @@
       "first_seen": "2026-01-06"
     },
     {
+      "paper_id": "0011a76d8e02d825b3ff3066850e8135d05a1c02",
+      "title": "Context injection in expert finding",
+      "abstract": "Expert finding is a subject of research in information retrieval and, often, is taken to mean expertise retrieval within a specific organization. The task involves finding an expert on a given topic of interest. Even though there are several proposals in the literature, they do not consider the context in which the given expertise is bound. This paper introduces an approach to inject context into existing expertise evidence based on data extracted from the evidence. Our motivation is to provide context when describing the expertise associated with a candidate expert, allowing a user to understand the results better and choose the best candidate for the task.",
+      "year": 2022,
+      "venue": "Brazilian Symposium on Multimedia and the Web",
+      "authors": [
+        "Rodrigo Gon\u00e7alves",
+        "C. Dorneles"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/0011a76d8e02d825b3ff3066850e8135d05a1c02",
+      "pdf_url": "",
+      "publication_date": "2022-11-07",
+      "keywords_matched": [
+        "context injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "7a3d5f1887fa908a5df303f37ec4450998caafac",
+      "title": "DeepEM: Deep Neural Networks Model Recovery through EM Side-Channel Information Leakage",
+      "abstract": "Neural Network (NN) accelerators are currently widely deployed in various security-crucial scenarios, including image recognition, natural language processing and autonomous vehicles. Due to economic and privacy concerns, the hardware implementations of structures and designs inside NN accelerators are usually inaccessible to the public. However, these accelerators still tend to leak crucial information through Electromagnetic (EM) side channels in addition to timing and power information. In this paper, we propose an effective and efficient model stealing attack against current popular large-scale NN accelerators deployed on hardware platforms through side-channel information. Specifically, the proposed attack approach contains two stages: 1) Inferring the underlying network architecture through EM sidechannel information; 2) Estimating the parameters, especially the weights, through a margin-based, adversarial active learning method. The experimental results show that the proposed attack approach can accurately recover the large-scale NN through EM side-channel information leakages. Overall, our attack highlights the importance of masking EM traces for large-scale NN accelerators in real-world applications.",
+      "year": 2020,
+      "venue": "IEEE International Symposium on Hardware Oriented Security and Trust",
+      "authors": [
+        "Honggang Yu",
+        "Haocheng Ma",
+        "Kaichen Yang",
+        "Yiqiang Zhao",
+        "Yier Jin"
+      ],
+      "citation_count": 112,
+      "url": "https://www.semanticscholar.org/paper/7a3d5f1887fa908a5df303f37ec4450998caafac",
+      "pdf_url": "",
+      "publication_date": "2020-12-07",
+      "keywords_matched": [
+        "DNN weights leakage (title)"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "b373f8249e5a45c89c38e0b45f499f38697b68a6",
+      "title": "Filling Gender & Number Gaps in Neural Machine Translation with Black-box Context Injection",
+      "abstract": "When translating from a language that does not morphologically mark information such as gender and number into a language that does, translation systems must \u201cguess\u201d this missing information, often leading to incorrect translations in the given context. We propose a black-box approach for injecting the missing information to a pre-trained neural machine translation system, allowing to control the morphological variations in the generated translations without changing the underlying model or training data. We evaluate our method on an English to Hebrew translation task, and show that it is effective in injecting the gender and number information and that supplying the correct information improves the translation accuracy in up to 2.3 BLEU on a female-speaker test set for a state-of-the-art online black-box system. Finally, we perform a fine-grained syntactic analysis of the generated translations that shows the effectiveness of our method.",
+      "year": 2019,
+      "venue": "Proceedings of the First Workshop on Gender Bias in Natural Language Processing",
+      "authors": [
+        "Amit Moryossef",
+        "Roee Aharoni",
+        "Yoav Goldberg"
+      ],
+      "citation_count": 53,
+      "url": "https://www.semanticscholar.org/paper/b373f8249e5a45c89c38e0b45f499f38697b68a6",
+      "pdf_url": "https://doi.org/10.18653/v1/w19-3807",
+      "publication_date": "2019-03-08",
+      "keywords_matched": [
+        "context injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "fd49485eb446a4f26a805ed83a44745629ba7d64",
+      "title": "Context Injection as a Tool for Measuring Context Usage in Machine Learning",
+      "abstract": null,
+      "year": 2017,
+      "venue": "Asian Conference on Intelligent Information and Database Systems",
+      "authors": [
+        "Maciej Huk"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/fd49485eb446a4f26a805ed83a44745629ba7d64",
+      "pdf_url": "",
+      "publication_date": "2017-04-03",
+      "keywords_matched": [
+        "context injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "36e5ad5a040d2105a34a647cb5b230c5bbb516ed",
+      "title": "Prompt injections of highly relativistic electrons induced by interplanetary shocks: A statistical study of Van Allen Probes observations",
+      "abstract": null,
+      "year": 2016,
+      "venue": "",
+      "authors": [
+        "Q. Schiller",
+        "S. Kanekal",
+        "L. Jian",
+        "X. Li",
+        "A. Jones",
+        "D. Baker",
+        "A. Jaynes",
+        "H. Spence"
+      ],
+      "citation_count": 44,
+      "url": "https://www.semanticscholar.org/paper/36e5ad5a040d2105a34a647cb5b230c5bbb516ed",
+      "pdf_url": "",
+      "publication_date": "2016-12-26",
+      "keywords_matched": [
+        "prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "c5bf7b05626a26de3bad738f9120bdcfe67d7cc5",
+      "title": "Randomized Instruction Injection to Counter Power Analysis Attacks",
+      "abstract": null,
+      "year": 2012,
+      "venue": "TECS",
+      "authors": [
+        "Jude Angelo Ambrose",
+        "R. Ragel",
+        "S. Parameswaran"
+      ],
+      "citation_count": 14,
+      "url": "https://www.semanticscholar.org/paper/c5bf7b05626a26de3bad738f9120bdcfe67d7cc5",
+      "pdf_url": "",
+      "publication_date": "2012-09-01",
+      "keywords_matched": [
+        "instruction injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
       "paper_id": "04e98cf7377bd7f6996113f8320e1744cd26e024",
       "title": "RIJID: Random Code Injection to Mask Power Analysis based Side Channel Attacks",
       "abstract": "Side channel attacks are becoming a major threat to the security of embedded systems. Countermeasures proposed to overcome Simple Power Analysis (SPA) and Differential Power Analysis (DPA), are data masking, table masking, current flattening, circuitry level solutions, dummy instruction insertions and balancing bit-flips. All these techniques are either susceptible to multi-order side channel attacks, not sufficiently generic to cover all encryption algorithms, or burden the system with high area cost, run-time or energy consumption. A HW/SW based randomized instruction injection technique is proposed in this paper to overcome the pitfalls of previous countermeasures. Our technique injects random instructions at random places during the execution of an application which protects the system from both SPA and DPA. Further, we devise a systematic method to measure the security level of a power sequence and use it to measure the number of random instructions needed, to suitably confuse the adversary. Our processor model costs 1.9% in additional area for a simplescalar processor, and costs on average 29.8% in runtime and 27.1% in additional energy consumption for six industry standard cryptographic algorithms.",
@@ -12310,6 +13057,93 @@
         "instruction injection"
       ],
       "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "22b90100aff2216e30933fd0d7ce576739ddc134",
+      "title": "Prompt injection of relativistic protons from the September 1, 1971 solar flare",
+      "abstract": null,
+      "year": 1982,
+      "venue": "",
+      "authors": [
+        "E. Cliver"
+      ],
+      "citation_count": 19,
+      "url": "https://www.semanticscholar.org/paper/22b90100aff2216e30933fd0d7ce576739ddc134",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "cf2a8e8d75258db16bb4ab026a6041aeee984092",
+      "title": "S KEW A CT : Red Teaming Large Language Models via Activation-Skewed Adversarial Prompt Optimization",
+      "abstract": null,
+      "year": null,
+      "venue": "",
+      "authors": [
+        "Hanxi Guo",
+        "Siyuan Cheng",
+        "Guanhong Tao",
+        "Guangyu Shen",
+        "Zhuo Zhang",
+        "Shengwei An",
+        "Kaiyuan Zhang",
+        "Xiangyu Zhang"
+      ],
+      "citation_count": 3,
+      "url": "https://www.semanticscholar.org/paper/cf2a8e8d75258db16bb4ab026a6041aeee984092",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "adversarial prompt"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "c2fe003d159227305ae6d04451f6492ba05f4edb",
+      "title": "LLM-PIEval: A benchmark for indirect prompt injection attacks in Large Language Models",
+      "abstract": null,
+      "year": null,
+      "venue": "",
+      "authors": [
+        "Anil Ramakrishna",
+        "Jimit Majmudar",
+        "Rahul Gupta",
+        "Devamanyu Hazarika"
+      ],
+      "citation_count": 1,
+      "url": "https://www.semanticscholar.org/paper/c2fe003d159227305ae6d04451f6492ba05f4edb",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection",
+        "prompt injection attack",
+        "indirect prompt injection"
+      ],
+      "first_seen": "2026-01-06"
+    },
+    {
+      "paper_id": "62fa7e797a12235eef7e3a50efa8f4d82de0b39b",
+      "title": "Advances in AI-Driven Cybersecurity: Tackling Prompt Injection Attacks through Adversarial Learning",
+      "abstract": null,
+      "year": null,
+      "venue": "",
+      "authors": [
+        "Saroj Ghimire",
+        "Suman Thapaliya"
+      ],
+      "citation_count": 0,
+      "url": "https://www.semanticscholar.org/paper/62fa7e797a12235eef7e3a50efa8f4d82de0b39b",
+      "pdf_url": "",
+      "publication_date": null,
+      "keywords_matched": [
+        "prompt injection",
+        "prompt injection attack"
+      ],
+      "first_seen": "2026-01-06"
     }
-  ]
+  ],
+  "config": "configs/ml01a_prompt_injection.yaml"
 }
