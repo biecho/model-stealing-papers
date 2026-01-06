@@ -16,18 +16,8 @@ const CATEGORIES = {
         subcategories: {
             ML01a: {
                 name: "Prompt Injection",
-                file: "ml01a_prompt_injection_papers.json",
+                file: "ml01a_papers.json",
                 description: "Malicious prompts to manipulate LLM behavior"
-            },
-            ML01b: {
-                name: "Jailbreaking",
-                file: "ml01b_jailbreaking_papers.json",
-                description: "Bypassing LLM safety guardrails"
-            },
-            ML01c: {
-                name: "Adversarial Examples",
-                file: "ml01c_adversarial_examples_papers.json",
-                description: "Traditional adversarial perturbations on classifiers"
             }
         }
     },
@@ -57,13 +47,7 @@ const CATEGORIES = {
         color: "#22c55e",
         file: "ml05_papers.json",
         description: "Techniques to steal or extract ML models",
-        subcategories: {
-            ML05a: {
-                name: "Prompt Stealing",
-                file: "ml05a_prompt_stealing_papers.json",
-                description: "Extracting system prompts from LLMs"
-            }
-        }
+        subcategories: {}
     },
     ML06: {
         name: "AI Supply Chain Attacks",
