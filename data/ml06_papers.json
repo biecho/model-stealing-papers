@@ -1,7 +1,7 @@
 {
   "owasp_id": "ML06",
   "owasp_name": "Supply Chain",
-  "total": 17,
+  "total": 20,
   "updated": "2026-01-09",
   "papers": [
     {
@@ -17,6 +17,8 @@
         "Laurens van der Maaten"
       ],
       "url": "https://arxiv.org/abs/2112.12727",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -31,6 +33,8 @@
         "Giuseppe Ateniese"
       ],
       "url": "https://arxiv.org/abs/2111.07380",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -50,6 +54,8 @@
         "Neil Gong"
       ],
       "url": "https://arxiv.org/abs/2406.10416",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -64,10 +70,12 @@
         "Emiliano De Cristofaro"
       ],
       "url": "https://arxiv.org/abs/2311.16940",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_26ed0105",
+      "paper_id": "https://openalex.org/W3206584998",
       "title": "On the Security Risks of AutoML",
       "abstract": "Neural Architecture Search (NAS) represents an emerging machine learning (ML) paradigm that automatically searches for models tailored to given tasks, which greatly simplifies the development of ML systems and propels the trend of ML democratization. Yet, little is known about the potential security risks incurred by NAS, which is concerning given the increasing use of NAS-generated models in critical domains. This work represents a solid initial step towards bridging the gap. Through an extensive empirical study of 10 popular NAS methods, we show that compared with their manually designed counterparts, NAS-generated models tend to suffer greater vulnerability to various malicious attacks (e.g., adversarial evasion, model poisoning, and functionality stealing). Further, with both empirical and analytical evidence, we provide possible explanations for such phenomena: given the prohibitive search space and training cost, most NAS methods favor models that converge fast at early training stages; this preference results in architectural properties associated with attack vulnerability (e.g., high loss smoothness and low gradient variance). Our findings not only reveal the relationships between model characteristics and attack vulnerability but also suggest the inherent connections underlying different attacks. Finally, we discuss potential remedies to mitigate such drawbacks, including increasing cell depth and suppressing skip connects, which lead to several promising research directions.",
       "year": 2021,
@@ -80,10 +88,12 @@
         "Ting Wang"
       ],
       "url": "https://openalex.org/W3206584998",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_4c902d07",
+      "paper_id": "https://openalex.org/W4399795583",
       "title": "We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating LLMs",
       "abstract": "The reliance of popular programming languages such as Python and JavaScript on centralized package repositories and open-source software, combined with the emergence of code-generating Large Language Models (LLMs), has created a new type of threat to the software supply chain: package hallucinations. These hallucinations, which arise from fact-conflicting errors when generating code using LLMs, represent a novel form of package confusion attack that poses a critical threat to the integrity of the software supply chain. This paper conducts a rigorous and comprehensive evaluation of package hallucinations across different programming languages, settings, and parameters, exploring how a diverse set of models and configurations affect the likelihood of generating erroneous package recommendations and identifying the root causes of this phenomenon. Using 16 popular LLMs for code generation and two unique prompt datasets, we generate 576,000 code samples in two programming languages that we analyze for package hallucinations. Our findings reveal that that the average percentage of hallucinated packages is at least 5.2% for commercial models and 21.7% for open-source models, including a staggering 205,474 unique examples of hallucinated package names, further underscoring the severity and pervasiveness of this threat. To overcome this problem, we implement several hallucination mitigation strategies and show that they are able to significantly reduce the number of package hallucinations while maintaining code quality. Our experiments and findings highlight package hallucinations as a persistent and systemic phenomenon while using state-of-the-art LLMs for code generation, and a significant challenge which deserves the research community's urgent attention.",
       "year": 2024,
@@ -96,6 +106,8 @@
         "Murtuza Jadliwala"
       ],
       "url": "https://openalex.org/W4399795583",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -110,6 +122,8 @@
         "Emiliano De Cristofaro"
       ],
       "url": "https://arxiv.org/abs/2009.03561",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -126,6 +140,8 @@
         "Anwar Hithnawi"
       ],
       "url": "https://arxiv.org/abs/2107.03311",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -146,10 +162,12 @@
         "Jean-Pierre Hubaux"
       ],
       "url": "https://arxiv.org/abs/2304.00129",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_15a4851d",
+      "paper_id": "https://openalex.org/W4381826963",
       "title": "DP-BREM: Differentially-Private and Byzantine-Robust Federated Learning with Client Momentum",
       "abstract": "Federated Learning (FL) allows multiple participating clients to train machine learning models collaboratively while keeping their datasets local and only exchanging the gradient or model updates with a coordinating server. Existing FL protocols are vulnerable to attacks that aim to compromise data privacy and/or model robustness. Recently proposed defenses focused on ensuring either privacy or robustness, but not both. In this paper, we focus on simultaneously achieving differential privacy (DP) and Byzantine robustness for cross-silo FL, based on the idea of learning from history. The robustness is achieved via client momentum, which averages the updates of each client over time, thus reducing the variance of the honest clients and exposing the small malicious perturbations of Byzantine clients that are undetectable in a single round but accumulate over time. In our initial solution DP-BREM, DP is achieved by adding noise to the aggregated momentum, and we account for the privacy cost from the momentum, which is different from the conventional DP-SGD that accounts for the privacy cost from the gradient. Since DP-BREM assumes a trusted server (who can obtain clients' local models or updates), we further develop the final solution called DP-BREM+, which achieves the same DP and robustness properties as DP-BREM without a trusted server by utilizing secure aggregation techniques, where DP noise is securely and jointly generated by the clients. Both theoretical analysis and experimental results demonstrate that our proposed protocols achieve better privacy-utility tradeoff and stronger Byzantine robustness than several baseline methods, under different DP budgets and attack settings.",
       "year": 2023,
@@ -160,6 +178,8 @@
         "Li Xiong"
       ],
       "url": "https://openalex.org/W4381826963",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -179,10 +199,12 @@
         "Ren Ping Liu"
       ],
       "url": "https://arxiv.org/abs/2308.10422",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_cb5663e4",
+      "paper_id": "https://openalex.org/W4399151237",
       "title": "Unlocking the Power of Differentially Private Zeroth-order Optimization for Fine-tuning LLMs",
       "abstract": "Vertical Federated Learning (VFL) is a privacy-preserving distributed learning paradigm where different parties collaboratively learn models using partitioned features of shared samples, without leaking private data. Recent research has shown promising results addressing various challenges in VFL, highlighting its potential for practical applications in cross-domain collaboration. However, the corresponding research is scattered and lacks organization. To advance VFL research, this survey offers a systematic overview of recent developments. First, we provide a history and background introduction, along with a summary of the general training protocol of VFL. We then revisit the taxonomy in recent reviews and analyze limitations in-depth. For a comprehensive and structured discussion, we synthesize recent research from three fundamental perspectives: effectiveness, security, and applicability. Finally, we discuss several critical future research directions in VFL, which will facilitate the developments in this field. We provide a collection of research lists and periodically update them at https://github.com/shentt67/VFL_Survey.",
       "year": 2024,
@@ -196,6 +218,8 @@
         "Bo Du"
       ],
       "url": "https://openalex.org/W4399151237",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -214,10 +238,12 @@
         "Yunfeng Shao"
       ],
       "url": "https://arxiv.org/abs/2406.07948",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_5403e716",
+      "paper_id": "https://openalex.org/W4391724821",
       "title": "Pencil: Private and Extensible Collaborative Learning without the Non-Colluding Assumption",
       "abstract": "The escalating focus on data privacy poses significant challenges for collaborative neural network training, where data ownership and model training/deployment responsibilities reside with distinct entities.Our community has made substantial contributions to addressing this challenge, proposing various approaches such as federated learning (FL) and privacy-preserving machine learning based on cryptographic constructs like homomorphic encryption (HE) and secure multiparty computation (MPC).However, FL completely overlooks model privacy, and HE has limited extensibility (confined to only one data provider).While the state-of-the-art MPC frameworks provide reasonable throughput and simultaneously ensure model/data privacy, they rely on a critical non-colluding assumption on the computing servers, and relaxing this assumption is still an open problem.In this paper, we present Pencil, the first private training framework for collaborative learning that simultaneously offers data privacy, model privacy, and extensibility to multiple data providers, without relying on the non-colluding assumption.Our fundamental design principle is to construct the n-party collaborative training protocol based on an efficient two-party protocol, and meanwhile ensuring that switching to different data providers during model training introduces no extra cost.We introduce several novel cryptographic protocols to realize this design principle and conduct a rigorous security and privacy analysis.Our comprehensive evaluations of Pencil demonstrate that (i) models trained in plaintext and models trained privately using Pencil exhibit nearly identical test accuracies; (ii) The training overhead of Pencil is greatly reduced: Pencil achieves 10 \u223c 260\u00d7 higher throughput and 2 orders of magnitude less communication than prior art; (iii) Pencil is resilient against both existing and adaptive (white-box) attacks.",
       "year": 2024,
@@ -230,10 +256,12 @@
         "Mingwei Xu"
       ],
       "url": "https://openalex.org/W4391724821",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_02eead2f",
+      "paper_id": "https://openalex.org/W4385679694",
       "title": "Flamingo: Multi-Round Single-Server Secure Aggregation with Applications to Private Federated Learning",
       "abstract": "This paper introduces Flamingo, a system for secure aggregation of data across a large set of clients. In secure aggregation, a server sums up the private inputs of clients and obtains the result without learning anything about the individual inputs beyond what is implied by the final sum. Flamingo focuses on the multi-round setting found in federated learning in which many consecutive summations (averages) of model weights are performed to derive a good model. Previous protocols, such as Bell et al. (CCS '20), have been designed for a single round and are adapted to the federated learning setting by repeating the protocol multiple times. Flamingo eliminates the need for the per-round setup of previous protocols, and has a new lightweight dropout resilience protocol to ensure that if clients leave in the middle of a sum the server can still obtain a meaningful result. Furthermore, Flamingo introduces a new way to locally choose the so-called client neighborhood introduced by Bell et al. These techniques help Flamingo reduce the number of interactions between clients and the server, resulting in a significant reduction in the end-to-end runtime for a full training session over prior work. We implement and evaluate Flamingo and show that it can securely train a neural network on the (Extended) MNIST and CIFAR-100 datasets, and the model converges without a loss in accuracy, compared to a non-private federated learning system.",
       "year": 2023,
@@ -246,10 +274,12 @@
         "Tal Rabin"
       ],
       "url": "https://openalex.org/W4385679694",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_80aedcd7",
+      "paper_id": "https://openalex.org/W4385299238",
       "title": "ELSA: Secure Aggregation for Federated Learning with Malicious Actors",
       "abstract": "Federated learning (FL) is an increasingly popular approach for machine learning (ML) in cases where the training dataset is highly distributed. Clients perform local training on their datasets and the updates are then aggregated into the global model. Existing protocols for aggregation are either inefficient, or don't consider the case of malicious actors in the system. This is a major barrier in making FL an ideal solution for privacy-sensitive ML applications. We present Elsa, a secure aggregation protocol for FL, which breaks this barrier - it is efficient and addresses the existence of malicious actors at the core of its design. Similar to prior work on Prio and Prio+, Elsa provides a novel secure aggregation protocol built out of distributed trust across two servers that keeps individual client updates private as long as one server is honest, defends against malicious clients, and is efficient end-to-end. Compared to prior works, the distinguishing theme in Elsa is that instead of the servers generating cryptographic correlations interactively, the clients act as untrusted dealers of these correlations without compromising the protocol's security. This leads to a much faster protocol while also achieving stronger security at that efficiency compared to prior work. We introduce new techniques that retain privacy even when a server is malicious at a small added cost of 7-25% in runtime with negligible increase in communication over the case of semi-honest server. Our work improves end-to-end runtime over prior work with similar security guarantees by big margins - single-aggregator RoFL by up to 305x (for the models we consider), and distributed trust Prio by up to 8x.",
       "year": 2023,
@@ -261,10 +291,12 @@
         "Raluca Ada Popa"
       ],
       "url": "https://openalex.org/W4385299238",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_794e5960",
+      "paper_id": "https://openalex.org/W4308643126",
       "title": "Federated Boosted Decision Trees with Differential Privacy",
       "abstract": "There is great demand for scalable, secure, and effcient privacypreserving machine learning models that can be trained over distributed data. While deep learning models typically achieve the best results in a centralized non-secure setting, different models can excel when privacy and communication constraints are imposed. Instead, tree-based approaches such as XGBoost have attracted much attention for their high performance and ease of use; in particular, they often achieve state-of-the-art results on tabular data. Consequently, several recent works have focused on translating Gradient Boosted Decision Tree (GBDT) models like XGBoost into federated settings, via cryptographic mechanisms such as Homomorphic Encryption (HE) and Secure Multi-Party Computation (MPC). However, these do not always provide formal privacy guarantees, or consider the full range of hyperparameters and implementation settings. In this work, we implement the GBDT model under Differential Privacy (DP). We propose a general framework that captures and extends existing approaches for differentially private decision trees. Our framework of methods is tailored to the federated setting, and we show that with a careful choice of techniques it is possible to achieve very high utility while maintaining strong levels of privacy.&#13;\\n&#13;\\n",
       "year": 2022,
@@ -277,6 +309,68 @@
         "Somesh Jha"
       ],
       "url": "https://openalex.org/W4308643126",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W3142731332",
+      "title": "Privacy and Trust Redefined in Federated Machine Learning",
+      "abstract": "A common privacy issue in traditional machine learning is that data needs to be disclosed for the training procedures. In situations with highly sensitive data such as healthcare records, accessing this information is challenging and often prohibited. Luckily, privacy-preserving technologies have been developed to overcome this hurdle by distributing the computation of the training and ensuring the data privacy to their owners. The distribution of the computation to multiple participating entities introduces new privacy complications and risks. In this paper, we present a privacy-preserving decentralised workflow that facilitates trusted federated learning among participants. Our proof-of-concept defines a trust framework instantiated using decentralised identity technologies being developed under Hyperledger projects Aries/Indy/Ursa. Only entities in possession of Verifiable Credentials issued from the appropriate authorities are able to establish secure, authenticated communication channels authorised to participate in a federated learning workflow related to mental health data.",
+      "year": 2021,
+      "venue": "Machine Learning and Knowledge Extraction",
+      "authors": [
+        "Pavlos Papadopoulos",
+        "Will Abramson",
+        "Adam J. Hall",
+        "Nikolaos Pitropakis",
+        "William J Buchanan",
+        "Pavlos Papadopoulos",
+        "Will Abramson",
+        "Adam J. Hall",
+        "Nikolaos Pitropakis",
+        "William J Buchanan"
+      ],
+      "url": "https://openalex.org/W3142731332",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W3173677040",
+      "title": "SEAR: Secure and Efficient Aggregation for Byzantine-Robust Federated Learning",
+      "abstract": "Federated learning facilitates the collaborative training of a global model among distributed clients without sharing their training data. Secure aggregation, a new security primitive for federated learning, aims to preserve the confidentiality of both local models and training data. Unfortunately, existing secure aggregation solutions fail to defend against Byzantine failures that are common in distributed computing systems. In this work, we propose a new secure and efficient aggregation framework, SEAR, for Byzantine-robust federated learning. Relying on the trusted execution environment, i.e., Intel SGX, SEAR protects clients' private models while enabling Byzantine resilience. Considering the limitation of the current Intel SGX's architecture (i.e., the limited trusted memory), we propose two data storage modes to efficiently implement aggregation algorithms efficiently in SGX. Moreover, to balance the efficiency and performance of aggregation, we propose a sampling-based method to efficiently detect Byzantine failures without degrading the global model's performance. We implement and evaluate SEAR in a LAN environment, and the experiment results show that SEAR is computationally efficient and robust to Byzantine adversaries. Compared to the previous practical secure aggregation framework, SEAR improves aggregation efficiency by 4-6 times while supporting Byzantine resilience at the same time.",
+      "year": 2021,
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "authors": [
+        "Lingchen Zhao",
+        "Jianlin Jiang",
+        "Bo Feng",
+        "Qian Wang",
+        "Chao Shen",
+        "Qi Li"
+      ],
+      "url": "https://openalex.org/W3173677040",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W2897865027",
+      "title": "Model-Reuse Attacks on Deep Learning Systems",
+      "abstract": "Many of today's machine learning (ML) systems are built by reusing an array of, often pre-trained, primitive models, each fulfilling distinct functionality (e.g., feature extraction). The increasing use of primitive models significantly simplifies and expedites the development cycles of ML systems. Yet, because most of such models are contributed and maintained by untrusted sources, their lack of standardization or regulation entails profound security implications, about which little is known thus far. In this paper, we demonstrate that malicious primitive models pose immense threats to the security of ML systems. We present a broad class of model-reuse attacks wherein maliciously crafted models trigger host ML systems to misbehave on targeted inputs in a highly predictable manner. By empirically studying four deep learning systems (including both individual and ensemble systems) used in skin cancer screening, speech recognition, face verification, and autonomous steering, we show that such attacks are (i) effective - the host systems misbehave on the targeted inputs as desired by the adversary with high probability, (ii) evasive - the malicious models function indistinguishably from their benign counterparts on non-targeted inputs, (iii) elastic - the malicious models remain effective regardless of various system design choices and tuning strategies, and (iv) easy - the adversary needs little prior knowledge about the data used for system tuning or inference. We provide analytical justification for the effectiveness of model-reuse attacks, which points to the unprecedented complexity of today's primitive models. This issue thus seems fundamental to many ML systems. We further discuss potential countermeasures and their challenges, which lead to several promising research directions.",
+      "year": 2018,
+      "venue": null,
+      "authors": [
+        "Yujie Ji",
+        "Xinyang Zhang",
+        "Shouling Ji",
+        "Xiapu Luo",
+        "Ting Wang"
+      ],
+      "url": "https://openalex.org/W2897865027",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     }
   ]

@@ -1,0 +1,141 @@
+{
+  "total": 21,
+  "by_category": {
+    "ML01": 7,
+    "ML02": 3,
+    "ML08": 1,
+    "ML10": 2,
+    "NONE": 1,
+    "ML05": 2,
+    "ML03": 4,
+    "ML04": 1
+  },
+  "classifications": [
+    {
+      "title": "HopSkipJumpAttack: A Query-Efficient Decision-Based Attack",
+      "category": "ML01",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Gotta Catch'Em All: Using Honeypots to Catch Adversarial Attacks on Neural Networks",
+      "category": "ML01",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Group-based Robustness: A General Framework for Customized Robustness in the Real World",
+      "category": "ML01",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Parrot-Trained Adversarial Examples: Pushing the Practicality of Black-Box Audio Attacks against Speaker Recognition Models",
+      "category": "ML01",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "X-Adv: Physical Adversarial Object Attacks against X-ray Prohibited Item Detection",
+      "category": "ML01",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "On The Empirical Effectiveness of Unrealistic Adversarial Hardening Against Realistic Adversarial Attacks",
+      "category": "ML01",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "ADI: Adversarial Dominating Inputs in Vertical Federated Learning Systems",
+      "category": "ML01",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Subpopulation Data Poisoning Attacks",
+      "category": "ML02",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "BEAGLE: Forensics of Deep Learning Backdoor Attack for Better Defense",
+      "category": "ML02",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Combating Concept Drift with Explanatory Detection and Adaptation for Android Malware Classification",
+      "category": "ML08",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "DeepDyve: Dynamic Verification for Deep Neural Networks",
+      "category": "ML10",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Raconteur: A Knowledgeable, Insightful, and Portable LLM-Powered Shell Command Explainer",
+      "category": "NONE",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "LMSanitator: Defending Prompt-Tuning Against Task-Agnostic Backdoors",
+      "category": "ML02",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Transpose Attack: Stealing Datasets with Bidirectional Training",
+      "category": "ML05",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Membership Inference Attacks by Exploiting Loss Trajectory",
+      "category": "ML03",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "The Value of Collaboration in Convex Machine Learning with Differential Privacy",
+      "category": "ML03",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Locally Private Graph Neural Networks",
+      "category": "ML03",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "Graph Unlearning",
+      "category": "ML10",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "SoK: Dataset Copyright Auditing in Machine Learning Systems",
+      "category": "ML05",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "SSLGuard: A Watermarking Scheme for Self-supervised Learning Pre-trained Encoders",
+      "category": "ML04",
+      "confidence": "HIGH",
+      "has_abstract": true
+    },
+    {
+      "title": "SoK: Let the Privacy Games Begin! A Unified Treatment of Data Inference Privacy in Machine Learning",
+      "category": "ML03",
+      "confidence": "HIGH",
+      "has_abstract": true
+    }
+  ]
+}

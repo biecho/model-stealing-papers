@@ -1,11 +1,11 @@
 {
   "owasp_id": "ML07",
   "owasp_name": "Transfer Attacks",
-  "total": 2,
+  "total": 13,
   "updated": "2026-01-09",
   "papers": [
     {
-      "paper_id": "2307.07873",
+      "paper_id": "https://openalex.org/W4402264342",
       "title": "Why Does Little Robustness Help? A Further Step Towards Understanding Adversarial Transferability",
       "abstract": "Adversarial examples (AEs) for DNNs have been shown to be transferable: AEs that successfully fool white-box surrogate models can also deceive other black-box models with different architectures. Although a bunch of empirical studies have provided guidance on generating highly transferable AEs, many of these findings lack explanations and even lead to inconsistent advice. In this paper, we take a further step towards understanding adversarial transferability, with a particular focus on surrogate aspects. Starting from the intriguing little robustness phenomenon, where models adversarially trained with mildly perturbed adversarial samples can serve as better surrogates, we attribute it to a trade-off between two predominant factors: model smoothness and gradient similarity. Our investigations focus on their joint effects, rather than their separate correlations with transferability. Through a series of theoretical and empirical analyses, we conjecture that the data distribution shift in adversarial training explains the degradation of gradient similarity. Building on these insights, we explore the impacts of data augmentation and gradient regularization on transferability and identify that the trade-off generally exists in the various training mechanisms, thus building a comprehensive blueprint for the regulation mechanism behind transferability. Finally, we provide a general route for constructing better surrogates to boost transferability which optimizes both model smoothness and gradient similarity simultaneously, e.g., the combination of input gradient regularization and sharpness-aware minimization (SAM), validated by extensive experiments. In summary, we call for attention to the united impacts of these two factors for launching effective transfer attacks, rather than optimizing one while ignoring the other, and emphasize the crucial role of manipulating surrogate models.",
       "year": 2024,
@@ -21,10 +21,12 @@
         "Hai Jin"
       ],
       "url": "https://arxiv.org/abs/2307.07873",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_cd05f758",
+      "paper_id": "https://openalex.org/W4221166176",
       "title": "Transferring Adversarial Robustness Through Robust Representation Matching",
       "abstract": "With the widespread use of machine learning, concerns over its security and reliability have become prevalent. As such, many have developed defenses to harden neural networks against adversarial examples, imperceptibly perturbed inputs that are reliably misclassified. Adversarial training in which adversarial examples are generated and used during training is one of the few known defenses able to reliably withstand such attacks against neural networks. However, adversarial training imposes a significant training overhead and scales poorly with model complexity and input dimension. In this paper, we propose Robust Representation Matching (RRM), a low-cost method to transfer the robustness of an adversarially trained model to a new model being trained for the same task irrespective of architectural differences. Inspired by student-teacher learning, our method introduces a novel training loss that encourages the student to learn the teacher's robust representations. Compared to prior works, RRM is superior with respect to both model performance and adversarial training time. On CIFAR-10, RRM trains a robust model $\\sim 1.8\\times$ faster than the state-of-the-art. Furthermore, RRM remains effective on higher-dimensional datasets. On Restricted-ImageNet, RRM trains a ResNet50 model $\\sim 18\\times$ faster than standard adversarial training.",
       "year": 2022,
@@ -35,6 +37,214 @@
         "Amir Rahmati"
       ],
       "url": "https://openalex.org/W4221166176",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4221044115",
+      "title": "ENHANCE TRANSFERABILITY OF ADVERSARIAL EXAMPLES WITH MODEL ARCHITECTURE",
+      "abstract": "Transferability of adversarial examples is of critical importance to launch black-box adversarial attacks, where attackers are only allowed to access the output of the target model. However, under such a challenging but practical setting, the crafted adversarial examples are always prone to overfitting to the proxy model employed, presenting poor transferability. In this paper, we suggest alleviating the overfitting issue from a novel perspective, i.e., designing a fitted model architecture. Specifically, delving the bottom of the cause of poor transferability, we arguably decompose and reconstruct the existing model architecture into an effective model architecture, namely multi-track model architecture (MMA). The adversarial examples crafted on the MMA can maximumly relieve the effect of model-specified features to it and toward the vulnerable directions adopted by diverse architectures. Extensive experimental evaluation demonstrates that the transferability of adversarial examples based on the MMA significantly surpass other state-of-the-art model architectures by up to 40\\% with comparable overhead.",
+      "year": 2022,
+      "venue": null,
+      "authors": [
+        "Mingyuan Fan",
+        "Wenzhong Guo",
+        "Shengxing Yu",
+        "Zuobin Ying",
+        "Ximeng Liu"
+      ],
+      "url": "https://openalex.org/W4221044115",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W2962847335",
+      "title": "Improving Transferability of Adversarial Examples With Input Diversity",
+      "abstract": "Though CNNs have achieved the state-of-the-art performance on various vision tasks, they are vulnerable to adversarial examples --- crafted by adding human-imperceptible perturbations to clean images. However, most of the existing adversarial attacks only achieve relatively low success rates under the challenging black-box setting, where the attackers have no knowledge of the model structure and parameters. To this end, we propose to improve the transferability of adversarial examples by creating diverse input patterns. Instead of only using the original images to generate adversarial examples, our method applies random transformations to the input images at each iteration. Extensive experiments on ImageNet show that the proposed attack method can generate adversarial examples that transfer much better to different networks than existing baselines. By evaluating our method against top defense solutions and official baselines from NIPS 2017 adversarial competition, the enhanced attack reaches an average success rate of 73.0%, which outperforms the top-1 attack submission in the NIPS competition by a large margin of 6.6%. We hope that our proposed attack strategy can serve as a strong benchmark baseline for evaluating the robustness of networks to adversaries and the effectiveness of different defense methods in the future. Code is available at https://github.com/cihangxie/DI-2-FGSM.",
+      "year": 2019,
+      "venue": null,
+      "authors": [
+        "Cihang Xie",
+        "Zhishuai Zhang",
+        "Yuyin Zhou",
+        "Song Bai",
+        "Jianyu Wang",
+        "Zhou Ren",
+        "Alan Yuille"
+      ],
+      "url": "https://openalex.org/W2962847335",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W2408141691",
+      "title": "Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples",
+      "abstract": "Many machine learning models are vulnerable to adversarial examples: inputs that are specially crafted to cause a machine learning model to produce an incorrect output. Adversarial examples that affect one model often affect another model, even if the two models have different architectures or were trained on different training sets, so long as both models were trained to perform the same task. An attacker may therefore train their own substitute model, craft adversarial examples against the substitute, and transfer them to a victim model, with very little information about the victim. Recent work has further developed a technique that uses the victim model as an oracle to label a synthetic training set for the substitute, so the attacker need not even collect a training set to mount the attack. We extend these recent techniques using reservoir sampling to greatly enhance the efficiency of the training procedure for the substitute model. We introduce new transferability attacks between previously unexplored (substitute, victim) pairs of machine learning model classes, most notably SVMs and decision trees. We demonstrate our attacks on two commercial machine learning classification systems from Amazon (96.19% misclassification rate) and Google (88.94%) using only 800 queries of the victim model, thereby showing that existing machine learning approaches are in general vulnerable to systematic black-box attacks regardless of their structure.",
+      "year": 2016,
+      "venue": "arXiv (Cornell University)",
+      "authors": [
+        "Nicolas Papernot",
+        "Patrick McDaniel",
+        "Ian Goodfellow"
+      ],
+      "url": "https://openalex.org/W2408141691",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W2570685808",
+      "title": "Delving into Transferable Adversarial Examples and Black-box Attacks",
+      "abstract": "An intriguing property of deep neural networks is the existence of adversarial examples, which can transfer among different architectures. These transferable adversarial examples may severely hinder deep neural network-based applications. Previous works mostly study the transferability using small scale datasets. In this work, we are the first to conduct an extensive study of the transferability over large models and a large scale dataset, and we are also the first to study the transferability of targeted adversarial examples with their target labels. We study both non-targeted and targeted adversarial examples, and show that while transferable non-targeted adversarial examples are easy to find, targeted adversarial examples generated using existing approaches almost never transfer with their target labels. Therefore, we propose novel ensemble-based approaches to generating transferable adversarial examples. Using such approaches, we observe a large proportion of targeted adversarial examples that are able to transfer with their target labels for the first time. We also present some geometric studies to help understanding the transferable adversarial examples. Finally, we show that the adversarial examples generated using ensemble-based approaches can successfully attack Clarifai.com, which is a black-box image classification system.",
+      "year": 2016,
+      "venue": "arXiv (Cornell University)",
+      "authors": [
+        "Yanpei Liu",
+        "Xinyun Chen",
+        "Chang Liu",
+        "Dawn Song"
+      ],
+      "url": "https://openalex.org/W2570685808",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4390871747",
+      "title": "Transferable Adversarial Attack for Both Vision Transformers and Convolutional Networks via Momentum Integrated Gradients",
+      "abstract": "Visual Transformers (ViTs) and Convolutional Neural Networks (CNNs) are the two primary backbone structures extensively used in various vision tasks. Generating transferable adversarial examples for ViTs is difficult due to ViTs' superior robustness, while transferring adversarial examples across ViTs and CNNs is even harder, since their structures and mechanisms for processing images are fundamentally distinct. In this work, we propose a novel attack method named Momentum Integrated Gradients (MIG), which not only attacks ViTs with high success rate, but also exhibits impressive transferability across ViTs and CNNs. Specifically, we use integrated gradients rather than gradients to steer the generation of adversarial perturbations, inspired by the observation that integrated gradients of images demonstrate higher similarity across models in comparison to regular gradients. Then we acquire the accumulated gradients by combining the integrated gradients from previous iterations with the current ones in a momentum manner and use their sign to modify the perturbations iteratively. We conduct extensive experiments to demonstrate that adversarial examples obtained using MIG show stronger transferability, resulting in significant improvements over state-of-the-art methods for both CNN and ViT models.",
+      "year": 2023,
+      "venue": null,
+      "authors": [
+        "Wenshuo Ma",
+        "Yidong Li",
+        "Xiaofeng Jia",
+        "Wei Xu"
+      ],
+      "url": "https://openalex.org/W4390871747",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4312990987",
+      "title": "Zero-Query Transfer Attacks on Context-Aware Object Detectors",
+      "abstract": "Adversarial attacks perturb images such that a deep neural network produces incorrect classification results. A promising approach to defend against adversarial attacks on natural multi-object scenes is to impose a context-consistency check, wherein, if the detected objects are not consistent with an appropriately defined context, then an attack is suspected. Stronger attacks are needed to fool such context-aware detectors. We present the first approach for generating context-consistent adversarial attacks that can evade the context-consistency check of black-box object detectors operating on complex, natural scenes. Unlike many black-box attacks that perform repeated attempts and open themselves to detection, we assume a \"zero-query\" setting, where the attacker has no knowledge of the classification decisions of the victim system. First, we derive multiple attack plans that assign incorrect labels to victim objects in a context-consistent manner. Then we design and use a novel data structure that we call the perturbation success probability matrix, which enables us to filter the attack plans and choose the one most likely to succeed. This final attack plan is implemented using a perturbation-bounded adversarial attack algorithm. We compare our zero-query attack against a few-query scheme that repeatedly checks if the victim system is fooled. We also compare against state-of-the-art context-agnostic attacks. Against a context-aware defense, the fooling rate of our zero-query approach is significantly higher than context-agnostic approaches and higher than that achievable with up to three rounds of the fewquery scheme.",
+      "year": 2022,
+      "venue": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "authors": [
+        "Zikui Cai",
+        "Shantanu Rane",
+        "Alejandro E. Brito",
+        "Chengyu Song",
+        "Srikanth V. Krishnamurthy",
+        "Amit K. Roy\u2013Chowdhury",
+        "M. Salman Asif"
+      ],
+      "url": "https://openalex.org/W4312990987",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4377079883",
+      "title": "On Single-Model Transferable Targeted Attacks: A Closer Look at Decision-Level Optimization",
+      "abstract": "Known as a hard nut, the single-model transferable targeted attacks via decision-level optimization objectives have attracted much attention among scholars for a long time. On this topic, recent works devoted themselves to designing new optimization objectives. In contrast, we take a closer look at the intrinsic problems in three commonly adopted optimization objectives, and propose two simple yet effective methods in this paper to mitigate these intrinsic problems. Specifically, inspired by the basic idea of adversarial learning, we, for the first time, propose a unified Adversarial Optimization Scheme (AOS) to release both the problems of gradient vanishing in cross-entropy loss and gradient amplification in Po+Trip loss, and indicate that our AOS, a simple transformation on the output logits before passing them to the objective functions, can yield considerable improvements on the targeted transferability. Besides, we make a further clarification on the preliminary conjecture in Vanilla Logit Loss (VLL) and point out the problem of unbalanced optimization in VLL, in which the source logit may risk getting increased without the explicit suppression on it, leading to the low transferability. Then, the Balanced Logit Loss (BLL) is further proposed, where we take both the source logit and the target logit into account. Comprehensive validations witness the compatibility and the effectiveness of the proposed methods across most attack frameworks, and their effectiveness can also span two tough cases (i.e., the low-ranked transfer scenario and the transfer to defense methods) and three datasets (i.e., the ImageNet, CIFAR-10, and CIFAR-100). Our source code is available at https://github.com/xuxiangsun/DLLTTAA.",
+      "year": 2023,
+      "venue": "IEEE Transactions on Image Processing",
+      "authors": [
+        "Xuxiang Sun",
+        "Gong Cheng",
+        "Hongda Li",
+        "Lei Pei",
+        "Junwei Han"
+      ],
+      "url": "https://openalex.org/W4377079883",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4391097056",
+      "title": "Constraining Adversarial Attacks on Network Intrusion Detection Systems: Transferability and Defense Analysis",
+      "abstract": "Adversarial attacks have been extensively studied in the domain of deep image classification, but their impacts on other domains such as Machine and Deep Learning-based Network Intrusion Detection Systems (NIDSs) have received limited attention. While adversarial attacks on images are generally more straightforward due to fewer constraints in the input domain, generating adversarial examples in the network domain poses greater challenges due to the diverse types of network traffic and the need to maintain its validity. Prior research has introduced constraints to generate adversarial examples against NIDSs, but their effectiveness across different attack settings, including transferability, targetability, defenses, and the overall attack success have not been thoroughly examined. In this paper, we proposed a novel set of domain constraints for network traffic that preserve the statistical and semantic relationships between traffic features while ensuring the validity of the perturbed adversarial traffic. Our constraints are categorized into four types: feature mutability constraints, feature value constraints, feature dependency constraints and distribution preserving constraints. We evaluated the impacts of these constraints on white box and black box attacks using two intrusion detection datasets. Our results demonstrated that the introduced constraints have a significant impact on the success of white box attacks. Our research revealed that transferability of adversarial examples depends on the similarity between the targeted models and the models to which the examples are transferred, regardless of the attack type or the presence of constraints. We also observed that adversarial training enhanced the robustness of the majority of machine learning and deep learning-based NIDSs against unconstrained attacks, while providing some resilience against constrained attacks. In practice, this suggests the potential use of pre-existing signatures of constrained attacks to combat new variations or zero-day adversarial attacks in real-world NIDSs.",
+      "year": 2024,
+      "venue": "IEEE Transactions on Network and Service Management",
+      "authors": [
+        "Nour Alhussien",
+        "Ahmed Aleroud",
+        "Abdullah Melhem",
+        "Samer Khamaiseh"
+      ],
+      "url": "https://openalex.org/W4391097056",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4289549047",
+      "title": "Why Do Adversarial Attacks Transfer? Explaining Transferability of\\n Evasion and Poisoning Attacks",
+      "abstract": "Transferability captures the ability of an attack against a machine-learning\\nmodel to be effective against a different, potentially unknown, model.\\nEmpirical evidence for transferability has been shown in previous work, but the\\nunderlying reasons why an attack transfers or not are not yet well understood.\\nIn this paper, we present a comprehensive analysis aimed to investigate the\\ntransferability of both test-time evasion and training-time poisoning attacks.\\nWe provide a unifying optimization framework for evasion and poisoning attacks,\\nand a formal definition of transferability of such attacks. We highlight two\\nmain factors contributing to attack transferability: the intrinsic adversarial\\nvulnerability of the target model, and the complexity of the surrogate model\\nused to optimize the attack. Based on these insights, we define three metrics\\nthat impact an attack's transferability. Interestingly, our results derived\\nfrom theoretical analysis hold for both evasion and poisoning attacks, and are\\nconfirmed experimentally using a wide range of linear and non-linear\\nclassifiers and datasets.\\n",
+      "year": 2018,
+      "venue": "arXiv (Cornell University)",
+      "authors": [
+        "Ambra Demontis",
+        "Marco Melis",
+        "Maura Pintor",
+        "Matthew Jagielski",
+        "Battista Biggio",
+        "Alina Oprea",
+        "Cristina Nita-Rotaru",
+        "Fabio Roli"
+      ],
+      "url": "https://openalex.org/W4289549047",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W3137766544",
+      "title": "SoK: A Modularized Approach to Study the Security of Automatic Speech Recognition Systems",
+      "abstract": "With the wide use of Automatic Speech Recognition (ASR) in applications such as human machine interaction, simultaneous interpretation, audio transcription, and so on, its security protection becomes increasingly important. Although recent studies have brought to light the weaknesses of popular ASR systems that enable out-of-band signal attack, adversarial attack, and so on, and further proposed various remedies (signal smoothing, adversarial training, etc.), a systematic understanding of ASR security (both attacks and defenses) is still missing, especially on how realistic such threats are and how general existing protection could be. In this article, we present our systematization of knowledge for ASR security and provide a comprehensive taxonomy for existing work based on a modularized workflow. More importantly, we align the research in this domain with that on security in Image Recognition System (IRS), which has been extensively studied, using the domain knowledge in the latter to help understand where we stand in the former. Generally, both IRS and ASR are perceptual systems. Their similarities allow us to systematically study existing literature in ASR security based on the spectrum of attacks and defense solutions proposed for IRS, and pinpoint the directions of more advanced attacks and the directions potentially leading to more effective protection in ASR. In contrast, their differences, especially the complexity of ASR compared with IRS, help us learn unique challenges and opportunities in ASR security. Particularly, our experimental study shows that transfer attacks across ASR models are feasible, even in the absence of knowledge about models (even their types) and training data.",
+      "year": 2022,
+      "venue": "ACM Transactions on Privacy and Security",
+      "authors": [
+        "Yuxuan Chen",
+        "Jiangshan Zhang",
+        "Xuejing Yuan",
+        "Shengzhi Zhang",
+        "Kai Chen",
+        "Xiaofeng Wang",
+        "Shanqing Guo"
+      ],
+      "url": "https://openalex.org/W3137766544",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4391406907",
+      "title": "Quantization Aware Attack: Enhancing Transferable Adversarial Attacks by Model Quantization",
+      "abstract": "Quantized neural networks (QNNs) have received increasing attention in resource-constrained scenarios due to their exceptional generalizability. However, their robustness against realistic black-box adversarial attacks has not been extensively studied. In this scenario, adversarial transferability is pursued across QNNs with different quantization bitwidths, which particularly involve unknown architectures and defense methods. Previous studies claim that transferability is difficult to achieve across QNNs with different bitwidths on the condition that they share the same architecture. However, we discover that under different architectures, transferability can be largely improved by using a QNN quantized with an extremely low bitwidth as the substitute model. We further improve the attack transferability by proposing <italic xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">quantization aware attack</i> (QAA), which fine-tunes a QNN substitute model with a multiple-bitwidth training objective. In particular, we demonstrate that QAA addresses the two issues that are commonly known to hinder transferability: 1) quantization shifts and 2) gradient misalignments. Extensive experimental results validate the high transferability of the QAA to diverse target models. For instance, when adopting the ResNet-34 substitute model on ImageNet, QAA outperforms the current best attack in attacking standardly trained DNNs, adversarially trained DNNs, and QNNs with varied bitwidths by 4.6% ~ 20.9%, 8.8% ~ 13.4%, and 2.6% ~ 11.8% (absolute), respectively. In addition, QAA is efficient since it only takes one epoch for fine-tuning. In the end, we empirically explain the effectiveness of QAA from the view of the loss landscape. Our code is available at https://github.com/yyl-github-1896/QAA/.",
+      "year": 2024,
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "authors": [
+        "Yulong Yang",
+        "Chenhao Lin",
+        "Qian Li",
+        "Zhengyu Zhao",
+        "Haoran Fan",
+        "Dawei Zhou",
+        "Nannan Wang",
+        "Tongliang Liu",
+        "Chao Shen"
+      ],
+      "url": "https://openalex.org/W4391406907",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     }
   ]

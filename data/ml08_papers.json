@@ -1,11 +1,11 @@
 {
   "owasp_id": "ML08",
   "owasp_name": "Model Configuration & Deployment",
-  "total": 4,
+  "total": 5,
   "updated": "2026-01-09",
   "papers": [
     {
-      "paper_id": "seed_e57ae380",
+      "paper_id": "https://openalex.org/W4298186935",
       "title": "IvySyn: Automated Vulnerability Discovery in Deep Learning Frameworks",
       "abstract": "We present IvySyn, the first fully-automated framework for discovering memory error vulnerabilities in Deep Learning (DL) frameworks. IvySyn leverages the statically-typed nature of native APIs in order to automatically perform type-aware mutation-based fuzzing on low-level kernel code. Given a set of offending inputs that trigger memory safety (and runtime) errors in low-level, native DL (C/C++) code, IvySyn automatically synthesizes code snippets in high-level languages (e.g., in Python), which propagate error-triggering input via high(er)-level APIs. Such code snippets essentially act as \"Proof of Vulnerability\", as they demonstrate the existence of bugs in native code that an attacker can target through various high-level APIs. Our evaluation shows that IvySyn significantly outperforms past approaches, both in terms of efficiency and effectiveness, in finding vulnerabilities in popular DL frameworks. Specifically, we used IvySyn to test TensorFlow and PyTorch. Although still an early prototype, IvySyn has already helped the TensorFlow and PyTorch framework developers to identify and fix 61 previously-unknown security vulnerabilities, and assign 39 unique CVEs.",
       "year": 2022,
@@ -18,6 +18,8 @@
         "Vasileios P. Kemerlis"
       ],
       "url": "https://openalex.org/W4298186935",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -34,6 +36,8 @@
         "Qiang Xu"
       ],
       "url": "https://arxiv.org/abs/2009.09663",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -49,6 +53,8 @@
         "NhatHai Phan"
       ],
       "url": "https://arxiv.org/abs/2409.12699",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -69,6 +75,27 @@
         "Salil Kanhere"
       ],
       "url": "https://arxiv.org/abs/2203.10902",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W3202547399",
+      "title": "Evaluating the Cybersecurity Risk of Real-world, Machine Learning Production Systems",
+      "abstract": "Although cyberattacks on machine learning (ML) production systems can be harmful, today, security practitioners are ill-equipped, lacking methodologies and tactical tools that would allow them to analyze the security risks of their ML-based systems. In this article, we perform a comprehensive threat analysis of ML production systems. In this analysis, we follow the ontology presented by NIST for evaluating enterprise network security risk and apply it to ML-based production systems. Specifically, we (1) enumerate the assets of a typical ML production system, (2) describe the threat model (i.e., potential adversaries, their capabilities, and their main goal), (3) identify the various threats to ML systems, and (4) review a large number of attacks, demonstrated in previous studies, which can realize these threats. To quantify the risk posed by adversarial machine learning (AML) threat, we introduce a novel scoring system that assigns a severity score to different AML attacks. The proposed scoring system utilizes the analytic hierarchy process (AHP) for ranking\u2014with the assistance of security experts\u2014various attributes of the attacks. Finally, we developed an extension to the MulVAL attack graph generation and analysis framework to incorporate cyberattacks on ML production systems. Using this extension, security practitioners can apply attack graph analysis methods in environments that include ML components thus providing security practitioners with a methodological and practical tool for both evaluating the impact and quantifying the risk of a cyberattack targeting ML production systems.",
+      "year": 2022,
+      "venue": "ACM Computing Surveys",
+      "authors": [
+        "Ron Bitton",
+        "Nadav Maman",
+        "Inderjeet Singh",
+        "Satoru Momiyama",
+        "Yuval Elovici",
+        "Asaf Shabtai"
+      ],
+      "url": "https://openalex.org/W3202547399",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     }
   ]

@@ -1,11 +1,11 @@
 {
   "owasp_id": "ML05",
   "owasp_name": "Data Extraction & Leakage",
-  "total": 11,
+  "total": 12,
   "updated": "2026-01-09",
   "papers": [
     {
-      "paper_id": "seed_9ab242f3",
+      "paper_id": "https://openalex.org/W3112689365",
       "title": "Extracting Training Data from Large Language Models",
       "abstract": "It has become common to publish large (billion parameter) language models that have been trained on private datasets. This paper demonstrates that in such settings, an adversary can perform a training data extraction attack to recover individual training examples by querying the language model. We demonstrate our attack on GPT-2, a language model trained on scrapes of the public Internet, and are able to extract hundreds of verbatim text sequences from the model's training data. These extracted examples include (public) personally identifiable information (names, phone numbers, and email addresses), IRC conversations, code, and 128-bit UUIDs. Our attack is possible even though each of the above sequences are included in just one document in the training data. We comprehensively evaluate our extraction attack to understand the factors that contribute to its success. Worryingly, we find that larger models are more vulnerable than smaller models. We conclude by drawing lessons and discussing possible safeguards for training large language models.",
       "year": 2020,
@@ -25,10 +25,12 @@
         "Colin Raffel"
       ],
       "url": "https://openalex.org/W3112689365",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_bb7e186a",
+      "paper_id": "https://openalex.org/W3027379683",
       "title": "Analyzing Information Leakage of Updates to Natural Language Models",
       "abstract": "To continuously improve quality and reflect changes in data, machine learning\\napplications have to regularly retrain and update their core models. We show\\nthat a differential analysis of language model snapshots before and after an\\nupdate can reveal a surprising amount of detailed information about changes in\\nthe training data. We propose two new metrics---\\\\emph{differential score} and\\n\\\\emph{differential rank}---for analyzing the leakage due to updates of natural\\nlanguage models. We perform leakage analysis using these metrics across models\\ntrained on several different datasets using different methods and\\nconfigurations. We discuss the privacy implications of our findings, propose\\nmitigation strategies and evaluate their effect.\\n",
       "year": 2020,
@@ -44,6 +46,8 @@
         "Marc Brockschmidt"
       ],
       "url": "https://openalex.org/W3027379683",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -61,6 +65,8 @@
         "Santiago Zanella-B\u00e9guelin"
       ],
       "url": "https://arxiv.org/abs/2302.00539",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -75,6 +81,8 @@
         "Yisroel Mirsky"
       ],
       "url": "https://arxiv.org/abs/2311.07389",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -89,10 +97,12 @@
         "Yan Zhai"
       ],
       "url": "https://arxiv.org/abs/2406.14114",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_30d1ae53",
+      "paper_id": "https://openalex.org/W3171497996",
       "title": "Leakage of Dataset Properties in Multi-Party Machine Learning",
       "abstract": "Secure multi-party machine learning allows several parties to build a model on their pooled data to increase utility while not explicitly sharing data with each other. We show that such multi-party computation can cause leakage of global dataset properties between the parties even when parties obtain only black-box access to the final model. In particular, a ``curious'' party can infer the distribution of sensitive attributes in other parties' data with high accuracy. This raises concerns regarding the confidentiality of properties pertaining to the whole dataset as opposed to individual data records. We show that our attack can leak population-level properties in datasets of different types, including tabular, text, and graph data. To understand and measure the source of leakage, we consider several models of correlation between a sensitive attribute and the rest of the data. Using multiple machine learning models, we show that leakage occurs even if the sensitive attribute is not included in the training data and has a low correlation with other attributes or the target variable.",
       "year": 2020,
@@ -103,6 +113,8 @@
         "Olga Ohrimenko"
       ],
       "url": "https://openalex.org/W3171497996",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -122,6 +134,8 @@
         "Nicolas Papernot"
       ],
       "url": "https://arxiv.org/abs/1912.03817",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -140,6 +154,8 @@
         "Kui Ren"
       ],
       "url": "https://arxiv.org/abs/2311.16136",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -158,6 +174,8 @@
         "Zhikun Zhang"
       ],
       "url": "https://arxiv.org/abs/2309.03081",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
@@ -177,10 +195,12 @@
         "Zhikun Zhang"
       ],
       "url": "https://arxiv.org/abs/2410.16618",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "seed_2c81920f",
+      "paper_id": "https://openalex.org/W4402427674",
       "title": "Evaluating LLM-based Personal Information Extraction and Countermeasures",
       "abstract": "Automatically extracting personal information -- such as name, phone number, and email address -- from publicly available profiles at a large scale is a stepstone to many other security attacks including spear phishing. Traditional methods -- such as regular expression, keyword search, and entity detection -- achieve limited success at such personal information extraction. In this work, we perform a systematic measurement study to benchmark large language model (LLM) based personal information extraction and countermeasures. Towards this goal, we present a framework for LLM-based extraction attacks; collect four datasets including a synthetic dataset generated by GPT-4 and three real-world datasets with manually labeled eight categories of personal information; introduce a novel mitigation strategy based on prompt injection; and systematically benchmark LLM-based attacks and countermeasures using ten LLMs and five datasets. Our key findings include: LLM can be misused by attackers to accurately extract various personal information from personal profiles; LLM outperforms traditional methods; and prompt injection can defend against strong LLM-based attacks, reducing the attack to less effective traditional ones.",
       "year": 2024,
@@ -192,6 +212,24 @@
         "Neil Zhenqiang Gong"
       ],
       "url": "https://openalex.org/W4402427674",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4391725245",
+      "title": "Transpose Attack: Stealing Datasets with Bidirectional Training",
+      "abstract": "Deep neural networks are normally executed in the forward direction.However, in this work, we identify a vulnerability that enables models to be trained in both directions and on different tasks.Adversaries can exploit this capability to hide rogue models within seemingly legitimate models.In addition, in this work we show that neural networks can be taught to systematically memorize and retrieve specific samples from datasets.Together, these findings expose a novel method in which adversaries can exfiltrate datasets from protected learning environments under the guise of legitimate models.We focus on the data exfiltration attack and show that modern architectures can be used to secretly exfiltrate tens of thousands of samples with high fidelity, high enough to compromise data privacy and even train new models.Moreover, to mitigate this threat we propose a novel approach for detecting infected models.",
+      "year": 2024,
+      "venue": null,
+      "authors": [
+        "Guy Amit",
+        "Moshe Levy",
+        "Yisroel Mirsky"
+      ],
+      "url": "https://openalex.org/W4391725245",
+      "pdf_url": null,
+      "cited_by_count": null,
       "classification_confidence": "HIGH"
     }
   ]
