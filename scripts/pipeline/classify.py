@@ -28,6 +28,10 @@ GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 GOOGLE_API_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 GOOGLE_MODEL = "gemini-2.0-flash"
 
+CEREBRAS_API_KEY = os.environ.get("CEREBRAS_API_KEY")
+CEREBRAS_API_URL = "https://api.cerebras.ai/v1/chat/completions"
+CEREBRAS_MODEL = "llama-3.3-70b"
+
 OWASP_CATEGORIES = """
 ML01: Input Manipulation (adversarial examples, evasion attacks, input perturbation, prompt injection)
 ML02: Data Poisoning (training data manipulation, backdoor attacks, trojan attacks)
@@ -146,13 +150,53 @@ def classify_with_google(title: str, abstract: str = None) -> tuple[str, str]:
         return validate_category(category), confidence
 
 
-def classify_with_llm(title: str, abstract: str = None, provider: str = "groq") -> tuple[str, str]:
+def classify_with_cerebras(title: str, abstract: str = None) -> tuple[str, str]:
+    """Classify using Cerebras API (OpenAI-compatible)."""
+    if abstract:
+        user_message = f"Title: {title}\n\nAbstract: {abstract[:2500]}"
+        confidence = "HIGH"
+    else:
+        user_message = f"Title: {title}\n\n(No abstract available - classify based on title only)"
+        confidence = "LOW"
+
+    payload = {
+        "model": CEREBRAS_MODEL,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": user_message}
+        ],
+        "temperature": 0.1,
+        "max_tokens": 10,
+    }
+
+    headers = {
+        "Authorization": f"Bearer {CEREBRAS_API_KEY}",
+        "Content-Type": "application/json",
+        "User-Agent": "ml-security-papers/1.0",
+    }
+
+    req = urllib.request.Request(
+        CEREBRAS_API_URL,
+        data=json.dumps(payload).encode(),
+        headers=headers,
+        method="POST"
+    )
+
+    with urllib.request.urlopen(req, timeout=30) as response:
+        data = json.loads(response.read().decode())
+        category = data["choices"][0]["message"]["content"]
+        return validate_category(category), confidence
+
+
+def classify_with_llm(title: str, abstract: str = None, provider: str = "cerebras") -> tuple[str, str]:
     """
     Classify a paper using LLM.
     Returns (category, confidence).
     """
     if provider == "google":
         return classify_with_google(title, abstract)
+    elif provider == "cerebras":
+        return classify_with_cerebras(title, abstract)
     else:
         return classify_with_groq(title, abstract)
 
@@ -165,7 +209,7 @@ def main():
     parser.add_argument("--limit", type=int, default=0, help="Limit papers to classify (0=all)")
     parser.add_argument("--rate-limit", type=float, default=1.5, help="Seconds between requests")
     parser.add_argument("--include-pending", action="store_true", help="Also classify pending papers (title-only)")
-    parser.add_argument("--provider", type=str, default="groq", choices=["groq", "google"], help="LLM provider")
+    parser.add_argument("--provider", type=str, default="cerebras", choices=["groq", "google", "cerebras"], help="LLM provider")
     args = parser.parse_args()
 
     if args.provider == "groq" and not GROQ_API_KEY:
@@ -173,6 +217,10 @@ def main():
         return
     if args.provider == "google" and not GOOGLE_API_KEY:
         print("Error: GOOGLE_API_KEY environment variable not set", flush=True)
+        return
+    if args.provider == "cerebras" and not CEREBRAS_API_KEY:
+        print("Error: CEREBRAS_API_KEY environment variable not set", flush=True)
+        print("Get a free API key at: https://cloud.cerebras.ai/", flush=True)
         return
 
     print(f"Using provider: {args.provider}", flush=True)
