@@ -18,8 +18,8 @@
         "Songbai Yan"
       ],
       "url": "https://openalex.org/W2918814112",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/1811.02054",
+      "cited_by_count": 24,
       "classification_confidence": "HIGH"
     },
     {
@@ -54,7 +54,7 @@
       ],
       "url": "https://openalex.org/W3159603021",
       "pdf_url": null,
-      "cited_by_count": null,
+      "cited_by_count": 50,
       "classification_confidence": "HIGH"
     },
     {
@@ -72,8 +72,8 @@
         "Yier Jin"
       ],
       "url": "https://openalex.org/W3007318395",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://doi.org/10.14722/ndss.2020.24178",
+      "cited_by_count": 130,
       "classification_confidence": "HIGH"
     },
     {
@@ -108,7 +108,7 @@
       ],
       "url": "https://openalex.org/W4385080307",
       "pdf_url": null,
-      "cited_by_count": null,
+      "cited_by_count": 15,
       "classification_confidence": "HIGH"
     },
     {
@@ -124,8 +124,8 @@
         "Min Yang"
       ],
       "url": "https://openalex.org/W4353012851",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2303.09732",
+      "cited_by_count": 8,
       "classification_confidence": "HIGH"
     },
     {
@@ -216,8 +216,8 @@
         "Jiaheng Zhang"
       ],
       "url": "https://openalex.org/W4391421113",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2401.16820",
+      "cited_by_count": 5,
       "classification_confidence": "HIGH"
     },
     {
@@ -234,8 +234,8 @@
         "Jianping Weng"
       ],
       "url": "https://openalex.org/W4403963863",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2410.04397",
+      "cited_by_count": 0,
       "classification_confidence": "HIGH"
     },
     {
@@ -249,8 +249,8 @@
         "Juarez, Marc"
       ],
       "url": "https://openalex.org/W4417351576",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.10502",
+      "cited_by_count": 0,
       "classification_confidence": "HIGH"
     },
     {
@@ -309,7 +309,7 @@
       ],
       "url": "https://openalex.org/W4200633448",
       "pdf_url": null,
-      "cited_by_count": null,
+      "cited_by_count": 61,
       "classification_confidence": "HIGH"
     },
     {
@@ -355,8 +355,8 @@
         "Chunyang Chen"
       ],
       "url": "https://openalex.org/W4416413358",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2503.23748",
+      "cited_by_count": 0,
       "classification_confidence": "HIGH"
     },
     {
@@ -376,8 +376,8 @@
         "Shouling Ji"
       ],
       "url": "https://openalex.org/W4399554484",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2402.19200",
+      "cited_by_count": 0,
       "classification_confidence": "HIGH"
     },
     {
@@ -392,8 +392,8 @@
         "Lea Sch\u00f6nherr"
       ],
       "url": "https://openalex.org/W4403713467",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2409.11026",
+      "cited_by_count": 1,
       "classification_confidence": "HIGH"
     },
     {
@@ -408,8 +408,8 @@
         "Giuseppe Ateniese"
       ],
       "url": "https://openalex.org/W4402856935",
-      "pdf_url": null,
-      "cited_by_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2407.15847",
+      "cited_by_count": 0,
       "classification_confidence": "HIGH"
     }
   ]
