@@ -14,16 +14,16 @@ from pathlib import Path
 from state import PaperState
 
 CATEGORY_NAMES = {
-    "ML01": "Input Manipulation",
-    "ML02": "Data Poisoning",
-    "ML03": "Model Inversion & Data Reconstruction",
-    "ML04": "Model Theft & Extraction",
-    "ML05": "Data Extraction & Leakage",
-    "ML06": "Supply Chain",
-    "ML07": "Transfer Attacks",
-    "ML08": "Model Configuration & Deployment",
-    "ML09": "Output Integrity",
-    "ML10": "Model Manipulation & Corruption",
+    "ML01": "Input Manipulation Attack",
+    "ML02": "Data Poisoning Attack",
+    "ML03": "Model Inversion Attack",
+    "ML04": "Membership Inference Attack",
+    "ML05": "Model Theft",
+    "ML06": "AI Supply Chain Attacks",
+    "ML07": "Transfer Learning Attack",
+    "ML08": "Model Skewing",
+    "ML09": "Output Integrity Attack",
+    "ML10": "Model Poisoning",
 }
 
 

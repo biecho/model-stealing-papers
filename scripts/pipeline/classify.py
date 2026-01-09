@@ -32,32 +32,68 @@ CEREBRAS_API_KEY = os.environ.get("CEREBRAS_API_KEY")
 CEREBRAS_API_URL = "https://api.cerebras.ai/v1/chat/completions"
 CEREBRAS_MODEL = "llama-3.3-70b"
 
-OWASP_CATEGORIES = """
-ML01: Input Manipulation (adversarial examples, evasion attacks, input perturbation, prompt injection)
-ML02: Data Poisoning (training data manipulation, backdoor attacks, trojan attacks)
-ML03: Model Inversion & Data Reconstruction (privacy attacks, membership inference, attribute inference)
-ML04: Model Theft & Extraction (model stealing, architecture extraction, knowledge distillation attacks)
-ML05: Data Extraction & Leakage (training data extraction, memorization attacks, PII leakage)
-ML06: Supply Chain (model supply chain, pretrained model attacks, model integrity, federated learning attacks)
-ML07: Transfer Attacks (cross-domain attacks, transferability of adversarial examples)
-ML08: Model Configuration & Deployment (misconfigurations, deployment security, model serving)
-ML09: Output Integrity (output manipulation, prediction tampering, deepfakes, AI-generated content detection)
-ML10: Model Manipulation & Corruption (weight manipulation, model modification attacks, fine-tuning attacks)
-NONE: Not related to ML security (general ML, other security topics, AI FOR security rather than attacks ON ML)
-"""
+SYSTEM_PROMPT = """You are an expert ML security researcher. Classify papers into OWASP ML Security Top 10 categories.
 
-SYSTEM_PROMPT = f"""You are an expert ML security researcher. Classify the given paper into ONE of the OWASP ML Security Top 10 categories.
+## Categories (based on OWASP ML Security Top 10 2023):
 
-Categories:
-{OWASP_CATEGORIES}
+ML01 - Input Manipulation Attack
+  Adversarial examples that fool models at INFERENCE time. Attacker crafts malicious inputs (images, text, audio) with imperceptible perturbations to cause misclassification.
+  Examples: adversarial patches, evasion attacks, perturbation attacks, prompt injection, jailbreaking LLMs
 
-Important distinctions:
-- Papers about ATTACKING ML systems → classify as ML01-ML10
-- Papers about DEFENDING ML systems from attacks → classify based on the attack type they defend against
-- Papers about using AI FOR security (malware detection, intrusion detection) → classify as NONE
-- General ML papers without security focus → classify as NONE
+ML02 - Data Poisoning Attack
+  Corrupting TRAINING DATA to make the model learn wrong behavior. Attacker injects malicious samples or mislabels data before/during training.
+  Examples: backdoor attacks, trojan attacks, label flipping, training data manipulation
 
-Respond with ONLY the category code (ML01, ML02, ..., ML10, or NONE). No explanation."""
+ML03 - Model Inversion Attack
+  RECONSTRUCTING training data or sensitive attributes by querying the model. Attacker reverse-engineers what data the model was trained on.
+  Examples: attribute inference, training data reconstruction, facial reconstruction from face recognition models
+
+ML04 - Membership Inference Attack
+  Determining WHETHER a specific record was in the training set. Binary question: "Was this person's data used to train the model?"
+  Examples: privacy attacks on ML, detecting if individual's data was used, GDPR/privacy violations
+
+ML05 - Model Theft
+  Stealing the MODEL ITSELF - its parameters, weights, or architecture. Creating a copy of the model.
+  Examples: model extraction, model stealing, knowledge distillation attacks, API-based model copying
+
+ML06 - AI Supply Chain Attacks
+  Attacking the ML ECOSYSTEM - packages, platforms, model hubs, MLOps infrastructure.
+  Examples: malicious PyPI packages, compromised pre-trained models on HuggingFace, MLOps platform vulnerabilities
+
+ML07 - Transfer Learning Attack
+  Exploiting TRANSFER LEARNING to inject malicious behavior. Attacker poisons a pre-trained model that others will fine-tune.
+  Examples: backdoored foundation models, malicious fine-tuning, attacking models through transfer learning
+
+ML08 - Model Skewing
+  Manipulating FEEDBACK LOOPS in continuously learning systems to gradually skew model behavior over time.
+  Examples: feedback loop exploitation, concept drift attacks, online learning manipulation
+
+ML09 - Output Integrity Attack
+  Tampering with model OUTPUTS after prediction. Attacker intercepts and modifies the results.
+  Examples: prediction tampering, result manipulation, man-in-the-middle on model outputs
+
+ML10 - Model Poisoning
+  Directly manipulating MODEL PARAMETERS/WEIGHTS (not training data). Attacker modifies the model itself.
+  Examples: weight manipulation, neural trojan insertion into weights, model file tampering
+
+NONE - Not ML Security
+  Use for: general ML without security focus, using AI FOR security (malware detection, intrusion detection, fraud detection), pure cryptography, non-ML security
+
+## Key Distinctions:
+- ML02 (data poisoning) vs ML10 (model poisoning): ML02 attacks training DATA, ML10 attacks model WEIGHTS directly
+- ML03 (model inversion) vs ML04 (membership inference): ML03 reconstructs data content, ML04 only asks "was this in training set?"
+- ML05 (model theft) vs ML03 (model inversion): ML05 steals the model itself, ML03 extracts info about training data
+- ML01 (input manipulation) vs ML09 (output integrity): ML01 manipulates inputs, ML09 manipulates outputs
+- ML02 (data poisoning) vs ML08 (model skewing): ML02 is initial training corruption, ML08 exploits feedback loops
+
+## Classification Rules:
+1. Papers about ATTACKING ML systems → ML01-ML10
+2. Papers about DEFENDING against specific attacks → classify by the attack type defended against
+3. Papers using AI FOR security tasks (not attacks ON AI) → NONE
+4. General ML papers without adversarial/security focus → NONE
+5. Adversarial robustness/certified defenses → ML01 (they defend against input manipulation)
+
+Respond with ONLY the category code. No explanation."""
 
 
 def validate_category(category: str) -> str:
