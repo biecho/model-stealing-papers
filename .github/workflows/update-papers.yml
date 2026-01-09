@@ -2,7 +2,7 @@ name: Update Papers
 
 on:
   schedule:
-    - cron: '0 */12 * * *'  # Every 12 hours
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC
   workflow_dispatch:  # Manual trigger
 
 permissions:
@@ -18,22 +18,23 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: |
-          pip install -e .
-
-      - name: Fetch model stealing papers (main dataset)
+      - name: Discover new papers citing our pool
         env:
-          S2_API_KEY: ${{ secrets.S2_API_KEY }}
-        run: python scripts/fetch_papers.py
+          OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
+        run: python scripts/pipeline/discover.py --days 7
 
-      - name: Fetch prompt injection papers
+      - name: Fetch metadata for pending papers
         env:
-          S2_API_KEY: ${{ secrets.S2_API_KEY }}
-        run: python scripts/fetch_papers.py -c configs/ml01a_prompt_injection.yaml -o data/ml01a_raw.json
+          OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
+        run: python scripts/pipeline/fetch.py
 
-      - name: Filter all categories
-        run: python scripts/run_all.py
+      - name: Classify papers
+        env:
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+        run: python scripts/pipeline/classify.py --provider cerebras
+
+      - name: Export for website
+        run: python scripts/pipeline/export.py
 
       - name: Commit and push
         run: |
