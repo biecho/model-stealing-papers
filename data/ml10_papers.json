@@ -1,22 +1,72 @@
 {
   "owasp_id": "ML10",
-  "owasp_name": "Model Manipulation & Corruption",
-  "total": 5,
+  "owasp_name": "Model Poisoning",
+  "total": 6,
   "updated": "2026-01-09",
   "papers": [
     {
-      "paper_id": "https://openalex.org/W3213849916",
-      "title": "AI-Lancet: Locating Error-inducing Neurons to Optimize Neural Networks",
-      "abstract": "Deep neural network (DNN) has been widely utilized in many areas due to its increasingly high accuracy. However, DNN models could also produce wrong outputs due to internal errors, which may lead to severe security issues. Unlike fixing bugs in traditional computer software, tracing the errors in DNN models and fixing them are much more difficult due to the uninterpretability of DNN. In this paper, we present a novel and systematic approach to trace and fix the errors in deep learning models. In particular, we locate the error-inducing neurons that play a leading role in the erroneous output. With the knowledge of error-inducing neurons, we propose two methods to fix the errors: the neuron-flip and the neuron-fine-tuning. We evaluate our approach using five different training datasets and seven different model architectures. The experimental results demonstrate its efficacy in different application scenarios, including backdoor removal and general defects fixing.",
+      "paper_id": "https://openalex.org/W2990614164",
+      "title": "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning",
+      "abstract": "In federated learning, multiple client devices jointly learn a machine learning model: each client device maintains a local model for its local training dataset, while a master device maintains a global model via aggregating the local models from the client devices. The machine learning community recently proposed several federated learning methods that were claimed to be robust against Byzantine failures (e.g., system failures, adversarial manipulations) of certain client devices. In this work, we perform the first systematic study on local model poisoning attacks to federated learning. We assume an attacker has compromised some client devices, and the attacker manipulates the local model parameters on the compromised client devices during the learning process such that the global model has a large testing error rate. We formulate our attacks as optimization problems and apply our attacks to four recent Byzantine-robust federated learning methods. Our empirical results on four real-world datasets show that our attacks can substantially increase the error rates of the models learnt by the federated learning methods that were claimed to be robust against Byzantine failures of some client devices. We generalize two defenses for data poisoning attacks to defend against our local model poisoning attacks. Our evaluation results show that one defense can effectively defend against our attacks in some cases, but the defenses are not effective enough in other cases, highlighting the need for new defenses against our local model poisoning attacks to federated learning.",
+      "year": 2019,
+      "venue": "arXiv (Cornell University)",
+      "authors": [
+        "Minghong Fang",
+        "Xiaoyu Cao",
+        "Jinyuan Jia",
+        "Neil Zhenqiang Gong"
+      ],
+      "url": "https://openalex.org/W2990614164",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W3138153888",
+      "title": "Manipulating the Byzantine: Optimizing Model Poisoning Attacks and Defenses for Federated Learning",
+      "abstract": "Federated learning (FL) enables many data owners (e.g., mobile devices) to train a joint ML model (e.g., a nextword prediction classifier) without the need of sharing their private training data.However, FL is known to be susceptible to poisoning attacks by malicious participants (e.g., adversaryowned mobile devices) who aim at hampering the accuracy of the jointly trained model through sending malicious inputs during the federated training process.In this paper, we present a generic framework for model poisoning attacks on FL.We show that our framework leads to poisoning attacks that substantially outperform state-of-the-art model poisoning attacks by large margins.For instance, our attacks result in 1.5\u00d7 to 60\u00d7 higher reductions in the accuracy of FL models compared to previously discovered poisoning attacks.Our work demonstrates that existing Byzantine-robust FL algorithms are significantly more susceptible to model poisoning than previously thought.Motivated by this, we design a defense against FL poisoning, called divide-and-conquer (DnC).We demonstrate that DnC outperforms all existing Byzantine-robust FL algorithms in defeating model poisoning attacks, specifically, it is 2.5\u00d7 to 12\u00d7 more resilient in our experiments with different datasets and models.",
       "year": 2021,
       "venue": null,
       "authors": [
-        "Yue Zhao",
-        "Hong Zhu",
-        "Kai Chen",
-        "Shengzhi Zhang"
+        "Virat Shejwalkar",
+        "Amir Houmansadr"
       ],
-      "url": "https://openalex.org/W3213849916",
+      "url": "https://openalex.org/W3138153888",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4308338624",
+      "title": "LoneNeuron: a Highly-Effective Feature-Domain Neural Trojan Using Invisible and Polymorphic Watermarks",
+      "abstract": "The wide adoption of deep neural networks (DNNs) in real-world applications raises increasing security concerns. Neural Trojans embedded in pre-trained neural networks are a harmful attack against the DNN model supply chain. They generate false outputs when certain stealthy triggers appear in the inputs. While data-poisoning attacks have been well studied in the literature, code-poisoning and model-poisoning backdoors only start to attract attention until recently. We present a novel model-poisoning neural Trojan, namely LoneNeuron, which responds to feature-domain patterns that transform into invisible, sample-specific, and polymorphic pixel-domain watermarks. With high attack specificity, LoneNeuron achieves a 100% attack success rate, while not affecting the main task performance. With LoneNeuron's unique watermark polymorphism property, the same feature-domain trigger is resolved to multiple watermarks in the pixel domain, which further improves watermark randomness, stealthiness, and resistance against Trojan detection. Extensive experiments show that LoneNeuron could escape state-of-the-art Trojan detectors. LoneNeuron~is also the first effective backdoor attack against vision transformers (ViTs).",
+      "year": 2022,
+      "venue": "Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security",
+      "authors": [
+        "Zeyan Liu",
+        "Fengjun Li",
+        "Zhu Li",
+        "Bo Luo"
+      ],
+      "url": "https://openalex.org/W4308338624",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "https://openalex.org/W4286904258",
+      "title": "Rowhammer-Based Trojan Injection: One Bit Flip Is Sufficient for Backdooring DNNs",
+      "abstract": "State-of-the-art deep neural networks (DNNs) have been proven to be vulnerable to adversarial manipulation and backdoor attacks. Backdoored models deviate from expected behavior on inputs with predefined triggers while retaining performance on clean data. Recent works focus on software simulation of backdoor injection during the inference phase by modifying network weights, which we find often unrealistic in practice due to restrictions in hardware. In contrast, in this work for the first time, we present an end-to-end backdoor injection attack realized on actual hardware on a classifier model using Rowhammer as the fault injection method. To this end, we first investigate the viability of backdoor injection attacks in real-life deployments of DNNs on hardware and address such practical issues in hardware implementation from a novel optimization perspective. We are motivated by the fact that vulnerable memory locations are very rare, device-specific, and sparsely distributed. Consequently, we propose a novel network training algorithm based on constrained optimization to achieve a realistic backdoor injection attack in hardware. By modifying parameters uniformly across the convolutional and fully-connected layers as well as optimizing the trigger pattern together, we achieve state-of-the-art attack performance with fewer bit flips. For instance, our method on a hardware-deployed ResNet-20 model trained on CIFAR-10 achieves over 89% test accuracy and 92% attack success rate by flipping only 10 out of 2.2 million bits.",
+      "year": 2021,
+      "venue": "arXiv (Cornell University)",
+      "authors": [
+        "M. Caner Tol",
+        "Saad Islam",
+        "Andrew Adiletta",
+        "Berk Sunar",
+        "Ziming Zhang"
+      ],
+      "url": "https://openalex.org/W4286904258",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
@@ -58,39 +108,6 @@
         "Haojian Jin"
       ],
       "url": "https://arxiv.org/abs/2408.07728",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4417351576",
-      "title": "A Crack in the Bark: Leveraging Public Knowledge to Remove Tree-Ring Watermarks",
-      "abstract": "We present a novel attack specifically designed against Tree-Ring, a watermarking technique for diffusion models known for its high imperceptibility and robustness against removal attacks. Unlike previous removal attacks, which rely on strong assumptions about attacker capabilities, our attack only requires access to the variational autoencoder that was used to train the target diffusion model, a component that is often publicly available. By leveraging this variational autoencoder, the attacker can approximate the model's intermediate latent space, enabling more effective surrogate-based attacks. Our evaluation shows that this approach leads to a dramatic reduction in the AUC of Tree-Ring detector's ROC and PR curves, decreasing from 0.993 to 0.153 and from 0.994 to 0.385, respectively, while maintaining high image quality. Notably, our attacks outperform existing methods that assume full access to the diffusion model. These findings highlight the risk of reusing public autoencoders to train diffusion models -- a threat not considered by current industry practices. Furthermore, the results suggest that the Tree-Ring detector's precision, a metric that has been overlooked by previous evaluations, falls short of the requirements for real-world deployment.",
-      "year": 2025,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Lin, Junhua",
-        "Juarez, Marc"
-      ],
-      "url": "https://openalex.org/W4417351576",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3034665124",
-      "title": "Defending and Harnessing the Bit-Flip Based Adversarial Weight Attack",
-      "abstract": "Recently, a new paradigm of the adversarial attack on the quantized neural network weights has attracted great attention, namely, the Bit-Flip based adversarial weight attack, aka. Bit-Flip Attack (BFA). BFA has shown extraordinary attacking ability, where the adversary can malfunction a quantized Deep Neural Network (DNN) as a random guess, through malicious bit-flips on a small set of vulnerable weight bits (e.g., 13 out of 93 millions bits of 8-bit quantized ResNet-18). However, there are no effective defensive methods to enhance the fault-tolerance capability of DNN against such BFA. In this work, we conduct comprehensive investigations on BFA and propose to leverage binarization-aware training and its relaxation - piece-wise clustering as simple and effective countermeasures to BFA. The experiments show that, for BFA to achieve the identical prediction accuracy degradation (e.g., below 11% on CIFAR-10), it requires 19.3\u00d7 and 480.1\u00d7 more effective malicious bit-flips on ResNet-20 and VGG-11 respectively, compared to defend-free counterparts.",
-      "year": 2020,
-      "venue": null,
-      "authors": [
-        "Zhezhi He",
-        "Adnan Siraj Rakin",
-        "Jingtao Li",
-        "Chaitali Chakrabarti",
-        "Deliang Fan"
-      ],
-      "url": "https://openalex.org/W3034665124",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"

@@ -1,90 +1,88 @@
 {
   "updated": "2026-01-09",
   "total_papers": 2349,
-  "total_classified": 725,
-  "total_discarded": 172,
+  "total_classified": 309,
+  "total_discarded": 91,
   "categories": [
     {
       "owasp_id": "ML01",
-      "owasp_name": "Input Manipulation",
-      "total": 385,
+      "owasp_name": "Input Manipulation Attack",
+      "total": 117,
       "file": "ml01_papers.json"
     },
     {
       "owasp_id": "ML02",
-      "owasp_name": "Data Poisoning",
-      "total": 136,
+      "owasp_name": "Data Poisoning Attack",
+      "total": 69,
       "file": "ml02_papers.json"
     },
     {
       "owasp_id": "ML03",
-      "owasp_name": "Model Inversion & Data Reconstruction",
-      "total": 99,
+      "owasp_name": "Model Inversion Attack",
+      "total": 45,
       "file": "ml03_papers.json"
     },
     {
       "owasp_id": "ML04",
-      "owasp_name": "Model Theft & Extraction",
-      "total": 28,
+      "owasp_name": "Membership Inference Attack",
+      "total": 43,
       "file": "ml04_papers.json"
     },
     {
       "owasp_id": "ML05",
-      "owasp_name": "Data Extraction & Leakage",
-      "total": 12,
+      "owasp_name": "Model Theft",
+      "total": 22,
       "file": "ml05_papers.json"
     },
     {
       "owasp_id": "ML06",
-      "owasp_name": "Supply Chain",
-      "total": 20,
+      "owasp_name": "AI Supply Chain Attacks",
+      "total": 2,
       "file": "ml06_papers.json"
     },
     {
       "owasp_id": "ML07",
-      "owasp_name": "Transfer Attacks",
-      "total": 13,
+      "owasp_name": "Transfer Learning Attack",
+      "total": 3,
       "file": "ml07_papers.json"
     },
     {
       "owasp_id": "ML08",
-      "owasp_name": "Model Configuration & Deployment",
-      "total": 5,
+      "owasp_name": "Model Skewing",
+      "total": 0,
       "file": "ml08_papers.json"
     },
     {
       "owasp_id": "ML09",
-      "owasp_name": "Output Integrity",
-      "total": 22,
+      "owasp_name": "Output Integrity Attack",
+      "total": 2,
       "file": "ml09_papers.json"
     },
     {
       "owasp_id": "ML10",
-      "owasp_name": "Model Manipulation & Corruption",
-      "total": 5,
+      "owasp_name": "Model Poisoning",
+      "total": 6,
       "file": "ml10_papers.json"
     }
   ],
   "pipeline_stats": {
     "by_status": {
-      "expanded": 50,
+      "classified": 309,
       "pending": 513,
-      "discarded": 172,
-      "classified": 675,
-      "fetched": 939
+      "discarded": 91,
+      "fetched": 1436
     },
     "by_category": {
-      "ML01": 385,
-      "ML07": 13,
-      "NONE": 172,
-      "ML02": 136,
-      "ML09": 22,
-      "ML06": 20,
-      "ML10": 5,
-      "ML08": 5,
-      "ML04": 28,
-      "ML03": 99,
-      "ML05": 12
+      "ML01": 117,
+      "NONE": 91,
+      "ML10": 6,
+      "ML02": 69,
+      "ML03": 45,
+      "ML07": 3,
+      "ML06": 2,
+      "ML09": 2,
+      "ML04": 43,
+      "ML05": 22
     }
   }
 }

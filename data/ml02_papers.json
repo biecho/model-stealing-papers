@@ -1,59 +1,9 @@
 {
   "owasp_id": "ML02",
-  "owasp_name": "Data Poisoning",
-  "total": 136,
+  "owasp_name": "Data Poisoning Attack",
+  "total": 69,
   "updated": "2026-01-09",
   "papers": [
-    {
-      "paper_id": "https://openalex.org/W4308338690",
-      "title": "ATTRITION: Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning",
-      "abstract": "Stealthy hardware Trojans (HTs) inserted during the fabrication of integrated circuits can bypass the security of critical infrastructures. Although researchers have proposed many techniques to detect HTs, several limitations exist, including: (i) a low success rate, (ii) high algorithmic complexity, and (iii) a large number of test patterns. Furthermore, the most pertinent drawback of prior detection techniques stems from an incorrect evaluation methodology, i.e., they assume that an adversary inserts HTs randomly. Such inappropriate adversarial assumptions enable detection techniques to claim high HT detection accuracy, leading to a \"false sense of security.\" Unfortunately, to the best of our knowledge, despite more than a decade of research on detecting HTs inserted during fabrication, there have been no concerted efforts to perform a systematic evaluation of HT detection techniques.   In this paper, we play the role of a realistic adversary and question the efficacy of HT detection techniques by developing an automated, scalable, and practical attack framework, ATTRITION, using reinforcement learning (RL). ATTRITION evades eight detection techniques across two HT detection categories, showcasing its agnostic behavior. ATTRITION achieves average attack success rates of $47\\times$ and $211\\times$ compared to randomly inserted HTs against state-of-the-art HT detection techniques. We demonstrate ATTRITION's ability to evade detection techniques by evaluating designs ranging from the widely-used academic suites to larger designs such as the open-source MIPS and mor1kx processors to AES and a GPS module. Additionally, we showcase the impact of ATTRITION-generated HTs through two case studies (privilege escalation and kill switch) on the mor1kx processor. We envision that our work, along with our released HT benchmarks and models, fosters the development of better HT detection techniques.",
-      "year": 2022,
-      "venue": "ACM CCS",
-      "authors": [
-        "Vasudev Gohil",
-        "Hao Guo",
-        "Satwik Patnaik",
-        " Jeyavijayan",
-        " Rajendran"
-      ],
-      "url": "https://arxiv.org/abs/2208.12897",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2990614164",
-      "title": "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning",
-      "abstract": "In federated learning, multiple client devices jointly learn a machine learning model: each client device maintains a local model for its local training dataset, while a master device maintains a global model via aggregating the local models from the client devices. The machine learning community recently proposed several federated learning methods that were claimed to be robust against Byzantine failures (e.g., system failures, adversarial manipulations) of certain client devices. In this work, we perform the first systematic study on local model poisoning attacks to federated learning. We assume an attacker has compromised some client devices, and the attacker manipulates the local model parameters on the compromised client devices during the learning process such that the global model has a large testing error rate. We formulate our attacks as optimization problems and apply our attacks to four recent Byzantine-robust federated learning methods. Our empirical results on four real-world datasets show that our attacks can substantially increase the error rates of the models learnt by the federated learning methods that were claimed to be robust against Byzantine failures of some client devices. We generalize two defenses for data poisoning attacks to defend against our local model poisoning attacks. Our evaluation results show that one defense can effectively defend against our attacks in some cases, but the defenses are not effective enough in other cases, highlighting the need for new defenses against our local model poisoning attacks to federated learning.",
-      "year": 2019,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Minghong Fang",
-        "Xiaoyu Cao",
-        "Jinyuan Jia",
-        "Neil Zhenqiang Gong"
-      ],
-      "url": "https://openalex.org/W2990614164",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3138153888",
-      "title": "Manipulating the Byzantine: Optimizing Model Poisoning Attacks and Defenses for Federated Learning",
-      "abstract": "Federated learning (FL) enables many data owners (e.g., mobile devices) to train a joint ML model (e.g., a nextword prediction classifier) without the need of sharing their private training data.However, FL is known to be susceptible to poisoning attacks by malicious participants (e.g., adversaryowned mobile devices) who aim at hampering the accuracy of the jointly trained model through sending malicious inputs during the federated training process.In this paper, we present a generic framework for model poisoning attacks on FL.We show that our framework leads to poisoning attacks that substantially outperform state-of-the-art model poisoning attacks by large margins.For instance, our attacks result in 1.5\u00d7 to 60\u00d7 higher reductions in the accuracy of FL models compared to previously discovered poisoning attacks.Our work demonstrates that existing Byzantine-robust FL algorithms are significantly more susceptible to model poisoning than previously thought.Motivated by this, we design a defense against FL poisoning, called divide-and-conquer (DnC).We demonstrate that DnC outperforms all existing Byzantine-robust FL algorithms in defeating model poisoning attacks, specifically, it is 2.5\u00d7 to 12\u00d7 more resilient in our experiments with different datasets and models.",
-      "year": 2021,
-      "venue": null,
-      "authors": [
-        "Virat Shejwalkar",
-        "Amir Houmansadr"
-      ],
-      "url": "https://openalex.org/W3138153888",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
     {
       "paper_id": "2201.00763",
       "title": "DeepSight: Mitigating Backdoor Attacks in Federated Learning Through Deep Model Inspection",
@@ -93,6 +43,23 @@
         "Thomas Schneider"
       ],
       "url": "https://openalex.org/W4287393324",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "2112.12727",
+      "title": "EIFFeL: Ensuring Integrity for Federated Learning",
+      "abstract": "Federated learning (FL) enables clients to collaborate with a server to train a machine learning model. To ensure privacy, the server performs secure aggregation of updates from the clients. Unfortunately, this prevents verification of the well-formedness (integrity) of the updates as the updates are masked. Consequently, malformed updates designed to poison the model can be injected without detection. In this paper, we formalize the problem of ensuring \\textit{both} update privacy and integrity in FL and present a new system, \\textsf{EIFFeL}, that enables secure aggregation of \\textit{verified} updates. \\textsf{EIFFeL} is a general framework that can enforce \\textit{arbitrary} integrity checks and remove malformed updates from the aggregate, without violating privacy. Our empirical evaluation demonstrates the practicality of \\textsf{EIFFeL}. For instance, with $100$ clients and $10\\%$ poisoning, \\textsf{EIFFeL} can train an MNIST classification model to the same accuracy as that of a non-poisoned federated learner in just $2.4s$ per iteration.",
+      "year": 2022,
+      "venue": "ACM CCS",
+      "authors": [
+        "Amrita Roy Chowdhury",
+        "Chuan Guo",
+        "Somesh Jha",
+        "Laurens van der Maaten"
+      ],
+      "url": "https://arxiv.org/abs/2112.12727",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
@@ -286,6 +253,27 @@
         "Ahmad-Reza Sadeghi"
       ],
       "url": "https://arxiv.org/abs/2312.04432",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "2406.10416",
+      "title": "Byzantine-Robust Decentralized Federated Learning",
+      "abstract": "Federated learning (FL) enables multiple clients to collaboratively train machine learning models without revealing their private training data. In conventional FL, the system follows the server-assisted architecture (server-assisted FL), where the training process is coordinated by a central server. However, the server-assisted FL framework suffers from poor scalability due to a communication bottleneck at the server, and trust dependency issues. To address challenges, decentralized federated learning (DFL) architecture has been proposed to allow clients to train models collaboratively in a serverless and peer-to-peer manner. However, due to its fully decentralized nature, DFL is highly vulnerable to poisoning attacks, where malicious clients could manipulate the system by sending carefully-crafted local models to their neighboring clients. To date, only a limited number of Byzantine-robust DFL methods have been proposed, most of which are either communication-inefficient or remain vulnerable to advanced poisoning attacks. In this paper, we propose a new algorithm called BALANCE (Byzantine-robust averaging through local similarity in decentralization) to defend against poisoning attacks in DFL. In BALANCE, each client leverages its own local model as a similarity reference to determine if the received model is malicious or benign. We establish the theoretical convergence guarantee for BALANCE under poisoning attacks in both strongly convex and non-convex settings. Furthermore, the convergence rate of BALANCE under poisoning attacks matches those of the state-of-the-art counterparts in Byzantine-free settings. Extensive experiments also demonstrate that BALANCE outperforms existing DFL methods and effectively defends against poisoning attacks.",
+      "year": 2024,
+      "venue": "CCS",
+      "authors": [
+        "Minghong Fang",
+        "Zifan Zhang",
+        " Hairi",
+        "Prashant Khanduri",
+        "Jia Liu",
+        "Songtao Lu",
+        "Yuchen Liu",
+        "Neil Gong"
+      ],
+      "url": "https://arxiv.org/abs/2406.10416",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
@@ -594,22 +582,6 @@
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "2108.00352",
-      "title": "BadEncoder: Backdoor Attacks to Pre-trained Encoders in Self-Supervised Learning",
-      "abstract": "Self-supervised learning in computer vision aims to pre-train an image encoder using a large amount of unlabeled images or (image, text) pairs. The pre-trained image encoder can then be used as a feature extractor to build downstream classifiers for many downstream tasks with a small amount of or no labeled training data. In this work, we propose BadEncoder, the first backdoor attack to self-supervised learning. In particular, our BadEncoder injects backdoors into a pre-trained image encoder such that the downstream classifiers built based on the backdoored image encoder for different downstream tasks simultaneously inherit the backdoor behavior. We formulate our BadEncoder as an optimization problem and we propose a gradient descent based method to solve it, which produces a backdoored image encoder from a clean one. Our extensive empirical evaluation results on multiple datasets show that our BadEncoder achieves high attack success rates while preserving the accuracy of the downstream classifiers. We also show the effectiveness of BadEncoder using two publicly available, real-world image encoders, i.e., Google's image encoder pre-trained on ImageNet and OpenAI's Contrastive Language-Image Pre-training (CLIP) image encoder pre-trained on 400 million (image, text) pairs collected from the Internet. Moreover, we consider defenses including Neural Cleanse and MNTD (empirical defenses) as well as PatchGuard (a provable defense). Our results show that these defenses are insufficient to defend against BadEncoder, highlighting the needs for new defenses against our BadEncoder. Our code is publicly available at: https://github.com/jjy1994/BadEncoder.",
-      "year": 2022,
-      "venue": "IEEE S&P",
-      "authors": [
-        "Jinyuan Jia",
-        "Yupei Liu",
-        "Neil Zhenqiang Gong"
-      ],
-      "url": "https://arxiv.org/abs/2108.00352",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
       "paper_id": "https://openalex.org/W3106646114",
       "title": "Composite Backdoor Attack for Deep Neural Network by Mixing Existing Benign Features",
       "abstract": "With the prevalent use of Deep Neural Networks (DNNs) in many applications, security of these networks is of importance. Pre-trained DNNs may contain backdoors that are injected through poisoned training. These trojaned models perform well when regular inputs are provided, but misclassify to a target output label when the input is stamped with a unique pattern called trojan trigger. Recently various backdoor detection and mitigation systems for DNN based AI applications have been proposed. However, many of them are limited to trojan attacks that require a specific patch trigger. In this paper, we introduce composite attack, a more flexible and stealthy trojan attack that eludes backdoor scanners using trojan triggers composed from existing benign features of multiple labels. We show that a neural network with a composed backdoor can achieve accuracy comparable to its original version on benign data and misclassifies when the composite trigger is present in the input. Our experiments on 7 different tasks show that this attack poses a severe threat. We evaluate our attack with two state-of-the-art backdoor scanners. The results show none of the injected backdoors can be detected by either scanner. We also study in details why the scanners are not effective. In the end, we discuss the essence of our attack and propose possible defense.",
@@ -622,23 +594,6 @@
         "Xiangyu Zhang"
       ],
       "url": "https://openalex.org/W3106646114",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4308338624",
-      "title": "LoneNeuron: a Highly-Effective Feature-Domain Neural Trojan Using Invisible and Polymorphic Watermarks",
-      "abstract": "The wide adoption of deep neural networks (DNNs) in real-world applications raises increasing security concerns. Neural Trojans embedded in pre-trained neural networks are a harmful attack against the DNN model supply chain. They generate false outputs when certain stealthy triggers appear in the inputs. While data-poisoning attacks have been well studied in the literature, code-poisoning and model-poisoning backdoors only start to attract attention until recently. We present a novel model-poisoning neural Trojan, namely LoneNeuron, which responds to feature-domain patterns that transform into invisible, sample-specific, and polymorphic pixel-domain watermarks. With high attack specificity, LoneNeuron achieves a 100% attack success rate, while not affecting the main task performance. With LoneNeuron's unique watermark polymorphism property, the same feature-domain trigger is resolved to multiple watermarks in the pixel domain, which further improves watermark randomness, stealthiness, and resistance against Trojan detection. Extensive experiments show that LoneNeuron could escape state-of-the-art Trojan detectors. LoneNeuron~is also the first effective backdoor attack against vision transformers (ViTs).",
-      "year": 2022,
-      "venue": "Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security",
-      "authors": [
-        "Zeyan Liu",
-        "Fengjun Li",
-        "Zhu Li",
-        "Bo Luo"
-      ],
-      "url": "https://openalex.org/W4308338624",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
@@ -867,24 +822,6 @@
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "https://openalex.org/W4286904258",
-      "title": "Rowhammer-Based Trojan Injection: One Bit Flip Is Sufficient for Backdooring DNNs",
-      "abstract": "State-of-the-art deep neural networks (DNNs) have been proven to be vulnerable to adversarial manipulation and backdoor attacks. Backdoored models deviate from expected behavior on inputs with predefined triggers while retaining performance on clean data. Recent works focus on software simulation of backdoor injection during the inference phase by modifying network weights, which we find often unrealistic in practice due to restrictions in hardware. In contrast, in this work for the first time, we present an end-to-end backdoor injection attack realized on actual hardware on a classifier model using Rowhammer as the fault injection method. To this end, we first investigate the viability of backdoor injection attacks in real-life deployments of DNNs on hardware and address such practical issues in hardware implementation from a novel optimization perspective. We are motivated by the fact that vulnerable memory locations are very rare, device-specific, and sparsely distributed. Consequently, we propose a novel network training algorithm based on constrained optimization to achieve a realistic backdoor injection attack in hardware. By modifying parameters uniformly across the convolutional and fully-connected layers as well as optimizing the trigger pattern together, we achieve state-of-the-art attack performance with fewer bit flips. For instance, our method on a hardware-deployed ResNet-20 model trained on CIFAR-10 achieves over 89% test accuracy and 92% attack success rate by flipping only 10 out of 2.2 million bits.",
-      "year": 2021,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "M. Caner Tol",
-        "Saad Islam",
-        "Andrew Adiletta",
-        "Berk Sunar",
-        "Ziming Zhang"
-      ],
-      "url": "https://openalex.org/W4286904258",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
       "paper_id": "https://openalex.org/W4391725253",
       "title": "Revisiting Training-Inference Trigger Intensity in Backdoor Attacks",
       "abstract": "Contains fulltext : 310103.pdf (Publisher\u2019s version ) (Open Access)",
@@ -897,22 +834,6 @@
         "Aitor Urbieta"
       ],
       "url": "https://openalex.org/W4391725253",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4403752757",
-      "title": "Persistent Backdoor Attacks in Continual Learning",
-      "abstract": "Backdoor attacks pose a significant threat to neural networks, enabling adversaries to manipulate model outputs on specific inputs, often with devastating consequences, especially in critical applications. While backdoor attacks have been studied in various contexts, little attention has been given to their practicality and persistence in continual learning, particularly in understanding how the continual updates to model parameters, as new data distributions are learned and integrated, impact the effectiveness of these attacks over time. To address this gap, we introduce two persistent backdoor attacks-Blind Task Backdoor and Latent Task Backdoor-each leveraging minimal adversarial influence. Our blind task backdoor subtly alters the loss computation without direct control over the training process, while the latent task backdoor influences only a single task's training, with all other tasks trained benignly. We evaluate these attacks under various configurations, demonstrating their efficacy with static, dynamic, physical, and semantic triggers. Our results show that both attacks consistently achieve high success rates across different continual learning algorithms, while effectively evading state-of-the-art defenses, such as SentiNet and I-BAU.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Guo Zhen",
-        "Abhinav Kumar",
-        "Reza Tourani"
-      ],
-      "url": "https://openalex.org/W4403752757",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
@@ -954,50 +875,6 @@
         "Jialiang Lu"
       ],
       "url": "https://arxiv.org/abs/2105.00164",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2111.00197",
-      "title": "Backdoor Pre-trained Models Can Transfer to All",
-      "abstract": "Pre-trained general-purpose language models have been a dominating component in enabling real-world natural language processing (NLP) applications. However, a pre-trained model with backdoor can be a severe threat to the applications. Most existing backdoor attacks in NLP are conducted in the fine-tuning phase by introducing malicious triggers in the targeted class, thus relying greatly on the prior knowledge of the fine-tuning task. In this paper, we propose a new approach to map the inputs containing triggers directly to a predefined output representation of the pre-trained NLP models, e.g., a predefined output representation for the classification token in BERT, instead of a target label. It can thus introduce backdoor to a wide range of downstream tasks without any prior knowledge. Additionally, in light of the unique properties of triggers in NLP, we propose two new metrics to measure the performance of backdoor attacks in terms of both effectiveness and stealthiness. Our experiments with various types of triggers show that our method is widely applicable to different fine-tuning tasks (classification and named entity recognition) and to different models (such as BERT, XLNet, BART), which poses a severe threat. Furthermore, by collaborating with the popular online model repository Hugging Face, the threat brought by our method has been confirmed. Finally, we analyze the factors that may affect the attack performance and share insights on the causes of the success of our backdoor attack.",
-      "year": 2021,
-      "venue": "ACM CCS",
-      "authors": [
-        "Lujia Shen",
-        "Shouling Ji",
-        "Xuhong Zhang",
-        "Jinfeng Li",
-        "Jing Chen",
-        "Jie Shi",
-        "Chengfang Fang",
-        "Jianwei Yin",
-        "Ting Wang"
-      ],
-      "url": "https://arxiv.org/abs/2111.00197",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4385724403",
-      "title": "Hidden Trigger Backdoor Attack on NLP Models via Linguistic Style Manipulation",
-      "abstract": "Metaverse is expected to emerge as a new paradigm for the next-generation Internet, providing fully immersive and personalized experiences to socialize, work, and play in self-sustaining and hyper-spatio-temporal virtual world(s). The advancements in different technologies such as augmented reality, virtual reality, extended reality (XR), artificial intelligence (AI), and 5G/6G communication will be the key enablers behind the realization of AI-XR metaverse applications. While AI itself has many potential applications in the aforementioned technologies (e.g., avatar generation, network optimization), ensuring the security of AI in critical applications like AI-XR metaverse applications is profoundly crucial to avoid undesirable actions that could undermine users\u2019 privacy and safety, consequently putting their lives in danger. To this end, we attempt to analyze the security, privacy, and trustworthiness aspects associated with the use of various AI techniques in AI-XR metaverse applications. Specifically, we discuss numerous such challenges and present a taxonomy of potential solutions that could be leveraged to develop secure, private, robust, and trustworthy AI-XR applications. To highlight the real implications of AI-associated adversarial threats, we designed a metaverse-specific case study and analyzed it through the adversarial lens. Finally, we elaborate upon various open issues that require further research interest from the community.",
-      "year": 2023,
-      "venue": "ACM Computing Surveys",
-      "authors": [
-        "Adnan Qayyum",
-        "Muhammad Atif Butt",
-        "Hassan Ali",
-        "Muhammad Usman",
-        "Osama Halabi",
-        "Ala Al\u2010Fuqaha",
-        "Qammer H. Abbasi",
-        "Muhammad Ali Imran",
-        "Junaid Qadir"
-      ],
-      "url": "https://openalex.org/W4385724403",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
@@ -1228,6 +1105,22 @@
       "classification_confidence": "HIGH"
     },
     {
+      "paper_id": "2311.07389",
+      "title": "Transpose Attack: Stealing Datasets with Bidirectional Training",
+      "abstract": "Deep neural networks are normally executed in the forward direction. However, in this work, we identify a vulnerability that enables models to be trained in both directions and on different tasks. Adversaries can exploit this capability to hide rogue models within seemingly legitimate models. In addition, in this work we show that neural networks can be taught to systematically memorize and retrieve specific samples from datasets. Together, these findings expose a novel method in which adversaries can exfiltrate datasets from protected learning environments under the guise of legitimate models. We focus on the data exfiltration attack and show that modern architectures can be used to secretly exfiltrate tens of thousands of samples with high fidelity, high enough to compromise data privacy and even train new models. Moreover, to mitigate this threat we propose a novel approach for detecting infected models.",
+      "year": 2024,
+      "venue": "NDSS",
+      "authors": [
+        "Guy Amit",
+        "Mosh Levy",
+        "Yisroel Mirsky"
+      ],
+      "url": "https://arxiv.org/abs/2311.07389",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
       "paper_id": "2506.24033",
       "title": "Poisoning Attacks to Local Differential Privacy for Ranking Estimation",
       "abstract": "Local differential privacy (LDP) involves users perturbing their inputs to provide plausible deniability of their data. However, this also makes LDP vulnerable to poisoning attacks. In this paper, we first introduce novel poisoning attacks for ranking estimation. These attacks are intricate, as fake attackers do not merely adjust the frequency of target items. Instead, they leverage a limited number of fake users to precisely modify frequencies, effectively altering item rankings to maximize gains. To tackle this challenge, we introduce the concepts of attack cost and optimal attack item (set), and propose corresponding strategies for kRR, OUE, and OLH protocols. For kRR, we iteratively select optimal attack items and allocate suitable fake users. For OUE, we iteratively determine optimal attack item sets and consider the incremental changes in item frequencies across different sets. Regarding OLH, we develop a harmonic cost function based on the pre-image of a hash to select that supporting a larger number of effective attack items. Lastly, we present an attack strategy based on confidence levels to quantify the probability of a successful attack and the number of attack iterations more precisely. We demonstrate the effectiveness of our attacks through theoretical and empirical evidence, highlighting the necessity for defenses against these attacks. The source code and data have been made available at https://github.com/LDP-user/LDP-Ranking.git.",
@@ -1246,20 +1139,35 @@
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "2103.14991",
-      "title": "Graph Unlearning",
-      "abstract": "Machine unlearning is a process of removing the impact of some training data from the machine learning (ML) models upon receiving removal requests. While straightforward and legitimate, retraining the ML model from scratch incurs a high computational overhead. To address this issue, a number of approximate algorithms have been proposed in the domain of image and text data, among which SISA is the state-of-the-art solution. It randomly partitions the training set into multiple shards and trains a constituent model for each shard. However, directly applying SISA to the graph data can severely damage the graph structural information, and thereby the resulting ML model utility. In this paper, we propose GraphEraser, a novel machine unlearning framework tailored to graph data. Its contributions include two novel graph partition algorithms and a learning-based aggregation method. We conduct extensive experiments on five real-world graph datasets to illustrate the unlearning efficiency and model utility of GraphEraser. It achieves 2.06$\\times$ (small dataset) to 35.94$\\times$ (large dataset) unlearning time improvement. On the other hand, GraphEraser achieves up to $62.5\\%$ higher F1 score and our proposed learning-based aggregation method achieves up to $112\\%$ higher F1 score.\\footnote{Our code is available at \\url{https://github.com/MinChen00/Graph-Unlearning}.}",
+      "paper_id": "2009.03561",
+      "title": "Local and Central Differential Privacy for Robustness and Privacy in Federated Learning",
+      "abstract": "Federated Learning (FL) allows multiple participants to train machine learning models collaboratively by keeping their datasets local while only exchanging model updates. Alas, this is not necessarily free from privacy and robustness vulnerabilities, e.g., via membership, property, and backdoor attacks. This paper investigates whether and to what extent one can use differential Privacy (DP) to protect both privacy and robustness in FL. To this end, we present a first-of-its-kind evaluation of Local and Central Differential Privacy (LDP/CDP) techniques in FL, assessing their feasibility and effectiveness. Our experiments show that both DP variants do d fend against backdoor attacks, albeit with varying levels of protection-utility trade-offs, but anyway more effectively than other robustness defenses. DP also mitigates white-box membership inference attacks in FL, and our work is the first to show it empirically. Neither LDP nor CDP, however, defend against property inference. Overall, our work provides a comprehensive, re-usable measurement methodology to quantify the trade-offs between robustness/privacy and utility in differentially private FL.",
       "year": 2022,
-      "venue": "ACM CCS",
+      "venue": "NDSS",
       "authors": [
-        "Min Chen",
-        "Zhikun Zhang",
-        "Tianhao Wang",
-        "Michael Backes",
-        "Mathias Humbert",
-        "Yang Zhang"
+        "Mohammad Naseri",
+        "Jamie Hayes",
+        "Emiliano De Cristofaro"
       ],
-      "url": "https://arxiv.org/abs/2103.14991",
+      "url": "https://arxiv.org/abs/2009.03561",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
+      "paper_id": "2107.03311",
+      "title": "RoFL: Robustness of Secure Federated Learning",
+      "abstract": "Even though recent years have seen many attacks exposing severe vulnerabilities in Federated Learning (FL), a holistic understanding of what enables these attacks and how they can be mitigated effectively is still lacking. In this work, we demystify the inner workings of existing (targeted) attacks. We provide new insights into why these attacks are possible and why a definitive solution to FL robustness is challenging. We show that the need for ML algorithms to memorize tail data has significant implications for FL integrity. This phenomenon has largely been studied in the context of privacy; our analysis sheds light on its implications for ML integrity. We show that certain classes of severe attacks can be mitigated effectively by enforcing constraints such as norm bounds on clients' updates. We investigate how to efficiently incorporate these constraints into secure FL protocols in the single-server setting. Based on this, we propose RoFL, a new secure FL system that extends secure aggregation with privacy-preserving input validation. Specifically, RoFL can enforce constraints such as $L_2$ and $L_\\infty$ bounds on high-dimensional encrypted model updates.",
+      "year": 2023,
+      "venue": "IEEE S&P",
+      "authors": [
+        "Hidde Lycklama",
+        "Lukas Burkhalter",
+        "Alexander Viand",
+        "Nicolas K\u00fcchler",
+        "Anwar Hithnawi"
+      ],
+      "url": "https://arxiv.org/abs/2107.03311",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
@@ -1286,25 +1194,6 @@
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "2208.12348",
-      "title": "SNAP: Efficient Extraction of Private Properties with Poisoning",
-      "abstract": "Property inference attacks allow an adversary to extract global properties of the training dataset from a machine learning model. Such attacks have privacy implications for data owners sharing their datasets to train machine learning models. Several existing approaches for property inference attacks against deep neural networks have been proposed, but they all rely on the attacker training a large number of shadow models, which induces a large computational overhead.   In this paper, we consider the setting of property inference attacks in which the attacker can poison a subset of the training dataset and query the trained target model. Motivated by our theoretical analysis of model confidences under poisoning, we design an efficient property inference attack, SNAP, which obtains higher attack success and requires lower amounts of poisoning than the state-of-the-art poisoning-based property inference attack by Mahloujifar et al. For example, on the Census dataset, SNAP achieves 34% higher success rate than Mahloujifar et al. while being 56.5x faster. We also extend our attack to infer whether a certain property was present at all during training and estimate the exact proportion of a property of interest efficiently. We evaluate our attack on several properties of varying proportions from four datasets and demonstrate SNAP's generality and effectiveness. An open-source implementation of SNAP can be found at https://github.com/johnmath/snap-sp23.",
-      "year": 2023,
-      "venue": "IEEE S&P",
-      "authors": [
-        "Harsh Chaudhari",
-        "John Abascal",
-        "Alina Oprea",
-        "Matthew Jagielski",
-        "Florian Tram\u00e8r",
-        "Jonathan Ullman"
-      ],
-      "url": "https://arxiv.org/abs/2208.12348",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
       "paper_id": "https://openalex.org/W4391724751",
       "title": "ActiveDaemon: Unconscious DNN Dormancy and Waking Up via User-specific Invisible Token",
       "abstract": "Well-trained deep neural network (DNN) models can be treated as commodities for commercial transactions and generate significant revenues, raising the urgent need for intellectual property (IP) protection against illegitimate reproducing.Emerging studies on IP protection often aim at inserting watermarks into DNNs, allowing owners to passively verify the ownership of target models after counterfeit models appear and commercial benefits are infringed, while active authentication against unauthorized queries of DNN-based applications is still neglected.In this paper, we propose a novel approach to protect model intellectual property, called ActiveDaemon, which incorporates a built-in access control function in DNNs to safeguard against commercial piracy.Specifically, our approach enables DNNs to predict correct outputs only for authorized users with user-specific tokens while producing poor accuracy for unauthorized users.In ActiveDaemon, the user-specific tokens are generated by a specially designed U-Net style encoder-decoder network, which can map strings and input images into numerous noise images to address identity management with large-scale user capacity.Compared to existing studies, these user-specific tokens are invisible, dynamic and more perceptually concealed, enhancing the stealthiness and reliability of model IP protection.To automatically wake up the model accuracy, we utilize the data poisoning-based training technique to unconsciously embed the ActiveDaemon into the neuron's function.We conduct experiments to compare the protection performance of ActiveDaemon with four state-of-the-art approaches over four datasets.The experimental results show that ActiveDaemon can reduce the accuracy of unauthorized queries by as much as 81% with less than a 1.4% decrease in that of authorized queries.Meanwhile, our approach can also reduce the LPIPS scores of the authorized tokens to 0.0027 on CIFAR10 and 0.0368 on ImageNet 1 .",
@@ -1323,6 +1212,25 @@
       "classification_confidence": "HIGH"
     },
     {
+      "paper_id": "https://openalex.org/W3036952806",
+      "title": "Fawkes: Protecting Privacy against Unauthorized Deep Learning Models",
+      "abstract": "Today's proliferation of powerful facial recognition systems poses a real threat to personal privacy. As Clearview.ai demonstrated, anyone can canvas the Internet for data and train highly accurate facial recognition models of individuals without their knowledge. We need tools to protect ourselves from potential misuses of unauthorized facial recognition systems. Unfortunately, no practical or effective solutions exist. In this paper, we propose Fawkes, a system that helps individuals inoculate their images against unauthorized facial recognition models. Fawkes achieves this by helping users add imperceptible pixel-level changes (we call them \"cloaks\") to their own photos before releasing them. When used to train facial recognition models, these \"cloaked\" images produce functional models that consistently cause normal images of the user to be misidentified. We experimentally demonstrate that Fawkes provides 95+% protection against user recognition regardless of how trackers train their models. Even when clean, uncloaked images are \"leaked\" to the tracker and used for training, Fawkes can still maintain an 80+% protection success rate. We achieve 100% success in experiments against today's state-of-the-art facial recognition services. Finally, we show that Fawkes is robust against a variety of countermeasures that try to detect or disrupt image cloaks.",
+      "year": 2020,
+      "venue": "arXiv (Cornell University)",
+      "authors": [
+        "Shawn Shan",
+        "Emily Wenger",
+        "Jiayun Zhang",
+        "Huiying Li",
+        "Hai-Tao Zheng",
+        "Ben Y. Zhao"
+      ],
+      "url": "https://openalex.org/W3036952806",
+      "pdf_url": null,
+      "cited_by_count": null,
+      "classification_confidence": "HIGH"
+    },
+    {
       "paper_id": "2406.19466",
       "title": "Data Poisoning Attacks to Locally Differentially Private Frequent Itemset Mining Protocols",
       "abstract": "Local differential privacy (LDP) provides a way for an untrusted data collector to aggregate users' data without violating their privacy. Various privacy-preserving data analysis tasks have been studied under the protection of LDP, such as frequency estimation, frequent itemset mining, and machine learning. Despite its privacy-preserving properties, recent research has demonstrated the vulnerability of certain LDP protocols to data poisoning attacks. However, existing data poisoning attacks are focused on basic statistics under LDP, such as frequency estimation and mean/variance estimation. As an important data analysis task, the security of LDP frequent itemset mining has yet to be thoroughly examined. In this paper, we aim to address this issue by presenting novel and practical data poisoning attacks against LDP frequent itemset mining protocols. By introducing a unified attack framework with composable attack operations, our data poisoning attack can successfully manipulate the state-of-the-art LDP frequent itemset mining protocols and has the potential to be adapted to other protocols with similar structures. We conduct extensive experiments on three datasets to compare the proposed attack with four baseline attacks. The results demonstrate the severity of the threat and the effectiveness of the proposed attack.",
@@ -1335,1161 +1243,6 @@
         "Sheng Zhong"
       ],
       "url": "https://arxiv.org/abs/2406.19466",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4386066154",
-      "title": "Detecting Backdoors in Pre-trained Encoders",
-      "abstract": "Self-supervised learning in computer vision trains on unlabeled data, such as images or (image, text) pairs, to obtain an image encoder that learns high-quality embeddings for input data. Emerging backdoor attacks towards encoders expose crucial vulnerabilities of self-supervised learning, since downstream classifiers (even further trained on clean data) may inherit backdoor behaviors from en-coders. Existing backdoor detection methods mainly focus on supervised learning settings and cannot handle pre-trained encoders especially when input labels are not available. In this paper, we propose DECREE, the first back-door detection approach for pre-trained encoders, requiring neither classifier headers nor input labels. We evaluate DECREE on over 400 encoders trojaned under 3 paradigms. We show the effectiveness of our method on image encoders pre-trained on ImageNet and OpenAI's CLIP 400 million image-text pairs. Our method consistently has a high detection accuracy even if we have only limited or no access to the pre-training dataset. Code is available at https://github.com/GiantSeaweed/DECREE.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Shiwei Feng",
-        "Guanhong Tao",
-        "Siyuan Cheng",
-        "Guangyu Shen",
-        "Xiangzhe Xu",
-        "Yingqi Liu",
-        "Kaiyuan Zhang",
-        "Shiqing Ma",
-        "Xiangyu Zhang"
-      ],
-      "url": "https://openalex.org/W4386066154",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4386066003",
-      "title": "You Are Catching My Attention: Are Vision Transformers Bad Learners under Backdoor Attacks?",
-      "abstract": "Vision Transformers (ViTs), which made a splash in the field of computer vision (CV), have shaken the dominance of convolutional neural networks (CNNs). However, in the process of industrializing ViTs, backdoor attacks have brought severe challenges to security. The success of ViTs benefits from the self-attention mechanism. However, compared with CNNs, we find that this mechanism of capturing global information within patches makes ViTs more sensitive to patch-wise triggers. Under such observations, we delicately design a novel backdoor attack framework for ViTs, dubbed BadViT, which utilizes a universal patch-wise trigger to catch the model's attention from patches beneficial for classification to those with triggers, thereby manipulating the mechanism on which ViTs survive to confuse itself. Furthermore, we propose invisible variants of BadViT to increase the stealth of the attack by limiting the strength of the trigger perturbation. Through a large number of experiments, it is proved that BadViT is an efficient backdoor attack method against ViTs, which is less dependent on the number of poisons, with satisfactory convergence, and is transferable for downstream tasks. Furthermore, the risks inside of ViTs to backdoor attacks are also explored from the perspective of existing advanced defense schemes.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Zenghui Yuan",
-        "Pan Zhou",
-        "Kai Zou",
-        "Yu Cheng"
-      ],
-      "url": "https://openalex.org/W4386066003",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4226550712",
-      "title": "ATTEQ-NN: Attention-based QoE-aware Evasive Backdoor Attacks",
-      "abstract": "Deep neural networks have achieved remarkable success on a variety of mission-critical tasks.However, recent studies show that deep neural networks are vulnerable to backdoor attacks, where the attacker releases backdoored models that behave normally on benign samples but misclassify any trigger-imposed samples to a target label.Unlike adversarial examples, backdoor attacks manipulate both the inputs and the model, perturbing samples with the trigger and injecting backdoors into the model.In this paper, we propose a novel attention-based evasive backdoor attack, dubbed ATTEQ-NN.Different from existing works that arbitrarily set the trigger mask, we carefully design an attentionbased trigger mask determination framework, which places the trigger at the crucial region with the most significant influence on the prediction results.To make the trigger-imposed samples appear more natural and imperceptible to human inspectors, we introduce a Quality-of-Experience (QoE) term into the loss function of trigger generation and carefully adjust the transparency of the trigger.During the process of iteratively optimizing the trigger generation and the backdoor injection components, we propose an alternating retraining strategy, which is shown to be effective in improving the clean data accuracy and evading some model-based defense approaches.We evaluate ATTEQ-NN with extensive experiments on VGG-Flower, CIFAR-10, GTSRB, CIFAR-100, and ImageNette datasets.The results show that ATTEQ-NN can increase the attack success rate by as much as 82% over baselines when the poison ratio is low while achieving a high QoE of the backdoored samples.We demonstrate that ATTEQ-NN reaches an attack success rate of more than 37.78% in the physical world under different lighting conditions and shooting angles.ATTEQ-NN preserves an attack success rate of more than 92.5% even if the original backdoored model is fine-tuned with clean data.It is shown that ATTEQ-NN is also effective in transfer learning scenarios.Our user studies show that the backdoored samples generated by ATTEQ-NN are indiscernible under visual inspections.ATTEQ-NN is shown to be evasive to state-of-the-art defense methods, including model pruning, NAD, STRIP, NC, and MNTD.We will open-source our codes upon publication.",
-      "year": 2022,
-      "venue": null,
-      "authors": [
-        "Xueluan Gong",
-        "Yanjiao Chen",
-        "Jianshuo Dong",
-        "Qian Wang"
-      ],
-      "url": "https://openalex.org/W4226550712",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4324007922",
-      "title": "BEAGLE: Forensics of Deep Learning Backdoor Attack for Better Defense",
-      "abstract": "Deep Learning backdoor attacks have a threat model similar to traditional cyber attacks.Attack forensics, a critical counter-measure for traditional cyber attacks, is hence of importance for defending model backdoor attacks.In this paper, we propose a novel model backdoor forensics technique.Given a few attack samples such as inputs with backdoor triggers, which may represent different types of backdoors, our technique automatically decomposes them to clean inputs and the corresponding triggers.It then clusters the triggers based on their properties to allow automatic attack categorization and summarization.Backdoor scanners can then be automatically synthesized to find other instances of the same type of backdoor in other models.Our evaluation on 2,532 pre-trained models, 10 popular attacks, and comparison with 9 baselines show that our technique is highly effective.The decomposed clean inputs and triggers closely resemble the ground truth.The synthesized scanners substantially outperform the vanilla versions of existing scanners that can hardly generalize to different kinds of attacks.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Siyuan Cheng",
-        "Guanhong Tao",
-        "Yingqi Liu",
-        "Shengwei An",
-        "Xiangzhe Xu",
-        "Shiwei Feng",
-        "Guangyu Shen",
-        "Kaiyuan Zhang",
-        "Qiuling Xu",
-        "Shiqing Ma",
-        "Xiangyu Zhang"
-      ],
-      "url": "https://openalex.org/W4324007922",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4386072179",
-      "title": "MEDIC: Remove Model Backdoors via Importance Driven Cloning",
-      "abstract": "We develop a novel method to remove injected backdoors in deep learning models. It works by cloning the benign behaviors of a trojaned model to a new model of the same structure. It trains the clone model from scratch on a very small subset of samples and aims to minimize a cloning loss that denotes the differences between the activations of important neurons across the two models. The set of important neurons varies for each input, depending on their magnitude of activations and their impact on the classification result. We theoretically show our method can better recover benign functions of the backdoor model. Meanwhile, we prove our method can be more effective in removing back-doors compared with fine-tuning. Our experiments show that our technique can effectively remove nine different types of backdoors with minor benign accuracy degradation, outper-forming the state-of-the-art backdoor removal techniques that are based on fine-tuning, knowledge distillation, and neuron pruning. <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup>",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Qiuling Xu",
-        "Guanhong Tao",
-        "Jean Honorio",
-        "Yingqi Liu",
-        "Shengwei An",
-        "Guangyu Shen",
-        "Siyuan Cheng",
-        "Xiangyu Zhang"
-      ],
-      "url": "https://openalex.org/W4386072179",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4396815672",
-      "title": "Backdoor Attack on Unpaired Medical Image-Text Foundation Models: A Pilot Study on MedCLIP",
-      "abstract": "In recent years, foundation models (FMs) have contributed heavily to the advancements in the deep learning domain. By extracting intricate patterns from vast datasets, these models consistently achieve state-of-the-art results across a spectrum of downstream tasks, all without necessitating extensive computational resources [1]. Notably, MedCLIP [2], a vision-language contrastive learning-based medical FM, has been designed using unpaired image-text training. While the medical domain has often adopted unpaired training to amplify data [3], the exploration of potential security concerns linked to this approach hasn't kept pace with its practical usage. Notably, the augmentation capabilities inherent in unpaired training also indicate that minor label discrepancies can result in significant model deviations. In this study, we frame this label discrepancy as a backdoor attack problem. We further analyze its impact on medical FMs throughout the FM supply chain. Our evaluation primarily revolves around MedCLIP, emblematic of medical FM employing the unpaired strategy. We begin with an exploration of vulnerabilities in MedCLIP stemming from unpaired image-text matching, termed BadMatch. BadMatch is achieved using a modest set of wrongly labeled data. Subsequently, we disrupt MedCLIP's contrastive learning through BadDist-assisted BadMatch by introducing a Bad-Distance between the embeddings of clean and poisoned data. Intriguingly, when BadMatch and BadDist are combined, a slight 0.05 percent of misaligned image-text data can yield a staggering 99 percent attack success rate, all the while maintaining MedCLIP's efficacy on untainted data. Additionally, combined with BadMatch and BadDist, the attacking pipeline consistently fends off backdoor assaults across diverse model designs, datasets, and triggers. Also, our findings reveal that current defense strategies are insufficient in detecting these latent threats in medical FMs' supply chains.",
-      "year": 2024,
-      "venue": null,
-      "authors": [
-        "Ruinan Jin",
-        "Chun-Yin Huang",
-        "Chenyu You",
-        "Xiaoxiao Li"
-      ],
-      "url": "https://openalex.org/W4396815672",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4308236999",
-      "title": "CRAB: Certified Patch Robustness Against Poisoning-Based Backdoor Attacks",
-      "abstract": "Backdoor attacks have been proved to be seriously threatening to deep neural networks. Many defending methods against backdoor attack have been proposed and reduced attack success rate significantly. However, most existing defending methods are empirical, and might be later broken by stronger attack methods. To avoid such a cat-and-mouse game, We proposed CRAB, a defense that can guarantee the robustness of an image classifier against poisoning-based backdoor attack with triggers bounded in a contiguous region. We analyze two ways of adding triggers: fixed-region and randomized-region. For fixed-region setting, we train a set of models on benign dataset for different image ablation positions and give robustness guarantee to both training and testing datasets. Whilst for random position triggers, we train a universal model on dataset with triggers, and give robustness guarantee to testing datasets. Our excellent experimental results demonstrate that CRAB exhibits strong robustness against patched backdoor attack, while maintaining comparable high clean accuracies.",
-      "year": 2022,
-      "venue": "2022 IEEE International Conference on Image Processing (ICIP)",
-      "authors": [
-        "Huxiao Ji",
-        "Jie Li",
-        "Chentao Wu"
-      ],
-      "url": "https://openalex.org/W4308236999",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2748789698",
-      "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain",
-      "abstract": "Deep learning-based techniques have achieved state-of-the-art performance on a wide variety of recognition and classification tasks. However, these networks are typically computationally expensive to train, requiring weeks of computation on many GPUs; as a result, many users outsource the training procedure to the cloud or rely on pre-trained models that are then fine-tuned for a specific task. In this paper we show that outsourced training introduces new security risks: an adversary can create a maliciously trained network (a backdoored neural network, or a \\emph{BadNet}) that has state-of-the-art performance on the user's training and validation samples, but behaves badly on specific attacker-chosen inputs. We first explore the properties of BadNets in a toy example, by creating a backdoored handwritten digit classifier. Next, we demonstrate backdoors in a more realistic scenario by creating a U.S. street sign classifier that identifies stop signs as speed limits when a special sticker is added to the stop sign; we then show in addition that the backdoor in our US street sign detector can persist even if the network is later retrained for another task and cause a drop in accuracy of {25}\\% on average when the backdoor trigger is present. These results demonstrate that backdoors in neural networks are both powerful and---because the behavior of neural networks is difficult to explicate---stealthy. This work provides motivation for further research into techniques for verifying and inspecting neural networks, just as we have developed tools for verifying and debugging software.",
-      "year": 2017,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Tianyu Gu",
-        "Brendan Dolan-Gavitt",
-        "Siddharth Garg"
-      ],
-      "url": "https://openalex.org/W2748789698",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3042368254",
-      "title": "Backdoor Learning: A Survey",
-      "abstract": "Backdoor attack intends to embed hidden backdoors into deep neural networks (DNNs), so that the attacked models perform well on benign samples, whereas their predictions will be maliciously changed if the hidden backdoor is activated by attacker-specified triggers. This threat could happen when the training process is not fully controlled, such as training on third-party datasets or adopting third-party models, which poses a new and realistic threat. Although backdoor learning is an emerging and rapidly growing research area, there is still no comprehensive and timely review of it. In this article, we present the first comprehensive survey of this realm. We summarize and categorize existing backdoor attacks and defenses based on their characteristics, and provide a unified framework for analyzing poisoning-based backdoor attacks. Besides, we also analyze the relation between backdoor attacks and relevant fields (i.e., adversarial attacks and data poisoning), and summarize widely adopted benchmark datasets. Finally, we briefly outline certain future research directions relying upon reviewed works. A curated list of backdoor-related resources is also available at https://github.com/THUYimingLi/backdoor-learning-resources.",
-      "year": 2022,
-      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
-      "authors": [
-        "Yiming Li",
-        "Yong Jiang",
-        "Zhifeng Li",
-        "Shu\u2010Tao Xia"
-      ],
-      "url": "https://openalex.org/W3042368254",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3166022359",
-      "title": "Defense-Resistant Backdoor Attacks Against Deep Neural Networks in Outsourced Cloud Environment",
-      "abstract": "The time and monetary costs of training sophisticated deep neural networks are exorbitant, which motivates resource-limited users to outsource the training process to the cloud. Concerning that an untrustworthy cloud service provider may inject backdoors to the returned model, the user can leverage state-of-the-art defense strategies to examine the model. In this paper, we aim to develop robust backdoor attacks (named RobNet) that can evade existing defense strategies from the standpoint of malicious cloud providers. The key rationale is to diversify the triggers and strengthen the model structure so that the backdoor is hard to be detected or removed. To attain this objective, we refine the trigger generation algorithm by selecting the neuron(s) with large weights and activations and then computing the triggers via gradient descent to maximize the value of the selected neuron(s). In stark contrast to existing works that fix the trigger location, we design a multi-location patching method to make the model less sensitive to mild displacement of triggers in real attacks. Furthermore, we extend the attack space by proposing multi-trigger backdoor attacks that can misclassify inputs with different triggers into the same or different target label(s). We evaluate the performance of RobNet on MNIST, GTSRB, and CIFAR-10 datasets, against four representative defense strategies Pruning, NeuralCleanse, Strip, and ABS. The comparison with two state-of-the-art baselines BadNets and Hidden Backdoors demonstrates that RobNet achieves higher attack success rate and is more resistant to potential defenses. \u00a9 1983-2012 IEEE.",
-      "year": 2021,
-      "venue": "IEEE Journal on Selected Areas in Communications",
-      "authors": [
-        "Xueluan Gong",
-        "Yanjiao Chen",
-        "Qian Wang",
-        "Huayang Huang",
-        "Lingshuo Meng",
-        "Chao Shen",
-        "Qian Zhang"
-      ],
-      "url": "https://openalex.org/W3166022359",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3192036897",
-      "title": "BACKDOORL: Backdoor Attack against Competitive Reinforcement Learning",
-      "abstract": "Recent research has confirmed the feasibility of backdoor attacks in deep reinforcement learning (RL) systems. However, the existing attacks require the ability to arbitrarily modify an agent's observation, constraining the application scope to simple RL systems such as Atari games. In this paper, we migrate backdoor attacks to more complex RL systems involving multiple agents and explore the possibility of triggering the backdoor without directly manipulating the agent's observation. As a proof of concept, we demonstrate that an adversary agent can trigger the backdoor of the victim agent with its own action in two-player competitive RL systems. We prototype and evaluate BackdooRL in four competitive environments. The results show that when the backdoor is activated, the winning rate of the victim drops by 17% to 37% compared to when not activated. The videos are hosted at https://github.com/wanglun1996/multi_agent_rl_backdoor_videos.",
-      "year": 2021,
-      "venue": null,
-      "authors": [
-        "Lun Wang",
-        "Zaynah Javed",
-        "Xian Wu",
-        "Wenbo Guo",
-        "Xinyu Xing",
-        "Dawn Song"
-      ],
-      "url": "https://openalex.org/W3192036897",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2774423163",
-      "title": "Deep Learning Backdoors",
-      "abstract": "Deep learning models have achieved high performance on many tasks, and thus have been applied to many security-critical scenarios. For example, deep learning-based face recognition systems have been used to authenticate users to access many security-sensitive applications like payment apps. Such usages of deep learning systems provide the adversaries with sufficient incentives to perform attacks against these systems for their adversarial purposes. In this work, we consider a new type of attacks, called backdoor attacks, where the attacker's goal is to create a backdoor into a learning-based authentication system, so that he can easily circumvent the system by leveraging the backdoor. Specifically, the adversary aims at creating backdoor instances, so that the victim learning system will be misled to classify the backdoor instances as a target label specified by the adversary. In particular, we study backdoor poisoning attacks, which achieve backdoor attacks using poisoning strategies. Different from all existing work, our studied poisoning strategies can apply under a very weak threat model: (1) the adversary has no knowledge of the model and the training set used by the victim system; (2) the attacker is allowed to inject only a small amount of poisoning samples; (3) the backdoor key is hard to notice even by human beings to achieve stealthiness. We conduct evaluation to demonstrate that a backdoor adversary can inject only around 50 poisoning samples, while achieving an attack success rate of above 90%. We are also the first work to show that a data poisoning attack can create physically implementable backdoors without touching the training process. Our work demonstrates that backdoor poisoning attacks pose real threats to a learning system, and thus highlights the importance of further investigation and proposing defense strategies against them.",
-      "year": 2017,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Xinyun Chen",
-        "Chang Liu",
-        "Bo Li",
-        "Kimberly Lu",
-        "Dawn Song"
-      ],
-      "url": "https://openalex.org/W2774423163",
-      "pdf_url": "https://arxiv.org/pdf/1712.05526",
-      "cited_by_count": 1031,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4367663504",
-      "title": "Quantization Backdoors to Deep Learning Commercial Frameworks",
-      "abstract": "Due to their low latency and high privacy preservation, there is currently a burgeoning demand for deploying deep learning (DL) models on ubiquitous edge Internet of Things (IoT) devices. However, DL models are often large in size and require large-scale computation, which prevents them from being placed directly onto IoT devices, where resources are constrained, and 32-bit floating-point (float-32) operations are unavailable. Commercial framework (i.e., a set of toolkits) empowered model quantization is a pragmatic solution that enables DL deployment on mobile devices and embedded systems by effortlessly post-quantizing a large high-precision model (e.g., float-32) into a small low-precision model (e.g., int-8) while retaining the model inference accuracy. However, their usability might be threatened by security vulnerabilities. This work reveals that standard quantization toolkits can be abused to activate a backdoor. We demonstrate that a full-precision backdoored model which does not have any backdoor effect in the presence of a trigger&amp;#x2014;as the backdoor is dormant&amp;#x2014;can be activated by (i) TensorFlow-Lite (TFLite) quantization, the only &lt;italic&gt;product-ready&lt;/italic&gt; quantization framework to date, and (ii) the &lt;italic&gt;beta released&lt;/italic&gt; PyTorch Mobile framework. In our experiments, we employ three popular model architectures (VGG16, ResNet18, and ResNet50), and train each across three popular datasets: MNIST, CIFAR10 and GTSRB. We ascertain that all trained float-32 backdoored models exhibit no backdoor effect &lt;italic&gt;even in the presence of trigger inputs&lt;/italic&gt;. Particularly, four influential backdoor defenses are evaluated, and they fail to identify a backdoor in the float-32 models. When each of the float-32 models is converted into an int-8 format model through the standard TFLite or PyTorch Mobile framework&amp;#x0027;s post-training quantization, the backdoor is activated in the quantized model, which shows a stable attack success rate close to 100&amp;#x0025; upon inputs with the trigger, while it usually behaves upon non-trigger inputs. This work highlights that a stealthy security threat occurs when an end-user utilizes the on-device post-training model quantization frameworks, informing security researchers of a cross-platform overhaul of DL models post-quantization even if these models pass security-aware front-end backdoor inspections. Significantly, we have identified Gaussian noise injection into the malicious full-precision model as an easy-to-use preventative defense against the PQ backdoor. The attack source code is released at &lt;uri&gt;https://github.com/quantization-backdoor&lt;/uri&gt;.",
-      "year": 2023,
-      "venue": "IEEE Transactions on Dependable and Secure Computing",
-      "authors": [
-        "Hua Ma",
-        "Huming Qiu",
-        "Yansong Gao",
-        "Zhi Zhang",
-        "Alsharif Abuadbba",
-        "Minhui Xue",
-        "Anmin Fu",
-        "Jiliang Zhang",
-        "Said F. Al-Sarawi",
-        "Derek Abbott"
-      ],
-      "url": "https://openalex.org/W4367663504",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4394896797",
-      "title": "NeuralSanitizer: Detecting Backdoors in Neural Networks",
-      "abstract": "Deep neural networks (DNNs) have been pervasively used in many areas, e.g., computer vision, speech recognition, natural language processing, etc. However, recent works show that they are vulnerable to backdoor/Trojan attacks, severely restricting their usage in various scenarios. In this paper, we propose <italic xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">NeuralSanitizer</i> , a novel approach to detect and remove backdoors in DNNs, capable of capturing various triggers with better accuracy and higher efficiency. In particular, we identify two fundamental properties of triggers, i.e., their effectiveness in the backdoored model and ineffectiveness in other clean models, and design a novel objective function to reconstruct triggers based on them. Then we present a new approach that leverages transferability to identify adversarial patches that could be generated during trigger reconstruction, thus detecting backdoors more accurately. We evaluate NeuralSanitizer on real-world backdoored DNNs and achieve 2.1% FNR and 0.9% FPR on average, significantly outperforming the state-of-the-art works by 1~14 times. In addition, NeuralSanitizer can reconstruct triggers up to 25% of the size of the original inputs on average, compared to only 6~10% by existing works. Finally, NeuralSanitizer is also 1~25 times faster than existing works.",
-      "year": 2024,
-      "venue": "IEEE Transactions on Information Forensics and Security",
-      "authors": [
-        "Hong Zhu",
-        "Yue Zhao",
-        "Shengzhi Zhang",
-        "Kai Chen"
-      ],
-      "url": "https://openalex.org/W4394896797",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2956034423",
-      "title": "Universal Litmus Patterns: Revealing Backdoor Attacks in CNNs",
-      "abstract": "The unprecedented success of deep neural networks in many applications has made these networks a prime target for adversarial exploitation. In this paper, we introduce a benchmark technique for detecting backdoor attacks (aka Trojan attacks) on deep convolutional neural networks (CNNs). We introduce the concept of Universal Litmus Patterns (ULPs), which enable one to reveal backdoor attacks by feeding these universal patterns to the network and analyzing the output (i.e., classifying the network as `clean' or `corrupted'). This detection is fast because it requires only a few forward passes through a CNN. We demonstrate the effectiveness of ULPs for detecting backdoor attacks on thousands of networks with different architectures trained on four benchmark datasets, namely the German Traffic Sign Recognition Benchmark (GTSRB), MNIST, CIFAR10, and Tiny-ImageNet. The codes and train/test models for this paper can be found here https://umbcvision.github.io/Universal-Litmus-Patterns/.",
-      "year": 2020,
-      "venue": null,
-      "authors": [
-        "Soheil Kolouri",
-        "Aniruddha Saha",
-        "Hamed Pirsiavash",
-        "H. Hoffmann"
-      ],
-      "url": "https://openalex.org/W2956034423",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2978514398",
-      "title": "Hidden Trigger Backdoor Attacks",
-      "abstract": "With the success of deep learning algorithms in various domains, studying adversarial attacks to secure deep models in real world applications has become an important research topic. Backdoor attacks are a form of adversarial attacks on deep networks where the attacker provides poisoned data to the victim to train the model with, and then activates the attack by showing a specific small trigger pattern at the test time. Most state-of-the-art backdoor attacks either provide mislabeled poisoning data that is possible to identify by visual inspection, reveal the trigger in the poisoned data, or use noise to hide the trigger. We propose a novel form of backdoor attack where poisoned data look natural with correct labels and also more importantly, the attacker hides the trigger in the poisoned data and keeps the trigger secret until the test time. We perform an extensive study on various image classification settings and show that our attack can fool the model by pasting the trigger at random locations on unseen images although the model performs well on clean data. We also show that our proposed attack cannot be easily defended using a state-of-the-art defense algorithm for backdoor attacks.",
-      "year": 2020,
-      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
-      "authors": [
-        "Aniruddha Saha",
-        "Akshayvarun Subramanya",
-        "Hamed Pirsiavash"
-      ],
-      "url": "https://openalex.org/W2978514398",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4395056508",
-      "title": "Towards Unified Robustness Against Both Backdoor and Adversarial Attacks",
-      "abstract": "Deep Neural Networks (DNNs) are known to be vulnerable to both backdoor and adversarial attacks. In the literature, these two types of attacks are commonly treated as distinct robustness problems and solved separately, since they belong to training-time and inference-time attacks respectively. However, this paper revealed that there is an intriguing connection between them: (1) planting a backdoor into a model will significantly affect the model's adversarial examples and (2) for an infected model, its adversarial examples have similar features as the triggered images. Based on these observations, a novel Progressive Unified Defense (PUD) algorithm is proposed to defend against backdoor and adversarial attacks simultaneously. Specifically, our PUD has a progressive model purification scheme to jointly erase backdoors and enhance the model's adversarial robustness. At the early stage, the adversarial examples of infected models are utilized to erase backdoors. With the backdoor gradually erased, our model purification can naturally turn into a stage to boost the model's robustness against adversarial attacks. Besides, our PUD algorithm can effectively identify poisoned images, which allows the initial extra dataset not to be completely clean. Extensive experimental results show that, our discovered connection between backdoor and adversarial attacks is ubiquitous, no matter what type of backdoor attack. The proposed PUD outperforms the state-of-the-art backdoor defense, including the model repairing-based and data filtering-based methods. Besides, it also has the ability to compete with the most advanced adversarial defense methods. The code is available here.",
-      "year": 2024,
-      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
-      "authors": [
-        "Zhenxing Niu",
-        "Yuyao Sun",
-        "Qiguang Miao",
-        "Rong Jin",
-        "Gang Hua"
-      ],
-      "url": "https://openalex.org/W4395056508",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3044223678",
-      "title": "Backdoor Attacks and Countermeasures on Deep Learning: A Comprehensive Review",
-      "abstract": "This work provides the community with a timely comprehensive review of backdoor attacks and countermeasures on deep learning. According to the attacker's capability and affected stage of the machine learning pipeline, the attack surfaces are recognized to be wide and then formalized into six categorizations: code poisoning, outsourcing, pretrained, data collection, collaborative learning and post-deployment. Accordingly, attacks under each categorization are combed. The countermeasures are categorized into four general classes: blind backdoor removal, offline backdoor inspection, online backdoor inspection, and post backdoor removal. Accordingly, we review countermeasures, and compare and analyze their advantages and disadvantages. We have also reviewed the flip side of backdoor attacks, which are explored for i) protecting intellectual property of deep learning models, ii) acting as a honeypot to catch adversarial example attacks, and iii) verifying data deletion requested by the data contributor.Overall, the research on defense is far behind the attack, and there is no single defense that can prevent all types of backdoor attacks. In some cases, an attacker can intelligently bypass existing defenses with an adaptive attack. Drawing the insights from the systematic review, we also present key areas for future research on the backdoor, such as empirical security evaluations from physical trigger attacks, and in particular, more efficient and practical countermeasures are solicited.",
-      "year": 2020,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Yansong Gao",
-        "Bao Gia Doan",
-        "Zhi Zhang",
-        "Siqi Ma",
-        "Jiliang Zhang",
-        "Anmin Fu",
-        "\u202aSurya Nepal\u202c",
-        "Hyoungshick Kim"
-      ],
-      "url": "https://openalex.org/W3044223678",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3043789969",
-      "title": "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization",
-      "abstract": "Deep neural networks (DNNs) have been proven vulnerable to backdoor attacks, where hidden features (patterns) trained to a normal model, which is only activated by some specific input (called triggers), trick the model into producing unexpected behavior. In this paper, we create covert and scattered triggers for backdoor attacks, invisible backdoors, where triggers can fool both DNN models and human inspection. We apply our invisible backdoors through two state-of-the-art methods of embedding triggers for backdoor attacks. The first approach on Badnets embeds the trigger into DNNs through steganography. The second approach of a trojan attack uses two types of additional regularization terms to generate the triggers with irregular shape and size. We use the Attack Success Rate and Functionality to measure the performance of our attacks. We introduce two novel definitions of invisibility for human perception; one is conceptualized by the Perceptual Adversarial Similarity Score (PASS) and the other is Learned Perceptual Image Patch Similarity (LPIPS). We show that the proposed invisible backdoors can be fairly effective across various DNN models as well as four datasets MNIST, CIFAR-10, CIFAR-100, and GTSRB, by measuring their attack success rates for the adversary, functionality for the normal users, and invisibility scores for the administrators. We finally argue that the proposed invisible backdoor attacks can effectively thwart the state-of-the-art trojan backdoor detection approaches, such as Neural Cleanse and TABOR.",
-      "year": 2019,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Shaofeng Li",
-        "Minhui Xue",
-        "Benjamin Zi Hao Zhao",
-        "Haojin Zhu",
-        "Xinpeng Zhang"
-      ],
-      "url": "https://openalex.org/W3043789969",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3172767235",
-      "title": "Handcrafted Backdoors in Deep Neural Networks",
-      "abstract": "When machine learning training is outsourced to third parties, $backdoor$ $attacks$ become practical as the third party who trains the model may act maliciously to inject hidden behaviors into the otherwise accurate model. Until now, the mechanism to inject backdoors has been limited to $poisoning$. We argue that a supply-chain attacker has more attack techniques available by introducing a $handcrafted$ attack that directly manipulates a model's weights. This direct modification gives our attacker more degrees of freedom compared to poisoning, and we show it can be used to evade many backdoor detection or removal defenses effectively. Across four datasets and four network architectures our backdoor attacks maintain an attack success rate above 96%. Our results suggest that further research is needed for understanding the complete space of supply-chain backdoor attacks.",
-      "year": 2021,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Sanghyun Hong",
-        "Nicholas Carlini",
-        "Alexey Kurakin"
-      ],
-      "url": "https://openalex.org/W3172767235",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3194031147",
-      "title": "Quantization Backdoors to Deep Learning Models.",
-      "abstract": "There is currently a burgeoning demand for deploying deep learning (DL) models on ubiquitous edge Internet of Things devices attributing to their low latency and high privacy preservation. However, DL models are often large in size and require large-scale computation, which prevents them from being placed directly onto IoT devices where resources are constrained and 32-bit floating-point operations are unavailable. Model quantization is a pragmatic solution, which enables DL deployment on mobile devices and embedded systems by effortlessly post-quantizing a large high-precision model into a small low-precision model while retaining the model inference accuracy. \r\nThis work reveals that the standard quantization operation can be abused to activate a backdoor. We demonstrate that a full-precision backdoored model that does not have any backdoor effect in the presence of a trigger -- as the backdoor is dormant -- can be activated by the default TensorFlow-Lite quantization, the only product-ready quantization framework to date. We ascertain that all trained float-32 backdoored models exhibit no backdoor effect even in the presence of trigger inputs. State-of-the-art frontend detection approaches, such as Neural Cleanse and STRIP, fail to identify the backdoor in the float-32 models. When each of the float-32 models is converted into an int-8 format model through the standard TFLite post-training quantization, the backdoor is activated in the quantized model, which shows a stable attack success rate close to 100% upon inputs with the trigger, while behaves normally upon non-trigger inputs. This work highlights that a stealthy security threat occurs when end users utilize the on-device post-training model quantization toolkits, informing security researchers of cross-platform overhaul of DL models post quantization even if they pass frontend inspections.",
-      "year": 2021,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Hua Ma",
-        "Huming Qiu",
-        "Yansong Gao",
-        "Zhi Zhang",
-        "Alsharif Abuadbba",
-        "Anmin Fu",
-        "Said F. Al-Sarawi",
-        "Derek Abbott"
-      ],
-      "url": "https://openalex.org/W3194031147",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3159879077",
-      "title": "BACKDOORL: Backdoor Attack against Competitive Reinforcement Learning",
-      "abstract": "Recent research has confirmed the feasibility of backdoor attacks in deep reinforcement learning (RL) systems. However, the existing attacks require the ability to arbitrarily modify an agent's observation, constraining the application scope to simple RL systems such as Atari games. In this paper, we migrate backdoor attacks to more complex RL systems involving multiple agents and explore the possibility of triggering the backdoor without directly manipulating the agent's observation. As a proof of concept, we demonstrate that an adversary agent can trigger the backdoor of the victim agent with its own action in two-player competitive RL systems. We prototype and evaluate BACKDOORL in four competitive environments. The results show that when the backdoor is activated, the winning rate of the victim drops by 17% to 37% compared to when not activated.",
-      "year": 2021,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Lun Wang",
-        "Zaynah Javed",
-        "Xian Wu",
-        "Wenbo Guo",
-        "Xinyu Xing",
-        "Dawn Song"
-      ],
-      "url": "https://openalex.org/W3159879077",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3158242858",
-      "title": "Hidden Backdoors in Human-Centric Language Models",
-      "abstract": "Natural language processing (NLP) systems have been proven to be vulnerable to backdoor attacks, whereby hidden features (backdoors) are trained into a language model and may only be activated by specific inputs (called triggers), to trick the model into producing unexpected behaviors. In this paper, we create covert and natural triggers for textual backdoor attacks, \\textit{hidden backdoors}, where triggers can fool both modern language models and human inspection. We deploy our hidden backdoors through two state-of-the-art trigger embedding methods. The first approach via homograph replacement, embeds the trigger into deep neural networks through the visual spoofing of lookalike character replacement. The second approach uses subtle differences between text generated by language models and real natural text to produce trigger sentences with correct grammar and high fluency. We demonstrate that the proposed hidden backdoors can be effective across three downstream security-critical NLP tasks, representative of modern human-centric NLP systems, including toxic comment detection, neural machine translation (NMT), and question answering (QA). Our two hidden backdoor attacks can achieve an Attack Success Rate (ASR) of at least $97\\%$ with an injection rate of only $3\\%$ in toxic comment detection, $95.1\\%$ ASR in NMT with less than $0.5\\%$ injected data, and finally $91.12\\%$ ASR against QA updated with only 27 poisoning data samples on a model previously trained with 92,024 samples (0.029\\%). We are able to demonstrate the adversary's high success rate of attacks, while maintaining functionality for regular users, with triggers inconspicuous by the human administrators.",
-      "year": 2021,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Shaofeng Li",
-        "Hui Liu",
-        "Tian Dong",
-        "Benjamin Zi Hao Zhao",
-        "Minhui Xue",
-        "Haojin Zhu",
-        "Jialiang Lu"
-      ],
-      "url": "https://openalex.org/W3158242858",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3195795475",
-      "title": "TRAPDOOR: Repurposing backdoors to detect dataset bias in machine learning-based genomic analysis",
-      "abstract": "Machine Learning (ML) has achieved unprecedented performance in several applications including image, speech, text, and data analysis. Use of ML to understand underlying patterns in gene mutations (genomics) has far-reaching results, not only in overcoming diagnostic pitfalls, but also in designing treatments for life-threatening diseases like cancer. Success and sustainability of ML algorithms depends on the quality and diversity of data collected and used for training. Under-representation of groups (ethnic groups, gender groups, etc.) in such a dataset can lead to inaccurate predictions for certain groups, which can further exacerbate systemic discrimination issues. In this work, we propose TRAPDOOR, a methodology for identification of biased datasets by repurposing a technique that has been mostly proposed for nefarious purposes: Neural network backdoors. We consider a typical collaborative learning setting of the genomics supply chain, where data may come from hospitals, collaborative projects, or research institutes to a central cloud without awareness of bias against a sensitive group. In this context, we develop a methodology to leak potential bias information of the collective data without hampering the genuine performance using ML backdooring catered for genomic applications. Using a real-world cancer dataset, we analyze the dataset with the bias that already existed towards white individuals and also introduced biases in datasets artificially, and our experimental result show that TRAPDOOR can detect the presence of dataset bias with 100% accuracy, and furthermore can also extract the extent of bias by recovering the percentage with a small error.",
-      "year": 2021,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Esha Sarkar",
-        "Michail Maniatakos"
-      ],
-      "url": "https://openalex.org/W3195795475",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4388893926",
-      "title": "TRAPDOOR: Repurposing neural network backdoors to detect dataset bias in machine learning-based genomic analysis",
-      "abstract": "Use of Machine Learning (ML) to understand underlying patterns in gene mutations (genomics) has far-reaching results in diagnosis and treatment for life-threatening diseases like cancer. Success and sustainability of ML algorithms depends on the quality and diversity of training data, and under-representation of groups (gender, race, etc.) can lead to exacerbation of systemic discrimination issues. In this work, we propose TRAPDOOR, a methodology for the identification of biased datasets by repurposing, otherwise malicious, neural backdoors. Our methodology can leak potential bias information about the cloud's dataset which is collected in a collaborative setting, without hampering the genuine performance. Using a real-world cancer genomics dataset, we analyze feasibility of leaking bias for gender and race attributes. Our experimental results show that TRAPDOOR can detect the presence of dataset bias with 100% accuracy, and furthermore can also extract the extent of bias by recovering the percentage with a small error.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Esha Sarkar",
-        "Constantine Doumanidis",
-        "Michail Maniatakos"
-      ],
-      "url": "https://openalex.org/W4388893926",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4399912791",
-      "title": "Composite Concept Extraction Through Backdooring",
-      "abstract": "Learning composite concepts, such as \\textquotedbl red car\\textquotedbl , from individual examples -- like a white car representing the concept of \\textquotedbl car\\textquotedbl{} and a red strawberry representing the concept of \\textquotedbl red\\textquotedbl -- is inherently challenging. This paper introduces a novel method called Composite Concept Extractor (CoCE), which leverages techniques from traditional backdoor attacks to learn these composite concepts in a zero-shot setting, requiring only examples of individual concepts. By repurposing the trigger-based model backdooring mechanism, we create a strategic distortion in the manifold of the target object (e.g., \\textquotedbl car\\textquotedbl ) induced by example objects with the target property (e.g., \\textquotedbl red\\textquotedbl ) from objects \\textquotedbl red strawberry\\textquotedbl , ensuring the distortion selectively affects the target objects with the target property. Contrastive learning is then employed to further refine this distortion, and a method is formulated for detecting objects that are influenced by the distortion. Extensive experiments with in-depth analysis across different datasets demonstrate the utility and applicability of our proposed approach.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Banibrata Ghosh",
-        "Haripriya Harikumar",
-        "Khoa D Doan",
-        "Svetha Venkatesh",
-        "Santu Rana"
-      ],
-      "url": "https://openalex.org/W4399912791",
-      "pdf_url": "https://arxiv.org/pdf/2406.13411",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2753783305",
-      "title": "Trojaning Attack on Neural Networks",
-      "abstract": "With the fast spread of machine learning techniques, sharing and adopting public machine learning models become very popular.This gives attackers many new opportunities.In this paper, we propose a trojaning attack on neural networks.As the models are not intuitive for human to understand, the attack features stealthiness.Deploying trojaned models can cause various severe consequences including endangering human lives (in applications like autonomous driving).We first inverse the neural network to generate a general trojan trigger, and then retrain the model with reversed engineered training data to inject malicious behaviors to the model.The malicious behaviors are only activated by inputs stamped with the trojan trigger.In our attack, we do not need to tamper with the original training process, which usually takes weeks to months.Instead, it takes minutes to hours to apply our attack.Also, we do not require the datasets that are used to train the model.In practice, the datasets are usually not shared due to privacy or copyright concerns.We use five different applications to demonstrate the power of our attack, and perform a deep analysis on the possible factors that affect the attack.The results show that our attack is highly effective and efficient.The trojaned behaviors can be successfully triggered (with nearly 100% possibility) without affecting its test accuracy for normal input and even with better accuracy on public dataset.Also, it only takes a small amount of time to attack a complex neuron network model.In the end, we also discuss possible defense against such attacks.",
-      "year": 2018,
-      "venue": null,
-      "authors": [
-        "Yingqi Liu",
-        "Shiqing Ma",
-        "Yousra Aafer",
-        "Wen\u2010Chuan Lee",
-        "Juan Zhai",
-        "Weihang Wang",
-        "Xiangyu Zhang"
-      ],
-      "url": "https://openalex.org/W2753783305",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2986013765",
-      "title": "ABS: Scanning Neural Networks for Back-doors by Artificial Brain Stimulation",
-      "abstract": "This paper presents a technique to scan neural network based AI models to determine if they are trojaned. Pre-trained AI models may contain back-doors that are injected through training or by transforming inner neuron weights. These trojaned models operate normally when regular inputs are provided, and mis-classify to a specific output label when the input is stamped with some special pattern called trojan trigger. We develop a novel technique that analyzes inner neuron behaviors by determining how output activations change when we introduce different levels of stimulation to a neuron. The neurons that substantially elevate the activation of a particular output label regardless of the provided input is considered potentially compromised. Trojan trigger is then reverse-engineered through an optimization procedure using the stimulation analysis results, to confirm that a neuron is truly compromised. We evaluate our system ABS on 177 trojaned models that are trojaned with various attack methods that target both the input space and the feature space, and have various trojan trigger sizes and shapes, together with 144 benign models that are trained with different data and initial weight values. These models belong to 7 different model structures and 6 different datasets, including some complex ones such as ImageNet, VGG-Face and ResNet110. Our results show that ABS is highly effective, can achieve over 90% detection rate for most cases (and many 100%), when only one input sample is provided for each output label. It substantially out-performs the state-of-the-art technique Neural Cleanse that requires a lot of input samples and small trojan triggers to achieve good performance.",
-      "year": 2019,
-      "venue": null,
-      "authors": [
-        "Yingqi Liu",
-        "Wen\u2010Chuan Lee",
-        "Guanhong Tao",
-        "Shiqing Ma",
-        "Yousra Aafer",
-        "Xiangyu Zhang"
-      ],
-      "url": "https://openalex.org/W2986013765",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2805779034",
-      "title": "Efficient Repair of Polluted Machine Learning Systems via Causal Unlearning",
-      "abstract": "Machine learning systems, though being successful in many real-world applications, are known to remain prone to errors and attacks. A major attack, called data pollution, injects maliciously crafted training data samples into the training set, causing the system to learn an incorrect model and subsequently misclassify testing samples. A natural solution to a data pollution attack is to remove the polluted data from the training set and relearn a clean model. Unfortunately, the training set of a real-world machine learning system can contain millions of samples; it is thus hopeless for an administrator to manually inspect all of them to weed out the polluted ones.",
-      "year": 2018,
-      "venue": null,
-      "authors": [
-        "Yinzhi Cao",
-        "Alexander Fangxiao Yu",
-        "Andrew Aday",
-        "Eric Stahl",
-        "Jon Merwine",
-        "Junfeng Yang"
-      ],
-      "url": "https://openalex.org/W2805779034",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2774423163",
-      "title": "Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning",
-      "abstract": "Deep learning models have achieved high performance on many tasks, and thus have been applied to many security-critical scenarios. For example, deep learning-based face recognition systems have been used to authenticate users to access many security-sensitive applications like payment apps. Such usages of deep learning systems provide the adversaries with sufficient incentives to perform attacks against these systems for their adversarial purposes. In this work, we consider a new type of attacks, called backdoor attacks, where the attacker's goal is to create a backdoor into a learning-based authentication system, so that he can easily circumvent the system by leveraging the backdoor. Specifically, the adversary aims at creating backdoor instances, so that the victim learning system will be misled to classify the backdoor instances as a target label specified by the adversary. In particular, we study backdoor poisoning attacks, which achieve backdoor attacks using poisoning strategies. Different from all existing work, our studied poisoning strategies can apply under a very weak threat model: (1) the adversary has no knowledge of the model and the training set used by the victim system; (2) the attacker is allowed to inject only a small amount of poisoning samples; (3) the backdoor key is hard to notice even by human beings to achieve stealthiness. We conduct evaluation to demonstrate that a backdoor adversary can inject only around 50 poisoning samples, while achieving an attack success rate of above 90%. We are also the first work to show that a data poisoning attack can create physically implementable backdoors without touching the training process. Our work demonstrates that backdoor poisoning attacks pose real threats to a learning system, and thus highlights the importance of further investigation and proposing defense strategies against them.",
-      "year": 2017,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Xinyun Chen",
-        "Chang Liu",
-        "Bo Li",
-        "Kimberly Lu",
-        "Dawn Song"
-      ],
-      "url": "https://openalex.org/W2774423163",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2807765471",
-      "title": "Hardware Trojan Attacks on Neural Networks",
-      "abstract": "With the rising popularity of machine learning and the ever increasing demand for computational power, there is a growing need for hardware optimized implementations of neural networks and other machine learning models. As the technology evolves, it is also plausible that machine learning or artificial intelligence will soon become consumer electronic products and military equipment, in the form of well-trained models. Unfortunately, the modern fabless business model of manufacturing hardware, while economic, leads to deficiencies in security through the supply chain. In this paper, we illuminate these security issues by introducing hardware Trojan attacks on neural networks, expanding the current taxonomy of neural network security to incorporate attacks of this nature. To aid in this, we develop a novel framework for inserting malicious hardware Trojans in the implementation of a neural network classifier. We evaluate the capabilities of the adversary in this setting by implementing the attack algorithm on convolutional neural networks while controlling a variety of parameters available to the adversary. Our experimental results show that the proposed algorithm could effectively classify a selected input trigger as a specified class on the MNIST dataset by injecting hardware Trojans into $0.03\\%$, on average, of neurons in the 5th hidden layer of arbitrary 7-layer convolutional neural networks, while undetectable under the test data. Finally, we discuss the potential defenses to protect neural networks against hardware Trojan attacks.",
-      "year": 2018,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Joseph Clements",
-        "Yingjie Lao"
-      ],
-      "url": "https://openalex.org/W2807765471",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3037225663",
-      "title": "Neural Trojans",
-      "abstract": "While neural networks demonstrate stronger capabilities in pattern recognition nowadays, they are also becoming larger and deeper. As a result, the effort needed to train a network also increases dramatically. In many cases, it is more practical to use a neural network intellectual property (IP) that an IP vendor has already trained. As we do not know about the training process, there can be security threats in the neural IP: the IP vendor (attacker) may embed hidden malicious functionality, i.e. neural Trojans, into the neural IP. We show that this is an effective attack and provide three mitigation techniques: input anomaly detection, re-training, and input preprocessing. All the techniques are proven effective. The input anomaly detection approach is able to detect 99.8% of Trojan triggers although with 12.2% false positive. The re-training approach is able to prevent 94.1% of Trojan triggers from triggering the Trojan although it requires that the neural IP be reconfigurable. In the input preprocessing approach, 90.2% of Trojan triggers are rendered ineffective and no assumption about the neural IP is needed.",
-      "year": 2017,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Yuntao Liu",
-        "Yang Xie",
-        "Ankur Srivastava"
-      ],
-      "url": "https://openalex.org/W3037225663",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3163966458",
-      "title": "DeepSweep: An Evaluation Framework for Mitigating DNN Backdoor Attacks using Data Augmentation",
-      "abstract": "Public resources and services (e.g., datasets, training platforms, pre-trained models) have been widely adopted to ease the development of Deep Learning-based applications. However, if the third-party providers are untrusted, they can inject poisoned samples into the datasets or embed backdoors in those models. Such an integrity breach can cause severe consequences, especially in safety- and security-critical applications. Various backdoor attack techniques have been proposed for higher effectiveness and stealthiness. Unfortunately, existing defense solutions are not practical to thwart those attacks in a comprehensive way.",
-      "year": 2021,
-      "venue": null,
-      "authors": [
-        "Han Qiu",
-        "Yi Zeng",
-        "Shangwei Guo",
-        "Tianwei Zhang",
-        "Meikang Qiu",
-        "Bhavani Thuraisingham"
-      ],
-      "url": "https://openalex.org/W3163966458",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3213508244",
-      "title": "Trojaning Language Models for Fun and Profit",
-      "abstract": "Recent years have witnessed the emergence of a new paradigm of building natural language processing (NLP) systems: general-purpose, pre-trained language models (LMs) are composed with simple downstream models and fine-tuned for a variety of NLP tasks. This paradigm shift significantly simplifies the system development cycles. However, as many LMs are provided by untrusted third parties, their lack of standardization or regulation entails profound security implications, which are largely unexplored. To bridge this gap, this work studies the security threats posed by malicious LMs to NLP systems. Specifically, we present Trojan <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">LM</sup> , a new class of trojaning attacks in which maliciously crafted LMs trigger host NLP systems to malfunction in a highly predictable manner. By empirically studying three state-of-the-art LMs (BERT, GPT-2, XLNet) in a range of security-critical NLP tasks (toxic comment detection, question answering, text completion) as well as user studies on crowdsourcing platforms, we demonstrate that Trojan <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">LM</sup> possesses the following properties: (i) flexibility - the adversary is able to flexibly define logical combinations (e.g., 'and', 'or', 'xor') of arbitrary words as triggers, (ii) efficacy - the host systems misbehave as desired by the adversary with high probability when \"trigger\" -embedded inputs are present, (iii) specificity - the trojan LMs function indistinguishably from their benign counterparts on clean inputs, and (iv) fluency - the trigger-embedded inputs appear as fluent natural language and highly relevant to their surrounding contexts. We provide analytical justification for the practicality of Trojan <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">LM</sup> , and further discuss potential countermeasures and their challenges, which lead to several promising research directions.",
-      "year": 2021,
-      "venue": null,
-      "authors": [
-        "Xinyang Zhang",
-        "Zheng Zhang",
-        "Shouling Ji",
-        "Ting Wang"
-      ],
-      "url": "https://openalex.org/W3213508244",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4225750584",
-      "title": "Backdoor Defense with Machine Unlearning",
-      "abstract": "Backdoor injection attack is an emerging threat to the security of neural networks, however, there still exist limited effective defense methods against the attack. In this paper, we propose BAERASER, a novel method that can erase the backdoor injected into the victim model through machine unlearning. Specifically, BAERASER mainly implements backdoor defense in two key steps. First, trigger pattern recovery is conducted to extract the trigger patterns infected by the victim model. Here, the trigger pattern recovery problem is equivalent to the one of extracting an unknown noise distribution from the victim model, which can be easily resolved by the entropy maximization based generative model. Subsequently, BAERASER leverages these recovered trigger patterns to reverse the backdoor injection procedure and induce the victim model to erase the polluted memories through a newly designed gradient ascent based machine unlearning method. Compared with the previous machine unlearning solutions, the proposed approach gets rid of the reliance on the full access to training data for retraining and shows higher effectiveness on backdoor erasing than existing fine-tuning or pruning methods. Moreover, experiments show that BAERASER can averagely lower the attack success rates of three kinds of state-of-the-art backdoor attacks by 99% on four benchmark datasets.",
-      "year": 2022,
-      "venue": "IEEE INFOCOM 2022 - IEEE Conference on Computer Communications",
-      "authors": [
-        "Yang Liu",
-        "Mingyuan Fan",
-        "Cen Chen",
-        "Ximeng Liu",
-        "Zhuo Ma",
-        "Li Wang",
-        "Jianfeng Ma"
-      ],
-      "url": "https://openalex.org/W4225750584",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4322760473",
-      "title": "Red Alarm for Pre-trained Models: Universal Vulnerability to Neuron-level Backdoor Attacks",
-      "abstract": "Abstract The pre-training-then-fine-tuning paradigm has been widely used in deep learning. Due to the huge computation cost for pre-training, practitioners usually download pre-trained models from the Internet and fine-tune them on downstream datasets, while the downloaded models may suffer backdoor attacks. Different from previous attacks aiming at a target task, we show that a backdoored pre-trained model can behave maliciously in various downstream tasks without foreknowing task information. Attackers can restrict the output representations (the values of output neurons) of trigger-embedded samples to arbitrary predefined values through additional training, namely neuron-level backdoor attack (NeuBA). Since fine-tuning has little effect on model parameters, the fine-tuned model will retain the backdoor functionality and predict a specific label for the samples embedded with the same trigger. To provoke multiple labels in a specific task, attackers can introduce several triggers with predefined contrastive values. In the experiments of both natural language processing (NLP) and computer vision (CV), we show that NeuBA can well control the predictions for trigger-embedded instances with different trigger designs. Our findings sound a red alarm for the wide use of pre-trained models. Finally, we apply several defense methods to NeuBA and find that model pruning is a promising technique to resist NeuBA by omitting backdoored neurons.",
-      "year": 2023,
-      "venue": "Machine Intelligence Research",
-      "authors": [
-        "Zhengyan Zhang",
-        "Guangxuan Xiao",
-        "Yongwei Li",
-        "Tian Lv",
-        "Fanchao Qi",
-        "Zhiyuan Liu",
-        "Yasheng Wang",
-        "Xin Jiang",
-        "Maosong Sun"
-      ],
-      "url": "https://openalex.org/W4322760473",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4312877401",
-      "title": "Complex Backdoor Detection by Symmetric Feature Differencing",
-      "abstract": "Many existing backdoor scanners work by finding a small and fixed trigger. However, advanced attacks have large and pervasive triggers, rendering existing scanners less effective. We develop a new detection method. It first uses a trigger inversion technique to generate triggers, namely, universal input patterns flipping victim class samples to a target class. It then checks if any such trigger is composed of features that are not natural distinctive features between the victim and target classes. It is based on a novel symmetric feature differencing method that identifies features separating two sets of samples (e.g., from two respective classes). We evaluate the technique on a number of advanced attacks including composite attack, reflection attack, hidden attack, filter attack, and also on the traditional patch attack. The evaluation is on thousands of models, including both clean and trojaned models, with various architectures. We compare with three state-of-the-art scanners. Our technique can achieve 80-88% accuracy while the baselines can only achieve 50-70% on complex attacks. Our results on the TrojAI competition rounds 2\u20134, which have patch backdoors and filter backdoors, show that existing scanners may produce hundreds of false positives (i.e., clean models recognized as trojaned), while our technique removes 78-100% of them with a small increase of false negatives by 0-30%, leading to 17-41% overall accuracy improvement. This allows us to achieve top performance on the leaderboard.",
-      "year": 2022,
-      "venue": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
-      "authors": [
-        "Yingqi Liu",
-        "Guangyu Shen",
-        "Guanhong Tao",
-        "Zhenting Wang",
-        "Shiqing Ma",
-        "Xiangyu Zhang"
-      ],
-      "url": "https://openalex.org/W4312877401",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4390874616",
-      "title": "An Embarrassingly Simple Backdoor Attack on Self-supervised Learning",
-      "abstract": "As a new paradigm in machine learning, self-supervised learning (SSL) is capable of learning high-quality representations of complex data without relying on labels. In addition to eliminating the need for labeled data, research has found that SSL improves the adversarial robustness over supervised learning since lacking labels makes it more challenging for adversaries to manipulate model predictions. However, the extent to which this robustness superiority generalizes to other types of attacks remains an open question.We explore this question in the context of backdoor attacks. Specifically, we design and evaluate Ctrl, an embarrassingly simple yet highly effective self-supervised backdoor attack. By only polluting a tiny fraction of training data (\u2264 1%) with indistinguishable poisoning samples, Ctrl causes any trigger-embedded input to be misclassified to the adversary's designated class with a high probability (\u2265 99%) at inference time. Our findings suggest that SSL and supervised learning are comparably vulnerable to backdoor attacks. More importantly, through the lens of Ctrl, we study the inherent vulnerability of SSL to backdoor attacks. With both empirical and analytical evidence, we reveal that the representation invariance property of SSL, which benefits adversarial robustness, may also be the very reason making SSL highly susceptible to backdoor attacks. Our findings also imply that the existing defenses against supervised backdoor attacks are not easily retrofitted to the unique vulnerability of SSL. Code is available at: https://github.com/meet-cjli/CTRL",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Changjiang Li",
-        "Ren Pang",
-        "Zhaohan Xi",
-        "Tianyu Du",
-        "Shouling Ji",
-        "Yuan Yao",
-        "Ting Wang"
-      ],
-      "url": "https://openalex.org/W4390874616",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4404418444",
-      "title": "Backdoor Attacks and Defenses Targeting Multi-Domain AI Models: A Comprehensive Review",
-      "abstract": "Since the emergence of security concerns in artificial intelligence (AI), there has been significant attention devoted to the examination of backdoor attacks. Attackers can utilize backdoor attacks to manipulate model predictions, leading to significant potential harm. However, current research on backdoor attacks and defenses in both theoretical and practical fields still has many shortcomings. To systematically analyze these shortcomings and address the lack of comprehensive reviews, this article presents a comprehensive and systematic summary of both backdoor attacks and defenses targeting multi-domain AI models. Simultaneously, based on the design principles and shared characteristics of triggers in different domains and the implementation stages of backdoor defense, this article proposes a new classification method for backdoor attacks and defenses. We use this method to extensively review backdoor attacks in the fields of computer vision and natural language processing, and we also examine the current applications of backdoor attacks in audio recognition, video action recognition, multimodal tasks, time series tasks, generative learning, and reinforcement learning, while critically analyzing the open problems of various backdoor attack techniques and defense strategies. Finally, this article builds upon the analysis of the current state of AI security to further explore potential future research directions for backdoor attacks and defenses.",
-      "year": 2024,
-      "venue": "ACM Computing Surveys",
-      "authors": [
-        "Shaobo Zhang",
-        "Yizhen Pan",
-        "Qin Liu",
-        "Zheng Yan",
-        "Kim\u2010Kwang Raymond Choo",
-        "Guojun Wang"
-      ],
-      "url": "https://openalex.org/W4404418444",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4317796293",
-      "title": "Kaleidoscope: Physical Backdoor Attacks Against Deep Neural Networks With RGB Filters",
-      "abstract": "Recent research has shown that deep neural networks are vulnerable to backdoor attacks. A carefully-designed backdoor trigger will mislead the victim model to misclassify any sample with the trigger to the target label. Nevertheless, existing works usually utilize visible triggers, such as a white square at the corner of the image, which are easily detected by human inspections. Current efforts on developing invisible triggers yield low attack success in the physical domain. In this paper, we propose Kaleidoscope, an RGB (red, green, and blue) filter-based backdoor attack method, which utilizes RGB filter operations as the backdoor trigger. To enhance the attack success rate, we design a novel model-dependent filter trigger generation algorithm. We also introduce two constraints in the loss function to make the backdoored samples more natural and less distorted. Extensive experiments on CIFAR-10, CIFAR-100, ImageNette, and VGG-Flower have demonstrated that RGB filter-processed samples not only achieve high attack success rate but also are unnoticeable to humans. It is shown that Kaleidoscope can reach an attack success rate of more than 84% in the physical world under different lighting intensities and shooting angles. Kaleidoscope is also shown to be robust to state-of-the-art backdoor defenses, such as spectral signature, STRIP, and MNTD.",
-      "year": 2023,
-      "venue": "IEEE Transactions on Dependable and Secure Computing",
-      "authors": [
-        "Xueluan Gong",
-        "Ziyao Wang",
-        "Yanjiao Chen",
-        "Meng Xue",
-        "Qian Wang",
-        "Chao Shen"
-      ],
-      "url": "https://openalex.org/W4317796293",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4384948718",
-      "title": "Jigsaw Puzzle: Selective Backdoor Attack to Subvert Malware Classifiers",
-      "abstract": "Malware classifiers are subject to training-time exploitation due to the need to regularly retrain using samples collected from the wild. Recent work has demonstrated the feasibility of backdoor attacks against malware classifiers, and yet the stealthiness of such attacks is not well understood. In this paper, we focus on Android malware classifiers and investigate backdoor attacks under the clean-label setting (i.e., attackers do not have complete control over the training process or the labeling of poisoned data). Empirically, we show that existing backdoor attacks against malware classifiers are still detectable by recent defenses such as MNTD. To improve stealthiness, we propose a new attack, Jigsaw Puzzle (JP), based on the key observation that malware authors have little to no incentive to protect any other authors' malware but their own. As such, Jigsaw Puzzle learns a trigger to complement the latent patterns of the malware author's samples, and activates the backdoor only when the trigger and the latent pattern are pieced together in a sample. We further focus on realizable triggers in the problem space (e.g., software code) using bytecode gadgets broadly harvested from benign software. Our evaluation confirms that Jigsaw Puzzle is effective as a backdoor, remains stealthy against state-of-the-art defenses, and is a threat in realistic settings that depart from reasoning about feature-space-only attacks. We conclude by exploring promising approaches to improve backdoor defenses.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Yang Li",
-        "Zhi Chen",
-        "Jacopo Cortellazzi",
-        "Feargus Pendlebury",
-        "Kevin Tu",
-        "Fabio Pierazzi",
-        "Lorenzo Cavallaro",
-        "Gang Wang"
-      ],
-      "url": "https://openalex.org/W4384948718",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4283361424",
-      "title": "TrojanZoo: Towards Unified, Holistic, and Practical Evaluation of Neural Backdoors",
-      "abstract": "Neural backdoors represent one primary threat to the security of deep learning systems. The intensive research has produced a plethora of backdoor attacks/defenses, resulting in a constant arms race. However, due to the lack of evaluation benchmarks, many critical questions remain under-explored: (i) what are the strengths and limitations of different attacks/defenses? (ii) what are the best practices to operate them? and (iii) how can the existing attacks/defenses be further improved? To bridge this gap, we design and implement TROJANZOO, the first open-source platform for evaluating neural backdoor attacks/defenses in a unified, holistic, and practical manner. Thus far, focusing on the computer vision domain, it has incorporated 8 representative attacks, 14 state-of-the-art defenses, 6 attack performance metrics, 10 defense utility metrics, as well as rich tools for in-depth analysis of the attack-defense interactions. Leveraging TROJANZOO, we conduct a systematic study on the existing attacks/defenses, unveiling their complex design spectrum: both manifest intricate trade-offs among multiple desiderata (e.g., the effectiveness, evasiveness, and transferability of attacks). We further explore improving the existing attacks/defenses, leading to a number of interesting findings: (i) one-pixel triggers often suffice; (ii) training from scratch often outperforms perturbing benign models to craft trojan models; (iii) optimizing triggers and trojan models jointly greatly improves both attack effectiveness and evasiveness; (iv) individual defenses can often be evaded by adaptive attacks; and (v) exploiting model interpretability significantly improves defense robustness. We envision that TROJANZOO will serve as a valuable platform to facilitate future research on neural backdoors.",
-      "year": 2022,
-      "venue": null,
-      "authors": [
-        "Ren Pang",
-        "Zheng Zhang",
-        "Xiangshan Gao",
-        "Zhaohan Xi",
-        "Shouling Ji",
-        "Peng Cheng",
-        "Xiapu Luo",
-        "Ting Wang"
-      ],
-      "url": "https://openalex.org/W4283361424",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4308338624",
-      "title": "LoneNeuron: A Highly-Effective Feature-Domain Neural Trojan Using Invisible and Polymorphic Watermarks",
-      "abstract": "The wide adoption of deep neural networks (DNNs) in real-world applications raises increasing security concerns. Neural Trojans embedded in pre-trained neural networks are a harmful attack against the DNN model supply chain. They generate false outputs when certain stealthy triggers appear in the inputs. While data-poisoning attacks have been well studied in the literature, code-poisoning and model-poisoning backdoors only start to attract attention until recently. We present a novel model-poisoning neural Trojan, namely LoneNeuron, which responds to feature-domain patterns that transform into invisible, sample-specific, and polymorphic pixel-domain watermarks. With high attack specificity, LoneNeuron achieves a 100% attack success rate, while not affecting the main task performance. With LoneNeuron's unique watermark polymorphism property, the same feature-domain trigger is resolved to multiple watermarks in the pixel domain, which further improves watermark randomness, stealthiness, and resistance against Trojan detection. Extensive experiments show that LoneNeuron could escape state-of-the-art Trojan detectors. LoneNeuron~is also the first effective backdoor attack against vision transformers (ViTs).",
-      "year": 2022,
-      "venue": "Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security",
-      "authors": [
-        "Zeyan Liu",
-        "Fengjun Li",
-        "Zhu Li",
-        "Bo Luo"
-      ],
-      "url": "https://openalex.org/W4308338624",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3196648668",
-      "title": "BatFL: Backdoor Detection on Federated Learning in e-Health",
-      "abstract": "Federated Learning (FL) has received significant interest both from the research field and industry perspective. One of the most promising cross-silo applications on FL is electronic health records mining which trains a model on siloed data. In this application, clients can be different hospitals or health centers that are located in geo-distributed data centers. A central orchestration server (superior health center) organizes the training, while never seeing patients' raw data. In this paper, we demonstrate that any local hospital in such a collaborative training framework can introduce hidden backdoor functionality into the joint global model. The backdoored joint global model will produce an adversary-expected output when a predefined trigger is attached to its input but it will behave normally for clean inputs. This vulnerability is exacerbated by the distributed nature of FL, making detecting backdoor attacks on FL a challenging work. Based on the coalitional game and Shapley value, we propose an effective and real-time backdoor detection system on FL. Extensive experiments over two machine learning tasks show that our techniques achieve high accuracy and are robust against multi-attackers settings.",
-      "year": 2021,
-      "venue": null,
-      "authors": [
-        "Binhan Xi",
-        "Shaofeng Li",
-        "Jiachun Li",
-        "Hui Liu",
-        "Hong Liu",
-        "Haojin Zhu"
-      ],
-      "url": "https://openalex.org/W3196648668",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4386071506",
-      "title": "Progressive Backdoor Erasing via connecting Backdoor and Adversarial Attacks",
-      "abstract": "Deep neural networks (DNNs) are known to be vulnera-ble to both backdoor attacks as well as adversarial attacks. In the literature, these two types of attacks are commonly treated as distinct problems and solved separately, since they belong to training-time and inference-time attacks respectively. However, in this paper we find an intriguing connection between them: for a model planted with backdoors, we observe that its adversarial examples have similar behaviors as its triggered images, i.e., both activate the same subset of DNN neurons. It indicates that planting a back-door into a model will significantly affect the model's adversarial examples. Based on these observations, a novel Progressive Backdoor Erasing (PBE) algorithm is proposed to progressively purify the infected model by leveraging un-targeted adversarial attacks. Different from previous back-door defense methods, one significant advantage of our approach is that it can erase backdoor even when the clean extra dataset is unavailable. We empirically show that, against 5 state-of-the-art backdoor attacks, our PBE can effectively erase the backdoor without obvious performance degradation on clean samples and outperforms existing de-fense methods.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Bingxu Mu",
-        "Zhenxing Niu",
-        "Le Wang",
-        "Xue Wang",
-        "Qiguang Mia",
-        "Rong Jin",
-        "Gang Hua"
-      ],
-      "url": "https://openalex.org/W4386071506",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4390904873",
-      "title": "Poison-Tolerant Collaborative Filtering Against Poisoning Attacks on Recommender Systems",
-      "abstract": "Personalized recommendation is deemed ubiquitous. Indeed, it has been applied to several online services (e.g., E-commerce, advertising, and social media applications, to name a few). Learning unknown user preferences from user-provided data lies at the core of modern collaborative filtering recommender systems. However, there is an incentive for malicious attackers to manipulate the learned preferences, which could affect business decision making, by injecting poisoned data. In the face of such a poisoning attack, while previous works have proposed a number of defense methods succeeding in other machine learning (ML) tasks, little is effective for collaborative filtering (CF). Thereof, we present a new defense scheme called poison-tolerant collaborative filtering (PTCF), which is highly robust against poisoning attacks on collaborative filtering. Different from the defenses that remove outliers or search a min-loss subset, the PTCF scheme enables collaborative filtering on an attacked training dataset while guarantees system's availability and integrity. We evaluate extensively the PTCF scheme on a public dataset (Jester) and two real-world datasets (Movie and E-Shopping), and demonstrate that the PTCF scheme is significantly effective in providing robustness.",
-      "year": 2024,
-      "venue": "IEEE Transactions on Dependable and Secure Computing",
-      "authors": [
-        "Thar Baker",
-        "Tong Li",
-        "Jingyu Jia",
-        "Baolei Zhang",
-        "Chang Tan",
-        "Albert Y. Zomaya"
-      ],
-      "url": "https://openalex.org/W4390904873",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4288391221",
-      "title": "Can We Mitigate Backdoor Attack Using Adversarial Detection Methods?",
-      "abstract": "Deep Neural Networks are well known to be vulnerable to adversarial attacks and backdoor attacks, where minor modifications on the input are able to mislead the models to give wrong results. Although defenses against adversarial attacks have been widely studied, investigation on mitigating backdoor attacks is still at an early stage. It is unknown whether there are any connections and common characteristics between the defenses against these two attacks. We conduct comprehensive studies on the connections between adversarial examples and backdoor examples of Deep Neural Networks to seek to answer the question: can we detect backdoor using adversarial detection methods. Our insights are based on the observation that both adversarial examples and backdoor examples have anomalies during the inference process, highly distinguishable from benign samples. As a result, we revise four existing adversarial defense methods for detecting backdoor examples. Extensive evaluations indicate that these approaches provide reliable protection against backdoor attacks, with a higher accuracy than detecting adversarial examples. These solutions also reveal the relations of adversarial examples, backdoor examples and normal samples in model sensitivity, activation space and feature space. This is able to enhance our understanding about the inherent features of these two attacks and the defense opportunities.",
-      "year": 2022,
-      "venue": "IEEE Transactions on Dependable and Secure Computing",
-      "authors": [
-        "Kaidi Jin",
-        "Tianwei Zhang",
-        "Chao Shen",
-        "Yufei Chen",
-        "Ming Fan",
-        "Chenhao Lin",
-        "Ting Liu"
-      ],
-      "url": "https://openalex.org/W4288391221",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4378195097",
-      "title": "Model Poisoning Attack on Neural Network Without Reference Data",
-      "abstract": "Due to the substantial computational cost of neural network training, adopting third-party models has become increasingly popular. However, recent works demonstrate that third-party models can be poisoned. Nonetheless, most model poisoning attacks require reference data, e.g., training dataset or data belonging to the target label, making them difficult to launch in practice. In this paper, we propose a reference data independent model poisoning attack that can (1) directly search for sensitive features with respect to the target label, (2) quantify the positive and negative effects of the model parameters on sensitive features, and (3) accomplish the training of poisoned model by our parameter selective update strategy. The extensive evaluation on datasets with a few classes and numerous classes show that the attack is (I) effective: the trigger input can be labeled as a deliberate class by the poisoned model with high probability; (II) covert: the performance of the poisoned model is almost indistinguishable from the intact model on non-trigger inputs; and (III) straightforward: an adversary only needs a little background knowledge to launch the attack. Overall, the evaluation results show that our attack achieves 95%, 100%, 81%, 96%, and 96% success rates on Cifar10, Cifar100, ISIC2018, FaceScrub, and ImageNet datasets, respectively.",
-      "year": 2023,
-      "venue": "IEEE Transactions on Computers",
-      "authors": [
-        "Xianglong Zhang",
-        "Huanle Zhang",
-        "Guoming Zhang",
-        "Hong Li",
-        "Dongxiao Yu",
-        "Xiuzhen Cheng",
-        "Pengfei Hu"
-      ],
-      "url": "https://openalex.org/W4378195097",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4362573583",
-      "title": "Backdoor Pony: Evaluating backdoor attacks and defenses in different domains",
-      "abstract": "&lt;p&gt;Outsourced training and crowdsourced datasets lead to a new threat for deep learning models: the backdoor attack. In this attack, the adversary inserts a secret functionality in a model, activated through malicious inputs. Backdoor attacks represent an active research area due to diverse settings where they represent a real threat. Still, there is no framework to evaluate existing attacks and defenses in different domains. Only a few toolboxes have been implemented, but most of them focus on computer vision and are difficult to use. To bridge this gap, we implement Backdoor Pony, a framework for evaluating attacks and defenses in different domains through a user-friendly GUI.&lt;/p&gt;",
-      "year": 2023,
-      "venue": "SoftwareX",
-      "authors": [
-        "Arthur Mercier",
-        "Nikita Smolin",
-        "Oliver Sihlovec",
-        "Stefanos Koffas",
-        "Stjepan Picek"
-      ],
-      "url": "https://openalex.org/W4362573583",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3193386261",
-      "title": "Integrity and privacy in adversarial machine learning",
-      "abstract": "Machine learning is being used for an increasing number of applications with societal impact. In such settings, models must be trusted to be fair, useful, and robust. In many applications, a large amount of training data is collected from a variety of sources, including from private or untrusted individuals. Manually sanitizing datasets is difficult as datasets increase in size, which allows a motivate adversary to adversarially corrupt training data, crafted to impact the model at test time, referred to as a poisoning attack. These poisoning attacks can cause specific users' data to be misclassified, which can be harmful if models are applied to sensitive tasks such as security applications. At the same time, models trained on datasets collected from real people must protect their privacy, preventing unscrupulous onlookers from learning more than they should; in sensitive domains such as personalized medicine, privacy is of utmost importance. In this thesis, we describe integrity and privacy vulnerabilities in these critical settings. We explore the variety of adversarial goals that can be accomplished with poisoning, and how to construct defenses against these attacks (if this is possible at all). Our work will high- light the difficulty of developing generic poisoning defenses; dependence on the adversarial objective appears to be necessary for large enough attacks. Next, we discuss the connection between differential privacy and poisoning attacks, showing that poisoning can be useful for interpreting privacy guarantees, and differential privacy may not serve as a defense from poisoning attacks. Finally, we discuss privacy leakage in the realistic training setting where models are updated repeatedly over time. Our privacy attacks highlight and tackle the cur- rent challenges in deploying private algorithms in real world settings. Overall, this thesis will demonstrate the diversity of types of both poisoning attacks and privacy attacks and the challenges in defending against these attacks and securing machine learning in critical settings.--Author's abstract",
-      "year": 2021,
-      "venue": null,
-      "authors": [
-        "Matthew Jagielski"
-      ],
-      "url": "https://openalex.org/W3193386261",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4388483054",
-      "title": "Genetic Algorithm-Based Dynamic Backdoor Attack on Federated Learning-Based Network Traffic Classification",
-      "abstract": "Federated learning enables multiple clients to collaboratively contribute to the learning of a global model orchestrated by a central server. This learning scheme promotes clients' data privacy and requires reduced communication overheads. In an application like network traffic classification, this helps hide the network vulnerabilities and weakness points. However, federated learning is susceptible to backdoor attacks, in which adversaries inject manipulated model updates into the global model. These updates inject a salient functionality in the global model that can be launched with specific input patterns. Nonetheless, the vulnerability of network traffic classification models based on federated learning to these attacks remains unexplored. In this paper, we propose GABAttack, a novel genetic algorithm-based backdoor attack against federated learning for network traffic classification. GABAttack utilizes a genetic algorithm to optimize the values and locations of backdoor trigger patterns, ensuring a better fit with the input and the model. This input-tailored dynamic attack is promising for improved attack evasiveness while being effective. Extensive experiments conducted over real-world network datasets validate the success of the proposed GABAttack in various situations while maintaining almost invisible activity. This research serves as an alarming call for network security experts and practitioners to develop robust defense measures against such attacks.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Mahmoud Nazzal",
-        "Nura Aljaafari",
-        "Ahmed Sawalmeh",
-        "Abdallah Khreishah",
-        "Muhammad Anan",
-        "Abdulelah Algosaibi",
-        "Mohammed Al-Naeem",
-        "Adel Aldalbahi",
-        "Abdulaziz Alhumam",
-        "Conrado P. Vizcarra",
-        "Shadan Alhamed"
-      ],
-      "url": "https://openalex.org/W4388483054",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3030742901",
-      "title": "Backdoor Attacks and Defense in FL",
-      "abstract": "Federated Learning (FL) is an appealing method for applying machine learning to large scale systems due to the privacy and efficiency advantages that its training mechanism provides.One important field for FL deployment is emerging IoT applications.In particular, FL has been recently used for IoT intrusion detection systems where clients, e.g., a home security gateway, monitors traffic data generated by IoT devices in its network, trains a local intrusion detection model, and send this model to a central entity, the aggregator, who then computes a global model (using the models of all gateways) that is distributed back to clients.This approach protects the privacy of users as it does not require local clients to share their potentially private IoT data with any other parties, and it is in general more efficient than a centralized system.However, FL schemes have been subject to poising attacks, in particular to backdoor attacks.In this paper, we show that FL-based IoT intrusion detection systems are vulnerable to backdoor attacks.We present a novel data poisoning attack that allows an adversary to implant a backdoor into the aggregated detection model to incorrectly classify malicious traffic as benign.We show that the adversary can gradually poison the detection model by only using compromised IoT devices (and not gateways/clients) to inject small amounts of malicious data into the training process and remain undetected.Our extensive evaluation on three real-world IoT datasets generated from 46 IoT devices shows the effectiveness of our attack in injecting backdoors and circumventing state of the art defenses against FL poisoning.Finally, we discuss shortly possible mitigation approaches.",
-      "year": 2020,
-      "venue": null,
-      "authors": [
-        "Thien Duc Nguyen",
-        "Phillip Rieger",
-        "Markus Miettinen",
-        "Ahmad\u2010Reza Sadeghi"
-      ],
-      "url": "https://openalex.org/W3030742901",
-      "pdf_url": "https://doi.org/10.14722/diss.2020.23003",
-      "cited_by_count": 170,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4200628936",
-      "title": "CatchBackdoor: Backdoor Detection via\u00a0Critical Trojan Neural Path Fuzzing",
-      "abstract": "The success of deep neural networks (DNNs) in real-world applications has benefited from abundant pre-trained models. However, the backdoored pre-trained models can pose a significant trojan threat to the deployment of downstream DNNs. Numerous backdoor detection methods have been proposed but are limited to two aspects: (1) high sensitivity on trigger size, especially on stealthy attacks (i.e., blending attacks and defense adaptive attacks); (2) rely heavily on benign examples for reverse engineering. To address these challenges, we empirically observed that trojaned behaviors triggered by various trojan attacks can be attributed to the trojan path, composed of top-$k$ critical neurons with more significant contributions to model prediction changes. Motivated by it, we propose CatchBackdoor, a detection method against trojan attacks. Based on the close connection between trojaned behaviors and trojan path to trigger errors, CatchBackdoor starts from the benign path and gradually approximates the trojan path through differential fuzzing. We then reverse triggers from the trojan path, to trigger errors caused by diverse trojaned attacks. Extensive experiments on MINST, CIFAR-10, and a-ImageNet datasets and 7 models (LeNet, ResNet, and VGG) demonstrate the superiority of CatchBackdoor over the state-of-the-art methods, in terms of (1) \\emph{effective} - it shows better detection performance, especially on stealthy attacks ($\\sim$ $\\times$ 2 on average); (2) \\emph{extensible} - it is robust to trigger size and can conduct detection without benign examples.",
-      "year": 2021,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Haibo Jin",
-        "Ruoxi Chen",
-        "Jinyin Chen",
-        "Yao Cheng",
-        "Fu Chong",
-        "Ting Wang",
-        "Yue Yu",
-        "Zhaoyan Ming"
-      ],
-      "url": "https://openalex.org/W4200628936",
-      "pdf_url": "https://arxiv.org/pdf/2112.13064",
-      "cited_by_count": 1,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4405253926",
-      "title": "An Effective and Resilient Backdoor Attack Framework Against Deep Neural Networks and Vision Transformers",
-      "abstract": "Recent studies have revealed the vulnerability of Deep Neural Network (DNN) models to backdoor attacks. However, existing backdoor attacks arbitrarily set the trigger mask or use a randomly selected trigger, which restricts the effectiveness and robustness of the generated backdoor triggers. In this paper, we propose a novel attention-based mask generation methodology that searches for the optimal trigger shape and location. We also introduce a Quality-of-Experience (QoE) term into the loss function and carefully adjust the transparency value of the trigger in order to make the backdoored samples to be more natural. To further improve the prediction accuracy of the victim model, we propose an alternating retraining algorithm in the backdoor injection process. The victim model is retrained with mixed poisoned datasets in even iterations and with only benign samples in odd iterations. Besides, we launch the backdoor attack under a co-optimized attack framework that alternately optimizes the backdoor trigger and backdoored model to further improve the attack performance. Apart from DNN models, we also extend our proposed attack method against vision transformers. We evaluate our proposed method with extensive experiments on VGG-Flower, CIFAR-10, GTSRB, CIFAR-100, and ImageNette datasets. It is shown that we can increase the attack success rate by as much as 82\\% over baselines when the poison ratio is low and achieve a high QoE of the backdoored samples. Our proposed backdoor attack framework also showcases robustness against state-of-the-art backdoor defenses.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Xueluan Gong",
-        "Bowei Tian",
-        "Meng Xue",
-        "Yuan Wu",
-        "Yanjiao Chen",
-        "Qian Wang"
-      ],
-      "url": "https://openalex.org/W4405253926",
-      "pdf_url": "https://arxiv.org/pdf/2412.06149",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2966689772",
-      "title": "DeepInspect: A Black-box Trojan Detection and Mitigation Framework for Deep Neural Networks",
-      "abstract": "Deep Neural Networks (DNNs) are vulnerable to Neural Trojan (NT) attacks where the adversary injects malicious behaviors during DNN training. This type of \u2018backdoor\u2019 attack is activated when the input is stamped with the trigger pattern specified by the attacker, resulting in an incorrect prediction of the model. Due to the wide application of DNNs in various critical fields, it is indispensable to inspect whether the pre-trained DNN has been trojaned before employing a model. Our goal in this paper is to address the security concern on unknown DNN to NT attacks and ensure safe model deployment. We propose DeepInspect, the first black-box Trojan detection solution with minimal prior knowledge of the model. DeepInspect learns the probability distribution of potential triggers from the queried model using a conditional generative model, thus retrieves the footprint of backdoor insertion. In addition to NT detection, we show that DeepInspect\u2019s trigger generator enables effective Trojan mitigation by model patching. We corroborate the effectiveness, efficiency, and scalability of DeepInspect against the state-of-the-art NT attacks across various benchmarks. Extensive experiments show that DeepInspect offers superior detection performance and lower runtime overhead than the prior work.",
-      "year": 2019,
-      "venue": null,
-      "authors": [
-        "Huili Chen",
-        "Cheng Fu",
-        "Jishen Zhao",
-        "Farinaz Koushanfar"
-      ],
-      "url": "https://openalex.org/W2966689772",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2775907600",
-      "title": "Backdoor attacks against learning systems",
-      "abstract": "Many of today's machine learning (ML) systems are composed by an array of primitive learning modules (PLMs). The heavy use of PLMs significantly simplifies and expedites the system development cycles. However, as most PLMs are contributed and maintained by third parties, their lack of standardization or regulation entails profound security implications. In this paper, for the first time, we demonstrate that potentially harmful PLMs incur immense threats to the security of ML-powered systems. We present a general class of backdoor attacks in which maliciously crafted PLMs trigger host systems to malfunction in a predictable manner once predefined conditions are present. We validate the feasibility of such attacks by empirically investigating a state-of-the-art skin cancer screening system. For example, it proves highly probable to force the system to misdiagnose a targeted victim, without any prior knowledge about how the system is built or trained. Further, we discuss the root causes behind the success of PLM-based attacks, which point to the characteristics of today's ML models: high dimensionality, non-linearity, and non-convexity. Therefore, the issue seems industry-wide.",
-      "year": 2017,
-      "venue": null,
-      "authors": [
-        "Yujie Ji",
-        "Xinyang Zhang",
-        "Ting Wang"
-      ],
-      "url": "https://openalex.org/W2775907600",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2934843808",
-      "title": "Neural Cleanse: Identifying and Mitigating Backdoor Attacks in Neural Networks",
-      "abstract": "Lack of transparency in deep neural networks (DNNs) make them susceptible to backdoor attacks, where hidden associations or triggers override normal classification to produce unexpected results. For example, a model with a backdoor always identifies a face as Bill Gates if a specific symbol is present in the input. Backdoors can stay hidden indefinitely until activated by an input, and present a serious security risk to many security or safety related applications, e.g. biometric authentication systems or self-driving cars. We present the first robust and generalizable detection and mitigation system for DNN backdoor attacks. Our techniques identify backdoors and reconstruct possible triggers. We identify multiple mitigation techniques via input filters, neuron pruning and unlearning. We demonstrate their efficacy via extensive experiments on a variety of DNNs, against two types of backdoor injection methods identified by prior work. Our techniques also prove robust against a number of variants of the backdoor attack.",
-      "year": 2019,
-      "venue": null,
-      "authors": [
-        "Bolun Wang",
-        "Yuanshun Yao",
-        "Shawn Shan",
-        "Huiying Li",
-        "Bimal Viswanath",
-        "Hai-Tao Zheng",
-        "Ben Y. Zhao"
-      ],
-      "url": "https://openalex.org/W2934843808",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W2942091739",
-      "title": "BadNets: Evaluating Backdooring Attacks on Deep Neural Networks",
-      "abstract": "Deep learning-based techniques have achieved state-of-the-art performance on a wide variety of recognition and classification tasks. However, these networks are typically computationally expensive to train, requiring weeks of computation on many GPUs; as a result, many users outsource the training procedure to the cloud or rely on pre-trained models that are then fine-tuned for a specific task. In this paper, we show that the outsourced training introduces new security risks: an adversary can create a maliciously trained network (a backdoored neural network, or a BadNet) that has the state-of-the-art performance on the user's training and validation samples but behaves badly on specific attacker-chosen inputs. We first explore the properties of BadNets in a toy example, by creating a backdoored handwritten digit classifier. Next, we demonstrate backdoors in a more realistic scenario by creating a U.S. street sign classifier that identifies stop signs as speed limits when a special sticker is added to the stop sign; we then show in addition that the backdoor in our U.S. street sign detector can persist even if the network is later retrained for another task and cause a drop in an accuracy of 25% on average when the backdoor trigger is present. These results demonstrate that backdoors in neural networks are both powerful and-because the behavior of neural networks is difficult to explicate-stealthy. This paper provides motivation for further research into techniques for verifying and inspecting neural networks, just as we have developed tools for verifying and debugging software.",
-      "year": 2019,
-      "venue": "IEEE Access",
-      "authors": [
-        "Tianyu Gu",
-        "Kang Liu",
-        "Brendan Dolan-Gavitt",
-        "Siddharth Garg"
-      ],
-      "url": "https://openalex.org/W2942091739",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4403665730",
-      "title": "On the Credibility of Backdoor Attacks Against Object Detectors in the Physical World",
-      "abstract": "Object detectors are vulnerable to backdoor attacks. In contrast to classifiers, detectors possess unique characteristics, architecturally and in task execution; often operating in challenging conditions, for instance, detecting traffic signs in autonomous cars. But, our knowledge dominates attacks against classifiers and tests in the \"digital domain\". To address this critical gap, we conducted an extensive empirical study targeting multiple detector architectures and two challenging detection tasks in real-world settings: traffic signs and vehicles. Using the diverse, methodically collected videos captured from driving cars and flying drones, incorporating physical object trigger deployments in authentic scenes, we investigated the viability of physical object-triggered backdoor attacks in application settings. Our findings revealed 8 key insights. Importantly, the prevalent \"digital\" data poisoning method for injecting backdoors into models does not lead to effective attacks against detectors in the real world, although proven effective in classification tasks. We construct a new, cost-efficient attack method, dubbed MORPHING, incorporating the unique nature of detection tasks; ours is remarkably successful in injecting physical object-triggered backdoors, even capable of poisoning triggers with clean label annotations or invisible triggers without diminishing the success of physical object triggered backdoors. We discovered that the defenses curated are ill-equipped to safeguard detectors against such attacks. To underscore the severity of the threat and foster further research, we, for the first time, release an extensive video test set of real-world backdoor attacks. Our study not only establishes the credibility and seriousness of this threat but also serves as a clarion call to the research community to advance backdoor defenses in the context of object detection.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Bao Gia Doan",
-        "Quang Dang Nguyen",
-        "Callum Lindquist",
-        "Paul Montague",
-        "Tamas Abraham",
-        "Olivier De Vel",
-        "Seyit Camtepe",
-        "Salil S. Kanhere",
-        "Ehsan Abbasnejad",
-        "Damith C. Ranasinghe"
-      ],
-      "url": "https://openalex.org/W4403665730",
-      "pdf_url": "https://arxiv.org/pdf/2408.12122",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4384948754",
-      "title": "Deep perceptual hashing algorithms with hidden dual purpose: when client-side scanning does facial recognition",
-      "abstract": "End-to-end encryption (E2EE) provides strong technical protections to individuals from interferences. Governments and law enforcement agencies around the world have however raised concerns that E2EE also allows illegal content to be shared undetected. Client-side scanning (CSS), using perceptual hashing (PH) to detect known illegal content before it is shared, is seen as a promising solution to prevent the diffusion of illegal content while preserving encryption. While these proposals raise strong privacy concerns, proponents of the solutions have argued that the risk is limited as the technology has a limited scope: detecting known illegal content. In this paper, we show that modern perceptual hashing algorithms are actually fairly flexible pieces of technology and that this flexibility could be used by an adversary to add a secondary hidden feature to a client-side scanning system. More specifically, we show that an adversary providing the PH algorithm can \"hide\" a secondary purpose of face recognition of a target individual alongside its primary purpose of image copy detection. We first propose a procedure to train a dual-purpose deep perceptual hashing model by jointly optimizing for both the image copy detection and the targeted facial recognition task. Second, we extensively evaluate our dual-purpose model and show it to be able to reliably identify a target individual 67% of the time while not impacting its performance at detecting illegal content. We also show that our model is neither a general face detection nor a facial recognition model, allowing its secondary purpose to be hidden. Finally, we show that the secondary purpose can be enabled by adding a single illegal looking image to the database. Taken together, our results raise concerns that a deep perceptual hashing-based CSS system could turn billions of user devices into tools to locate targeted individuals.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Shubham Jain",
-        "Ana-Maria Cre\u0163u",
-        "Antoine Cully",
-        "Yves-Alexandre de Montjoye"
-      ],
-      "url": "https://openalex.org/W4384948754",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3106646114",
-      "title": "Composite Backdoor Attack for Deep Neural Network by Mixing Existing Benign Features",
-      "abstract": "With the prevalent use of Deep Neural Networks (DNNs) in many applications, security of these networks is of importance. Pre-trained DNNs may contain backdoors that are injected through poisoned training. These trojaned models perform well when regular inputs are provided, but misclassify to a target output label when the input is stamped with a unique pattern called trojan trigger. Recently various backdoor detection and mitigation systems for DNN based AI applications have been proposed. However, many of them are limited to trojan attacks that require a specific patch trigger. In this paper, we introduce composite attack, a more flexible and stealthy trojan attack that eludes backdoor scanners using trojan triggers composed from existing benign features of multiple labels. We show that a neural network with a composed backdoor can achieve accuracy comparable to its original version on benign data and misclassifies when the composite trigger is present in the input. Our experiments on 7 different tasks show that this attack poses a severe threat. We evaluate our attack with two state-of-the-art backdoor scanners. The results show none of the injected backdoors can be detected by either scanner. We also study in details why the scanners are not effective. In the end, we discuss the essence of our attack and propose possible defense.",
-      "year": 2020,
-      "venue": null,
-      "authors": [
-        "Junyu Lin",
-        "Lei Xu",
-        "Yingqi Liu",
-        "Xiangyu Zhang"
-      ],
-      "url": "https://openalex.org/W3106646114",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4385695509",
-      "title": "Fabricated Flips: Poisoning Federated Learning without Data",
-      "abstract": "&lt;p&gt;Attacks on Federated Learning (FL) can severely reduce the quality of the generated models and limit the usefulness of this emerging learning paradigm that enables on-premise decentralized learning. However, existing untargeted attacks are not practical for many scenarios as they assume that i) the attacker knows every update of benign clients, or ii) the attacker has a large dataset to locally train updates imitating benign parties. In this paper, we propose a data-free untargeted attack (DFA) that synthesizes malicious data to craft adversarial models without eavesdropping on the transmission of benign clients at all or requiring a large quantity of task-specific training data. We design two variants of DFA, namely DFA-R and DFA-G, which differ in how they trade off stealthiness and effectiveness. Specifically, DFA-R iteratively optimizes a malicious data layer to minimize the prediction confidence of all outputs of the global model, whereas DFA-G interactively trains a malicious data generator network by steering the output of the global model toward a particular class. Experimental results on Fashion-MNIST, Cifar-10, and SVHN show that DFA, despite requiring fewer assumptions than existing attacks, achieves similar or even higher attack success rate than state-of-the-art untargeted attacks against various state-of-the-art defense mechanisms. Concretely, they can evade all considered defense mechanisms in at least 50% of the cases for CIFAR-10 and often reduce the accuracy by more than a factor of 2. Consequently, we design REFD, a defense specifically crafted to protect against data-free attacks. REFD leverages a reference dataset to detect updates that are biased or have a low confidence. It greatly improves upon existing defenses by filtering out the malicious updates and achieves high global model accuracy.&lt;/p&gt;",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Jiyue Huang",
-        "Zilong Zhao",
-        "Lydia Y. Chen",
-        "Stefanie Roos"
-      ],
-      "url": "https://openalex.org/W4385695509",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"

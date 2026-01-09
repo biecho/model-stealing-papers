@@ -1,424 +1,45 @@
 {
   "owasp_id": "ML09",
-  "owasp_name": "Output Integrity",
-  "total": 22,
+  "owasp_name": "Output Integrity Attack",
+  "total": 2,
   "updated": "2026-01-09",
   "papers": [
     {
-      "paper_id": "seed_25e677aa",
-      "title": "\u201cIs your explanation stable?\u201d: A Robustness Evaluation Framework for Feature Attribution",
-      "abstract": "Understanding the decision process of neural networks is hard. One vital method for explanation is to attribute its decision to pivotal features. Although many algorithms are proposed, most of them solely improve the faithfulness to the model. However, the real environment contains many random noises, which may leads to great fluctuations in the explanations. More seriously, recent works show that explanation algorithms are vulnerable to adversarial attacks. All of these make the explanation hard to trust in real scenarios.   To bridge this gap, we propose a model-agnostic method \\emph{Median Test for Feature Attribution} (MeTFA) to quantify the uncertainty and increase the stability of explanation algorithms with theoretical guarantees. MeTFA has the following two functions: (1) examine whether one feature is significantly important or unimportant and generate a MeTFA-significant map to visualize the results; (2) compute the confidence interval of a feature attribution score and generate a MeTFA-smoothed map to increase the stability of the explanation. Experiments show that MeTFA improves the visual quality of explanations and significantly reduces the instability while maintaining the faithfulness. To quantitatively evaluate the faithfulness of an explanation under different noise settings, we further propose several robust faithfulness metrics. Experiment results show that the MeTFA-smoothed explanation can significantly increase the robust faithfulness. In addition, we use two scenarios to show MeTFA's potential in the applications. First, when applied to the SOTA explanation method to locate context bias for semantic segmentation models, MeTFA-significant explanations use far smaller regions to maintain 99\\%+ faithfulness. Second, when tested with different explanation-oriented attacks, MeTFA can help defend vanilla, as well as adaptive, adversarial attacks against explanations.",
-      "year": 2022,
+      "paper_id": "2009.09663",
+      "title": "DeepDyve: Dynamic Verification for Deep Neural Networks",
+      "abstract": "Deep neural networks (DNNs) have become one of the enabling technologies in many safety-critical applications, e.g., autonomous driving and medical image analysis. DNN systems, however, suffer from various kinds of threats, such as adversarial example attacks and fault injection attacks. While there are many defense methods proposed against maliciously crafted inputs, solutions against faults presented in the DNN system itself (e.g., parameters and calculations) are far less explored. In this paper, we develop a novel lightweight fault-tolerant solution for DNN-based systems, namely DeepDyve, which employs pre-trained neural networks that are far simpler and smaller than the original DNN for dynamic verification. The key to enabling such lightweight checking is that the smaller neural network only needs to produce approximate results for the initial task without sacrificing fault coverage much. We develop efficient and effective architecture and task exploration techniques to achieve optimized risk/overhead trade-off in DeepDyve. Experimental results show that DeepDyve can reduce 90% of the risks at around 10% overhead.",
+      "year": 2020,
       "venue": "ACM CCS",
       "authors": [
-        "Yuyou Gan",
-        "Yuhao Mao",
-        "Xuhong Zhang",
-        "Shouling Ji",
-        "Yuwen Pu",
-        "Meng Han",
-        "Jianwei Yin",
-        "Ting Wang"
+        "Yu Li",
+        "Min Li",
+        "Bo Luo",
+        "Ye Tian",
+        "Qiang Xu"
       ],
-      "url": "https://arxiv.org/abs/2209.01782",
+      "url": "https://arxiv.org/abs/2009.09663",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
     },
     {
-      "paper_id": "2409.09272",
-      "title": "SafeEar: Content Privacy-Preserving Audio Deepfake Detection",
-      "abstract": "Text-to-Speech (TTS) and Voice Conversion (VC) models have exhibited remarkable performance in generating realistic and natural audio. However, their dark side, audio deepfake poses a significant threat to both society and individuals. Existing countermeasures largely focus on determining the genuineness of speech based on complete original audio recordings, which however often contain private content. This oversight may refrain deepfake detection from many applications, particularly in scenarios involving sensitive information like business secrets. In this paper, we propose SafeEar, a novel framework that aims to detect deepfake audios without relying on accessing the speech content within. Our key idea is to devise a neural audio codec into a novel decoupling model that well separates the semantic and acoustic information from audio samples, and only use the acoustic information (e.g., prosody and timbre) for deepfake detection. In this way, no semantic content will be exposed to the detector. To overcome the challenge of identifying diverse deepfake audio without semantic clues, we enhance our deepfake detector with real-world codec augmentation. Extensive experiments conducted on four benchmark datasets demonstrate SafeEar's effectiveness in detecting various deepfake techniques with an equal error rate (EER) down to 2.02%. Simultaneously, it shields five-language speech content from being deciphered by both machine and human auditory analysis, demonstrated by word error rates (WERs) all above 93.93% and our user study. Furthermore, our benchmark constructed for anti-deepfake and anti-content recovery evaluation helps provide a basis for future research in the realms of audio privacy preservation and deepfake detection.",
-      "year": 2024,
-      "venue": "ACM CCS",
-      "authors": [
-        "Xinfeng Li",
-        "Kai Li",
-        "Yifan Zheng",
-        "Chen Yan",
-        "Xiaoyu Ji",
-        "Wenyuan Xu"
-      ],
-      "url": "https://arxiv.org/abs/2409.09272",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4403623444",
-      "title": "VoiceWukong: Benchmarking Deepfake Voice Detection",
-      "abstract": "With the rapid advancement of technologies like text-to-speech (TTS) and voice conversion (VC), detecting deepfake voices has become increasingly crucial. However, both academia and industry lack a comprehensive and intuitive benchmark for evaluating detectors. Existing datasets are limited in language diversity and lack many manipulations encountered in real-world production environments. To fill this gap, we propose VoiceWukong, a benchmark designed to evaluate the performance of deepfake voice detectors. To build the dataset, we first collected deepfake voices generated by 19 advanced and widely recognized commercial tools and 15 open-source tools. We then created 38 data variants covering six types of manipulations, constructing the evaluation dataset for deepfake voice detection. VoiceWukong thus includes 265,200 English and 148,200 Chinese deepfake voice samples. Using VoiceWukong, we evaluated 12 state-of-the-art detectors. AASIST2 achieved the best equal error rate (EER) of 13.50%, while all others exceeded 20%. Our findings reveal that these detectors face significant challenges in real-world applications, with dramatically declining performance. In addition, we conducted a user study with more than 300 participants. The results are compared with the performance of the 12 detectors and a multimodel large language model (MLLM), i.e., Qwen2-Audio, where different detectors and humans exhibit varying identification capabilities for deepfake voices at different deception levels, while the LALM demonstrates no detection ability at all. Furthermore, we provide a leaderboard for deepfake voice detection, publicly available at {https://voicewukong.github.io}.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Zhenyu Yuan",
-        "Y. Zhao",
-        "H. Wang"
-      ],
-      "url": "https://openalex.org/W4403623444",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4415158376",
-      "title": "SafeSpeech: Robust and Universal Voice Protection Against Malicious Speech Synthesis",
-      "abstract": "Speech synthesis technology has brought great convenience, while the widespread usage of realistic deepfake audio has triggered hazards. Malicious adversaries may unauthorizedly collect victims' speeches and clone a similar voice for illegal exploitation (\\textit{e.g.}, telecom fraud). However, the existing defense methods cannot effectively prevent deepfake exploitation and are vulnerable to robust training techniques. Therefore, a more effective and robust data protection method is urgently needed. In response, we propose a defensive framework, \\textit{\\textbf{SafeSpeech}}, which protects the users' audio before uploading by embedding imperceptible perturbations on original speeches to prevent high-quality synthetic speech. In SafeSpeech, we devise a robust and universal proactive protection technique, \\textbf{S}peech \\textbf{PE}rturbative \\textbf{C}oncealment (\\textbf{SPEC}), that leverages a surrogate model to generate universally applicable perturbation for generative synthetic models. Moreover, we optimize the human perception of embedded perturbation in terms of time and frequency domains. To evaluate our method comprehensively, we conduct extensive experiments across advanced models and datasets, both subjectively and objectively. Our experimental results demonstrate that SafeSpeech achieves state-of-the-art (SOTA) voice protection effectiveness and transferability and is highly robust against advanced adaptive adversaries. Moreover, SafeSpeech has real-time capability in real-world tests. The source code is available at \\href{https://github.com/wxzyd123/SafeSpeech}{https://github.com/wxzyd123/SafeSpeech}.",
-      "year": 2025,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Zhisheng Zhang",
-        "Derui Wang",
-        "Qianyi Yang",
-        "Pengyang Huang",
-        "Jialun Pu",
-        "Yuxin Cao",
-        "Kai Ye",
-        "Jie Hao",
-        "Yixian Yang"
-      ],
-      "url": "https://openalex.org/W4415158376",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2309.05679",
-      "title": "Good-looking but Lacking Faithfulness: Understanding Local Explanation Methods through Trend-based Testing",
-      "abstract": "While enjoying the great achievements brought by deep learning (DL), people are also worried about the decision made by DL models, since the high degree of non-linearity of DL models makes the decision extremely difficult to understand. Consequently, attacks such as adversarial attacks are easy to carry out, but difficult to detect and explain, which has led to a boom in the research on local explanation methods for explaining model decisions. In this paper, we evaluate the faithfulness of explanation methods and find that traditional tests on faithfulness encounter the random dominance problem, \\ie, the random selection performs the best, especially for complex data. To further solve this problem, we propose three trend-based faithfulness tests and empirically demonstrate that the new trend tests can better assess faithfulness than traditional tests on image, natural language and security tasks. We implement the assessment system and evaluate ten popular explanation methods. Benefiting from the trend tests, we successfully assess the explanation methods on complex data for the first time, bringing unprecedented discoveries and inspiring future research. Downstream tasks also greatly benefit from the tests. For example, model debugging equipped with faithful explanation methods performs much better for detecting and correcting accuracy and security problems.",
-      "year": 2023,
-      "venue": "ACM CCS",
-      "authors": [
-        "Jinwen He",
-        "Kai Chen",
-        "Guozhu Meng",
-        "Jiangshan Zhang",
-        "Congyi Li"
-      ],
-      "url": "https://arxiv.org/abs/2309.05679",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4388856757",
-      "title": "Who Are You (I Really Wanna Know)? Detecting Audio DeepFakes Through Vocal Tract Reconstruction",
-      "abstract": "The rapid development of deep neural networks and generative AI has catalyzed growth in realistic speech synthesis. While this technology has great potential to improve lives, it also leads to the emergence of ''DeepFake'' where synthesized speech can be misused to deceive humans and machines for nefarious purposes. In response to this evolving threat, there has been a significant amount of interest in mitigating this threat by DeepFake detection.",
-      "year": 2023,
-      "venue": null,
-      "authors": [
-        "Zhiyuan Yu",
-        "Shixuan Zhai",
-        "Ning Zhang"
-      ],
-      "url": "https://openalex.org/W4388856757",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2210.09421",
-      "title": "Deepfake Text Detection: Limitations and Opportunities",
-      "abstract": "Recent advances in generative models for language have enabled the creation of convincing synthetic text or deepfake text. Prior work has demonstrated the potential for misuse of deepfake text to mislead content consumers. Therefore, deepfake text detection, the task of discriminating between human and machine-generated text, is becoming increasingly critical. Several defenses have been proposed for deepfake text detection. However, we lack a thorough understanding of their real-world applicability. In this paper, we collect deepfake text from 4 online services powered by Transformer-based tools to evaluate the generalization ability of the defenses on content in the wild. We develop several low-cost adversarial attacks, and investigate the robustness of existing defenses against an adaptive attacker. We find that many defenses show significant degradation in performance under our evaluation scenarios compared to their original claimed performance. Our evaluation shows that tapping into the semantic information in the text content is a promising approach for improving the robustness and generalization performance of deepfake text detection schemes.",
+      "paper_id": "2203.10902",
+      "title": "PublicCheck: Public Integrity Verification for Services of Run-time Deep Models",
+      "abstract": "Existing integrity verification approaches for deep models are designed for private verification (i.e., assuming the service provider is honest, with white-box access to model parameters). However, private verification approaches do not allow model users to verify the model at run-time. Instead, they must trust the service provider, who may tamper with the verification results. In contrast, a public verification approach that considers the possibility of dishonest service providers can benefit a wider range of users. In this paper, we propose PublicCheck, a practical public integrity verification solution for services of run-time deep models. PublicCheck considers dishonest service providers, and overcomes public verification challenges of being lightweight, providing anti-counterfeiting protection, and having fingerprinting samples that appear smooth. To capture and fingerprint the inherent prediction behaviors of a run-time model, PublicCheck generates smoothly transformed and augmented encysted samples that are enclosed around the model's decision boundary while ensuring that the verification queries are indistinguishable from normal queries. PublicCheck is also applicable when knowledge of the target model is limited (e.g., with no knowledge of gradients or model parameters). A thorough evaluation of PublicCheck demonstrates the strong capability for model integrity breach detection (100% detection accuracy with less than 10 black-box API queries) against various model integrity attacks and model compression attacks. PublicCheck also demonstrates the smooth appearance, feasibility, and efficiency of generating a plethora of encysted samples for fingerprinting.",
       "year": 2023,
       "venue": "IEEE S&P",
       "authors": [
-        "Jiameng Pu",
-        "Zain Sarwar",
-        "Sifat Muhammad Abdullah",
-        "Abdullah Rehman",
-        "Yoonjin Kim",
-        "Parantapa Bhattacharya",
-        "Mobin Javed",
-        "Bimal Viswanath"
+        "Shuo Wang",
+        "Sharif Abuadbba",
+        "Sidharth Agarwal",
+        "Kristen Moore",
+        "Ruoxi Sun",
+        "Minhui Xue",
+        "Surya Nepal",
+        "Seyit Camtepe",
+        "Salil Kanhere"
       ],
-      "url": "https://arxiv.org/abs/2210.09421",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2303.14822",
-      "title": "MGTBench: Benchmarking Machine-Generated Text Detection",
-      "abstract": "Nowadays, powerful large language models (LLMs) such as ChatGPT have demonstrated revolutionary power in a variety of tasks. Consequently, the detection of machine-generated texts (MGTs) is becoming increasingly crucial as LLMs become more advanced and prevalent. These models have the ability to generate human-like language, making it challenging to discern whether a text is authored by a human or a machine. This raises concerns regarding authenticity, accountability, and potential bias. However, existing methods for detecting MGTs are evaluated using different model architectures, datasets, and experimental settings, resulting in a lack of a comprehensive evaluation framework that encompasses various methodologies. Furthermore, it remains unclear how existing detection methods would perform against powerful LLMs. In this paper, we fill this gap by proposing the first benchmark framework for MGT detection against powerful LLMs, named MGTBench. Extensive evaluations on public datasets with curated texts generated by various powerful LLMs such as ChatGPT-turbo and Claude demonstrate the effectiveness of different detection methods. Our ablation study shows that a larger number of words in general leads to better performance and most detection methods can achieve similar performance with much fewer training samples. Moreover, we delve into a more challenging task: text attribution. Our findings indicate that the model-based detection methods still perform well in the text attribution task. To investigate the robustness of different detection methods, we consider three adversarial attacks, namely paraphrasing, random spacing, and adversarial perturbations. We discover that these attacks can significantly diminish detection effectiveness, underscoring the critical need for the development of more robust detection methods.",
-      "year": 2024,
-      "venue": "CCS",
-      "authors": [
-        "Xinlei He",
-        "Xinyue Shen",
-        "Zeyuan Chen",
-        "Michael Backes",
-        "Yang Zhang"
-      ],
-      "url": "https://arxiv.org/abs/2303.14822",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4414944889",
-      "title": "Bridging the Gap in Vision Language Models in Identifying Unsafe Concepts Across Modalities",
-      "abstract": "Vision-language models (VLMs) are increasingly applied to identify unsafe or inappropriate images due to their internal ethical standards and powerful reasoning abilities. However, it is still unclear whether they can recognize various unsafe concepts when presented in different modalities, such as text and images. To address this, we first compile the UnsafeConcepts dataset, featuring 75 unsafe concepts, i.e., ``Swastika,'' ``Sexual Harassment,'' and ``Assaults,'' along with associated 1.5K images. We then conduct a systematic evaluation of VLMs' perception (concept recognition) and alignment (ethical reasoning) capabilities. We assess eight popular VLMs and find that, although most VLMs accurately perceive unsafe concepts, they sometimes mistakenly classify these concepts as safe. We also identify a consistent modality gap among open-source VLMs in distinguishing between visual and textual unsafe concepts. To bridge this gap, we introduce a simplified reinforcement learning (RL)-based approach using proximal policy optimization (PPO) to strengthen the ability to identify unsafe concepts from images. Our approach uses reward scores based directly on VLM responses, bypassing the need for collecting human-annotated preference data to train a new reward model. Experimental results show that our approach effectively enhances VLM alignment on images while preserving general capabilities. It outperforms baselines such as supervised fine-tuning (SFT) and direct preference optimization (DPO). We hope our dataset, evaluation findings, and proposed alignment solution contribute to the community's efforts in advancing safe VLMs.",
-      "year": 2025,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Yiting Qu",
-        "Michael Backes",
-        "Yang Zhang"
-      ],
-      "url": "https://openalex.org/W4414944889",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4407124169",
-      "title": "Activation Approximations Can Incur Safety Vulnerabilities in Aligned LLMs: Comprehensive Analysis and Defense",
-      "abstract": "Large Language Models (LLMs) have showcased remarkable capabilities across various domains. Accompanying the evolving capabilities and expanding deployment scenarios of LLMs, their deployment challenges escalate due to their sheer scale and the advanced yet complex activation designs prevalent in notable model series, such as Llama, Gemma, Mistral. These challenges have become particularly pronounced in resource-constrained deployment scenarios, where mitigating inference bottlenecks is imperative. Among various recent efforts, activation approximation has emerged as a promising avenue for pursuing inference efficiency, sometimes considered indispensable in applications such as private inference. Despite achieving substantial speedups with minimal impact on utility, even appearing sound and practical for real-world deployment, the safety implications of activation approximations remain unclear. In this work, we fill this critical gap in LLM safety by conducting the first systematic safety evaluation of activation approximations. Our safety vetting spans seven state-of-the-art techniques across three popular categories (activation polynomialization, activation sparsification, and activation quantization), revealing consistent safety degradation across ten safety-aligned LLMs. To overcome the hurdle of devising a unified defense accounting for diverse activation approximation methods, we perform an in-depth analysis of their shared error patterns and uncover three key findings. We propose QuadA, a novel safety enhancement method tailored to mitigate the safety compromises introduced by activation approximations. Extensive experiments and ablation studies corroborate QuadA's effectiveness in enhancing the safety capabilities of LLMs after activation approximations.",
-      "year": 2025,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Jiawen Zhang",
-        "Kejia Chen",
-        "Lipeng He",
-        "Jian Lou",
-        "Dan Li",
-        "Zunlei Feng",
-        "Mingli Song",
-        "Jian Liu",
-        "Kui Ren",
-        "Xiaohu Yang"
-      ],
-      "url": "https://openalex.org/W4407124169",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2311.05019",
-      "title": "DEMASQ: Unmasking the ChatGPT Wordsmith",
-      "abstract": "The potential misuse of ChatGPT and other Large Language Models (LLMs) has raised concerns regarding the dissemination of false information, plagiarism, academic dishonesty, and fraudulent activities. Consequently, distinguishing between AI-generated and human-generated content has emerged as an intriguing research topic. However, current text detection methods lack precision and are often restricted to specific tasks or domains, making them inadequate for identifying content generated by ChatGPT. In this paper, we propose an effective ChatGPT detector named DEMASQ, which accurately identifies ChatGPT-generated content. Our method addresses two critical factors: (i) the distinct biases in text composition observed in human- and machine-generated content and (ii) the alterations made by humans to evade previous detection methods. DEMASQ is an energy-based detection model that incorporates novel aspects, such as (i) optimization inspired by the Doppler effect to capture the interdependence between input text embeddings and output labels, and (ii) the use of explainable AI techniques to generate diverse perturbations. To evaluate our detector, we create a benchmark dataset comprising a mixture of prompts from both ChatGPT and humans, encompassing domains such as medical, open Q&A, finance, wiki, and Reddit. Our evaluation demonstrates that DEMASQ achieves high accuracy in identifying content generated by ChatGPT.",
-      "year": 2024,
-      "venue": "NDSS",
-      "authors": [
-        "Kavita Kumari",
-        "Alessandro Pegoraro",
-        "Hossein Fereidooni",
-        "Ahmad-Reza Sadeghi"
-      ],
-      "url": "https://arxiv.org/abs/2311.05019",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2402.03214",
-      "title": "Organic or Diffused: Can We Distinguish Human Art from AI-generated Images?",
-      "abstract": "The advent of generative AI images has completely disrupted the art world. Distinguishing AI generated images from human art is a challenging problem whose impact is growing over time. A failure to address this problem allows bad actors to defraud individuals paying a premium for human art and companies whose stated policies forbid AI imagery. It is also critical for content owners to establish copyright, and for model trainers interested in curating training data in order to avoid potential model collapse.   There are several different approaches to distinguishing human art from AI images, including classifiers trained by supervised learning, research tools targeting diffusion models, and identification by professional artists using their knowledge of artistic techniques. In this paper, we seek to understand how well these approaches can perform against today's modern generative models in both benign and adversarial settings. We curate real human art across 7 styles, generate matching images from 5 generative models, and apply 8 detectors (5 automated detectors and 3 different human groups including 180 crowdworkers, 4000+ professional artists, and 13 expert artists experienced at detecting AI). Both Hive and expert artists do very well, but make mistakes in different ways (Hive is weaker against adversarial perturbations while Expert artists produce higher false positives). We believe these weaknesses will remain as models continue to evolve, and use our data to demonstrate why a combined team of human and automated detectors provides the best combination of accuracy and robustness.",
-      "year": 2024,
-      "venue": "CCS",
-      "authors": [
-        "Anna Yoo Jeong Ha",
-        "Josephine Passananti",
-        "Ronik Bhaskar",
-        "Shawn Shan",
-        "Reid Southen",
-        "Haitao Zheng",
-        "Ben Y. Zhao"
-      ],
-      "url": "https://arxiv.org/abs/2402.03214",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2306.05524",
-      "title": "On the Detectability of ChatGPT Content: Benchmarking, Methodology, and Evaluation through the Lens of Academic Writing",
-      "abstract": "With ChatGPT under the spotlight, utilizing large language models (LLMs) to assist academic writing has drawn a significant amount of debate in the community. In this paper, we aim to present a comprehensive study of the detectability of ChatGPT-generated content within the academic literature, particularly focusing on the abstracts of scientific papers, to offer holistic support for the future development of LLM applications and policies in academia. Specifically, we first present GPABench2, a benchmarking dataset of over 2.8 million comparative samples of human-written, GPT-written, GPT-completed, and GPT-polished abstracts of scientific writing in computer science, physics, and humanities and social sciences. Second, we explore the methodology for detecting ChatGPT content. We start by examining the unsatisfactory performance of existing ChatGPT detecting tools and the challenges faced by human evaluators (including more than 240 researchers or students). We then test the hand-crafted linguistic features models as a baseline and develop a deep neural framework named CheckGPT to better capture the subtle and deep semantic and linguistic patterns in ChatGPT written literature. Last, we conduct comprehensive experiments to validate the proposed CheckGPT framework in each benchmarking task over different disciplines. To evaluate the detectability of ChatGPT content, we conduct extensive experiments on the transferability, prompt engineering, and robustness of CheckGPT.",
-      "year": 2024,
-      "venue": "CCS",
-      "authors": [
-        "Zeyan Liu",
-        "Zijun Yao",
-        "Fengjun Li",
-        "Bo Luo"
-      ],
-      "url": "https://arxiv.org/abs/2306.05524",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4415311374",
-      "title": "\"I Cannot Write This Because It Violates Our Content Policy\": Understanding Content Moderation Policies and User Experiences in Generative AI Products",
-      "abstract": "While recent research has focused on developing safeguards for generative AI (GAI) model-level content safety, little is known about how content moderation to prevent malicious content performs for end-users in real-world GAI products. To bridge this gap, we investigated content moderation policies and their enforcement in GAI online tools -- consumer-facing web-based GAI applications. We first analyzed content moderation policies of 14 GAI online tools. While these policies are comprehensive in outlining moderation practices, they usually lack details on practical implementations and are not specific about how users can aid in moderation or appeal moderation decisions. Next, we examined user-experienced content moderation successes and failures through Reddit discussions on GAI online tools. We found that although moderation systems succeeded in blocking malicious generations pervasively, users frequently experienced frustration in failures of both moderation systems and user support after moderation. Based on these findings, we suggest improvements for content moderation policy and user experiences in real-world GAI products.",
-      "year": 2025,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Lan Gao",
-        "Oscar Chen",
-        "Rachel Lee",
-        "Nick Feamster",
-        "Chenhao Tan",
-        "Marshini Chetty"
-      ],
-      "url": "https://openalex.org/W4415311374",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4403996051",
-      "title": "When LLMs Go Online: The Emerging Threat of Web-Enabled LLMs",
-      "abstract": "Recent advancements in Large Language Models (LLMs) have established them as agentic systems capable of planning and interacting with various tools. These LLM agents are often paired with web-based tools, enabling access to diverse sources and real-time information. Although these advancements offer significant benefits across various applications, they also increase the risk of malicious use, particularly in cyberattacks involving personal information. In this work, we investigate the risks associated with misuse of LLM agents in cyberattacks involving personal data. Specifically, we aim to understand: 1) how potent LLM agents can be when directed to conduct cyberattacks, 2) how cyberattacks are enhanced by web-based tools, and 3) how affordable and easy it becomes to launch cyberattacks using LLM agents. We examine three attack scenarios: the collection of Personally Identifiable Information (PII), the generation of impersonation posts, and the creation of spear-phishing emails. Our experiments reveal the effectiveness of LLM agents in these attacks: LLM agents achieved a precision of up to 95.9% in collecting PII, generated impersonation posts where 93.9% of them were deemed authentic, and boosted click rate of phishing links in spear phishing emails by 46.67%. Additionally, our findings underscore the limitations of existing safeguards in contemporary commercial LLMs, emphasizing the urgent need for robust security measures to prevent the misuse of LLM agents.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Hanna Kim",
-        "Minkyoo Song",
-        "Seung Ho Na",
-        "Seungwon Shin",
-        "K.-H Lee"
-      ],
-      "url": "https://openalex.org/W4403996051",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4407310131",
-      "title": "Unsafe LLM-Based Search: Quantitative Analysis and Mitigation of Safety Risks in AI Web Search",
-      "abstract": "Recent advancements in Large Language Models (LLMs) have significantly enhanced the capabilities of AI-Powered Search Engines (AIPSEs), offering precise and efficient responses by integrating external databases with pre-existing knowledge. However, we observe that these AIPSEs raise risks such as quoting malicious content or citing malicious websites, leading to harmful or unverified information dissemination. In this study, we conduct the first safety risk quantification on seven production AIPSEs by systematically defining the threat model, risk type, and evaluating responses to various query types. With data collected from PhishTank, ThreatBook, and LevelBlue, our findings reveal that AIPSEs frequently generate harmful content that contains malicious URLs even with benign queries (e.g., with benign keywords). We also observe that directly querying a URL will increase the number of main risk-inclusive responses, while querying with natural language will slightly mitigate such risk. Compared to traditional search engines, AIPSEs outperform in both utility and safety. We further perform two case studies on online document spoofing and phishing to show the ease of deceiving AIPSEs in the real-world setting. To mitigate these risks, we develop an agent-based defense with a GPT-4.1-based content refinement tool and a URL detector. Our evaluation shows that our defense can effectively reduce the risk, with only a minor cost of reducing available information by approximately 10.7%. Our research highlights the urgent need for robust safety measures in AIPSEs.",
-      "year": 2025,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Z. Luo",
-        "Zhaoyun Peng",
-        "Yule Liu",
-        "Zhen Sun",
-        "M Li",
-        "Jingyi Zheng",
-        "Xinlei He"
-      ],
-      "url": "https://openalex.org/W4407310131",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2509.07764",
-      "title": "AgentSentinel: An End-to-End and Real-Time Security Defense Framework for Computer-Use Agents",
-      "abstract": "Large Language Models (LLMs) have been increasingly integrated into computer-use agents, which can autonomously operate tools on a user's computer to accomplish complex tasks. However, due to the inherently unstable and unpredictable nature of LLM outputs, they may issue unintended tool commands or incorrect inputs, leading to potentially harmful operations. Unlike traditional security risks stemming from insecure user prompts, tool execution results from LLM-driven decisions introduce new and unique security challenges. These vulnerabilities span across all components of a computer-use agent. To mitigate these risks, we propose AgentSentinel, an end-to-end, real-time defense framework designed to mitigate potential security threats on a user's computer. AgentSentinel intercepts all sensitive operations within agent-related services and halts execution until a comprehensive security audit is completed. Our security auditing mechanism introduces a novel inspection process that correlates the current task context with system traces generated during task execution. To thoroughly evaluate AgentSentinel, we present BadComputerUse, a benchmark consisting of 60 diverse attack scenarios across six attack categories. The benchmark demonstrates a 87% average attack success rate on four state-of-the-art LLMs. Our evaluation shows that AgentSentinel achieves an average defense success rate of 79.6%, significantly outperforming all baseline defenses.",
-      "year": 2025,
-      "venue": "ACM CCS",
-      "authors": [
-        "Haitao Hu",
-        "Peng Chen",
-        "Yanpeng Zhao",
-        "Yuqi Chen"
-      ],
-      "url": "https://arxiv.org/abs/2509.07764",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2009.03015",
-      "title": "Adversarial Watermarking Transformer: Towards Tracing Text Provenance with Data Hiding",
-      "abstract": "Recent advances in natural language generation have introduced powerful language models with high-quality output text. However, this raises concerns about the potential misuse of such models for malicious purposes. In this paper, we study natural language watermarking as a defense to help better mark and trace the provenance of text. We introduce the Adversarial Watermarking Transformer (AWT) with a jointly trained encoder-decoder and adversarial training that, given an input text and a binary message, generates an output text that is unobtrusively encoded with the given message. We further study different training and inference strategies to achieve minimal changes to the semantics and correctness of the input text.   AWT is the first end-to-end model to hide data in text by automatically learning -- without ground truth -- word substitutions along with their locations in order to encode the message. We empirically show that our model is effective in largely preserving text utility and decoding the watermark while hiding its presence against adversaries. Additionally, we demonstrate that our method is robust against a range of attacks.",
-      "year": 2021,
-      "venue": "IEEE S&P",
-      "authors": [
-        "Sahar Abdelnabi",
-        "Mario Fritz"
-      ],
-      "url": "https://arxiv.org/abs/2009.03015",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2411.18479",
-      "title": "SoK: Watermarking for AI-Generated Content",
-      "abstract": "As the outputs of generative AI (GenAI) techniques improve in quality, it becomes increasingly challenging to distinguish them from human-created content. Watermarking schemes are a promising approach to address the problem of distinguishing between AI and human-generated content. These schemes embed hidden signals within AI-generated content to enable reliable detection. While watermarking is not a silver bullet for addressing all risks associated with GenAI, it can play a crucial role in enhancing AI safety and trustworthiness by combating misinformation and deception. This paper presents a comprehensive overview of watermarking techniques for GenAI, beginning with the need for watermarking from historical and regulatory perspectives. We formalize the definitions and desired properties of watermarking schemes and examine the key objectives and threat models for existing approaches. Practical evaluation strategies are also explored, providing insights into the development of robust watermarking techniques capable of resisting various attacks. Additionally, we review recent representative works, highlight open challenges, and discuss potential directions for this emerging field. By offering a thorough understanding of watermarking in GenAI, this work aims to guide researchers in advancing watermarking methods and applications, and support policymakers in addressing the broader implications of GenAI.",
-      "year": 2025,
-      "venue": "IEEE S&P",
-      "authors": [
-        "Xuandong Zhao",
-        "Sam Gunn",
-        "Miranda Christ",
-        "Jaiden Fairoze",
-        "Andres Fabrega",
-        "Nicholas Carlini",
-        "Sanjam Garg",
-        "Sanghyun Hong",
-        "Milad Nasr",
-        "Florian Tramer",
-        "Somesh Jha",
-        "Lei Li",
-        "Yu-Xiang Wang",
-        "Dawn Song"
-      ],
-      "url": "https://arxiv.org/abs/2411.18479",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4391421113",
-      "title": "Provably Robust Multi-bit Watermarking for AI-generated Text",
-      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities of generating texts resembling human language. However, they can be misused by criminals to create deceptive content, such as fake news and phishing emails, which raises ethical concerns. Watermarking is a key technique to address these concerns, which embeds a message (e.g., a bit string) into a text generated by an LLM. By embedding the user ID (represented as a bit string) into generated texts, we can trace generated texts to the user, known as content source tracing. The major limitation of existing watermarking techniques is that they achieve sub-optimal performance for content source tracing in real-world scenarios. The reason is that they cannot accurately or efficiently extract a long message from a generated text. We aim to address the limitations. In this work, we introduce a new watermarking method for LLM-generated text grounded in pseudo-random segment assignment. We also propose multiple techniques to further enhance the robustness of our watermarking algorithm. We conduct extensive experiments to evaluate our method. Our experimental results show that our method substantially outperforms existing baselines in both accuracy and robustness on benchmark datasets. For instance, when embedding a message of length 20 into a 200-token generated text, our method achieves a match rate of $97.6\\%$, while the state-of-the-art work Yoo et al. only achieves $49.2\\%$. Additionally, we prove that our watermark can tolerate edits within an edit distance of 17 on average for each paragraph under the same setting.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Wenjie Qu",
-        "Dong Yin",
-        "Zixin He",
-        "Wei Zou",
-        "Tianyang Tao",
-        "Jinyuan Jia",
-        "Jiaheng Zhang"
-      ],
-      "url": "https://openalex.org/W4391421113",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4407124110",
-      "title": "Synthetic Artifact Auditing: Tracing LLM-Generated Synthetic Data Usage in Downstream Applications",
-      "abstract": "Large language models (LLMs) have facilitated the generation of high-quality, cost-effective synthetic data for developing downstream models and conducting statistical analyses in various domains. However, the increased reliance on synthetic data may pose potential negative impacts. Numerous studies have demonstrated that LLM-generated synthetic data can perpetuate and even amplify societal biases and stereotypes, and produce erroneous outputs known as ``hallucinations'' that deviate from factual knowledge. In this paper, we aim to audit artifacts, such as classifiers, generators, or statistical plots, to identify those trained on or derived from synthetic data and raise user awareness, thereby reducing unexpected consequences and risks in downstream applications. To this end, we take the first step to introduce synthetic artifact auditing to assess whether a given artifact is derived from LLM-generated synthetic data. We then propose an auditing framework with three methods including metric-based auditing, tuning-based auditing, and classification-based auditing. These methods operate without requiring the artifact owner to disclose proprietary training details. We evaluate our auditing framework on three text classification tasks, two text summarization tasks, and two data visualization tasks across three training scenarios. Our evaluation demonstrates the effectiveness of all proposed auditing methods across all these tasks. For instance, black-box metric-based auditing can achieve an average accuracy of $0.868 \\pm 0.071$ for auditing classifiers and $0.880 \\pm 0.052$ for auditing generators using only 200 random queries across three scenarios. We hope our research will enhance model transparency and regulatory compliance, ensuring the ethical and responsible use of synthetic data.",
-      "year": 2025,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Yixin Wu",
-        "Ziqing Yang",
-        "Yun Shen",
-        "Michael Backes",
-        "Yang Zhang"
-      ],
-      "url": "https://openalex.org/W4407124110",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4376626884",
-      "title": "\"My face, my rules\": Enabling Personalized Protection Against Unacceptable Face Editing",
-      "abstract": "Today, face editing is widely used to refine/alter photos in both professional and recreational settings. Yet it is also used to modify (and repost) existing online photos for cyberbullying. Our work considers an important open question: 'How can we support the collaborative use of face editing on social platforms while protecting against unacceptable edits and reposts by others?' This is challenging because, as our user study shows, users vary widely in their definition of what edits are (un)acceptable. Any global filter policy deployed by social platforms is unlikely to address the needs of all users, but hinders social interactions enabled by photo editing. Instead, we argue that face edit protection policies should be implemented by social platforms based on individual user preferences. When posting an original photo online, a user can choose to specify the types of face edits (dis)allowed on the photo. Social platforms use these per-photo edit policies to moderate future photo uploads, i.e., edited photos containing modifications that violate the original photo's policy are either blocked or shelved for user approval. Realizing this personalized protection, however, faces two immediate challenges: (1) how to accurately recognize specific modifications, if any, contained in a photo; and (2) how to associate an edited photo with its original photo (and thus the edit policy). We show that these challenges can be addressed by combining highly efficient hashing based image search and scalable semantic image comparison, and build a prototype protector (Alethia) covering nine edit types. Evaluations using IRB-approved user studies and data-driven experiments (on 839K face photos) show that Alethia accurately recognizes edited photos that violate user policies and induces a feeling of protection to study participants. This demonstrates the initial feasibility of personalized face edit protection. We also discuss current limitations and future directions to push the concept forward.",
-      "year": 2023,
-      "venue": "Proceedings on Privacy Enhancing Technologies",
-      "authors": [
-        "Zhujun Xiao",
-        "Jenna Cryan",
-        "Yuanshun Yao",
-        "Yi Hong Gordon Cheo",
-        "Yuanchao Shu",
-        "Stefan Saroiu",
-        "Ben Y. Zhao",
-        "Hai-Tao Zheng"
-      ],
-      "url": "https://openalex.org/W4376626884",
+      "url": "https://arxiv.org/abs/2203.10902",
       "pdf_url": null,
       "cited_by_count": null,
       "classification_confidence": "HIGH"
