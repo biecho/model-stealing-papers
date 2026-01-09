@@ -10,6 +10,11 @@ venv/
 
 # Data (generated)
 trends_*.png
+logs/
+
+# API keys (never commit!)
+*api_key*
+*.key
 
 # IDE
 .idea/
