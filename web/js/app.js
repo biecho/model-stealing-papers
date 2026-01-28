@@ -13,7 +13,7 @@ let manifest = null;
  */
 async function loadManifest() {
     try {
-        const response = await fetch('../data/manifest.json');
+        const response = await fetch('data/manifest.json');
         manifest = await response.json();
         return manifest;
     } catch (error) {
@@ -30,7 +30,7 @@ async function loadCategoryPapers(categoryId) {
     if (!cat) return [];
 
     try {
-        const response = await fetch(`../data/${cat.file}`);
+        const response = await fetch(`data/${cat.file}`);
         const data = await response.json();
         return data.papers || [];
     } catch (error) {
@@ -90,6 +90,49 @@ async function loadAllCategories() {
 }
 
 /**
+ * Calculate global statistics
+ */
+function getGlobalStats() {
+    const allPapers = new Map();
+    let totalCitations = 0;
+    let totalInfluential = 0;
+    const yearCounts = {};
+    const typeCounts = {};
+    const domainCounts = {};
+
+    for (const [catId, papers] of Object.entries(categoryData)) {
+        for (const paper of papers) {
+            if (!allPapers.has(paper.paper_id)) {
+                allPapers.set(paper.paper_id, paper);
+                totalCitations += paper.citation_count || 0;
+                totalInfluential += paper.influential_citation_count || 0;
+
+                if (paper.year) {
+                    yearCounts[paper.year] = (yearCounts[paper.year] || 0) + 1;
+                }
+
+                if (paper.paper_type) {
+                    typeCounts[paper.paper_type] = (typeCounts[paper.paper_type] || 0) + 1;
+                }
+
+                (paper.domains || []).forEach(d => {
+                    domainCounts[d] = (domainCounts[d] || 0) + 1;
+                });
+            }
+        }
+    }
+
+    return {
+        totalPapers: allPapers.size,
+        totalCitations,
+        totalInfluential,
+        yearCounts,
+        typeCounts,
+        domainCounts
+    };
+}
+
+/**
  * Show hub overview (all categories)
  */
 function showHubOverview() {
@@ -102,8 +145,41 @@ function showHubOverview() {
     document.getElementById('paper-list').innerHTML = '';
     document.getElementById('category-info').classList.remove('visible');
 
+    // Global stats
+    const stats = getGlobalStats();
+
+    // Stats banner
+    const statsBanner = document.createElement('div');
+    statsBanner.className = 'stats-banner';
+    statsBanner.innerHTML = `
+        <div class="stat-item">
+            <span class="stat-value">${stats.totalPapers}</span>
+            <span class="stat-label">Papers</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">${formatNumber(stats.totalCitations)}</span>
+            <span class="stat-label">Total Citations</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">${formatNumber(stats.totalInfluential)}</span>
+            <span class="stat-label">Influential Citations</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">${Object.keys(stats.typeCounts).length}</span>
+            <span class="stat-label">Paper Types</span>
+        </div>
+    `;
+    container.parentElement.insertBefore(statsBanner, container);
+
     for (const [id, cat] of Object.entries(CATEGORIES)) {
         const count = categoryData[id]?.length || 0;
+        if (count === 0) continue; // Skip empty categories
+
+        // Calculate category stats
+        const catPapers = categoryData[id] || [];
+        const catCitations = catPapers.reduce((sum, p) => sum + (p.citation_count || 0), 0);
+        const attackCount = catPapers.filter(p => p.paper_type === 'attack').length;
+        const defenseCount = catPapers.filter(p => p.paper_type === 'defense').length;
 
         const card = document.createElement('div');
         card.className = 'hub-card';
@@ -111,7 +187,14 @@ function showHubOverview() {
         card.innerHTML = `
             <h3><span class="owasp-id">${id}</span>${cat.name}</h3>
             <p>${cat.description}</p>
-            <div class="paper-count">${count} papers</div>
+            <div class="card-stats">
+                <span class="paper-count">${count} papers</span>
+                <span class="citation-count">${formatNumber(catCitations)} citations</span>
+            </div>
+            <div class="card-breakdown">
+                ${attackCount > 0 ? `<span class="type-badge attack">${attackCount} attacks</span>` : ''}
+                ${defenseCount > 0 ? `<span class="type-badge defense">${defenseCount} defenses</span>` : ''}
+            </div>
         `;
         card.addEventListener('click', () => selectCategory(id));
         container.appendChild(card);
@@ -126,6 +209,10 @@ function showHubOverview() {
  * Select a category
  */
 function selectCategory(categoryId) {
+    // Remove stats banner if exists
+    const existingBanner = document.querySelector('.stats-banner');
+    if (existingBanner) existingBanner.remove();
+
     if (categoryId === 'all') {
         showHubOverview();
         return;
@@ -157,8 +244,7 @@ function selectCategory(categoryId) {
     resetFilters();
 
     // Render
-    populateYearFilter();
-    populateVenueFilter();
+    populateFilters();
     renderCharts();
     renderPapers();
 }
@@ -170,6 +256,51 @@ function resetFilters() {
     document.getElementById('search').value = '';
     document.getElementById('year-filter').innerHTML = '<option value="">All Years</option>';
     document.getElementById('venue-filter').innerHTML = '<option value="">All Venues</option>';
+    document.getElementById('type-filter').innerHTML = '<option value="">All Types</option>';
+}
+
+/**
+ * Populate all filters
+ */
+function populateFilters() {
+    // Years
+    const years = [...new Set(papers.map(p => p.year).filter(Boolean))].sort((a, b) => b - a);
+    const yearSelect = document.getElementById('year-filter');
+    years.forEach(year => {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        yearSelect.appendChild(option);
+    });
+
+    // Venues
+    const venueCounts = {};
+    papers.forEach(p => {
+        if (p.venue) {
+            venueCounts[p.venue] = (venueCounts[p.venue] || 0) + 1;
+        }
+    });
+    const sortedVenues = Object.entries(venueCounts)
+        .sort((a, b) => b[1] - a[1])
+        .map(([venue, count]) => ({ venue, count, abbrev: getVenueAbbrev(venue) }));
+
+    const venueSelect = document.getElementById('venue-filter');
+    sortedVenues.forEach(({ venue, count, abbrev }) => {
+        const option = document.createElement('option');
+        option.value = venue;
+        option.textContent = `${abbrev} (${count})`;
+        venueSelect.appendChild(option);
+    });
+
+    // Paper types
+    const types = [...new Set(papers.map(p => p.paper_type).filter(Boolean))];
+    const typeSelect = document.getElementById('type-filter');
+    types.forEach(type => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+        typeSelect.appendChild(option);
+    });
 }
 
 /**
@@ -178,7 +309,7 @@ function resetFilters() {
 function renderCharts() {
     if (papers.length === 0) {
         document.getElementById('chart-papers-per-year').innerHTML = '';
-        document.getElementById('chart-cumulative').innerHTML = '';
+        document.getElementById('chart-type-dist').innerHTML = '';
         return;
     }
 
@@ -193,6 +324,7 @@ function renderCharts() {
         plot_bgcolor: 'rgba(0,0,0,0)'
     };
 
+    // Papers per year
     const yearCounts = {};
     papers.forEach(p => {
         if (p.year && p.year >= 2016) {
@@ -214,63 +346,38 @@ function renderCharts() {
         yaxis: { title: 'Papers' }
     }, chartConfig);
 
-    let cumulative = 0;
-    const cumulativeCounts = years.map(y => {
-        cumulative += yearCounts[y];
-        return cumulative;
-    });
-
-    Plotly.newPlot('chart-cumulative', [{
-        x: years,
-        y: cumulativeCounts,
-        type: 'scatter',
-        mode: 'lines+markers',
-        line: { color: color, width: 2 },
-        marker: { size: 6 }
-    }], {
-        ...layoutDefaults,
-        title: { text: 'Cumulative Papers', font: { size: 14 } },
-        xaxis: { title: 'Year' },
-        yaxis: { title: 'Total Papers' }
-    }, chartConfig);
-}
-
-/**
- * Populate year filter
- */
-function populateYearFilter() {
-    const years = [...new Set(papers.map(p => p.year).filter(Boolean))].sort((a, b) => b - a);
-    const select = document.getElementById('year-filter');
-    years.forEach(year => {
-        const option = document.createElement('option');
-        option.value = year;
-        option.textContent = year;
-        select.appendChild(option);
-    });
-}
-
-/**
- * Populate venue filter
- */
-function populateVenueFilter() {
-    const venueCounts = {};
+    // Paper type distribution
+    const typeCounts = {};
     papers.forEach(p => {
-        if (p.venue) {
-            venueCounts[p.venue] = (venueCounts[p.venue] || 0) + 1;
+        if (p.paper_type) {
+            typeCounts[p.paper_type] = (typeCounts[p.paper_type] || 0) + 1;
         }
     });
 
-    const sortedVenues = Object.entries(venueCounts)
-        .sort((a, b) => b[1] - a[1])
-        .map(([venue, count]) => ({ venue, count, abbrev: getVenueAbbrev(venue) }));
+    const typeColors = {
+        'attack': '#ef4444',
+        'defense': '#22c55e',
+        'survey': '#3b82f6',
+        'benchmark': '#f59e0b',
+        'empirical': '#8b5cf6',
+        'theoretical': '#6366f1',
+        'tool': '#14b8a6'
+    };
 
-    const select = document.getElementById('venue-filter');
-    sortedVenues.forEach(({ venue, count, abbrev }) => {
-        const option = document.createElement('option');
-        option.value = venue;
-        option.textContent = `${abbrev} (${count})`;
-        select.appendChild(option);
-    });
+    Plotly.newPlot('chart-type-dist', [{
+        values: Object.values(typeCounts),
+        labels: Object.keys(typeCounts).map(t => t.charAt(0).toUpperCase() + t.slice(1)),
+        type: 'pie',
+        marker: {
+            colors: Object.keys(typeCounts).map(t => typeColors[t] || '#94a3b8')
+        },
+        textinfo: 'label+percent',
+        hole: 0.4
+    }], {
+        ...layoutDefaults,
+        title: { text: 'Paper Types', font: { size: 14 } },
+        showlegend: false
+    }, chartConfig);
 }
 
 /**
@@ -280,16 +387,20 @@ function getFilteredPapers() {
     const search = document.getElementById('search').value.toLowerCase();
     const yearFilter = document.getElementById('year-filter').value;
     const venueFilter = document.getElementById('venue-filter').value;
+    const typeFilter = document.getElementById('type-filter').value;
     const sortBy = document.getElementById('sort-by').value;
 
     let filtered = papers.filter(p => {
         const matchesSearch = !search ||
             p.title?.toLowerCase().includes(search) ||
             p.abstract?.toLowerCase().includes(search) ||
-            p.authors?.some(a => a.toLowerCase().includes(search));
+            p.tldr?.toLowerCase().includes(search) ||
+            p.authors?.some(a => a.toLowerCase().includes(search)) ||
+            p.tags?.some(t => t.toLowerCase().includes(search));
         const matchesYear = !yearFilter || p.year == yearFilter;
         const matchesVenue = !venueFilter || p.venue === venueFilter;
-        return matchesSearch && matchesYear && matchesVenue;
+        const matchesType = !typeFilter || p.paper_type === typeFilter;
+        return matchesSearch && matchesYear && matchesVenue && matchesType;
     });
 
     filtered.sort((a, b) => {
@@ -306,6 +417,8 @@ function getFilteredPapers() {
                 return (b.citation_count || 0) - (a.citation_count || 0);
             case 'citations-asc':
                 return (a.citation_count || 0) - (b.citation_count || 0);
+            case 'influential-desc':
+                return (b.influential_citation_count || 0) - (a.influential_citation_count || 0);
             case 'title':
                 return (a.title || '').localeCompare(b.title || '');
             default:
@@ -324,7 +437,8 @@ function renderPapers() {
     const container = document.getElementById('paper-list');
     const stats = document.getElementById('stats');
 
-    stats.textContent = `Showing ${filtered.length} of ${papers.length} papers`;
+    const totalCitations = filtered.reduce((sum, p) => sum + (p.citation_count || 0), 0);
+    stats.textContent = `${filtered.length} papers | ${formatNumber(totalCitations)} citations`;
 
     if (filtered.length === 0) {
         container.innerHTML = '<div class="no-results">No papers found matching your criteria.</div>';
@@ -336,17 +450,41 @@ function renderPapers() {
             <div class="paper-header">
                 <div class="paper-title">${escapeHtml(paper.title)}</div>
                 <div class="paper-meta">
+                    ${paper.paper_type ? `<span class="type-badge ${paper.paper_type}">${paper.paper_type}</span>` : ''}
                     ${paper.publication_date ? `<span class="paper-year">${formatDate(paper.publication_date)}</span>` :
                       (paper.year ? `<span class="paper-year">${paper.year}</span>` : '')}
-                    <span class="paper-citations" style="${getCitationStyle(paper.citation_count || 0)}">${paper.citation_count || 0} citations</span>
                 </div>
             </div>
-            <div class="paper-authors">${escapeHtml(paper.authors?.join(', ') || 'Unknown authors')}</div>
-            ${paper.venue ? `<div class="paper-venue">${escapeHtml(paper.venue)}</div>` : ''}
-            ${paper.abstract ? `<div class="paper-abstract">${escapeHtml(paper.abstract)}</div>` : ''}
+            <div class="paper-authors">${escapeHtml(paper.authors?.join(', ') || 'Unknown authors')}${paper.max_h_index > 20 ? ` <span class="h-index-badge" title="Max author h-index">h:${paper.max_h_index}</span>` : ''}</div>
+            ${paper.venue ? `<div class="paper-venue">${escapeHtml(paper.venue)}${paper.is_open_access ? ' <span class="oa-badge">Open Access</span>' : ''}</div>` : ''}
+
+            <div class="paper-citations">
+                <span class="citation-badge" style="${getCitationStyle(paper.citation_count || 0)}">${formatNumber(paper.citation_count || 0)} citations</span>
+                ${paper.influential_citation_count > 0 ? `<span class="influential-badge">${paper.influential_citation_count} influential</span>` : ''}
+            </div>
+
+            ${paper.tldr ? `<div class="paper-tldr"><strong>TL;DR:</strong> ${escapeHtml(paper.tldr)}</div>` : ''}
+
+            ${paper.domains?.length || paper.model_types?.length ? `
+            <div class="paper-tags">
+                ${(paper.domains || []).map(d => `<span class="tag domain-tag">${d}</span>`).join('')}
+                ${(paper.model_types || []).map(m => `<span class="tag model-tag">${m}</span>`).join('')}
+            </div>
+            ` : ''}
+
+            <div class="paper-abstract">${escapeHtml(paper.abstract || 'No abstract available.')}</div>
+
+            ${paper.tags?.length ? `
+            <div class="paper-detail-tags">
+                ${paper.tags.map(t => `<span class="detail-tag">${t}</span>`).join('')}
+            </div>
+            ` : ''}
+
             <div class="paper-links">
-                ${paper.url ? `<a href="${paper.url}" target="_blank" onclick="event.stopPropagation()">OpenAlex</a>` : ''}
                 ${paper.pdf_url ? `<a href="${paper.pdf_url}" target="_blank" onclick="event.stopPropagation()">PDF</a>` : ''}
+                ${paper.open_access_pdf ? `<a href="${paper.open_access_pdf}" target="_blank" onclick="event.stopPropagation()">Open PDF</a>` : ''}
+                ${paper.doi ? `<a href="${paper.doi}" target="_blank" onclick="event.stopPropagation()">DOI</a>` : ''}
+                ${paper.url ? `<a href="${paper.url}" target="_blank" onclick="event.stopPropagation()">Source</a>` : ''}
             </div>
         </div>
     `).join('');
@@ -360,6 +498,15 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+/**
+ * Format large numbers
+ */
+function formatNumber(num) {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toString();
 }
 
 /**
@@ -392,6 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('search').addEventListener('input', renderPapers);
     document.getElementById('year-filter').addEventListener('change', renderPapers);
     document.getElementById('venue-filter').addEventListener('change', renderPapers);
+    document.getElementById('type-filter').addEventListener('change', renderPapers);
     document.getElementById('sort-by').addEventListener('change', renderPapers);
     document.querySelector('.category-tab[data-category="all"]').addEventListener('click', showHubOverview);
 

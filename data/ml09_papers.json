@@ -1,48 +1,7 @@
 {
   "owasp_id": "ML09",
   "owasp_name": "Output Integrity Attack",
-  "total": 2,
-  "updated": "2026-01-09",
-  "papers": [
-    {
-      "paper_id": "2009.09663",
-      "title": "DeepDyve: Dynamic Verification for Deep Neural Networks",
-      "abstract": "Deep neural networks (DNNs) have become one of the enabling technologies in many safety-critical applications, e.g., autonomous driving and medical image analysis. DNN systems, however, suffer from various kinds of threats, such as adversarial example attacks and fault injection attacks. While there are many defense methods proposed against maliciously crafted inputs, solutions against faults presented in the DNN system itself (e.g., parameters and calculations) are far less explored. In this paper, we develop a novel lightweight fault-tolerant solution for DNN-based systems, namely DeepDyve, which employs pre-trained neural networks that are far simpler and smaller than the original DNN for dynamic verification. The key to enabling such lightweight checking is that the smaller neural network only needs to produce approximate results for the initial task without sacrificing fault coverage much. We develop efficient and effective architecture and task exploration techniques to achieve optimized risk/overhead trade-off in DeepDyve. Experimental results show that DeepDyve can reduce 90% of the risks at around 10% overhead.",
-      "year": 2020,
-      "venue": "ACM CCS",
-      "authors": [
-        "Yu Li",
-        "Min Li",
-        "Bo Luo",
-        "Ye Tian",
-        "Qiang Xu"
-      ],
-      "url": "https://arxiv.org/abs/2009.09663",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2203.10902",
-      "title": "PublicCheck: Public Integrity Verification for Services of Run-time Deep Models",
-      "abstract": "Existing integrity verification approaches for deep models are designed for private verification (i.e., assuming the service provider is honest, with white-box access to model parameters). However, private verification approaches do not allow model users to verify the model at run-time. Instead, they must trust the service provider, who may tamper with the verification results. In contrast, a public verification approach that considers the possibility of dishonest service providers can benefit a wider range of users. In this paper, we propose PublicCheck, a practical public integrity verification solution for services of run-time deep models. PublicCheck considers dishonest service providers, and overcomes public verification challenges of being lightweight, providing anti-counterfeiting protection, and having fingerprinting samples that appear smooth. To capture and fingerprint the inherent prediction behaviors of a run-time model, PublicCheck generates smoothly transformed and augmented encysted samples that are enclosed around the model's decision boundary while ensuring that the verification queries are indistinguishable from normal queries. PublicCheck is also applicable when knowledge of the target model is limited (e.g., with no knowledge of gradients or model parameters). A thorough evaluation of PublicCheck demonstrates the strong capability for model integrity breach detection (100% detection accuracy with less than 10 black-box API queries) against various model integrity attacks and model compression attacks. PublicCheck also demonstrates the smooth appearance, feasibility, and efficiency of generating a plethora of encysted samples for fingerprinting.",
-      "year": 2023,
-      "venue": "IEEE S&P",
-      "authors": [
-        "Shuo Wang",
-        "Sharif Abuadbba",
-        "Sidharth Agarwal",
-        "Kristen Moore",
-        "Ruoxi Sun",
-        "Minhui Xue",
-        "Surya Nepal",
-        "Seyit Camtepe",
-        "Salil Kanhere"
-      ],
-      "url": "https://arxiv.org/abs/2203.10902",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    }
-  ]
+  "total": 0,
+  "updated": "2026-01-28",
+  "papers": []
 }

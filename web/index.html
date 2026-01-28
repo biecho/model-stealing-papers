@@ -37,24 +37,27 @@
         <div class="charts-section" id="charts-section" style="display: none;">
             <div class="charts-grid">
                 <div class="chart-container" id="chart-papers-per-year"></div>
-                <div class="chart-container" id="chart-cumulative"></div>
+                <div class="chart-container" id="chart-type-dist"></div>
             </div>
         </div>
 
         <!-- Controls -->
         <div class="controls" id="controls" style="display: none;">
-            <input type="text" id="search" placeholder="Search papers...">
+            <input type="text" id="search" placeholder="Search papers, authors, tags...">
             <select id="year-filter">
                 <option value="">All Years</option>
             </select>
             <select id="venue-filter">
                 <option value="">All Venues</option>
             </select>
+            <select id="type-filter">
+                <option value="">All Types</option>
+            </select>
             <select id="sort-by">
+                <option value="citations-desc">Most Cited</option>
+                <option value="influential-desc">Most Influential</option>
                 <option value="year-desc">Newest First</option>
                 <option value="year-asc">Oldest First</option>
-                <option value="citations-desc">Most Cited</option>
-                <option value="citations-asc">Least Cited</option>
                 <option value="title">Title A-Z</option>
             </select>
             <span class="stats" id="stats"></span>
@@ -69,7 +72,7 @@
     <footer>
         <p>
             <a href="https://owasp.org/www-project-machine-learning-security-top-10/">OWASP ML Security Top 10</a> |
-            Data from <a href="https://openalex.org/">OpenAlex</a> |
+            Data enriched with <a href="https://www.semanticscholar.org/">Semantic Scholar</a> |
             <a href="https://github.com/biecho/ml-security-papers">GitHub</a>
         </p>
     </footer>

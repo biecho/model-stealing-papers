@@ -1,47 +1,212 @@
 {
   "owasp_id": "ML05",
   "owasp_name": "Model Theft",
-  "total": 22,
-  "updated": "2026-01-09",
+  "total": 40,
+  "updated": "2026-01-28",
   "papers": [
     {
-      "paper_id": "https://openalex.org/W2918814112",
-      "title": "Exploring Connections Between Active Learning and Model Extraction",
-      "abstract": "Machine learning is being increasingly used by individuals, research institutions, and corporations. This has resulted in the surge of Machine Learning-as-a-Service (MLaaS) - cloud services that provide (a) tools and resources to learn the model, and (b) a user-friendly query interface to access the model. However, such MLaaS systems raise privacy concerns such as model extraction. In model extraction attacks, adversaries maliciously exploit the query interface to steal the model. More precisely, in a model extraction attack, a good approximation of a sensitive or proprietary model held by the server is extracted (i.e. learned) by a dishonest user who interacts with the server only via the query interface. This attack was introduced by Tramer et al. at the 2016 USENIX Security Symposium, where practical attacks for various models were shown. We believe that better understanding the efficacy of model extraction attacks is paramount to designing secure MLaaS systems. To that end, we take the first step by (a) formalizing model extraction and discussing possible defense strategies, and (b) drawing parallels between model extraction and established area of active learning. In particular, we show that recent advancements in the active learning domain can be used to implement powerful model extraction attacks, and investigate possible defense strategies.",
-      "year": 2018,
-      "venue": "arXiv (Cornell University)",
+      "paper_id": "seed_9b4e3778",
+      "title": "Cross-Modal Prompt Inversion: Unifying Threats to Text and Image Generative AI Models",
+      "abstract": "Abstract Brains, it has recently been argued, are essentially prediction machines. They are bundles of cells that support perception and action by constantly attempting to match incoming sensory inputs with top-down expectations or predictions. This is achieved using a hierarchical generative model that aims to minimize prediction error within a bidirectional cascade of cortical processing. Such accounts offer a unifying model of perception and action, illuminate the functional role of attention, and may neatly capture the special contribution of cortical processing to adaptive success. This target article critically examines this \u201chierarchical prediction machine\u201d approach, concluding that it offers the best clue yet to the shape of a unified science of mind and action. Sections 1 and 2 lay out the key elements and implications of the approach. Section 3 explores a variety of pitfalls and challenges, spanning the evidential, the methodological, and the more properly conceptual. The paper ends (sections 4 and 5) by asking how such approaches might impact our more general vision of mind, experience, and agency.",
+      "year": 2013,
+      "venue": "Behavioral and Brain Sciences",
       "authors": [
-        "Varun Chandrasekaran",
-        "Kamalika Chaudhuri",
-        "Irene Giacomelli",
-        "Somesh Jha",
-        "Songbai Yan"
+        "A. Clark"
       ],
-      "url": "https://openalex.org/W2918814112",
-      "pdf_url": "https://arxiv.org/pdf/1811.02054",
-      "cited_by_count": 24,
-      "classification_confidence": "HIGH"
+      "author_details": [
+        {
+          "name": "A. Clark",
+          "h_index": 63,
+          "citation_count": 27943,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 63,
+      "url": "https://openalex.org/W2153791616",
+      "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/33542C736E17E3D1D44E8D03BE5F4CD9/S0140525X12000477a.pdf/div-class-title-whatever-next-predictive-brains-situated-agents-and-the-future-of-cognitive-science-div.pdf",
+      "doi": "https://doi.org/10.1017/s0140525x12000477",
+      "citation_count": 3206,
+      "influential_citation_count": 284,
+      "reference_count": 554,
+      "is_open_access": true,
+      "publication_date": "2013-06-01",
+      "tldr": "This target article critically examines this \"hierarchical prediction machine\" approach, concluding that it offers the best clue yet to the shape of a unified science of mind and action.",
+      "fields_of_study": [
+        "Medicine",
+        "Psychology"
+      ],
+      "publication_types": [
+        "Review",
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "multimodal",
+        "generative"
+      ],
+      "model_types": [
+        "llm",
+        "diffusion"
+      ],
+      "tags": [
+        "cross-modal",
+        "prompt-inversion"
+      ],
+      "open_access_pdf": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/33542C736E17E3D1D44E8D03BE5F4CD9/S0140525X12000477a.pdf/div-class-title-whatever-next-predictive-brains-situated-agents-and-the-future-of-cognitive-science-div.pdf"
     },
     {
       "paper_id": "1909.01838",
       "title": "High Accuracy and High Fidelity Extraction of Neural Networks",
       "abstract": "In a model extraction attack, an adversary steals a copy of a remotely deployed machine learning model, given oracle prediction access. We taxonomize model extraction attacks around two objectives: *accuracy*, i.e., performing well on the underlying learning task, and *fidelity*, i.e., matching the predictions of the remote victim classifier on any input.   To extract a high-accuracy model, we develop a learning-based attack exploiting the victim to supervise the training of an extracted model. Through analytical and empirical arguments, we then explain the inherent limitations that prevent any learning-based strategy from extracting a truly high-fidelity model---i.e., extracting a functionally-equivalent model whose predictions are identical to those of the victim model on all possible inputs. Addressing these limitations, we expand on prior work to develop the first practical functionally-equivalent extraction attack for direct extraction (i.e., without training) of a model's weights.   We perform experiments both on academic datasets and a state-of-the-art image classifier trained with 1 billion proprietary images. In addition to broadening the scope of model extraction research, our work demonstrates the practicality of model extraction attacks against production-grade systems.",
       "year": 2020,
-      "venue": "USENIX Security",
+      "venue": "USENIX Security Symposium",
       "authors": [
         "Matthew Jagielski",
         "Nicholas Carlini",
         "David Berthelot",
-        "Alex Kurakin",
+        "Alexey Kurakin",
         "Nicolas Papernot"
       ],
+      "author_details": [
+        {
+          "name": "Matthew Jagielski",
+          "h_index": 36,
+          "citation_count": 11099,
+          "affiliations": []
+        },
+        {
+          "name": "Nicholas Carlini",
+          "h_index": 19,
+          "citation_count": 14713,
+          "affiliations": []
+        },
+        {
+          "name": "David Berthelot",
+          "h_index": 16,
+          "citation_count": 11941,
+          "affiliations": []
+        },
+        {
+          "name": "Alexey Kurakin",
+          "h_index": 24,
+          "citation_count": 24226,
+          "affiliations": []
+        },
+        {
+          "name": "Nicolas Papernot",
+          "h_index": 41,
+          "citation_count": 32543,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 41,
       "url": "https://arxiv.org/abs/1909.01838",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
+      "citation_count": 428,
+      "influential_citation_count": 64,
+      "reference_count": 63,
+      "is_open_access": false,
+      "publication_date": "2019-09-03",
+      "tldr": "This work expands on prior work to develop the first practical functionally-equivalent extraction attack for direct extraction of a model's weights, and demonstrates the practicality of model extraction attacks against production-grade systems.",
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "model-extraction",
+        "accuracy-fidelity"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W3159603021",
+      "paper_id": "seed_bcafbaa6",
+      "title": "SoK: All You Need to Know About On-Device ML Model Extraction - The Gap Between Research and Practice",
+      "abstract": "Although the fifth generation (5G) wireless networks are yet to be fully investigated, the visionaries of the 6th generation (6G) echo systems have already come into the discussion. Therefore, in order to consolidate and solidify the security and privacy in 6G networks, we survey how security may impact the envisioned 6G wireless systems, possible challenges with different 6G technologies, and the potential solutions. We provide our vision on 6G security and security key performance indicators (KPIs) with the tentative threat landscape based on the foreseen 6G network architecture. Moreover, we discuss the security and privacy challenges that may encounter with the available 6G requirements and potential 6G applications. We also give the reader some insights into the standardization efforts and research-level projects relevant to 6G security. In particular, we discuss the security considerations with 6G enabling technologies such as distributed ledger technology (DLT), physical layer security, distributed AI/ML, visible light communication (VLC), THz, and quantum computing. All in all, this work intends to provide enlightening guidance for the subsequent research of 6G security and privacy at this initial phase of vision towards reality.",
+      "year": 2021,
+      "venue": "IEEE Open Journal of the Communications Society",
+      "authors": [
+        "Pawani Porambage",
+        "G\u00fcrkan G\u00fcr",
+        "D. M. Osorio",
+        "Madhusanka Liyanage",
+        "A. Gurtov",
+        "M. Ylianttila"
+      ],
+      "author_details": [
+        {
+          "name": "Pawani Porambage",
+          "h_index": 26,
+          "citation_count": 3813,
+          "affiliations": []
+        },
+        {
+          "name": "G\u00fcrkan G\u00fcr",
+          "h_index": 24,
+          "citation_count": 2634,
+          "affiliations": []
+        },
+        {
+          "name": "D. M. Osorio",
+          "h_index": 13,
+          "citation_count": 991,
+          "affiliations": []
+        },
+        {
+          "name": "Madhusanka Liyanage",
+          "h_index": 50,
+          "citation_count": 12065,
+          "affiliations": []
+        },
+        {
+          "name": "A. Gurtov",
+          "h_index": 43,
+          "citation_count": 7581,
+          "affiliations": []
+        },
+        {
+          "name": "M. Ylianttila",
+          "h_index": 48,
+          "citation_count": 10475,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 50,
+      "url": "https://openalex.org/W3161594686",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/8782661/9309127/09426946.pdf",
+      "doi": "https://doi.org/10.1109/ojcoms.2021.3078081",
+      "citation_count": 275,
+      "influential_citation_count": 29,
+      "reference_count": 173,
+      "is_open_access": true,
+      "tldr": "This work surveys how security may impact the envisioned 6G wireless systems, possible challenges with different 6G technologies, and the potential solutions, and discusses the security considerations with 6G enabling technologies such as distributed ledger technology (DLT), physical layer security, distributed AI/ML, visible light communication, THz, and quantum computing.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Review"
+      ],
+      "paper_type": "survey",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "SoK",
+        "on-device",
+        "research-practice-gap"
+      ],
+      "open_access_pdf": "https://ieeexplore.ieee.org/ielx7/8782661/9309127/09426946.pdf"
+    },
+    {
+      "paper_id": "seed_f1310987",
       "title": "Entangled Watermarks as a Defense against Model Extraction",
       "abstract": "Machine learning involves expensive data collection and training procedures. Model owners may be concerned that valuable intellectual property can be leaked if adversaries mount model extraction attacks. As it is difficult to defend against model extraction without sacrificing significant prediction accuracy, watermarking instead leverages unused model capacity to have the model overfit to outlier input-output pairs. Such pairs are watermarks, which are not sampled from the task distribution and are only known to the defender. The defender then demonstrates knowledge of the input-output pairs to claim ownership of the model at inference. The effectiveness of watermarks remains limited because they are distinct from the task distribution and can thus be easily removed through compression or other forms of knowledge transfer. \r\nWe introduce Entangled Watermarking Embeddings (EWE). Our approach encourages the model to learn features for classifying data that is sampled from the task distribution and data that encodes watermarks. An adversary attempting to remove watermarks that are entangled with legitimate data is also forced to sacrifice performance on legitimate data. Experiments on MNIST, Fashion-MNIST, CIFAR-10, and Speech Commands validate that the defender can claim model ownership with 95\\% confidence with less than 100 queries to the stolen copy, at a modest cost below 0.81 percentage points on average in the defended model's performance.",
       "year": 2021,
@@ -49,20 +214,115 @@
       "authors": [
         "Hengrui Jia",
         "Christopher A. Choquette-Choo",
-        "Varun Chandrasekaran",
         "Nicolas Papernot"
       ],
+      "author_details": [
+        {
+          "name": "Hengrui Jia",
+          "h_index": 11,
+          "citation_count": 2087,
+          "affiliations": []
+        },
+        {
+          "name": "Christopher A. Choquette-Choo",
+          "h_index": 24,
+          "citation_count": 9873,
+          "affiliations": [
+            "Google DeepMind"
+          ]
+        },
+        {
+          "name": "Nicolas Papernot",
+          "h_index": 30,
+          "citation_count": 5329,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 30,
       "url": "https://openalex.org/W3159603021",
-      "pdf_url": null,
-      "cited_by_count": 50,
-      "classification_confidence": "HIGH"
+      "citation_count": 271,
+      "influential_citation_count": 51,
+      "reference_count": 60,
+      "is_open_access": false,
+      "publication_date": "2020-02-27",
+      "tldr": "Entangled Watermarking Embeddings (EWE) is introduced, which encourages the model to learn common features for classifying data that is sampled from the task distribution, but also data that encodes watermarks, which forces an adversary attempting to remove watermarks that are entangled with legitimate data to sacrifice performance on legitimate data.",
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "entangled-watermarks",
+        "extraction-defense"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W3007318395",
+      "paper_id": "2009.03015",
+      "title": "Adversarial Watermarking Transformer: Towards Tracing Text Provenance with Data Hiding",
+      "abstract": "Recent advances in natural language generation have introduced powerful language models with high-quality output text. However, this raises concerns about the potential misuse of such models for malicious purposes. In this paper, we study natural language watermarking as a defense to help better mark and trace the provenance of text. We introduce the Adversarial Watermarking Transformer (AWT) with a jointly trained encoder-decoder and adversarial training that, given an input text and a binary message, generates an output text that is unobtrusively encoded with the given message. We further study different training and inference strategies to achieve minimal changes to the semantics and correctness of the input text.   AWT is the first end-to-end model to hide data in text by automatically learning -- without ground truth -- word substitutions along with their locations in order to encode the message. We empirically show that our model is effective in largely preserving text utility and decoding the watermark while hiding its presence against adversaries. Additionally, we demonstrate that our method is robust against a range of attacks.",
+      "year": 2021,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Sahar Abdelnabi",
+        "Mario Fritz"
+      ],
+      "author_details": [
+        {
+          "name": "Sahar Abdelnabi",
+          "h_index": 13,
+          "citation_count": 1984,
+          "affiliations": []
+        },
+        {
+          "name": "Mario Fritz",
+          "h_index": 69,
+          "citation_count": 22326,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 69,
+      "url": "https://arxiv.org/abs/2009.03015",
+      "citation_count": 188,
+      "influential_citation_count": 17,
+      "reference_count": 90,
+      "is_open_access": true,
+      "publication_date": "2020-09-07",
+      "tldr": "The Adversarial Watermarking Transformer (AWT) is introduced with a jointly trained encoder-decoder and adversarial training that, given an input text and a binary message, generates an output text that is unobtrusively encoded with the given message.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "nlp"
+      ],
+      "model_types": [
+        "transformer"
+      ],
+      "tags": [
+        "text-watermarking",
+        "provenance"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2009.03015"
+    },
+    {
+      "paper_id": "seed_9103c9cb",
       "title": "CloudLeak: Large-Scale Deep Learning Models Stealing Through Adversarial Examples",
       "abstract": "Cloud-based Machine Learning as a Service (MLaaS) is gradually gaining acceptance as a reliable solution to various real-life scenarios.These services typically utilize Deep Neural Networks (DNNs) to perform classification and detection tasks and are accessed through Application Programming Interfaces (APIs).Unfortunately, it is possible for an adversary to steal models from cloud-based platforms, even with black-box constraints, by repeatedly querying the public prediction API with malicious inputs.In this paper, we introduce an effective and efficient black-box attack methodology that extracts largescale DNN models from cloud-based platforms with near-perfect performance.In comparison to existing attack methods, we significantly reduce the number of queries required to steal the target model by incorporating several novel algorithms, including active learning, transfer learning, and adversarial attacks.During our experimental evaluations, we validate our proposed model for conducting theft attacks on various commercialized MLaaS platforms hosted by Microsoft, Face++, IBM, Google and Clarifai.Our results demonstrate that the proposed method can easily reveal/steal large-scale DNN models from these cloud platforms.The proposed attack method can also be used to accurately evaluates the robustness of DNN based MLaaS classifiers against theft attacks.",
       "year": 2020,
-      "venue": null,
+      "venue": "Network and Distributed System Security Symposium",
       "authors": [
         "Honggang Yu",
         "Kaichen Yang",
@@ -71,34 +331,798 @@
         "Tsung-Yi Ho",
         "Yier Jin"
       ],
+      "author_details": [
+        {
+          "name": "Honggang Yu",
+          "h_index": 16,
+          "citation_count": 1077,
+          "affiliations": []
+        },
+        {
+          "name": "Kaichen Yang",
+          "h_index": 8,
+          "citation_count": 676,
+          "affiliations": []
+        },
+        {
+          "name": "Teng Zhang",
+          "h_index": 22,
+          "citation_count": 2012,
+          "affiliations": []
+        },
+        {
+          "name": "Yun-Yun Tsai",
+          "h_index": 6,
+          "citation_count": 520,
+          "affiliations": []
+        },
+        {
+          "name": "Tsung-Yi Ho",
+          "h_index": 40,
+          "citation_count": 5278,
+          "affiliations": []
+        },
+        {
+          "name": "Yier Jin",
+          "h_index": 45,
+          "citation_count": 7570,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 45,
       "url": "https://openalex.org/W3007318395",
       "pdf_url": "https://doi.org/10.14722/ndss.2020.24178",
-      "cited_by_count": 130,
-      "classification_confidence": "HIGH"
+      "doi": "https://doi.org/10.14722/ndss.2020.24178",
+      "citation_count": 187,
+      "influential_citation_count": 19,
+      "reference_count": 52,
+      "is_open_access": true,
+      "tldr": "This paper introduces an effective and efficient black-box attack methodology that extracts largescale DNN models from cloud-based platforms with near-perfect performance and significantly reduces the number of queries required to steal the target model by incorporating several novel algorithms.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "MLaaS-stealing",
+        "adversarial-assisted"
+      ],
+      "open_access_pdf": "https://doi.org/10.14722/ndss.2020.24178"
+    },
+    {
+      "paper_id": "seed_17fc8f35",
+      "title": "Exploring Connections Between Active Learning and Model Extraction",
+      "abstract": "Machine learning is being increasingly used by individuals, research institutions, and corporations. This has resulted in the surge of Machine Learning-as-a-Service (MLaaS) - cloud services that provide (a) tools and resources to learn the model, and (b) a user-friendly query interface to access the model. However, such MLaaS systems raise privacy concerns such as model extraction. In model extraction attacks, adversaries maliciously exploit the query interface to steal the model. More precisely, in a model extraction attack, a good approximation of a sensitive or proprietary model held by the server is extracted (i.e. learned) by a dishonest user who interacts with the server only via the query interface. This attack was introduced by Tramer et al. at the 2016 USENIX Security Symposium, where practical attacks for various models were shown. We believe that better understanding the efficacy of model extraction attacks is paramount to designing secure MLaaS systems. To that end, we take the first step by (a) formalizing model extraction and discussing possible defense strategies, and (b) drawing parallels between model extraction and established area of active learning. In particular, we show that recent advancements in the active learning domain can be used to implement powerful model extraction attacks, and investigate possible defense strategies.",
+      "year": 2018,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Varun Chandrasekaran",
+        "Kamalika Chaudhuri",
+        "Irene Giacomelli",
+        "S. Jha",
+        "Songbai Yan"
+      ],
+      "author_details": [
+        {
+          "name": "Varun Chandrasekaran",
+          "h_index": 15,
+          "citation_count": 6121,
+          "affiliations": []
+        },
+        {
+          "name": "Kamalika Chaudhuri",
+          "h_index": 44,
+          "citation_count": 10919,
+          "affiliations": []
+        },
+        {
+          "name": "Irene Giacomelli",
+          "h_index": 11,
+          "citation_count": 2161,
+          "affiliations": []
+        },
+        {
+          "name": "S. Jha",
+          "h_index": 86,
+          "citation_count": 41377,
+          "affiliations": []
+        },
+        {
+          "name": "Songbai Yan",
+          "h_index": 8,
+          "citation_count": 408,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 86,
+      "url": "https://openalex.org/W2918814112",
+      "pdf_url": "https://arxiv.org/pdf/1811.02054",
+      "doi": "https://doi.org/10.48550/arxiv.1811.02054",
+      "citation_count": 180,
+      "influential_citation_count": 15,
+      "reference_count": 76,
+      "is_open_access": false,
+      "publication_date": "2018-11-05",
+      "tldr": "It is shown that recent advancements in the active learning domain can be used to implement powerful model extraction attacks, and investigate possible defense strategies.",
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "empirical",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "active-learning",
+        "model-extraction"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2103.05633",
+      "title": "Proof-of-Learning: Definitions and Practice",
+      "abstract": "Training machine learning (ML) models typically involves expensive iterative optimization. Once the model's final parameters are released, there is currently no mechanism for the entity which trained the model to prove that these parameters were indeed the result of this optimization procedure. Such a mechanism would support security of ML applications in several ways. For instance, it would simplify ownership resolution when multiple parties contest ownership of a specific model. It would also facilitate the distributed training across untrusted workers where Byzantine workers might otherwise mount a denial-of-service by returning incorrect model updates.   In this paper, we remediate this problem by introducing the concept of proof-of-learning in ML. Inspired by research on both proof-of-work and verified computations, we observe how a seminal training algorithm, stochastic gradient descent, accumulates secret information due to its stochasticity. This produces a natural construction for a proof-of-learning which demonstrates that a party has expended the compute require to obtain a set of model parameters correctly. In particular, our analyses and experiments show that an adversary seeking to illegitimately manufacture a proof-of-learning needs to perform *at least* as much work than is needed for gradient descent itself.   We also instantiate a concrete proof-of-learning mechanism in both of the scenarios described above. In model ownership resolution, it protects the intellectual property of models released publicly. In distributed training, it preserves availability of the training procedure. Our empirical evaluation validates that our proof-of-learning mechanism is robust to variance induced by the hardware (ML accelerators) and software stacks.",
+      "year": 2021,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Hengrui Jia",
+        "Mohammad Yaghini",
+        "Christopher A. Choquette-Choo",
+        "Natalie Dullerud",
+        "Anvith Thudi",
+        "Varun Chandrasekaran",
+        "Nicolas Papernot"
+      ],
+      "author_details": [
+        {
+          "name": "Hengrui Jia",
+          "h_index": 11,
+          "citation_count": 2087,
+          "affiliations": []
+        },
+        {
+          "name": "Mohammad Yaghini",
+          "h_index": 10,
+          "citation_count": 520,
+          "affiliations": []
+        },
+        {
+          "name": "Christopher A. Choquette-Choo",
+          "h_index": 24,
+          "citation_count": 9873,
+          "affiliations": [
+            "Google DeepMind"
+          ]
+        },
+        {
+          "name": "Natalie Dullerud",
+          "h_index": 6,
+          "citation_count": 260,
+          "affiliations": []
+        },
+        {
+          "name": "Anvith Thudi",
+          "h_index": 9,
+          "citation_count": 728,
+          "affiliations": []
+        },
+        {
+          "name": "Varun Chandrasekaran",
+          "h_index": 15,
+          "citation_count": 6121,
+          "affiliations": []
+        },
+        {
+          "name": "Nicolas Papernot",
+          "h_index": 30,
+          "citation_count": 5329,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 30,
+      "url": "https://arxiv.org/abs/2103.05633",
+      "citation_count": 120,
+      "influential_citation_count": 14,
+      "reference_count": 100,
+      "is_open_access": true,
+      "publication_date": "2021-03-09",
+      "tldr": "The analyses and experiments show that an adversary seeking to illegitimately manufacture a proof-of-learning needs to perform at least as much work than is needed for gradient descent itself.",
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "proof-of-learning",
+        "ownership"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2103.05633"
+    },
+    {
+      "paper_id": "seed_a81c50bf",
+      "title": "SoK: How Robust is Image Classification Deep Neural Network Watermarking?",
+      "abstract": "Deep Neural Network (DNN) watermarking is a method for provenance verification of DNN models. Watermarking should be robust against watermark removal attacks that derive a surrogate model that evades provenance verification. Many watermarking schemes that claim robustness have been proposed, but their robustness is only validated in isolation against a relatively small set of attacks. There is no systematic, empirical evaluation of these claims against a common, comprehensive set of removal attacks. This uncertainty about a watermarking scheme's robustness causes difficulty to trust their deployment in practice. In this paper, we evaluate whether recently proposed watermarking schemes that claim robustness are robust against a large set of removal attacks. We survey methods from the literature that (i) are known removal attacks, (ii) derive surrogate models but have not been evaluated as removal attacks, and (iii) novel removal attacks. Weight shifting and smooth retraining are novel removal attacks adapted to the DNN watermarking schemes surveyed in this paper. We propose taxonomies for watermarking schemes and removal attacks. Our empirical evaluation includes an ablation study over sets of parameters for each attack and watermarking scheme on the CIFAR-10 and ImageNet datasets. Surprisingly, none of the surveyed watermarking schemes is robust in practice. We find that schemes fail to withstand adaptive attacks and known methods for deriving surrogate models that have not been evaluated as removal attacks. This points to intrinsic flaws in how robustness is currently evaluated. We show that watermarking schemes need to be evaluated against a more extensive set of removal attacks with a more realistic adversary model. Our source code and a complete dataset of evaluation results are publicly available, which allows to independently verify our conclusions.",
+      "year": 2021,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Nils Lukas",
+        "Edward Jiang",
+        "Xinda Li",
+        "F. Kerschbaum"
+      ],
+      "author_details": [
+        {
+          "name": "Nils Lukas",
+          "h_index": 10,
+          "citation_count": 886,
+          "affiliations": []
+        },
+        {
+          "name": "Edward Jiang",
+          "h_index": 2,
+          "citation_count": 125,
+          "affiliations": []
+        },
+        {
+          "name": "Xinda Li",
+          "h_index": 6,
+          "citation_count": 272,
+          "affiliations": []
+        },
+        {
+          "name": "F. Kerschbaum",
+          "h_index": 44,
+          "citation_count": 6161,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 44,
+      "url": "https://arxiv.org/abs/2108.04974",
+      "citation_count": 115,
+      "influential_citation_count": 15,
+      "reference_count": 72,
+      "is_open_access": false,
+      "publication_date": "2021-08-11",
+      "tldr": "It is shown that none of the surveyed watermarking schemes is robust in practice, which points to intrinsic flaws in how robustness is currently evaluated and shows that watermarked schemes need to be evaluated against a more extensive set of removal attacks with a more realistic adversary model.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Review"
+      ],
+      "paper_type": "survey",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "SoK",
+        "watermark-robustness"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2405.06823",
+      "title": "PLeak: Prompt Leaking Attacks against Large Language Model Applications",
+      "abstract": "Large Language Models (LLMs) enable a new ecosystem with many downstream applications, called LLM applications, with different natural language processing tasks. The functionality and performance of an LLM application highly depend on its system prompt, which instructs the backend LLM on what task to perform. Therefore, an LLM application developer often keeps a system prompt confidential to protect its intellectual property. As a result, a natural attack, called prompt leaking, is to steal the system prompt from an LLM application, which compromises the developer's intellectual property. Existing prompt leaking attacks primarily rely on manually crafted queries, and thus achieve limited effectiveness.   In this paper, we design a novel, closed-box prompt leaking attack framework, called PLeak, to optimize an adversarial query such that when the attacker sends it to a target LLM application, its response reveals its own system prompt. We formulate finding such an adversarial query as an optimization problem and solve it with a gradient-based method approximately. Our key idea is to break down the optimization goal by optimizing adversary queries for system prompts incrementally, i.e., starting from the first few tokens of each system prompt step by step until the entire length of the system prompt.   We evaluate PLeak in both offline settings and for real-world LLM applications, e.g., those on Poe, a popular platform hosting such applications. Our results show that PLeak can effectively leak system prompts and significantly outperforms not only baselines that manually curate queries but also baselines with optimized queries that are modified and adapted from existing jailbreaking attacks. We responsibly reported the issues to Poe and are still waiting for their response. Our implementation is available at this repository: https://github.com/BHui97/PLeak.",
+      "year": 2024,
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Bo Hui",
+        "Haolin Yuan",
+        "N. Gong",
+        "Philippe Burlina",
+        "Yinzhi Cao"
+      ],
+      "author_details": [
+        {
+          "name": "Bo Hui",
+          "h_index": 7,
+          "citation_count": 501,
+          "affiliations": []
+        },
+        {
+          "name": "Haolin Yuan",
+          "h_index": 9,
+          "citation_count": 583,
+          "affiliations": []
+        },
+        {
+          "name": "N. Gong",
+          "h_index": 2,
+          "citation_count": 270,
+          "affiliations": []
+        },
+        {
+          "name": "Philippe Burlina",
+          "h_index": 4,
+          "citation_count": 418,
+          "affiliations": []
+        },
+        {
+          "name": "Yinzhi Cao",
+          "h_index": 5,
+          "citation_count": 344,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 9,
+      "url": "https://arxiv.org/abs/2405.06823",
+      "citation_count": 113,
+      "influential_citation_count": 13,
+      "reference_count": 61,
+      "is_open_access": true,
+      "publication_date": "2024-05-10",
+      "tldr": "This paper designs a novel, closed-box prompt leaking attack framework, called PLeak, to optimize an adversarial query such that when the attacker sends it to a target LLM application, its response reveals its own system prompt.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Book",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "llm",
+        "nlp"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "prompt-leaking",
+        "LLM-applications"
+      ],
+      "open_access_pdf": "https://dl.acm.org/doi/pdf/10.1145/3658644.3670370"
+    },
+    {
+      "paper_id": "seed_6cc17cca",
+      "title": "Copy, Right? A Testing Framework for Copyright Protection of Deep Learning Models",
+      "abstract": "Deep learning models, especially those large-scale and high-performance ones, can be very costly to train, demanding a considerable amount of data and computational resources. As a result, deep learning models have become one of the most valuable assets in modern artificial intelligence. Unauthorized duplication or reproduction of deep learning models can lead to copyright infringement and cause huge economic losses to model owners, calling for effective copyright protection techniques. Existing protection techniques are mostly based on watermarking, which embeds an owner-specified watermark into the model. While being able to provide exact ownership verification, these techniques are 1) invasive, i.e., they need to tamper with the training process, which may affect the model utility or introduce new security risks into the model; 2) prone to adaptive attacks that attempt to remove/replace the watermark or adversarially block the retrieval of the watermark; and 3) not robust to the emerging model extraction attacks. Latest fingerprinting work on deep learning models, though being non-invasive, also falls short when facing the diverse and ever-growing attack scenarios.In this paper, we propose a novel testing framework for deep learning copyright protection: DEEPJUDGE. DEEPJUDGE quantitatively tests the similarities between two deep learning models: a victim model and a suspect model. It leverages a diverse set of testing metrics and efficient test case generation algorithms to produce a chain of supporting evidence to help determine whether a suspect model is a copy of the victim model. Advantages of DEEPJUDGE include: 1) non-invasive, as it works directly on the model and does not tamper with the training process; 2) efficient, as it only needs a small set of seed test cases and a quick scan of the two models; 3) flexible, i.e., it can easily incorporate new testing metrics or test case generation methods to obtain more confident and robust judgement; and 4) fairly robust to model extraction attacks and adaptive attacks. We verify the effectiveness of DEEPJUDGE under three typical copyright infringement scenarios, including model finetuning, pruning and extraction, via extensive experiments on both image classification and speech recognition datasets with a variety of model architectures.",
+      "year": 2022,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Jialuo Chen",
+        "Jingyi Wang",
+        "Tinglan Peng",
+        "Youcheng Sun",
+        "Peng Cheng",
+        "S. Ji",
+        "Xingjun Ma",
+        "Bo Li",
+        "D. Song"
+      ],
+      "author_details": [
+        {
+          "name": "Jialuo Chen",
+          "h_index": 4,
+          "citation_count": 208,
+          "affiliations": []
+        },
+        {
+          "name": "Jingyi Wang",
+          "h_index": 16,
+          "citation_count": 1038,
+          "affiliations": []
+        },
+        {
+          "name": "Tinglan Peng",
+          "h_index": 1,
+          "citation_count": 86,
+          "affiliations": []
+        },
+        {
+          "name": "Youcheng Sun",
+          "h_index": 22,
+          "citation_count": 2544,
+          "affiliations": []
+        },
+        {
+          "name": "Peng Cheng",
+          "h_index": 6,
+          "citation_count": 293,
+          "affiliations": []
+        },
+        {
+          "name": "S. Ji",
+          "h_index": 51,
+          "citation_count": 9646,
+          "affiliations": []
+        },
+        {
+          "name": "Xingjun Ma",
+          "h_index": 28,
+          "citation_count": 9422,
+          "affiliations": [
+            "Fudan University"
+          ]
+        },
+        {
+          "name": "Bo Li",
+          "h_index": 11,
+          "citation_count": 1089,
+          "affiliations": []
+        },
+        {
+          "name": "D. Song",
+          "h_index": 136,
+          "citation_count": 105349,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 136,
+      "url": "https://openalex.org/W4200633448",
+      "doi": "https://doi.org/10.1109/sp46214.2022.9833747",
+      "citation_count": 86,
+      "influential_citation_count": 12,
+      "reference_count": 48,
+      "is_open_access": true,
+      "publication_date": "2021-12-10",
+      "tldr": "A novel testing framework for deep learning copyright protection: DEEPJUDGE quantitatively tests the similarities between two deep learning models: a victim model and a suspect model, which leverages a diverse set of testing metrics and efficient test case generation algorithms to produce a chain of supporting evidence to help determine whether a suspects model is a copy of the victim model.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "copyright-testing",
+        "framework"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2112.05588"
+    },
+    {
+      "paper_id": "2201.11692",
+      "title": "SSLGuard: A Watermarking Scheme for Self-supervised Learning Pre-trained Encoders",
+      "abstract": "Self-supervised learning is an emerging machine learning paradigm. Compared to supervised learning which leverages high-quality labeled datasets, self-supervised learning relies on unlabeled datasets to pre-train powerful encoders which can then be treated as feature extractors for various downstream tasks. The huge amount of data and computational resources consumption makes the encoders themselves become the valuable intellectual property of the model owner. Recent research has shown that the machine learning model's copyright is threatened by model stealing attacks, which aim to train a surrogate model to mimic the behavior of a given model. We empirically show that pre-trained encoders are highly vulnerable to model stealing attacks. However, most of the current efforts of copyright protection algorithms such as watermarking concentrate on classifiers. Meanwhile, the intrinsic challenges of pre-trained encoder's copyright protection remain largely unstudied. We fill the gap by proposing SSLGuard, the first watermarking scheme for pre-trained encoders. Given a clean pre-trained encoder, SSLGuard injects a watermark into it and outputs a watermarked version. The shadow training technique is also applied to preserve the watermark under potential model stealing attacks. Our extensive evaluation shows that SSLGuard is effective in watermark injection and verification, and it is robust against model stealing and other watermark removal attacks such as input noising, output perturbing, overwriting, model pruning, and fine-tuning.",
+      "year": 2022,
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Tianshuo Cong",
+        "Xinlei He",
+        "Yang Zhang"
+      ],
+      "author_details": [
+        {
+          "name": "Tianshuo Cong",
+          "h_index": 10,
+          "citation_count": 673,
+          "affiliations": []
+        },
+        {
+          "name": "Xinlei He",
+          "h_index": 20,
+          "citation_count": 1612,
+          "affiliations": []
+        },
+        {
+          "name": "Yang Zhang",
+          "h_index": 12,
+          "citation_count": 1023,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 20,
+      "url": "https://arxiv.org/abs/2201.11692",
+      "citation_count": 66,
+      "influential_citation_count": 6,
+      "reference_count": 63,
+      "is_open_access": false,
+      "publication_date": "2022-01-27",
+      "tldr": "SSLGuard is the first watermarking scheme for pre-trained encoders and it is robust against model stealing and other watermark removal attacks such as input noising, output perturbing, overwriting, model pruning, and fine-tuning.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "Book",
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "SSL-watermarking",
+        "encoder-protection"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_5b1c50c5",
+      "title": "RAI2: Responsible Identity Audit Governing the Artificial Intelligence",
+      "abstract": "Self-supervised learning is an emerging machine learning paradigm. Compared to supervised learning which leverages high-quality labeled datasets, self-supervised learning relies on unlabeled datasets to pre-train powerful encoders which can then be treated as feature extractors for various downstream tasks. The huge amount of data and computational resources consumption makes the encoders themselves become the valuable intellectual property of the model owner. Recent research has shown that the machine learning model's copyright is threatened by model stealing attacks, which aim to train a surrogate model to mimic the behavior of a given model. We empirically show that pre-trained encoders are highly vulnerable to model stealing attacks. However, most of the current efforts of copyright protection algorithms such as watermarking concentrate on classifiers. Meanwhile, the intrinsic challenges of pre-trained encoder's copyright protection remain largely unstudied. We fill the gap by proposing SSLGuard, the first watermarking scheme for pre-trained encoders. Given a clean pre-trained encoder, SSLGuard injects a watermark into it and outputs a watermarked version. The shadow training technique is also applied to preserve the watermark under potential model stealing attacks. Our extensive evaluation shows that SSLGuard is effective in watermark injection and verification, and it is robust against model stealing and other watermark removal attacks such as input noising, output perturbing, overwriting, model pruning, and fine-tuning.",
+      "year": 2022,
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Tianshuo Cong",
+        "Xinlei He",
+        "Yang Zhang"
+      ],
+      "author_details": [
+        {
+          "name": "Tianshuo Cong",
+          "h_index": 10,
+          "citation_count": 673,
+          "affiliations": []
+        },
+        {
+          "name": "Xinlei He",
+          "h_index": 20,
+          "citation_count": 1612,
+          "affiliations": []
+        },
+        {
+          "name": "Yang Zhang",
+          "h_index": 12,
+          "citation_count": 1023,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 20,
+      "url": "https://arxiv.org/abs/2201.11692",
+      "citation_count": 66,
+      "influential_citation_count": 6,
+      "reference_count": 63,
+      "is_open_access": false,
+      "publication_date": "2022-01-27",
+      "tldr": "SSLGuard is the first watermarking scheme for pre-trained encoders and it is robust against model stealing and other watermark removal attacks such as input noising, output perturbing, overwriting, model pruning, and fine-tuning.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "Book",
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "identity-audit",
+        "responsible-AI"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2411.18479",
+      "title": "SoK: Watermarking for AI-Generated Content",
+      "abstract": "As the outputs of generative AI (GenAI) techniques improve in quality, it becomes increasingly challenging to distinguish them from human-created content. Watermarking schemes are a promising approach to address the problem of distinguishing between AI and human-generated content. These schemes embed hidden signals within AI-generated content to enable reliable detection. While watermarking is not a silver bullet for addressing all risks associated with GenAI, it can play a crucial role in enhancing AI safety and trustworthiness by combating misinformation and deception. This paper presents a comprehensive overview of watermarking techniques for GenAI, beginning with the need for watermarking from historical and regulatory perspectives. We formalize the definitions and desired properties of watermarking schemes and examine the key objectives and threat models for existing approaches. Practical evaluation strategies are also explored, providing insights into the development of robust watermarking techniques capable of resisting various attacks. Additionally, we review recent representative works, highlight open challenges, and discuss potential directions for this emerging field. By offering a thorough understanding of watermarking in GenAI, this work aims to guide researchers in advancing watermarking methods and applications, and support policymakers in addressing the broader implications of GenAI.",
+      "year": 2025,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Xuandong Zhao",
+        "Sam Gunn",
+        "Miranda Christ",
+        "Jaiden Fairoze",
+        "Andres Fabrega",
+        "Nicholas Carlini",
+        "Sanjam Garg",
+        "Sanghyun Hong",
+        "Milad Nasr",
+        "Florian Tram\u00e8r",
+        "Somesh Jha",
+        "Lei Li",
+        "Yu-Xiang Wang",
+        "D. Song"
+      ],
+      "author_details": [
+        {
+          "name": "Xuandong Zhao",
+          "h_index": 24,
+          "citation_count": 2354,
+          "affiliations": [
+            "UC Berkeley"
+          ]
+        },
+        {
+          "name": "Sam Gunn",
+          "h_index": 5,
+          "citation_count": 162,
+          "affiliations": []
+        },
+        {
+          "name": "Miranda Christ",
+          "h_index": 4,
+          "citation_count": 111,
+          "affiliations": []
+        },
+        {
+          "name": "Jaiden Fairoze",
+          "h_index": 6,
+          "citation_count": 300,
+          "affiliations": []
+        },
+        {
+          "name": "Andres Fabrega",
+          "h_index": 1,
+          "citation_count": 53,
+          "affiliations": []
+        },
+        {
+          "name": "Nicholas Carlini",
+          "h_index": 35,
+          "citation_count": 10308,
+          "affiliations": []
+        },
+        {
+          "name": "Sanjam Garg",
+          "h_index": 46,
+          "citation_count": 7553,
+          "affiliations": []
+        },
+        {
+          "name": "Sanghyun Hong",
+          "h_index": 2,
+          "citation_count": 83,
+          "affiliations": []
+        },
+        {
+          "name": "Milad Nasr",
+          "h_index": 31,
+          "citation_count": 11780,
+          "affiliations": []
+        },
+        {
+          "name": "Florian Tram\u00e8r",
+          "h_index": 51,
+          "citation_count": 33525,
+          "affiliations": [
+            "ETH Z\u00fcrich"
+          ]
+        },
+        {
+          "name": "Somesh Jha",
+          "h_index": 4,
+          "citation_count": 194,
+          "affiliations": []
+        },
+        {
+          "name": "Lei Li",
+          "h_index": 5,
+          "citation_count": 115,
+          "affiliations": []
+        },
+        {
+          "name": "Yu-Xiang Wang",
+          "h_index": 9,
+          "citation_count": 740,
+          "affiliations": []
+        },
+        {
+          "name": "D. Song",
+          "h_index": 11,
+          "citation_count": 482,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 51,
+      "url": "https://arxiv.org/abs/2411.18479",
+      "citation_count": 53,
+      "influential_citation_count": 1,
+      "reference_count": 147,
+      "is_open_access": false,
+      "publication_date": "2024-11-27",
+      "tldr": "This work formalizes the definitions and desired properties of watermarking schemes and examines the key objectives and threat models for existing approaches, providing insights into the development of robust watermarking techniques capable of resisting various attacks.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Review"
+      ],
+      "paper_type": "survey",
+      "domains": [
+        "generative"
+      ],
+      "model_types": [],
+      "tags": [
+        "SoK",
+        "AIGC-watermarking"
+      ],
+      "open_access_pdf": ""
     },
     {
       "paper_id": "2201.05889",
       "title": "StolenEncoder: Stealing Pre-trained Encoders in Self-supervised Learning",
       "abstract": "Pre-trained encoders are general-purpose feature extractors that can be used for many downstream tasks. Recent progress in self-supervised learning can pre-train highly effective encoders using a large volume of unlabeled data, leading to the emerging encoder as a service (EaaS). A pre-trained encoder may be deemed confidential because its training requires lots of data and computation resources as well as its public release may facilitate misuse of AI, e.g., for deepfakes generation. In this paper, we propose the first attack called StolenEncoder to steal pre-trained image encoders. We evaluate StolenEncoder on multiple target encoders pre-trained by ourselves and three real-world target encoders including the ImageNet encoder pre-trained by Google, CLIP encoder pre-trained by OpenAI, and Clarifai's General Embedding encoder deployed as a paid EaaS. Our results show that our stolen encoders have similar functionality with the target encoders. In particular, the downstream classifiers built upon a target encoder and a stolen one have similar accuracy. Moreover, stealing a target encoder using StolenEncoder requires much less data and computation resources than pre-training it from scratch. We also explore three defenses that perturb feature vectors produced by a target encoder. Our results show these defenses are not enough to mitigate StolenEncoder.",
       "year": 2022,
-      "venue": "ACM CCS",
+      "venue": "Conference on Computer and Communications Security",
       "authors": [
         "Yupei Liu",
         "Jinyuan Jia",
         "Hongbin Liu",
-        "Neil Zhenqiang Gong"
+        "N. Gong"
       ],
+      "author_details": [
+        {
+          "name": "Yupei Liu",
+          "h_index": 9,
+          "citation_count": 729,
+          "affiliations": [
+            "Duke University"
+          ]
+        },
+        {
+          "name": "Jinyuan Jia",
+          "h_index": 21,
+          "citation_count": 3203,
+          "affiliations": []
+        },
+        {
+          "name": "Hongbin Liu",
+          "h_index": 11,
+          "citation_count": 494,
+          "affiliations": []
+        },
+        {
+          "name": "N. Gong",
+          "h_index": 52,
+          "citation_count": 11238,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 52,
       "url": "https://arxiv.org/abs/2201.05889",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
+      "citation_count": 33,
+      "influential_citation_count": 9,
+      "reference_count": 65,
+      "is_open_access": false,
+      "publication_date": "2022-01-15",
+      "tldr": "This paper proposes the first attack called StolenEncoder to steal pre-trained image encoders, and shows that the encoder stolen have similar functionality with the target encoder and have similar accuracy.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Book",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "encoder-stealing",
+        "EaaS"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W4385080307",
+      "paper_id": "seed_af4a9a1b",
       "title": "D-DAE: Defense-Penetrating Model Extraction Attacks",
       "abstract": "Recent studies show that machine learning models are vulnerable to model extraction attacks, where the adversary builds a substitute model that achieves almost the same performance of a black-box victim model simply via querying the victim model. To defend against such attacks, a series of methods have been proposed to disrupt the query results before returning them to potential attackers, greatly degrading the performance of existing model extraction attacks.In this paper, we make the first attempt to develop a defense-penetrating model extraction attack framework, named D-DAE, which aims to break disruption-based defenses. The linchpins of D-DAE are the design of two modules, i.e., disruption detection and disruption recovery, which can be integrated with generic model extraction attacks. More specifically, after obtaining query results from the victim model, the disruption detection module infers the defense mechanism adopted by the defender. We design a meta-learning-based disruption detection algorithm for learning the fundamental differences between the distributions of disrupted and undisrupted query results. The algorithm features a good generalization property even if we have no access to the original training dataset of the victim model. Given the detected defense mechanism, the disruption recovery module tries to restore a clean query result from the disrupted query result with well-designed generative models. Our extensive evaluations on MNIST, FashionMNIST, CIFAR-10, GTSRB, and ImageNette datasets demonstrate that D-DAE can enhance the substitute model accuracy of the existing model extraction attacks by as much as 82.24% in the face of 4 state-of-the-art defenses and combinations of multiple defenses. We also verify the effectiveness of D-DAE in penetrating unknown defenses in real-world APIs hosted by Microsoft Azure and Face++.",
       "year": 2023,
-      "venue": null,
+      "venue": "IEEE Symposium on Security and Privacy",
       "authors": [
         "Yanjiao Chen",
         "Rui Guan",
@@ -106,34 +1130,433 @@
         "Jianshuo Dong",
         "Meng Xue"
       ],
+      "author_details": [
+        {
+          "name": "Yanjiao Chen",
+          "h_index": 12,
+          "citation_count": 473,
+          "affiliations": []
+        },
+        {
+          "name": "Rui Guan",
+          "h_index": 2,
+          "citation_count": 34,
+          "affiliations": []
+        },
+        {
+          "name": "Xueluan Gong",
+          "h_index": 0,
+          "citation_count": 0,
+          "affiliations": []
+        },
+        {
+          "name": "Jianshuo Dong",
+          "h_index": 4,
+          "citation_count": 102,
+          "affiliations": []
+        },
+        {
+          "name": "Meng Xue",
+          "h_index": 5,
+          "citation_count": 104,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 12,
       "url": "https://openalex.org/W4385080307",
-      "pdf_url": null,
-      "cited_by_count": 15,
-      "classification_confidence": "HIGH"
+      "doi": "https://doi.org/10.1109/sp46215.2023.10179406",
+      "citation_count": 30,
+      "influential_citation_count": 3,
+      "reference_count": 44,
+      "is_open_access": false,
+      "publication_date": "2023-05-01",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "defense-penetrating",
+        "model-extraction"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W4353012851",
+      "paper_id": "seed_e954d79d",
+      "title": "Teacher Model Fingerprinting Attacks Against Transfer Learning",
+      "abstract": "Transfer learning has become a common solution to address training data scarcity in practice. It trains a specified student model by reusing or fine-tuning early layers of a well-trained teacher model that is usually publicly available. However, besides utility improvement, the transferred public knowledge also brings potential threats to model confidentiality, and even further raises other security and privacy issues. In this paper, we present the first comprehensive investigation of the teacher model exposure threat in the transfer learning context, aiming to gain a deeper insight into the tension between public knowledge and model confidentiality. To this end, we propose a teacher model fingerprinting attack to infer the origin of a student model, i.e., the teacher model it transfers from. Specifically, we propose a novel optimization-based method to carefully generate queries to probe the student model to realize our attack. Unlike existing model reverse engineering approaches, our proposed fingerprinting method neither relies on fine-grained model outputs, e.g., posteriors, nor auxiliary information of the model architecture or training dataset. We systematically evaluate the effectiveness of our proposed attack. The empirical results demonstrate that our attack can accurately identify the model origin with few probing queries. Moreover, we show that the proposed attack can serve as a stepping stone to facilitating other attacks against machine learning models, such as model stealing.",
+      "year": 2021,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Yufei Chen",
+        "Chao Shen",
+        "Cong Wang",
+        "Yang Zhang"
+      ],
+      "author_details": [
+        {
+          "name": "Yufei Chen",
+          "h_index": 12,
+          "citation_count": 881,
+          "affiliations": [
+            "City University of Hong Kong",
+            "Xi'an Jiaotong University"
+          ]
+        },
+        {
+          "name": "Chao Shen",
+          "h_index": 20,
+          "citation_count": 1393,
+          "affiliations": []
+        },
+        {
+          "name": "Cong Wang",
+          "h_index": 10,
+          "citation_count": 447,
+          "affiliations": []
+        },
+        {
+          "name": "Yang Zhang",
+          "h_index": 12,
+          "citation_count": 1023,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 20,
+      "url": "https://openalex.org/W3176305602",
+      "pdf_url": "https://arxiv.org/pdf/2106.12478",
+      "doi": "https://doi.org/10.48550/arxiv.2106.12478",
+      "citation_count": 27,
+      "influential_citation_count": 1,
+      "reference_count": 48,
+      "is_open_access": false,
+      "publication_date": "2021-06-23",
+      "tldr": "This paper proposes a teacher model fingerprinting attack to infer the origin of a student model, i.e., the teacher model it transfers from, and shows that the proposed attack can serve as a stepping stone to facilitating other attacks against machine learning models, such as model stealing.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "teacher-fingerprinting",
+        "transfer-learning"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_295a2528",
       "title": "Rethinking White-Box Watermarks on Deep Learning Models under Neural Structural Obfuscation",
       "abstract": "Copyright protection for deep neural networks (DNNs) is an urgent need for AI corporations. To trace illegally distributed model copies, DNN watermarking is an emerging technique for embedding and verifying secret identity messages in the prediction behaviors or the model internals. Sacrificing less functionality and involving more knowledge about the target DNN, the latter branch called \\textit{white-box DNN watermarking} is believed to be accurate, credible and secure against most known watermark removal attacks, with emerging research efforts in both the academy and the industry. In this paper, we present the first systematic study on how the mainstream white-box DNN watermarks are commonly vulnerable to neural structural obfuscation with \\textit{dummy neurons}, a group of neurons which can be added to a target model but leave the model behavior invariant. Devising a comprehensive framework to automatically generate and inject dummy neurons with high stealthiness, our novel attack intensively modifies the architecture of the target model to inhibit the success of watermark verification. With extensive evaluation, our work for the first time shows that nine published watermarking schemes require amendments to their verification procedures.",
       "year": 2023,
-      "venue": "arXiv (Cornell University)",
+      "venue": "USENIX Security Symposium",
       "authors": [
         "Yifan Yan",
         "Xudong Pan",
         "Mi Zhang",
         "Min Yang"
       ],
+      "author_details": [
+        {
+          "name": "Yifan Yan",
+          "h_index": 8,
+          "citation_count": 230,
+          "affiliations": []
+        },
+        {
+          "name": "Xudong Pan",
+          "h_index": 14,
+          "citation_count": 940,
+          "affiliations": []
+        },
+        {
+          "name": "Mi Zhang",
+          "h_index": 15,
+          "citation_count": 1008,
+          "affiliations": []
+        },
+        {
+          "name": "Min Yang",
+          "h_index": 15,
+          "citation_count": 1196,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 15,
       "url": "https://openalex.org/W4353012851",
       "pdf_url": "https://arxiv.org/pdf/2303.09732",
-      "cited_by_count": 8,
-      "classification_confidence": "HIGH"
+      "doi": "https://doi.org/10.48550/arxiv.2303.09732",
+      "citation_count": 27,
+      "influential_citation_count": 1,
+      "reference_count": 68,
+      "is_open_access": true,
+      "publication_date": "2023-03-17",
+      "tldr": "This paper presents the first systematic study on how the mainstream white-box DNN watermarks are commonly vulnerable to neural structural obfuscation with dummy neurons, a group of neurons which can be added to a target model but leave the model behavior invariant.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "empirical",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "white-box-watermark",
+        "obfuscation"
+      ],
+      "open_access_pdf": "http://arxiv.org/pdf/2303.09732"
+    },
+    {
+      "paper_id": "seed_e7048869",
+      "title": "DRMI: A Dataset Reduction Technology based on Mutual Information for Black-box Attacks",
+      "year": 2021,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Yingzhe He",
+        "Guozhu Meng",
+        "Kai Chen",
+        "Xingbo Hu",
+        "Jinwen He"
+      ],
+      "author_details": [
+        {
+          "name": "Yingzhe He",
+          "h_index": 6,
+          "citation_count": 210,
+          "affiliations": []
+        },
+        {
+          "name": "Guozhu Meng",
+          "h_index": 11,
+          "citation_count": 536,
+          "affiliations": []
+        },
+        {
+          "name": "Kai Chen",
+          "h_index": 8,
+          "citation_count": 195,
+          "affiliations": []
+        },
+        {
+          "name": "Xingbo Hu",
+          "h_index": 7,
+          "citation_count": 233,
+          "affiliations": []
+        },
+        {
+          "name": "Jinwen He",
+          "h_index": 4,
+          "citation_count": 66,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 11,
+      "url": "https://www.usenix.org/system/files/sec21-he-yingzhe.pdf",
+      "citation_count": 26,
+      "influential_citation_count": 1,
+      "reference_count": 65,
+      "is_open_access": false,
+      "tldr": "D R M I is demonstrated to be high effectiveness in model extraction and adversarial attacks, surpassing a state-of-the-art approach by raising 7% of model accuracy and two times more transferability of adversarial examples.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "dataset-reduction",
+        "black-box-extraction"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_0472ddb1",
+      "title": "LLMmap: Fingerprinting for Large Language Models",
+      "abstract": "We introduce LLMmap, a first-generation fingerprinting technique targeted at LLM-integrated applications. LLMmap employs an active fingerprinting approach, sending carefully crafted queries to the application and analyzing the responses to identify the specific LLM version in use. Our query selection is informed by domain expertise on how LLMs generate uniquely identifiable responses to thematically varied prompts. With as few as 8 interactions, LLMmap can accurately identify 42 different LLM versions with over 95% accuracy. More importantly, LLMmap is designed to be robust across different application layers, allowing it to identify LLM versions--whether open-source or proprietary--from various vendors, operating under various unknown system prompts, stochastic sampling hyperparameters, and even complex generation frameworks such as RAG or Chain-of-Thought. We discuss potential mitigations and demonstrate that, against resourceful adversaries, effective countermeasures may be challenging or even unrealizable.",
+      "year": 2024,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Dario Pasquini",
+        "Evgenios M. Kornaropoulos",
+        "G. Ateniese"
+      ],
+      "author_details": [
+        {
+          "name": "Dario Pasquini",
+          "h_index": 11,
+          "citation_count": 624,
+          "affiliations": []
+        },
+        {
+          "name": "Evgenios M. Kornaropoulos",
+          "h_index": 12,
+          "citation_count": 768,
+          "affiliations": []
+        },
+        {
+          "name": "G. Ateniese",
+          "h_index": 50,
+          "citation_count": 20201,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 50,
+      "url": "https://openalex.org/W4402856935",
+      "pdf_url": "https://arxiv.org/pdf/2407.15847",
+      "doi": "https://doi.org/10.48550/arxiv.2407.15847",
+      "citation_count": 24,
+      "influential_citation_count": 6,
+      "reference_count": 49,
+      "is_open_access": false,
+      "publication_date": "2024-07-22",
+      "tldr": "LLMmap is designed to be robust across different application layers, allowing it to identify LLM versions--whether open-source or proprietary--from various vendors, operating under various unknown system prompts, stochastic sampling hyperparameters, and even complex generation frameworks such as RAG or Chain-of-Thought.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "llm"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "LLM-fingerprinting",
+        "version-detection"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_0c0aadbb",
+      "title": "Provably Robust Multi-bit Watermarking for AI-generated Text",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities of generating texts resembling human language. However, they can be misused by criminals to create deceptive content, such as fake news and phishing emails, which raises ethical concerns. Watermarking is a key technique to address these concerns, which embeds a message (e.g., a bit string) into a text generated by an LLM. By embedding the user ID (represented as a bit string) into generated texts, we can trace generated texts to the user, known as content source tracing. The major limitation of existing watermarking techniques is that they achieve sub-optimal performance for content source tracing in real-world scenarios. The reason is that they cannot accurately or efficiently extract a long message from a generated text. We aim to address the limitations. In this work, we introduce a new watermarking method for LLM-generated text grounded in pseudo-random segment assignment. We also propose multiple techniques to further enhance the robustness of our watermarking algorithm. We conduct extensive experiments to evaluate our method. Our experimental results show that our method substantially outperforms existing baselines in both accuracy and robustness on benchmark datasets. For instance, when embedding a message of length 20 into a 200-token generated text, our method achieves a match rate of $97.6\\%$, while the state-of-the-art work Yoo et al. only achieves $49.2\\%$. Additionally, we prove that our watermark can tolerate edits within an edit distance of 17 on average for each paragraph under the same setting.",
+      "year": 2024,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Wenjie Qu",
+        "Wengrui Zheng",
+        "Tianyang Tao",
+        "Dong Yin",
+        "Yanze Jiang",
+        "Zhihua Tian",
+        "Wei Zou",
+        "Jinyuan Jia",
+        "Jiaheng Zhang"
+      ],
+      "author_details": [
+        {
+          "name": "Wenjie Qu",
+          "h_index": 7,
+          "citation_count": 116,
+          "affiliations": []
+        },
+        {
+          "name": "Wengrui Zheng",
+          "h_index": 1,
+          "citation_count": 20,
+          "affiliations": []
+        },
+        {
+          "name": "Tianyang Tao",
+          "h_index": 5,
+          "citation_count": 86,
+          "affiliations": []
+        },
+        {
+          "name": "Dong Yin",
+          "h_index": 2,
+          "citation_count": 50,
+          "affiliations": []
+        },
+        {
+          "name": "Yanze Jiang",
+          "h_index": 2,
+          "citation_count": 25,
+          "affiliations": []
+        },
+        {
+          "name": "Zhihua Tian",
+          "h_index": 2,
+          "citation_count": 24,
+          "affiliations": []
+        },
+        {
+          "name": "Wei Zou",
+          "h_index": 5,
+          "citation_count": 236,
+          "affiliations": []
+        },
+        {
+          "name": "Jinyuan Jia",
+          "h_index": 8,
+          "citation_count": 300,
+          "affiliations": []
+        },
+        {
+          "name": "Jiaheng Zhang",
+          "h_index": 7,
+          "citation_count": 123,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 8,
+      "url": "https://openalex.org/W4391421113",
+      "pdf_url": "https://arxiv.org/pdf/2401.16820",
+      "doi": "https://doi.org/10.48550/arxiv.2401.16820",
+      "citation_count": 20,
+      "influential_citation_count": 2,
+      "reference_count": 75,
+      "is_open_access": false,
+      "publication_date": "2024-01-30",
+      "tldr": "This work introduces a new watermarking method for LLM-generated text grounded in pseudo-random segment assignment and substantially outperforms existing baselines in both accuracy and robustness on benchmark datasets.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "nlp",
+        "llm"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "multi-bit-watermark",
+        "provable-robustness"
+      ],
+      "open_access_pdf": ""
     },
     {
       "paper_id": "2401.15239",
       "title": "MEA-Defender: A Robust Watermark against Model Extraction Attack",
       "abstract": "Recently, numerous highly-valuable Deep Neural Networks (DNNs) have been trained using deep learning algorithms. To protect the Intellectual Property (IP) of the original owners over such DNN models, backdoor-based watermarks have been extensively studied. However, most of such watermarks fail upon model extraction attack, which utilizes input samples to query the target model and obtains the corresponding outputs, thus training a substitute model using such input-output pairs. In this paper, we propose a novel watermark to protect IP of DNN models against model extraction, named MEA-Defender. In particular, we obtain the watermark by combining two samples from two source classes in the input domain and design a watermark loss function that makes the output domain of the watermark within that of the main task samples. Since both the input domain and the output domain of our watermark are indispensable parts of those of the main task samples, the watermark will be extracted into the stolen model along with the main task during model extraction. We conduct extensive experiments on four model extraction attacks, using five datasets and six models trained based on supervised learning and self-supervised learning algorithms. The experimental results demonstrate that MEA-Defender is highly robust against different model extraction attacks, and various watermark removal/detection approaches.",
       "year": 2024,
-      "venue": "IEEE S&P",
+      "venue": "IEEE Symposium on Security and Privacy",
       "authors": [
         "Peizhuo Lv",
         "Hualong Ma",
@@ -145,17 +1568,288 @@
         "Pan Li",
         "Yingjun Zhang"
       ],
+      "author_details": [
+        {
+          "name": "Peizhuo Lv",
+          "h_index": 9,
+          "citation_count": 208,
+          "affiliations": [
+            "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "name": "Hualong Ma",
+          "h_index": 8,
+          "citation_count": 164,
+          "affiliations": []
+        },
+        {
+          "name": "Kai Chen",
+          "h_index": 12,
+          "citation_count": 378,
+          "affiliations": []
+        },
+        {
+          "name": "Jiachen Zhou",
+          "h_index": 5,
+          "citation_count": 64,
+          "affiliations": []
+        },
+        {
+          "name": "Shengzhi Zhang",
+          "h_index": 10,
+          "citation_count": 283,
+          "affiliations": []
+        },
+        {
+          "name": "Ruigang Liang",
+          "h_index": 13,
+          "citation_count": 765,
+          "affiliations": []
+        },
+        {
+          "name": "Shenchen Zhu",
+          "h_index": 3,
+          "citation_count": 42,
+          "affiliations": []
+        },
+        {
+          "name": "Pan Li",
+          "h_index": 2,
+          "citation_count": 19,
+          "affiliations": []
+        },
+        {
+          "name": "Yingjun Zhang",
+          "h_index": 2,
+          "citation_count": 21,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 13,
       "url": "https://arxiv.org/abs/2401.15239",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
+      "citation_count": 17,
+      "influential_citation_count": 3,
+      "reference_count": 59,
+      "is_open_access": true,
+      "publication_date": "2024-01-26",
+      "tldr": "This paper proposes a novel watermark to protect IP of DNN models against model extraction, named MEA-Defender, and designs a watermark loss function that makes the output domain of the watermark within that of the main task samples.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "watermark-robustness",
+        "extraction-defense"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2401.15239"
+    },
+    {
+      "paper_id": "2410.16618",
+      "title": "SoK: Dataset Copyright Auditing in Machine Learning Systems",
+      "abstract": "As the implementation of machine learning (ML) systems becomes more widespread, especially with the introduction of larger ML models, we perceive a spring demand for massive data. However, it inevitably causes infringement and misuse problems with the data, such as using unauthorized online artworks or face images to train ML models. To address this problem, many efforts have been made to audit the copyright of the model training dataset. However, existing solutions vary in auditing assumptions and capabilities, making it difficult to compare their strengths and weaknesses. In addition, robustness evaluations usually consider only part of the ML pipeline and hardly reflect the performance of algorithms in real-world ML applications. Thus, it is essential to take a practical deployment perspective on the current dataset copyright auditing tools, examining their effectiveness and limitations. Concretely, we categorize dataset copyright auditing research into two prominent strands: intrusive methods and non-intrusive methods, depending on whether they require modifications to the original dataset. Then, we break down the intrusive methods into different watermark injection options and examine the non-intrusive methods using various fingerprints. To summarize our results, we offer detailed reference tables, highlight key points, and pinpoint unresolved issues in the current literature. By combining the pipeline in ML systems and analyzing previous studies, we highlight several future directions to make auditing tools more suitable for real-world copyright protection requirements.",
+      "year": 2025,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "L. Du",
+        "Xuanru Zhou",
+        "Min Chen",
+        "Chusong Zhang",
+        "Zhou Su",
+        "Peng Cheng",
+        "Jiming Chen",
+        "Zhikun Zhang"
+      ],
+      "author_details": [
+        {
+          "name": "L. Du",
+          "h_index": 8,
+          "citation_count": 252,
+          "affiliations": []
+        },
+        {
+          "name": "Xuanru Zhou",
+          "h_index": 1,
+          "citation_count": 16,
+          "affiliations": []
+        },
+        {
+          "name": "Min Chen",
+          "h_index": 3,
+          "citation_count": 40,
+          "affiliations": []
+        },
+        {
+          "name": "Chusong Zhang",
+          "h_index": 1,
+          "citation_count": 16,
+          "affiliations": []
+        },
+        {
+          "name": "Zhou Su",
+          "h_index": 2,
+          "citation_count": 20,
+          "affiliations": []
+        },
+        {
+          "name": "Peng Cheng",
+          "h_index": 7,
+          "citation_count": 204,
+          "affiliations": []
+        },
+        {
+          "name": "Jiming Chen",
+          "h_index": 4,
+          "citation_count": 136,
+          "affiliations": []
+        },
+        {
+          "name": "Zhikun Zhang",
+          "h_index": 4,
+          "citation_count": 47,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 8,
+      "url": "https://arxiv.org/abs/2410.16618",
+      "citation_count": 16,
+      "influential_citation_count": 3,
+      "reference_count": 107,
+      "is_open_access": false,
+      "publication_date": "2024-10-22",
+      "tldr": "This work categorizes dataset copyright auditing research into two prominent strands: intrusive methods and non-intrusive methods, depending on whether they require modifications to the original dataset, depending on whether they require modifications to the original dataset.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "survey",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "SoK",
+        "dataset-copyright",
+        "auditing"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2203.10902",
+      "title": "PublicCheck: Public Integrity Verification for Services of Run-time Deep Models",
+      "abstract": "Existing integrity verification approaches for deep models are designed for private verification (i.e., assuming the service provider is honest, with white-box access to model parameters). However, private verification approaches do not allow model users to verify the model at run-time. Instead, they must trust the service provider, who may tamper with the verification results. In contrast, a public verification approach that considers the possibility of dishonest service providers can benefit a wider range of users. In this paper, we propose PublicCheck, a practical public integrity verification solution for services of run-time deep models. PublicCheck considers dishonest service providers, and overcomes public verification challenges of being lightweight, providing anti-counterfeiting protection, and having fingerprinting samples that appear smooth. To capture and fingerprint the inherent prediction behaviors of a run-time model, PublicCheck generates smoothly transformed and augmented encysted samples that are enclosed around the model's decision boundary while ensuring that the verification queries are indistinguishable from normal queries. PublicCheck is also applicable when knowledge of the target model is limited (e.g., with no knowledge of gradients or model parameters). A thorough evaluation of PublicCheck demonstrates the strong capability for model integrity breach detection (100% detection accuracy with less than 10 black-box API queries) against various model integrity attacks and model compression attacks. PublicCheck also demonstrates the smooth appearance, feasibility, and efficiency of generating a plethora of encysted samples for fingerprinting.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Shuo Wang",
+        "Sharif Abuadbba",
+        "Sidharth Agarwal",
+        "Kristen Moore",
+        "Ruoxi Sun",
+        "Minhui Xue",
+        "Surya Nepal",
+        "Seyit Ahmet Camtepe",
+        "S. Kanhere"
+      ],
+      "author_details": [
+        {
+          "name": "Shuo Wang",
+          "h_index": 11,
+          "citation_count": 452,
+          "affiliations": [
+            "Shanghai Jiao Tong University"
+          ]
+        },
+        {
+          "name": "Sharif Abuadbba",
+          "h_index": 9,
+          "citation_count": 574,
+          "affiliations": []
+        },
+        {
+          "name": "Sidharth Agarwal",
+          "h_index": 1,
+          "citation_count": 14,
+          "affiliations": []
+        },
+        {
+          "name": "Kristen Moore",
+          "h_index": 7,
+          "citation_count": 106,
+          "affiliations": []
+        },
+        {
+          "name": "Ruoxi Sun",
+          "h_index": 14,
+          "citation_count": 836,
+          "affiliations": []
+        },
+        {
+          "name": "Minhui Xue",
+          "h_index": 32,
+          "citation_count": 4765,
+          "affiliations": []
+        },
+        {
+          "name": "Surya Nepal",
+          "h_index": 16,
+          "citation_count": 771,
+          "affiliations": []
+        },
+        {
+          "name": "Seyit Ahmet Camtepe",
+          "h_index": 43,
+          "citation_count": 8643,
+          "affiliations": [
+            "CSIRO Data61"
+          ]
+        },
+        {
+          "name": "S. Kanhere",
+          "h_index": 67,
+          "citation_count": 18180,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 67,
+      "url": "https://arxiv.org/abs/2203.10902",
+      "citation_count": 13,
+      "influential_citation_count": 2,
+      "reference_count": 34,
+      "is_open_access": true,
+      "publication_date": "2022-03-21",
+      "tldr": "This paper proposes PublicCheck, a practical public integrity verification solution for services of run-time deep models that considers dishonest service providers, and overcomes public verification challenges of being lightweight, providing anti-counterfeiting protection, and having fingerprinting samples that appear smooth.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "integrity-verification",
+        "runtime",
+        "public"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2203.10902"
     },
     {
       "paper_id": "2209.03563",
       "title": "SSL-WM: A Black-Box Watermarking Approach for Encoders Pre-trained by Self-Supervised Learning",
       "abstract": "Recent years have witnessed tremendous success in Self-Supervised Learning (SSL), which has been widely utilized to facilitate various downstream tasks in Computer Vision (CV) and Natural Language Processing (NLP) domains. However, attackers may steal such SSL models and commercialize them for profit, making it crucial to verify the ownership of the SSL models. Most existing ownership protection solutions (e.g., backdoor-based watermarks) are designed for supervised learning models and cannot be used directly since they require that the models' downstream tasks and target labels be known and available during watermark embedding, which is not always possible in the domain of SSL. To address such a problem, especially when downstream tasks are diverse and unknown during watermark embedding, we propose a novel black-box watermarking solution, named SSL-WM, for verifying the ownership of SSL models. SSL-WM maps watermarked inputs of the protected encoders into an invariant representation space, which causes any downstream classifier to produce expected behavior, thus allowing the detection of embedded watermarks. We evaluate SSL-WM on numerous tasks, such as CV and NLP, using different SSL models both contrastive-based and generative-based. Experimental results demonstrate that SSL-WM can effectively verify the ownership of stolen SSL models in various downstream tasks. Furthermore, SSL-WM is robust against model fine-tuning, pruning, and input preprocessing attacks. Lastly, SSL-WM can also evade detection from evaluated watermark detection approaches, demonstrating its promising application in protecting the ownership of SSL models.",
       "year": 2024,
-      "venue": "NDSS",
+      "venue": "arXiv.org",
       "authors": [
         "Peizhuo Lv",
         "Pan Li",
@@ -170,17 +1864,115 @@
         "Yingjun Zhang",
         "Guozhu Meng"
       ],
+      "author_details": [
+        {
+          "name": "Peizhuo Lv",
+          "h_index": 9,
+          "citation_count": 208,
+          "affiliations": [
+            "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "name": "Pan Li",
+          "h_index": 37,
+          "citation_count": 5772,
+          "affiliations": []
+        },
+        {
+          "name": "Shenchen Zhu",
+          "h_index": 3,
+          "citation_count": 42,
+          "affiliations": []
+        },
+        {
+          "name": "Shengzhi Zhang",
+          "h_index": 10,
+          "citation_count": 283,
+          "affiliations": []
+        },
+        {
+          "name": "Kai Chen",
+          "h_index": 12,
+          "citation_count": 378,
+          "affiliations": []
+        },
+        {
+          "name": "Ruigang Liang",
+          "h_index": 13,
+          "citation_count": 765,
+          "affiliations": []
+        },
+        {
+          "name": "Chang Yue",
+          "h_index": 4,
+          "citation_count": 107,
+          "affiliations": []
+        },
+        {
+          "name": "Fan Xiang",
+          "h_index": 2,
+          "citation_count": 16,
+          "affiliations": []
+        },
+        {
+          "name": "Yuling Cai",
+          "h_index": 2,
+          "citation_count": 16,
+          "affiliations": []
+        },
+        {
+          "name": "Hualong Ma",
+          "h_index": 8,
+          "citation_count": 164,
+          "affiliations": []
+        },
+        {
+          "name": "Yingjun Zhang",
+          "h_index": 21,
+          "citation_count": 1630,
+          "affiliations": []
+        },
+        {
+          "name": "Guozhu Meng",
+          "h_index": 11,
+          "citation_count": 536,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 37,
       "url": "https://arxiv.org/abs/2209.03563",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
+      "citation_count": 11,
+      "influential_citation_count": 0,
+      "reference_count": 62,
+      "is_open_access": true,
+      "publication_date": "2022-09-08",
+      "tldr": "Experimental results demonstrate that SSL-WM can effectively verify the ownership of stolen SSL models in various downstream tasks, and is robust against model fine-tuning, pruning, and input preprocessing attacks.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "SSL-watermarking",
+        "encoder-protection"
+      ],
+      "open_access_pdf": "http://arxiv.org/pdf/2209.03563"
     },
     {
       "paper_id": "seed_0b98e84b",
       "title": "Watermarking Language Models for Many Adaptive Users",
       "abstract": "Recent years have witnessed tremendous success in Self-Supervised Learning (SSL), which has been widely utilized to facilitate various downstream tasks in Computer Vision (CV) and Natural Language Processing (NLP) domains. However, attackers may steal such SSL models and commercialize them for profit, making it crucial to verify the ownership of the SSL models. Most existing ownership protection solutions (e.g., backdoor-based watermarks) are designed for supervised learning models and cannot be used directly since they require that the models' downstream tasks and target labels be known and available during watermark embedding, which is not always possible in the domain of SSL. To address such a problem, especially when downstream tasks are diverse and unknown during watermark embedding, we propose a novel black-box watermarking solution, named SSL-WM, for verifying the ownership of SSL models. SSL-WM maps watermarked inputs of the protected encoders into an invariant representation space, which causes any downstream classifier to produce expected behavior, thus allowing the detection of embedded watermarks. We evaluate SSL-WM on numerous tasks, such as CV and NLP, using different SSL models both contrastive-based and generative-based. Experimental results demonstrate that SSL-WM can effectively verify the ownership of stolen SSL models in various downstream tasks. Furthermore, SSL-WM is robust against model fine-tuning, pruning, and input preprocessing attacks. Lastly, SSL-WM can also evade detection from evaluated watermark detection approaches, demonstrating its promising application in protecting the ownership of SSL models.",
       "year": 2022,
-      "venue": "IEEE S&P",
+      "venue": "arXiv.org",
       "authors": [
         "Peizhuo Lv",
         "Pan Li",
@@ -195,176 +1987,545 @@
         "Yingjun Zhang",
         "Guozhu Meng"
       ],
+      "author_details": [
+        {
+          "name": "Peizhuo Lv",
+          "h_index": 9,
+          "citation_count": 208,
+          "affiliations": [
+            "SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "name": "Pan Li",
+          "h_index": 37,
+          "citation_count": 5772,
+          "affiliations": []
+        },
+        {
+          "name": "Shenchen Zhu",
+          "h_index": 3,
+          "citation_count": 42,
+          "affiliations": []
+        },
+        {
+          "name": "Shengzhi Zhang",
+          "h_index": 10,
+          "citation_count": 283,
+          "affiliations": []
+        },
+        {
+          "name": "Kai Chen",
+          "h_index": 12,
+          "citation_count": 378,
+          "affiliations": []
+        },
+        {
+          "name": "Ruigang Liang",
+          "h_index": 13,
+          "citation_count": 765,
+          "affiliations": []
+        },
+        {
+          "name": "Chang Yue",
+          "h_index": 4,
+          "citation_count": 107,
+          "affiliations": []
+        },
+        {
+          "name": "Fan Xiang",
+          "h_index": 2,
+          "citation_count": 16,
+          "affiliations": []
+        },
+        {
+          "name": "Yuling Cai",
+          "h_index": 2,
+          "citation_count": 16,
+          "affiliations": []
+        },
+        {
+          "name": "Hualong Ma",
+          "h_index": 8,
+          "citation_count": 164,
+          "affiliations": []
+        },
+        {
+          "name": "Yingjun Zhang",
+          "h_index": 21,
+          "citation_count": 1630,
+          "affiliations": []
+        },
+        {
+          "name": "Guozhu Meng",
+          "h_index": 11,
+          "citation_count": 536,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 37,
       "url": "https://arxiv.org/abs/2209.03563",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
+      "citation_count": 11,
+      "influential_citation_count": 0,
+      "reference_count": 62,
+      "is_open_access": true,
+      "publication_date": "2022-09-08",
+      "tldr": "Experimental results demonstrate that SSL-WM can effectively verify the ownership of stolen SSL models in various downstream tasks, and is robust against model fine-tuning, pruning, and input preprocessing attacks.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "nlp",
+        "llm"
+      ],
+      "model_types": [
+        "transformer",
+        "llm"
+      ],
+      "tags": [
+        "LM-watermarking",
+        "adaptive-users"
+      ],
+      "open_access_pdf": "http://arxiv.org/pdf/2209.03563"
     },
     {
-      "paper_id": "https://openalex.org/W4391421113",
-      "title": "Provably Robust Multi-bit Watermarking for AI-generated Text",
-      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities of generating texts resembling human language. However, they can be misused by criminals to create deceptive content, such as fake news and phishing emails, which raises ethical concerns. Watermarking is a key technique to address these concerns, which embeds a message (e.g., a bit string) into a text generated by an LLM. By embedding the user ID (represented as a bit string) into generated texts, we can trace generated texts to the user, known as content source tracing. The major limitation of existing watermarking techniques is that they achieve sub-optimal performance for content source tracing in real-world scenarios. The reason is that they cannot accurately or efficiently extract a long message from a generated text. We aim to address the limitations. In this work, we introduce a new watermarking method for LLM-generated text grounded in pseudo-random segment assignment. We also propose multiple techniques to further enhance the robustness of our watermarking algorithm. We conduct extensive experiments to evaluate our method. Our experimental results show that our method substantially outperforms existing baselines in both accuracy and robustness on benchmark datasets. For instance, when embedding a message of length 20 into a 200-token generated text, our method achieves a match rate of $97.6\\%$, while the state-of-the-art work Yoo et al. only achieves $49.2\\%$. Additionally, we prove that our watermark can tolerate edits within an edit distance of 17 on average for each paragraph under the same setting.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
+      "paper_id": "2503.09022",
+      "title": "Prompt Inversion Attack against Collaborative Inference of Large Language Models",
+      "abstract": "Large language models (LLMs) have been widely applied for their remarkable capability of content generation. However, the practical use of open-source LLMs is hindered by high resource requirements, making deployment expensive and limiting widespread development. The collaborative inference is a promising solution for this problem, in which users collaborate by each hosting a subset of layers and transmitting intermediate activation. Many companies are building collaborative inference platforms to reduce LLM serving costs, leveraging users' underutilized GPUs. Despite widespread interest in collaborative inference within academia and industry, the privacy risks associated with LLM collaborative inference have not been well studied. This is largely because of the challenge posed by inverting LLM activation due to its strong non-linearity.   In this paper, to validate the severity of privacy threats in LLM collaborative inference, we introduce the concept of prompt inversion attack (PIA), where a malicious participant intends to recover the input prompt through the activation transmitted by its previous participant. Extensive experiments show that our PIA method substantially outperforms existing baselines. For example, our method achieves an 88.4\\% token accuracy on the Skytrax dataset with the Llama-65B model when inverting the maximum number of transformer layers, while the best baseline method only achieves 22.8\\% accuracy. The results verify the effectiveness of our PIA attack and highlights its practical threat to LLM collaborative inference systems.",
+      "year": 2025,
+      "venue": "IEEE Symposium on Security and Privacy",
       "authors": [
         "Wenjie Qu",
-        "Dong Yin",
-        "Zixin He",
-        "Wei Zou",
-        "Tianyang Tao",
-        "Jinyuan Jia",
+        "Yuguang Zhou",
+        "Yongji Wu",
+        "Tingsong Xiao",
+        "Binhang Yuan",
+        "Yiming Li",
         "Jiaheng Zhang"
       ],
-      "url": "https://openalex.org/W4391421113",
-      "pdf_url": "https://arxiv.org/pdf/2401.16820",
-      "cited_by_count": 5,
-      "classification_confidence": "HIGH"
+      "author_details": [
+        {
+          "name": "Wenjie Qu",
+          "h_index": 7,
+          "citation_count": 116,
+          "affiliations": []
+        },
+        {
+          "name": "Yuguang Zhou",
+          "h_index": 1,
+          "citation_count": 8,
+          "affiliations": []
+        },
+        {
+          "name": "Yongji Wu",
+          "h_index": 1,
+          "citation_count": 8,
+          "affiliations": []
+        },
+        {
+          "name": "Tingsong Xiao",
+          "h_index": 4,
+          "citation_count": 169,
+          "affiliations": []
+        },
+        {
+          "name": "Binhang Yuan",
+          "h_index": 2,
+          "citation_count": 13,
+          "affiliations": []
+        },
+        {
+          "name": "Yiming Li",
+          "h_index": 2,
+          "citation_count": 11,
+          "affiliations": []
+        },
+        {
+          "name": "Jiaheng Zhang",
+          "h_index": 7,
+          "citation_count": 123,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 7,
+      "url": "https://arxiv.org/abs/2503.09022",
+      "citation_count": 8,
+      "influential_citation_count": 2,
+      "reference_count": 83,
+      "is_open_access": false,
+      "publication_date": "2025-03-12",
+      "tldr": "To validate the severity of privacy threats in LLM collaborative inference, the concept of prompt inversion attack (PIA) is introduced, where a malicious participant intends to recover the input prompt through the activation transmitted by its previous participant.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "llm",
+        "nlp"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "prompt-inversion",
+        "collaborative-inference"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W4403963863",
-      "title": "Towards Understanding and Enhancing Security of Proof-of-Training for DNN Model Ownership Verification",
-      "abstract": "The great economic values of deep neural networks (DNNs) urge AI enterprises to protect their intellectual property (IP) for these models. Recently, proof-of-training (PoT) has been proposed as a promising solution to DNN IP protection, through which AI enterprises can utilize the record of DNN training process as their ownership proof. To prevent attackers from forging ownership proof, a secure PoT scheme should be able to distinguish honest training records from those forged by attackers. Although existing PoT schemes provide various distinction criteria, these criteria are based on intuitions or observations. The effectiveness of these criteria lacks clear and comprehensive analysis, resulting in existing schemes initially deemed secure being swiftly compromised by simple ideas. In this paper, we make the first move to identify distinction criteria in the style of formal methods, so that their effectiveness can be explicitly demonstrated. Specifically, we conduct systematic modeling to cover a wide range of attacks and then theoretically analyze the distinctions between honest and forged training records. The analysis results not only induce a universal distinction criterion, but also provide detailed reasoning to demonstrate its effectiveness in defending against attacks covered by our model. Guided by the criterion, we propose a generic PoT construction that can be instantiated into concrete schemes. This construction sheds light on the realization that trajectory matching algorithms, previously employed in data distillation, possess significant advantages in PoT construction. Experimental results demonstrate that our scheme can resist attacks that have compromised existing PoT schemes, which corroborates its superiority in security.",
+      "paper_id": "seed_9af43847",
+      "title": "SoK: Neural Network Extraction Through Physical Side Channels",
       "year": 2024,
-      "venue": "arXiv (Cornell University)",
+      "venue": "USENIX Security Symposium",
       "authors": [
-        "Yijia Chang",
-        "Hongchao Jiang",
-        "Chao Lin",
-        "Xinyi Huang",
-        "Jianping Weng"
+        "P\u00e9ter Horv\u00e1th",
+        "Dirk Lauret",
+        "Zhuoran Liu",
+        "L. Batina"
       ],
-      "url": "https://openalex.org/W4403963863",
-      "pdf_url": "https://arxiv.org/pdf/2410.04397",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
+      "author_details": [
+        {
+          "name": "P\u00e9ter Horv\u00e1th",
+          "h_index": 3,
+          "citation_count": 26,
+          "affiliations": []
+        },
+        {
+          "name": "Dirk Lauret",
+          "h_index": 2,
+          "citation_count": 51,
+          "affiliations": []
+        },
+        {
+          "name": "Zhuoran Liu",
+          "h_index": 1,
+          "citation_count": 6,
+          "affiliations": []
+        },
+        {
+          "name": "L. Batina",
+          "h_index": 43,
+          "citation_count": 8094,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 43,
+      "url": "https://www.usenix.org/system/files/usenixsecurity24-horvath.pdf",
+      "citation_count": 6,
+      "influential_citation_count": 0,
+      "reference_count": 135,
+      "is_open_access": false,
+      "tldr": "The dependencies of threat models on attack objectives and analysis methods are discussed and a novel systematic attack framework composed of fundamental stages derived from various attacks is presented, for which a novel systematic attack framework composed of fundamental stages derived from various attacks is presented.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "survey",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "SoK",
+        "side-channel",
+        "physical-extraction"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W4417351576",
-      "title": "A Crack in the Bark: Leveraging Public Knowledge to Remove Tree-Ring Watermarks",
-      "abstract": "We present a novel attack specifically designed against Tree-Ring, a watermarking technique for diffusion models known for its high imperceptibility and robustness against removal attacks. Unlike previous removal attacks, which rely on strong assumptions about attacker capabilities, our attack only requires access to the variational autoencoder that was used to train the target diffusion model, a component that is often publicly available. By leveraging this variational autoencoder, the attacker can approximate the model's intermediate latent space, enabling more effective surrogate-based attacks. Our evaluation shows that this approach leads to a dramatic reduction in the AUC of Tree-Ring detector's ROC and PR curves, decreasing from 0.993 to 0.153 and from 0.994 to 0.385, respectively, while maintaining high image quality. Notably, our attacks outperform existing methods that assume full access to the diffusion model. These findings highlight the risk of reusing public autoencoders to train diffusion models -- a threat not considered by current industry practices. Furthermore, the results suggest that the Tree-Ring detector's precision, a metric that has been overlooked by previous evaluations, falls short of the requirements for real-world deployment.",
+      "paper_id": "seed_8a4be885",
+      "title": "Prompt Obfuscation for Large Language Models",
+      "abstract": "System prompts that include detailed instructions to describe the task performed by the underlying LLM can easily transform foundation models into tools and services with minimal overhead. They are often considered intellectual property, similar to the code of a software product, because of their crucial impact on the utility. However, extracting system prompts is easily possible. As of today, there is no effective countermeasure to prevent the stealing of system prompts, and all safeguarding efforts could be evaded. In this work, we propose an alternative to conventional system prompts. We introduce prompt obfuscation to prevent the extraction of the system prompt with little overhead. The core idea is to find a representation of the original system prompt that leads to the same functionality, while the obfuscated system prompt does not contain any information that allows conclusions to be drawn about the original system prompt. We evaluate our approach by comparing our obfuscated prompt output with the output of the original prompt, using eight distinct metrics to measure the lexical, character-level, and semantic similarity. We show that the obfuscated version is constantly on par with the original one. We further perform three different deobfuscation attacks with varying attacker knowledge--covering both black-box and white-box conditions--and show that in realistic attack scenarios an attacker is unable to extract meaningful information. Overall, we demonstrate that prompt obfuscation is an effective mechanism to safeguard the intellectual property of a system prompt while maintaining the same utility as the original prompt.",
+      "year": 2024,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "David Pape",
+        "Thorsten Eisenhofer",
+        "Lea Sch\u00f6nherr"
+      ],
+      "author_details": [
+        {
+          "name": "David Pape",
+          "h_index": 3,
+          "citation_count": 39,
+          "affiliations": []
+        },
+        {
+          "name": "Thorsten Eisenhofer",
+          "h_index": 10,
+          "citation_count": 1052,
+          "affiliations": []
+        },
+        {
+          "name": "Lea Sch\u00f6nherr",
+          "h_index": 12,
+          "citation_count": 1453,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 12,
+      "url": "https://openalex.org/W4403713467",
+      "pdf_url": "https://arxiv.org/pdf/2409.11026",
+      "doi": "https://doi.org/10.48550/arxiv.2409.11026",
+      "citation_count": 6,
+      "influential_citation_count": 0,
+      "reference_count": 64,
+      "is_open_access": false,
+      "publication_date": "2024-09-17",
+      "tldr": "Overall, it is demonstrated that prompt obfuscation is an effective mechanism to safeguard the intellectual property of a system prompt while maintaining the same utility as the original prompt.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "llm",
+        "nlp"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "prompt-obfuscation",
+        "IP-protection"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2503.09291",
+      "title": "Prompt Inference Attack on Distributed Large Language Model Inference Frameworks",
+      "abstract": "The inference process of modern large language models (LLMs) demands prohibitive computational resources, rendering them infeasible for deployment on consumer-grade devices. To address this limitation, recent studies propose distributed LLM inference frameworks, which employ split learning principles to enable collaborative LLM inference on resource-constrained hardware. However, distributing LLM layers across participants requires the transmission of intermediate outputs, which may introduce privacy risks to the original input prompts - a critical issue that has yet to be thoroughly explored in the literature.   In this paper, we rigorously examine the privacy vulnerabilities of distributed LLM inference frameworks by designing and evaluating three prompt inference attacks aimed at reconstructing input prompts from intermediate LLM outputs. These attacks are developed under various query and data constraints to reflect diverse real-world LLM service scenarios. Specifically, the first attack assumes an unlimited query budget and access to an auxiliary dataset sharing the same distribution as the target prompts. The second attack also leverages unlimited queries but uses an auxiliary dataset with a distribution differing from the target prompts. The third attack operates under the most restrictive scenario, with limited query budgets and no auxiliary dataset available. We evaluate these attacks on a range of LLMs, including state-of-the-art models such as Llama-3.2 and Phi-3.5, as well as widely-used models like GPT-2 and BERT for comparative analysis. Our experiments show that the first two attacks achieve reconstruction accuracies exceeding 90%, while the third achieves accuracies typically above 50%, even under stringent constraints. These findings highlight privacy risks in distributed LLM inference frameworks, issuing a strong alert on their deployment in real-world applications.",
       "year": 2025,
-      "venue": "arXiv (Cornell University)",
+      "venue": "Conference on Computer and Communications Security",
       "authors": [
-        "Lin, Junhua",
-        "Juarez, Marc"
+        "Xinjian Luo",
+        "Ting Yu",
+        "Xiaokui Xiao"
       ],
-      "url": "https://openalex.org/W4417351576",
-      "pdf_url": "https://arxiv.org/pdf/2506.10502",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
+      "author_details": [
+        {
+          "name": "Xinjian Luo",
+          "h_index": 8,
+          "citation_count": 408,
+          "affiliations": []
+        },
+        {
+          "name": "Ting Yu",
+          "h_index": 2,
+          "citation_count": 123,
+          "affiliations": []
+        },
+        {
+          "name": "Xiaokui Xiao",
+          "h_index": 7,
+          "citation_count": 108,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 8,
+      "url": "https://arxiv.org/abs/2503.09291",
+      "citation_count": 5,
+      "influential_citation_count": 2,
+      "reference_count": 53,
+      "is_open_access": false,
+      "publication_date": "2025-03-12",
+      "tldr": "This paper rigorously examine the privacy vulnerabilities of distributed LLM inference frameworks by designing and evaluating three prompt inference attacks aimed at reconstructing input prompts from intermediate LLM outputs, providing valuable insights into the LLM inference process and the development of effective defense mechanisms for distributed LLM frameworks.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Book",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "llm",
+        "nlp"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "prompt-inference",
+        "distributed-inference"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "2103.05633",
-      "title": "Proof-of-Learning: Definitions and Practice",
-      "abstract": "Training machine learning (ML) models typically involves expensive iterative optimization. Once the model's final parameters are released, there is currently no mechanism for the entity which trained the model to prove that these parameters were indeed the result of this optimization procedure. Such a mechanism would support security of ML applications in several ways. For instance, it would simplify ownership resolution when multiple parties contest ownership of a specific model. It would also facilitate the distributed training across untrusted workers where Byzantine workers might otherwise mount a denial-of-service by returning incorrect model updates.   In this paper, we remediate this problem by introducing the concept of proof-of-learning in ML. Inspired by research on both proof-of-work and verified computations, we observe how a seminal training algorithm, stochastic gradient descent, accumulates secret information due to its stochasticity. This produces a natural construction for a proof-of-learning which demonstrates that a party has expended the compute require to obtain a set of model parameters correctly. In particular, our analyses and experiments show that an adversary seeking to illegitimately manufacture a proof-of-learning needs to perform *at least* as much work than is needed for gradient descent itself.   We also instantiate a concrete proof-of-learning mechanism in both of the scenarios described above. In model ownership resolution, it protects the intellectual property of models released publicly. In distributed training, it preserves availability of the training procedure. Our empirical evaluation validates that our proof-of-learning mechanism is robust to variance induced by the hardware (ML accelerators) and software stacks.",
-      "year": 2021,
-      "venue": "IEEE S&P",
+      "paper_id": "seed_36ed25cf",
+      "title": "AUDIO WATERMARK: Dynamic and Harmless Watermark for Black-box Voice Dataset Copyright Protection",
+      "year": 2025,
+      "venue": "USENIX Security Symposium",
       "authors": [
-        "Hengrui Jia",
-        "Mohammad Yaghini",
-        "Christopher A. Choquette-Choo",
-        "Natalie Dullerud",
-        "Anvith Thudi",
-        "Varun Chandrasekaran",
-        "Nicolas Papernot"
+        "Hanqing Guo",
+        "Junfeng Guo",
+        "Bocheng Chen",
+        "Yuanda Wang",
+        "Xun Chen",
+        "Heng Huang",
+        "Qiben Yan",
+        "Li Xiao"
       ],
-      "url": "https://arxiv.org/abs/2103.05633",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
+      "author_details": [
+        {
+          "name": "Hanqing Guo",
+          "h_index": 15,
+          "citation_count": 825,
+          "affiliations": []
+        },
+        {
+          "name": "Junfeng Guo",
+          "h_index": 8,
+          "citation_count": 194,
+          "affiliations": []
+        },
+        {
+          "name": "Bocheng Chen",
+          "h_index": 7,
+          "citation_count": 132,
+          "affiliations": []
+        },
+        {
+          "name": "Yuanda Wang",
+          "h_index": 4,
+          "citation_count": 46,
+          "affiliations": []
+        },
+        {
+          "name": "Xun Chen",
+          "h_index": 3,
+          "citation_count": 15,
+          "affiliations": []
+        },
+        {
+          "name": "Heng Huang",
+          "h_index": 8,
+          "citation_count": 226,
+          "affiliations": []
+        },
+        {
+          "name": "Qiben Yan",
+          "h_index": 8,
+          "citation_count": 289,
+          "affiliations": []
+        },
+        {
+          "name": "Li Xiao",
+          "h_index": 5,
+          "citation_count": 88,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 15,
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-guo-hanqing.pdf",
+      "citation_count": 4,
+      "influential_citation_count": 0,
+      "reference_count": 67,
+      "is_open_access": false,
+      "tldr": "A UDIO W ATERMARK is introduced, a dynamic and harmless watermark specifically designed for black-box voice dataset copy-right protection, which achieves minimal harmful impact, with nearly 100% benign accuracy, a 95% verification success rate, and demonstrate resistance to all tested attacks.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "audio"
+      ],
+      "model_types": [],
+      "tags": [
+        "audio-watermark",
+        "voice-dataset"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "seed_a81c50bf",
-      "title": "SoK: How Robust is Image Classification Deep Neural Network Watermarking?",
-      "abstract": "Deep Neural Network (DNN) watermarking is a method for provenance verification of DNN models. Watermarking should be robust against watermark removal attacks that derive a surrogate model that evades provenance verification. Many watermarking schemes that claim robustness have been proposed, but their robustness is only validated in isolation against a relatively small set of attacks. There is no systematic, empirical evaluation of these claims against a common, comprehensive set of removal attacks. This uncertainty about a watermarking scheme's robustness causes difficulty to trust their deployment in practice. In this paper, we evaluate whether recently proposed watermarking schemes that claim robustness are robust against a large set of removal attacks. We survey methods from the literature that (i) are known removal attacks, (ii) derive surrogate models but have not been evaluated as removal attacks, and (iii) novel removal attacks. Weight shifting and smooth retraining are novel removal attacks adapted to the DNN watermarking schemes surveyed in this paper. We propose taxonomies for watermarking schemes and removal attacks. Our empirical evaluation includes an ablation study over sets of parameters for each attack and watermarking scheme on the CIFAR-10 and ImageNet datasets. Surprisingly, none of the surveyed watermarking schemes is robust in practice. We find that schemes fail to withstand adaptive attacks and known methods for deriving surrogate models that have not been evaluated as removal attacks. This points to intrinsic flaws in how robustness is currently evaluated. We show that watermarking schemes need to be evaluated against a more extensive set of removal attacks with a more realistic adversary model. Our source code and a complete dataset of evaluation results are publicly available, which allows to independently verify our conclusions.",
-      "year": 2021,
-      "venue": "IEEE S&P",
+      "paper_id": "seed_9dd9001d",
+      "title": "On the Effectiveness of Prompt Stealing Attacks on In-the-Wild Prompts",
+      "year": 2025,
+      "venue": "IEEE Symposium on Security and Privacy",
       "authors": [
-        "Nils Lukas",
-        "Edward Jiang",
-        "Xinda Li",
-        "Florian Kerschbaum"
-      ],
-      "url": "https://arxiv.org/abs/2108.04974",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4200633448",
-      "title": "Copy, Right? A Testing Framework for Copyright Protection of Deep Learning Models",
-      "abstract": "Deep learning models, especially those large-scale and high-performance ones, can be very costly to train, demanding a considerable amount of data and computational resources. As a result, deep learning models have become one of the most valuable assets in modern artificial intelligence. Unauthorized duplication or reproduction of deep learning models can lead to copyright infringement and cause huge economic losses to model owners, calling for effective copyright protection techniques. Existing protection techniques are mostly based on watermarking, which embeds an owner-specified watermark into the model. While being able to provide exact ownership verification, these techniques are 1) invasive, i.e., they need to tamper with the training process, which may affect the model utility or introduce new security risks into the model; 2) prone to adaptive attacks that attempt to remove/replace the watermark or adversarially block the retrieval of the watermark; and 3) not robust to the emerging model extraction attacks. Latest fingerprinting work on deep learning models, though being non-invasive, also falls short when facing the diverse and ever-growing attack scenarios.In this paper, we propose a novel testing framework for deep learning copyright protection: DEEPJUDGE. DEEPJUDGE quantitatively tests the similarities between two deep learning models: a victim model and a suspect model. It leverages a diverse set of testing metrics and efficient test case generation algorithms to produce a chain of supporting evidence to help determine whether a suspect model is a copy of the victim model. Advantages of DEEPJUDGE include: 1) non-invasive, as it works directly on the model and does not tamper with the training process; 2) efficient, as it only needs a small set of seed test cases and a quick scan of the two models; 3) flexible, i.e., it can easily incorporate new testing metrics or test case generation methods to obtain more confident and robust judgement; and 4) fairly robust to model extraction attacks and adaptive attacks. We verify the effectiveness of DEEPJUDGE under three typical copyright infringement scenarios, including model finetuning, pruning and extraction, via extensive experiments on both image classification and speech recognition datasets with a variety of model architectures.",
-      "year": 2022,
-      "venue": "2022 IEEE Symposium on Security and Privacy (SP)",
-      "authors": [
-        "Jialuo Chen",
-        "Jingyi Wang",
-        "Tinglan Peng",
-        "Youcheng Sun",
-        "Peng Cheng",
-        "Shouling Ji",
-        "Xingjun Ma",
-        "Bo Li",
-        "Dawn Song"
-      ],
-      "url": "https://openalex.org/W4200633448",
-      "pdf_url": null,
-      "cited_by_count": 61,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "2201.11692",
-      "title": "SSLGuard: A Watermarking Scheme for Self-supervised Learning Pre-trained Encoders",
-      "abstract": "Self-supervised learning is an emerging machine learning paradigm. Compared to supervised learning which leverages high-quality labeled datasets, self-supervised learning relies on unlabeled datasets to pre-train powerful encoders which can then be treated as feature extractors for various downstream tasks. The huge amount of data and computational resources consumption makes the encoders themselves become the valuable intellectual property of the model owner. Recent research has shown that the machine learning model's copyright is threatened by model stealing attacks, which aim to train a surrogate model to mimic the behavior of a given model. We empirically show that pre-trained encoders are highly vulnerable to model stealing attacks. However, most of the current efforts of copyright protection algorithms such as watermarking concentrate on classifiers. Meanwhile, the intrinsic challenges of pre-trained encoder's copyright protection remain largely unstudied. We fill the gap by proposing SSLGuard, the first watermarking scheme for pre-trained encoders. Given a clean pre-trained encoder, SSLGuard injects a watermark into it and outputs a watermarked version. The shadow training technique is also applied to preserve the watermark under potential model stealing attacks. Our extensive evaluation shows that SSLGuard is effective in watermark injection and verification, and it is robust against model stealing and other watermark removal attacks such as input noising, output perturbing, overwriting, model pruning, and fine-tuning.",
-      "year": 2022,
-      "venue": "ACM CCS",
-      "authors": [
-        "Tianshuo Cong",
-        "Xinlei He",
+        "Yicong Tan",
+        "Xinyue Shen",
+        "Yun Shen",
+        "Michael Backes",
         "Yang Zhang"
       ],
-      "url": "https://arxiv.org/abs/2201.11692",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "seed_5b1c50c5",
-      "title": "RAI2: Responsible Identity Audit Governing the Artificial Intelligence",
-      "abstract": "Self-supervised learning is an emerging machine learning paradigm. Compared to supervised learning which leverages high-quality labeled datasets, self-supervised learning relies on unlabeled datasets to pre-train powerful encoders which can then be treated as feature extractors for various downstream tasks. The huge amount of data and computational resources consumption makes the encoders themselves become the valuable intellectual property of the model owner. Recent research has shown that the machine learning model's copyright is threatened by model stealing attacks, which aim to train a surrogate model to mimic the behavior of a given model. We empirically show that pre-trained encoders are highly vulnerable to model stealing attacks. However, most of the current efforts of copyright protection algorithms such as watermarking concentrate on classifiers. Meanwhile, the intrinsic challenges of pre-trained encoder's copyright protection remain largely unstudied. We fill the gap by proposing SSLGuard, the first watermarking scheme for pre-trained encoders. Given a clean pre-trained encoder, SSLGuard injects a watermark into it and outputs a watermarked version. The shadow training technique is also applied to preserve the watermark under potential model stealing attacks. Our extensive evaluation shows that SSLGuard is effective in watermark injection and verification, and it is robust against model stealing and other watermark removal attacks such as input noising, output perturbing, overwriting, model pruning, and fine-tuning.",
-      "year": 2022,
-      "venue": "NDSS",
-      "authors": [
-        "Tianshuo Cong",
-        "Xinlei He",
-        "Yang Zhang"
+      "author_details": [
+        {
+          "name": "Yicong Tan",
+          "h_index": 3,
+          "citation_count": 77,
+          "affiliations": []
+        },
+        {
+          "name": "Xinyue Shen",
+          "h_index": 12,
+          "citation_count": 1200,
+          "affiliations": []
+        },
+        {
+          "name": "Yun Shen",
+          "h_index": 7,
+          "citation_count": 304,
+          "affiliations": []
+        },
+        {
+          "name": "Michael Backes",
+          "h_index": 16,
+          "citation_count": 877,
+          "affiliations": []
+        },
+        {
+          "name": "Yang Zhang",
+          "h_index": 12,
+          "citation_count": 598,
+          "affiliations": []
+        }
       ],
-      "url": "https://arxiv.org/abs/2201.11692",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4416413358",
-      "title": "THEMIS: Towards Practical Intellectual Property Protection for Post-Deployment On-Device Deep Learning Models",
-      "abstract": "On-device deep learning (DL) has rapidly gained adoption in mobile apps, offering the benefits of offline model inference and user privacy preservation over cloud-based approaches. However, it inevitably stores models on user devices, introducing new vulnerabilities, particularly model-stealing attacks and intellectual property infringement. While system-level protections like Trusted Execution Environments (TEEs) provide a robust solution, practical challenges remain in achieving scalable on-device DL model protection, including complexities in supporting third-party models and limited adoption in current mobile solutions. Advancements in TEE-enabled hardware, such as NVIDIA's GPU-based TEEs, may address these obstacles in the future. Currently, watermarking serves as a common defense against model theft but also faces challenges here as many mobile app developers lack corresponding machine learning expertise and the inherent read-only and inference-only nature of on-device DL models prevents third parties like app stores from implementing existing watermarking techniques in post-deployment models. To protect the intellectual property of on-device DL models, in this paper, we propose THEMIS, an automatic tool that lifts the read-only restriction of on-device DL models by reconstructing their writable counterparts and leverages the untrainable nature of on-device DL models to solve watermark parameters and protect the model owner's intellectual property. Extensive experimental results across various datasets and model structures show the superiority of THEMIS in terms of different metrics. Further, an empirical investigation of 403 real-world DL mobile apps from Google Play is performed with a success rate of 81.14%, showing the practicality of THEMIS.",
-      "year": 2025,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Zhi Zhang",
-        "Chunyang Chen"
+      "max_h_index": 16,
+      "url": "https://www.computer.org/csdl/proceedings-article/sp/2025/223600a392/26hiTFMb8eQ",
+      "citation_count": 4,
+      "influential_citation_count": 1,
+      "reference_count": 55,
+      "is_open_access": false,
+      "publication_date": "2025-05-12",
+      "fields_of_study": [
+        "Computer Science"
       ],
-      "url": "https://openalex.org/W4416413358",
-      "pdf_url": "https://arxiv.org/pdf/2503.23748",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "empirical",
+      "domains": [
+        "llm"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "prompt-stealing",
+        "in-the-wild"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W4399554484",
+      "paper_id": "seed_565523cd",
       "title": "PRSA: Prompt Stealing Attacks against Real-World Prompt Services",
       "abstract": "Recently, large language models (LLMs) have garnered widespread attention for their exceptional capabilities. Prompts are central to the functionality and performance of LLMs, making them highly valuable assets. The increasing reliance on high-quality prompts has driven significant growth in prompt services. However, this growth also expands the potential for prompt leakage, increasing the risk that attackers could replicate original functionalities, create competing products, and severely infringe on developers' intellectual property. Despite these risks, prompt leakage in real-world prompt services remains underexplored. In this paper, we present PRSA, a practical attack framework designed for prompt stealing. PRSA infers the detailed intent of prompts through very limited input-output analysis and can successfully generate stolen prompts that replicate the original functionality. Extensive evaluations demonstrate PRSA's effectiveness across two main types of real-world prompt services. Specifically, compared to previous works, it improves the attack success rate from 17.8% to 46.1% in prompt marketplaces and from 39% to 52% in LLM application stores, respectively. Notably, in the attack on \"Math\", one of the most popular educational applications in OpenAI's GPT Store with over 1 million conversations, PRSA uncovered a hidden Easter egg that had not been revealed previously. Besides, our analysis reveals that higher mutual information between a prompt and its output correlates with an increased risk of leakage. This insight guides the design and evaluation of two potential defenses against the security threats posed by PRSA. We have reported these findings to the prompt service vendors, including PromptBase and OpenAI, and actively collaborate with them to implement defensive measures.",
       "year": 2024,
-      "venue": "arXiv (Cornell University)",
+      "venue": "USENIX Security Symposium",
       "authors": [
         "Yong Yang",
         "Changjiang Li",
@@ -375,42 +2536,588 @@
         "Zonghui Wang",
         "Shouling Ji"
       ],
+      "author_details": [
+        {
+          "name": "Yong Yang",
+          "h_index": 3,
+          "citation_count": 54,
+          "affiliations": []
+        },
+        {
+          "name": "Changjiang Li",
+          "h_index": 11,
+          "citation_count": 362,
+          "affiliations": [
+            "Stony Brook"
+          ]
+        },
+        {
+          "name": "Yi Jiang",
+          "h_index": 2,
+          "citation_count": 11,
+          "affiliations": []
+        },
+        {
+          "name": "Xi Chen",
+          "h_index": 3,
+          "citation_count": 24,
+          "affiliations": []
+        },
+        {
+          "name": "Haoyu Wang",
+          "h_index": 2,
+          "citation_count": 8,
+          "affiliations": []
+        },
+        {
+          "name": "Xuhong Zhang",
+          "h_index": 4,
+          "citation_count": 60,
+          "affiliations": []
+        },
+        {
+          "name": "Zonghui Wang",
+          "h_index": 5,
+          "citation_count": 60,
+          "affiliations": []
+        },
+        {
+          "name": "Shouling Ji",
+          "h_index": 10,
+          "citation_count": 237,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 11,
       "url": "https://openalex.org/W4399554484",
       "pdf_url": "https://arxiv.org/pdf/2402.19200",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
+      "doi": "https://doi.org/10.48550/arxiv.2402.19200",
+      "citation_count": 4,
+      "influential_citation_count": 1,
+      "reference_count": 51,
+      "is_open_access": false,
+      "publication_date": "2024-02-29",
+      "tldr": "This paper presents PRSA, a practical attack framework designed for prompt stealing that infers the detailed intent of prompts through very limited input-output analysis and can successfully generate stolen prompts that replicate the original functionality.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "llm",
+        "nlp"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "prompt-stealing",
+        "real-world"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W4403713467",
-      "title": "Prompt Obfuscation for Large Language Models",
-      "abstract": "System prompts that include detailed instructions to describe the task performed by the underlying LLM can easily transform foundation models into tools and services with minimal overhead. They are often considered intellectual property, similar to the code of a software product, because of their crucial impact on the utility. However, extracting system prompts is easily possible. As of today, there is no effective countermeasure to prevent the stealing of system prompts, and all safeguarding efforts could be evaded. In this work, we propose an alternative to conventional system prompts. We introduce prompt obfuscation to prevent the extraction of the system prompt with little overhead. The core idea is to find a representation of the original system prompt that leads to the same functionality, while the obfuscated system prompt does not contain any information that allows conclusions to be drawn about the original system prompt. We evaluate our approach by comparing our obfuscated prompt output with the output of the original prompt, using eight distinct metrics to measure the lexical, character-level, and semantic similarity. We show that the obfuscated version is constantly on par with the original one. We further perform three different deobfuscation attacks with varying attacker knowledge--covering both black-box and white-box conditions--and show that in realistic attack scenarios an attacker is unable to extract meaningful information. Overall, we demonstrate that prompt obfuscation is an effective mechanism to safeguard the intellectual property of a system prompt while maintaining the same utility as the original prompt.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
+      "paper_id": "seed_ea16c8e7",
+      "title": "LightShed: Defeating Perturbation-based Image Copyright Protections",
+      "year": 2025,
+      "venue": "USENIX Security Symposium",
       "authors": [
-        "David Pape",
-        "Thorsten Eisenhofer",
-        "Lea Sch\u00f6nherr"
+        "Hanna Foerster",
+        "Sasha Behrouzi",
+        "P. Rieger",
+        "Murtuza Jadliwala",
+        "Ahmad Sadeghi"
       ],
-      "url": "https://openalex.org/W4403713467",
-      "pdf_url": "https://arxiv.org/pdf/2409.11026",
-      "cited_by_count": 1,
-      "classification_confidence": "HIGH"
+      "author_details": [
+        {
+          "name": "Hanna Foerster",
+          "h_index": 1,
+          "citation_count": 2,
+          "affiliations": []
+        },
+        {
+          "name": "Sasha Behrouzi",
+          "h_index": 2,
+          "citation_count": 6,
+          "affiliations": []
+        },
+        {
+          "name": "P. Rieger",
+          "h_index": 13,
+          "citation_count": 1401,
+          "affiliations": []
+        },
+        {
+          "name": "Murtuza Jadliwala",
+          "h_index": 25,
+          "citation_count": 1768,
+          "affiliations": []
+        },
+        {
+          "name": "Ahmad Sadeghi",
+          "h_index": 7,
+          "citation_count": 610,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 25,
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-foerster.pdf",
+      "citation_count": 2,
+      "influential_citation_count": 0,
+      "reference_count": 32,
+      "is_open_access": false,
+      "tldr": "It is shown that LightShed generalizes across perturbation techniques, enabling a single model to recognize poisoned images, and demonstrates the effectiveness of LightShed against several popular perturbation-based image protection schemes, including NightShade and Glaze.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "diffusion"
+      ],
+      "tags": [
+        "copyright-protection-bypass"
+      ],
+      "open_access_pdf": ""
     },
     {
-      "paper_id": "https://openalex.org/W4402856935",
-      "title": "LLMmap: Fingerprinting for Large Language Models",
-      "abstract": "We introduce LLMmap, a first-generation fingerprinting technique targeted at LLM-integrated applications. LLMmap employs an active fingerprinting approach, sending carefully crafted queries to the application and analyzing the responses to identify the specific LLM version in use. Our query selection is informed by domain expertise on how LLMs generate uniquely identifiable responses to thematically varied prompts. With as few as 8 interactions, LLMmap can accurately identify 42 different LLM versions with over 95% accuracy. More importantly, LLMmap is designed to be robust across different application layers, allowing it to identify LLM versions--whether open-source or proprietary--from various vendors, operating under various unknown system prompts, stochastic sampling hyperparameters, and even complex generation frameworks such as RAG or Chain-of-Thought. We discuss potential mitigations and demonstrate that, against resourceful adversaries, effective countermeasures may be challenging or even unrealizable.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
+      "paper_id": "seed_55d356f0",
+      "title": "THEMIS: Towards Practical Intellectual Property Protection for Post-Deployment On-Device Deep Learning Models",
+      "abstract": "On-device deep learning (DL) has rapidly gained adoption in mobile apps, offering the benefits of offline model inference and user privacy preservation over cloud-based approaches. However, it inevitably stores models on user devices, introducing new vulnerabilities, particularly model-stealing attacks and intellectual property infringement. While system-level protections like Trusted Execution Environments (TEEs) provide a robust solution, practical challenges remain in achieving scalable on-device DL model protection, including complexities in supporting third-party models and limited adoption in current mobile solutions. Advancements in TEE-enabled hardware, such as NVIDIA's GPU-based TEEs, may address these obstacles in the future. Currently, watermarking serves as a common defense against model theft but also faces challenges here as many mobile app developers lack corresponding machine learning expertise and the inherent read-only and inference-only nature of on-device DL models prevents third parties like app stores from implementing existing watermarking techniques in post-deployment models. To protect the intellectual property of on-device DL models, in this paper, we propose THEMIS, an automatic tool that lifts the read-only restriction of on-device DL models by reconstructing their writable counterparts and leverages the untrainable nature of on-device DL models to solve watermark parameters and protect the model owner's intellectual property. Extensive experimental results across various datasets and model structures show the superiority of THEMIS in terms of different metrics. Further, an empirical investigation of 403 real-world DL mobile apps from Google Play is performed with a success rate of 81.14%, showing the practicality of THEMIS.",
+      "year": 2025,
+      "venue": "USENIX Security Symposium",
       "authors": [
-        "Dario Pasquini",
-        "Evgenios M. Kornaropoulos",
-        "Giuseppe Ateniese"
+        "Yujin Huang",
+        "Zhi Zhang",
+        "Qingchuan Zhao",
+        "Xingliang Yuan",
+        "Chunyang Chen"
       ],
-      "url": "https://openalex.org/W4402856935",
-      "pdf_url": "https://arxiv.org/pdf/2407.15847",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
+      "author_details": [
+        {
+          "name": "Yujin Huang",
+          "h_index": 8,
+          "citation_count": 636,
+          "affiliations": []
+        },
+        {
+          "name": "Zhi Zhang",
+          "h_index": 1,
+          "citation_count": 2,
+          "affiliations": []
+        },
+        {
+          "name": "Qingchuan Zhao",
+          "h_index": 1,
+          "citation_count": 2,
+          "affiliations": []
+        },
+        {
+          "name": "Xingliang Yuan",
+          "h_index": 2,
+          "citation_count": 5,
+          "affiliations": []
+        },
+        {
+          "name": "Chunyang Chen",
+          "h_index": 1,
+          "citation_count": 2,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 8,
+      "url": "https://openalex.org/W4416413358",
+      "pdf_url": "https://arxiv.org/pdf/2503.23748",
+      "doi": "https://doi.org/10.48550/arxiv.2503.23748",
+      "citation_count": 2,
+      "influential_citation_count": 0,
+      "reference_count": 67,
+      "is_open_access": false,
+      "publication_date": "2025-03-31",
+      "tldr": "This paper proposes THEMIS, an automatic tool that lifts the read-only restriction of on-device DL models by reconstructing their writable counterparts and leverages the untrainable nature of on-device DL models to solve watermark parameters and protect the model owner's intellectual property.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "on-device",
+        "IP-protection",
+        "post-deployment"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_5ab2a990",
+      "title": "Codebreaker: Dynamic Extraction Attacks on Code Language Models",
+      "year": 2025,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Changzhou Han",
+        "Zehang Deng",
+        "Wanlun Ma",
+        "Xiaogang Zhu",
+        "Minhui Xue",
+        "Tianqing Zhu",
+        "Sheng Wen",
+        "Yang Xiang"
+      ],
+      "author_details": [
+        {
+          "name": "Changzhou Han",
+          "h_index": 2,
+          "citation_count": 136,
+          "affiliations": []
+        },
+        {
+          "name": "Zehang Deng",
+          "h_index": 6,
+          "citation_count": 234,
+          "affiliations": []
+        },
+        {
+          "name": "Wanlun Ma",
+          "h_index": 12,
+          "citation_count": 537,
+          "affiliations": []
+        },
+        {
+          "name": "Xiaogang Zhu",
+          "h_index": 12,
+          "citation_count": 912,
+          "affiliations": []
+        },
+        {
+          "name": "Minhui Xue",
+          "h_index": 3,
+          "citation_count": 21,
+          "affiliations": []
+        },
+        {
+          "name": "Tianqing Zhu",
+          "h_index": 1,
+          "citation_count": 3,
+          "affiliations": []
+        },
+        {
+          "name": "Sheng Wen",
+          "h_index": 13,
+          "citation_count": 899,
+          "affiliations": []
+        },
+        {
+          "name": "Yang Xiang",
+          "h_index": 2,
+          "citation_count": 147,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 13,
+      "url": "https://ieeexplore.ieee.org/document/11023359",
+      "citation_count": 2,
+      "influential_citation_count": 0,
+      "reference_count": 40,
+      "is_open_access": false,
+      "publication_date": "2025-05-12",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "nlp",
+        "llm"
+      ],
+      "model_types": [
+        "llm"
+      ],
+      "tags": [
+        "code-LM",
+        "dynamic-extraction"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_dd96f799",
+      "title": "AudioMarkNet: Audio Watermarking for Deepfake Speech Detection",
+      "year": 2025,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "W. Zong",
+        "Yang-Wai Chow",
+        "Willy Susilo",
+        "J. Baek",
+        "Seyit Ahmet Camtepe"
+      ],
+      "author_details": [
+        {
+          "name": "W. Zong",
+          "h_index": 8,
+          "citation_count": 222,
+          "affiliations": []
+        },
+        {
+          "name": "Yang-Wai Chow",
+          "h_index": 20,
+          "citation_count": 1052,
+          "affiliations": []
+        },
+        {
+          "name": "Willy Susilo",
+          "h_index": 2,
+          "citation_count": 12,
+          "affiliations": []
+        },
+        {
+          "name": "J. Baek",
+          "h_index": 31,
+          "citation_count": 4156,
+          "affiliations": []
+        },
+        {
+          "name": "Seyit Ahmet Camtepe",
+          "h_index": 43,
+          "citation_count": 8643,
+          "affiliations": [
+            "CSIRO Data61"
+          ]
+        }
+      ],
+      "max_h_index": 43,
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-zong.pdf",
+      "citation_count": 1,
+      "influential_citation_count": 0,
+      "reference_count": 38,
+      "is_open_access": false,
+      "tldr": "This work proposes a watermarking technique, called AudioMarkNet, to embed watermarks in original speech to prevent speech from being used for speaker adaptation (i.e., fine-tuning text-to-speech (TTS), which is commonly used for generating high-fidelity fake speech).",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "audio"
+      ],
+      "model_types": [],
+      "tags": [
+        "audio-watermark",
+        "deepfake-detection"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_4e0e8713",
+      "title": "A Crack in the Bark: Leveraging Public Knowledge to Remove Tree-Ring Watermarks",
+      "abstract": "We present a novel attack specifically designed against Tree-Ring, a watermarking technique for diffusion models known for its high imperceptibility and robustness against removal attacks. Unlike previous removal attacks, which rely on strong assumptions about attacker capabilities, our attack only requires access to the variational autoencoder that was used to train the target diffusion model, a component that is often publicly available. By leveraging this variational autoencoder, the attacker can approximate the model's intermediate latent space, enabling more effective surrogate-based attacks. Our evaluation shows that this approach leads to a dramatic reduction in the AUC of Tree-Ring detector's ROC and PR curves, decreasing from 0.993 to 0.153 and from 0.994 to 0.385, respectively, while maintaining high image quality. Notably, our attacks outperform existing methods that assume full access to the diffusion model. These findings highlight the risk of reusing public autoencoders to train diffusion models -- a threat not considered by current industry practices. Furthermore, the results suggest that the Tree-Ring detector's precision, a metric that has been overlooked by previous evaluations, falls short of the requirements for real-world deployment.",
+      "year": 2025,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Junhua Lin",
+        "Marc Juarez"
+      ],
+      "author_details": [
+        {
+          "name": "Junhua Lin",
+          "h_index": 1,
+          "citation_count": 1,
+          "affiliations": []
+        },
+        {
+          "name": "Marc Juarez",
+          "h_index": 1,
+          "citation_count": 1,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 1,
+      "url": "https://openalex.org/W4417351576",
+      "pdf_url": "https://arxiv.org/pdf/2506.10502",
+      "doi": "https://doi.org/10.48550/arxiv.2506.10502",
+      "citation_count": 1,
+      "influential_citation_count": 0,
+      "reference_count": 56,
+      "is_open_access": false,
+      "publication_date": "2025-06-12",
+      "tldr": "A novel attack specifically designed against Tree-Ring, a watermarking technique for diffusion models known for its high imperceptibility and robustness against removal attacks, which suggests that the Tree-Ring detector's precision, a metric that has been overlooked by previous evaluations, falls short of the requirements for real-world deployment.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "generative",
+        "vision"
+      ],
+      "model_types": [
+        "diffusion"
+      ],
+      "tags": [
+        "watermark-removal",
+        "Tree-Ring"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_0b75ddff",
+      "title": "ActiveDaemon: Unconscious DNN Dormancy and Waking Up via User-specific Invisible Token",
+      "abstract": "Well-trained deep neural network (DNN) models can be treated as commodities for commercial transactions and generate significant revenues, raising the urgent need for intellectual property (IP) protection against illegitimate reproducing.Emerging studies on IP protection often aim at inserting watermarks into DNNs, allowing owners to passively verify the ownership of target models after counterfeit models appear and commercial benefits are infringed, while active authentication against unauthorized queries of DNN-based applications is still neglected.In this paper, we propose a novel approach to protect model intellectual property, called ActiveDaemon, which incorporates a built-in access control function in DNNs to safeguard against commercial piracy.Specifically, our approach enables DNNs to predict correct outputs only for authorized users with user-specific tokens while producing poor accuracy for unauthorized users.In ActiveDaemon, the user-specific tokens are generated by a specially designed U-Net style encoder-decoder network, which can map strings and input images into numerous noise images to address identity management with large-scale user capacity.Compared to existing studies, these user-specific tokens are invisible, dynamic and more perceptually concealed, enhancing the stealthiness and reliability of model IP protection.To automatically wake up the model accuracy, we utilize the data poisoning-based training technique to unconsciously embed the ActiveDaemon into the neuron's function.We conduct experiments to compare the protection performance of ActiveDaemon with four state-of-the-art approaches over four datasets.The experimental results show that ActiveDaemon can reduce the accuracy of unauthorized queries by as much as 81% with less than a 1.4% decrease in that of authorized queries.Meanwhile, our approach can also reduce the LPIPS scores of the authorized tokens to 0.0027 on CIFAR10 and 0.0368 on ImageNet 1 .",
+      "year": 2024,
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Ge Ren",
+        "Gaolei Li",
+        "Shenghong Li",
+        "Libo Chen",
+        "Kui Ren"
+      ],
+      "author_details": [
+        {
+          "name": "Ge Ren",
+          "h_index": 3,
+          "citation_count": 1330,
+          "affiliations": []
+        },
+        {
+          "name": "Gaolei Li",
+          "h_index": 2,
+          "citation_count": 13,
+          "affiliations": []
+        },
+        {
+          "name": "Shenghong Li",
+          "h_index": 3,
+          "citation_count": 27,
+          "affiliations": []
+        },
+        {
+          "name": "Libo Chen",
+          "h_index": 1,
+          "citation_count": 5,
+          "affiliations": []
+        },
+        {
+          "name": "Kui Ren",
+          "h_index": 1,
+          "citation_count": 1,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 3,
+      "url": "https://openalex.org/W4391724751",
+      "pdf_url": "https://doi.org/10.14722/ndss.2024.24588",
+      "doi": "https://doi.org/10.14722/ndss.2024.24588",
+      "citation_count": 1,
+      "influential_citation_count": 0,
+      "reference_count": 61,
+      "is_open_access": true,
+      "tldr": "This paper proposes a novel approach to protect model intellectual property, called ActiveDaemon, which incorporates a built-in access control function in DNNs to safeguard against commercial piracy, and enables DNNs to predict correct outputs only for authorized users with user-specific tokens while producing poor accuracy for unauthorized users.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "dormancy",
+        "invisible-token",
+        "IP-protection"
+      ],
+      "open_access_pdf": "https://doi.org/10.14722/ndss.2024.24588"
+    },
+    {
+      "paper_id": "seed_37f18cb0",
+      "title": "Towards Understanding and Enhancing Security of Proof-of-Training for DNN Model Ownership Verification",
+      "abstract": "The great economic values of deep neural networks (DNNs) urge AI enterprises to protect their intellectual property (IP) for these models. Recently, proof-of-training (PoT) has been proposed as a promising solution to DNN IP protection, through which AI enterprises can utilize the record of DNN training process as their ownership proof. To prevent attackers from forging ownership proof, a secure PoT scheme should be able to distinguish honest training records from those forged by attackers. Although existing PoT schemes provide various distinction criteria, these criteria are based on intuitions or observations. The effectiveness of these criteria lacks clear and comprehensive analysis, resulting in existing schemes initially deemed secure being swiftly compromised by simple ideas. In this paper, we make the first move to identify distinction criteria in the style of formal methods, so that their effectiveness can be explicitly demonstrated. Specifically, we conduct systematic modeling to cover a wide range of attacks and then theoretically analyze the distinctions between honest and forged training records. The analysis results not only induce a universal distinction criterion, but also provide detailed reasoning to demonstrate its effectiveness in defending against attacks covered by our model. Guided by the criterion, we propose a generic PoT construction that can be instantiated into concrete schemes. This construction sheds light on the realization that trajectory matching algorithms, previously employed in data distillation, possess significant advantages in PoT construction. Experimental results demonstrate that our scheme can resist attacks that have compromised existing PoT schemes, which corroborates its superiority in security.",
+      "year": 2024,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Yijia Chang",
+        "Hanrui Jiang",
+        "Chao Lin",
+        "Xinyi Huang",
+        "Jian Weng"
+      ],
+      "author_details": [
+        {
+          "name": "Yijia Chang",
+          "h_index": 2,
+          "citation_count": 4,
+          "affiliations": []
+        },
+        {
+          "name": "Hanrui Jiang",
+          "h_index": 0,
+          "citation_count": 0,
+          "affiliations": []
+        },
+        {
+          "name": "Chao Lin",
+          "h_index": 1,
+          "citation_count": 1,
+          "affiliations": []
+        },
+        {
+          "name": "Xinyi Huang",
+          "h_index": 1,
+          "citation_count": 1,
+          "affiliations": []
+        },
+        {
+          "name": "Jian Weng",
+          "h_index": 0,
+          "citation_count": 0,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 2,
+      "url": "https://openalex.org/W4403963863",
+      "pdf_url": "https://arxiv.org/pdf/2410.04397",
+      "doi": "https://doi.org/10.48550/arxiv.2410.04397",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "reference_count": 29,
+      "is_open_access": false,
+      "publication_date": "2024-10-06",
+      "tldr": "Experimental results demonstrate that the proposed generic PoT construction can resist attacks that have compromised existing PoT schemes, which corroborates its superiority in security.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "empirical",
+      "domains": [],
+      "model_types": [],
+      "tags": [
+        "proof-of-training",
+        "ownership-verification"
+      ],
+      "open_access_pdf": ""
     }
   ]
 }

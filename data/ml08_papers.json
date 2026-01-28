@@ -1,7 +1,1809 @@
 {
   "owasp_id": "ML08",
   "owasp_name": "Model Skewing",
-  "total": 0,
-  "updated": "2026-01-09",
-  "papers": []
+  "total": 25,
+  "updated": "2026-01-28",
+  "papers": [
+    {
+      "paper_id": "seed_9a529de7",
+      "title": "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning",
+      "abstract": "In federated learning, multiple client devices jointly learn a machine learning model: each client device maintains a local model for its local training dataset, while a master device maintains a global model via aggregating the local models from the client devices. The machine learning community recently proposed several federated learning methods that were claimed to be robust against Byzantine failures (e.g., system failures, adversarial manipulations) of certain client devices. In this work, we perform the first systematic study on local model poisoning attacks to federated learning. We assume an attacker has compromised some client devices, and the attacker manipulates the local model parameters on the compromised client devices during the learning process such that the global model has a large testing error rate. We formulate our attacks as optimization problems and apply our attacks to four recent Byzantine-robust federated learning methods. Our empirical results on four real-world datasets show that our attacks can substantially increase the error rates of the models learnt by the federated learning methods that were claimed to be robust against Byzantine failures of some client devices. We generalize two defenses for data poisoning attacks to defend against our local model poisoning attacks. Our evaluation results show that one defense can effectively defend against our attacks in some cases, but the defenses are not effective enough in other cases, highlighting the need for new defenses against our local model poisoning attacks to federated learning.",
+      "year": 2019,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Minghong Fang",
+        "Xiaoyu Cao",
+        "Jinyuan Jia",
+        "N. Gong"
+      ],
+      "author_details": [
+        {
+          "name": "Minghong Fang",
+          "h_index": 14,
+          "citation_count": 3318,
+          "affiliations": [
+            "The Ohio State University"
+          ]
+        },
+        {
+          "name": "Xiaoyu Cao",
+          "h_index": 22,
+          "citation_count": 4488,
+          "affiliations": []
+        },
+        {
+          "name": "Jinyuan Jia",
+          "h_index": 21,
+          "citation_count": 3203,
+          "affiliations": []
+        },
+        {
+          "name": "N. Gong",
+          "h_index": 52,
+          "citation_count": 11238,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 52,
+      "url": "https://openalex.org/W2990614164",
+      "pdf_url": "https://arxiv.org/pdf/1911.11815",
+      "doi": "https://doi.org/10.48550/arxiv.1911.11815",
+      "citation_count": 1409,
+      "influential_citation_count": 238,
+      "reference_count": 67,
+      "is_open_access": false,
+      "publication_date": "2019-11-26",
+      "tldr": "This work performs the first systematic study on local model poisoning attacks to federated learning, assuming an attacker has compromised some client devices, and the attacker manipulates the local model parameters on the compromised client devices during the learning process such that the global model has a large testing error rate.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "model-poisoning",
+        "Byzantine-robust",
+        "FL-attack"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_7922130e",
+      "title": "Manipulating the Byzantine: Optimizing Model Poisoning Attacks and Defenses for Federated Learning",
+      "abstract": "Federated learning (FL) enables many data owners (e.g., mobile devices) to train a joint ML model (e.g., a nextword prediction classifier) without the need of sharing their private training data.However, FL is known to be susceptible to poisoning attacks by malicious participants (e.g., adversaryowned mobile devices) who aim at hampering the accuracy of the jointly trained model through sending malicious inputs during the federated training process.In this paper, we present a generic framework for model poisoning attacks on FL.We show that our framework leads to poisoning attacks that substantially outperform state-of-the-art model poisoning attacks by large margins.For instance, our attacks result in 1.5\u00d7 to 60\u00d7 higher reductions in the accuracy of FL models compared to previously discovered poisoning attacks.Our work demonstrates that existing Byzantine-robust FL algorithms are significantly more susceptible to model poisoning than previously thought.Motivated by this, we design a defense against FL poisoning, called divide-and-conquer (DnC).We demonstrate that DnC outperforms all existing Byzantine-robust FL algorithms in defeating model poisoning attacks, specifically, it is 2.5\u00d7 to 12\u00d7 more resilient in our experiments with different datasets and models.",
+      "year": 2021,
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Virat Shejwalkar",
+        "Amir Houmansadr"
+      ],
+      "author_details": [
+        {
+          "name": "Virat Shejwalkar",
+          "h_index": 13,
+          "citation_count": 3112,
+          "affiliations": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "name": "Amir Houmansadr",
+          "h_index": 42,
+          "citation_count": 7508,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 42,
+      "url": "https://openalex.org/W3138153888",
+      "pdf_url": "https://doi.org/10.14722/ndss.2021.24498",
+      "doi": "https://doi.org/10.14722/ndss.2021.24498",
+      "citation_count": 579,
+      "influential_citation_count": 120,
+      "reference_count": 40,
+      "is_open_access": true,
+      "tldr": "A defense against FL poisoning, called divide-and-conquer (DnC), is designed and demonstrated that DnC outperforms all existing Byzantine-robust FL algorithms in defeating model poisoning attacks, and demonstrates that existing Byzantine-robust FL algorithms are more susceptible to model poisoning than previously thought.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "model-poisoning",
+        "optimization",
+        "FL-attack"
+      ],
+      "open_access_pdf": "https://doi.org/10.14722/ndss.2021.24498"
+    },
+    {
+      "paper_id": "2201.00763",
+      "title": "DeepSight: Mitigating Backdoor Attacks in Federated Learning Through Deep Model Inspection",
+      "abstract": "Federated Learning (FL) allows multiple clients to collaboratively train a Neural Network (NN) model on their private data without revealing the data. Recently, several targeted poisoning attacks against FL have been introduced. These attacks inject a backdoor into the resulting model that allows adversary-controlled inputs to be misclassified. Existing countermeasures against backdoor attacks are inefficient and often merely aim to exclude deviating models from the aggregation. However, this approach also removes benign models of clients with deviating data distributions, causing the aggregated model to perform poorly for such clients.   To address this problem, we propose DeepSight, a novel model filtering approach for mitigating backdoor attacks. It is based on three novel techniques that allow to characterize the distribution of data used to train model updates and seek to measure fine-grained differences in the internal structure and outputs of NNs. Using these techniques, DeepSight can identify suspicious model updates. We also develop a scheme that can accurately cluster model updates. Combining the results of both components, DeepSight is able to identify and eliminate model clusters containing poisoned models with high attack impact. We also show that the backdoor contributions of possibly undetected poisoned models can be effectively mitigated with existing weight clipping-based defenses. We evaluate the performance and effectiveness of DeepSight and show that it can mitigate state-of-the-art backdoor attacks with a negligible impact on the model's performance on benign data.",
+      "year": 2022,
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "P. Rieger",
+        "T. D. Nguyen",
+        "Markus Miettinen",
+        "A. Sadeghi"
+      ],
+      "author_details": [
+        {
+          "name": "P. Rieger",
+          "h_index": 13,
+          "citation_count": 1401,
+          "affiliations": []
+        },
+        {
+          "name": "T. D. Nguyen",
+          "h_index": 19,
+          "citation_count": 2716,
+          "affiliations": []
+        },
+        {
+          "name": "Markus Miettinen",
+          "h_index": 28,
+          "citation_count": 4240,
+          "affiliations": []
+        },
+        {
+          "name": "A. Sadeghi",
+          "h_index": 90,
+          "citation_count": 29546,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 90,
+      "url": "https://arxiv.org/abs/2201.00763",
+      "citation_count": 205,
+      "influential_citation_count": 28,
+      "reference_count": 43,
+      "is_open_access": true,
+      "publication_date": "2022-01-03",
+      "tldr": "The performance and effectiveness of DeepSight is evaluated and it is shown that it can mitigate state-of-the-art backdoor attacks with a negligible impact on the model's performance on benign data.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "backdoor-defense",
+        "model-inspection",
+        "FL-defense"
+      ],
+      "open_access_pdf": "https://doi.org/10.14722/ndss.2022.23156"
+    },
+    {
+      "paper_id": "2009.03561",
+      "title": "Local and Central Differential Privacy for Robustness and Privacy in Federated Learning",
+      "abstract": "Federated Learning (FL) allows multiple participants to train machine learning models collaboratively by keeping their datasets local while only exchanging model updates. Alas, this is not necessarily free from privacy and robustness vulnerabilities, e.g., via membership, property, and backdoor attacks. This paper investigates whether and to what extent one can use differential Privacy (DP) to protect both privacy and robustness in FL. To this end, we present a first-of-its-kind evaluation of Local and Central Differential Privacy (LDP/CDP) techniques in FL, assessing their feasibility and effectiveness. Our experiments show that both DP variants do d fend against backdoor attacks, albeit with varying levels of protection-utility trade-offs, but anyway more effectively than other robustness defenses. DP also mitigates white-box membership inference attacks in FL, and our work is the first to show it empirically. Neither LDP nor CDP, however, defend against property inference. Overall, our work provides a comprehensive, re-usable measurement methodology to quantify the trade-offs between robustness/privacy and utility in differentially private FL.",
+      "year": 2022,
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Mohammad Naseri",
+        "Jamie Hayes",
+        "Emiliano De Cristofaro"
+      ],
+      "author_details": [
+        {
+          "name": "Mohammad Naseri",
+          "h_index": 6,
+          "citation_count": 397,
+          "affiliations": []
+        },
+        {
+          "name": "Jamie Hayes",
+          "h_index": 21,
+          "citation_count": 4143,
+          "affiliations": []
+        },
+        {
+          "name": "Emiliano De Cristofaro",
+          "h_index": 55,
+          "citation_count": 11460,
+          "affiliations": [
+            "University College London"
+          ]
+        }
+      ],
+      "max_h_index": 55,
+      "url": "https://arxiv.org/abs/2009.03561",
+      "citation_count": 199,
+      "influential_citation_count": 14,
+      "reference_count": 128,
+      "is_open_access": true,
+      "publication_date": "2020-09-08",
+      "tldr": "A first-of-its-kind evaluation of Local and Central Differential Privacy (LDP/CDP) techniques in FL, assessing their feasibility and effectiveness and providing a comprehensive, re-usable measurement methodology to quantify the trade-offs between robustness/privacy and utility in differentially private FL.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "differential-privacy",
+        "robustness"
+      ],
+      "open_access_pdf": "https://doi.org/10.14722/ndss.2022.23054"
+    },
+    {
+      "paper_id": "2111.07380",
+      "title": "Eluding Secure Aggregation in Federated Learning via Model Inconsistency",
+      "abstract": "Secure aggregation is a cryptographic protocol that securely computes the aggregation of its inputs. It is pivotal in keeping model updates private in federated learning. Indeed, the use of secure aggregation prevents the server from learning the value and the source of the individual model updates provided by the users, hampering inference and data attribution attacks. In this work, we show that a malicious server can easily elude secure aggregation as if the latter were not in place. We devise two different attacks capable of inferring information on individual private training datasets, independently of the number of users participating in the secure aggregation. This makes them concrete threats in large-scale, real-world federated learning applications. The attacks are generic and equally effective regardless of the secure aggregation protocol used. They exploit a vulnerability of the federated learning protocol caused by incorrect usage of secure aggregation and lack of parameter validation. Our work demonstrates that current implementations of federated learning with secure aggregation offer only a \"false sense of security\".",
+      "year": 2022,
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Dario Pasquini",
+        "Danilo Francati",
+        "G. Ateniese"
+      ],
+      "author_details": [
+        {
+          "name": "Dario Pasquini",
+          "h_index": 11,
+          "citation_count": 624,
+          "affiliations": []
+        },
+        {
+          "name": "Danilo Francati",
+          "h_index": 4,
+          "citation_count": 273,
+          "affiliations": []
+        },
+        {
+          "name": "G. Ateniese",
+          "h_index": 50,
+          "citation_count": 20201,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 50,
+      "url": "https://arxiv.org/abs/2111.07380",
+      "citation_count": 137,
+      "influential_citation_count": 23,
+      "reference_count": 77,
+      "is_open_access": true,
+      "publication_date": "2021-11-14",
+      "tldr": "This work shows that a malicious server can easily elude secure aggregation as if the latter were not in place, demonstrating that current implementations of federated learning with secure aggregation offer only a ''false sense of security.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Book",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "secure-aggregation-bypass",
+        "model-inconsistency",
+        "FL-attack"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2111.07380.pdf"
+    },
+    {
+      "paper_id": "2210.10936",
+      "title": "FedRecover: Recovering from Poisoning Attacks in Federated Learning using Historical Information",
+      "abstract": "Federated learning is vulnerable to poisoning attacks in which malicious clients poison the global model via sending malicious model updates to the server. Existing defenses focus on preventing a small number of malicious clients from poisoning the global model via robust federated learning methods and detecting malicious clients when there are a large number of them. However, it is still an open challenge how to recover the global model from poisoning attacks after the malicious clients are detected. A naive solution is to remove the detected malicious clients and train a new global model from scratch, which incurs large cost that may be intolerable for resource-constrained clients such as smartphones and IoT devices.   In this work, we propose FedRecover, which can recover an accurate global model from poisoning attacks with small cost for the clients. Our key idea is that the server estimates the clients' model updates instead of asking the clients to compute and communicate them during the recovery process. In particular, the server stores the global models and clients' model updates in each round, when training the poisoned global model. During the recovery process, the server estimates a client's model update in each round using its stored historical information. Moreover, we further optimize FedRecover to recover a more accurate global model using warm-up, periodic correction, abnormality fixing, and final tuning strategies, in which the server asks the clients to compute and communicate their exact model updates. Theoretically, we show that the global model recovered by FedRecover is close to or the same as that recovered by train-from-scratch under some assumptions. Empirically, our evaluation on four datasets, three federated learning methods, as well as untargeted and targeted poisoning attacks (e.g., backdoor attacks) shows that FedRecover is both accurate and efficient.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Xiaoyu Cao",
+        "Jinyuan Jia",
+        "Zaixi Zhang",
+        "N. Gong"
+      ],
+      "author_details": [
+        {
+          "name": "Xiaoyu Cao",
+          "h_index": 22,
+          "citation_count": 4488,
+          "affiliations": []
+        },
+        {
+          "name": "Jinyuan Jia",
+          "h_index": 21,
+          "citation_count": 3203,
+          "affiliations": []
+        },
+        {
+          "name": "Zaixi Zhang",
+          "h_index": 5,
+          "citation_count": 851,
+          "affiliations": []
+        },
+        {
+          "name": "N. Gong",
+          "h_index": 52,
+          "citation_count": 11238,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 52,
+      "url": "https://arxiv.org/abs/2210.10936",
+      "citation_count": 117,
+      "influential_citation_count": 15,
+      "reference_count": 40,
+      "is_open_access": true,
+      "publication_date": "2022-10-20",
+      "tldr": "Theoretically, the global model recovered by FedRecover is close to or the same as that recovered by train-from-scratch under some assumptions, and evaluation on four datasets, three federated learning methods, as well as untargeted and targeted poisoning attacks shows that it is both accurate and efficient.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "recovery",
+        "historical-info",
+        "FL-defense"
+      ],
+      "open_access_pdf": "http://arxiv.org/pdf/2210.10936"
+    },
+    {
+      "paper_id": "2112.12727",
+      "title": "EIFFeL: Ensuring Integrity for Federated Learning",
+      "abstract": "Federated learning (FL) enables clients to collaborate with a server to train a machine learning model. To ensure privacy, the server performs secure aggregation of updates from the clients. Unfortunately, this prevents verification of the well-formedness (integrity) of the updates as the updates are masked. Consequently, malformed updates designed to poison the model can be injected without detection. In this paper, we formalize the problem of ensuring \\textit{both} update privacy and integrity in FL and present a new system, \\textsf{EIFFeL}, that enables secure aggregation of \\textit{verified} updates. \\textsf{EIFFeL} is a general framework that can enforce \\textit{arbitrary} integrity checks and remove malformed updates from the aggregate, without violating privacy. Our empirical evaluation demonstrates the practicality of \\textsf{EIFFeL}. For instance, with $100$ clients and $10\\%$ poisoning, \\textsf{EIFFeL} can train an MNIST classification model to the same accuracy as that of a non-poisoned federated learner in just $2.4s$ per iteration.",
+      "year": 2022,
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Amrita Roy Chowdhury",
+        "Chuan Guo",
+        "S. Jha",
+        "L. Maaten"
+      ],
+      "author_details": [
+        {
+          "name": "Amrita Roy Chowdhury",
+          "h_index": 10,
+          "citation_count": 652,
+          "affiliations": [
+            "University of Michigan, Ann Arbor"
+          ]
+        },
+        {
+          "name": "Chuan Guo",
+          "h_index": 16,
+          "citation_count": 1357,
+          "affiliations": []
+        },
+        {
+          "name": "S. Jha",
+          "h_index": 86,
+          "citation_count": 41377,
+          "affiliations": []
+        },
+        {
+          "name": "L. Maaten",
+          "h_index": 51,
+          "citation_count": 84512,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 86,
+      "url": "https://arxiv.org/abs/2112.12727",
+      "citation_count": 102,
+      "influential_citation_count": 11,
+      "reference_count": 99,
+      "is_open_access": false,
+      "publication_date": "2021-12-23",
+      "tldr": "EIFFeL is a general framework that can enforce arbitrary integrity checks and remove malformed updates from the aggregate, without violating privacy, and can train an MNIST classification model to the same accuracy as that of a non-poisoned federated learner in just 2.4s per iteration.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "Book",
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "integrity",
+        "secure-aggregation",
+        "FL-defense"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2107.03311",
+      "title": "RoFL: Robustness of Secure Federated Learning",
+      "abstract": "Even though recent years have seen many attacks exposing severe vulnerabilities in Federated Learning (FL), a holistic understanding of what enables these attacks and how they can be mitigated effectively is still lacking. In this work, we demystify the inner workings of existing (targeted) attacks. We provide new insights into why these attacks are possible and why a definitive solution to FL robustness is challenging. We show that the need for ML algorithms to memorize tail data has significant implications for FL integrity. This phenomenon has largely been studied in the context of privacy; our analysis sheds light on its implications for ML integrity. We show that certain classes of severe attacks can be mitigated effectively by enforcing constraints such as norm bounds on clients' updates. We investigate how to efficiently incorporate these constraints into secure FL protocols in the single-server setting. Based on this, we propose RoFL, a new secure FL system that extends secure aggregation with privacy-preserving input validation. Specifically, RoFL can enforce constraints such as $L_2$ and $L_\\infty$ bounds on high-dimensional encrypted model updates.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Hidde Lycklama",
+        "Lukas Burkhalter",
+        "Alexander Viand",
+        "Nicolas K\u00fcchler",
+        "Anwar Hithnawi"
+      ],
+      "author_details": [
+        {
+          "name": "Hidde Lycklama",
+          "h_index": 4,
+          "citation_count": 176,
+          "affiliations": []
+        },
+        {
+          "name": "Lukas Burkhalter",
+          "h_index": 8,
+          "citation_count": 412,
+          "affiliations": []
+        },
+        {
+          "name": "Alexander Viand",
+          "h_index": 11,
+          "citation_count": 577,
+          "affiliations": []
+        },
+        {
+          "name": "Nicolas K\u00fcchler",
+          "h_index": 5,
+          "citation_count": 207,
+          "affiliations": []
+        },
+        {
+          "name": "Anwar Hithnawi",
+          "h_index": 18,
+          "citation_count": 1444,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 18,
+      "url": "https://arxiv.org/abs/2107.03311",
+      "citation_count": 95,
+      "influential_citation_count": 12,
+      "reference_count": 109,
+      "is_open_access": true,
+      "publication_date": "2021-07-07",
+      "tldr": "RoFL is proposed, a new secure FL system that extends secure aggregation with privacy-preserving input validation and can enforce constraints such as L2 and L\u221e bounds on high-dimensional encrypted model updates.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "secure-aggregation",
+        "robustness-analysis"
+      ],
+      "open_access_pdf": "http://arxiv.org/pdf/2107.03311"
+    },
+    {
+      "paper_id": "seed_19e67c1a",
+      "title": "3DFed: Adaptive and Extensible Framework for Covert Backdoor Attack in Federated Learning",
+      "abstract": "Federated Learning (FL), the de-facto distributed machine learning paradigm that locally trains datasets at individual devices, is vulnerable to backdoor model poisoning attacks. By compromising or impersonating those devices, an attacker can upload crafted malicious model updates to manipulate the global model with backdoor behavior upon attacker-specified triggers. However, existing backdoor attacks require more information on the victim FL system beyond a practical black-box setting. Furthermore, they are often specialized to optimize for a single objective, which becomes ineffective as modern FL systems tend to adopt in-depth defense that detects backdoor models from different perspectives. Motivated by these concerns, in this paper, we propose 3DFed, an adaptive, extensible, and multi-layered framework to launch covert FL backdoor attacks in a black-box setting. 3DFed sports three evasion modules that camouflage backdoor models: backdoor training with constrained loss, noise mask, and decoy model. By implanting indicators into a backdoor model, 3DFed can obtain the attack feedback in the previous epoch from the global model and dynamically adjust the hyper-parameters of these backdoor evasion modules. Through extensive experimental results, we show that when all its components work together, 3DFed can evade the detection of all state-of-the-art FL backdoor defenses, including Deepsight, Foolsgold, FLAME, FL-Detector, and RFLBAT. New evasion modules can also be incorporated in 3DFed in the future as it is an extensible framework.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Haoyang Li",
+        "Qingqing Ye",
+        "Haibo Hu",
+        "Jin Li",
+        "Leixia Wang",
+        "Chengfang Fang",
+        "Jie Shi"
+      ],
+      "author_details": [
+        {
+          "name": "Haoyang Li",
+          "h_index": 3,
+          "citation_count": 143,
+          "affiliations": []
+        },
+        {
+          "name": "Qingqing Ye",
+          "h_index": 18,
+          "citation_count": 1200,
+          "affiliations": []
+        },
+        {
+          "name": "Haibo Hu",
+          "h_index": 13,
+          "citation_count": 534,
+          "affiliations": []
+        },
+        {
+          "name": "Jin Li",
+          "h_index": 49,
+          "citation_count": 8277,
+          "affiliations": []
+        },
+        {
+          "name": "Leixia Wang",
+          "h_index": 4,
+          "citation_count": 171,
+          "affiliations": []
+        },
+        {
+          "name": "Chengfang Fang",
+          "h_index": 14,
+          "citation_count": 674,
+          "affiliations": []
+        },
+        {
+          "name": "Jie Shi",
+          "h_index": 13,
+          "citation_count": 662,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 49,
+      "url": "https://openalex.org/W4385187226",
+      "doi": "https://doi.org/10.1109/sp46215.2023.10179401",
+      "citation_count": 64,
+      "influential_citation_count": 11,
+      "reference_count": 59,
+      "is_open_access": false,
+      "publication_date": "2023-05-01",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "backdoor",
+        "covert-attack",
+        "adaptive"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2406.10416",
+      "title": "Byzantine-Robust Decentralized Federated Learning",
+      "abstract": "Federated learning (FL) enables multiple clients to collaboratively train machine learning models without revealing their private training data. In conventional FL, the system follows the server-assisted architecture (server-assisted FL), where the training process is coordinated by a central server. However, the server-assisted FL framework suffers from poor scalability due to a communication bottleneck at the server, and trust dependency issues. To address challenges, decentralized federated learning (DFL) architecture has been proposed to allow clients to train models collaboratively in a serverless and peer-to-peer manner. However, due to its fully decentralized nature, DFL is highly vulnerable to poisoning attacks, where malicious clients could manipulate the system by sending carefully-crafted local models to their neighboring clients. To date, only a limited number of Byzantine-robust DFL methods have been proposed, most of which are either communication-inefficient or remain vulnerable to advanced poisoning attacks. In this paper, we propose a new algorithm called BALANCE (Byzantine-robust averaging through local similarity in decentralization) to defend against poisoning attacks in DFL. In BALANCE, each client leverages its own local model as a similarity reference to determine if the received model is malicious or benign. We establish the theoretical convergence guarantee for BALANCE under poisoning attacks in both strongly convex and non-convex settings. Furthermore, the convergence rate of BALANCE under poisoning attacks matches those of the state-of-the-art counterparts in Byzantine-free settings. Extensive experiments also demonstrate that BALANCE outperforms existing DFL methods and effectively defends against poisoning attacks.",
+      "year": 2024,
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Minghong Fang",
+        "Zifan Zhang",
+        "Hairi",
+        "Prashant Khanduri",
+        "Jia Liu",
+        "Songtao Lu",
+        "Yuchen Liu",
+        "N. Gong"
+      ],
+      "author_details": [
+        {
+          "name": "Minghong Fang",
+          "h_index": 5,
+          "citation_count": 125,
+          "affiliations": []
+        },
+        {
+          "name": "Zifan Zhang",
+          "h_index": 6,
+          "citation_count": 125,
+          "affiliations": []
+        },
+        {
+          "name": "Hairi",
+          "h_index": 3,
+          "citation_count": 87,
+          "affiliations": []
+        },
+        {
+          "name": "Prashant Khanduri",
+          "h_index": 9,
+          "citation_count": 552,
+          "affiliations": []
+        },
+        {
+          "name": "Jia Liu",
+          "h_index": 2,
+          "citation_count": 64,
+          "affiliations": []
+        },
+        {
+          "name": "Songtao Lu",
+          "h_index": 2,
+          "citation_count": 68,
+          "affiliations": []
+        },
+        {
+          "name": "Yuchen Liu",
+          "h_index": 4,
+          "citation_count": 83,
+          "affiliations": []
+        },
+        {
+          "name": "N. Gong",
+          "h_index": 9,
+          "citation_count": 269,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 9,
+      "url": "https://arxiv.org/abs/2406.10416",
+      "citation_count": 58,
+      "influential_citation_count": 5,
+      "reference_count": 58,
+      "is_open_access": true,
+      "publication_date": "2024-06-14",
+      "tldr": "This paper proposes a new algorithm called BALANCE (Byzantine-robust averaging through local similarity in decentralization) to defend against poisoning attacks in DFL, and establishes the theoretical convergence guarantee for BALANCE under poisoning attacks in both strongly convex and non-convex settings.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Book",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "Byzantine-robust",
+        "decentralized",
+        "FL-defense"
+      ],
+      "open_access_pdf": "https://dl.acm.org/doi/pdf/10.1145/3658644.3670307"
+    },
+    {
+      "paper_id": "seed_82a4c513",
+      "title": "Justinian's GAAvernor: Robust Distributed Learning with Gradient Aggregation Agent",
+      "year": 2020,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Xudong Pan",
+        "Mi Zhang",
+        "Duocai Wu",
+        "Qifan Xiao",
+        "S. Ji",
+        "Min Yang"
+      ],
+      "author_details": [
+        {
+          "name": "Xudong Pan",
+          "h_index": 14,
+          "citation_count": 940,
+          "affiliations": []
+        },
+        {
+          "name": "Mi Zhang",
+          "h_index": 15,
+          "citation_count": 1008,
+          "affiliations": []
+        },
+        {
+          "name": "Duocai Wu",
+          "h_index": 3,
+          "citation_count": 112,
+          "affiliations": []
+        },
+        {
+          "name": "Qifan Xiao",
+          "h_index": 5,
+          "citation_count": 104,
+          "affiliations": []
+        },
+        {
+          "name": "S. Ji",
+          "h_index": 51,
+          "citation_count": 9646,
+          "affiliations": []
+        },
+        {
+          "name": "Min Yang",
+          "h_index": 15,
+          "citation_count": 1196,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 51,
+      "url": "https://www.usenix.org/system/files/sec20-pan.pdf",
+      "citation_count": 54,
+      "influential_citation_count": 6,
+      "reference_count": 65,
+      "is_open_access": false,
+      "tldr": "Justinian\u2019s GAAvernor (GAA), a Gradient Aggregation Agent which learns to be robust against Byzantine attacks via reinforcement learning techniques, which shows desirable robustness as if the systems were under no attacks, even in some case when 90% Byzantine workers are controlled by the adversary.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "gradient-aggregation",
+        "Byzantine-robust",
+        "FL-defense"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2301.09508",
+      "title": "BayBFed: Bayesian Backdoor Defense for Federated Learning",
+      "abstract": "Federated learning (FL) allows participants to jointly train a machine learning model without sharing their private data with others. However, FL is vulnerable to poisoning attacks such as backdoor attacks. Consequently, a variety of defenses have recently been proposed, which have primarily utilized intermediary states of the global model (i.e., logits) or distance of the local models (i.e., L2-norm) from the global model to detect malicious backdoors. However, as these approaches directly operate on client updates, their effectiveness depends on factors such as clients' data distribution or the adversary's attack strategies. In this paper, we introduce a novel and more generic backdoor defense framework, called BayBFed, which proposes to utilize probability distributions over client updates to detect malicious updates in FL: it computes a probabilistic measure over the clients' updates to keep track of any adjustments made in the updates, and uses a novel detection algorithm that can leverage this probabilistic measure to efficiently detect and filter out malicious updates. Thus, it overcomes the shortcomings of previous approaches that arise due to the direct usage of client updates; as our probabilistic measure will include all aspects of the local client training strategies. BayBFed utilizes two Bayesian Non-Parametric extensions: (i) a Hierarchical Beta-Bernoulli process to draw a probabilistic measure given the clients' updates, and (ii) an adaptation of the Chinese Restaurant Process (CRP), referred by us as CRP-Jensen, which leverages this probabilistic measure to detect and filter out malicious updates. We extensively evaluate our defense approach on five benchmark datasets: CIFAR10, Reddit, IoT intrusion detection, MNIST, and FMNIST, and show that it can effectively detect and eliminate malicious updates in FL without deteriorating the benign performance of the global model.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Kavita Kumari",
+        "P. Rieger",
+        "Hossein Fereidooni",
+        "Murtuza Jadliwala",
+        "A. Sadeghi"
+      ],
+      "author_details": [
+        {
+          "name": "Kavita Kumari",
+          "h_index": 5,
+          "citation_count": 121,
+          "affiliations": []
+        },
+        {
+          "name": "P. Rieger",
+          "h_index": 13,
+          "citation_count": 1401,
+          "affiliations": []
+        },
+        {
+          "name": "Hossein Fereidooni",
+          "h_index": 20,
+          "citation_count": 2269,
+          "affiliations": []
+        },
+        {
+          "name": "Murtuza Jadliwala",
+          "h_index": 25,
+          "citation_count": 1768,
+          "affiliations": []
+        },
+        {
+          "name": "A. Sadeghi",
+          "h_index": 90,
+          "citation_count": 29546,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 90,
+      "url": "https://arxiv.org/abs/2301.09508",
+      "citation_count": 43,
+      "influential_citation_count": 1,
+      "reference_count": 52,
+      "is_open_access": false,
+      "publication_date": "2023-01-23",
+      "tldr": "A novel and more generic backdoor defense framework, called BayBFed, which proposes to utilize probability distributions over client updates to detect malicious updates in FL and uses an adaptation of the Chinese Restaurant Process, referred by us as CRP-Jensen, which leverages this probabilistic measure to detect and filter out malicious updates.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "Bayesian",
+        "backdoor-defense",
+        "FL-defense"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2312.04432",
+      "title": "FreqFed: A Frequency Analysis-Based Approach for Mitigating Poisoning Attacks in Federated Learning",
+      "abstract": "Federated learning (FL) is a collaborative learning paradigm allowing multiple clients to jointly train a model without sharing their training data. However, FL is susceptible to poisoning attacks, in which the adversary injects manipulated model updates into the federated model aggregation process to corrupt or destroy predictions (untargeted poisoning) or implant hidden functionalities (targeted poisoning or backdoors). Existing defenses against poisoning attacks in FL have several limitations, such as relying on specific assumptions about attack types and strategies or data distributions or not sufficiently robust against advanced injection techniques and strategies and simultaneously maintaining the utility of the aggregated model. To address the deficiencies of existing defenses, we take a generic and completely different approach to detect poisoning (targeted and untargeted) attacks. We present FreqFed, a novel aggregation mechanism that transforms the model updates (i.e., weights) into the frequency domain, where we can identify the core frequency components that inherit sufficient information about weights. This allows us to effectively filter out malicious updates during local training on the clients, regardless of attack types, strategies, and clients' data distributions. We extensively evaluate the efficiency and effectiveness of FreqFed in different application domains, including image classification, word prediction, IoT intrusion detection, and speech recognition. We demonstrate that FreqFed can mitigate poisoning attacks effectively with a negligible impact on the utility of the aggregated model.",
+      "year": 2024,
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Hossein Fereidooni",
+        "Alessandro Pegoraro",
+        "P. Rieger",
+        "A. Dmitrienko",
+        "Ahmad Sadeghi"
+      ],
+      "author_details": [
+        {
+          "name": "Hossein Fereidooni",
+          "h_index": 20,
+          "citation_count": 2269,
+          "affiliations": []
+        },
+        {
+          "name": "Alessandro Pegoraro",
+          "h_index": 5,
+          "citation_count": 115,
+          "affiliations": []
+        },
+        {
+          "name": "P. Rieger",
+          "h_index": 13,
+          "citation_count": 1401,
+          "affiliations": []
+        },
+        {
+          "name": "A. Dmitrienko",
+          "h_index": 26,
+          "citation_count": 4849,
+          "affiliations": []
+        },
+        {
+          "name": "Ahmad Sadeghi",
+          "h_index": 7,
+          "citation_count": 610,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 26,
+      "url": "https://arxiv.org/abs/2312.04432",
+      "citation_count": 40,
+      "influential_citation_count": 2,
+      "reference_count": 77,
+      "is_open_access": false,
+      "publication_date": "2023-12-07",
+      "tldr": "FreqFed is presented, a novel aggregation mechanism that transforms the model updates into the frequency domain, where it is demonstrated that FreqFed can mitigate poisoning attacks effectively with a negligible impact on the utility of the aggregated model.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "frequency-analysis",
+        "poisoning-defense",
+        "FL-defense"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2210.07714",
+      "title": "CrowdGuard: Federated Backdoor Detection in Federated Learning",
+      "abstract": "Federated Learning (FL) is a promising approach enabling multiple clients to train Deep Neural Networks (DNNs) collaboratively without sharing their local training data. However, FL is susceptible to backdoor (or targeted poisoning) attacks. These attacks are initiated by malicious clients who seek to compromise the learning process by introducing specific behaviors into the learned model that can be triggered by carefully crafted inputs. Existing FL safeguards have various limitations: They are restricted to specific data distributions or reduce the global model accuracy due to excluding benign models or adding noise, are vulnerable to adaptive defense-aware adversaries, or require the server to access local models, allowing data inference attacks.   This paper presents a novel defense mechanism, CrowdGuard, that effectively mitigates backdoor attacks in FL and overcomes the deficiencies of existing techniques. It leverages clients' feedback on individual models, analyzes the behavior of neurons in hidden layers, and eliminates poisoned models through an iterative pruning scheme. CrowdGuard employs a server-located stacked clustering scheme to enhance its resilience to rogue client feedback. The evaluation results demonstrate that CrowdGuard achieves a 100% True-Positive-Rate and True-Negative-Rate across various scenarios, including IID and non-IID data distributions. Additionally, CrowdGuard withstands adaptive adversaries while preserving the original performance of protected models. To ensure confidentiality, CrowdGuard uses a secure and privacy-preserving architecture leveraging Trusted Execution Environments (TEEs) on both client and server sides.",
+      "year": 2024,
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "P. Rieger",
+        "T. Krau\u00df",
+        "Markus Miettinen",
+        "A. Dmitrienko",
+        "Ahmad Sadeghi"
+      ],
+      "author_details": [
+        {
+          "name": "P. Rieger",
+          "h_index": 13,
+          "citation_count": 1401,
+          "affiliations": []
+        },
+        {
+          "name": "T. Krau\u00df",
+          "h_index": 6,
+          "citation_count": 132,
+          "affiliations": []
+        },
+        {
+          "name": "Markus Miettinen",
+          "h_index": 28,
+          "citation_count": 4240,
+          "affiliations": []
+        },
+        {
+          "name": "A. Dmitrienko",
+          "h_index": 26,
+          "citation_count": 4849,
+          "affiliations": []
+        },
+        {
+          "name": "Ahmad Sadeghi",
+          "h_index": 7,
+          "citation_count": 610,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 28,
+      "url": "https://arxiv.org/abs/2210.07714",
+      "citation_count": 37,
+      "influential_citation_count": 5,
+      "reference_count": 100,
+      "is_open_access": true,
+      "publication_date": "2022-10-14",
+      "tldr": "A novel defense mechanism, CrowdGuard, is presented that effectively mitigates backdoor attacks in FL and overcomes the deficiencies of existing techniques and leverages clients' feedback on individual models, analyzes the behavior of neurons in hidden layers, and eliminates poisoned models through an iterative pruning scheme.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "backdoor-detection",
+        "crowdsourced",
+        "FL-defense"
+      ],
+      "open_access_pdf": "https://doi.org/10.14722/ndss.2024.23233"
+    },
+    {
+      "paper_id": "2304.08847",
+      "title": "BadVFL: Backdoor Attacks in Vertical Federated Learning",
+      "abstract": "Federated learning (FL) enables multiple parties to collaboratively train a machine learning model without sharing their data; rather, they train their own model locally and send updates to a central server for aggregation. Depending on how the data is distributed among the participants, FL can be classified into Horizontal (HFL) and Vertical (VFL). In VFL, the participants share the same set of training instances but only host a different and non-overlapping subset of the whole feature space. Whereas in HFL, each participant shares the same set of features while the training set is split into locally owned training data subsets.   VFL is increasingly used in applications like financial fraud detection; nonetheless, very little work has analyzed its security. In this paper, we focus on robustness in VFL, in particular, on backdoor attacks, whereby an adversary attempts to manipulate the aggregate model during the training process to trigger misclassifications. Performing backdoor attacks in VFL is more challenging than in HFL, as the adversary i) does not have access to the labels during training and ii) cannot change the labels as she only has access to the feature embeddings. We present a first-of-its-kind clean-label backdoor attack in VFL, which consists of two phases: a label inference and a backdoor phase. We demonstrate the effectiveness of the attack on three different datasets, investigate the factors involved in its success, and discuss countermeasures to mitigate its impact.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Mohammad Naseri",
+        "Yufei Han",
+        "Emiliano De Cristofaro"
+      ],
+      "author_details": [
+        {
+          "name": "Mohammad Naseri",
+          "h_index": 6,
+          "citation_count": 397,
+          "affiliations": []
+        },
+        {
+          "name": "Yufei Han",
+          "h_index": 6,
+          "citation_count": 315,
+          "affiliations": []
+        },
+        {
+          "name": "Emiliano De Cristofaro",
+          "h_index": 55,
+          "citation_count": 11460,
+          "affiliations": [
+            "University College London"
+          ]
+        }
+      ],
+      "max_h_index": 55,
+      "url": "https://arxiv.org/abs/2304.08847",
+      "citation_count": 25,
+      "influential_citation_count": 2,
+      "reference_count": 53,
+      "is_open_access": true,
+      "publication_date": "2023-04-18",
+      "tldr": "This paper presents a first-of-its-kind clean-label backdoor attack in VFL, which consists of two phases: a label inference and a backdoor phase, and demonstrates the effectiveness of the attack on three different datasets.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "vertical-FL",
+        "backdoor",
+        "FL-attack"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2304.08847"
+    },
+    {
+      "paper_id": "seed_c61a2c5c",
+      "title": "Automatic Adversarial Adaption for Stealthy Poisoning Attacks in Federated Learning",
+      "abstract": "Federated Learning (FL) enables the training of machine learning models using distributed data.This approach offers benefits such as improved data privacy, reduced communication costs, and enhanced model performance through increased data diversity.However, FL systems are vulnerable to poisoning attacks, where adversaries introduce malicious updates to compromise the integrity of the aggregated model.Existing defense strategies against such attacks include filtering, influence reduction, and robust aggregation techniques.Filtering approaches have the advantage of not reducing classification accuracy, but face the challenge of adversaries adapting to the defense mechanisms.The lack of a universally accepted definition of \"adaptive adversaries\" in the literature complicates the assessment of detection capabilities and meaningful comparisons of FL defenses.In this paper, we address the limitations of the commonly used definition of \"adaptive attackers\" proposed by Bagdasaryan et al.We propose AutoAdapt, a novel adaptation method that leverages an Augmented Lagrangian optimization technique.AutoAdapt eliminates the manual search for optimal hyper-parameters by providing a more rational alternative.It generates more effective solutions by accommodating multiple inequality constraints, allowing adaptation to valid value ranges within the defensive metrics.Our proposed method significantly enhances adversaries' capabilities and accelerates research in developing attacks and defenses.By accommodating multiple valid range constraints and adapting to diverse defense metrics, AutoAdapt challenges defenses relying on multiple metrics and expands the range of potential adversarial behaviors.Through comprehensive studies, we demonstrate the effectiveness of AutoAdapt in simultaneously adapting to multiple constraints and showcasing its power by accelerating the performance of tests by a factor of 15.Furthermore, we establish the versatility of AutoAdapt across various application scenarios, encompassing datasets, model architectures, and hyper-parameters, emphasizing its practical utility in real-world contexts.Overall, our contributions advance the evaluation of FL defenses and drive progress in this field.Defenses against poisoning attacks employ three strategies: Influence Reduction (IR), Robust Aggregation (RA), and Detection and Filtering (DF).IR approaches [6], [8], [49], [71] perturb model parameters to cancel malicious behavior, RAbased defenses [81], [46] secure aggregation algorithms even in the presence of poisoned models, and DF-based solutions [13], [48], [67], [53], [31], [60], [84], [16] detect and filter out poisoned models before aggregation.Among the three categories, DF approaches appear to be more prominent solutions, as IR and RA-based systems unavoidably affect benign functionality.",
+      "year": 2024,
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "T. Krau\u00df",
+        "Jan K\u00f6nig",
+        "Alexandra Dmitrienko",
+        "Christian Kanzow"
+      ],
+      "author_details": [
+        {
+          "name": "T. Krau\u00df",
+          "h_index": 6,
+          "citation_count": 132,
+          "affiliations": []
+        },
+        {
+          "name": "Jan K\u00f6nig",
+          "h_index": 3,
+          "citation_count": 121,
+          "affiliations": []
+        },
+        {
+          "name": "Alexandra Dmitrienko",
+          "h_index": 5,
+          "citation_count": 107,
+          "affiliations": []
+        },
+        {
+          "name": "Christian Kanzow",
+          "h_index": 1,
+          "citation_count": 25,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 6,
+      "url": "https://openalex.org/W4391725340",
+      "pdf_url": "https://doi.org/10.14722/ndss.2024.241366",
+      "doi": "https://doi.org/10.14722/ndss.2024.241366",
+      "citation_count": 25,
+      "influential_citation_count": 0,
+      "reference_count": 79,
+      "is_open_access": true,
+      "tldr": "The limitations of the commonly used definition of \u201cadaptive attackers\u201d proposed by Bagdasaryan et al are addressed and AutoAdapt, a novel adaptation method that leverages an Augmented Lagrangian optimization technique is proposed, a novel adaptation method that leverages an Augmented Lagrangian optimization technique.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "stealthy-poisoning",
+        "adaptive",
+        "FL-attack"
+      ],
+      "open_access_pdf": "https://doi.org/10.14722/ndss.2024.241366"
+    },
+    {
+      "paper_id": "seed_0f448dd2",
+      "title": "FLAME: Taming Backdoors in Federated Learning",
+      "abstract": "Federated Learning (FL) is a collaborative machine learning approach allowing participants to jointly train a model without having to share their private, potentially sensitive local datasets with others. Despite its benefits, FL is vulnerable to backdoor attacks, in which an adversary injects manipulated model updates into the model aggregation process so that the resulting model will provide targeted false predictions for specific adversary-chosen inputs. Proposed defenses against backdoor attacks based on detecting and filtering out malicious model updates consider only very specific and limited attacker models, whereas defenses based on differential privacy-inspired noise injection significantly deteriorate the benign performance of the aggregated model. To address these deficiencies, we introduce FLAME, a defense framework that estimates the sufficient amount of noise to be injected to ensure the elimination of backdoors while maintaining the model performance. To minimize the required amount of noise, FLAME uses a model clustering and weight clipping approach. Our evaluation of FLAME on several datasets stemming from application areas including image classification, word prediction, and IoT intrusion detection demonstrates that FLAME removes backdoors effectively with a negligible impact on the benign performance of the models. Furthermore, following the considerable attention that our research has received after its presentation at USENIX SEC 2022, FLAME has become the subject of numerous investigations proposing diverse attack methodologies in an attempt to circumvent it. As a response to these endeavors, we provide a comprehensive analysis of these attempts. Our findings show that these papers (e.g., 3DFed [36]) have not fully comprehended nor correctly employed the fundamental principles underlying FLAME, i.e., our defense mechanism effectively repels these attempted attacks.",
+      "year": 2021,
+      "venue": "arXiv (Cornell University)",
+      "authors": [
+        "T. D. Nguyen",
+        "P. Rieger",
+        "Huili Chen",
+        "Hossein Yalame",
+        "Helen Mollering",
+        "Hossein Fereidooni",
+        "Samuel Marchal",
+        "Markus Miettinen",
+        "Azalia Mirhoseini",
+        "S. Zeitouni",
+        "F. Koushanfar",
+        "A. Sadeghi",
+        "T. Schneider"
+      ],
+      "author_details": [
+        {
+          "name": "T. D. Nguyen",
+          "h_index": 19,
+          "citation_count": 2716,
+          "affiliations": []
+        },
+        {
+          "name": "P. Rieger",
+          "h_index": 13,
+          "citation_count": 1401,
+          "affiliations": []
+        },
+        {
+          "name": "Huili Chen",
+          "h_index": 20,
+          "citation_count": 2319,
+          "affiliations": []
+        },
+        {
+          "name": "Hossein Yalame",
+          "h_index": 14,
+          "citation_count": 1481,
+          "affiliations": []
+        },
+        {
+          "name": "Helen Mollering",
+          "h_index": 5,
+          "citation_count": 53,
+          "affiliations": []
+        },
+        {
+          "name": "Hossein Fereidooni",
+          "h_index": 20,
+          "citation_count": 2269,
+          "affiliations": []
+        },
+        {
+          "name": "Samuel Marchal",
+          "h_index": 23,
+          "citation_count": 3740,
+          "affiliations": []
+        },
+        {
+          "name": "Markus Miettinen",
+          "h_index": 28,
+          "citation_count": 4240,
+          "affiliations": []
+        },
+        {
+          "name": "Azalia Mirhoseini",
+          "h_index": 33,
+          "citation_count": 12915,
+          "affiliations": []
+        },
+        {
+          "name": "S. Zeitouni",
+          "h_index": 17,
+          "citation_count": 1697,
+          "affiliations": []
+        },
+        {
+          "name": "F. Koushanfar",
+          "h_index": 68,
+          "citation_count": 28916,
+          "affiliations": []
+        },
+        {
+          "name": "A. Sadeghi",
+          "h_index": 90,
+          "citation_count": 29546,
+          "affiliations": []
+        },
+        {
+          "name": "T. Schneider",
+          "h_index": 50,
+          "citation_count": 12070,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 90,
+      "url": "https://openalex.org/W4287393324",
+      "pdf_url": "https://arxiv.org/pdf/2101.02281",
+      "doi": "https://doi.org/10.48550/arxiv.2101.02281",
+      "citation_count": 23,
+      "influential_citation_count": 4,
+      "reference_count": 64,
+      "is_open_access": false,
+      "publication_date": "2021-01-06",
+      "tldr": "Evaluation of FLAME on several datasets stemming from application areas including image classification, word prediction, and IoT intrusion detection demonstrates that FLAME removes backdoors effectively with a negligible impact on the benign performance of the models.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "backdoor-defense",
+        "clustering",
+        "FL-defense"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "2308.05832",
+      "title": "FLShield: A Validation Based Federated Learning Framework to Defend Against Poisoning Attacks",
+      "abstract": "Federated learning (FL) is revolutionizing how we learn from data. With its growing popularity, it is now being used in many safety-critical domains such as autonomous vehicles and healthcare. Since thousands of participants can contribute in this collaborative setting, it is, however, challenging to ensure security and reliability of such systems. This highlights the need to design FL systems that are secure and robust against malicious participants' actions while also ensuring high utility, privacy of local data, and efficiency. In this paper, we propose a novel FL framework dubbed as FLShield that utilizes benign data from FL participants to validate the local models before taking them into account for generating the global model. This is in stark contrast with existing defenses relying on server's access to clean datasets -- an assumption often impractical in real-life scenarios and conflicting with the fundamentals of FL. We conduct extensive experiments to evaluate our FLShield framework in different settings and demonstrate its effectiveness in thwarting various types of poisoning and backdoor attacks including a defense-aware one. FLShield also preserves privacy of local data against gradient inversion attacks.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "E. Kabir",
+        "Zeyu Song",
+        "Md. Rafi Ur Rashid",
+        "Shagufta Mehnaz"
+      ],
+      "author_details": [
+        {
+          "name": "E. Kabir",
+          "h_index": 28,
+          "citation_count": 11992,
+          "affiliations": []
+        },
+        {
+          "name": "Zeyu Song",
+          "h_index": 5,
+          "citation_count": 134,
+          "affiliations": []
+        },
+        {
+          "name": "Md. Rafi Ur Rashid",
+          "h_index": 6,
+          "citation_count": 150,
+          "affiliations": []
+        },
+        {
+          "name": "Shagufta Mehnaz",
+          "h_index": 13,
+          "citation_count": 694,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 28,
+      "url": "https://arxiv.org/abs/2308.05832",
+      "citation_count": 23,
+      "influential_citation_count": 3,
+      "reference_count": 78,
+      "is_open_access": true,
+      "publication_date": "2023-08-10",
+      "tldr": "This paper proposes a novel FL framework dubbed as FLShield that utilizes benign data from FL participants to validate the local models before taking them into account for generating the global model, and preserves privacy of local data against gradient inversion attacks.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "validation-based",
+        "poisoning-defense",
+        "FL-defense"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2308.05832"
+    },
+    {
+      "paper_id": "2407.08935",
+      "title": "Distributed Backdoor Attacks on Federated Graph Learning and Certified Defenses",
+      "abstract": "Federated graph learning (FedGL) is an emerging federated learning (FL) framework that extends FL to learn graph data from diverse sources. FL for non-graph data has shown to be vulnerable to backdoor attacks, which inject a shared backdoor trigger into the training data such that the trained backdoored FL model can predict the testing data containing the trigger as the attacker desires. However, FedGL against backdoor attacks is largely unexplored, and no effective defense exists.   In this paper, we aim to address such significant deficiency. First, we propose an effective, stealthy, and persistent backdoor attack on FedGL. Our attack uses a subgraph as the trigger and designs an adaptive trigger generator that can derive the effective trigger location and shape for each graph. Our attack shows that empirical defenses are hard to detect/remove our generated triggers. To mitigate it, we further develop a certified defense for any backdoored FedGL model against the trigger with any shape at any location. Our defense involves carefully dividing a testing graph into multiple subgraphs and designing a majority vote-based ensemble classifier on these subgraphs. We then derive the deterministic certified robustness based on the ensemble classifier and prove its tightness. We extensively evaluate our attack and defense on six graph datasets. Our attack results show our attack can obtain > 90% backdoor accuracy in almost all datasets. Our defense results show, in certain cases, the certified accuracy for clean testing graphs against an arbitrary trigger with size 20 can be close to the normal accuracy under no attack, while there is a moderate gap in other cases. Moreover, the certified backdoor accuracy is always 0 for backdoored testing graphs generated by our attack, implying our defense can fully mitigate the attack. Source code is available at: https://github.com/Yuxin104/Opt-GDBA.",
+      "year": 2024,
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Yuxin Yang",
+        "Qiang Li",
+        "Jinyuan Jia",
+        "Yuan Hong",
+        "Binghui Wang"
+      ],
+      "author_details": [
+        {
+          "name": "Yuxin Yang",
+          "h_index": 3,
+          "citation_count": 33,
+          "affiliations": []
+        },
+        {
+          "name": "Qiang Li",
+          "h_index": 3,
+          "citation_count": 33,
+          "affiliations": []
+        },
+        {
+          "name": "Jinyuan Jia",
+          "h_index": 8,
+          "citation_count": 300,
+          "affiliations": []
+        },
+        {
+          "name": "Yuan Hong",
+          "h_index": 3,
+          "citation_count": 31,
+          "affiliations": []
+        },
+        {
+          "name": "Binghui Wang",
+          "h_index": 5,
+          "citation_count": 92,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 8,
+      "url": "https://arxiv.org/abs/2407.08935",
+      "citation_count": 19,
+      "influential_citation_count": 1,
+      "reference_count": 89,
+      "is_open_access": true,
+      "publication_date": "2024-07-12",
+      "tldr": "An effective, stealthy, and persistent backdoor attack on FedGL is proposed that can obtain >90% backdoor accuracy in almost all datasets and a certified defense for any backdoored FedGL model against the trigger with any shape at any location is developed.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Book",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning",
+        "graph"
+      ],
+      "model_types": [
+        "gnn"
+      ],
+      "tags": [
+        "federated-graph",
+        "distributed-backdoor"
+      ],
+      "open_access_pdf": "https://dl.acm.org/doi/pdf/10.1145/3658644.3690187"
+    },
+    {
+      "paper_id": "seed_fdf2c3b3",
+      "title": "Securing Federated Sensitive Topic Classification against Poisoning Attacks",
+      "abstract": "We present a Federated Learning (FL) based solution for building a distributed classifier capable of detecting URLs containing sensitive content, i.e., content related to categories such as health, political beliefs, sexual orientation, etc. Although such a classifier addresses the limitations of previous offline/centralised classifiers, it is still vulnerable to poisoning attacks from malicious users that may attempt to reduce the accuracy for benign users by disseminating faulty model updates. To guard against this, we develop a robust aggregation scheme based on subjective logic and residual-based attack detection. Employing a combination of theoretical analysis, trace-driven simulation, as well as experimental validation with a prototype and real users, we show that our classifier can detect sensitive content with high accuracy, learn new labels fast, and remain robust in view of poisoning attacks from malicious users, as well as imperfect input from non-malicious ones.",
+      "year": 2023,
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Tianyue Chu",
+        "\u00c1lvaro Garc\u00eda-Recuero",
+        "Costas Iordanou",
+        "Georgios Smaragdakis",
+        "Nikolaos Laoutaris"
+      ],
+      "author_details": [
+        {
+          "name": "Tianyue Chu",
+          "h_index": 3,
+          "citation_count": 35,
+          "affiliations": []
+        },
+        {
+          "name": "\u00c1lvaro Garc\u00eda-Recuero",
+          "h_index": 7,
+          "citation_count": 107,
+          "affiliations": []
+        },
+        {
+          "name": "Costas Iordanou",
+          "h_index": 11,
+          "citation_count": 309,
+          "affiliations": []
+        },
+        {
+          "name": "Georgios Smaragdakis",
+          "h_index": 37,
+          "citation_count": 5254,
+          "affiliations": [
+            "Delft University of Technology"
+          ]
+        },
+        {
+          "name": "Nikolaos Laoutaris",
+          "h_index": 39,
+          "citation_count": 6663,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 39,
+      "url": "https://openalex.org/W4307300892",
+      "doi": "https://doi.org/10.14722/ndss.2023.23112",
+      "citation_count": 16,
+      "influential_citation_count": 2,
+      "reference_count": 73,
+      "is_open_access": true,
+      "publication_date": "2022-01-31",
+      "tldr": "A Federated Learning (FL) based solution for building a distributed classifier capable of detecting URLs containing GDPR-sensitive content related to categories such as health, sexual preference, political beliefs, etc, which can detect sensitive content with high accuracy, learn new labels fast, and remain robust in view of poisoning attacks from malicious users.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning",
+        "nlp"
+      ],
+      "model_types": [],
+      "tags": [
+        "sensitive-topic",
+        "poisoning-defense",
+        "FL-defense"
+      ],
+      "open_access_pdf": "https://doi.org/10.14722/ndss.2023.23112"
+    },
+    {
+      "paper_id": "2201.02775",
+      "title": "ADI: Adversarial Dominating Inputs in Vertical Federated Learning Systems",
+      "abstract": "Vertical federated learning (VFL) system has recently become prominent as a concept to process data distributed across many individual sources without the need to centralize it. Multiple participants collaboratively train models based on their local data in a privacy-aware manner. To date, VFL has become a de facto solution to securely learn a model among organizations, allowing knowledge to be shared without compromising privacy of any individuals. Despite the prosperous development of VFL systems, we find that certain inputs of a participant, named adversarial dominating inputs (ADIs), can dominate the joint inference towards the direction of the adversary's will and force other (victim) participants to make negligible contributions, losing rewards that are usually offered regarding the importance of their contributions in federated learning scenarios. We conduct a systematic study on ADIs by first proving their existence in typical VFL systems. We then propose gradient-based methods to synthesize ADIs of various formats and exploit common VFL systems. We further launch greybox fuzz testing, guided by the saliency score of ``victim'' participants, to perturb adversary-controlled inputs and systematically explore the VFL attack surface in a privacy-preserving manner. We conduct an in-depth study on the influence of critical parameters and settings in synthesizing ADIs. Our study reveals new VFL attack opportunities, promoting the identification of unknown threats before breaches and building more secure VFL systems.",
+      "year": 2023,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Qi Pang",
+        "Yuanyuan Yuan",
+        "Shuai Wang",
+        "Wenting Zheng"
+      ],
+      "author_details": [
+        {
+          "name": "Qi Pang",
+          "h_index": 12,
+          "citation_count": 369,
+          "affiliations": []
+        },
+        {
+          "name": "Yuanyuan Yuan",
+          "h_index": 13,
+          "citation_count": 510,
+          "affiliations": []
+        },
+        {
+          "name": "Shuai Wang",
+          "h_index": 12,
+          "citation_count": 419,
+          "affiliations": []
+        },
+        {
+          "name": "Wenting Zheng",
+          "h_index": 3,
+          "citation_count": 164,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 13,
+      "url": "https://arxiv.org/abs/2201.02775",
+      "citation_count": 14,
+      "influential_citation_count": 2,
+      "reference_count": 107,
+      "is_open_access": true,
+      "publication_date": "2022-01-08",
+      "tldr": "This study reveals new VFL attack opportunities, promoting the identification of unknown threats before breaches and building more secure VFL systems, and conducts an in-depth study on the influence of critical parameters and settings in synthesizing ADIs.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "vertical-FL",
+        "dominating-inputs",
+        "FL-attack"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2201.02775"
+    },
+    {
+      "paper_id": "seed_ad933014",
+      "title": "Every Vote Counts: Ranking-Based Training of Federated Learning to Resist Poisoning Attacks",
+      "abstract": "Federated learning (FL) allows mutually untrusted clients to collaboratively train a common machine learning model without sharing their private/proprietary training data among each other. FL is unfortunately susceptible to poisoning by malicious clients who aim to hamper the accuracy of the commonly trained model through sending malicious model updates during FL's training process.   We argue that the key factor to the success of poisoning attacks against existing FL systems is the large space of model updates available to the clients, allowing malicious clients to search for the most poisonous model updates, e.g., by solving an optimization problem. To address this, we propose Federated Rank Learning (FRL). FRL reduces the space of client updates from model parameter updates (a continuous space of float numbers) in standard FL to the space of parameter rankings (a discrete space of integer values). To be able to train the global model using parameter ranks (instead of parameter weights), FRL leverage ideas from recent supermasks training mechanisms. Specifically, FRL clients rank the parameters of a randomly initialized neural network (provided by the server) based on their local training data. The FRL server uses a voting mechanism to aggregate the parameter rankings submitted by clients in each training epoch to generate the global ranking of the next training epoch.   Intuitively, our voting-based aggregation mechanism prevents poisoning clients from making significant adversarial modifications to the global model, as each client will have a single vote! We demonstrate the robustness of FRL to poisoning through analytical proofs and experimentation. We also show FRL's high communication efficiency. Our experiments demonstrate the superiority of FRL in real-world FL settings.",
+      "year": 2021,
+      "venue": "USENIX Security",
+      "authors": [
+        "Hamid Mozaffari",
+        "Virat Shejwalkar",
+        "Amir Houmansadr"
+      ],
+      "author_details": [
+        {
+          "name": "Hamid Mozaffari",
+          "h_index": 5,
+          "citation_count": 98,
+          "affiliations": []
+        },
+        {
+          "name": "Virat Shejwalkar",
+          "h_index": 13,
+          "citation_count": 3112,
+          "affiliations": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "name": "Amir Houmansadr",
+          "h_index": 42,
+          "citation_count": 7508,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 42,
+      "url": "https://arxiv.org/abs/2110.04350",
+      "citation_count": 11,
+      "influential_citation_count": 0,
+      "reference_count": 45,
+      "is_open_access": false,
+      "publication_date": "2021-10-08",
+      "tldr": "This work argues that the key factor to the success of poisoning attacks against existing FL systems is the large space of model updates available to the clients, allowing malicious clients to search for the most poisonous model updates, e.g., by solv-ing an optimization problem.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "ranking-based",
+        "poisoning-defense",
+        "FL-defense"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_15a4851d",
+      "title": "DP-BREM: Differentially-Private and Byzantine-Robust Federated Learning with Client Momentum",
+      "abstract": "Federated Learning (FL) allows multiple participating clients to train machine learning models collaboratively while keeping their datasets local and only exchanging the gradient or model updates with a coordinating server. Existing FL protocols are vulnerable to attacks that aim to compromise data privacy and/or model robustness. Recently proposed defenses focused on ensuring either privacy or robustness, but not both. In this paper, we focus on simultaneously achieving differential privacy (DP) and Byzantine robustness for cross-silo FL, based on the idea of learning from history. The robustness is achieved via client momentum, which averages the updates of each client over time, thus reducing the variance of the honest clients and exposing the small malicious perturbations of Byzantine clients that are undetectable in a single round but accumulate over time. In our initial solution DP-BREM, DP is achieved by adding noise to the aggregated momentum, and we account for the privacy cost from the momentum, which is different from the conventional DP-SGD that accounts for the privacy cost from the gradient. Since DP-BREM assumes a trusted server (who can obtain clients' local models or updates), we further develop the final solution called DP-BREM+, which achieves the same DP and robustness properties as DP-BREM without a trusted server by utilizing secure aggregation techniques, where DP noise is securely and jointly generated by the clients. Both theoretical analysis and experimental results demonstrate that our proposed protocols achieve better privacy-utility tradeoff and stronger Byzantine robustness than several baseline methods, under different DP budgets and attack settings.",
+      "year": 2023,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Xiaolan Gu",
+        "Ming Li",
+        "Lishuang Xiong"
+      ],
+      "author_details": [
+        {
+          "name": "Xiaolan Gu",
+          "h_index": 7,
+          "citation_count": 245,
+          "affiliations": []
+        },
+        {
+          "name": "Ming Li",
+          "h_index": 80,
+          "citation_count": 35455,
+          "affiliations": []
+        },
+        {
+          "name": "Lishuang Xiong",
+          "h_index": 5,
+          "citation_count": 76,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 80,
+      "url": "https://openalex.org/W4381826963",
+      "pdf_url": "https://arxiv.org/pdf/2306.12608",
+      "doi": "https://doi.org/10.48550/arxiv.2306.12608",
+      "citation_count": 9,
+      "influential_citation_count": 0,
+      "reference_count": 56,
+      "is_open_access": true,
+      "publication_date": "2023-06-22",
+      "tldr": "This paper focuses on simultaneously achieving differential privacy (DP) and Byzantine robustness for cross-silo FL, based on the idea of learning from history, and develops the final solution called DP-BREM+, which achieves the same DP and robustness properties as DP-BREM without a trusted server.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "differential-privacy",
+        "Byzantine-robust"
+      ],
+      "open_access_pdf": "http://arxiv.org/pdf/2306.12608"
+    },
+    {
+      "paper_id": "seed_cd8b172b",
+      "title": "PoiSAFL: Scalable Poisoning Attack Framework to Byzantine-resilient Semi-asynchronous Federated Learning",
+      "year": 2025,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Xiaoyi Pang",
+        "Chenxu Zhao",
+        "Zhibo Wang",
+        "Jiahui Hu",
+        "Yinggui Wang",
+        "Lei Wang",
+        "Tao Wei",
+        "Kui Ren",
+        "Chun Chen"
+      ],
+      "author_details": [
+        {
+          "name": "Xiaoyi Pang",
+          "h_index": 14,
+          "citation_count": 756,
+          "affiliations": []
+        },
+        {
+          "name": "Chenxu Zhao",
+          "h_index": 1,
+          "citation_count": 2,
+          "affiliations": []
+        },
+        {
+          "name": "Zhibo Wang",
+          "h_index": 9,
+          "citation_count": 238,
+          "affiliations": []
+        },
+        {
+          "name": "Jiahui Hu",
+          "h_index": 18,
+          "citation_count": 1012,
+          "affiliations": [
+            "Zhejiang University"
+          ]
+        },
+        {
+          "name": "Yinggui Wang",
+          "h_index": 4,
+          "citation_count": 61,
+          "affiliations": []
+        },
+        {
+          "name": "Lei Wang",
+          "h_index": 1,
+          "citation_count": 3,
+          "affiliations": []
+        },
+        {
+          "name": "Tao Wei",
+          "h_index": 1,
+          "citation_count": 4,
+          "affiliations": []
+        },
+        {
+          "name": "Kui Ren",
+          "h_index": 14,
+          "citation_count": 655,
+          "affiliations": []
+        },
+        {
+          "name": "Chun Chen",
+          "h_index": 1,
+          "citation_count": 2,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 18,
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-pang-xiaoyi.pdf",
+      "citation_count": 2,
+      "influential_citation_count": 0,
+      "reference_count": 59,
+      "is_open_access": false,
+      "tldr": "This paper proposes a scalable stealth poisoning attack framework for Byzantine-resilient SAFL, called PoiSAFL, which can effectively impair SAFL\u2019s learning performance while bypassing three typical kinds of Byzantine-resilient defenses by strategically controlling malicious clients to upload undetectable malicious local models.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "scalable-poisoning",
+        "semi-async",
+        "FL-attack"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_908ad2d1",
+      "title": "Aion: Robust and Efficient Multi-Round Single-Mask Secure Aggregation Against Malicious Participants",
+      "year": 2025,
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Yizhong Liu",
+        "Zixiao Jia",
+        "Xiao Chen",
+        "Song Bian",
+        "Runhua Xu",
+        "Dawei Li",
+        "Yuan Lu"
+      ],
+      "author_details": [
+        {
+          "name": "Yizhong Liu",
+          "h_index": 0,
+          "citation_count": 0,
+          "affiliations": []
+        },
+        {
+          "name": "Zixiao Jia",
+          "h_index": 1,
+          "citation_count": 52,
+          "affiliations": []
+        },
+        {
+          "name": "Xiao Chen",
+          "h_index": 0,
+          "citation_count": 0,
+          "affiliations": []
+        },
+        {
+          "name": "Song Bian",
+          "h_index": 5,
+          "citation_count": 85,
+          "affiliations": []
+        },
+        {
+          "name": "Runhua Xu",
+          "h_index": 0,
+          "citation_count": 0,
+          "affiliations": []
+        },
+        {
+          "name": "Dawei Li",
+          "h_index": 0,
+          "citation_count": 0,
+          "affiliations": []
+        },
+        {
+          "name": "Yuan Lu",
+          "h_index": 1,
+          "citation_count": 2,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 5,
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-yizhong.pdf",
+      "citation_count": 0,
+      "influential_citation_count": 0,
+      "reference_count": 0,
+      "is_open_access": false,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "federated-learning"
+      ],
+      "model_types": [],
+      "tags": [
+        "secure-aggregation",
+        "malicious-participants"
+      ],
+      "open_access_pdf": ""
+    }
+  ]
 }

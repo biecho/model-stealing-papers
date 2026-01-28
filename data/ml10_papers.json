@@ -1,116 +1,319 @@
 {
   "owasp_id": "ML10",
   "owasp_name": "Model Poisoning",
-  "total": 6,
-  "updated": "2026-01-09",
+  "total": 4,
+  "updated": "2026-01-28",
   "papers": [
     {
-      "paper_id": "https://openalex.org/W2990614164",
-      "title": "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning",
-      "abstract": "In federated learning, multiple client devices jointly learn a machine learning model: each client device maintains a local model for its local training dataset, while a master device maintains a global model via aggregating the local models from the client devices. The machine learning community recently proposed several federated learning methods that were claimed to be robust against Byzantine failures (e.g., system failures, adversarial manipulations) of certain client devices. In this work, we perform the first systematic study on local model poisoning attacks to federated learning. We assume an attacker has compromised some client devices, and the attacker manipulates the local model parameters on the compromised client devices during the learning process such that the global model has a large testing error rate. We formulate our attacks as optimization problems and apply our attacks to four recent Byzantine-robust federated learning methods. Our empirical results on four real-world datasets show that our attacks can substantially increase the error rates of the models learnt by the federated learning methods that were claimed to be robust against Byzantine failures of some client devices. We generalize two defenses for data poisoning attacks to defend against our local model poisoning attacks. Our evaluation results show that one defense can effectively defend against our attacks in some cases, but the defenses are not effective enough in other cases, highlighting the need for new defenses against our local model poisoning attacks to federated learning.",
-      "year": 2019,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Minghong Fang",
-        "Xiaoyu Cao",
-        "Jinyuan Jia",
-        "Neil Zhenqiang Gong"
-      ],
-      "url": "https://openalex.org/W2990614164",
-      "pdf_url": "https://arxiv.org/pdf/1911.11815",
-      "cited_by_count": 174,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W3138153888",
-      "title": "Manipulating the Byzantine: Optimizing Model Poisoning Attacks and Defenses for Federated Learning",
-      "abstract": "Federated learning (FL) enables many data owners (e.g., mobile devices) to train a joint ML model (e.g., a nextword prediction classifier) without the need of sharing their private training data.However, FL is known to be susceptible to poisoning attacks by malicious participants (e.g., adversaryowned mobile devices) who aim at hampering the accuracy of the jointly trained model through sending malicious inputs during the federated training process.In this paper, we present a generic framework for model poisoning attacks on FL.We show that our framework leads to poisoning attacks that substantially outperform state-of-the-art model poisoning attacks by large margins.For instance, our attacks result in 1.5\u00d7 to 60\u00d7 higher reductions in the accuracy of FL models compared to previously discovered poisoning attacks.Our work demonstrates that existing Byzantine-robust FL algorithms are significantly more susceptible to model poisoning than previously thought.Motivated by this, we design a defense against FL poisoning, called divide-and-conquer (DnC).We demonstrate that DnC outperforms all existing Byzantine-robust FL algorithms in defeating model poisoning attacks, specifically, it is 2.5\u00d7 to 12\u00d7 more resilient in our experiments with different datasets and models.",
-      "year": 2021,
-      "venue": null,
-      "authors": [
-        "Virat Shejwalkar",
-        "Amir Houmansadr"
-      ],
-      "url": "https://openalex.org/W3138153888",
-      "pdf_url": "https://doi.org/10.14722/ndss.2021.24498",
-      "cited_by_count": 409,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4308338624",
-      "title": "LoneNeuron: a Highly-Effective Feature-Domain Neural Trojan Using Invisible and Polymorphic Watermarks",
-      "abstract": "The wide adoption of deep neural networks (DNNs) in real-world applications raises increasing security concerns. Neural Trojans embedded in pre-trained neural networks are a harmful attack against the DNN model supply chain. They generate false outputs when certain stealthy triggers appear in the inputs. While data-poisoning attacks have been well studied in the literature, code-poisoning and model-poisoning backdoors only start to attract attention until recently. We present a novel model-poisoning neural Trojan, namely LoneNeuron, which responds to feature-domain patterns that transform into invisible, sample-specific, and polymorphic pixel-domain watermarks. With high attack specificity, LoneNeuron achieves a 100% attack success rate, while not affecting the main task performance. With LoneNeuron's unique watermark polymorphism property, the same feature-domain trigger is resolved to multiple watermarks in the pixel domain, which further improves watermark randomness, stealthiness, and resistance against Trojan detection. Extensive experiments show that LoneNeuron could escape state-of-the-art Trojan detectors. LoneNeuron~is also the first effective backdoor attack against vision transformers (ViTs).",
-      "year": 2022,
-      "venue": "Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security",
-      "authors": [
-        "Zeyan Liu",
-        "Fengjun Li",
-        "Zhu Li",
-        "Bo Luo"
-      ],
-      "url": "https://openalex.org/W4308338624",
-      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3548606.3560678",
-      "cited_by_count": 12,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4286904258",
-      "title": "Rowhammer-Based Trojan Injection: One Bit Flip Is Sufficient for Backdooring DNNs",
-      "abstract": "State-of-the-art deep neural networks (DNNs) have been proven to be vulnerable to adversarial manipulation and backdoor attacks. Backdoored models deviate from expected behavior on inputs with predefined triggers while retaining performance on clean data. Recent works focus on software simulation of backdoor injection during the inference phase by modifying network weights, which we find often unrealistic in practice due to restrictions in hardware. In contrast, in this work for the first time, we present an end-to-end backdoor injection attack realized on actual hardware on a classifier model using Rowhammer as the fault injection method. To this end, we first investigate the viability of backdoor injection attacks in real-life deployments of DNNs on hardware and address such practical issues in hardware implementation from a novel optimization perspective. We are motivated by the fact that vulnerable memory locations are very rare, device-specific, and sparsely distributed. Consequently, we propose a novel network training algorithm based on constrained optimization to achieve a realistic backdoor injection attack in hardware. By modifying parameters uniformly across the convolutional and fully-connected layers as well as optimizing the trigger pattern together, we achieve state-of-the-art attack performance with fewer bit flips. For instance, our method on a hardware-deployed ResNet-20 model trained on CIFAR-10 achieves over 89% test accuracy and 92% attack success rate by flipping only 10 out of 2.2 million bits.",
-      "year": 2021,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "M. Caner Tol",
-        "Saad Islam",
-        "Andrew Adiletta",
-        "Berk Sunar",
-        "Ziming Zhang"
-      ],
-      "url": "https://openalex.org/W4286904258",
-      "pdf_url": "https://arxiv.org/pdf/2110.07683",
-      "cited_by_count": 2,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4322717137",
+      "paper_id": "seed_41596acc",
       "title": "Aegis: Mitigating Targeted Bit-flip Attacks against Deep Neural Networks",
       "abstract": "Bit-flip attacks (BFAs) have attracted substantial attention recently, in which an adversary could tamper with a small number of model parameter bits to break the integrity of DNNs. To mitigate such threats, a batch of defense methods are proposed, focusing on the untargeted scenarios. Unfortunately, they either require extra trustworthy applications or make models more vulnerable to targeted BFAs. Countermeasures against targeted BFAs, stealthier and more purposeful by nature, are far from well established. In this work, we propose Aegis, a novel defense method to mitigate targeted BFAs. The core observation is that existing targeted attacks focus on flipping critical bits in certain important layers. Thus, we design a dynamic-exit mechanism to attach extra internal classifiers (ICs) to hidden layers. This mechanism enables input samples to early-exit from different layers, which effectively upsets the adversary's attack plans. Moreover, the dynamic-exit mechanism randomly selects ICs for predictions during each inference to significantly increase the attack cost for the adaptive attacks where all defense mechanisms are transparent to the adversary. We further propose a robustness training strategy to adapt ICs to the attack scenarios by simulating BFAs during the IC training phase, to increase model robustness. Extensive evaluations over four well-known datasets and two popular DNN structures reveal that Aegis could effectively mitigate different state-of-the-art targeted attacks, reducing attack success rate by 5-10$\\times$, significantly outperforming existing defense methods.",
       "year": 2023,
-      "venue": "arXiv (Cornell University)",
+      "venue": "USENIX Security Symposium",
       "authors": [
         "Jialai Wang",
         "Ziyuan Zhang",
         "Meiqi Wang",
-        "Qiu Han",
+        "Han Qiu",
         "Tianwei Zhang",
         "Qi Li",
         "Zongpeng Li",
         "Tao Wei",
-        "C. Zhang"
+        "Chao Zhang"
       ],
+      "author_details": [
+        {
+          "name": "Jialai Wang",
+          "h_index": 4,
+          "citation_count": 733,
+          "affiliations": []
+        },
+        {
+          "name": "Ziyuan Zhang",
+          "h_index": 4,
+          "citation_count": 73,
+          "affiliations": []
+        },
+        {
+          "name": "Meiqi Wang",
+          "h_index": 7,
+          "citation_count": 119,
+          "affiliations": []
+        },
+        {
+          "name": "Han Qiu",
+          "h_index": 12,
+          "citation_count": 712,
+          "affiliations": []
+        },
+        {
+          "name": "Tianwei Zhang",
+          "h_index": 39,
+          "citation_count": 7229,
+          "affiliations": []
+        },
+        {
+          "name": "Qi Li",
+          "h_index": 5,
+          "citation_count": 79,
+          "affiliations": []
+        },
+        {
+          "name": "Zongpeng Li",
+          "h_index": 3,
+          "citation_count": 71,
+          "affiliations": []
+        },
+        {
+          "name": "Tao Wei",
+          "h_index": 3,
+          "citation_count": 51,
+          "affiliations": []
+        },
+        {
+          "name": "Chao Zhang",
+          "h_index": 5,
+          "citation_count": 85,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 39,
       "url": "https://openalex.org/W4322717137",
       "pdf_url": "https://arxiv.org/pdf/2302.13520",
-      "cited_by_count": 7,
-      "classification_confidence": "HIGH"
+      "doi": "https://doi.org/10.48550/arxiv.2302.13520",
+      "citation_count": 34,
+      "influential_citation_count": 6,
+      "reference_count": 73,
+      "is_open_access": true,
+      "publication_date": "2023-02-27",
+      "tldr": "A dynamic-exit mechanism to attach extra internal classifiers (ICs) to hidden layers and randomly selects ICs for predictions during each inference to significantly increase the attack cost for the adaptive attacks where all defense mechanisms are transparent to the adversary.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "bit-flip-defense",
+        "targeted-attack"
+      ],
+      "open_access_pdf": "http://arxiv.org/pdf/2302.13520"
     },
     {
-      "paper_id": "2408.07728",
-      "title": "Moderator: Moderating Text-to-Image Diffusion Models through Fine-grained Context-based Policies",
-      "abstract": "We present Moderator, a policy-based model management system that allows administrators to specify fine-grained content moderation policies and modify the weights of a text-to-image (TTI) model to make it significantly more challenging for users to produce images that violate the policies. In contrast to existing general-purpose model editing techniques, which unlearn concepts without considering the associated contexts, Moderator allows admins to specify what content should be moderated, under which context, how it should be moderated, and why moderation is necessary. Given a set of policies, Moderator first prompts the original model to generate images that need to be moderated, then uses these self-generated images to reverse fine-tune the model to compute task vectors for moderation and finally negates the original model with the task vectors to decrease its performance in generating moderated content. We evaluated Moderator with 14 participants to play the role of admins and found they could quickly learn and author policies to pass unit tests in approximately 2.29 policy iterations. Our experiment with 32 stable diffusion users suggested that Moderator can prevent 65% of users from generating moderated content under 15 attempts and require the remaining users an average of 8.3 times more attempts to generate undesired content.",
-      "year": 2024,
-      "venue": "ACM CCS",
+      "paper_id": "seed_aed90e6e",
+      "title": "NeuroPots: Realtime Proactive Defense against Bit-Flip Attacks in Neural Networks",
+      "year": 2023,
+      "venue": "USENIX Security Symposium",
       "authors": [
-        "Peiran Wang",
-        "Qiyu Li",
-        "Longxuan Yu",
-        "Ziyao Wang",
-        "Ang Li",
-        "Haojian Jin"
+        "Qi Liu",
+        "Jieming Yin",
+        "Wujie Wen",
+        "Chengmo Yang",
+        "Shi Sha"
       ],
-      "url": "https://arxiv.org/abs/2408.07728",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
+      "author_details": [
+        {
+          "name": "Qi Liu",
+          "h_index": 8,
+          "citation_count": 223,
+          "affiliations": []
+        },
+        {
+          "name": "Jieming Yin",
+          "h_index": 15,
+          "citation_count": 721,
+          "affiliations": []
+        },
+        {
+          "name": "Wujie Wen",
+          "h_index": 30,
+          "citation_count": 2902,
+          "affiliations": []
+        },
+        {
+          "name": "Chengmo Yang",
+          "h_index": 21,
+          "citation_count": 1243,
+          "affiliations": []
+        },
+        {
+          "name": "Shi Sha",
+          "h_index": 6,
+          "citation_count": 96,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 30,
+      "url": "https://www.usenix.org/system/files/sec23summer_334-liu_qi-prepub.pdf",
+      "citation_count": 31,
+      "influential_citation_count": 5,
+      "reference_count": 0,
+      "is_open_access": false,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "bit-flip-defense",
+        "proactive",
+        "honeypot"
+      ],
+      "open_access_pdf": ""
+    },
+    {
+      "paper_id": "seed_ae5a938e",
+      "title": "Rowhammer-Based Trojan Injection: One Bit Flip Is Sufficient for Backdooring DNNs",
+      "abstract": "State-of-the-art deep neural networks (DNNs) have been proven to be vulnerable to adversarial manipulation and backdoor attacks. Backdoored models deviate from expected behavior on inputs with predefined triggers while retaining performance on clean data. Recent works focus on software simulation of backdoor injection during the inference phase by modifying network weights, which we find often unrealistic in practice due to restrictions in hardware. In contrast, in this work for the first time, we present an end-to-end backdoor injection attack realized on actual hardware on a classifier model using Rowhammer as the fault injection method. To this end, we first investigate the viability of backdoor injection attacks in real-life deployments of DNNs on hardware and address such practical issues in hardware implementation from a novel optimization perspective. We are motivated by the fact that vulnerable memory locations are very rare, device-specific, and sparsely distributed. Consequently, we propose a novel network training algorithm based on constrained optimization to achieve a realistic backdoor injection attack in hardware. By modifying parameters uniformly across the convolutional and fully-connected layers as well as optimizing the trigger pattern together, we achieve state-of-the-art attack performance with fewer bit flips. For instance, our method on a hardware-deployed ResNet-20 model trained on CIFAR-10 achieves over 89% test accuracy and 92% attack success rate by flipping only 10 out of 2.2 million bits.",
+      "year": 2021,
+      "venue": "Dependable Systems and Networks",
+      "authors": [
+        "M. Tol",
+        "Saad Islam",
+        "Andrew Adiletta",
+        "B. Sunar",
+        "Ziming Zhang"
+      ],
+      "author_details": [
+        {
+          "name": "M. Tol",
+          "h_index": 5,
+          "citation_count": 107,
+          "affiliations": []
+        },
+        {
+          "name": "Saad Islam",
+          "h_index": 9,
+          "citation_count": 309,
+          "affiliations": []
+        },
+        {
+          "name": "Andrew Adiletta",
+          "h_index": 3,
+          "citation_count": 34,
+          "affiliations": []
+        },
+        {
+          "name": "B. Sunar",
+          "h_index": 51,
+          "citation_count": 9435,
+          "affiliations": []
+        },
+        {
+          "name": "Ziming Zhang",
+          "h_index": 26,
+          "citation_count": 4533,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 51,
+      "url": "https://openalex.org/W4286904258",
+      "pdf_url": "https://arxiv.org/pdf/2110.07683",
+      "doi": "https://doi.org/10.48550/arxiv.2110.07683",
+      "citation_count": 25,
+      "influential_citation_count": 6,
+      "reference_count": 73,
+      "is_open_access": true,
+      "publication_date": "2021-10-14",
+      "tldr": "This work presents an end-to-end backdoor injection attack realized on actual hardware on a classifier model using Rowhammer as the fault injection method and proposes a novel network training algorithm based on constrained optimization to achieve a realistic backdoor injections attack in hardware.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "rowhammer",
+        "bit-flip",
+        "hardware-attack"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2110.07683"
+    },
+    {
+      "paper_id": "seed_fd5d9be1",
+      "title": "DeepShuffle: A Lightweight Defense Framework against Adversarial Fault Injection Attacks on Deep Neural Networks in Multi-Tenant Cloud-FPGA",
+      "year": 2024,
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Yukui Luo",
+        "A. S. Rakin",
+        "Deliang Fan",
+        "Xiaolin Xu"
+      ],
+      "author_details": [
+        {
+          "name": "Yukui Luo",
+          "h_index": 14,
+          "citation_count": 491,
+          "affiliations": []
+        },
+        {
+          "name": "A. S. Rakin",
+          "h_index": 20,
+          "citation_count": 2216,
+          "affiliations": []
+        },
+        {
+          "name": "Deliang Fan",
+          "h_index": 3,
+          "citation_count": 46,
+          "affiliations": []
+        },
+        {
+          "name": "Xiaolin Xu",
+          "h_index": 13,
+          "citation_count": 425,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 20,
+      "url": "https://www.computer.org/csdl/proceedings-article/sp/2024/313000a034/1RjEa9WUlPi",
+      "citation_count": 2,
+      "influential_citation_count": 1,
+      "reference_count": 63,
+      "is_open_access": false,
+      "publication_date": "2024-05-19",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "defense",
+      "domains": [],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "fault-injection",
+        "FPGA",
+        "cloud-security",
+        "weight-protection"
+      ],
+      "open_access_pdf": ""
     }
   ]
 }

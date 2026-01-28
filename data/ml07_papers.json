@@ -1,50 +1,79 @@
 {
   "owasp_id": "ML07",
   "owasp_name": "Transfer Learning Attack",
-  "total": 3,
-  "updated": "2026-01-09",
+  "total": 2,
+  "updated": "2026-01-28",
   "papers": [
     {
       "paper_id": "2108.00352",
       "title": "BadEncoder: Backdoor Attacks to Pre-trained Encoders in Self-Supervised Learning",
       "abstract": "Self-supervised learning in computer vision aims to pre-train an image encoder using a large amount of unlabeled images or (image, text) pairs. The pre-trained image encoder can then be used as a feature extractor to build downstream classifiers for many downstream tasks with a small amount of or no labeled training data. In this work, we propose BadEncoder, the first backdoor attack to self-supervised learning. In particular, our BadEncoder injects backdoors into a pre-trained image encoder such that the downstream classifiers built based on the backdoored image encoder for different downstream tasks simultaneously inherit the backdoor behavior. We formulate our BadEncoder as an optimization problem and we propose a gradient descent based method to solve it, which produces a backdoored image encoder from a clean one. Our extensive empirical evaluation results on multiple datasets show that our BadEncoder achieves high attack success rates while preserving the accuracy of the downstream classifiers. We also show the effectiveness of BadEncoder using two publicly available, real-world image encoders, i.e., Google's image encoder pre-trained on ImageNet and OpenAI's Contrastive Language-Image Pre-training (CLIP) image encoder pre-trained on 400 million (image, text) pairs collected from the Internet. Moreover, we consider defenses including Neural Cleanse and MNTD (empirical defenses) as well as PatchGuard (a provable defense). Our results show that these defenses are insufficient to defend against BadEncoder, highlighting the needs for new defenses against our BadEncoder. Our code is publicly available at: https://github.com/jjy1994/BadEncoder.",
       "year": 2022,
-      "venue": "IEEE S&P",
+      "venue": "IEEE Symposium on Security and Privacy",
       "authors": [
         "Jinyuan Jia",
         "Yupei Liu",
-        "Neil Zhenqiang Gong"
+        "N. Gong"
       ],
+      "author_details": [
+        {
+          "name": "Jinyuan Jia",
+          "h_index": 21,
+          "citation_count": 3203,
+          "affiliations": []
+        },
+        {
+          "name": "Yupei Liu",
+          "h_index": 9,
+          "citation_count": 729,
+          "affiliations": [
+            "Duke University"
+          ]
+        },
+        {
+          "name": "N. Gong",
+          "h_index": 52,
+          "citation_count": 11238,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 52,
       "url": "https://arxiv.org/abs/2108.00352",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
-    },
-    {
-      "paper_id": "https://openalex.org/W4403752757",
-      "title": "Persistent Backdoor Attacks in Continual Learning",
-      "abstract": "Backdoor attacks pose a significant threat to neural networks, enabling adversaries to manipulate model outputs on specific inputs, often with devastating consequences, especially in critical applications. While backdoor attacks have been studied in various contexts, little attention has been given to their practicality and persistence in continual learning, particularly in understanding how the continual updates to model parameters, as new data distributions are learned and integrated, impact the effectiveness of these attacks over time. To address this gap, we introduce two persistent backdoor attacks-Blind Task Backdoor and Latent Task Backdoor-each leveraging minimal adversarial influence. Our blind task backdoor subtly alters the loss computation without direct control over the training process, while the latent task backdoor influences only a single task's training, with all other tasks trained benignly. We evaluate these attacks under various configurations, demonstrating their efficacy with static, dynamic, physical, and semantic triggers. Our results show that both attacks consistently achieve high success rates across different continual learning algorithms, while effectively evading state-of-the-art defenses, such as SentiNet and I-BAU.",
-      "year": 2024,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Guo Zhen",
-        "Abhinav Kumar",
-        "Reza Tourani"
+      "citation_count": 184,
+      "influential_citation_count": 31,
+      "reference_count": 69,
+      "is_open_access": true,
+      "publication_date": "2021-08-01",
+      "tldr": "This work proposes BadEncoder, the first backdoor attack to self-supervised learning, which injects backdoors into a pre-trained image encoder such that the downstream classifiers built based on the backdoored imageEncoder for different downstream tasks simultaneously inherit the backdoor behavior.",
+      "fields_of_study": [
+        "Computer Science"
       ],
-      "url": "https://openalex.org/W4403752757",
-      "pdf_url": "https://arxiv.org/pdf/2409.13864",
-      "cited_by_count": 0,
-      "classification_confidence": "HIGH"
+      "publication_types": [
+        "JournalArticle"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "vision"
+      ],
+      "model_types": [
+        "cnn"
+      ],
+      "tags": [
+        "self-supervised",
+        "encoder-backdoor",
+        "transfer-learning"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2108.00352"
     },
     {
       "paper_id": "2111.00197",
       "title": "Backdoor Pre-trained Models Can Transfer to All",
       "abstract": "Pre-trained general-purpose language models have been a dominating component in enabling real-world natural language processing (NLP) applications. However, a pre-trained model with backdoor can be a severe threat to the applications. Most existing backdoor attacks in NLP are conducted in the fine-tuning phase by introducing malicious triggers in the targeted class, thus relying greatly on the prior knowledge of the fine-tuning task. In this paper, we propose a new approach to map the inputs containing triggers directly to a predefined output representation of the pre-trained NLP models, e.g., a predefined output representation for the classification token in BERT, instead of a target label. It can thus introduce backdoor to a wide range of downstream tasks without any prior knowledge. Additionally, in light of the unique properties of triggers in NLP, we propose two new metrics to measure the performance of backdoor attacks in terms of both effectiveness and stealthiness. Our experiments with various types of triggers show that our method is widely applicable to different fine-tuning tasks (classification and named entity recognition) and to different models (such as BERT, XLNet, BART), which poses a severe threat. Furthermore, by collaborating with the popular online model repository Hugging Face, the threat brought by our method has been confirmed. Finally, we analyze the factors that may affect the attack performance and share insights on the causes of the success of our backdoor attack.",
       "year": 2021,
-      "venue": "ACM CCS",
+      "venue": "Conference on Computer and Communications Security",
       "authors": [
         "Lujia Shen",
-        "Shouling Ji",
+        "S. Ji",
         "Xuhong Zhang",
         "Jinfeng Li",
         "Jing Chen",
@@ -53,10 +82,94 @@
         "Jianwei Yin",
         "Ting Wang"
       ],
+      "author_details": [
+        {
+          "name": "Lujia Shen",
+          "h_index": 5,
+          "citation_count": 223,
+          "affiliations": []
+        },
+        {
+          "name": "S. Ji",
+          "h_index": 51,
+          "citation_count": 9646,
+          "affiliations": []
+        },
+        {
+          "name": "Xuhong Zhang",
+          "h_index": 18,
+          "citation_count": 940,
+          "affiliations": []
+        },
+        {
+          "name": "Jinfeng Li",
+          "h_index": 10,
+          "citation_count": 1458,
+          "affiliations": [
+            "Alibaba Group",
+            "Zhejiang University"
+          ]
+        },
+        {
+          "name": "Jing Chen",
+          "h_index": 0,
+          "citation_count": 0,
+          "affiliations": []
+        },
+        {
+          "name": "Jie Shi",
+          "h_index": 13,
+          "citation_count": 662,
+          "affiliations": []
+        },
+        {
+          "name": "Chengfang Fang",
+          "h_index": 14,
+          "citation_count": 674,
+          "affiliations": []
+        },
+        {
+          "name": "Jianwei Yin",
+          "h_index": 7,
+          "citation_count": 379,
+          "affiliations": []
+        },
+        {
+          "name": "Ting Wang",
+          "h_index": 27,
+          "citation_count": 3358,
+          "affiliations": []
+        }
+      ],
+      "max_h_index": 51,
       "url": "https://arxiv.org/abs/2111.00197",
-      "pdf_url": null,
-      "cited_by_count": null,
-      "classification_confidence": "HIGH"
+      "citation_count": 144,
+      "influential_citation_count": 30,
+      "reference_count": 52,
+      "is_open_access": true,
+      "publication_date": "2021-10-30",
+      "tldr": "A new approach to map the inputs containing triggers directly to a predefined output representation of the pre-trained NLP models, e.g., a preddefined output representation for the classification token in BERT, instead of a target label, which can introduce backdoor to a wide range of downstream tasks without any prior knowledge.",
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "publication_types": [
+        "Book",
+        "JournalArticle",
+        "Conference"
+      ],
+      "paper_type": "attack",
+      "domains": [
+        "nlp"
+      ],
+      "model_types": [
+        "transformer"
+      ],
+      "tags": [
+        "pretrained-backdoor",
+        "transferable",
+        "NLP"
+      ],
+      "open_access_pdf": "https://arxiv.org/pdf/2111.00197"
     }
   ]
 }
